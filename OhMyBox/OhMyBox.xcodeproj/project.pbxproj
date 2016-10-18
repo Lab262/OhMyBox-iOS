@@ -187,7 +187,7 @@
 				TargetAttributes = {
 					A4F89AF81DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = B865ENT4P3;
+						DevelopmentTeam = V927RLF8V5;
 						ProvisioningStyle = Automatic;
 					};
 					A4F89B0C1DA806C900949A35 = {
@@ -519,7 +519,8 @@
 			baseConfigurationReference = 844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B865ENT4P3;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V927RLF8V5;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lab262.OhMyBox;
@@ -533,7 +534,7 @@
 			baseConfigurationReference = F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B865ENT4P3;
+				DEVELOPMENT_TEAM = V927RLF8V5;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lab262.OhMyBox;
