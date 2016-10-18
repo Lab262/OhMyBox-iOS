@@ -19,17 +19,11 @@
                         <frame key="frameInset" width="200" height="192"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELM-sd-eFE">
-                        <frame key="frameInset" minY="146" width="169" height="62"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.93333333330000001" green="0.37254901959999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
                 </subviews>
             </view>
             <size key="customSize" width="241" height="208"/>
             <connections>
                 <outlet property="showCaseImage" destination="Axe-kD-cNV" id="x3i-tV-JOa"/>
-                <outlet property="tagView" destination="ELM-sd-eFE" id="XsR-fL-g4u"/>
             </connections>
             <point key="canvasLocation" x="32" y="164"/>
         </collectionViewCell>

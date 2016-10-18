@@ -9,19 +9,15 @@
 import UIKit
 
 class ShowCaseCollectionViewCell: UICollectionViewCell {
-    
-    
+
     static let identifier = "showCaseCell"
-    
     @IBOutlet weak var showCaseImage: UIImageView!
     @IBOutlet weak var tagView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        
-        
+        let tagView = TagView.instanceFromNib()
+        self.addSubview(tagView)
     }
-
 }
