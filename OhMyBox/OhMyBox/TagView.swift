@@ -21,14 +21,13 @@ class TagView: UIView {
     }
     
     override func awakeFromNib() {
-        self.squareBackgroundView.layer.masksToBounds = true
-        self.squareBackgroundView.layer.borderWidth = 2.5
+
+        //self.squareBackgroundView.layer.masksToBounds = true
+        self.squareBackgroundView.layer.borderWidth = 1.8
         self.squareBackgroundView.layer.borderColor = UIColor.black.cgColor
-        self.squareForegroundView.layer.masksToBounds = true
-        self.squareForegroundView.layer.borderWidth = 2.5
+       // self.squareForegroundView.layer.masksToBounds = true
+        self.squareForegroundView.layer.borderWidth = 1.8
         self.squareForegroundView.layer.borderColor = UIColor.black.cgColor
 
     }
-    
 }
-

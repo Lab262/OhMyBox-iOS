@@ -19,5 +19,6 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
         
         let tagView = TagView.instanceFromNib()
         self.addSubview(tagView)
+        tagView.center = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
     }
 }

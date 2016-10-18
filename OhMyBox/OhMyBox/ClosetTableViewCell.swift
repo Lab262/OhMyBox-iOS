@@ -60,6 +60,4 @@ extension HomeViewController: UICollectionViewDelegate {
         
     }
     
-    
-    
 }
