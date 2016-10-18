@@ -15,6 +15,11 @@
 		A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F89B051DA806C900949A35 /* LaunchScreen.storyboard */; };
 		A4F89B121DA806C900949A35 /* OhMyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89B111DA806C900949A35 /* OhMyBoxTests.swift */; };
 		A8BD14BCA7DC790910C4E485 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8100773A4B12C234FA1527F /* Pods_OhMyBox.framework */; };
+		D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFF81DB68C7F007855D6 /* Home.storyboard */; };
+		D402DFFF1DB68CAD007855D6 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFFE1DB68CAD007855D6 /* Store.storyboard */; };
+		D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E0041DB68CE5007855D6 /* Wishlist.storyboard */; };
+		D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E0091DB68D10007855D6 /* Profile.storyboard */; };
+		D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E00E1DB68D2A007855D6 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		A4F89B131DA806C900949A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C147AE5E093A83F7A00015C8 /* Pods-OhMyBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8100773A4B12C234FA1527F /* Pods_OhMyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D402DFF81DB68C7F007855D6 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D402DFFE1DB68CAD007855D6 /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		D402E0041DB68CE5007855D6 /* Wishlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
+		D402E0091DB68D10007855D6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		D402E00E1DB68D2A007855D6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +108,11 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D402E00B1DB68D16007855D6 /* Login */,
+				D402E0061DB68CED007855D6 /* Profile */,
+				D402E0011DB68CCC007855D6 /* Wishlist */,
+				D402DFFB1DB68C8C007855D6 /* Store */,
+				D402DFF71DB68C55007855D6 /* Home */,
 				A4F89AFC1DA806C900949A35 /* AppDelegate.swift */,
 				A4F89AFE1DA806C900949A35 /* ViewController.swift */,
 				A4F89B001DA806C900949A35 /* Main.storyboard */,
@@ -126,6 +141,126 @@
 				593CC679AF27F8876E27C4DF /* Pods-OhMyBoxTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D402DFF61DB68C42007855D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D402DFF81DB68C7F007855D6 /* Home.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D402DFF71DB68C55007855D6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D402DFFA1DB68C85007855D6 /* Controller */,
+				D402DFF61DB68C42007855D6 /* View */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		D402DFFA1DB68C85007855D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D402DFFB1DB68C8C007855D6 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				D402E0001DB68CB4007855D6 /* Controller */,
+				D402DFFC1DB68C99007855D6 /* View */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		D402DFFC1DB68C99007855D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D402DFFE1DB68CAD007855D6 /* Store.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D402E0001DB68CB4007855D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D402E0011DB68CCC007855D6 /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				D402E0031DB68CD7007855D6 /* Controller */,
+				D402E0021DB68CD3007855D6 /* View */,
+			);
+			name = Wishlist;
+			sourceTree = "<group>";
+		};
+		D402E0021DB68CD3007855D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D402E0041DB68CE5007855D6 /* Wishlist.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D402E0031DB68CD7007855D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D402E0061DB68CED007855D6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D402E0081DB68CFB007855D6 /* Controller */,
+				D402E0071DB68CF3007855D6 /* View */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		D402E0071DB68CF3007855D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D402E0091DB68D10007855D6 /* Profile.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D402E0081DB68CFB007855D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D402E00B1DB68D16007855D6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D402E00D1DB68D20007855D6 /* Controller */,
+				D402E00C1DB68D1B007855D6 /* View */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		D402E00C1DB68D1B007855D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D402E00E1DB68D2A007855D6 /* Login.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D402E00D1DB68D20007855D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +322,7 @@
 				TargetAttributes = {
 					A4F89AF81DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = V927RLF8V5;
+						DevelopmentTeam = R6AP92RETV;
 						ProvisioningStyle = Automatic;
 					};
 					A4F89B0C1DA806C900949A35 = {
@@ -221,9 +356,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */,
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
+				D402DFFF1DB68CAD007855D6 /* Store.storyboard in Resources */,
+				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
+				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
+				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +453,7 @@
 		};
 		A4B5CAAA1DA811FB003260BA /* Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -321,7 +461,7 @@
 			name = Fabric;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/Fabric/run 2e1985f6065c4886c2f4320a20fb61e3c4323688 d2624afd5979642eef8ae5ce2ae3ee1eb86983da95e3c602e865668bb7b4bf8b";
 		};
@@ -520,7 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = V927RLF8V5;
+				DEVELOPMENT_TEAM = R6AP92RETV;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lab262.OhMyBox;
@@ -534,7 +674,7 @@
 			baseConfigurationReference = F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V927RLF8V5;
+				DEVELOPMENT_TEAM = R6AP92RETV;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lab262.OhMyBox;
