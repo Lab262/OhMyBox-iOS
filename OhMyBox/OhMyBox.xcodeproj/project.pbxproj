@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E7C8670FBD451AD06391C03 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */; };
+		2FAD48BC1DB6DC2000074D55 /* ShowProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD48BA1DB6DC2000074D55 /* ShowProductCollectionViewCell.swift */; };
+		2FAD48BD1DB6DC2000074D55 /* ShowProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48BB1DB6DC2000074D55 /* ShowProductCollectionViewCell.xib */; };
+		2FAD48BF1DB6E0AE00074D55 /* productDefaultimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48BE1DB6E0AE00074D55 /* productDefaultimage.png */; };
 		A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89AFC1DA806C900949A35 /* AppDelegate.swift */; };
 		A4F89AFF1DA806C900949A35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89AFE1DA806C900949A35 /* ViewController.swift */; };
 		A4F89B021DA806C900949A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F89B001DA806C900949A35 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FAD48BA1DB6DC2000074D55 /* ShowProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FAD48BB1DB6DC2000074D55 /* ShowProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		2FAD48BE1DB6E0AE00074D55 /* productDefaultimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productDefaultimage.png; sourceTree = "<group>"; };
 		593CC679AF27F8876E27C4DF /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		A4F89AF91DA806C900949A35 /* OhMyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhMyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +309,8 @@
 				D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */,
 				D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */,
 				D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */,
+				2FAD48BA1DB6DC2000074D55 /* ShowProductCollectionViewCell.swift */,
+				2FAD48BB1DB6DC2000074D55 /* ShowProductCollectionViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 		D4C0D6521DB6AA09007C3113 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2FAD48BE1DB6E0AE00074D55 /* productDefaultimage.png */,
 				D4C0D6531DB6AA6C007C3113 /* dressImage.png */,
 				D4C0D6541DB6AA6C007C3113 /* jacketImage.png */,
 				D4C0D6561DB6AA6C007C3113 /* shoesImage.png */,
@@ -434,11 +443,13 @@
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
+				2FAD48BF1DB6E0AE00074D55 /* productDefaultimage.png in Resources */,
 				D402DFFF1DB68CAD007855D6 /* Store.storyboard in Resources */,
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
 				D4C0D6571DB6AA6C007C3113 /* dressImage.png in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
+				2FAD48BD1DB6DC2000074D55 /* ShowProductCollectionViewCell.xib in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
@@ -602,6 +613,7 @@
 				D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
+				2FAD48BC1DB6DC2000074D55 /* ShowProductCollectionViewCell.swift in Sources */,
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,

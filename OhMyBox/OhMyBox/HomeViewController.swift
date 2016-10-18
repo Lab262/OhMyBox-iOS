@@ -37,7 +37,6 @@ extension HomeViewController: UITableViewDataSource {
         
         return 1
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
