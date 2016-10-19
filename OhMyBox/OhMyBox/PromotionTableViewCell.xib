@@ -30,7 +30,7 @@
                             <constraint firstItem="D4h-f5-D3e" firstAttribute="leading" secondItem="142-2W-qrO" secondAttribute="leading" constant="55" id="rIS-n4-Rla"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWomanImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="7hQ-qP-CXH">
+                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWomanImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="7hQ-qP-CXH">
                         <constraints>
                             <constraint firstAttribute="width" constant="166" id="E63-p6-ypd"/>
                         </constraints>
