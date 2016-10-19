@@ -24,6 +24,8 @@
 		D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */; };
 		D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */; };
 		D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */; };
+		D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */; };
+		D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */; };
 		D4C0D6571DB6AA6C007C3113 /* dressImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6531DB6AA6C007C3113 /* dressImage.png */; };
 		D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6541DB6AA6C007C3113 /* jacketImage.png */; };
 		D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6561DB6AA6C007C3113 /* shoesImage.png */; };
@@ -70,6 +72,8 @@
 		D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetTableViewCell.swift; sourceTree = "<group>"; };
 		D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleTableViewCell.swift; sourceTree = "<group>"; };
+		D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		D4C0D6531DB6AA6C007C3113 /* dressImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dressImage.png; sourceTree = "<group>"; };
 		D4C0D6541DB6AA6C007C3113 /* jacketImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jacketImage.png; sourceTree = "<group>"; };
 		D4C0D6561DB6AA6C007C3113 /* shoesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoesImage.png; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */,
 				D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */,
 				D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */,
+				D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */,
+				D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
+				D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +609,7 @@
 				D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
+				D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */,
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,
