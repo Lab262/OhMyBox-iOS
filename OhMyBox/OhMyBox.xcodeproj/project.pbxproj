@@ -15,6 +15,9 @@
 		2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896E51DB7438A00EADFFE /* WishTableViewCell.swift */; };
 		2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896E61DB7438A00EADFFE /* WishTableViewCell.xib */; };
 		2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896E91DB7486700EADFFE /* defaultGloes.png */; };
+		2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896EF1DB7E99B00EADFFE /* Axis Extrabold.otf */; };
+		2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896F01DB7E9A400EADFFE /* Muli-Light.ttf */; };
+		2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896F11DB7E9A400EADFFE /* Muli-Regular.ttf */; };
 		2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */; };
 		2FAD48C31DB6FE3400074D55 /* ShowProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD48C21DB6FE3300074D55 /* ShowProductCollectionViewCell.swift */; };
 		2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */; };
@@ -67,6 +70,9 @@
 		2F4896E51DB7438A00EADFFE /* WishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896E61DB7438A00EADFFE /* WishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishTableViewCell.xib; sourceTree = "<group>"; };
 		2F4896E91DB7486700EADFFE /* defaultGloes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultGloes.png; sourceTree = "<group>"; };
+		2F4896EF1DB7E99B00EADFFE /* Axis Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Axis Extrabold.otf"; sourceTree = "<group>"; };
+		2F4896F01DB7E9A400EADFFE /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		2F4896F11DB7E9A400EADFFE /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
 		2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FAD48C21DB6FE3300074D55 /* ShowProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productDefaultimage.png; sourceTree = "<group>"; };
@@ -137,6 +143,32 @@
 				2F4896E61DB7438A00EADFFE /* WishTableViewCell.xib */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		2F4896EC1DB7E94200EADFFE /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2F4896EE1DB7E98C00EADFFE /* Axis */,
+				2F4896ED1DB7E97700EADFFE /* Muli-fonts */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		2F4896ED1DB7E97700EADFFE /* Muli-fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2F4896F01DB7E9A400EADFFE /* Muli-Light.ttf */,
+				2F4896F11DB7E9A400EADFFE /* Muli-Regular.ttf */,
+			);
+			name = "Muli-fonts";
+			sourceTree = "<group>";
+		};
+		2F4896EE1DB7E98C00EADFFE /* Axis */ = {
+			isa = PBXGroup;
+			children = (
+				2F4896EF1DB7E99B00EADFFE /* Axis Extrabold.otf */,
+			);
+			name = Axis;
 			sourceTree = "<group>";
 		};
 		64612CF48B1EAC2E4BDDFE27 /* Frameworks */ = {
@@ -354,6 +386,7 @@
 		D4C0D6511DB6AA00007C3113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F4896EC1DB7E94200EADFFE /* fonts */,
 				D4C0D6521DB6AA09007C3113 /* Images */,
 			);
 			name = Resources;
@@ -486,6 +519,8 @@
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
 				2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */,
 				2F4896E01DB72C3900EADFFE /* PromotionTableViewCell.xib in Resources */,
+				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,
+				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
 				D4C0D6571DB6AA6C007C3113 /* dressImage.png in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
@@ -493,6 +528,7 @@
 				2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */,
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
+				2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */,
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 				2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */,
 				D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */,
