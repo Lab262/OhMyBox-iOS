@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="374" height="77"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="374" height="77"/>
+                <frame key="frameInset" width="374" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendados " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoA-Ho-RJj">
@@ -43,19 +43,19 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textureImage" translatesAutoresizingMaskIntoConstraints="NO" id="pdL-R8-HcT">
                         <constraints>
-                            <constraint firstAttribute="width" constant="61" id="LIn-U5-B1j"/>
+                            <constraint firstAttribute="width" constant="69" id="LIn-U5-B1j"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pdL-R8-HcT" firstAttribute="centerY" secondItem="rUQ-EU-3Um" secondAttribute="centerY" id="1UL-25-DCE"/>
+                    <constraint firstItem="pdL-R8-HcT" firstAttribute="centerY" secondItem="rUQ-EU-3Um" secondAttribute="centerY" constant="2.5" id="1UL-25-DCE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="rUQ-EU-3Um" secondAttribute="bottom" constant="9.5" id="DEu-gu-ccB"/>
-                    <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="FlQ-GN-Isc"/>
+                    <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="FlQ-GN-Isc"/>
                     <constraint firstItem="rUQ-EU-3Um" firstAttribute="centerY" secondItem="wGS-zm-7DA" secondAttribute="centerY" id="GP7-gp-ONI"/>
                     <constraint firstItem="hoA-Ho-RJj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="TPP-ZZ-T3Y"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="30" id="TRN-pK-uZf"/>
                     <constraint firstItem="pdL-R8-HcT" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="1" id="Uj4-zH-r89"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="10.5" id="XFm-BC-cZw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="5" id="XFm-BC-cZw"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wGS-zm-7DA" secondAttribute="trailing" constant="12" id="dwL-4n-DRW"/>
                     <constraint firstItem="hoA-Ho-RJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="nQe-ud-t6d"/>
                     <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="60" id="y4k-mA-U7o"/>
