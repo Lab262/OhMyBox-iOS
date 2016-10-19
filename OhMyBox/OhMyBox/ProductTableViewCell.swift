@@ -1,23 +1,24 @@
 //
-//  ClosetTableViewCell.swift
+//  ProductTableViewCell.swift
 //  OhMyBox
 //
-//  Created by Huallyd Smadi on 18/10/16.
+//  Created by Felipe perius on 18/10/16.
 //  Copyright © 2016 Lab262. All rights reserved.
 //
 
 import UIKit
 
-class ClosetTableViewCell: UITableViewCell {
+class ProductTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var collectionView: UICollectionView!
     
-    static let identifier = "closetCell"
+  
+    @IBOutlet weak var collectionView: UICollectionView!
+    static let identifier = "productCell"
     
     func registerNibs () {
         
         
-        self.collectionView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
+        self.collectionView.register(UINib(nibName: "ShowProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShowProductCollectionViewCell.identifier)
         
         
     }
@@ -30,21 +31,22 @@ class ClosetTableViewCell: UITableViewCell {
         
     }
 
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    
+
 }
 
-extension ClosetTableViewCell: UICollectionViewDataSource {
+
+extension ProductTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath)
-            return cell
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowProductCollectionViewCell.identifier, for: indexPath)
+        return cell
         
         
         return cell
@@ -58,7 +60,7 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     
 }
 
-extension ClosetTableViewCell: UICollectionViewDelegate {
+extension ProductTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -19,7 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Perfil" id="PWe-68-0gS"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="PWe-68-0gS">
+                        <barButtonItem key="rightBarButtonItem" image="myBox" id="yiW-af-Ho5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFx-qv-c3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +33,7 @@
         <scene sceneID="ZdJ-0I-3s6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="48E-iM-OrB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Perfil" id="s2k-gv-wDF"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="profile" id="s2k-gv-wDF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9V-g4-n4P">
@@ -46,4 +50,8 @@
             <point key="canvasLocation" x="88.799999999999997" y="95.802098950524751"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="myBox" width="28" height="28"/>
+        <image name="profile" width="19" height="24"/>
+    </resources>
 </document>

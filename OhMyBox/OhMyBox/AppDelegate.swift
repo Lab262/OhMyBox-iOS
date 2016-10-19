@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
               Fabric.with([Crashlytics.self])
-        
+        self.setupBarsAppearance()
         return true
     }
 
@@ -43,5 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    func setupBarsAppearance(){
+        
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.isTranslucent = true
+        navigationBarAppearance.tintColor = UIColor.black
+        navigationBarAppearance.barTintColor =  UIColor.white
+        navigationBarAppearance.backgroundColor =  UIColor.white
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
+        
+        
+    }
+    
 }

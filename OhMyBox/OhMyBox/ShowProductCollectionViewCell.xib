@@ -16,13 +16,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w30-60-Mk8">
-                        <frame key="frameInset" minX="29" width="312" height="300"/>
+                        <frame key="frameInset" minX="29" minY="-18" width="312" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="productDefaultimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-Pk-ZjP">
-                                <frame key="frameInset" width="312" height="236"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enfeite fluffy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKc-yG-p9f">
                                 <frame key="frameInset" minX="8" minY="244" width="144" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,9 +48,14 @@
                             </button>
                         </subviews>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="productDefaultimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-Pk-ZjP">
+                        <frame key="frameInset" minX="29" width="312" height="215"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </view>
             <connections>
+                <outlet property="containerView" destination="w30-60-Mk8" id="y3U-It-jLO"/>
                 <outlet property="nameProduct" destination="EKc-yG-p9f" id="TNd-Dn-XwG"/>
                 <outlet property="priceProduct" destination="fs7-yu-1cg" id="ifa-HJ-yHK"/>
                 <outlet property="productImage" destination="2gB-Pk-ZjP" id="wmL-vB-aoE"/>
