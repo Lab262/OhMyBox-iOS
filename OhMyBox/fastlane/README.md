@@ -15,6 +15,11 @@ fastlane beta
 fastlane release
 ```
 
+### testflight
+```
+fastlane testflight
+```
+
 
 ----
 

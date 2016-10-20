@@ -1,17 +1,27 @@
 lane :beta do
+  ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
   increment_build_number
   match(type: "appstore")       # see code signing guide for more information
   clear_derived_data
   cocoapods
-  gym(scheme: "OhMyBox",  use_legacy_build_api: true)
+  gym(scheme: "OhMyBox")
   changelog_from_git_commits
   testflight
 end
+
 lane :release do
+  ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
   increment_version_number
   # snapshot                      # generate new screenshots for the App Store
   match(type: "appstore")       # see code signing guide for more information
-  gym(scheme: "OhMyBox",  use_legacy_build_api: true)          # build your app
+  gym(scheme: "OhMyBox")          # build your app
   appstore                      # upload your app to iTunes Connect
   # slack(message: "Successfully uploaded a new App Store build")
+end
+
+lane :testflight do
+  ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
+  ENV['FASTLANE_ITUNES_TRANSPORTER_USE_SHELL_SCRIPT'] = "1"
+
+  testflight
 end
