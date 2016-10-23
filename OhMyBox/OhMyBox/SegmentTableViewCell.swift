@@ -1,23 +1,22 @@
 //
-//  PhotoProfileTableViewCell.swift
+//  SegmentTableViewCell.swift
 //  OhMyBox
 //
-//  Created by Felipe perius on 19/10/16.
+//  Created by Felipe perius on 20/10/16.
 //  Copyright © 2016 Lab262. All rights reserved.
 //
 
 import UIKit
 
-class PhotoProfileTableViewCell: UITableViewCell {
-    static let identifier = "photoProfileCell"
-
-    @IBOutlet weak var photoProfileImage: UIImageView!
-    @IBOutlet weak var nameProfileLabel: UILabel!
+class SegmentTableViewCell: UITableViewCell {
+    static let identifier = "segmentCell"
+    
+    @IBOutlet weak var aboutBoxButton: UIButton!
+    @IBOutlet weak var dataUserButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
- 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +24,5 @@ class PhotoProfileTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-      
+
 }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1E7C8670FBD451AD06391C03 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */; };
+		2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07773F1DBD1BED003C124F /* RecommendedViewController.swift */; };
+		2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0777411DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift */; };
+		2F0777441DBD368E003C124F /* dressImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F0777431DBD368E003C124F /* dressImage.png */; };
+		2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4649691DB93E5E0021516F /* fashion-person.png */; };
+		2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46496B1DB942840021516F /* SegmentTableViewCell.swift */; };
 		2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */; };
 		2F4896E01DB72C3900EADFFE /* PromotionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896DE1DB72C3900EADFFE /* PromotionTableViewCell.xib */; };
 		2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */; };
@@ -20,6 +25,8 @@
 		2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896F11DB7E9A400EADFFE /* Muli-Regular.ttf */; };
 		2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896F51DB7F83100EADFFE /* ProfileViewController.swift */; };
 		2F4896F81DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */; };
+		2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */; };
+		2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */; };
 		2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */; };
 		2FAD48C31DB6FE3400074D55 /* ShowProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD48C21DB6FE3300074D55 /* ShowProductCollectionViewCell.swift */; };
 		2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */; };
@@ -42,7 +49,6 @@
 		D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */; };
 		D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */; };
 		D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */; };
-		D4C0D6571DB6AA6C007C3113 /* dressImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6531DB6AA6C007C3113 /* dressImage.png */; };
 		D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6541DB6AA6C007C3113 /* jacketImage.png */; };
 		D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6561DB6AA6C007C3113 /* shoesImage.png */; };
 		D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D65B1DB6AF2C007C3113 /* TagView.xib */; };
@@ -65,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F07773F1DBD1BED003C124F /* RecommendedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
+		2F0777411DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderRecommendedTableViewCell.swift; sourceTree = "<group>"; };
+		2F0777431DBD368E003C124F /* dressImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dressImage.png; sourceTree = "<group>"; };
+		2F4649691DB93E5E0021516F /* fashion-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fashion-person.png"; sourceTree = "<group>"; };
+		2F46496B1DB942840021516F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896DE1DB72C3900EADFFE /* PromotionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionTableViewCell.xib; sourceTree = "<group>"; };
 		2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultWomanImage.png; sourceTree = "<group>"; };
@@ -77,6 +88,8 @@
 		2F4896F11DB7E9A400EADFFE /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
 		2F4896F51DB7F83100EADFFE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoProfileTableViewCell.swift; sourceTree = "<group>"; };
+		2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUserTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataUserTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FAD48C21DB6FE3300074D55 /* ShowProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productDefaultimage.png; sourceTree = "<group>"; };
@@ -106,7 +119,6 @@
 		D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleTableViewCell.swift; sourceTree = "<group>"; };
 		D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
-		D4C0D6531DB6AA6C007C3113 /* dressImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dressImage.png; sourceTree = "<group>"; };
 		D4C0D6541DB6AA6C007C3113 /* jacketImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jacketImage.png; sourceTree = "<group>"; };
 		D4C0D6561DB6AA6C007C3113 /* shoesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoesImage.png; sourceTree = "<group>"; };
 		D4C0D65B1DB6AF2C007C3113 /* TagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
@@ -268,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				D402E0101DB69541007855D6 /* HomeViewController.swift */,
+				2F07773F1DBD1BED003C124F /* RecommendedViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -336,6 +349,9 @@
 			children = (
 				D402E0091DB68D10007855D6 /* Profile.storyboard */,
 				2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */,
+				2F46496B1DB942840021516F /* SegmentTableViewCell.swift */,
+				2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */,
+				2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -385,6 +401,7 @@
 				2FAD48C61DB7031300074D55 /* ProductTableViewCell.swift */,
 				2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */,
 				2F4896DE1DB72C3900EADFFE /* PromotionTableViewCell.xib */,
+				2F0777411DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -401,10 +418,11 @@
 		D4C0D6521DB6AA09007C3113 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F4649691DB93E5E0021516F /* fashion-person.png */,
 				2F4896E91DB7486700EADFFE /* defaultGloes.png */,
+				2F0777431DBD368E003C124F /* dressImage.png */,
 				2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */,
 				2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */,
-				D4C0D6531DB6AA6C007C3113 /* dressImage.png */,
 				D4C0D6541DB6AA6C007C3113 /* jacketImage.png */,
 				D4C0D6561DB6AA6C007C3113 /* shoesImage.png */,
 			);
@@ -516,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */,
+				2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */,
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
@@ -527,13 +546,14 @@
 				2F4896E01DB72C3900EADFFE /* PromotionTableViewCell.xib in Resources */,
 				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,
 				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
-				D4C0D6571DB6AA6C007C3113 /* dressImage.png in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */,
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
+				2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */,
+				2F0777441DBD368E003C124F /* dressImage.png in Resources */,
 				2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */,
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 				2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */,
@@ -680,10 +700,13 @@
 				A4F89AFF1DA806C900949A35 /* ViewController.swift in Sources */,
 				D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */,
 				D4C0D6651DB6B32E007C3113 /* UIView+Animations.swift in Sources */,
+				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
+				2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */,
 				D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */,
 				2FAD48C31DB6FE3400074D55 /* ShowProductCollectionViewCell.swift in Sources */,
 				2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */,
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
+				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */,
@@ -691,6 +714,7 @@
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,
+				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
 				2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */,
 				D4C0D65E1DB6B1F2007C3113 /* TagView.swift in Sources */,
 				2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */,

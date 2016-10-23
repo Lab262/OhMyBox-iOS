@@ -1,23 +1,20 @@
 //
-//  PhotoProfileTableViewCell.swift
+//  HeaderRecommendedTableViewCell.swift
 //  OhMyBox
 //
-//  Created by Felipe perius on 19/10/16.
+//  Created by Felipe perius on 23/10/16.
 //  Copyright © 2016 Lab262. All rights reserved.
 //
 
 import UIKit
 
-class PhotoProfileTableViewCell: UITableViewCell {
-    static let identifier = "photoProfileCell"
-
-    @IBOutlet weak var photoProfileImage: UIImageView!
-    @IBOutlet weak var nameProfileLabel: UILabel!
+class HeaderRecommendedTableViewCell: UITableViewCell {
+    static let identifier = "headerRecommendedCell"
     
-    override func awakeFromNib() {
+    @IBOutlet weak var headerTitleLabel: UILabel!
+      override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
- 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +22,5 @@ class PhotoProfileTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-      
+
 }

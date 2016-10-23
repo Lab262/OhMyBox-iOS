@@ -7,6 +7,11 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Oh My Box-->
         <scene sceneID="te8-Cd-gZw">
@@ -112,11 +117,88 @@
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="tableView" destination="f19-Lu-Hmh" id="7wN-sj-EPx"/>
+                        <segue destination="erU-ar-DLf" kind="show" identifier="goRecommended" id="XgR-lH-71A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djg-nn-b97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2194.4000000000001" y="-588.30584707646176"/>
+        </scene>
+        <!--RECOMENDADOS-->
+        <scene sceneID="88A-Kb-TVN">
+            <objects>
+                <viewController id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8j-Ju-caw"/>
+                        <viewControllerLayoutGuide type="bottom" id="8mk-mP-kSC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6sZ-Zz-E89">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-8n-96d">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerRecommendedCell" rowHeight="70" id="hYg-GW-YOZ" customClass="HeaderRecommendedTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hYg-GW-YOZ" id="Qkw-jH-Ghm">
+                                            <frame key="frameInset" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w04-q7-A5k">
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
+                                                    <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lWu-Pl-Yn6" firstAttribute="top" secondItem="Qkw-jH-Ghm" secondAttribute="topMargin" constant="-4" id="3Fo-rD-Oed"/>
+                                                <constraint firstItem="lWu-Pl-Yn6" firstAttribute="leading" secondItem="Qkw-jH-Ghm" secondAttribute="leadingMargin" constant="59" id="6tc-0R-UKf"/>
+                                                <constraint firstItem="lWu-Pl-Yn6" firstAttribute="centerX" secondItem="Qkw-jH-Ghm" secondAttribute="centerX" id="B83-SR-cgk"/>
+                                                <constraint firstItem="w04-q7-A5k" firstAttribute="leading" secondItem="Qkw-jH-Ghm" secondAttribute="leadingMargin" constant="-7" id="OZ5-bW-dZb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="w04-q7-A5k" secondAttribute="trailing" constant="-9" id="WXz-mr-BTS"/>
+                                                <constraint firstItem="w04-q7-A5k" firstAttribute="top" secondItem="lWu-Pl-Yn6" secondAttribute="bottom" constant="1" id="X2l-Gt-9P6"/>
+                                                <constraint firstItem="lWu-Pl-Yn6" firstAttribute="centerY" secondItem="Qkw-jH-Ghm" secondAttribute="centerY" id="Zpq-AU-a7f"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="w04-q7-A5k" secondAttribute="bottom" constant="-6" id="r3j-C7-cR5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerTitleLabel" destination="lWu-Pl-Yn6" id="8Vx-OW-H4Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="erU-ar-DLf" id="deJ-qC-Fey"/>
+                                    <outlet property="delegate" destination="erU-ar-DLf" id="g2a-d2-AQ1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p8S-8n-96d" firstAttribute="centerX" secondItem="6sZ-Zz-E89" secondAttribute="centerX" id="LOp-Pe-Ayq"/>
+                            <constraint firstItem="p8S-8n-96d" firstAttribute="top" secondItem="6sZ-Zz-E89" secondAttribute="top" id="Q12-gr-G3U"/>
+                            <constraint firstItem="p8S-8n-96d" firstAttribute="leading" secondItem="6sZ-Zz-E89" secondAttribute="leading" id="cj5-4m-TpQ"/>
+                            <constraint firstItem="p8S-8n-96d" firstAttribute="bottom" secondItem="8mk-mP-kSC" secondAttribute="top" id="yH8-SX-Hcx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RECOMENDADOS" id="4NX-5T-Gyj">
+                        <barButtonItem key="rightBarButtonItem" image="myBox" id="pn6-a6-aTL">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="tableView" destination="p8S-8n-96d" id="8IJ-ve-mgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2I-w8-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3064.8000000000002" y="-1251.2743628185908"/>
         </scene>
         <!--OMB-->
         <scene sceneID="oNb-HY-LHx">

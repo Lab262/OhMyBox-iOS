@@ -89,7 +89,7 @@ extension HomeViewController: UITableViewDataSource {
     func generateClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        
+        cell.delegate = self 
         return cell
     }
     
@@ -119,13 +119,16 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+       
+        
+    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {
             
-        case 0:
+            case 0:
             
             switch indexPath.row {
             case 0:
@@ -186,6 +189,12 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
   
+}
+extension HomeViewController: callSegueProtocol {
+
+    func callRecommended() {
+        self.performSegue(withIdentifier:"goRecommended", sender:self)
+    }
 }
 
 

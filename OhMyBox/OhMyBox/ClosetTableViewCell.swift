@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol  callSegueProtocol {
+    func callRecommended()
+}
+
 class ClosetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     static let identifier = "closetCell"
+    var delegate: callSegueProtocol?
+    
     
     func registerNibs () {
         
@@ -43,7 +49,7 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath)
             return cell
         
         
@@ -61,6 +67,9 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
 extension ClosetTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+                self.delegate?.callRecommended()
+            
         
     }
     
