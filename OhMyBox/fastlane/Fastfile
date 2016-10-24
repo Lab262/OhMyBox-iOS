@@ -1,17 +1,75 @@
-lane :beta do
-  increment_build_number
-  match(type: "appstore")       # see code signing guide for more information
-  clear_derived_data
-  cocoapods
-  gym(scheme: "OhMyBox",  use_legacy_build_api: true)
-  changelog_from_git_commits
-  testflight
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.105.3"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    cocoapods
+
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(workspace:"OhMyBox.xcworkspace", scheme: "OhMyBox", devices: ["iPhone 6"], clean: true)
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    match(type: "appstore") # more information: https://codesigning.guide
+    increment_build_number
+    gym(scheme: "OhMyBox",include_bitcode: false, clean: true)
+    pilot(skip_waiting_for_build_processing: true, username: "thiago.mb@icloud.com",)
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+  
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    match(type: "appstore")
+    increment_version_number
+    # snapshot
+    gym(scheme: "OhMyBox",include_bitcode: false, clean: true)
+    deliver(force: true)
+    # frameit
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
 end
-lane :release do
-  increment_version_number
-  # snapshot                      # generate new screenshots for the App Store
-  match(type: "appstore")       # see code signing guide for more information
-  gym(scheme: "OhMyBox",  use_legacy_build_api: true)          # build your app
-  appstore                      # upload your app to iTunes Connect
-  # slack(message: "Successfully uploaded a new App Store build")
-end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer
