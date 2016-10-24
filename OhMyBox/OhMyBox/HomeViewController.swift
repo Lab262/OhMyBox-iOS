@@ -11,11 +11,27 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    var viewSearch: UIView?
+    var searchController: UISearchController!
+    var leftButtonItem: UIBarButtonItem?
+    var rightButtonItem: UIBarButtonItem?
+    @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
+    @IBOutlet weak var searchBarButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
-
+         self.rightButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+    
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.configureSearchBar()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.searchController.isActive {
+            self.searchController.isActive = false
+            self.searchController.searchBar.resignFirstResponder()
+        }
     }
     
     func registerNib() {
@@ -25,7 +41,68 @@ class HomeViewController: UIViewController {
           self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
     
     }
+    @IBAction func searchProducts(_ sender: AnyObject) {
+        self.showSearchBar()
     
+    }
+    
+    
+    func configureSearchBar () {
+        //self.searchBarButton.isEnabled = false
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.searchResultsUpdater = self
+        self.searchController.searchBar.delegate = self
+        self.searchController.searchBar.setImage(UIImage(named: "searchIcon"), for: .search, state: UIControlState())
+        self.searchController.delegate = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.searchBar.placeholder = "Buscar"
+        self.searchController.searchBar.setValue("Cancelar", forKey: "_cancelButtonText")
+        
+        self.searchController.searchBar.setBackgroundImage(ViewUtil.imageFromColor(.clear, forSize: self.searchController.searchBar.frame.size, withCornerRadius: 0), for: .any, barMetrics: .default)
+        
+        
+        self.searchController.searchBar.tintColor = UIColor.colorWithHexString("AFAFB3")
+        
+        searchController.hidesBottomBarWhenPushed = true
+        let searchField = self.searchController.searchBar.value(forKey: "searchField") as? UITextField
+        
+        
+        searchField?.backgroundColor = UIColor.colorWithHexString("F4F4F4")
+        searchField?.textColor = UIColor.black
+        searchField?.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Buscar", comment: ""), attributes: [NSForegroundColorAttributeName: UIColor.colorWithHexString("AFAFB3")])
+       //   searchBarButton.isEnabled = true
+        
+        
+        
+        self.viewSearch = UIView(frame: CGRect(x: self.searchController.searchBar.frame.origin.x, y: self.searchController.searchBar.frame.origin.y, width: self.searchController.searchBar.bounds.size.width-15, height: self.searchController.searchBar.bounds.size.height))
+        
+        
+        self.viewSearch?.backgroundColor = UIColor.clear
+        
+        self.viewSearch?.addSubview(self.searchController.searchBar)
+        
+    }
+   
+    func showSearchBar() {
+        
+        self.searchController.isActive = true
+        self.searchController.searchBar.alpha = 0
+       // searchBarButton.isEnabled = false
+       // searchBarButton.tintColor = UIColor.clear
+       
+        let leftNavBarButton = UIBarButtonItem(customView: self.viewSearch!)
+        navigationItem.setLeftBarButton(leftNavBarButton, animated: true)
+        
+        navigationItem.setRightBarButton(nil, animated: true)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.searchController.searchBar.alpha = 1
+            }, completion: { finished in
+                self.searchController.searchBar.becomeFirstResponder()
+        })
+    }
+    
+
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -119,8 +196,6 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       
-        
     
     }
     
@@ -194,6 +269,40 @@ extension HomeViewController: callSegueProtocol {
 
     func callRecommended() {
         self.performSegue(withIdentifier:"goRecommended", sender:self)
+    }
+}
+
+extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+    
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    
+    func presentSearchController(_ searchController: UISearchController) {
+        self.searchController.searchBar.becomeFirstResponder()
+       
+
+    }
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        self.navigationItem.leftBarButtonItem = self.leftButtonItem
+        // searchBarButton.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = self.rightButtonItem
+    
+    }
+    
+    func didDismissSearchController(_ searchController: UISearchController) {
+        self.searchController.searchBar.resignFirstResponder()
+        
+    }
+    
+    func willDismissSearchController(_ searchController: UISearchController) {
+        self.navigationItem.leftBarButtonItem = self.leftButtonItem
+        self.navigationItem.rightBarButtonItem = self.rightButtonItem
     }
 }
 

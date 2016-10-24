@@ -108,14 +108,19 @@
                             <barButtonItem image="myBox" id="wFc-lZ-vSm">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </barButtonItem>
-                            <barButtonItem image="searchIcon" id="D3E-03-cZ3">
+                            <barButtonItem image="searchIcon" style="plain" id="D3E-03-cZ3">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="searchProducts:" destination="vVD-EG-X6A" id="pxt-yh-Pd9"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="searchBarBoxButton" destination="wFc-lZ-vSm" id="c7H-8I-ege"/>
+                        <outlet property="searchBarButton" destination="D3E-03-cZ3" id="vCe-gP-Ft4"/>
                         <outlet property="tableView" destination="f19-Lu-Hmh" id="7wN-sj-EPx"/>
                         <segue destination="erU-ar-DLf" kind="show" identifier="goRecommended" id="XgR-lH-71A"/>
                     </connections>
@@ -207,7 +212,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="omb" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

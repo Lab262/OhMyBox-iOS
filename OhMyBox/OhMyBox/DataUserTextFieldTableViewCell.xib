@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,12 +21,10 @@
             <rect key="frame" x="0.0" y="0.0" width="448" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="448" height="87.5"/>
+                <frame key="frameInset" width="448" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-O2-X8p">
-                        <frame key="frameInset" minX="14" minY="31" width="106" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-O2-X8p">
                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,9 +35,10 @@
                             <constraint firstAttribute="height" constant="0.5" id="wFU-lz-r9g"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUk-4K-xYd">
-                        <frame key="frameInset" minX="156" minY="7" width="264" height="72"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUk-4K-xYd">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="182" id="f15-EU-jXP"/>
+                        </constraints>
                         <string key="text">Quadra Sqn 309
 Asa Norte, Brasilia - DF</string>
                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="19"/>
@@ -47,9 +47,20 @@ Asa Norte, Brasilia - DF</string>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="zso-xQ-E9h" firstAttribute="top" secondItem="VdJ-O2-X8p" secondAttribute="bottom" constant="31" id="2Es-RA-zvA"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6Bg-hn-gu0"/>
                     <constraint firstAttribute="trailing" secondItem="zso-xQ-E9h" secondAttribute="trailing" constant="8" id="LSy-LK-Sh4"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="leading" secondItem="VdJ-O2-X8p" secondAttribute="trailing" constant="-3" id="Lc1-o2-1YJ"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SFu-zH-wux"/>
+                    <constraint firstItem="VdJ-O2-X8p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="VaI-uM-elA"/>
+                    <constraint firstAttribute="trailing" secondItem="IUk-4K-xYd" secondAttribute="trailing" constant="39" id="bln-5Z-C26"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="leading" secondItem="VdJ-O2-X8p" secondAttribute="trailing" constant="-3" id="cWy-R5-MZ3"/>
+                    <constraint firstItem="VdJ-O2-X8p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="duH-GO-d6d"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="g2b-kp-I7n"/>
                     <constraint firstAttribute="bottom" secondItem="zso-xQ-E9h" secondAttribute="bottom" constant="0.5" id="g4J-fg-Ku6"/>
+                    <constraint firstItem="zso-xQ-E9h" firstAttribute="top" secondItem="IUk-4K-xYd" secondAttribute="bottom" constant="6" id="iua-Lq-Tjk"/>
                     <constraint firstItem="zso-xQ-E9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lhG-8w-Y4r"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="IUk-4K-xYd" secondAttribute="trailing" constant="31" id="tdd-h2-lTd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
