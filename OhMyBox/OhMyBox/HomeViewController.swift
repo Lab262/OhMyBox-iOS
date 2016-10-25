@@ -152,7 +152,8 @@ extension HomeViewController: UITableViewDataSource {
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
-        
+        cell.delegate = self
+
         return cell
     }
     
@@ -266,9 +267,11 @@ extension HomeViewController: UITableViewDelegate {
   
 }
 extension HomeViewController: callSegueProtocol {
-
-    func callRecommended() {
-        self.performSegue(withIdentifier:"goRecommended", sender:self)
+    
+    
+    
+    func callViewController(segueIndentifier:String){
+        self.performSegue(withIdentifier:segueIndentifier, sender:self)
     }
 }
 

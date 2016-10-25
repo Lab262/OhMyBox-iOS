@@ -14,6 +14,10 @@ class ProductTableViewCell: UITableViewCell {
   
     @IBOutlet weak var collectionView: UICollectionView!
     static let identifier = "productCell"
+    let identifierSegue = "detailProduct"
+
+    var delegate : callSegueProtocol?
+    
     
     func registerNibs () {
         
@@ -45,7 +49,7 @@ extension ProductTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowProductCollectionViewCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowProductCollectionViewCell.identifier, for: indexPath)
         return cell
         
         
@@ -63,7 +67,7 @@ extension ProductTableViewCell: UICollectionViewDataSource {
 extension ProductTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        self.delegate?.callViewController(segueIndentifier: identifierSegue)
     }
     
 }

@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.backgroundColor =  UIColor.white
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
         
-        
+              
     }
     
 }

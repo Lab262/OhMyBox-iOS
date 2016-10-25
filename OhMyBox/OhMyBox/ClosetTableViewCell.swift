@@ -9,12 +9,13 @@
 import UIKit
 
 protocol  callSegueProtocol {
-    func callRecommended()
+    func callViewController(segueIndentifier:String)
 }
 
 class ClosetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    let indentifierSegue = "goRecommended"
     
     static let identifier = "closetCell"
     var delegate: callSegueProtocol?
@@ -53,7 +54,7 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
             return cell
         
         
-        return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,7 +69,7 @@ extension ClosetTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
-                self.delegate?.callRecommended()
+                self.delegate?.callViewController(segueIndentifier: indentifierSegue)
             
         
     }
