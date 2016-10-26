@@ -19,6 +19,7 @@ class DetailProudctTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.productImage.addParallaxToView(amount:500)
     }
         
     override func setSelected(_ selected: Bool, animated: Bool) {

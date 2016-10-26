@@ -12,8 +12,10 @@ private let reuseIdentifier = "colorCell"
 class AttributesTableViewCell: UITableViewCell {
     var colours = [Colour]()
 
+    @IBOutlet weak var colorBackgroundView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-   
+    
+    
     static let identifier = "attributeCell"
     
     override func awakeFromNib() {
@@ -21,6 +23,10 @@ class AttributesTableViewCell: UITableViewCell {
         self.initColoursDefault()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    
+        self.collectionView.layer.borderWidth = 1
+        self.collectionView.layer.borderColor = UIColor(red:184/250, green:184/250, blue:184/250, alpha: 1.0).cgColor
+
     }
        func initColoursDefault(){
         
@@ -87,7 +93,7 @@ extension AttributesTableViewCell: UICollectionViewDelegate {
         let colour = colours[indexPath.row]
        
         cell.roundToCircle()
-        cell.backgroundColor = UIColor.hexStringToUIColor(hex: colour.colourHex!)
+        cell.backgroundColor = UIColor.hexStringToUIColor(hex: "989898")
         cell.circleInternal.roundToCircle()
         cell.circleInternal.backgroundColor = UIColor.hexStringToUIColor(hex: colour.colourHex!)
         cell.circleColor.roundToCircle()

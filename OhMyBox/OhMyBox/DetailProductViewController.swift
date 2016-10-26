@@ -31,7 +31,13 @@ class DetailProductViewController: UIViewController {
         
         return cell
     }
-
+    func generateSizeProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: SizeProductTableViewCell.identifier, for: indexPath) as! SizeProductTableViewCell
+        cell.selectionStyle = .none
+        
+        return cell
+    }
 }
 
 extension DetailProductViewController: UITableViewDataSource {
@@ -44,6 +50,8 @@ extension DetailProductViewController: UITableViewDataSource {
         case 1:
             return generateAttributCell(tableView, cellForRowAt: indexPath)
 
+        case 2:
+            return generateSizeProductCell(tableView, cellForRowAt: indexPath)
             
         default:
             return UITableViewCell()
@@ -54,7 +62,7 @@ extension DetailProductViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return 4
     }
     
     
@@ -74,8 +82,13 @@ extension DetailProductViewController: UITableViewDelegate {
         case 0:
             return 360
         case 1:
-            return 497
-
+            return 60
+        case 2:
+            return 80
+        
+        case 3:
+            return 500
+            
         default:
             return 497
         }
