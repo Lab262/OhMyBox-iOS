@@ -15,7 +15,14 @@ class DetailProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.registerNib()
+    }
+    
+    func registerNib() {
+        
+     
+        self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
+        
     }
     
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,6 +45,14 @@ class DetailProductViewController: UIViewController {
         
         return cell
     }
+
+    func generateSimpleTextVieCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextViewTableViewCell.identifier, for: indexPath) as! SimpleTextViewTableViewCell
+        cell.selectionStyle = .none
+        
+        return cell
+    }
 }
 
 extension DetailProductViewController: UITableViewDataSource {
@@ -52,6 +67,11 @@ extension DetailProductViewController: UITableViewDataSource {
 
         case 2:
             return generateSizeProductCell(tableView, cellForRowAt: indexPath)
+            
+        case 3:
+            return generateSimpleTextVieCell(tableView, cellForRowAt: indexPath)
+        
+            
             
         default:
             return UITableViewCell()
@@ -85,10 +105,9 @@ extension DetailProductViewController: UITableViewDelegate {
             return 60
         case 2:
             return 80
-        
         case 3:
-            return 500
-            
+            return 80
+        
         default:
             return 497
         }

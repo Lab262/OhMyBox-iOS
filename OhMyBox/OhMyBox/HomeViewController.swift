@@ -174,7 +174,7 @@ extension HomeViewController: UITableViewDataSource {
     func generateHeaderClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-        
+          cell.selectionStyle = .none
         
         return cell
     }

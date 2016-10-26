@@ -46,8 +46,8 @@ class AttributesTableViewCell: UITableViewCell {
         let colourPinkDark = Colour.init(colourid:"4", colourHex: "FCE1DF")
         self.colours.append(colourPinkDark)
      
-        let colourBlueDark = Colour.init(colourid:"4", colourHex: "809BBC")
-        self.colours.append(colourBlueDark)
+       // let colourBlueDark = Colour.init(colourid:"4", colourHex: "809BBC")
+        //self.colours.append(colourBlueDark)
 
         
     }
