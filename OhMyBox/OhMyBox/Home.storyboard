@@ -139,7 +139,7 @@
         <!--Detail Product View Controller-->
         <scene sceneID="A6M-GZ-xLo">
             <objects>
-                <viewController id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SoA-AK-pD0"/>
                         <viewControllerLayoutGuide type="bottom" id="oRT-An-T9b"/>
@@ -148,9 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="346" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
-                                <frame key="frameInset" width="375" height="1000"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="346" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailProductCell" rowHeight="346" id="mYZ-x3-M6h" customClass="DetailProudctTableViewCell" customModule="OhMyBox" customModuleProvider="target">
@@ -356,11 +354,11 @@
                                             <outlet property="sizeBackgroundView" destination="KAz-Wq-5Qa" id="a5Q-PC-OSY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier=" switchProductButton" rowHeight="107" id="tyj-Di-GWU" customClass="SwitchProductButtonTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="657" width="375" height="107"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="switchButtonProductCell" rowHeight="132" id="tyj-Di-GWU" customClass="SwitchProductButtonTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="657" width="375" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tyj-Di-GWU" id="bI6-nJ-wgs">
-                                            <frame key="frameInset" width="375" height="107"/>
+                                            <frame key="frameInset" width="375" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-Yw-1MC">
@@ -393,8 +391,53 @@
                                     <outlet property="delegate" destination="MiG-iR-diQ" id="FmT-1w-MGk"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-mZ-8Nf">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="heartFull" width="71" id="9sb-4f-T6R">
+                                        <color key="tintColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="TKO-PC-Ld2">
+                                        <view key="customView" contentMode="scaleToFill" id="qZz-vh-pUQ">
+                                            <rect key="frame" x="97" y="6" width="1" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="h8v-kB-9Rs"/>
+                                    <barButtonItem style="plain" id="OIi-Sq-ca9">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="I5e-WF-AKl">
+                                            <rect key="frame" x="108" y="3" width="167" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
+                                            <state key="normal" title="COMPRAR">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="7Pg-AX-6QM"/>
+                                    <barButtonItem style="plain" id="Dn2-WW-dpz">
+                                        <view key="customView" contentMode="scaleToFill" id="p3p-fO-K1a">
+                                            <rect key="frame" x="285" y="6" width="1" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </barButtonItem>
+                                    <barButtonItem width="18" style="plain" systemItem="fixedSpace" id="lIZ-f0-gnx"/>
+                                    <barButtonItem image="myBox" width="42" id="DuL-Ok-ZpQ">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MMt-p2-aM4" firstAttribute="centerY" secondItem="gZZ-hH-Rt7" secondAttribute="centerY" id="Pih-4W-RNJ"/>
+                            <constraint firstItem="MMt-p2-aM4" firstAttribute="width" secondItem="gZZ-hH-Rt7" secondAttribute="width" id="ReW-MO-tFd"/>
+                            <constraint firstItem="MMt-p2-aM4" firstAttribute="centerX" secondItem="gZZ-hH-Rt7" secondAttribute="centerX" id="jfl-T6-6ZB"/>
+                            <constraint firstItem="MMt-p2-aM4" firstAttribute="height" secondItem="gZZ-hH-Rt7" secondAttribute="height" id="lHD-YZ-oxW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="icl-h0-e6J">
                         <barButtonItem key="rightBarButtonItem" image="myBox" id="VUS-IW-eIL">
@@ -404,6 +447,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="boxBarButton" destination="DuL-Ok-ZpQ" id="39M-Q2-n2M"/>
+                        <outlet property="buyButton" destination="OIi-Sq-ca9" id="j8l-Jb-CW2"/>
+                        <outlet property="favoriteBarButton" destination="9sb-4f-T6R" id="Jh9-iq-2um"/>
                         <outlet property="tableView" destination="MMt-p2-aM4" id="vPO-FA-5wD"/>
                     </connections>
                 </viewController>
@@ -510,6 +556,7 @@
     </scenes>
     <resources>
         <image name="bgBox" width="1032" height="255"/>
+        <image name="heartFull" width="27" height="24"/>
         <image name="myBox" width="28" height="28"/>
         <image name="omb" width="38" height="20"/>
         <image name="productDefaultimage.png" width="608" height="538"/>

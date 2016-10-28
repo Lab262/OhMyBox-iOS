@@ -11,11 +11,18 @@ import UIKit
 class DetailProductViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
  
+    @IBOutlet weak var boxBarButton: UIBarButtonItem!
+    @IBOutlet weak var buyButton: UIBarButtonItem!
+    @IBOutlet weak var favoriteBarButton: UIBarButtonItem!
+    var buttonIndexPath = IndexPath.init(row: 3, section: 0)
+    var isSelect = true
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
+        self.setupNavigationAppearance()
     }
     
     func registerNib() {
@@ -23,6 +30,8 @@ class DetailProductViewController: UIViewController {
      
         self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
         
+         self.tableView.register(UINib(nibName: "ContentStoreTableViewCell", bundle: nil), forCellReuseIdentifier: ContentStoreTableViewCell.identifier)
+    
     }
     
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,6 +40,14 @@ class DetailProductViewController: UIViewController {
         cell.selectionStyle = .none
         return cell
     }
+    
+    func generateStoreCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ContentStoreTableViewCell.identifier, for: indexPath) as! ContentStoreTableViewCell
+        cell.selectionStyle = .none
+        return cell
+    }
+    
     func generateAttributCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: AttributesTableViewCell.identifier, for: indexPath) as! AttributesTableViewCell
@@ -46,13 +63,75 @@ class DetailProductViewController: UIViewController {
         return cell
     }
 
-    func generateSimpleTextVieCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateSimpleTextViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextViewTableViewCell.identifier, for: indexPath) as! SimpleTextViewTableViewCell
         cell.selectionStyle = .none
         
         return cell
     }
+    
+    func generateSwitchCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier:SwitchProductButtonTableViewCell.identifier, for: indexPath) as! SwitchProductButtonTableViewCell
+        cell.selectionStyle = .none
+        
+        
+       
+        
+        cell.detailButton.addTarget(self, action: #selector(selectDetailButton(_:)), for: .touchUpInside)
+        
+        cell.descriptionButton.addTarget(self, action:#selector(selectDescriptionButton(_:)), for:.touchUpInside)
+        
+    
+        
+        return cell
+    }
+    
+    func selectDescriptionButton (_ sender: UIButton) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
+        
+     
+        
+        cell.detailButton.backgroundColor = UIColor.white
+        cell.descriptionButton.backgroundColor = UIColor.colorWithHexString("684D8D")
+        
+        cell.detailButton.setTitleColor(UIColor.black, for: .normal)
+        cell.descriptionButton.setTitleColor(UIColor.white, for: .normal)
+        
+        
+        
+        self.isSelect = false
+        self.tableView.reloadData()
+    }
+    
+    
+    func selectDetailButton (_ sender: UIButton) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
+        
+        cell.descriptionButton.backgroundColor = UIColor.white
+        cell.detailButton.backgroundColor = UIColor.colorWithHexString("684D8D")
+      
+       cell.detailButton.setTitleColor(UIColor.white, for: .normal)
+       cell.descriptionButton.setTitleColor(UIColor.black, for: .normal)
+     
+        
+        self.isSelect = true
+        
+        self.tableView.reloadData()
+    }
+
+    func setupNavigationAppearance(){
+        
+//        self.navigationController!.navigationBar.backgroundColor = UIColor(red: 231/250, green: 229/250, blue: 223/250, alpha:0.7)
+//        
+//        self.navigationController!.navigationBar.barTintColor =  UIColor(red: 231/250, green: 0.229/250, blue: 229/250, alpha:0.7)
+        self.navigationController?.navigationBar.isTranslucent = true
+       
+        
+        
+    }
+
 }
 
 extension DetailProductViewController: UITableViewDataSource {
@@ -69,8 +148,12 @@ extension DetailProductViewController: UITableViewDataSource {
             return generateSizeProductCell(tableView, cellForRowAt: indexPath)
             
         case 3:
-            return generateSimpleTextVieCell(tableView, cellForRowAt: indexPath)
-        
+            return generateSwitchCell(tableView, cellForRowAt: indexPath)
+            
+        case 4:
+            return generateSimpleTextViewCell(tableView, cellForRowAt: indexPath)
+        case 5:
+            return generateStoreCell(tableView, cellForRowAt: indexPath)
             
             
         default:
@@ -82,8 +165,9 @@ extension DetailProductViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 7
     }
+    
     
     
     
@@ -106,8 +190,14 @@ extension DetailProductViewController: UITableViewDelegate {
         case 2:
             return 80
         case 3:
-            return 80
-        
+            return 100
+        case 4:
+            return 300
+        case 5 :
+            return 100
+        case 6:
+            return 100 
+            
         default:
             return 497
         }

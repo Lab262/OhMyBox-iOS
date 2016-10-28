@@ -46,6 +46,9 @@
 		2F5DE1C21DC1386700822826 /* SwitchProductButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE1C11DC1386700822826 /* SwitchProductButtonTableViewCell.swift */; };
 		2F5DE1C91DC13F1400822826 /* SimpleTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE1C71DC13F1400822826 /* SimpleTextViewTableViewCell.swift */; };
 		2F5DE1CA1DC13F1400822826 /* SimpleTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1C81DC13F1400822826 /* SimpleTextViewTableViewCell.xib */; };
+		2F5DE1CD1DC2966D00822826 /* ContentStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */; };
+		2F5DE1CE1DC2966D00822826 /* ContentStoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */; };
+		2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CF1DC2ED3300822826 /* storeDefault.png */; };
 		2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */; };
 		2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */; };
 		2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */; };
@@ -130,6 +133,9 @@
 		2F5DE1C11DC1386700822826 /* SwitchProductButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchProductButtonTableViewCell.swift; sourceTree = "<group>"; };
 		2F5DE1C71DC13F1400822826 /* SimpleTextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTextViewTableViewCell.swift; sourceTree = "<group>"; };
 		2F5DE1C81DC13F1400822826 /* SimpleTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTextViewTableViewCell.xib; sourceTree = "<group>"; };
+		2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentStoreTableViewCell.swift; sourceTree = "<group>"; };
+		2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentStoreTableViewCell.xib; sourceTree = "<group>"; };
+		2F5DE1CF1DC2ED3300822826 /* storeDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storeDefault.png; sourceTree = "<group>"; };
 		2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUserTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataUserTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -205,6 +211,8 @@
 				2F5DE1C11DC1386700822826 /* SwitchProductButtonTableViewCell.swift */,
 				2F5DE1C71DC13F1400822826 /* SimpleTextViewTableViewCell.swift */,
 				2F5DE1C81DC13F1400822826 /* SimpleTextViewTableViewCell.xib */,
+				2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */,
+				2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */,
 			);
 			name = DetaiProduct;
 			sourceTree = "<group>";
@@ -503,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4649691DB93E5E0021516F /* fashion-person.png */,
+				2F5DE1CF1DC2ED3300822826 /* storeDefault.png */,
 				2F4896E91DB7486700EADFFE /* defaultGloes.png */,
 				2F0777431DBD368E003C124F /* dressImage.png */,
 				2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */,
@@ -639,12 +648,14 @@
 				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				2F5DE1CA1DC13F1400822826 /* SimpleTextViewTableViewCell.xib in Resources */,
+				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				2F0777501DBDAE0D003C124F /* TermTableViewCell.xib in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */,
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
+				2F5DE1CE1DC2966D00822826 /* ContentStoreTableViewCell.xib in Resources */,
 				2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */,
 				2F0777441DBD368E003C124F /* dressImage.png in Resources */,
 				2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */,
@@ -805,6 +816,7 @@
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,
 				2FAD48C31DB6FE3400074D55 /* ShowProductCollectionViewCell.swift in Sources */,
+				2F5DE1CD1DC2966D00822826 /* ContentStoreTableViewCell.swift in Sources */,
 				2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */,
 				2F225D021DBF04E4009E4566 /* UIview+Util.swift in Sources */,
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,

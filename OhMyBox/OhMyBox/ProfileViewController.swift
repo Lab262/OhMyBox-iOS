@@ -73,15 +73,11 @@ class ProfileViewController: UIViewController {
     
     func selectDateUser (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SegmentTableViewCell.identifier, for:segmentButtonIndexPath) as! SegmentTableViewCell
-        
-                  cell.dataUserButton.setBackgroundImage(UIImage(named:"buttonSegmentON"), for: UIControlState.normal)
+        cell.dataUserButton.setBackgroundImage(UIImage(named:"buttonSegmentON"), for: UIControlState.normal)
              cell.aboutBoxButton.setBackgroundImage(UIImage(named:"buttonSegmentOFF"), for: UIControlState.normal)
             self.isSegment = true
  
             self.tableView.reloadData()
-        
-        
-    
     }
     
     
