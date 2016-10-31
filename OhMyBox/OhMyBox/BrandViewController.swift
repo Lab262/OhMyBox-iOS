@@ -46,6 +46,8 @@ class BrandViewController: UIViewController {
         cell.delegate = self
         cell.clothingtArray = self.clotingArray!
         
+        
+        
         return cell
     }
 }

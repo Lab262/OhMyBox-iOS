@@ -71,6 +71,9 @@
 		D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */; };
 		D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */; };
 		D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */; };
+		D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */; };
+		D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */; };
+		D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D44457F21DC7C2B200F488FE /* jaguar_brand.png */; };
 		D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D72D1DC3F43F00443B63 /* BrandViewController.swift */; };
 		D457D7301DC3F60900443B63 /* TagView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D457D72F1DC3F60900443B63 /* TagView2.xib */; };
 		D457D7321DC3F64900443B63 /* TagView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D7311DC3F64900443B63 /* TagView2.swift */; };
@@ -168,6 +171,9 @@
 		D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetTableViewCell.swift; sourceTree = "<group>"; };
 		D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseBrandTableViewCell.xib; sourceTree = "<group>"; };
+		D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseBrandTableViewCell.swift; sourceTree = "<group>"; };
+		D44457F21DC7C2B200F488FE /* jaguar_brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaguar_brand.png; sourceTree = "<group>"; };
 		D457D72D1DC3F43F00443B63 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
 		D457D72F1DC3F60900443B63 /* TagView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView2.xib; sourceTree = "<group>"; };
 		D457D7311DC3F64900443B63 /* TagView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView2.swift; sourceTree = "<group>"; };
@@ -391,6 +397,8 @@
 			isa = PBXGroup;
 			children = (
 				D402DFFE1DB68CAD007855D6 /* Brand.storyboard */,
+				D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */,
+				D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -523,6 +531,7 @@
 				2F5DE1CF1DC2ED3300822826 /* storeDefault.png */,
 				2F4896E91DB7486700EADFFE /* defaultGloes.png */,
 				2F0777431DBD368E003C124F /* dressImage.png */,
+				D44457F21DC7C2B200F488FE /* jaguar_brand.png */,
 				2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */,
 				2F044CE61DBE41D600B54468 /* coatProduct.png */,
 				2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */,
@@ -641,6 +650,7 @@
 				D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */,
 				2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */,
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
+				D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
 				2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */,
@@ -660,6 +670,7 @@
 				2F5DE1CA1DC13F1400822826 /* SimpleTextViewTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
+				D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */,
 				2F0777501DBDAE0D003C124F /* TermTableViewCell.xib in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */,
@@ -820,6 +831,7 @@
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
 				2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */,
 				2F225D0C1DBFE8FA009E4566 /* SizeProductTableViewCell.swift in Sources */,
+				D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				2F044CEA1DBE43D100B54468 /* DetailProudctTableViewCell.swift in Sources */,
