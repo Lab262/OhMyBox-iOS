@@ -49,6 +49,10 @@
 		2F5DE1CD1DC2966D00822826 /* ContentStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */; };
 		2F5DE1CE1DC2966D00822826 /* ContentStoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */; };
 		2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CF1DC2ED3300822826 /* storeDefault.png */; };
+		2F70E8021DC7B985000AB03B /* ShoppingBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */; };
+		2F70E8041DC7B9AC000AB03B /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */; };
+		2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */; };
+		2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */; };
 		2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */; };
 		2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */; };
 		2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */; };
@@ -142,6 +146,10 @@
 		2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentStoreTableViewCell.swift; sourceTree = "<group>"; };
 		2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentStoreTableViewCell.xib; sourceTree = "<group>"; };
 		2F5DE1CF1DC2ED3300822826 /* storeDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storeDefault.png; sourceTree = "<group>"; };
+		2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingBox.storyboard; sourceTree = "<group>"; };
+		2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxViewController.swift; sourceTree = "<group>"; };
+		2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxTableViewCell.swift; sourceTree = "<group>"; };
+		2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingBoxTableViewCell.xib; sourceTree = "<group>"; };
 		2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUserTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataUserTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -285,6 +293,49 @@
 			name = Axis;
 			sourceTree = "<group>";
 		};
+		2F70E7FB1DC7B861000AB03B /* ShoppingBox */ = {
+			isa = PBXGroup;
+			children = (
+				2F70E7FE1DC7B8C2000AB03B /* Controller */,
+				2F70E7FD1DC7B8BB000AB03B /* View */,
+				2F70E7FC1DC7B8B6000AB03B /* Model */,
+			);
+			name = ShoppingBox;
+			sourceTree = "<group>";
+		};
+		2F70E7FC1DC7B8B6000AB03B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2F70E7FD1DC7B8BB000AB03B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F70E8051DC7C3C6000AB03B /* Cells */,
+				2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2F70E7FE1DC7B8C2000AB03B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2F70E8051DC7C3C6000AB03B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */,
+				2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		64612CF48B1EAC2E4BDDFE27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +368,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
 				D4C0D6511DB6AA00007C3113 /* Resources */,
 				D402E00B1DB68D16007855D6 /* Login */,
@@ -613,7 +665,6 @@
 				TargetAttributes = {
 					A4F89AF81DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R6AP92RETV;
 						ProvisioningStyle = Automatic;
 					};
 					A4F89B0C1DA806C900949A35 = {
@@ -661,6 +712,7 @@
 				D457D7301DC3F60900443B63 /* TagView2.xib in Resources */,
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
 				2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */,
+				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
 				2F4896E01DB72C3900EADFFE /* PromotionTableViewCell.xib in Resources */,
@@ -677,6 +729,7 @@
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
 				2F5DE1CE1DC2966D00822826 /* ContentStoreTableViewCell.xib in Resources */,
+				2F70E8021DC7B985000AB03B /* ShoppingBox.storyboard in Resources */,
 				2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */,
 				2F0777441DBD368E003C124F /* dressImage.png in Resources */,
 				2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */,
@@ -850,9 +903,11 @@
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */,
 				2F5DE1C21DC1386700822826 /* SwitchProductButtonTableViewCell.swift in Sources */,
+				2F70E8041DC7B9AC000AB03B /* ShoppingBoxViewController.swift in Sources */,
 				D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */,
 				2F07774B1DBD9B95003C124F /* SimpleTextTableViewCell.swift in Sources */,
 				2FAD48C71DB7031300074D55 /* ProductTableViewCell.swift in Sources */,
+				2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */,
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
 				2F5DE1C91DC13F1400822826 /* SimpleTextViewTableViewCell.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
@@ -1008,7 +1063,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = R6AP92RETV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
@@ -1028,7 +1083,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = R6AP92RETV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
