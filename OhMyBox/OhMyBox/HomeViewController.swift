@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     var viewSearch: UIView?
     var searchController: UISearchController!
     var leftButtonItem: UIBarButtonItem?
+    var clotingArray: [String]?
     var rightButtonItem: UIBarButtonItem?
     @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
     @IBOutlet weak var searchBarButton: UIBarButtonItem!
@@ -22,6 +23,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.registerNib()
          self.rightButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+        
+        self.clotingArray = [String]()
+        self.clotingArray?.append("Cloting One")
+        self.clotingArray?.append("Cloting Two")
+        self.clotingArray?.append("cloting Three")
     
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -39,8 +45,9 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
         self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
           self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
-    
     }
+    
+    
     @IBAction func searchProducts(_ sender: AnyObject) {
         self.showSearchBar()
     
@@ -167,7 +174,13 @@ extension HomeViewController: UITableViewDataSource {
     func generateClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        cell.delegate = self 
+        
+        
+        cell.tagType = 0
+        cell.clothingtArray = self.clotingArray
+        cell.delegate = self
+        
+        
         return cell
     }
     
@@ -207,6 +220,7 @@ extension HomeViewController: UITableViewDelegate {
             case 0:
             
             switch indexPath.row {
+                
             case 0:
                 return 70
             case 1:
@@ -267,8 +281,6 @@ extension HomeViewController: UITableViewDelegate {
   
 }
 extension HomeViewController: callSegueProtocol {
-    
-    
     
     func callViewController(segueIndentifier:String){
         self.performSegue(withIdentifier:segueIndentifier, sender:self)

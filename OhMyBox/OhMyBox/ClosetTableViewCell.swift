@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol  callSegueProtocol {
+protocol callSegueProtocol {
     func callViewController(segueIndentifier:String)
 }
 
@@ -16,17 +16,19 @@ class ClosetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     let indentifierSegue = "goRecommended"
-    
+    var tagType: Int?
+    var clothingtArray: [String]? {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     static let identifier = "closetCell"
     var delegate: callSegueProtocol?
     
     
     func registerNibs () {
         
-        
         self.collectionView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
-        
-        
     }
     
     override func awakeFromNib() {
@@ -50,16 +52,22 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath)
-            return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath) as! ShowCaseCollectionViewCell
         
+        cell.tagType = tagType
         
+        return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        if self.clothingtArray == nil {
+            return 0
+        } else {
+            return self.clothingtArray!.count
+        }
+    
     }
     
     
@@ -69,7 +77,7 @@ extension ClosetTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
-                self.delegate?.callViewController(segueIndentifier: indentifierSegue)
+        self.delegate?.callViewController(segueIndentifier: indentifierSegue)
             
         
     }

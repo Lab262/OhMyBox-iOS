@@ -10,9 +10,12 @@ import UIKit
 
 class TagView: UIView {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "TagView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
+    
     
     override func awakeFromNib() {
 
