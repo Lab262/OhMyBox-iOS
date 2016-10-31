@@ -122,12 +122,9 @@ class DetailProductViewController: UIViewController {
     }
 
     func setupNavigationAppearance(){
-        
-//        self.navigationController!.navigationBar.backgroundColor = UIColor(red: 231/250, green: 229/250, blue: 223/250, alpha:0.7)
-//        
-//        self.navigationController!.navigationBar.barTintColor =  UIColor(red: 231/250, green: 0.229/250, blue: 229/250, alpha:0.7)
+
         self.navigationController?.navigationBar.isTranslucent = true
-       
+        
         
         
     }
