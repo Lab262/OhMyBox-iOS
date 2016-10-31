@@ -11,15 +11,31 @@ import UIKit
 class ShowCaseCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "showCaseCell"
+    var tagType: Int? {
+        didSet {
+            self.initializeTagView()
+        }
+    }
     @IBOutlet weak var showCaseImage: UIImageView!
-    @IBOutlet weak var tagView: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let tagView = TagView.instanceFromNib()
-        self.addSubview(tagView)
+    }
+    
+    func initializeTagView(){
         
-        tagView.center = CGPoint(x: self.frame.width/2-75, y: self.frame.height/2+80)
+        let tagView: UIView?
+        
+        if tagType! == 0 {
+            tagView = TagView.instanceFromNib()
+        } else {
+            tagView = TagView2.instanceFromNib()
+        }
+       
+        self.addSubview(tagView!)
+        
+        tagView?.center = CGPoint(x: self.frame.width/2-75, y: self.frame.height/2+80)
     }
 }

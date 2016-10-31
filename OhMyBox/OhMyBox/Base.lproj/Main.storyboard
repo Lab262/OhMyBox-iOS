@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I7j-22-wTo">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I7j-22-wTo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -34,7 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5o-BC-c93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431" y="281"/>
+            <point key="canvasLocation" x="-1338" y="328"/>
         </scene>
         <!--Profile-->
         <scene sceneID="6EL-qu-q4k">
@@ -46,15 +46,15 @@
             </objects>
             <point key="canvasLocation" x="-282" y="329"/>
         </scene>
-        <!--Store-->
+        <!--Brand-->
         <scene sceneID="2U9-BP-rgt">
             <objects>
-                <viewControllerPlaceholder storyboardName="Store" id="VWB-gA-slg" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Brand" id="VWB-gA-slg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Store" id="yzT-5a-BOW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZi-hn-LEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-990" y="329"/>
+            <point key="canvasLocation" x="-990" y="328"/>
         </scene>
         <!--Wishlist-->
         <scene sceneID="KAG-V3-Ogt">

@@ -63,7 +63,7 @@
 		A4F89B121DA806C900949A35 /* OhMyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89B111DA806C900949A35 /* OhMyBoxTests.swift */; };
 		A8BD14BCA7DC790910C4E485 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8100773A4B12C234FA1527F /* Pods_OhMyBox.framework */; };
 		D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFF81DB68C7F007855D6 /* Home.storyboard */; };
-		D402DFFF1DB68CAD007855D6 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFFE1DB68CAD007855D6 /* Store.storyboard */; };
+		D402DFFF1DB68CAD007855D6 /* Brand.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFFE1DB68CAD007855D6 /* Brand.storyboard */; };
 		D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E0041DB68CE5007855D6 /* Wishlist.storyboard */; };
 		D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E0091DB68D10007855D6 /* Profile.storyboard */; };
 		D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E00E1DB68D2A007855D6 /* Login.storyboard */; };
@@ -71,6 +71,9 @@
 		D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */; };
 		D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */; };
 		D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */; };
+		D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D72D1DC3F43F00443B63 /* BrandViewController.swift */; };
+		D457D7301DC3F60900443B63 /* TagView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D457D72F1DC3F60900443B63 /* TagView2.xib */; };
+		D457D7321DC3F64900443B63 /* TagView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D7311DC3F64900443B63 /* TagView2.swift */; };
 		D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */; };
 		D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */; };
 		D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6541DB6AA6C007C3113 /* jacketImage.png */; };
@@ -157,7 +160,7 @@
 		C147AE5E093A83F7A00015C8 /* Pods-OhMyBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8100773A4B12C234FA1527F /* Pods_OhMyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D402DFF81DB68C7F007855D6 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		D402DFFE1DB68CAD007855D6 /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		D402DFFE1DB68CAD007855D6 /* Brand.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Brand.storyboard; sourceTree = "<group>"; };
 		D402E0041DB68CE5007855D6 /* Wishlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
 		D402E0091DB68D10007855D6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		D402E00E1DB68D2A007855D6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -165,6 +168,9 @@
 		D402E0181DB69944007855D6 /* ClosetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetTableViewCell.swift; sourceTree = "<group>"; };
 		D402E01E1DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		D457D72D1DC3F43F00443B63 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
+		D457D72F1DC3F60900443B63 /* TagView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView2.xib; sourceTree = "<group>"; };
+		D457D7311DC3F64900443B63 /* TagView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView2.swift; sourceTree = "<group>"; };
 		D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleTableViewCell.swift; sourceTree = "<group>"; };
 		D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		D4C0D6541DB6AA6C007C3113 /* jacketImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jacketImage.png; sourceTree = "<group>"; };
@@ -228,8 +234,10 @@
 		2F225D081DBF1AEF009E4566 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D4C0D65B1DB6AF2C007C3113 /* TagView.xib */,
 				D4C0D65D1DB6B1F2007C3113 /* TagView.swift */,
+				D4C0D65B1DB6AF2C007C3113 /* TagView.xib */,
+				D457D7311DC3F64900443B63 /* TagView2.swift */,
+				D457D72F1DC3F60900443B63 /* TagView2.xib */,
 				2F225CFB1DBEFA5E009E4566 /* ContainerCollectionView.xib */,
 				2F225CFD1DBEFC36009E4566 /* ContainerCollectionView.swift */,
 			);
@@ -308,7 +316,7 @@
 				D402E00B1DB68D16007855D6 /* Login */,
 				D402E0061DB68CED007855D6 /* Profile */,
 				D402E0011DB68CCC007855D6 /* Wishlist */,
-				D402DFFB1DB68C8C007855D6 /* Store */,
+				D402DFFB1DB68C8C007855D6 /* Brand */,
 				D402DFF71DB68C55007855D6 /* Home */,
 				A4F89AFC1DA806C900949A35 /* AppDelegate.swift */,
 				A4F89AFE1DA806C900949A35 /* ViewController.swift */,
@@ -370,19 +378,19 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		D402DFFB1DB68C8C007855D6 /* Store */ = {
+		D402DFFB1DB68C8C007855D6 /* Brand */ = {
 			isa = PBXGroup;
 			children = (
 				D402E0001DB68CB4007855D6 /* Controller */,
 				D402DFFC1DB68C99007855D6 /* View */,
 			);
-			name = Store;
+			name = Brand;
 			sourceTree = "<group>";
 		};
 		D402DFFC1DB68C99007855D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D402DFFE1DB68CAD007855D6 /* Store.storyboard */,
+				D402DFFE1DB68CAD007855D6 /* Brand.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -390,6 +398,7 @@
 		D402E0001DB68CB4007855D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D457D72D1DC3F43F00443B63 /* BrandViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -595,7 +604,7 @@
 				TargetAttributes = {
 					A4F89AF81DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = B865ENT4P3;
+						DevelopmentTeam = R6AP92RETV;
 						ProvisioningStyle = Automatic;
 					};
 					A4F89B0C1DA806C900949A35 = {
@@ -638,7 +647,8 @@
 				2F044CE71DBE41D600B54468 /* coatProduct.png in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
 				2F0777481DBD8FBF003C124F /* MeasuresUserTableViewCell.xib in Resources */,
-				D402DFFF1DB68CAD007855D6 /* Store.storyboard in Resources */,
+				D402DFFF1DB68CAD007855D6 /* Brand.storyboard in Resources */,
+				D457D7301DC3F60900443B63 /* TagView2.xib in Resources */,
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
 				2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
@@ -810,8 +820,10 @@
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
 				2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */,
 				2F225D0C1DBFE8FA009E4566 /* SizeProductTableViewCell.swift in Sources */,
+				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				2F044CEA1DBE43D100B54468 /* DetailProudctTableViewCell.swift in Sources */,
+				D457D7321DC3F64900443B63 /* TagView2.swift in Sources */,
 				D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */,
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,
@@ -984,9 +996,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = R6AP92RETV;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lab262.OhMyBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1003,13 +1016,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = R6AP92RETV;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lab262.OhMyBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
