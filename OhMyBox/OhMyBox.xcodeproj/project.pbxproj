@@ -604,7 +604,6 @@
 				TargetAttributes = {
 					A4F89AF81DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = R6AP92RETV;
 						ProvisioningStyle = Automatic;
 					};
 					A4F89B0C1DA806C900949A35 = {
@@ -996,7 +995,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = R6AP92RETV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
@@ -1016,7 +1015,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = R6AP92RETV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";

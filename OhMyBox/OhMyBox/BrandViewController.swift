@@ -43,7 +43,7 @@ class BrandViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         cell.tagType = 1
-        cell.delegate = self
+      //  cell.delegate = self
         cell.clothingtArray = self.clotingArray!
         
         return cell
