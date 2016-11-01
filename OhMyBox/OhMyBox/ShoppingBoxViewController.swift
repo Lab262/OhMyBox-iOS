@@ -13,12 +13,12 @@ class ShoppingBoxViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    var textSegmentLabel: UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
         segmentControl.layer.cornerRadius = 0.0
         segmentControl.layer.borderWidth = 1.5
-       
     }
 
     @IBAction func backToViewController(_ sender: AnyObject) {
