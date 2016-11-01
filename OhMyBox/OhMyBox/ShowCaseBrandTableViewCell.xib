@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="369" height="296"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z2l-u5-TN5" id="b4A-IT-6as">
-                <frame key="frameInset" width="369" height="295.5"/>
+                <frame key="frameInset" width="369" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jaguar_brand.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-hs-Nyj">
