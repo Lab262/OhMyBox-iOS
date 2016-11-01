@@ -12,11 +12,12 @@ class BrandViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var clotingArray: [String]?
+    
     func registerNibs() {
-        
         self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
         self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
         
+        self.tableView.register(UINib(nibName: "ShowCaseBrandTableViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseBrandTableViewCell.identifier)
     }
 
     override func viewDidLoad() {
@@ -25,13 +26,10 @@ class BrandViewController: UIViewController {
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
         self.clotingArray?.append("cloting Three")
-        
         self.registerNibs()
-
-        // Do any additional setup after loading the view.
     }
     
-    func generateHeaderClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateHeaderRecommendedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
         cell.selectionStyle = .none
@@ -39,12 +37,34 @@ class BrandViewController: UIViewController {
         return cell
     }
     
-    func generateClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateHeaderAllBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
+        cell.selectionStyle = .none
+      //  cell.firstTitleLineLabel.text = "TODAS"
+        //cell.secondTitleLineLabel.text = "AS LOJAS"
+        
+        return cell
+    }
+    
+    
+    
+    func generateRecommendedBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         cell.tagType = 1
       //  cell.delegate = self
         cell.clothingtArray = self.clotingArray!
+        
+        return cell
+    }
+    
+    func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShowCaseBrandTableViewCell.identifier, for: indexPath) as! ShowCaseBrandTableViewCell
+        
+       // cell.brandImage.image = UIImage(named: "")
+        
         
         return cell
     }
@@ -59,19 +79,32 @@ extension BrandViewController: UITableViewDataSource {
             switch indexPath.row {
                 
             case 0:
-                return self.generateHeaderClosetCell(tableView, cellForRowAt: indexPath)
+                return self.generateHeaderRecommendedCell(tableView, cellForRowAt: indexPath)
             case 1:
-                return self.generateClosetCell(tableView, cellForRowAt: indexPath)
+                return self.generateRecommendedBrandCell(tableView, cellForRowAt: indexPath)
             default:
                 return UITableViewCell()
             }
         } else {
-            return UITableViewCell()
+            
+            return self.generateBrandCell(tableView, cellForRowAt: indexPath)
+        
         }
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch section {
+        case 0:
+            return 2
+        default:
+            return 2
+        }
+        //return 2
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         
         return 2
     }
@@ -95,9 +128,14 @@ extension BrandViewController: UITableViewDelegate {
             
             return header
         }else {
-            let view = UIView()
-            view.backgroundColor = UIColor.clear
-            return view
+            
+            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
+            header.selectionStyle = .none
+            header.firstTitleLineLabel.text = "TODAS"
+            header.secondTitleLineLabel.text = "AS LOJAS"
+            
+            return header
+
         }
     }
     
@@ -124,7 +162,15 @@ extension BrandViewController: UITableViewDelegate {
             case 1:
                 return 310
             default:
-                return 0
+                return 310
+            }
+        case 1:
+            
+            switch indexPath.row {
+            case 0:
+                return 310
+            default:
+                return 310
             }
         default:
             return 0

@@ -30,12 +30,14 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
         
         if tagType! == 0 {
             tagView = TagView.instanceFromNib()
+            tagView?.center = CGPoint(x: self.frame.width/2-75, y: self.frame.height/2+75)
         } else {
             tagView = TagView2.instanceFromNib()
+            tagView?.center = CGPoint(x: self.frame.width/2-45, y: self.frame.height/2+85)
         }
        
         self.addSubview(tagView!)
         
-        tagView?.center = CGPoint(x: self.frame.width/2-75, y: self.frame.height/2+80)
+        
     }
 }

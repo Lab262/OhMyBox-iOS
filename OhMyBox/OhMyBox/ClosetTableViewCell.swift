@@ -15,7 +15,7 @@ protocol callSegueProtocol {
 class ClosetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let indentifierSegue = "goRecommended"
+    var identifierSegue: String?
     var tagType: Int?
     var clothingtArray: [String]? {
         didSet {
@@ -77,7 +77,7 @@ extension ClosetTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
-        self.delegate?.callViewController(segueIndentifier: indentifierSegue)
+        self.delegate?.callViewController(segueIndentifier: identifierSegue!)
             
         
     }
