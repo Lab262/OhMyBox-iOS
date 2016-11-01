@@ -9,9 +9,20 @@
 import UIKit
 
 class ShowCaseBrandTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var brandImage: UIImageView!
+    
+    @IBOutlet weak var titleBrandLabel: UILabel!
+    
+    @IBOutlet weak var subtitleBrandLabel: UILabel!
 
+    static let identifier = "showCaseBrandCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
 

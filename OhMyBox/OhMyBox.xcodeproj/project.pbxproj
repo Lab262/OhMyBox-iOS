@@ -83,6 +83,7 @@
 		D457D7321DC3F64900443B63 /* TagView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D7311DC3F64900443B63 /* TagView2.swift */; };
 		D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */; };
 		D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */; };
+		D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B72A2B1DC8342B004335E4 /* brand2.png */; };
 		D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6541DB6AA6C007C3113 /* jacketImage.png */; };
 		D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6561DB6AA6C007C3113 /* shoesImage.png */; };
 		D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D65B1DB6AF2C007C3113 /* TagView.xib */; };
@@ -187,6 +188,7 @@
 		D457D7311DC3F64900443B63 /* TagView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView2.swift; sourceTree = "<group>"; };
 		D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleTableViewCell.swift; sourceTree = "<group>"; };
 		D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
+		D4B72A2B1DC8342B004335E4 /* brand2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brand2.png; sourceTree = "<group>"; };
 		D4C0D6541DB6AA6C007C3113 /* jacketImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jacketImage.png; sourceTree = "<group>"; };
 		D4C0D6561DB6AA6C007C3113 /* shoesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoesImage.png; sourceTree = "<group>"; };
 		D4C0D65B1DB6AF2C007C3113 /* TagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
@@ -582,6 +584,7 @@
 				2F4649691DB93E5E0021516F /* fashion-person.png */,
 				2F5DE1CF1DC2ED3300822826 /* storeDefault.png */,
 				2F4896E91DB7486700EADFFE /* defaultGloes.png */,
+				D4B72A2B1DC8342B004335E4 /* brand2.png */,
 				2F0777431DBD368E003C124F /* dressImage.png */,
 				D44457F21DC7C2B200F488FE /* jaguar_brand.png */,
 				2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */,
@@ -714,6 +717,7 @@
 				2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */,
 				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
+				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
 				2F4896E01DB72C3900EADFFE /* PromotionTableViewCell.xib in Resources */,
 				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,

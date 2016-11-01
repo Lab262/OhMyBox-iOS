@@ -168,19 +168,19 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PromotionTableViewCell.identifier, for: indexPath) as! PromotionTableViewCell
         cell.selectionStyle = .none
+        
         return cell
     }
     
     func generateClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        
-        
+                
         cell.tagType = 0
         cell.clothingtArray = self.clotingArray
+        cell.identifierSegue = "goRecommended"
         cell.delegate = self
-        
-        
+
         return cell
     }
     
