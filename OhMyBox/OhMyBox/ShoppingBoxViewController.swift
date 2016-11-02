@@ -16,6 +16,9 @@ class ShoppingBoxViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     var textSegmentLabel: UILabel?
     
+    @IBAction func buyAction(_ sender: AnyObject) {
+        performSegue(withIdentifier:"segueFinalPurchase", sender:self)
+    }
     
     
     override func viewDidLoad() {
@@ -42,9 +45,9 @@ class ShoppingBoxViewController: UIViewController {
     
     func registerNib(){
         
-    self.tableView.register(UINib(nibName: "ShoppingBoxTableViewCell", bundle: nil), forCellReuseIdentifier: ShoppingBoxTableViewCell.identifier)
+        self.tableView.register(UINib(nibName: "ShoppingBoxTableViewCell", bundle: nil), forCellReuseIdentifier: ShoppingBoxTableViewCell.identifier)
         
-    self.tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: OrderTableViewCell.identifier)
+        self.tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: OrderTableViewCell.identifier)
     }
     
     func generateShoppingCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
