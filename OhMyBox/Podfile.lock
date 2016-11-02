@@ -1,16 +1,19 @@
 PODS:
+  - BGTableViewRowActionWithImage (0.3.6)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
 
 DEPENDENCIES:
+  - BGTableViewRowActionWithImage
   - Crashlytics
   - Fabric
 
 SPEC CHECKSUMS:
+  BGTableViewRowActionWithImage: 3517276bcee26e559465bcca13151afc33ab6d2a
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
 
-PODFILE CHECKSUM: 59360f8868cd14d19844506d3f8a94e0bfa9d592
+PODFILE CHECKSUM: faaaf9ac6d1676129b087c5296a6c91b3db15ece
 
 COCOAPODS: 1.1.1
