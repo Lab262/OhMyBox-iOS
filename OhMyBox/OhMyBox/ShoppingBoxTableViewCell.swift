@@ -27,7 +27,7 @@ class ShoppingBoxTableViewCell: UITableViewCell {
         // Initialization code
         self.bgViewCell.layer.borderWidth = 1.5
         self.bgViewCell.layer.borderColor = UIColor.black.cgColor
-    
+        self.configureImage()
     }
     
     @IBAction func decrease(_ sender: AnyObject) {
@@ -43,7 +43,10 @@ class ShoppingBoxTableViewCell: UITableViewCell {
         self.countLabel.text = String(number)
     }
     
-    
+   
+    func configureImage (){
+        
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

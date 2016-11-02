@@ -26,9 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="242" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="242" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoProfileCell" rowHeight="264" id="q52-06-fef" customClass="PhotoProfileTableViewCell" customModule="OhMyBox" customModuleProvider="target">
@@ -111,6 +109,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="width" secondItem="lHJ-t0-MnT" secondAttribute="width" id="8e3-fJ-kMD"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerY" secondItem="lHJ-t0-MnT" secondAttribute="centerY" id="drE-Ev-5Lc"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerX" secondItem="lHJ-t0-MnT" secondAttribute="centerX" id="efP-9E-8gv"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="height" secondItem="lHJ-t0-MnT" secondAttribute="height" id="qdF-vT-5or"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="PWe-68-0gS">
                         <barButtonItem key="rightBarButtonItem" image="myBox" id="yiW-af-Ho5">

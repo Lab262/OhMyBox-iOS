@@ -257,8 +257,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brandIconDeselected_button" width="34" height="26"/>
-        <image name="brandIconSelected_button" width="32" height="25"/>
         <image name="coatProduct.png" width="640" height="432"/>
         <image name="containerDouble_image" width="353" height="48"/>
         <image name="containerMedium_image" width="264" height="65"/>

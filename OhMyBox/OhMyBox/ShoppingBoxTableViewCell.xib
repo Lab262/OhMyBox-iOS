@@ -59,16 +59,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpz-vR-4vJ">
-                                <frame key="frameInset" minX="219" minY="81" width="34" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="lessButton"/>
-                                <connections>
-                                    <action selector="decrease:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3ft-2i-VRM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLI-pV-8b6">
-                                <frame key="frameInset" minX="221" minY="6" width="26" height="18"/>
+                                <frame key="frameInset" minX="209" width="50" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="moreButton"/>
                                 <connections>
@@ -83,7 +75,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaf-F6-Gcl">
+                        <frame key="frameInset" minX="319" minY="100" width="50" height="29"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="lessButton"/>
+                        <connections>
+                            <action selector="decrease:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="csL-82-1bT"/>
+                        </connections>
+                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dressImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-Zq-sp1">
                         <frame key="frameInset" minY="10" width="127" height="125"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -53,6 +53,8 @@
 		2F70E8041DC7B9AC000AB03B /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */; };
 		2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */; };
 		2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */; };
+		2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E8321DC969EC000AB03B /* OrderTableViewCell.swift */; };
+		2F70E8351DC969EC000AB03B /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E8331DC969EC000AB03B /* OrderTableViewCell.xib */; };
 		2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */; };
 		2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */; };
 		2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */; };
@@ -159,6 +161,8 @@
 		2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxViewController.swift; sourceTree = "<group>"; };
 		2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxTableViewCell.swift; sourceTree = "<group>"; };
 		2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingBoxTableViewCell.xib; sourceTree = "<group>"; };
+		2F70E8321DC969EC000AB03B /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		2F70E8331DC969EC000AB03B /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUserTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		2F8460621DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataUserTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2FAD48C01DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -350,6 +354,8 @@
 			children = (
 				2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */,
 				2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */,
+				2F70E8321DC969EC000AB03B /* OrderTableViewCell.swift */,
+				2F70E8331DC969EC000AB03B /* OrderTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D4D2AC701DC9679100C9BFC9 /* Login */,
 				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
 				D4C0D6511DB6AA00007C3113 /* Resources */,
@@ -634,6 +641,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		D4D2AC701DC9679100C9BFC9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -692,6 +706,7 @@
 				TargetAttributes = {
 					A4F89AF81DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					A4F89B0C1DA806C900949A35 = {
@@ -749,6 +764,7 @@
 				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				2F5DE1CA1DC13F1400822826 /* SimpleTextViewTableViewCell.xib in Resources */,
+				2F70E8351DC969EC000AB03B /* OrderTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */,
@@ -935,6 +951,7 @@
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */,
+				2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */,
 				2F5DE1C21DC1386700822826 /* SwitchProductButtonTableViewCell.swift in Sources */,
 				2F70E8041DC7B9AC000AB03B /* ShoppingBoxViewController.swift in Sources */,
 				D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */,
@@ -1095,6 +1112,7 @@
 			baseConfigurationReference = 844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
@@ -1107,6 +1125,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1116,6 +1135,7 @@
 			baseConfigurationReference = F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 29;
