@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,23 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="375" height="69.5"/>
+                <frame key="frameInset" width="375" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconHeaderOrange_image" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-B0-cpe">
-                        <frame key="frameInset" minX="8" minY="23" width="15" height="23"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHeaderOrange_image" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-B0-cpe">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="mH4-s3-UOX"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Destaques" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-wl-FFK">
-                        <frame key="frameInset" minX="31" minY="23" width="152" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaques" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-wl-FFK">
                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-4d-yUt">
-                        <frame key="frameInset" minX="290" minY="19" width="77" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-4d-yUt">
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <state key="normal" title="Ver tudo">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,6 +39,15 @@
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="4ux-B0-cpe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="E7T-80-uYD"/>
+                    <constraint firstItem="Iui-wl-FFK" firstAttribute="centerY" secondItem="4ux-B0-cpe" secondAttribute="centerY" id="Ugz-yu-fnl"/>
+                    <constraint firstItem="tvR-4d-yUt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-5" id="Xdg-Yf-grf"/>
+                    <constraint firstItem="4ux-B0-cpe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kWw-TV-Zd3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4ux-B0-cpe" secondAttribute="bottom" constant="15" id="qX7-ct-xA7"/>
+                    <constraint firstItem="Iui-wl-FFK" firstAttribute="leading" secondItem="4ux-B0-cpe" secondAttribute="trailing" constant="8" id="seU-mY-dXh"/>
+                    <constraint firstItem="tvR-4d-yUt" firstAttribute="centerY" secondItem="Iui-wl-FFK" secondAttribute="centerY" id="tk3-Gy-Sv4"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>

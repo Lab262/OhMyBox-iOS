@@ -20,15 +20,19 @@
                 <frame key="frameInset" width="431" height="114"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-Gp-QHu">
-                        <frame key="frameInset" minX="25" minY="8" width="381" height="100"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-Gp-QHu">
                         <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</string>
                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="1rr-Gp-QHu" secondAttribute="trailing" constant="25" id="IZB-Dc-i4v"/>
+                    <constraint firstItem="1rr-Gp-QHu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="aVR-f5-FLa"/>
+                    <constraint firstAttribute="bottom" secondItem="1rr-Gp-QHu" secondAttribute="bottom" constant="8" id="mDT-Gf-OSx"/>
+                    <constraint firstItem="1rr-Gp-QHu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="ngw-59-FGW"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="textDetailLabel" destination="1rr-Gp-QHu" id="aB0-ny-D9S"/>

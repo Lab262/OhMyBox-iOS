@@ -20,10 +20,19 @@ class DetailBrandViewController: UIViewController {
         self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
     }
     
+    func configureTableView () {
+        
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.layoutIfNeeded()
+        
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.registerNibs()
+        self.configureTableView()
 
     }
     
@@ -162,38 +171,7 @@ extension DetailBrandViewController: UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        switch indexPath.section {
-            
-        case 0:
-            
-            switch indexPath.row {
-                
-            case 0:
-                return 245
-            case 1:
-                return 115
-            default:
-                return 79
-            }
-        case 1:
-            
-            return 310
-                
-        case 2:
-            
-            return 247
-            
-        case 3:
-            
-            return 310
-            
-        default:
-            return 0
-        }
-    }
-}
+ }
 
 extension DetailBrandViewController: callSegueProtocol {
     

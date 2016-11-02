@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -16,63 +16,91 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShowProductCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="370" height="300"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="showProductCell" id="gTV-IL-0wX" customClass="ShowProductCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="352"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="370" height="300"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="352"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w30-60-Mk8">
-                        <frame key="frameInset" minX="29" minY="-18" width="312" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w30-60-Mk8">
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enfeite fluffy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKc-yG-p9f">
-                                <frame key="frameInset" minX="8" minY="244" width="144" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showCaseBrandBox_image" translatesAutoresizingMaskIntoConstraints="NO" id="1ZU-Sn-Ggl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="XHI-Ql-aeR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enfeite Fluffy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKc-yG-p9f">
+                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$ 50,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-yu-1cg">
-                                <frame key="frameInset" minX="10" minY="271" width="144" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-yu-1cg">
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9z-Qh-DhK">
-                                <frame key="frameInset" minX="274" minY="262" width="30" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="myBox"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="productDefaultimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-Pk-ZjP"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9z-Qh-DhK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Mh3-gV-1Fs"/>
+                                    <constraint firstAttribute="height" constant="28" id="Ruc-dc-BlO"/>
+                                </constraints>
+                                <state key="normal" image="box_button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lM-yI-rfb">
-                                <frame key="frameInset" minX="233" minY="265" width="27" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="heart"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lM-yI-rfb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="a2d-Ob-Dbt"/>
+                                    <constraint firstAttribute="height" constant="24" id="le5-Im-Wl5"/>
+                                </constraints>
+                                <state key="normal" image="heartEmpty_button"/>
                                 <connections>
                                     <action selector="setFavorite:" destination="gTV-IL-0wX" eventType="touchUpInside" id="squ-LA-d1T"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a9z-Qh-DhK" secondAttribute="trailing" constant="78" id="0d0-4j-Q1v"/>
+                            <constraint firstItem="EKc-yG-p9f" firstAttribute="top" secondItem="2gB-Pk-ZjP" secondAttribute="bottom" constant="10" id="0gq-4e-qw3"/>
+                            <constraint firstAttribute="bottom" secondItem="7lM-yI-rfb" secondAttribute="bottom" constant="19" id="1U0-f1-XTa"/>
+                            <constraint firstAttribute="bottom" secondItem="2gB-Pk-ZjP" secondAttribute="bottom" constant="74" id="7QR-db-UIF"/>
+                            <constraint firstAttribute="trailing" secondItem="1ZU-Sn-Ggl" secondAttribute="trailing" constant="1" id="CU6-WR-ewi"/>
+                            <constraint firstAttribute="bottom" secondItem="1ZU-Sn-Ggl" secondAttribute="bottom" constant="2" id="DQW-1Y-oUZ"/>
+                            <constraint firstItem="fs7-yu-1cg" firstAttribute="leading" secondItem="w30-60-Mk8" secondAttribute="leading" constant="24" id="Lsn-mb-PAm"/>
+                            <constraint firstItem="1ZU-Sn-Ggl" firstAttribute="leading" secondItem="w30-60-Mk8" secondAttribute="leading" constant="12" id="PQC-tb-NLp"/>
+                            <constraint firstAttribute="trailing" secondItem="2gB-Pk-ZjP" secondAttribute="trailing" id="XgK-J7-2xa"/>
+                            <constraint firstItem="fs7-yu-1cg" firstAttribute="top" secondItem="EKc-yG-p9f" secondAttribute="bottom" constant="0.5" id="eGw-MZ-qfT"/>
+                            <constraint firstItem="7lM-yI-rfb" firstAttribute="leading" secondItem="EKc-yG-p9f" secondAttribute="trailing" constant="8" id="gNg-0H-R2W"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fs7-yu-1cg" secondAttribute="bottom" constant="2" id="jRy-E1-Lkd"/>
+                            <constraint firstAttribute="bottom" secondItem="a9z-Qh-DhK" secondAttribute="bottom" constant="17" id="klJ-EE-Hxg"/>
+                            <constraint firstItem="2gB-Pk-ZjP" firstAttribute="leading" secondItem="w30-60-Mk8" secondAttribute="leading" constant="11" id="nmR-Zk-KDg"/>
+                            <constraint firstItem="a9z-Qh-DhK" firstAttribute="leading" secondItem="7lM-yI-rfb" secondAttribute="trailing" constant="27" id="pDs-ho-aMY"/>
+                            <constraint firstItem="2gB-Pk-ZjP" firstAttribute="top" secondItem="w30-60-Mk8" secondAttribute="top" constant="8" id="raG-Cc-bpV"/>
+                            <constraint firstItem="EKc-yG-p9f" firstAttribute="leading" secondItem="w30-60-Mk8" secondAttribute="leading" constant="24" id="uSp-Kf-mhY"/>
+                        </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="productDefaultimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-Pk-ZjP">
-                        <frame key="frameInset" minX="29" width="312" height="215"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="w30-60-Mk8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4FF-4y-atJ"/>
+                <constraint firstAttribute="bottom" secondItem="w30-60-Mk8" secondAttribute="bottom" id="GsZ-b1-CQq"/>
+                <constraint firstItem="w30-60-Mk8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OdH-mh-Uun"/>
+                <constraint firstAttribute="trailing" secondItem="w30-60-Mk8" secondAttribute="trailing" constant="59" id="wvl-YX-rc2"/>
+            </constraints>
+            <size key="customSize" width="370" height="375"/>
             <connections>
                 <outlet property="containerView" destination="w30-60-Mk8" id="y3U-It-jLO"/>
                 <outlet property="nameProduct" destination="EKc-yG-p9f" id="TNd-Dn-XwG"/>
                 <outlet property="priceProduct" destination="fs7-yu-1cg" id="ifa-HJ-yHK"/>
                 <outlet property="productImage" destination="2gB-Pk-ZjP" id="wmL-vB-aoE"/>
             </connections>
+            <point key="canvasLocation" x="86.5" y="240"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="heart" width="29" height="26"/>
-        <image name="myBox" width="28" height="28"/>
+        <image name="box_button" width="28" height="28"/>
+        <image name="heartEmpty_button" width="29" height="26"/>
         <image name="productDefaultimage.png" width="608" height="538"/>
+        <image name="showCaseBrandBox_image" width="347" height="70"/>
     </resources>
 </document>
