@@ -113,6 +113,9 @@
                         <rightBarButtonItems>
                             <barButtonItem image="myBox" id="wFc-lZ-vSm">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="YUY-LX-DDs" kind="presentation" id="lat-32-PQj"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem image="searchIcon" style="plain" id="D3E-03-cZ3">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djg-nn-b97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194.4000000000001" y="-588.30584707646176"/>
+            <point key="canvasLocation" x="1716" y="-598"/>
         </scene>
         <!--Detail Product View Controller-->
         <scene sceneID="A6M-GZ-xLo">
@@ -442,6 +445,9 @@
                     <navigationItem key="navigationItem" id="icl-h0-e6J">
                         <barButtonItem key="rightBarButtonItem" image="myBox" id="VUS-IW-eIL">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ibz-ad-nfE" kind="presentation" id="1NX-qp-R9H"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -456,6 +462,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-w8-DRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3064.8000000000002" y="-224.88755622188907"/>
+        </scene>
+        <!--ShoppingBox-->
+        <scene sceneID="iXg-BB-Gle">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShoppingBox" id="ibz-ad-nfE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VE-X2-oD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3688" y="-715"/>
+        </scene>
+        <!--ShoppingBox-->
+        <scene sceneID="yXG-IB-EN4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShoppingBox" id="YUY-LX-DDs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3J-zj-y3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2463" y="-1426"/>
         </scene>
         <!--RECOMENDADOS-->
         <scene sceneID="88A-Kb-TVN">
@@ -521,6 +543,9 @@
                     <navigationItem key="navigationItem" title="RECOMENDADOS" id="4NX-5T-Gyj">
                         <barButtonItem key="rightBarButtonItem" image="myBox" id="pn6-a6-aTL">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="nA4-py-4Ng" kind="presentation" id="GLb-5X-wKm"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -532,6 +557,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2I-w8-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3064.8000000000002" y="-1251.2743628185908"/>
+        </scene>
+        <!--ShoppingBox-->
+        <scene sceneID="VRA-pb-NLh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShoppingBox" id="nA4-py-4Ng" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIH-R5-cxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3689" y="-1613"/>
         </scene>
         <!--OMB-->
         <scene sceneID="oNb-HY-LHx">
@@ -551,7 +584,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAD-FT-mTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255.2" y="-587.85607196401804"/>
+            <point key="canvasLocation" x="554" y="-598"/>
         </scene>
     </scenes>
     <resources>
