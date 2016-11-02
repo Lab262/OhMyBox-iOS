@@ -386,7 +386,6 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
-				D4D2AC701DC9679100C9BFC9 /* Login */,
 				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
 				D4C0D6511DB6AA00007C3113 /* Resources */,
@@ -633,13 +632,6 @@
 				D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		D4D2AC701DC9679100C9BFC9 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

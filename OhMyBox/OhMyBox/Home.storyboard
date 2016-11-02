@@ -570,7 +570,7 @@
         <scene sceneID="oNb-HY-LHx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ixR-Ni-Gjy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="OMB" image="omb" id="XLe-Dj-Fjn"/>
+                    <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
@@ -591,8 +591,10 @@
         <image name="bgBox" width="1032" height="255"/>
         <image name="heartFull" width="27" height="24"/>
         <image name="myBox" width="28" height="28"/>
-        <image name="omb" width="38" height="20"/>
+        <image name="ombIconDeselected_button" width="36" height="21"/>
+        <image name="ombIconSelected_button" width="43" height="28"/>
         <image name="productDefaultimage.png" width="608" height="538"/>
         <image name="searchIcon" width="20" height="20"/>
     </resources>
+    <color key="tintColor" red="0.14117647059999999" green="0.094117647060000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

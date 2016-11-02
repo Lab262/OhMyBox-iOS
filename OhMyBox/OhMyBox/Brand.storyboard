@@ -15,11 +15,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Lojas-->
+        <!--marcas-->
         <scene sceneID="KD1-Mr-vAf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fnk-Q2-tB1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lojas" image="store" id="4iO-iD-qAc"/>
+                    <tabBarItem key="tabBarItem" title="marcas" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
@@ -257,11 +257,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="brandIconDeselected_button" width="34" height="26"/>
+        <image name="brandIconSelected_button" width="32" height="25"/>
         <image name="coatProduct.png" width="640" height="432"/>
         <image name="containerDouble_image" width="353" height="48"/>
         <image name="containerMedium_image" width="264" height="65"/>
         <image name="detailBrandTag_image" width="353" height="68"/>
         <image name="jaguar_brand.png" width="6000" height="3376"/>
-        <image name="store" width="31" height="25"/>
     </resources>
 </document>
