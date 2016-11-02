@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -132,6 +132,7 @@
             </objects>
             <point key="canvasLocation" x="1028" y="95.802098950524751"/>
         </scene>
+
         <!--ShoppingBox-->
         <scene sceneID="Vc6-yI-rAF">
             <objects>
@@ -141,10 +142,11 @@
             <point key="canvasLocation" x="1618" y="-205"/>
         </scene>
         <!--Perfil-->
+
         <scene sceneID="ZdJ-0I-3s6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="48E-iM-OrB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Perfil" image="profile" id="s2k-gv-wDF"/>
+                    <tabBarItem key="tabBarItem" title="perfil" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z9V-g4-n4P">
@@ -167,6 +169,7 @@
         <image name="contentName" width="353" height="62"/>
         <image name="fashion-person.png" width="640" height="426"/>
         <image name="myBox" width="28" height="28"/>
-        <image name="profile" width="19" height="24"/>
+        <image name="profileIconDeselected_button" width="29" height="27"/>
+        <image name="profileIconSelected_button" width="29" height="28"/>
     </resources>
 </document>
