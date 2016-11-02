@@ -1,5 +1,5 @@
 //
-//  HeaderTitleSecondTypeTableViewCell.swift
+//  CollectionBrandTableViewCell.swift
 //  OhMyBox
 //
 //  Created by Huallyd Smadi on 01/11/16.
@@ -8,17 +8,15 @@
 
 import UIKit
 
-class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
+class CollectionBrandTableViewCell: UITableViewCell {
     
-    static let identifier = "headerSecondTypeCell"
+    
+    static let identifier = "collectionBrandCell"
+    
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var tagNameImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
 
-    @IBOutlet weak var iconImage: UIImageView!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var showAll: UIButton!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,5 +27,5 @@ class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

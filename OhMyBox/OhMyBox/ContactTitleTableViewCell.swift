@@ -1,5 +1,5 @@
 //
-//  HeaderTitleSecondTypeTableViewCell.swift
+//  ContactTitleTableViewCell.swift
 //  OhMyBox
 //
 //  Created by Huallyd Smadi on 01/11/16.
@@ -8,17 +8,13 @@
 
 import UIKit
 
-class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
+class ContactTitleTableViewCell: UITableViewCell {
     
-    static let identifier = "headerSecondTypeCell"
+    static let identifier = "contactTitleCell"
+    
+    @IBOutlet weak var contactTitleLabel: UILabel!
+    
 
-    @IBOutlet weak var iconImage: UIImageView!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var showAll: UIButton!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,5 +25,5 @@ class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

@@ -10,8 +10,6 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
-    
-  
     @IBOutlet weak var collectionView: UICollectionView!
     static let identifier = "productCell"
     let identifierSegue = "detailProduct"
@@ -50,9 +48,6 @@ extension ProductTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowProductCollectionViewCell.identifier, for: indexPath)
-        return cell
-        
-        
         return cell
     }
     

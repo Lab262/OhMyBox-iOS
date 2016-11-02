@@ -1,5 +1,5 @@
 //
-//  HeaderTitleSecondTypeTableViewCell.swift
+//  PresentationBrandDetailTableViewCell.swift
 //  OhMyBox
 //
 //  Created by Huallyd Smadi on 01/11/16.
@@ -8,15 +8,11 @@
 
 import UIKit
 
-class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
+class PresentationBrandDetailTableViewCell: UITableViewCell {
     
-    static let identifier = "headerSecondTypeCell"
+    static let identifier = "presentationBrandCell"
 
-    @IBOutlet weak var iconImage: UIImageView!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var showAll: UIButton!
+    @IBOutlet weak var brandNameLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -29,5 +25,5 @@ class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

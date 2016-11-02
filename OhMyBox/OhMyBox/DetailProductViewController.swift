@@ -27,7 +27,6 @@ class DetailProductViewController: UIViewController {
     
     func registerNib() {
         
-     
         self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
         
          self.tableView.register(UINib(nibName: "ContentStoreTableViewCell", bundle: nil), forCellReuseIdentifier: ContentStoreTableViewCell.identifier)
@@ -164,9 +163,6 @@ extension DetailProductViewController: UITableViewDataSource {
         
         return 7
     }
-    
-    
-    
     
 }
 

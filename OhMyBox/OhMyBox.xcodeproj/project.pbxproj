@@ -83,6 +83,9 @@
 		D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D72D1DC3F43F00443B63 /* BrandViewController.swift */; };
 		D457D7301DC3F60900443B63 /* TagView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D457D72F1DC3F60900443B63 /* TagView2.xib */; };
 		D457D7321DC3F64900443B63 /* TagView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D7311DC3F64900443B63 /* TagView2.swift */; };
+		D47E83BC1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */; };
+		D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */; };
+		D47E83C01DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */; };
 		D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */; };
 		D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */; };
 		D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B72A2B1DC8342B004335E4 /* brand2.png */; };
@@ -98,6 +101,8 @@
 		D4C0D6671DB6B32E007C3113 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6621DB6B32E007C3113 /* TextFieldExtension.swift */; };
 		D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6631DB6B32E007C3113 /* UIColorExtension.swift */; };
 		D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */; };
+		D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */; };
+		D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +198,9 @@
 		D457D72D1DC3F43F00443B63 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
 		D457D72F1DC3F60900443B63 /* TagView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView2.xib; sourceTree = "<group>"; };
 		D457D7311DC3F64900443B63 /* TagView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView2.swift; sourceTree = "<group>"; };
+		D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBrandTableViewCell.swift; sourceTree = "<group>"; };
+		D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTitleTableViewCell.swift; sourceTree = "<group>"; };
+		D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBrandDetailTableViewCell.swift; sourceTree = "<group>"; };
 		D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleTableViewCell.swift; sourceTree = "<group>"; };
 		D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		D4B72A2B1DC8342B004335E4 /* brand2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brand2.png; sourceTree = "<group>"; };
@@ -208,6 +216,8 @@
 		D4C0D6621DB6B32E007C3113 /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		D4C0D6631DB6B32E007C3113 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -382,6 +392,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D4D2AC701DC9679100C9BFC9 /* Login */,
 				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
 				D4C0D6511DB6AA00007C3113 /* Resources */,
@@ -467,6 +478,9 @@
 				D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */,
 				D4B72A2F1DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift */,
 				D4B72A301DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib */,
+				D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */,
+				D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */,
+				D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -561,6 +575,8 @@
 		D402E00D1DB68D20007855D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */,
+				D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -623,6 +639,13 @@
 				D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D4D2AC701DC9679100C9BFC9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -917,8 +940,10 @@
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,
 				2FAD48C31DB6FE3400074D55 /* ShowProductCollectionViewCell.swift in Sources */,
+				D47E83BC1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift in Sources */,
 				2F5DE1CD1DC2966D00822826 /* ContentStoreTableViewCell.swift in Sources */,
 				2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */,
+				D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */,
 				2F225D021DBF04E4009E4566 /* UIview+Util.swift in Sources */,
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
@@ -934,11 +959,14 @@
 				2FAD48C71DB7031300074D55 /* ProductTableViewCell.swift in Sources */,
 				2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */,
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
+				D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */,
 				2F5DE1C91DC13F1400822826 /* SimpleTextViewTableViewCell.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
+				D47E83C01DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,
 				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
 				2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */,
+				D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */,
 				D4C0D65E1DB6B1F2007C3113 /* TagView.swift in Sources */,
 				2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */,
 				2F4896F81DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift in Sources */,
