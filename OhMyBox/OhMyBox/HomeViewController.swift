@@ -28,11 +28,13 @@ class HomeViewController: UIViewController {
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
         self.clotingArray?.append("cloting Three")
-    
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.configureSearchBar()
+        
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         if self.searchController.isActive {
             self.searchController.isActive = false
@@ -191,8 +193,6 @@ extension HomeViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

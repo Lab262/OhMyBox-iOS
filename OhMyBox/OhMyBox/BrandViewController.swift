@@ -53,7 +53,8 @@ class BrandViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         cell.tagType = 1
-      //  cell.delegate = self
+        cell.delegate = self
+        cell.identifierSegue = "detailBrandView"
         cell.clothingtArray = self.clotingArray!
         
         return cell
@@ -68,6 +69,16 @@ class BrandViewController: UIViewController {
         
         return cell
     }
+    
+    func generateProducteCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: WishTableViewCell.identifier, for: indexPath) as! WishTableViewCell
+        
+        cell.productImage.image = UIImage(named:"dressImage")
+        
+        return cell
+    }
+
 }
 
 extension BrandViewController: UITableViewDataSource {
@@ -149,6 +160,8 @@ extension BrandViewController: UITableViewDelegate {
         }
     }
     
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {
@@ -177,9 +190,6 @@ extension BrandViewController: UITableViewDelegate {
         }
     }
 }
-
-
-
 
 extension BrandViewController: callSegueProtocol {
     
