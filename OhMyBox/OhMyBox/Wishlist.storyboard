@@ -39,6 +39,9 @@
                         <rightBarButtonItems>
                             <barButtonItem image="myBox" id="hl3-WA-T3U">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="tyk-Di-y1H" kind="presentation" id="vcs-vx-rES"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem image="searchIcon" id="c1n-Np-aFM">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,7 +56,17 @@
             </objects>
             <point key="canvasLocation" x="1092" y="67.916041979010501"/>
         </scene>
-        <!--wishlist-->
+
+        <!--ShoppingBox-->
+        <scene sceneID="6z0-aT-Fa4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShoppingBox" id="tyk-Di-y1H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qL-5n-MJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672" y="-263"/>
+        </scene>
+        <!--Wishlist-->
+
         <scene sceneID="qLn-Il-lrc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VLa-KE-1TN" sceneMemberID="viewController">

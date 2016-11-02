@@ -11,6 +11,7 @@ import UIKit
 class DataUserTextFieldTableViewCell: UITableViewCell {
     static let identifier = "dataUserCell"
     
+    @IBOutlet weak var lineSectionView: UIView!
     @IBOutlet weak var nameFieldLabel: UILabel!
     @IBOutlet weak var infoUserLabel: UILabel!
    

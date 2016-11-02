@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Shopping Box View Controller-->
         <scene sceneID="6za-ii-dJ4">
@@ -31,9 +36,7 @@
                                     <action selector="selectUnitOrBox:" destination="Xam-Z7-ox1" eventType="valueChanged" id="sEa-5k-y7y"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTo-EA-wGZ">
-                                <frame key="frameInset" minY="78" width="375" height="589"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTo-EA-wGZ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Xam-Z7-ox1" id="jLU-mo-Yhj"/>
@@ -55,7 +58,7 @@
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <segue destination="aZ6-Xl-MdT" kind="presentation" id="w6X-bz-ybA"/>
+                                                <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="yw2-eN-FZg"/>
                                             </connections>
                                         </button>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,23 +77,48 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="-78" id="IRf-xh-Co4"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="width" secondItem="76r-qQ-ZOB" secondAttribute="width" id="Xkq-w5-q9j"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="39" id="ZW9-qn-IYE"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="jOI-TS-cTt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3fQ-Qu-pij"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="closeButton" destination="nBY-7w-BCo" id="wmp-0D-NmH"/>
                         <outlet property="segmentControl" destination="hMB-eL-hGQ" id="9j0-Xh-eHT"/>
                         <outlet property="tableView" destination="rTo-EA-wGZ" id="Kyv-mU-jgD"/>
+                        <segue destination="LMx-MR-oGB" kind="presentation" identifier="segueFinalPurchase" id="D1K-M1-hvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h3-DB-kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100" y="118.29085457271366"/>
+            <point key="canvasLocation" x="-49" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="T9k-Xk-PcE">
+            <objects>
+                <navigationController id="LMx-MR-oGB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xj6-EP-ugh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nVm-ux-fja">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aZ6-Xl-MdT" kind="relationship" relationship="rootViewController" id="vsy-LD-abj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptD-dy-R6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="69"/>
+        </scene>
+        <!--MY BOX-->
         <scene sceneID="hwP-Af-PAb">
             <objects>
-                <viewController id="aZ6-Xl-MdT" sceneMemberID="viewController">
+                <viewController title="MY BOX" id="aZ6-Xl-MdT" customClass="FinalPurchaseViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hB3-lD-LgR"/>
                         <viewControllerLayoutGuide type="bottom" id="RrB-Ib-FAF"/>
@@ -98,12 +126,58 @@
                     <view key="view" contentMode="scaleToFill" id="lBO-Dq-3Yw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-3K-Wm3">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aZ6-Xl-MdT" id="lBo-rP-leT"/>
+                                    <outlet property="delegate" destination="aZ6-Xl-MdT" id="X1n-Jb-MNr"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-7v-qiG">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="pTO-Ny-Wqg">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EzV-69-8e9">
+                                            <rect key="frame" x="16" y="7" width="342" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
+                                            <state key="normal" title="FINALIZAR COMPRA">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="zUY-FA-Mcg" kind="presentation" id="ovn-df-SYp"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="MY BOX" id="BbR-ru-EpS">
+                        <barButtonItem key="backBarButtonItem" systemItem="edit" id="MqR-5K-ob1"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="tBU-3K-Wm3" id="mvk-c4-9QU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOA-ml-T3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="118"/>
+            <point key="canvasLocation" x="1548" y="69"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="dui-2e-8qN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="zUY-FA-Mcg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpY-ph-oNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="591"/>
         </scene>
     </scenes>
     <resources>

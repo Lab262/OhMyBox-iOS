@@ -24,11 +24,6 @@
                 <frame key="frameInset" width="448" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-O2-X8p">
-                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zso-xQ-E9h">
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -45,26 +40,32 @@ Asa Norte, Brasilia - DF</string>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-O2-X8p">
+                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zso-xQ-E9h" firstAttribute="top" secondItem="VdJ-O2-X8p" secondAttribute="bottom" constant="31" id="2Es-RA-zvA"/>
+                    <constraint firstItem="zso-xQ-E9h" firstAttribute="top" secondItem="VdJ-O2-X8p" secondAttribute="bottom" constant="13.5" id="2Es-RA-zvA"/>
                     <constraint firstItem="IUk-4K-xYd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6Bg-hn-gu0"/>
                     <constraint firstAttribute="trailing" secondItem="zso-xQ-E9h" secondAttribute="trailing" constant="8" id="LSy-LK-Sh4"/>
-                    <constraint firstItem="IUk-4K-xYd" firstAttribute="leading" secondItem="VdJ-O2-X8p" secondAttribute="trailing" constant="-3" id="Lc1-o2-1YJ"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="leading" secondItem="VdJ-O2-X8p" secondAttribute="trailing" constant="14" id="Lc1-o2-1YJ"/>
                     <constraint firstItem="IUk-4K-xYd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SFu-zH-wux"/>
-                    <constraint firstItem="VdJ-O2-X8p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="VaI-uM-elA"/>
-                    <constraint firstAttribute="trailing" secondItem="IUk-4K-xYd" secondAttribute="trailing" constant="39" id="bln-5Z-C26"/>
-                    <constraint firstItem="IUk-4K-xYd" firstAttribute="leading" secondItem="VdJ-O2-X8p" secondAttribute="trailing" constant="-3" id="cWy-R5-MZ3"/>
+                    <constraint firstItem="VdJ-O2-X8p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="VaI-uM-elA"/>
+                    <constraint firstAttribute="trailing" secondItem="IUk-4K-xYd" secondAttribute="trailing" constant="28" id="bln-5Z-C26"/>
+                    <constraint firstItem="IUk-4K-xYd" firstAttribute="leading" secondItem="VdJ-O2-X8p" secondAttribute="trailing" constant="14" id="cWy-R5-MZ3"/>
                     <constraint firstItem="VdJ-O2-X8p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="duH-GO-d6d"/>
                     <constraint firstItem="IUk-4K-xYd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="g2b-kp-I7n"/>
                     <constraint firstAttribute="bottom" secondItem="zso-xQ-E9h" secondAttribute="bottom" constant="0.5" id="g4J-fg-Ku6"/>
                     <constraint firstItem="zso-xQ-E9h" firstAttribute="top" secondItem="IUk-4K-xYd" secondAttribute="bottom" constant="6" id="iua-Lq-Tjk"/>
                     <constraint firstItem="zso-xQ-E9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lhG-8w-Y4r"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="IUk-4K-xYd" secondAttribute="trailing" constant="31" id="tdd-h2-lTd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="IUk-4K-xYd" secondAttribute="trailing" constant="20" id="tdd-h2-lTd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="infoUserLabel" destination="IUk-4K-xYd" id="cwe-J9-JEH"/>
+                <outlet property="lineSectionView" destination="zso-xQ-E9h" id="yN2-6p-oUz"/>
                 <outlet property="nameFieldLabel" destination="VdJ-O2-X8p" id="n4H-ME-m9E"/>
             </connections>
             <point key="canvasLocation" x="84" y="104"/>
