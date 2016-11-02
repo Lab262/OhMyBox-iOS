@@ -85,7 +85,7 @@
                 <constraint firstItem="w30-60-Mk8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4FF-4y-atJ"/>
                 <constraint firstAttribute="bottom" secondItem="w30-60-Mk8" secondAttribute="bottom" id="GsZ-b1-CQq"/>
                 <constraint firstItem="w30-60-Mk8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OdH-mh-Uun"/>
-                <constraint firstAttribute="trailing" secondItem="w30-60-Mk8" secondAttribute="trailing" constant="59" id="wvl-YX-rc2"/>
+                <constraint firstAttribute="trailing" secondItem="w30-60-Mk8" secondAttribute="trailing" constant="60" id="STr-kv-XGI"/>
             </constraints>
             <size key="customSize" width="370" height="375"/>
             <connections>
