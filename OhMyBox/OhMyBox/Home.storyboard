@@ -34,8 +34,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Lu-Hmh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="320" id="F40-Nj-Tun" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="320"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="320" id="F40-Nj-Tun" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F40-Nj-Tun" id="KxU-BM-LAY">
                                             <frame key="frameInset" width="375" height="319"/>
@@ -63,8 +63,8 @@
                                             <outlet property="collectionView" destination="1zj-LT-FPf" id="bES-WV-g6G"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="758" id="wq2-8x-Awp" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="412" width="1000" height="758"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="758" id="wq2-8x-Awp" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="412" width="375" height="758"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wq2-8x-Awp" id="74D-S8-Ulc">
                                             <frame key="frameInset" width="375" height="757"/>
@@ -154,7 +154,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="346" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailProductCell" rowHeight="346" id="mYZ-x3-M6h" customClass="DetailProudctTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailProductCell" rowHeight="346" id="mYZ-x3-M6h" customClass="DetailProudctTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="346"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mYZ-x3-M6h" id="ZUu-6m-4pa">
@@ -197,7 +197,7 @@
                                             <outlet property="productImage" destination="ruo-Cb-gP4" id="LpF-2N-7uE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attributeCell" rowHeight="91" id="oCC-4B-WF4" customClass="AttributesTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attributeCell" rowHeight="91" id="oCC-4B-WF4" customClass="AttributesTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="438" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oCC-4B-WF4" id="xhE-Ge-LYJ">
@@ -263,7 +263,7 @@
                                             <outlet property="colorBackgroundView" destination="bFK-Fq-gKG" id="47D-9w-5nw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sizeProductCell" rowHeight="128" id="Mvu-wD-TLP" customClass="SizeProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sizeProductCell" rowHeight="128" id="Mvu-wD-TLP" customClass="SizeProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="529" width="375" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mvu-wD-TLP" id="MoG-tL-t7I">
@@ -357,7 +357,7 @@
                                             <outlet property="sizeBackgroundView" destination="KAz-Wq-5Qa" id="a5Q-PC-OSY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="switchButtonProductCell" rowHeight="132" id="tyj-Di-GWU" customClass="SwitchProductButtonTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="switchButtonProductCell" rowHeight="132" id="tyj-Di-GWU" customClass="SwitchProductButtonTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="657" width="375" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tyj-Di-GWU" id="bI6-nJ-wgs">

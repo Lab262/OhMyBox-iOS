@@ -106,32 +106,5 @@ extension ShoppingBoxViewController: UITableViewDelegate {
        
     }
     
-    
-     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-        if tableView.isEditing {
-            return .delete
-        }
-        
-        return .none
-    }
-    
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
-        let image = UIImage(named:"trashButton")
-        
-       let optionButtons = BGTableViewRowActionWithImage.rowAction(with: UITableViewRowActionStyle.default, title:"teste", backgroundColor:UIColor.white, image:image, forCellHeight: 100, andFittedWidth: true) { (action, indexPath) in
-        
-        }
-        
-      
-        let share = UITableViewRowAction(style: .normal, title: "Disable") { (action, indexPath) in
-            // share item at indexPath
-        }
-        
-        share.backgroundColor = UIColor.blue
-        
-        return [optionButtons!]
        
-    }
-    
 }
