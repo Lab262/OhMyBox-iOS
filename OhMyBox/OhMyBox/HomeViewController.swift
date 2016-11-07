@@ -119,36 +119,37 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         if indexPath.section == 0{
-            switch indexPath.row {
-                case 0:
-                    return self.generateHeaderClosetCell(tableView, cellForRowAt: indexPath)
-                case 1:
-                    return self.generateClosetCell(tableView, cellForRowAt: indexPath)
-                default:
-                    return UITableViewCell()
-            }
+            
+            return self.generateClosetCell(tableView, cellForRowAt: indexPath)
+//            switch indexPath.row {
+//                
+//                return self.generateClosetCell(tableView, cellForRowAt: indexPath)
+//                //case 0:
+//                    //return self.generateHeaderClosetCell(tableView, cellForRowAt: indexPath)
+//                case 0:
+//                    return self.generateClosetCell(tableView, cellForRowAt: indexPath)
+//                default:
+//                    return UITableViewCell()
+//            }
         }else if indexPath.section == 1{
-            switch indexPath.row {
-                case 0:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                    cell.firstTitleLineLabel.text = "OLHA AS"
-                    cell.secondTitleLineLabel.text = "NOVIDADES"
-                    cell.iconImage.image = UIImage(named:"textureSectionImage")
-                    
-                    return cell
-                case 1:
-                    return self.generateProductCell(tableView, cellForRowAt: indexPath)
-                default:
-                    return UITableViewCell()
-            }
+            
+            
+            return self.generateProductCell(tableView, cellForRowAt: indexPath)
+//            switch indexPath.row {
+//                case 0:
+//                    let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
+//                    cell.firstTitleLineLabel.text = "OLHA AS"
+//                    cell.secondTitleLineLabel.text = "NOVIDADES"
+//                    cell.iconImage.image = UIImage(named:"textureSectionImage")
+//                    
+//                    return cell
+//                case 1:
+//                    return self.generateProductCell(tableView, cellForRowAt: indexPath)
+//                default:
+//                    return UITableViewCell()
+//            }
         }else if indexPath.section == 2{
-            switch indexPath.row {
-            case 0:
-                return self.generatePromotionCell(tableView, cellForRowAt: indexPath)
-            default:
-                return UITableViewCell()
-            }
-        
+           return self.generatePromotionCell(tableView, cellForRowAt: indexPath)
         }else {
             return UITableViewCell()
         }
@@ -166,6 +167,7 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
+    
     func generatePromotionCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PromotionTableViewCell.identifier, for: indexPath) as! PromotionTableViewCell
@@ -178,7 +180,7 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
                 
-        cell.tagType = 0
+        cell.tagType = 2
         cell.clothingtArray = self.clotingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self
@@ -196,12 +198,17 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        switch section {
+            case 0, 1, 2:
+                return 1
+            default:
+                return 1
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 3
+        return 4
     }
 
 }
@@ -216,45 +223,23 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {
-            
             case 0:
-            
-            switch indexPath.row {
-                
-            case 0:
-                return 70
+                return 320
             case 1:
                 return 310
-            default:
-                return 0
-            }
-            
-        case 1:
-            switch indexPath.row {
-            case 0:
-                return 70
-            case 1:
-                return 310
-            default:
-                return 0
-            }
-        case 2:
-            switch indexPath.row {
-            case 0:
+            case 2:
                 return 170
             default:
                 return 0
-            }
-
-        default:
-            return 100
         }
         
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if section  == 0 {
+        
+        switch section {
+        case 0:
             
             let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
             
@@ -262,17 +247,29 @@ extension HomeViewController: UITableViewDelegate {
             header.secondTitleLineLabel.text = "Para Você"
             
             return header
-        }else {
+        case 1:
+            
+            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
+            header.firstTitleLineLabel.text = "OLHA AS"
+            header.secondTitleLineLabel.text = "NOVIDADES"
+            header.iconImage.image = UIImage(named:"textureSectionImage")
+            
+            return header
+            
+        default:
+            
             let view = UIView()
             view.backgroundColor = UIColor.clear
+            
             return view
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         if section == 0 {
-            return 0.1
+            return 77
         } else {
             return 70
             
