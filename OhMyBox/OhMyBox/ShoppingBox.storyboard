@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xam-Z7-ox1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -11,6 +11,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Yv7-Jd-KjK">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xam-Z7-ox1" kind="relationship" relationship="rootViewController" id="VUh-ry-jgm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNB-JR-pBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-730" y="42"/>
+        </scene>
         <!--Shopping Box View Controller-->
         <scene sceneID="6za-ii-dJ4">
             <objects>
@@ -91,7 +107,7 @@
                         <outlet property="closeButton" destination="nBY-7w-BCo" id="wmp-0D-NmH"/>
                         <outlet property="segmentControl" destination="hMB-eL-hGQ" id="9j0-Xh-eHT"/>
                         <outlet property="tableView" destination="rTo-EA-wGZ" id="Kyv-mU-jgD"/>
-                        <segue destination="LMx-MR-oGB" kind="presentation" identifier="segueFinalPurchase" id="D1K-M1-hvF"/>
+                        <segue destination="LMx-MR-oGB" kind="show" identifier="segueFinalPurchase" id="D1K-M1-hvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h3-DB-kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
