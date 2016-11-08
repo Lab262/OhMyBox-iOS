@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
@@ -56,15 +53,20 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="4ig-Zv-3lx"/>
-                    <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="CX0-nr-8HD"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wGS-zm-7DA" secondAttribute="bottom" constant="5" id="Cro-wP-yE5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wGS-zm-7DA" secondAttribute="trailing" constant="12" id="PPb-8z-nvN"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="5" id="RAN-AV-Hx9"/>
-                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RSX-rL-xCL"/>
-                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="pdL-R8-HcT" secondAttribute="trailing" constant="8" id="RvJ-SS-SqW"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="hoA-Ho-RJj" secondAttribute="trailing" constant="88" id="X55-6n-t6Z"/>
-                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="centerY" secondItem="pdL-R8-HcT" secondAttribute="centerY" id="ufj-hg-RNF"/>
+                    <constraint firstItem="pdL-R8-HcT" firstAttribute="centerY" secondItem="rUQ-EU-3Um" secondAttribute="centerY" constant="2.5" id="1UL-25-DCE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rUQ-EU-3Um" secondAttribute="bottom" constant="9.5" id="DEu-gu-ccB"/>
+                    <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="FlQ-GN-Isc"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="centerY" secondItem="wGS-zm-7DA" secondAttribute="centerY" id="GP7-gp-ONI"/>
+                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="TPP-ZZ-T3Y"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="30" id="TRN-pK-uZf"/>
+                    <constraint firstItem="pdL-R8-HcT" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="1" id="Uj4-zH-r89"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="5" id="XFm-BC-cZw"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="pdL-R8-HcT" secondAttribute="trailing" constant="-1" id="bSG-AS-VSK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="wGS-zm-7DA" secondAttribute="trailing" constant="12" id="dwL-4n-DRW"/>
+                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="nQe-ud-t6d"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="0.5" id="sxT-6T-bmj"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="60" id="y4k-mA-U7o"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wGS-zm-7DA" secondAttribute="bottom" constant="5.5" id="zdq-yB-kI7"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
