@@ -13,6 +13,7 @@ class ShoppingBoxTableViewCell: UITableViewCell {
     static let identifier = "shoppingBoxCell"
 
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bgViewCell: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var lessButton: UIButton!
@@ -47,11 +48,26 @@ class ShoppingBoxTableViewCell: UITableViewCell {
     func configureImage (){
         
     }
+    @IBAction func deleteProduct(_ sender: AnyObject) {
     
+    print("FOI DELETE")
+    }
+    
+    @IBAction func setFavorite(_ sender: AnyObject) {
+    
+        print("FOI favorite")
+
+    
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.scrollView.contentSize.width = self.bounds.width + 80 ;
     }
    
 }

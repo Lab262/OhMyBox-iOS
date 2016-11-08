@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,27 +37,35 @@
                                             <frame key="frameInset" width="375" height="264"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fashion-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="onA-fz-x7F">
-                                                    <frame key="frameInset" width="375" height="223"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashion-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="onA-fz-x7F">
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="parallaxIntesity">
                                                             <integer key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contentName" translatesAutoresizingMaskIntoConstraints="NO" id="u39-WW-c4o">
-                                                    <frame key="frameInset" minX="8" minY="189" width="359" height="61"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contentName" translatesAutoresizingMaskIntoConstraints="NO" id="u39-WW-c4o">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="61" id="T8T-9G-lWa"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MARIA BETANIA " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-VS-83C">
-                                                    <frame key="frameInset" minX="75" minY="206" width="225" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARIA BETANIA " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-VS-83C">
                                                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="onA-fz-x7F" firstAttribute="leading" secondItem="Fhe-lp-liu" secondAttribute="leading" id="B4z-HR-D2E"/>
+                                                <constraint firstItem="onA-fz-x7F" firstAttribute="centerX" secondItem="Fhe-lp-liu" secondAttribute="centerX" id="FTB-C2-uNd"/>
+                                                <constraint firstItem="onA-fz-x7F" firstAttribute="centerX" secondItem="u39-WW-c4o" secondAttribute="centerX" id="ICx-Jo-1gI"/>
+                                                <constraint firstItem="u39-WW-c4o" firstAttribute="leading" secondItem="Fhe-lp-liu" secondAttribute="leadingMargin" id="KmC-gx-8iw"/>
+                                                <constraint firstItem="onA-fz-x7F" firstAttribute="centerX" secondItem="iDH-VS-83C" secondAttribute="centerX" id="OQ7-40-aFw"/>
+                                                <constraint firstItem="onA-fz-x7F" firstAttribute="top" secondItem="Fhe-lp-liu" secondAttribute="top" id="Qy9-91-7cc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="u39-WW-c4o" secondAttribute="bottom" constant="6" id="Shy-n7-XY2"/>
+                                                <constraint firstItem="u39-WW-c4o" firstAttribute="centerY" secondItem="iDH-VS-83C" secondAttribute="centerY" id="Xwa-1B-P2c"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="33" id="zgs-52-cMF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameProfileLabel" destination="iDH-VS-83C" id="5gf-CJ-NpW"/>
@@ -70,23 +79,28 @@
                                             <frame key="frameInset" width="375" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
-                                                    <frame key="frameInset" minX="200" minY="28" width="167" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
-                                                    <state key="normal" title="Sobre a box" backgroundImage="buttonSegmentOFF">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-ys-22w">
-                                                    <frame key="frameInset" minX="8" minY="28" width="167" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-ys-22w">
                                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
                                                     <state key="normal" title="Meus dados" backgroundImage="buttonSegmentON">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
+                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
+                                                    <state key="normal" title="Sobre a box" backgroundImage="buttonSegmentOFF">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d8p-zi-fso" firstAttribute="width" secondItem="wZt-ys-22w" secondAttribute="width" id="9OY-ip-EtT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="d8p-zi-fso" secondAttribute="trailing" id="Bu6-do-K89"/>
+                                                <constraint firstItem="wZt-ys-22w" firstAttribute="centerY" secondItem="Rq4-lm-ZoO" secondAttribute="centerY" id="H0c-Uc-oXL"/>
+                                                <constraint firstItem="wZt-ys-22w" firstAttribute="leading" secondItem="Rq4-lm-ZoO" secondAttribute="leadingMargin" id="PU3-m3-rea"/>
+                                                <constraint firstItem="d8p-zi-fso" firstAttribute="height" secondItem="wZt-ys-22w" secondAttribute="height" id="fAQ-zT-T1J"/>
+                                                <constraint firstItem="wZt-ys-22w" firstAttribute="baseline" secondItem="d8p-zi-fso" secondAttribute="baseline" id="fPG-vK-QV9"/>
+                                                <constraint firstItem="d8p-zi-fso" firstAttribute="leading" secondItem="wZt-ys-22w" secondAttribute="trailing" constant="25" id="nrI-Ff-y4g"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="aboutBoxButton" destination="d8p-zi-fso" id="lPr-2b-mQL"/>
@@ -130,9 +144,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFx-qv-c3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="95.802098950524751"/>
+            <point key="canvasLocation" x="1023.75" y="92.957746478873247"/>
         </scene>
-
         <!--ShoppingBox-->
         <scene sceneID="Vc6-yI-rAF">
             <objects>
@@ -141,15 +154,14 @@
             </objects>
             <point key="canvasLocation" x="1618" y="-205"/>
         </scene>
-        <!--Perfil-->
-
+        <!--perfil-->
         <scene sceneID="ZdJ-0I-3s6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="48E-iM-OrB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="perfil" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z9V-g4-n4P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9V-g4-n4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
