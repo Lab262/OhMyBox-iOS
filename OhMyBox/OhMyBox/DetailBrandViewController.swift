@@ -11,6 +11,7 @@ import UIKit
 class DetailBrandViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var clotingArray: [String]?
     
     func registerNibs() {
         self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
@@ -31,6 +32,10 @@ class DetailBrandViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.clotingArray = [String]()
+        self.clotingArray?.append("Cloting One")
+        self.clotingArray?.append("Cloting Two")
+        self.clotingArray?.append("cloting Three")
         self.registerNibs()
         self.configureTableView()
 
@@ -240,8 +245,12 @@ extension DetailBrandViewController {
     
     func generateCollectionBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionBrandTableViewCell.identifier, for: indexPath) as! CollectionBrandTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
+        cell.tagType = 1
+        cell.delegate = self
+        cell.followingClothes = true
+        cell.identifierSegue = "detailBrandView"
+        cell.clothingtArray = self.clotingArray!
         
         return cell
     }

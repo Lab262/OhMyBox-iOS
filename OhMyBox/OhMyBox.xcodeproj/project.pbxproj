@@ -92,6 +92,8 @@
 		D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D72D1DC3F43F00443B63 /* BrandViewController.swift */; };
 		D457D7301DC3F60900443B63 /* TagView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D457D72F1DC3F60900443B63 /* TagView2.xib */; };
 		D457D7321DC3F64900443B63 /* TagView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D7311DC3F64900443B63 /* TagView2.swift */; };
+		D4778E281DD2716C005B2914 /* TagView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4778E271DD2716C005B2914 /* TagView4.xib */; };
+		D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4778E291DD27186005B2914 /* TagView4.swift */; };
 		D47E83BC1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */; };
 		D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */; };
 		D47E83C01DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */; };
@@ -216,6 +218,8 @@
 		D457D72D1DC3F43F00443B63 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
 		D457D72F1DC3F60900443B63 /* TagView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView2.xib; sourceTree = "<group>"; };
 		D457D7311DC3F64900443B63 /* TagView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView2.swift; sourceTree = "<group>"; };
+		D4778E271DD2716C005B2914 /* TagView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView4.xib; sourceTree = "<group>"; };
+		D4778E291DD27186005B2914 /* TagView4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView4.swift; sourceTree = "<group>"; };
 		D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBrandTableViewCell.swift; sourceTree = "<group>"; };
 		D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTitleTableViewCell.swift; sourceTree = "<group>"; };
 		D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBrandDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				2F225CFD1DBEFC36009E4566 /* ContainerCollectionView.swift */,
 				D44F35001DD0FF1500AE7E9E /* TagView3.swift */,
 				D44F35021DD0FF2500AE7E9E /* TagView3.xib */,
+				D4778E271DD2716C005B2914 /* TagView4.xib */,
+				D4778E291DD27186005B2914 /* TagView4.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -796,6 +802,7 @@
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
+				D4778E281DD2716C005B2914 /* TagView4.xib in Resources */,
 				2F4896E01DB72C3900EADFFE /* PromotionTableViewCell.xib in Resources */,
 				2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */,
 				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,
@@ -989,6 +996,7 @@
 				2F225D021DBF04E4009E4566 /* UIview+Util.swift in Sources */,
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
+				D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */,
 				2F70E83C1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
