@@ -49,6 +49,7 @@
 		2F5DE1CD1DC2966D00822826 /* ContentStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */; };
 		2F5DE1CE1DC2966D00822826 /* ContentStoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */; };
 		2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DE1CF1DC2ED3300822826 /* storeDefault.png */; };
+		2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5EEE8C1DD25EA8006D1FD9 /* UIView+IBInspector.swift */; };
 		2F70E8021DC7B985000AB03B /* ShoppingBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */; };
 		2F70E8041DC7B9AC000AB03B /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */; };
 		2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */; };
@@ -168,6 +169,7 @@
 		2F5DE1CB1DC2966D00822826 /* ContentStoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentStoreTableViewCell.swift; sourceTree = "<group>"; };
 		2F5DE1CC1DC2966D00822826 /* ContentStoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentStoreTableViewCell.xib; sourceTree = "<group>"; };
 		2F5DE1CF1DC2ED3300822826 /* storeDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storeDefault.png; sourceTree = "<group>"; };
+		2F5EEE8C1DD25EA8006D1FD9 /* UIView+IBInspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspector.swift"; sourceTree = "<group>"; };
 		2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShoppingBox.storyboard; sourceTree = "<group>"; };
 		2F70E8031DC7B9AC000AB03B /* ShoppingBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxViewController.swift; sourceTree = "<group>"; };
 		2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxTableViewCell.swift; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				2F225D031DBF04F2009E4566 /* UIColor+Util.swift */,
+				2F5EEE8C1DD25EA8006D1FD9 /* UIView+IBInspector.swift */,
 				2F225D011DBF04E4009E4566 /* UIview+Util.swift */,
 				D4C0D6601DB6B32E007C3113 /* UIView+Animations.swift */,
 				D4C0D6611DB6B32E007C3113 /* UIViewExtension.swift */,
@@ -898,7 +901,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A4B5CAAA1DA811FB003260BA /* Fabric */ = {
@@ -941,7 +944,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E1ECE27E305BFB85E65B920E /* [CP] Copy Pods Resources */ = {
@@ -978,6 +981,7 @@
 				2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */,
 				2F225D0C1DBFE8FA009E4566 /* SizeProductTableViewCell.swift in Sources */,
 				2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */,
+				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
 				D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */,
 				D4B72A311DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
@@ -1168,7 +1172,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = B865ENT4P3;
 				INFOPLIST_FILE = OhMyBox/Info.plist;
