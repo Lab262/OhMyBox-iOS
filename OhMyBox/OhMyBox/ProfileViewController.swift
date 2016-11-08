@@ -145,7 +145,7 @@ extension ProfileViewController: UITableViewDataSource {
                         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
                         cell.firstTitleLineLabel.text = "TUDO O QUE VOCE"
                         cell.secondTitleLineLabel.text = "PRECISA SABER"
-                        cell.iconImage.image = UIImage(named:"textureText1")
+                        cell.iconImage.image = UIImage(named:"icon_header_profile")
                         cell.selectionStyle = .none
                     
                         return cell
@@ -224,7 +224,7 @@ extension ProfileViewController: UITableViewDataSource {
                         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
                         cell.firstTitleLineLabel.text = "OLHA"
                         cell.secondTitleLineLabel.text = "A GENTE"
-                        cell.iconImage.image = UIImage(named:"textureText2")
+                        cell.iconImage.image = UIImage(named:"icon_header_profile")
                         cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
                         cell.selectionStyle = .none
                     

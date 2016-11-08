@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -57,6 +57,7 @@
                     <constraint firstAttribute="bottomMargin" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="30" id="TRN-pK-uZf"/>
                     <constraint firstItem="pdL-R8-HcT" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="1" id="Uj4-zH-r89"/>
                     <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="5" id="XFm-BC-cZw"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="pdL-R8-HcT" secondAttribute="trailing" constant="-1" id="bSG-AS-VSK"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wGS-zm-7DA" secondAttribute="trailing" constant="12" id="dwL-4n-DRW"/>
                     <constraint firstItem="hoA-Ho-RJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="nQe-ud-t6d"/>
                     <constraint firstItem="rUQ-EU-3Um" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="0.5" id="sxT-6T-bmj"/>
