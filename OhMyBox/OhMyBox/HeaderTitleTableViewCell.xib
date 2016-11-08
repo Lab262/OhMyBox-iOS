@@ -28,19 +28,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendados " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoA-Ho-RJj">
-                        <rect key="frame" x="14" y="8" width="265" height="26.5"/>
+                        <rect key="frame" x="14" y="8" width="265" height="26"/>
                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para Você " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUQ-EU-3Um">
-                        <rect key="frame" x="50" y="36" width="140" height="27"/>
+                        <rect key="frame" x="50" y="39" width="140" height="26"/>
                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textureImage" translatesAutoresizingMaskIntoConstraints="NO" id="pdL-R8-HcT">
-                        <rect key="frame" x="14" y="39" width="28" height="22"/>
+                        <rect key="frame" x="14" y="41.5" width="28" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="28" id="3fd-2f-TBe"/>
                             <constraint firstAttribute="height" constant="22" id="ydn-dW-QGB"/>
@@ -60,7 +60,7 @@
                     <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="CX0-nr-8HD"/>
                     <constraint firstAttribute="bottomMargin" secondItem="wGS-zm-7DA" secondAttribute="bottom" constant="5" id="Cro-wP-yE5"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wGS-zm-7DA" secondAttribute="trailing" constant="12" id="PPb-8z-nvN"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="7" id="RAN-AV-Hx9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="5" id="RAN-AV-Hx9"/>
                     <constraint firstItem="hoA-Ho-RJj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RSX-rL-xCL"/>
                     <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="pdL-R8-HcT" secondAttribute="trailing" constant="8" id="RvJ-SS-SqW"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hoA-Ho-RJj" secondAttribute="trailing" constant="88" id="X55-6n-t6Z"/>

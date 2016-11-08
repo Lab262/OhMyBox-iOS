@@ -29,31 +29,25 @@ class BrandViewController: UIViewController {
         self.registerNibs()
     }
     
-    func generateHeaderRecommendedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-        cell.selectionStyle = .none
-        
-        return cell
-    }
-    
-    func generateHeaderAllBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-        cell.selectionStyle = .none
-      //  cell.firstTitleLineLabel.text = "TODAS"
-        //cell.secondTitleLineLabel.text = "AS LOJAS"
-        
-        return cell
-    }
-    
-    
-    
+
     func generateRecommendedBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         cell.tagType = 1
         cell.delegate = self
+        cell.followingClothes = false
+        cell.identifierSegue = "detailBrandView"
+        cell.clothingtArray = self.clotingArray!
+        
+        return cell
+    }
+    
+    func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
+        cell.tagType = 1
+        cell.delegate = self
+        cell.followingClothes = true
         cell.identifierSegue = "detailBrandView"
         cell.clothingtArray = self.clotingArray!
         
@@ -63,8 +57,6 @@ class BrandViewController: UIViewController {
     func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ShowCaseBrandTableViewCell.identifier, for: indexPath) as! ShowCaseBrandTableViewCell
-        
-       // cell.brandImage.image = UIImage(named: "")
         
         
         return cell
@@ -78,28 +70,57 @@ class BrandViewController: UIViewController {
         
         return cell
     }
-
+    
+    func generateHeaderFollowedBrandsCell(_ tableView: UITableView) -> UITableViewCell {
+        
+        let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
+        
+        header.firstTitleLineLabel.text = "MARCAS QUE"
+        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderOrangePink_image")
+        header.secondTitleLineLabel.text = "EU SIGO"
+        
+        return header
+    }
+    
+    func generateHeaderRecommendedBrandsCell(_ tableView: UITableView) -> UITableViewCell {
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
+        
+        header.firstTitleLineLabel.text = "RECOMENDADOS"
+        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType4_image")
+        header.secondTitleLineLabel.text = "PARA VOCÊ"
+        
+        return header
+    }
+    
+    func generateHeaderAllBrandsCell(_ tableView: UITableView) -> UITableViewCell {
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
+        
+        header.firstTitleLineLabel.text = "TODAS"
+        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType5_image")
+        header.secondTitleLineLabel.text = "AS LOJAS"
+        header.showAllButton.isHidden = true
+        
+        return header
+    }
 }
 
 extension BrandViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        if indexPath.section == 0{
-            
-            switch indexPath.row {
-                
-            case 0:
-                return self.generateHeaderRecommendedCell(tableView, cellForRowAt: indexPath)
-            case 1:
-                return self.generateRecommendedBrandCell(tableView, cellForRowAt: indexPath)
-            default:
-                return UITableViewCell()
-            }
-        } else {
-            
-            return self.generateBrandCell(tableView, cellForRowAt: indexPath)
         
+        switch indexPath.section {
+        
+        case 0:
+            return generateFollowedBrandsCell(tableView, cellForRowAt: indexPath)
+        case 1:
+            return generateRecommendedBrandCell(tableView, cellForRowAt: indexPath)
+        case 2:
+            return generateBrandCell(tableView, cellForRowAt: indexPath)
+            
+        default:
+            return UITableViewCell()
         }
         
     }
@@ -107,17 +128,17 @@ extension BrandViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch section {
-        case 0:
-            return 2
+        case 0, 1:
+            return 1
         default:
             return 2
         }
-        //return 2
+     
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 2
+        return 3
     }
 }
 
@@ -128,36 +149,24 @@ extension BrandViewController: UITableViewDelegate {
         
         
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if section  == 0 {
+        switch section {
             
-            let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-            
-            header.firstTitleLineLabel.text = "Recomendados"
-            header.secondTitleLineLabel.text = "Para Você"
-            
-            return header
-        }else {
-            
-            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-            header.selectionStyle = .none
-            header.firstTitleLineLabel.text = "TODAS"
-            header.secondTitleLineLabel.text = "AS LOJAS"
-            
-            return header
-
+        case 0:
+            return generateHeaderFollowedBrandsCell(tableView)
+        case 1:
+            return generateHeaderRecommendedBrandsCell(tableView)
+        default:
+            return generateHeaderAllBrandsCell(tableView)
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == 0 {
-            return 0.1
-        } else {
-            return 70
-            
-        }
+        return 70
     }
     
     
@@ -167,26 +176,11 @@ extension BrandViewController: UITableViewDelegate {
         switch indexPath.section {
             
         case 0:
-            
-            switch indexPath.row {
-                
-            case 0:
-                return 70
-            case 1:
-                return 310
-            default:
-                return 310
-            }
+            return 310
         case 1:
-            
-            switch indexPath.row {
-            case 0:
-                return 310
-            default:
-                return 310
-            }
+            return 310
         default:
-            return 0
+            return 290
         }
     }
 }

@@ -20,13 +20,11 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWoman" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-kD-cNV">
                         <rect key="frame" x="12" y="0.0" width="344" height="309"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="309" id="fBh-qf-rLz"/>
-                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Axe-kD-cNV" secondAttribute="bottom" constant="61" id="Kto-6k-jik"/>
                 <constraint firstAttribute="trailing" secondItem="Axe-kD-cNV" secondAttribute="trailing" constant="19" id="Qru-O1-ndX"/>
                 <constraint firstItem="Axe-kD-cNV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aXD-Ct-sCf"/>
                 <constraint firstItem="Axe-kD-cNV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="lHF-q2-OrR"/>

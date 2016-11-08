@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,50 +17,75 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Rgg-DJ-HMl" customClass="TagView2" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="268" height="75"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tag2_image" translatesAutoresizingMaskIntoConstraints="NO" id="EAh-CK-7bb">
-                    <frame key="frameInset" minX="5" minY="6" width="258" height="62"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag2_image" translatesAutoresizingMaskIntoConstraints="NO" id="EAh-CK-7bb">
+                    <rect key="frame" x="5" y="6" width="262" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="262" id="7No-q1-4fT"/>
+                        <constraint firstAttribute="height" constant="65" id="yC4-2X-yZN"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-2M-TaK">
-                    <frame key="frameInset" minX="28" minY="20" width="78" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-2M-TaK">
+                    <rect key="frame" x="22" y="20" width="57.5" height="19"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cool Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u88-kW-21X">
-                    <frame key="frameInset" minX="31" minY="36" width="78" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u88-kW-21X">
+                    <rect key="frame" x="24" y="41" width="71.5" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-Ld-jHV">
-                    <frame key="frameInset" minX="134" minY="27" width="98" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.16470588235294117" green="0.078431372549019607" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="15"/>
-                    <state key="normal" title="Seguindo">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hy5-Ld-jHV">
+                    <rect key="frame" x="152" y="24.5" width="91" height="28"/>
+                    <state key="normal" image="follow_button">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="clickedFollowButton:" destination="Rgg-DJ-HMl" eventType="touchUpInside" id="XtN-ij-6lx"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seguir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-YB-xmZ">
+                    <rect key="frame" x="175" y="29.5" width="45" height="19"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="15"/>
+                    <color key="textColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="u88-kW-21X" firstAttribute="leading" secondItem="Rgg-DJ-HMl" secondAttribute="leading" constant="24" id="5ah-0x-Ot4"/>
+                <constraint firstItem="9Ps-YB-xmZ" firstAttribute="centerY" secondItem="Hy5-Ld-jHV" secondAttribute="centerY" id="7t3-jj-ny3"/>
+                <constraint firstItem="4pb-2M-TaK" firstAttribute="top" secondItem="Rgg-DJ-HMl" secondAttribute="top" constant="20" id="RWV-o9-BKP"/>
+                <constraint firstItem="Hy5-Ld-jHV" firstAttribute="centerY" secondItem="EAh-CK-7bb" secondAttribute="centerY" id="RmA-DN-mWH"/>
+                <constraint firstItem="9Ps-YB-xmZ" firstAttribute="centerX" secondItem="Hy5-Ld-jHV" secondAttribute="centerX" id="Ynu-4g-iTl"/>
+                <constraint firstAttribute="bottom" secondItem="u88-kW-21X" secondAttribute="bottom" constant="18" id="bDd-3u-Dtu"/>
+                <constraint firstItem="EAh-CK-7bb" firstAttribute="top" secondItem="Rgg-DJ-HMl" secondAttribute="top" constant="6" id="dvf-rL-fRv"/>
+                <constraint firstItem="EAh-CK-7bb" firstAttribute="leading" secondItem="Rgg-DJ-HMl" secondAttribute="leading" constant="5" id="kdx-Nn-Dnr"/>
+                <constraint firstItem="4pb-2M-TaK" firstAttribute="leading" secondItem="Rgg-DJ-HMl" secondAttribute="leading" constant="22" id="nox-Ht-JJw"/>
+                <constraint firstItem="Hy5-Ld-jHV" firstAttribute="leading" secondItem="EAh-CK-7bb" secondAttribute="trailing" constant="-115" id="peY-r2-KzM"/>
+                <constraint firstAttribute="bottom" secondItem="EAh-CK-7bb" secondAttribute="bottom" constant="6" id="uyq-rD-m15"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="followButton" destination="Hy5-Ld-jHV" id="vgd-WU-taf"/>
+                <outlet property="followLabel" destination="9Ps-YB-xmZ" id="Y0v-x8-SpG"/>
                 <outlet property="subTitleLabel" destination="u88-kW-21X" id="7Ob-Jf-nIG"/>
                 <outlet property="titleLabel" destination="4pb-2M-TaK" id="bhp-xi-CJp"/>
             </connections>
-            <point key="canvasLocation" x="108" y="64.5"/>
+            <point key="canvasLocation" x="105.5" y="65.5"/>
         </view>
     </objects>
     <resources>
+        <image name="follow_button" width="91" height="28"/>
         <image name="tag2_image" width="262" height="65"/>
     </resources>
 </document>

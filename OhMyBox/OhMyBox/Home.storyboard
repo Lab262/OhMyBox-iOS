@@ -49,7 +49,7 @@
                                                     <rect key="frame" x="0.0" y="-8" width="375" height="407.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Hlj-lJ-Yl3">
-                                                        <size key="itemSize" width="370" height="375"/>
+                                                        <size key="itemSize" width="370" height="352"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -68,18 +68,18 @@
                                             <outlet property="collectionView" destination="1zj-LT-FPf" id="bES-WV-g6G"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="758" id="wq2-8x-Awp" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="403" width="375" height="758"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="354" id="wq2-8x-Awp" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="403" width="375" height="354"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wq2-8x-Awp" id="74D-S8-Ulc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="757"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="353"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-Nu-9bf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="351.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="367" id="dEj-ng-WaD"/>
+                                                        <constraint firstAttribute="height" constant="352" id="8fN-Jd-fLj"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="xer-E3-jth">
                                                         <size key="itemSize" width="370" height="352"/>
@@ -92,6 +92,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="RGM-Nu-9bf" secondAttribute="trailing" id="Lxb-Rp-g6G"/>
+                                                <constraint firstAttribute="bottom" secondItem="RGM-Nu-9bf" secondAttribute="bottom" constant="2" id="WxP-RC-Pig"/>
                                                 <constraint firstItem="RGM-Nu-9bf" firstAttribute="leading" secondItem="74D-S8-Ulc" secondAttribute="leading" id="e8q-LX-Bxb"/>
                                                 <constraint firstItem="RGM-Nu-9bf" firstAttribute="top" secondItem="74D-S8-Ulc" secondAttribute="top" id="lUh-Hl-oZb"/>
                                             </constraints>
@@ -143,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djg-nn-b97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="-598"/>
+            <point key="canvasLocation" x="1716" y="-598.2008995502249"/>
         </scene>
         <!--Detail Product View Controller-->
         <scene sceneID="A6M-GZ-xLo">
@@ -604,7 +605,7 @@
     <resources>
         <image name="bgBox" width="1032" height="255"/>
         <image name="heartFull" width="27" height="24"/>
-        <image name="myBox" width="28" height="28"/>
+        <image name="myBox" width="34" height="26"/>
         <image name="ombIconDeselected_button" width="36" height="21"/>
         <image name="ombIconSelected_button" width="43" height="28"/>
         <image name="productDefaultimage.png" width="608" height="538"/>

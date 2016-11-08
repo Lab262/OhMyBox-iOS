@@ -17,6 +17,7 @@ class ClosetTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     var identifierSegue: String?
     var tagType: Int?
+    var followingClothes = false
     var clothingtArray: [String]? {
         didSet {
             self.collectionView.reloadData()
@@ -54,6 +55,7 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath) as! ShowCaseCollectionViewCell
         
+        cell.followingClothes = self.followingClothes
         cell.tagType = tagType
         
         return cell

@@ -11,6 +11,7 @@ import UIKit
 class ShowCaseCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "showCaseCell"
+    var followingClothes = false
     var tagType: Int? {
         didSet {
             self.initializeTagView()
@@ -26,21 +27,21 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
     
     func initializeTagView(){
         
-        let tagView: UIView?
-        
         if tagType! == 0 {
-            tagView = TagView.instanceFromNib()
-            tagView?.center = CGPoint(x: self.frame.width/2-45, y: self.frame.height/2+125)
+            let tagView = TagView.instanceFromNib()
+            tagView.center = CGPoint(x: self.frame.width/2-45, y: self.frame.height/2+125)
+            self.addSubview(tagView)
         } else if tagType! == 1 {
-            tagView = TagView2.instanceFromNib()
-            tagView?.center = CGPoint(x: self.frame.width/2-45, y: self.frame.height/2+85)
+            let tagView2 = TagView2.instanceFromNib() as! TagView2
+            tagView2.center = CGPoint(x: self.frame.width/1.95, y: self.frame.height/1.25)
+            tagView2.followButton.isSelected = followingClothes
+            tagView2.setInitialButtonState()
+            self.addSubview(tagView2)
+            
         } else {
-            tagView = TagView3.instanceFromNib()
-            tagView?.center = CGPoint(x: self.frame.width/3.25, y: self.frame.height/1.25)
+            let tagView3 = TagView3.instanceFromNib()
+            tagView3.center = CGPoint(x: self.frame.width/3.25, y: self.frame.height/1.25)
+            self.addSubview(tagView3)
         }
-       
-        self.addSubview(tagView!)
-        
-        
     }
 }

@@ -22,7 +22,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
-         self.rightButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+        //self.configureTableView()
+        
+        self.rightButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
         
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
@@ -34,6 +36,15 @@ class HomeViewController: UIViewController {
         self.configureSearchBar()
         
     }
+    
+    func configureTableView () {
+        
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.layoutIfNeeded()
+        
+    }
+
     
     override func viewWillDisappear(_ animated: Bool) {
         if self.searchController.isActive {
@@ -226,7 +237,7 @@ extension HomeViewController: UITableViewDelegate {
             case 0:
                 return 320
             case 1:
-                return 310
+                return 352
             case 2:
                 return 170
             default:

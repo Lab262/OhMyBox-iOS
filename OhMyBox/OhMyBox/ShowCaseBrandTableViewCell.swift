@@ -10,7 +10,10 @@ import UIKit
 
 class ShowCaseBrandTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var followButton: UIButton!
     
+    @IBOutlet weak var followLabel: UILabel!
+
     @IBOutlet weak var brandImage: UIImageView!
     
     @IBOutlet weak var titleBrandLabel: UILabel!
@@ -22,8 +25,22 @@ class ShowCaseBrandTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.followButton.setImage(#imageLiteral(resourceName: "follow_button"), for: .normal)
+        self.followButton.setImage(#imageLiteral(resourceName: "following_button"), for: .selected)
+    }
+    
+    @IBAction func clickedFollowButton(_ sender: Any) {
         
-        // Initialization code
+        if self.followButton.isSelected {
+            self.followButton.isSelected = false
+            self.followLabel.text = "Seguir"
+            self.followLabel.textColor = UIColor.colorWithHexString("241932")
+            
+        } else {
+            self.followButton.isSelected = true
+            self.followLabel.text = "Seguindo"
+            self.followLabel.textColor = UIColor.white
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
