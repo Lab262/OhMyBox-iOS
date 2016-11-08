@@ -50,12 +50,13 @@ class ShoppingBoxTableViewCell: UITableViewCell {
     }
     @IBAction func deleteProduct(_ sender: AnyObject) {
     
-    
+    print("FOI DELETE")
     }
     
     @IBAction func setFavorite(_ sender: AnyObject) {
     
-    
+        print("FOI favorite")
+
     
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -64,6 +65,9 @@ class ShoppingBoxTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.scrollView.contentSize.width = self.bounds.width + 80 ;
+    }
    
 }
