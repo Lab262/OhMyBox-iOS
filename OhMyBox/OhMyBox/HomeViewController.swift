@@ -239,7 +239,7 @@ extension HomeViewController: UITableViewDelegate {
             case 1:
                 return 352
             case 2:
-                return 170
+                return 240
             default:
                 return 0
         }

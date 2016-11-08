@@ -13,22 +13,11 @@ class PromotionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var secondFirstLabel: UILabel!
     @IBOutlet weak var firsTextLabel: UILabel!
-    @IBOutlet weak var messagePromoLabel: UILabel!
-    @IBOutlet weak var boxView: UIView!
-    @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var borderView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.boxView.layer.borderWidth = 1
-        self.boxView.layer.borderColor = UIColor(red:0/250, green:0/250, blue:0/250, alpha: 1.0).cgColor
-    
-        self.bgView.layer.borderWidth = 1
-        self.bgView.layer.borderColor = UIColor(red:0/250, green:0/250, blue:0/250, alpha: 1.0).cgColor
-    
-        self.borderView.layer.borderWidth = 1
-        self.borderView.layer.borderColor = UIColor(red:0/250, green:0/250, blue:0/250, alpha: 1.0).cgColor
+     
     
     }
 

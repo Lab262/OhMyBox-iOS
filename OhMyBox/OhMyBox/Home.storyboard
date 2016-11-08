@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Lu-Hmh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Lu-Hmh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1143"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F40-Nj-Tun" id="KxU-BM-LAY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1zj-LT-FPf">
@@ -72,7 +72,7 @@
                                         <rect key="frame" x="0.0" y="403" width="375" height="354"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wq2-8x-Awp" id="74D-S8-Ulc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="353"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-Nu-9bf">
@@ -605,7 +605,7 @@
     <resources>
         <image name="bgBox" width="1032" height="255"/>
         <image name="heartFull" width="27" height="24"/>
-        <image name="myBox" width="34" height="26"/>
+        <image name="myBox" width="276" height="364"/>
         <image name="ombIconDeselected_button" width="36" height="21"/>
         <image name="ombIconSelected_button" width="43" height="28"/>
         <image name="productDefaultimage.png" width="608" height="538"/>
