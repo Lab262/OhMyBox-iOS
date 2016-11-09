@@ -294,16 +294,8 @@
 		2F225D081DBF1AEF009E4566 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D4C0D65D1DB6B1F2007C3113 /* TagView.swift */,
-				D4C0D65B1DB6AF2C007C3113 /* TagView.xib */,
-				D457D7311DC3F64900443B63 /* TagView2.swift */,
-				D457D72F1DC3F60900443B63 /* TagView2.xib */,
 				2F225CFB1DBEFA5E009E4566 /* ContainerCollectionView.xib */,
 				2F225CFD1DBEFC36009E4566 /* ContainerCollectionView.swift */,
-				D44F35001DD0FF1500AE7E9E /* TagView3.swift */,
-				D44F35021DD0FF2500AE7E9E /* TagView3.xib */,
-				D4778E271DD2716C005B2914 /* TagView4.xib */,
-				D4778E291DD27186005B2914 /* TagView4.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -443,6 +435,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D4E7E0861DD38C7000F1DE52 /* Tags */,
 				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
 				D4C0D6511DB6AA00007C3113 /* Resources */,
@@ -523,6 +516,7 @@
 		D402DFFC1DB68C99007855D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4E7E0841DD3889300F1DE52 /* Cells */,
 				D402DFFE1DB68CAD007855D6 /* Brand.storyboard */,
 				D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */,
 				D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */,
@@ -690,6 +684,28 @@
 				D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D4E7E0841DD3889300F1DE52 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D4E7E0861DD38C7000F1DE52 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				D4C0D65D1DB6B1F2007C3113 /* TagView.swift */,
+				D4C0D65B1DB6AF2C007C3113 /* TagView.xib */,
+				D457D7311DC3F64900443B63 /* TagView2.swift */,
+				D457D72F1DC3F60900443B63 /* TagView2.xib */,
+				D44F35001DD0FF1500AE7E9E /* TagView3.swift */,
+				D44F35021DD0FF2500AE7E9E /* TagView3.xib */,
+				D4778E271DD2716C005B2914 /* TagView4.xib */,
+				D4778E291DD27186005B2914 /* TagView4.swift */,
+			);
+			name = Tags;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -901,7 +917,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A4B5CAAA1DA811FB003260BA /* Fabric */ = {
@@ -944,7 +960,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E1ECE27E305BFB85E65B920E /* [CP] Copy Pods Resources */ = {

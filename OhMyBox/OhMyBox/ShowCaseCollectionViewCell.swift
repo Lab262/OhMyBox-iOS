@@ -38,10 +38,15 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
             tagView2.setInitialButtonState()
             self.addSubview(tagView2)
             
-        } else {
+        } else if tagType! == 2 {
             let tagView3 = TagView3.instanceFromNib()
             tagView3.center = CGPoint(x: self.frame.width/3.25, y: self.frame.height/1.25)
             self.addSubview(tagView3)
+        } else {
+            let tagView4 = TagView4.instanceFromNib() as! TagView4
+            tagView4.center = CGPoint(x: self.frame.width/2.45, y: self.frame.height/1.25)
+            tagView4.collectionBrandName.text = "Neon Go"
+            self.addSubview(tagView4)
         }
     }
 }

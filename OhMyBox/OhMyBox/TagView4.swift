@@ -10,6 +10,8 @@ import UIKit
 
 class TagView4: UIView {
 
+    @IBOutlet weak var collectionBrandName: UILabel!
+    
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "TagView4", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }

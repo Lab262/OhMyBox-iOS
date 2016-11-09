@@ -246,7 +246,8 @@ extension DetailBrandViewController {
     func generateCollectionBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        cell.tagType = 1
+        
+        cell.tagType = 3
         cell.delegate = self
         cell.followingClothes = true
         cell.identifierSegue = "detailBrandView"

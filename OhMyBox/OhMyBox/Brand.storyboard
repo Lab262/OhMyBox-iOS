@@ -16,9 +16,6 @@
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
-        <array key="Muli-Regular.ttf">
-            <string>Muli</string>
-        </array>
     </customFonts>
     <scenes>
         <!--marcas-->
@@ -145,7 +142,7 @@
                                                     <rect key="frame" x="11" y="171" width="353" height="68"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Weak Br Store TAMANHO TESTE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-nf-BVK">
-                                                    <rect key="frame" x="19" y="180" width="337" height="50.5"/>
+                                                    <rect key="frame" x="19" y="180.5" width="337" height="50.5"/>
                                                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -213,7 +210,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="140.5" y="29" width="95" height="21"/>
+                                                    <rect key="frame" x="140" y="29" width="95" height="21"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -241,6 +238,9 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zJy-yM-8x3">
                                                     <rect key="frame" x="0.0" y="-8" width="375" height="408"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="408" id="uxe-jt-jrB"/>
+                                                    </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="xwq-rA-G78">
                                                         <size key="itemSize" width="370" height="375"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -259,51 +259,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionView" destination="zJy-yM-8x3" id="g93-eB-H57"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="collectionBrandCell" rowHeight="336" id="9lJ-OO-0XM" customClass="CollectionBrandTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1075" width="375" height="336"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9lJ-OO-0XM" id="br0-e6-LtV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="336"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coatProduct.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-c5-MI4">
-                                                    <rect key="frame" x="11" y="0.0" width="337" height="269"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="269" id="Ggi-8W-dgN"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" preservesSuperviewLayoutMargins="YES" image="containerMedium_image" translatesAutoresizingMaskIntoConstraints="NO" id="IOV-J6-HRl">
-                                                    <rect key="frame" x="17" y="227" width="264" height="65"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="65" id="636-12-9Es"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Neon Go Coleção de duas linhas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhn-gO-Tc3">
-                                                    <rect key="frame" x="30" y="227" width="238" height="65"/>
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="21"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="nhn-gO-Tc3" firstAttribute="top" secondItem="IOV-J6-HRl" secondAttribute="bottom" constant="-65" id="11y-kt-rIo"/>
-                                                <constraint firstItem="nhn-gO-Tc3" firstAttribute="leading" secondItem="IOV-J6-HRl" secondAttribute="trailing" constant="-251" id="1HQ-gW-IMr"/>
-                                                <constraint firstItem="nhn-gO-Tc3" firstAttribute="centerY" secondItem="IOV-J6-HRl" secondAttribute="centerY" id="QAS-2Q-UFd"/>
-                                                <constraint firstItem="bRw-c5-MI4" firstAttribute="leading" secondItem="br0-e6-LtV" secondAttribute="leading" constant="11" id="SgQ-tr-WW6"/>
-                                                <constraint firstItem="bRw-c5-MI4" firstAttribute="top" secondItem="br0-e6-LtV" secondAttribute="top" id="XDT-9e-GXL"/>
-                                                <constraint firstItem="nhn-gO-Tc3" firstAttribute="centerX" secondItem="IOV-J6-HRl" secondAttribute="centerX" id="cKh-rm-nnC"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bRw-c5-MI4" secondAttribute="bottom" constant="59" id="cZ9-RF-kB3"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="IOV-J6-HRl" secondAttribute="bottom" constant="36" id="eGp-VC-1p2"/>
-                                                <constraint firstItem="IOV-J6-HRl" firstAttribute="leading" secondItem="br0-e6-LtV" secondAttribute="leadingMargin" constant="9" id="hQk-vh-l0L"/>
-                                                <constraint firstAttribute="trailing" secondItem="bRw-c5-MI4" secondAttribute="trailing" constant="27" id="o6Y-sy-zri"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="nhn-gO-Tc3" id="pLb-Yd-bca"/>
-                                            <outlet property="productImage" destination="bRw-c5-MI4" id="47Z-2i-4M1"/>
-                                            <outlet property="tagNameImage" destination="IOV-J6-HRl" id="1b5-BQ-kDt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -337,9 +292,7 @@
     <resources>
         <image name="brandIconDeselected_button" width="34" height="26"/>
         <image name="brandIconSelected_button" width="32" height="25"/>
-        <image name="coatProduct.png" width="640" height="432"/>
         <image name="containerDouble_image" width="353" height="48"/>
-        <image name="containerMedium_image" width="264" height="65"/>
         <image name="detailBrandTag_image" width="353" height="68"/>
         <image name="jaguar_brand.png" width="6000" height="3376"/>
     </resources>
