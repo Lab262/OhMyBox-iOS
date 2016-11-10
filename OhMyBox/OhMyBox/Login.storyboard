@@ -169,6 +169,10 @@
                     <navigationItem key="navigationItem" title="Login" id="C5O-7I-hpl"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="ijW-cm-45Z" id="Mac-qk-DHa"/>
+                        <outlet property="passwordTextField" destination="t8j-4Y-Khs" id="MRf-PT-bRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZ6-yp-hpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,6 +279,9 @@
                                 <rect key="frame" x="47" y="512" width="298" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="buttonField2_button"/>
+                                <connections>
+                                    <action selector="registerUser:" destination="Wbg-jD-gGj" eventType="touchUpInside" id="V0J-Wq-dzo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ear-DP-EMB">
                                 <rect key="frame" x="47" y="608" width="135" height="33"/>
@@ -294,6 +301,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="uD9-cM-B0l" id="quk-H8-LY9"/>
+                        <outlet property="nameTextField" destination="JhU-PR-B8m" id="HOP-98-Yi8"/>
+                        <outlet property="passwordTextField" destination="mP3-Fg-as3" id="EWh-2X-wql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0BD-LO-8ZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

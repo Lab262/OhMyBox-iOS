@@ -9,6 +9,11 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,13 @@ class CreateAccountViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func registerUser(_ sender: Any) {
+        
+    }
+    
+    
+    
     
 
     /*
