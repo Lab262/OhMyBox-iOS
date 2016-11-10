@@ -117,6 +117,8 @@
 		D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */; };
 		D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */; };
 		D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */; };
+		D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08D1DD4DEAD00F1DE52 /* User.swift */; };
+		D4E7E0901DD4DFF700F1DE52 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08F1DD4DFF700F1DE52 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +248,8 @@
 		D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		D4E7E08D1DD4DEAD00F1DE52 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D4E7E08F1DD4DFF700F1DE52 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,6 +443,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D4E7E08C1DD4DE0200F1DE52 /* User */,
 				D4E7E0891DD4DBA300F1DE52 /* Requests */,
 				D4E7E0861DD38C7000F1DE52 /* Tags */,
 				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
@@ -720,6 +725,15 @@
 				D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */,
 			);
 			name = Requests;
+			sourceTree = "<group>";
+		};
+		D4E7E08C1DD4DE0200F1DE52 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D4E7E08F1DD4DFF700F1DE52 /* ErrorMessage.swift */,
+				D4E7E08D1DD4DEAD00F1DE52 /* User.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1004,6 +1018,7 @@
 				2F225D0E1DBFEB8F009E4566 /* SizeProductCollectionViewCell.swift in Sources */,
 				2F0777471DBD8FBF003C124F /* MeasuresUserTableViewCell.swift in Sources */,
 				A4F89AFF1DA806C900949A35 /* ViewController.swift in Sources */,
+				D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */,
 				D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */,
 				2F225D001DBEFEE7009E4566 /* AttributesTableViewCell.swift in Sources */,
 				D4C0D6651DB6B32E007C3113 /* UIView+Animations.swift in Sources */,
@@ -1021,6 +1036,7 @@
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				2F044CEA1DBE43D100B54468 /* DetailProudctTableViewCell.swift in Sources */,
 				D457D7321DC3F64900443B63 /* TagView2.swift in Sources */,
+				D4E7E0901DD4DFF700F1DE52 /* ErrorMessage.swift in Sources */,
 				D402E01A1DB69944007855D6 /* ClosetTableViewCell.swift in Sources */,
 				D4B72A2E1DC8374A004335E4 /* DetailBrandViewController.swift in Sources */,
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
