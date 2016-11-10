@@ -1,19 +1,22 @@
 PODS:
+  - Alamofire (4.0.1)
   - BGTableViewRowActionWithImage (0.3.6)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - BGTableViewRowActionWithImage
   - Crashlytics
   - Fabric
 
 SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   BGTableViewRowActionWithImage: 3517276bcee26e559465bcca13151afc33ab6d2a
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
 
-PODFILE CHECKSUM: faaaf9ac6d1676129b087c5296a6c91b3db15ece
+PODFILE CHECKSUM: 753d50cc1e5b20f7d4fe013d530450207bb1616d
 
 COCOAPODS: 1.1.0

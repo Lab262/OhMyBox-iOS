@@ -8,6 +8,8 @@ target 'OhMyBox' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'BGTableViewRowActionWithImage'
+    pod 'Alamofire', '~> 4.0'
+
 # Pods for OhMyBox
 
   target 'OhMyBoxTests' do
