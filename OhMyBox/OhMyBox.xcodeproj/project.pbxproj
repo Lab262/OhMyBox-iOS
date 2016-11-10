@@ -115,6 +115,8 @@
 		D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */; };
 		D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */; };
 		D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */; };
+		D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */; };
+		D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +244,8 @@
 		D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0638DD2A71804F738F3D544 /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -435,6 +439,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D4E7E0891DD4DBA300F1DE52 /* Requests */,
 				D4E7E0861DD38C7000F1DE52 /* Tags */,
 				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
@@ -706,6 +711,15 @@
 				D4778E291DD27186005B2914 /* TagView4.swift */,
 			);
 			name = Tags;
+			sourceTree = "<group>";
+		};
+		D4E7E0891DD4DBA300F1DE52 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */,
+				D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -993,12 +1007,14 @@
 				2F225D001DBEFEE7009E4566 /* AttributesTableViewCell.swift in Sources */,
 				D4C0D6651DB6B32E007C3113 /* UIView+Animations.swift in Sources */,
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
+				D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */,
 				D44F35011DD0FF1500AE7E9E /* TagView3.swift in Sources */,
 				2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */,
 				2F225D0C1DBFE8FA009E4566 /* SizeProductTableViewCell.swift in Sources */,
 				2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
 				D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */,
+				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
 				D4B72A311DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,

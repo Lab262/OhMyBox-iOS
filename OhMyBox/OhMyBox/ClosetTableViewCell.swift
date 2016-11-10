@@ -23,12 +23,11 @@ class ClosetTableViewCell: UITableViewCell {
             self.collectionView.reloadData()
         }
     }
+    
     static let identifier = "closetCell"
     var delegate: callSegueProtocol?
     
-    
     func registerNibs () {
-        
         self.collectionView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
     }
     
@@ -80,7 +79,6 @@ extension ClosetTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         self.delegate?.callViewController(segueIndentifier: identifierSegue!)
-            
         
     }
     
