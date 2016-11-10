@@ -60,10 +60,10 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4E-PS-7v7">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <barButtonItem width="75" style="plain" systemItem="fixedSpace" id="I8m-Xm-97a"/>
+                                    <barButtonItem width="113" style="plain" systemItem="fixedSpace" id="I8m-Xm-97a"/>
                                     <barButtonItem style="plain" id="Jb7-Ul-E89">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Dz-60-xmo">
-                                            <rect key="frame" x="91" y="7" width="195" height="30"/>
+                                            <rect key="frame" x="129" y="7" width="121" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <state key="normal" title="COMPRAR">
@@ -91,19 +91,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="bottom" secondItem="i4E-PS-7v7" secondAttribute="bottom" id="3AY-fe-gor"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="hMB-eL-hGQ" secondAttribute="centerX" id="4H1-2i-LS4"/>
                             <constraint firstItem="hMB-eL-hGQ" firstAttribute="top" secondItem="Icp-yf-q1B" secondAttribute="bottom" constant="9" id="6WK-rd-VTs"/>
-                            <constraint firstItem="i4E-PS-7v7" firstAttribute="bottom" secondItem="HrW-v2-eNW" secondAttribute="top" id="DY5-LM-Ufc"/>
-                            <constraint firstItem="i4E-PS-7v7" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="EgO-dU-Smm"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="-78" id="IRf-xh-Co4"/>
-                            <constraint firstItem="i4E-PS-7v7" firstAttribute="centerX" secondItem="hMB-eL-hGQ" secondAttribute="centerX" id="Qys-OE-FFv"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="width" secondItem="76r-qQ-ZOB" secondAttribute="width" id="Xkq-w5-q9j"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="39" id="ZW9-qn-IYE"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="top" secondItem="hMB-eL-hGQ" secondAttribute="bottom" constant="21" id="G1A-dp-Ln8"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="trailing" secondItem="i4E-PS-7v7" secondAttribute="trailing" id="Gng-ay-kpz"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="ZZO-Oj-snn"/>
                             <constraint firstItem="hMB-eL-hGQ" firstAttribute="leading" secondItem="nBY-7w-BCo" secondAttribute="trailing" constant="25" id="ZeO-AU-xho"/>
                             <constraint firstItem="nBY-7w-BCo" firstAttribute="top" secondItem="Icp-yf-q1B" secondAttribute="bottom" constant="8" symbolic="YES" id="evI-vt-zRw"/>
-                            <constraint firstItem="i4E-PS-7v7" firstAttribute="leading" secondItem="nBY-7w-BCo" secondAttribute="leading" id="ish-3M-aJx"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="jOI-TS-cTt"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="top" secondItem="nBY-7w-BCo" secondAttribute="bottom" constant="31" id="lMz-ow-64I"/>
-                            <constraint firstItem="i4E-PS-7v7" firstAttribute="leading" secondItem="rTo-EA-wGZ" secondAttribute="leading" id="pSk-D2-y2V"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="bottom" secondItem="HrW-v2-eNW" secondAttribute="top" id="lTV-8L-fcn"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="leading" secondItem="nBY-7w-BCo" secondAttribute="leading" id="qiK-sb-afI"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="leading" secondItem="76r-qQ-ZOB" secondAttribute="leading" id="sZy-fN-Wsv"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="leading" secondItem="i4E-PS-7v7" secondAttribute="leading" id="sni-V9-6UJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3fQ-Qu-pij"/>
@@ -118,14 +117,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h3-DB-kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49" y="42"/>
+            <point key="canvasLocation" x="-50.399999999999999" y="41.829085457271368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T9k-Xk-PcE">
             <objects>
                 <navigationController id="LMx-MR-oGB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xj6-EP-ugh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nVm-ux-fja">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nVm-ux-fja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
