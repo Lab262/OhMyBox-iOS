@@ -723,6 +723,7 @@
 			children = (
 				D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */,
 				D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */,
+				D4E7E08F1DD4DFF700F1DE52 /* ErrorMessage.swift */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -730,7 +731,6 @@
 		D4E7E08C1DD4DE0200F1DE52 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				D4E7E08F1DD4DFF700F1DE52 /* ErrorMessage.swift */,
 				D4E7E08D1DD4DEAD00F1DE52 /* User.swift */,
 			);
 			name = User;
