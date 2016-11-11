@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
     
     func getRequestLogin(){
         self.view.endEditing(true)
-        UserRequest.loginUser(email:passwordTextField.text!, pass:loginTextField.text!) { (sucess,msg, user) in
+        UserRequest.loginUser(email:loginTextField.text!, pass:passwordTextField.text!) { (sucess,msg, user) in
             if (sucess){
                   self.present( self.alertControllerActionWithTitle("Seja bem vindo!", _withMessage:msg), animated: true, completion: nil)
             }else{

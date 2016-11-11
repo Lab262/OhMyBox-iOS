@@ -11,7 +11,7 @@ import Alamofire
 
 
 let URL_WS_CREATE_USER = "\(URL_WS_SERVER)users"
-let URL_WS_LOGIN_USER = "\(URL_WS_SERVER)/auth/login"
+let URL_WS_LOGIN_USER = "\(URL_WS_SERVER)auth/login"
 //let URL_WS_FORGOT_PASS = "\(URL_WS_SERVER)auth/forgotPassword"
 //let URL_WS_LOGIN_FACEBOOK = "\(URL_WS_SERVER)auth/facebook"
 
@@ -23,13 +23,9 @@ class UserRequest: NSObject {
         var dic = user.getAsDictionaryForWS()
         dic ["password"] = pass
         
-        let body = [
-            "data": [
-                "attributes": dic
-            ]
-        ]
+
         
-        Alamofire.request(URL_WS_CREATE_USER, method: .post, parameters: body, encoding: JSONEncoding.default).responseJSON { (response: DataResponse<Any>) in
+        Alamofire.request(URL_WS_CREATE_USER, method: .post, parameters: dic, encoding: JSONEncoding.default).responseJSON { (response: DataResponse<Any>) in
             
             switch response.result {
                 
@@ -134,6 +130,9 @@ class UserRequest: NSObject {
         dic["email"] = email
         dic["password"] = pass
         
+    
+       
+    
         Alamofire.request(URL_WS_LOGIN_USER, method: .post, parameters: dic, encoding: JSONEncoding.default).responseJSON { (response: DataResponse<Any>) in
             
             switch response.result {

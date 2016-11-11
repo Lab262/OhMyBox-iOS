@@ -9,7 +9,7 @@
 
 import UIKit
 
-class User: NSObject {
+class User: NSObject{
     
     var id: String?
     var name: String?
@@ -23,6 +23,17 @@ class User: NSObject {
         print(data)
         self.setDataFromWS(data: data)
     }
+    
+    
+    override init() {
+        super.init()
+    }
+    
+    init (_name:String,_email:String){
+        self.name = _name
+        self.email = _email
+    }
+    
     
     func setDataFromWS(data: (Dictionary<String, AnyObject>)) {
         
@@ -44,6 +55,21 @@ class User: NSObject {
         if let email = self.email {
             dic ["email"] = email
         }
+        
+        if let name  = self.name  {
+            dic ["name"] = name
+        }
+        
+        if let id  = self.id  {
+            dic ["_id"] = id
+        }
+        if let token  = self.token
+        {
+            dic ["token"] = token
+        }
+        
+        
+        
         
         return dic
     }

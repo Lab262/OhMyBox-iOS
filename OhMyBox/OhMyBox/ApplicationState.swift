@@ -12,7 +12,6 @@ import Alamofire
 //
 //#if DEVELOPMENT
 //    #else
-//let URL_WS_SERVER = "http://ohmybox-stg.herokuapp.com/api-docs/api/v0/"
 //#endif
 
 
