@@ -85,6 +85,7 @@ class LoginViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
              self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
+            Defaults.sharedInstance.isLogged = true
         }))
         return alert
     }
