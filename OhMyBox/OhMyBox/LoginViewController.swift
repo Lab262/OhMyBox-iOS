@@ -69,7 +69,7 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
         UserRequest.loginUser(email:loginTextField.text!, pass:passwordTextField.text!) { (sucess,msg, user) in
             if (sucess){
-                  self.present( self.alertControllerActionWithTitle("Seja bem vindo!", _withMessage:msg), animated: true, completion: nil)
+                  self.present( self.alertControllerActionWithTitle(msg, _withMessage:"Seja bem vindo!"), animated: true, completion: nil)
             }else{
                 self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage:msg), animated: true, completion: nil)
 
