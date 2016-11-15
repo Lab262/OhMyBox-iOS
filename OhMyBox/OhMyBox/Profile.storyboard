@@ -131,7 +131,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="PWe-68-0gS">
-                        <barButtonItem key="rightBarButtonItem" image="myBox" id="yiW-af-Ho5">
+                        <barButtonItem key="rightBarButtonItem" image="box_button" id="yiW-af-Ho5">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ocJ-Hg-kLf" kind="presentation" id="H4K-rB-rwT"/>
@@ -176,11 +176,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="box_button" width="28" height="28"/>
         <image name="buttonSegmentOFF" width="167" height="48"/>
         <image name="buttonSegmentON" width="167" height="48"/>
         <image name="contentName" width="353" height="62"/>
         <image name="fashion-person.png" width="640" height="426"/>
-        <image name="myBox" width="28" height="28"/>
         <image name="profileIconDeselected_button" width="29" height="27"/>
         <image name="profileIconSelected_button" width="29" height="28"/>
     </resources>

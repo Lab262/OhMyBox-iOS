@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -36,10 +36,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj4-5d-1iZ">
-                                <state key="normal" image="myBox"/>
+                                <state key="normal" image="box_button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-Uh-N2t">
-                                <state key="normal" image="heart"/>
+                                <state key="normal" image="heartEmpty_button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h92-HK-Ekj">
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
@@ -58,7 +58,7 @@
                             <constraint firstAttribute="trailing" secondItem="h92-HK-Ekj" secondAttribute="trailing" constant="10" id="6jy-eC-qty"/>
                             <constraint firstAttribute="bottom" secondItem="6B0-Uh-N2t" secondAttribute="bottom" constant="6" id="7oj-YT-BZv"/>
                             <constraint firstItem="9pR-8a-15b" firstAttribute="top" secondItem="06k-TW-OFF" secondAttribute="bottom" constant="1" id="JnI-rg-O2f"/>
-                            <constraint firstItem="6B0-Uh-N2t" firstAttribute="top" secondItem="h92-HK-Ekj" secondAttribute="bottom" constant="45" id="PbF-EK-MQM"/>
+                            <constraint firstItem="6B0-Uh-N2t" firstAttribute="top" secondItem="h92-HK-Ekj" secondAttribute="bottom" constant="46" id="PbF-EK-MQM"/>
                             <constraint firstItem="9pR-8a-15b" firstAttribute="leading" secondItem="Hp2-Qi-ybg" secondAttribute="leading" constant="8" id="Q9g-NW-dwx"/>
                             <constraint firstItem="Rj4-5d-1iZ" firstAttribute="leading" secondItem="6B0-Uh-N2t" secondAttribute="trailing" constant="21" id="eH0-kx-t5e"/>
                             <constraint firstItem="6B0-Uh-N2t" firstAttribute="bottom" secondItem="Rj4-5d-1iZ" secondAttribute="bottom" id="ezL-vw-Aqu"/>
@@ -96,8 +96,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="box_button" width="28" height="28"/>
         <image name="defaultGloes.png" width="544" height="460"/>
-        <image name="heart" width="29" height="26"/>
-        <image name="myBox" width="28" height="28"/>
+        <image name="heartEmpty_button" width="29" height="26"/>
     </resources>
 </document>

@@ -112,7 +112,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="OH-MY-BOX" id="muF-vK-Lz9">
                         <rightBarButtonItems>
-                            <barButtonItem image="myBox" id="wFc-lZ-vSm">
+                            <barButtonItem image="box_button" id="wFc-lZ-vSm">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="YUY-LX-DDs" kind="presentation" id="lat-32-PQj"/>
@@ -399,7 +399,7 @@
                                 <frame key="frameInset" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem image="heartFull" width="71" id="9sb-4f-T6R">
+                                    <barButtonItem image="heartFull_button" width="71" id="9sb-4f-T6R">
                                         <color key="tintColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="TKO-PC-Ld2">
@@ -429,7 +429,7 @@
                                         </view>
                                     </barButtonItem>
                                     <barButtonItem width="18" style="plain" systemItem="fixedSpace" id="lIZ-f0-gnx"/>
-                                    <barButtonItem image="myBox" width="42" id="DuL-Ok-ZpQ">
+                                    <barButtonItem image="box_button" width="42" id="DuL-Ok-ZpQ">
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </barButtonItem>
                                 </items>
@@ -444,7 +444,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="icl-h0-e6J">
-                        <barButtonItem key="rightBarButtonItem" image="myBox" id="VUS-IW-eIL">
+                        <barButtonItem key="rightBarButtonItem" image="box_button" id="VUS-IW-eIL">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="ibz-ad-nfE" kind="presentation" id="1NX-qp-R9H"/>
@@ -542,7 +542,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RECOMENDADOS" id="4NX-5T-Gyj">
-                        <barButtonItem key="rightBarButtonItem" image="myBox" id="pn6-a6-aTL">
+                        <barButtonItem key="rightBarButtonItem" image="box_button" id="pn6-a6-aTL">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="nA4-py-4Ng" kind="presentation" id="GLb-5X-wKm"/>
@@ -590,8 +590,8 @@
     </scenes>
     <resources>
         <image name="bgBox" width="1032" height="255"/>
-        <image name="heartFull" width="27" height="24"/>
-        <image name="myBox" width="353" height="318"/>
+        <image name="box_button" width="28" height="28"/>
+        <image name="heartFull_button" width="32" height="28"/>
         <image name="ombIconDeselected_button" width="36" height="21"/>
         <image name="ombIconSelected_button" width="43" height="28"/>
         <image name="productDefaultimage.png" width="608" height="538"/>
