@@ -13,9 +13,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewSearch: UIView?
     var searchController: UISearchController!
-    var leftButtonItem: UIBarButtonItem?
+    var boxButtonItem: UIBarButtonItem?
     var clotingArray: [String]?
-    var rightButtonItem: UIBarButtonItem?
+    var searchButtonItem: UIBarButtonItem?
     @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
     @IBOutlet weak var searchBarButton: UIBarButtonItem!
     
@@ -24,12 +24,20 @@ class HomeViewController: UIViewController {
         self.registerNib()
         //self.configureTableView()
         
-        self.rightButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+       // self.boxButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
+        
+       // self.searchBarButton = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+        
+      
+        
+        
+        //navigationItem.rightBarButtonItems = [editButtonItem, searchBarButton]
         
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
         self.clotingArray?.append("cloting Three")
+     //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +53,11 @@ class HomeViewController: UIViewController {
         
     }
 
+    @IBAction func actionGoCart(_ sender: AnyObject) {
+        
+        self.performSegue(withIdentifier:"goCart", sender:nil)
+    
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         if self.searchController.isActive {
@@ -72,7 +85,7 @@ class HomeViewController: UIViewController {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
-        self.searchController.searchBar.setImage(UIImage(named: "searchIcon"), for: .search, state: UIControlState())
+     //   self.searchController.searchBar.setImage(UIImage(named: "searchIcon"), for: .search, state: UIControlState())
         self.searchController.delegate = self
         self.searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.dimsBackgroundDuringPresentation = false
@@ -132,33 +145,11 @@ extension HomeViewController: UITableViewDataSource {
         if indexPath.section == 0{
             
             return self.generateClosetCell(tableView, cellForRowAt: indexPath)
-//            switch indexPath.row {
-//                
-//                return self.generateClosetCell(tableView, cellForRowAt: indexPath)
-//                //case 0:
-//                    //return self.generateHeaderClosetCell(tableView, cellForRowAt: indexPath)
-//                case 0:
-//                    return self.generateClosetCell(tableView, cellForRowAt: indexPath)
-//                default:
-//                    return UITableViewCell()
-//            }
         }else if indexPath.section == 1{
             
             
             return self.generateProductCell(tableView, cellForRowAt: indexPath)
-//            switch indexPath.row {
-//                case 0:
-//                    let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-//                    cell.firstTitleLineLabel.text = "OLHA AS"
-//                    cell.secondTitleLineLabel.text = "NOVIDADES"
-//                    cell.iconImage.image = UIImage(named:"textureSectionImage")
-//                    
-//                    return cell
-//                case 1:
-//                    return self.generateProductCell(tableView, cellForRowAt: indexPath)
-//                default:
-//                    return UITableViewCell()
-//            }
+
         }else if indexPath.section == 2{
            return self.generatePromotionCell(tableView, cellForRowAt: indexPath)
         }else {
@@ -312,10 +303,12 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
-        self.navigationItem.leftBarButtonItem = self.leftButtonItem
-        // searchBarButton.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = self.rightButtonItem
-    
+
+        
+        //searchBarButton.tintColor = UIColor.black
+        //self.navigationItem.rightBarButtonItem = self.rightButtonItem
+        
+        
     }
     
     func didDismissSearchController(_ searchController: UISearchController) {
@@ -324,8 +317,7 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
     }
     
     func willDismissSearchController(_ searchController: UISearchController) {
-        self.navigationItem.leftBarButtonItem = self.leftButtonItem
-        self.navigationItem.rightBarButtonItem = self.rightButtonItem
+        //self.navigationItem.rightBarButtonItems = [searchBarButton!, boxButtonItem!]
     }
 }
 

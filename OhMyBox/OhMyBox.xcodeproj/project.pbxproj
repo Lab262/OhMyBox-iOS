@@ -30,6 +30,15 @@
 		2F225D071DBF05A0009E4566 /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F225D061DBF05A0009E4566 /* Colour.swift */; };
 		2F225D0C1DBFE8FA009E4566 /* SizeProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F225D0B1DBFE8FA009E4566 /* SizeProductTableViewCell.swift */; };
 		2F225D0E1DBFEB8F009E4566 /* SizeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F225D0D1DBFEB8F009E4566 /* SizeProductCollectionViewCell.swift */; };
+		2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; };
+		2F2C8E101DDD02AE0002BB87 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F2C8E111DDD02AE0002BB87 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; };
+		2F2C8E121DDD02AE0002BB87 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F2C8E131DDD02AE0002BB87 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; };
+		2F2C8E141DDD02AE0002BB87 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; };
+		2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */; };
 		2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4649691DB93E5E0021516F /* fashion-person.png */; };
 		2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46496B1DB942840021516F /* SegmentTableViewCell.swift */; };
 		2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */; };
@@ -132,6 +141,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2F2C8E171DDD02AE0002BB87 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */,
+				2F2C8E101DDD02AE0002BB87 /* Bolts.framework in Embed Frameworks */,
+				2F2C8E121DDD02AE0002BB87 /* FBSDKCoreKit.framework in Embed Frameworks */,
+				2F2C8E141DDD02AE0002BB87 /* FBSDKLoginKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2F044CE41DBE3BD300B54468 /* DetailProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		2F044CE61DBE41D600B54468 /* coatProduct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coatProduct.png; sourceTree = "<group>"; };
@@ -155,6 +181,16 @@
 		2F225D061DBF05A0009E4566 /* Colour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colour.swift; sourceTree = "<group>"; };
 		2F225D0B1DBFE8FA009E4566 /* SizeProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeProductTableViewCell.swift; sourceTree = "<group>"; };
 		2F225D0D1DBFEB8F009E4566 /* SizeProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F2C8DFF1DDCFFC40002BB87 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/Bolts.framework"; sourceTree = "<group>"; };
+		2F2C8E001DDCFFC40002BB87 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		2F2C8E011DDCFFC40002BB87 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		2F2C8E021DDCFFC40002BB87 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OhMyBox.entitlements; sourceTree = "<group>"; };
+		2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaType.swift; sourceTree = "<group>"; };
 		2F4649691DB93E5E0021516F /* fashion-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fashion-person.png"; sourceTree = "<group>"; };
 		2F46496B1DB942840021516F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
@@ -262,6 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8BD14BCA7DC790910C4E485 /* Pods_OhMyBox.framework in Frameworks */,
+				2F2C8E111DDD02AE0002BB87 /* FBSDKCoreKit.framework in Frameworks */,
+				2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */,
+				2F2C8E131DDD02AE0002BB87 /* FBSDKLoginKit.framework in Frameworks */,
+				2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +356,25 @@
 				2F225CFD1DBEFC36009E4566 /* ContainerCollectionView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		2F2C8E181DDD05F90002BB87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */,
+				2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */,
+				2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */,
+				2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F2C8E1C1DDD56B70002BB87 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */,
+			);
+			name = Enum;
 			sourceTree = "<group>";
 		};
 		2F4896EB1DB7E1D600EADFFE /* Cell */ = {
@@ -424,6 +483,10 @@
 		64612CF48B1EAC2E4BDDFE27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F2C8DFF1DDCFFC40002BB87 /* Bolts.framework */,
+				2F2C8E001DDCFFC40002BB87 /* FBSDKCoreKit.framework */,
+				2F2C8E011DDCFFC40002BB87 /* FBSDKLoginKit.framework */,
+				2F2C8E021DDCFFC40002BB87 /* FBSDKShareKit.framework */,
 				C8100773A4B12C234FA1527F /* Pods_OhMyBox.framework */,
 				EF092584CA45C98DDD2FE4E6 /* Pods_OhMyBoxTests.framework */,
 			);
@@ -433,6 +496,7 @@
 		A4F89AF01DA806C900949A35 = {
 			isa = PBXGroup;
 			children = (
+				2F2C8E181DDD05F90002BB87 /* Frameworks */,
 				A4F89AFB1DA806C900949A35 /* OhMyBox */,
 				A4F89B101DA806C900949A35 /* OhMyBoxTests */,
 				A4F89AFA1DA806C900949A35 /* Products */,
@@ -453,6 +517,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */,
 				2F164F611DD64ECF00ED72DA /* Defaults */,
 				D4E7E08C1DD4DE0200F1DE52 /* User */,
 				D4E7E0891DD4DBA300F1DE52 /* Requests */,
@@ -742,6 +807,7 @@
 		D4E7E08C1DD4DE0200F1DE52 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				2F2C8E1C1DDD56B70002BB87 /* Enum */,
 				D4E7E08D1DD4DEAD00F1DE52 /* User.swift */,
 			);
 			name = User;
@@ -762,6 +828,7 @@
 				6FEE6A6A461F3B856DB2773D /* [CP] Copy Pods Resources */,
 				A4F89B1C1DA807F200949A35 /* Show Comment Tags */,
 				A4B5CAAA1DA811FB003260BA /* Fabric */,
+				2F2C8E171DDD02AE0002BB87 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -808,6 +875,11 @@
 						DevelopmentTeam = B865ENT4P3;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					A4F89B0C1DA806C900949A35 = {
 						CreatedOnToolsVersion = 8.0;
@@ -1025,6 +1097,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */,
 				D4C0D6671DB6B32E007C3113 /* TextFieldExtension.swift in Sources */,
 				2F225D0E1DBFEB8F009E4566 /* SizeProductCollectionViewCell.swift in Sources */,
 				2F0777471DBD8FBF003C124F /* MeasuresUserTableViewCell.swift in Sources */,
@@ -1231,11 +1304,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = OhMyBox/OhMyBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = B865ENT4P3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
@@ -1254,10 +1332,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = OhMyBox/OhMyBox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = B865ENT4P3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = OhMyBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";

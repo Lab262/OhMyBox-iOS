@@ -115,7 +115,8 @@
                             <barButtonItem image="box_button" id="wFc-lZ-vSm">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="YUY-LX-DDs" kind="presentation" id="lat-32-PQj"/>
+                                    <action selector="actionGoCart:" destination="vVD-EG-X6A" id="dmj-hU-Yn8"/>
+                                    <segue destination="YUY-LX-DDs" kind="presentation" identifier="goCart" id="Sgb-BB-Etg"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="searchIcon" style="plain" id="D3E-03-cZ3">
@@ -478,7 +479,7 @@
                 <viewControllerPlaceholder storyboardName="ShoppingBox" id="YUY-LX-DDs" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3J-zj-y3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2463" y="-1426"/>
+            <point key="canvasLocation" x="2326" y="-1260"/>
         </scene>
         <!--RECOMENDADOS-->
         <scene sceneID="88A-Kb-TVN">

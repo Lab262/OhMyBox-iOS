@@ -69,16 +69,15 @@ class UserRequest: NSObject {
         }
         
     }
-    static func loginUserWithFacebook (id: String, email: String,completionHandler: @escaping (_ sucess: Bool, _ msg: String, _ user: User?) -> Void) {
+    static func loginUserWithFacebook (id: String, email: String,mediaType:Int,completionHandler: @escaping (_ sucess: Bool, _ msg: String, _ user: User?) -> Void) {
         
         let body = [
             "email": email,
-            "facebook": [
-                "id": id,
-                "password": "AQWgd$j[QGe]Bh.Ugkf>?B3y696?2$#B2xwfN3hrVhFrE348g\(id)"
-            ]
+            "socialMediaType": mediaType,
+             "socialMediaId":id,
+             "password": "AQWgd$j[QGe]Bh.Ugkf>?B3y696?2$#B2xwfN3hrVhFrE348g\(id)"
             ] as [String : Any]
-        
+        print (body)
         Alamofire.request(URL_WS_LOGIN_FACEBOOK, method: .post, parameters:body, encoding: JSONEncoding.default).responseJSON { (response: DataResponse<Any>) in
             
             switch response.result {
