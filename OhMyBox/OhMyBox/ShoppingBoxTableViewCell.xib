@@ -153,7 +153,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dressImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-Zq-sp1">
+                                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultGloes.png" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-Zq-sp1">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gUG-Zq-sp1" secondAttribute="height" multiplier="0.9 : 1" id="5nR-mT-JXH"/>
                                                 </constraints>
@@ -227,7 +227,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dressImage.png" width="600" height="400"/>
+        <image name="defaultGloes.png" width="544" height="460"/>
         <image name="lessButton" width="7" height="2"/>
         <image name="moreButton" width="9" height="10"/>
         <image name="trashButton" width="54" height="102"/>

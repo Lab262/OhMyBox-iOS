@@ -27,7 +27,7 @@
                         <frame key="frameInset" minX="4" minY="44" width="365" height="131"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dressImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="WIk-oz-oKZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultGloes.png" translatesAutoresizingMaskIntoConstraints="NO" id="WIk-oz-oKZ">
                                 <frame key="frameInset" minX="8" minY="20" width="84" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -105,6 +105,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dressImage.png" width="600" height="400"/>
+        <image name="defaultGloes.png" width="544" height="460"/>
     </resources>
 </document>

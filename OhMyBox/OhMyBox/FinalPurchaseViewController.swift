@@ -16,6 +16,12 @@ class FinalPurchaseViewController: UIViewController {
         self.registerNib()
         // Do any additional setup after loading the view.
     }
+    @IBAction func backOrder(_ sender: AnyObject) {
+        
+        self.dismiss(animated: true, completion: nil)
+
+    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

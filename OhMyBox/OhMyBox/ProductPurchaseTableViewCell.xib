@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dressImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="evl-ES-uH7">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultGloes.png" translatesAutoresizingMaskIntoConstraints="NO" id="evl-ES-uH7">
                         <frame key="frameInset" minX="8" minY="38" width="59" height="64"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -62,6 +62,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dressImage.png" width="600" height="400"/>
+        <image name="defaultGloes.png" width="544" height="460"/>
     </resources>
 </document>

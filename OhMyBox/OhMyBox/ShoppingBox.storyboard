@@ -112,7 +112,7 @@
                         <outlet property="closeButton" destination="nBY-7w-BCo" id="wmp-0D-NmH"/>
                         <outlet property="segmentControl" destination="hMB-eL-hGQ" id="9j0-Xh-eHT"/>
                         <outlet property="tableView" destination="rTo-EA-wGZ" id="Kyv-mU-jgD"/>
-                        <segue destination="LMx-MR-oGB" kind="show" identifier="segueFinalPurchase" id="D1K-M1-hvF"/>
+                        <segue destination="LMx-MR-oGB" kind="presentation" identifier="segueFinalPurchase" id="D1K-M1-hvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h3-DB-kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,6 +183,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="MY BOX" id="BbR-ru-EpS">
                         <barButtonItem key="backBarButtonItem" systemItem="edit" id="MqR-5K-ob1"/>
+                        <barButtonItem key="leftBarButtonItem" image="arrow_Button" id="oK6-yc-oux">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="backOrder:" destination="aZ6-Xl-MdT" id="R6P-dZ-E88"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tBU-3K-Wm3" id="mvk-c4-9QU"/>
@@ -202,6 +208,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow_Button" width="11" height="18"/>
         <image name="closeButton" width="10" height="11"/>
     </resources>
 </document>
