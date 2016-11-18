@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -110,31 +109,14 @@
                             <constraint firstItem="f19-Lu-Hmh" firstAttribute="centerX" secondItem="ACp-CH-jkW" secondAttribute="centerX" id="nQ7-YJ-rYx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="OH-MY-BOX" id="muF-vK-Lz9">
-                        <rightBarButtonItems>
-                            <barButtonItem image="box_button" id="wFc-lZ-vSm">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="actionGoCart:" destination="vVD-EG-X6A" id="dmj-hU-Yn8"/>
-                                    <segue destination="YUY-LX-DDs" kind="presentation" identifier="goCart" id="Sgb-BB-Etg"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="searchIcon" style="plain" id="D3E-03-cZ3">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="searchProducts:" destination="vVD-EG-X6A" id="pxt-yh-Pd9"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="OH-MY-BOX" id="muF-vK-Lz9"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
-                        <outlet property="searchBarBoxButton" destination="wFc-lZ-vSm" id="c7H-8I-ege"/>
-                        <outlet property="searchBarButton" destination="D3E-03-cZ3" id="vCe-gP-Ft4"/>
                         <outlet property="tableView" destination="f19-Lu-Hmh" id="7wN-sj-EPx"/>
                         <segue destination="erU-ar-DLf" kind="show" identifier="goRecommended" id="XgR-lH-71A"/>
                         <segue destination="MiG-iR-diQ" kind="show" identifier="detailProduct" id="VzE-k7-m1U"/>
+                        <segue destination="YUY-LX-DDs" kind="presentation" identifier="goCart" id="EMM-rn-Hci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djg-nn-b97" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -596,7 +578,6 @@
         <image name="ombIconDeselected_button" width="36" height="21"/>
         <image name="ombIconSelected_button" width="43" height="28"/>
         <image name="productDefaultimage.png" width="608" height="538"/>
-        <image name="searchIcon" width="20" height="20"/>
     </resources>
     <color key="tintColor" red="0.14117647059999999" green="0.094117647060000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -94,6 +94,7 @@
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="bottom" secondItem="i4E-PS-7v7" secondAttribute="bottom" id="3AY-fe-gor"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="hMB-eL-hGQ" secondAttribute="centerX" id="4H1-2i-LS4"/>
                             <constraint firstItem="hMB-eL-hGQ" firstAttribute="top" secondItem="Icp-yf-q1B" secondAttribute="bottom" constant="9" id="6WK-rd-VTs"/>
+                            <constraint firstItem="i4E-PS-7v7" firstAttribute="centerX" secondItem="rTo-EA-wGZ" secondAttribute="centerX" id="8uJ-au-Lo1"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="top" secondItem="hMB-eL-hGQ" secondAttribute="bottom" constant="21" id="G1A-dp-Ln8"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="trailing" secondItem="i4E-PS-7v7" secondAttribute="trailing" id="Gng-ay-kpz"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="ZZO-Oj-snn"/>
@@ -148,9 +149,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-3K-Wm3">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-3K-Wm3">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
@@ -158,9 +157,7 @@
                                     <outlet property="delegate" destination="aZ6-Xl-MdT" id="X1n-Jb-MNr"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-7v-qiG">
-                                <frame key="frameInset" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-7v-qiG">
                                 <items>
                                     <barButtonItem style="plain" id="pTO-Ny-Wqg">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EzV-69-8e9">
@@ -180,6 +177,15 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="leading" secondItem="lBO-Dq-3Yw" secondAttribute="leading" id="Boc-eU-zBH"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="top" secondItem="lBO-Dq-3Yw" secondAttribute="top" id="C4N-N0-aey"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="bottom" secondItem="MbI-7v-qiG" secondAttribute="bottom" id="P15-99-Uus"/>
+                            <constraint firstAttribute="trailing" secondItem="tBU-3K-Wm3" secondAttribute="trailing" id="PkX-CL-Kc8"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="bottom" secondItem="RrB-Ib-FAF" secondAttribute="top" id="PsI-xf-Clc"/>
+                            <constraint firstItem="MbI-7v-qiG" firstAttribute="centerX" secondItem="tBU-3K-Wm3" secondAttribute="centerX" id="TN1-eI-Gv9"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="leading" secondItem="MbI-7v-qiG" secondAttribute="leading" id="v1F-TK-e4e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MY BOX" id="BbR-ru-EpS">
                         <barButtonItem key="backBarButtonItem" systemItem="edit" id="MqR-5K-ob1"/>

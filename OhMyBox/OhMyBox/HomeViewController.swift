@@ -24,14 +24,16 @@ class HomeViewController: UIViewController {
         self.registerNib()
         //self.configureTableView()
         
-       // self.boxButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
+         let rightboxBarButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
         
-       // self.searchBarButton = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+        let rightSearchBarButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
         
-      
+        ///let rightSearchBarButtonItem  = UIBarButtonItem(title: "box_button", style: UIBarButtonItemStyle.plain, target: self, action: #selector(actionGoCart(_:)))
         
+         //  var rightSearchBarButtonItem:UIBarButtonItem = UIBarButtonItem(title: "searchIcon", style: UIBarButtonItemStyle.plain, target: self, action: #selector(searchProducts(_:)))
         
-        //navigationItem.rightBarButtonItems = [editButtonItem, searchBarButton]
+        //  self.navigationItem.setRightBarButtonItems([rightBoxBarButtonItem,rightSearchBarButtonItem], animated: true)
+        navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
         
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
@@ -85,7 +87,7 @@ class HomeViewController: UIViewController {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
-     //   self.searchController.searchBar.setImage(UIImage(named: "searchIcon"), for: .search, state: UIControlState())
+     // self.searchController.searchBar.setImage(UIImage(named: ""), for: .search, state: UIControlState())
         self.searchController.delegate = self
         self.searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.dimsBackgroundDuringPresentation = false
@@ -109,9 +111,10 @@ class HomeViewController: UIViewController {
         
         
         self.viewSearch = UIView(frame: CGRect(x: self.searchController.searchBar.frame.origin.x, y: self.searchController.searchBar.frame.origin.y, width: self.searchController.searchBar.bounds.size.width-15, height: self.searchController.searchBar.bounds.size.height))
+       
+       
         
-        
-        self.viewSearch?.backgroundColor = UIColor.clear
+        self.viewSearch?.backgroundColor = UIColor.white
         
         self.viewSearch?.addSubview(self.searchController.searchBar)
         
@@ -126,8 +129,9 @@ class HomeViewController: UIViewController {
        
         let leftNavBarButton = UIBarButtonItem(customView: self.viewSearch!)
         navigationItem.setLeftBarButton(leftNavBarButton, animated: true)
-        
-        navigationItem.setRightBarButton(nil, animated: true)
+        self.viewSearch?.isHidden = false
+
+      
         UIView.animate(withDuration: 0.2, animations: {
             self.searchController.searchBar.alpha = 1
             }, completion: { finished in
@@ -305,12 +309,10 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
+        //self.title = "OHMYBOX"
+        self.viewSearch?.isHidden = true
+       self.navigationController?.isNavigationBarHidden = false
 
-        
-        //searchBarButton.tintColor = UIColor.black
-        //self.navigationItem.rightBarButtonItem = self.rightButtonItem
-        
-        
     }
     
     func didDismissSearchController(_ searchController: UISearchController) {
@@ -319,8 +321,10 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
     }
     
     func willDismissSearchController(_ searchController: UISearchController) {
-        //self.navigationItem.rightBarButtonItems = [searchBarButton!, boxButtonItem!]
-    }
+        
+        //    self.title = "OHMYBOX"
+         self.viewSearch?.isHidden = true
+         }
 }
 
 
