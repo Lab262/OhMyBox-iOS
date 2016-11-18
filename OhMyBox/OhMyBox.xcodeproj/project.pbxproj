@@ -39,6 +39,7 @@
 		2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; };
 		2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */; };
+		2F2C8E201DDE310B0002BB87 /* imagePromo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */; };
 		2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4649691DB93E5E0021516F /* fashion-person.png */; };
 		2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46496B1DB942840021516F /* SegmentTableViewCell.swift */; };
 		2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */; };
@@ -191,6 +192,7 @@
 		2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OhMyBox.entitlements; sourceTree = "<group>"; };
 		2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaType.swift; sourceTree = "<group>"; };
+		2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePromo.png; sourceTree = "<group>"; };
 		2F4649691DB93E5E0021516F /* fashion-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fashion-person.png"; sourceTree = "<group>"; };
 		2F46496B1DB942840021516F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
@@ -749,6 +751,7 @@
 				2F0777431DBD368E003C124F /* dressImage.png */,
 				D44457F21DC7C2B200F488FE /* jaguar_brand.png */,
 				2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */,
+				2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */,
 				2F044CE61DBE41D600B54468 /* coatProduct.png */,
 				2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */,
 				D4C0D6541DB6AA6C007C3113 /* jacketImage.png */,
@@ -938,6 +941,7 @@
 				2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */,
 				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,
 				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
+				2F2C8E201DDE310B0002BB87 /* imagePromo.png in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				2F5DE1CA1DC13F1400822826 /* SimpleTextViewTableViewCell.xib in Resources */,
 				2F70E8351DC969EC000AB03B /* OrderTableViewCell.xib in Resources */,

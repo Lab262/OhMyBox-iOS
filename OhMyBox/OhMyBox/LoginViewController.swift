@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
                     
                 }
             } else {
-                              print(error)
+            
             }
             
         }
@@ -82,7 +82,8 @@ class LoginViewController: UIViewController {
                     UserRequest.loginUserWithFacebook(id: data["id"] as! String, email: data["email"] as! String,mediaType:SocialMediaType.facebook.rawValue, completionHandler: { (success, msg, user) in
                         
                             if success {
-                                self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
+                            Defaults.sharedInstance.isLogged = true
+                            self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
 
                                 print (user)
                             }else {
