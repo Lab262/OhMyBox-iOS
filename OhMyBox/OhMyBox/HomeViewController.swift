@@ -210,7 +210,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 4
+        return 5
     }
 
 }
@@ -231,6 +231,8 @@ extension HomeViewController: UITableViewDelegate {
                 return 352
             case 2:
                 return 240
+            case 3:
+                return 50
             default:
                 return 0
         }

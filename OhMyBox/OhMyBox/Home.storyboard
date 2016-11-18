@@ -104,9 +104,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jJ7-lB-svP" firstAttribute="top" secondItem="f19-Lu-Hmh" secondAttribute="bottom" constant="8" symbolic="YES" id="EHA-gL-gnj"/>
+                            <constraint firstItem="jJ7-lB-svP" firstAttribute="top" secondItem="f19-Lu-Hmh" secondAttribute="bottom" constant="-144" id="EHA-gL-gnj"/>
                             <constraint firstItem="f19-Lu-Hmh" firstAttribute="leading" secondItem="ACp-CH-jkW" secondAttribute="leading" id="R8k-eE-37N"/>
-                            <constraint firstItem="f19-Lu-Hmh" firstAttribute="centerY" secondItem="ACp-CH-jkW" secondAttribute="centerY" constant="-28.5" id="lFX-Ms-Mfm"/>
+                            <constraint firstItem="f19-Lu-Hmh" firstAttribute="centerY" secondItem="ACp-CH-jkW" secondAttribute="centerY" constant="47.5" id="lFX-Ms-Mfm"/>
                             <constraint firstItem="f19-Lu-Hmh" firstAttribute="centerX" secondItem="ACp-CH-jkW" secondAttribute="centerX" id="nQ7-YJ-rYx"/>
                         </constraints>
                     </view>
@@ -575,7 +575,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

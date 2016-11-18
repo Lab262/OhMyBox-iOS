@@ -33,17 +33,17 @@ promoções!</string>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LQ4-mw-PaI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LUK-UY-qjL"/>
-                    <constraint firstItem="5rX-st-1G3" firstAttribute="centerY" secondItem="XuX-y4-REV" secondAttribute="centerY" id="Rke-J2-kD0"/>
-                    <constraint firstItem="XuX-y4-REV" firstAttribute="top" secondItem="LQ4-mw-PaI" secondAttribute="bottom" constant="-202" id="VCe-Pr-asJ"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="5rX-st-1G3" secondAttribute="trailing" constant="15" id="baT-4y-EZw"/>
-                    <constraint firstItem="5rX-st-1G3" firstAttribute="top" secondItem="LQ4-mw-PaI" secondAttribute="bottom" constant="-73" id="cdw-iE-cUs"/>
-                    <constraint firstItem="XuX-y4-REV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="gGV-8o-mTD"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="XuX-y4-REV" secondAttribute="trailing" constant="8" id="gIQ-K9-h60"/>
-                    <constraint firstItem="ejB-pZ-gl9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="213" id="h4p-kd-yb8"/>
-                    <constraint firstAttribute="topMargin" secondItem="XuX-y4-REV" secondAttribute="top" id="ksP-Ty-EiU"/>
-                    <constraint firstItem="ejB-pZ-gl9" firstAttribute="centerX" secondItem="5rX-st-1G3" secondAttribute="centerX" id="oy5-Nj-3Aw"/>
-                    <constraint firstItem="5rX-st-1G3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="ph6-dA-JMh"/>
+                    <constraint firstItem="XuX-y4-REV" firstAttribute="centerX" secondItem="ejB-pZ-gl9" secondAttribute="centerX" id="2JM-CM-5o7"/>
+                    <constraint firstItem="XuX-y4-REV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="7DM-7E-iPh"/>
+                    <constraint firstItem="XuX-y4-REV" firstAttribute="centerX" secondItem="5rX-st-1G3" secondAttribute="centerX" id="STn-5h-plY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XuX-y4-REV" secondAttribute="trailing" constant="3" id="WKV-kV-Vza"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5rX-st-1G3" secondAttribute="trailing" constant="7.5" id="YOY-yU-Tb4"/>
+                    <constraint firstItem="5rX-st-1G3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9.5" id="do3-hs-ALH"/>
+                    <constraint firstItem="LQ4-mw-PaI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="154" id="gZK-oL-94s"/>
+                    <constraint firstItem="LQ4-mw-PaI" firstAttribute="top" secondItem="5rX-st-1G3" secondAttribute="top" constant="11" id="mhq-rN-Uaa"/>
+                    <constraint firstItem="XuX-y4-REV" firstAttribute="centerX" secondItem="LQ4-mw-PaI" secondAttribute="centerX" constant="2.5" id="oSJ-lx-gn2"/>
+                    <constraint firstItem="XuX-y4-REV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="pv2-9g-ZVE"/>
+                    <constraint firstItem="ejB-pZ-gl9" firstAttribute="top" secondItem="LQ4-mw-PaI" secondAttribute="bottom" constant="17" id="yI9-ql-mO5"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="53.5" y="245.5"/>
