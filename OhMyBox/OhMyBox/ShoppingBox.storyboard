@@ -3,9 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -49,11 +46,10 @@
                                     <outlet property="delegate" destination="Xam-Z7-ox1" id="B7n-Yf-D8S"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-4I-FPn">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-4I-FPn">
+                                <frame key="frameInset" minX="42" minY="20" width="134" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="134" id="jnI-tg-nx2"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="MY BOX">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,11 +58,10 @@
                                     <action selector="changeBox:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="mMq-un-2Im"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-fO-MKU">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-fO-MKU">
+                                <frame key="frameInset" minX="176" minY="20" width="134" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="134" id="hpm-pp-btu"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="PEDIDOS">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -83,7 +78,9 @@
                                     <action selector="changeListOrder:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="vuQ-fr-f0F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-7w-BCo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-7w-BCo">
+                                <frame key="frameInset" minX="341" minY="25" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="close_Button"/>
                                 <connections>
@@ -91,32 +88,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wF-g9-I6s">
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Qv7-MJ-gpE"/>
                                 </constraints>
                                 <state key="normal" title="COMPRAR">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="eLR-xa-wFd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RVK-fO-MKU" firstAttribute="leading" secondItem="ik6-4I-FPn" secondAttribute="trailing" id="0yE-v0-zcQ"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="bottom" secondItem="HrW-v2-eNW" secondAttribute="top" id="Dfq-L9-3ar"/>
-                            <constraint firstAttribute="trailing" secondItem="rTo-EA-wGZ" secondAttribute="trailing" id="HtG-qA-LQJ"/>
-                            <constraint firstItem="RVK-fO-MKU" firstAttribute="firstBaseline" secondItem="ik6-4I-FPn" secondAttribute="baseline" id="Hvz-Jh-BvN"/>
-                            <constraint firstItem="nBY-7w-BCo" firstAttribute="centerY" secondItem="RVK-fO-MKU" secondAttribute="centerY" id="Itx-2n-0gB"/>
-                            <constraint firstItem="RVK-fO-MKU" firstAttribute="top" secondItem="ik6-4I-FPn" secondAttribute="top" id="Jgk-eK-VzI"/>
-                            <constraint firstItem="6wF-g9-I6s" firstAttribute="trailing" secondItem="rTo-EA-wGZ" secondAttribute="trailing" id="Prd-Py-N61"/>
-                            <constraint firstItem="RVK-fO-MKU" firstAttribute="baseline" secondItem="ik6-4I-FPn" secondAttribute="firstBaseline" id="RM4-Uf-Inw"/>
-                            <constraint firstItem="ik6-4I-FPn" firstAttribute="leading" secondItem="76r-qQ-ZOB" secondAttribute="leadingMargin" constant="26" id="cu9-gk-eFH"/>
-                            <constraint firstItem="nBY-7w-BCo" firstAttribute="leading" secondItem="RVK-fO-MKU" secondAttribute="trailing" constant="3" id="hqa-x8-0ua"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="leading" secondItem="76r-qQ-ZOB" secondAttribute="leading" id="i2A-By-t5H"/>
-                            <constraint firstItem="HrW-v2-eNW" firstAttribute="top" secondItem="6wF-g9-I6s" secondAttribute="bottom" constant="23" id="jb1-Wq-P5Q"/>
-                            <constraint firstItem="RVK-fO-MKU" firstAttribute="top" secondItem="Icp-yf-q1B" secondAttribute="bottom" id="qtD-hD-MxP"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="top" secondItem="RVK-fO-MKU" secondAttribute="bottom" constant="47" id="voO-G4-nuF"/>
-                            <constraint firstItem="6wF-g9-I6s" firstAttribute="leading" secondItem="rTo-EA-wGZ" secondAttribute="leading" id="xES-zc-S9A"/>
+                            <constraint firstItem="6wF-g9-I6s" firstAttribute="trailing" secondItem="rTo-EA-wGZ" secondAttribute="trailing" id="4xd-hV-U3N"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="7vO-TG-MgE"/>
+                            <constraint firstItem="HrW-v2-eNW" firstAttribute="top" secondItem="6wF-g9-I6s" secondAttribute="bottom" id="jb1-Wq-P5Q"/>
+                            <constraint firstItem="6wF-g9-I6s" firstAttribute="leading" secondItem="rTo-EA-wGZ" secondAttribute="leading" id="oag-Yl-DcW"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="19" id="rmo-kV-ljm"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="90.5" id="rvy-1o-rQ5"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="width" secondItem="76r-qQ-ZOB" secondAttribute="width" id="xKo-br-wjI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3fQ-Qu-pij"/>
