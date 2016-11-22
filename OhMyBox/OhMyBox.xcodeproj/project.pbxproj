@@ -40,6 +40,8 @@
 		2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */; };
 		2F2C8E201DDE310B0002BB87 /* imagePromo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */; };
+		2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */; };
+		2F3359511DE38AE400540116 /* StatusOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */; };
 		2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4649691DB93E5E0021516F /* fashion-person.png */; };
 		2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46496B1DB942840021516F /* SegmentTableViewCell.swift */; };
 		2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */; };
@@ -193,6 +195,8 @@
 		2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OhMyBox.entitlements; sourceTree = "<group>"; };
 		2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaType.swift; sourceTree = "<group>"; };
 		2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePromo.png; sourceTree = "<group>"; };
+		2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusOrderTableViewCell.swift; sourceTree = "<group>"; };
+		2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusOrderTableViewCell.xib; sourceTree = "<group>"; };
 		2F4649691DB93E5E0021516F /* fashion-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fashion-person.png"; sourceTree = "<group>"; };
 		2F46496B1DB942840021516F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionTableViewCell.swift; sourceTree = "<group>"; };
@@ -465,6 +469,8 @@
 				2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */,
 				2F70E8321DC969EC000AB03B /* OrderTableViewCell.swift */,
 				2F70E8331DC969EC000AB03B /* OrderTableViewCell.xib */,
+				2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */,
+				2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */,
 			);
 			name = CellShoppingBox;
 			sourceTree = "<group>";
@@ -932,6 +938,7 @@
 				D457D7301DC3F60900443B63 /* TagView2.xib in Resources */,
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
 				2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */,
+				2F3359511DE38AE400540116 /* StatusOrderTableViewCell.xib in Resources */,
 				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
@@ -1141,6 +1148,7 @@
 				D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */,
 				2F70E83C1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
+				2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */,
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */,

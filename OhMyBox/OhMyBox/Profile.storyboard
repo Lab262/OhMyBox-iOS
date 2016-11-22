@@ -161,7 +161,7 @@
                     <tabBarItem key="tabBarItem" title="perfil" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9V-g4-n4P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z9V-g4-n4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

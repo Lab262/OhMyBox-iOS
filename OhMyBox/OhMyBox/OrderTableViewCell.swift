@@ -10,8 +10,9 @@ import UIKit
 
 class OrderTableViewCell: UITableViewCell {
     
-      static let identifier = "orderCell"
+    static let identifier = "orderCell"
 
+    @IBOutlet weak var lineSectionView: UIView!
     @IBOutlet weak var orderImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -23,8 +24,7 @@ class OrderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.bgOrderView.layer.borderWidth = 1
-        self.bgOrderView.layer.borderColor = UIColor.black.cgColor
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

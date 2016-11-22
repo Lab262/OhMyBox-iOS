@@ -27,13 +27,7 @@ class HomeViewController: UIViewController {
          let rightboxBarButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
         
         let rightSearchBarButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
-        
-        ///let rightSearchBarButtonItem  = UIBarButtonItem(title: "box_button", style: UIBarButtonItemStyle.plain, target: self, action: #selector(actionGoCart(_:)))
-        
-         //  var rightSearchBarButtonItem:UIBarButtonItem = UIBarButtonItem(title: "searchIcon", style: UIBarButtonItemStyle.plain, target: self, action: #selector(searchProducts(_:)))
-        
-        //  self.navigationItem.setRightBarButtonItems([rightBoxBarButtonItem,rightSearchBarButtonItem], animated: true)
-        navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
+             navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
         
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
@@ -309,9 +303,14 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
-        //self.title = "OHMYBOX"
+       
         self.viewSearch?.isHidden = true
-       self.navigationController?.isNavigationBarHidden = false
+      // self.navigationController?.isNavigationBarHidden = false
+        //  self.navigationController?.isToolbarHidden = false
+        self.navigationItem.title = "OH-MY-BOX"
+        self.navigationController?.navigationItem.title = "OH-MY-BOX"
+        self.searchController.searchBar.alpha = 0
+        self.searchController.isActive = false
 
     }
     
@@ -324,7 +323,7 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
         
         //    self.title = "OHMYBOX"
          self.viewSearch?.isHidden = true
-         }
+    }
 }
 
 

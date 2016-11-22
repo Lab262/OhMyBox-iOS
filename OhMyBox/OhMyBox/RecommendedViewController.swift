@@ -29,7 +29,7 @@ class RecommendedViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: WishTableViewCell.identifier, for: indexPath) as! WishTableViewCell
         cell.selectionStyle = .none
-       cell.productImage.image = UIImage(named:"dressImage")
+       cell.productImage.image = UIImage(named:"jacketImage")
         return cell
     }
     
