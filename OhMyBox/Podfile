@@ -8,7 +8,7 @@ target 'OhMyBox' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'BGTableViewRowActionWithImage'
-    pod 'Alamofire', '~> 4.0'
+    pod 'FalconFrameworkIOSSDK', :git => 'https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git'
 
 # Pods for OhMyBox
 
