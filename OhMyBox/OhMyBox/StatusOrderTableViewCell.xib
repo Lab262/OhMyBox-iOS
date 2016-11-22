@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +15,9 @@
                 <frame key="frameInset" width="427" height="286"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZl-7G-uwA">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZl-7G-uwA">
+                        <frame key="frameInset" minX="8" minY="165" width="359" height="68"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1A-2a-NuF">
                                 <frame key="frameInset" minX="8" minY="24" width="70" height="24"/>
@@ -35,11 +35,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.45490196078431372" green="0.33725490196078434" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="SZl-7G-uwA" secondAttribute="height" multiplier="359:68" id="T5a-xP-wjQ"/>
-                        </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTs-w2-1ex">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTs-w2-1ex">
+                        <frame key="frameInset" minX="8" minY="54" width="359" height="112"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pedido feito em:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DH-RB-eKW">
                                 <frame key="frameInset" minX="8" minY="8" width="260" height="21"/>
@@ -57,19 +56,8 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.95686274509803915" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="XTs-w2-1ex" secondAttribute="height" multiplier="359:112" id="ymn-8G-Lub"/>
-                        </constraints>
                     </view>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="XTs-w2-1ex" secondAttribute="leading" id="FKM-DP-ssV"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="XTs-w2-1ex" secondAttribute="trailing" constant="52" id="Htg-zL-pB8"/>
-                    <constraint firstItem="XTs-w2-1ex" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="46" id="c1v-K1-M9k"/>
-                    <constraint firstItem="XTs-w2-1ex" firstAttribute="leading" secondItem="SZl-7G-uwA" secondAttribute="leading" id="c7v-F8-Gbc"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="SZl-7G-uwA" secondAttribute="bottom" constant="45" id="imO-Ah-tea"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="SZl-7G-uwA" secondAttribute="trailing" constant="52" id="q85-G7-0ZX"/>
-                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dataTime" destination="zYb-1N-M6O" id="Bh5-DK-vmA"/>

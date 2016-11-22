@@ -173,9 +173,9 @@ extension ShoppingBoxViewController: UITableViewDelegate {
         if (self.isActiveBox == true){
             return 150
         }else if (self.productsOrdersStorage.count+1==indexPath.row){
-            return 150
+            return 180
         }else if (self.productsMail.count+1==indexPath.row){
-            return 150
+            return 180
         }
         
         return 200
