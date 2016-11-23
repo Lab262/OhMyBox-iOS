@@ -41,6 +41,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashion-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="onA-fz-x7F">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="223" id="R67-Id-w1U"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="parallaxIntesity">
                                                             <integer key="value" value="20"/>
@@ -67,11 +70,13 @@
                                                 <constraint firstItem="onA-fz-x7F" firstAttribute="top" secondItem="Fhe-lp-liu" secondAttribute="top" id="Qy9-91-7cc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="u39-WW-c4o" secondAttribute="bottom" constant="6" id="Shy-n7-XY2"/>
                                                 <constraint firstItem="u39-WW-c4o" firstAttribute="centerY" secondItem="iDH-VS-83C" secondAttribute="centerY" id="Xwa-1B-P2c"/>
+                                                <constraint firstAttribute="bottom" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="41" id="kOe-Mz-YSd"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="33" id="zgs-52-cMF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameProfileLabel" destination="iDH-VS-83C" id="5gf-CJ-NpW"/>
+                                            <outlet property="parallaxConstraint" destination="R67-Id-w1U" id="Ai1-bP-2bf"/>
                                             <outlet property="photoProfileImage" destination="onA-fz-x7F" id="H4l-jf-M0z"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,15 +88,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-ys-22w">
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
                                                     <state key="normal" title="Meus dados" backgroundImage="profile_mydata_button">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                     <state key="normal" title="Sobre a box" backgroundImage="profile_about_button">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
