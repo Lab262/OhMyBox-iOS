@@ -12,20 +12,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="showCaseCell" id="gTV-IL-0wX" customClass="ShowCaseCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="409"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="409"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWoman" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-kD-cNV">
-                        <rect key="frame" x="12" y="0.0" width="344" height="309"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWoman" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-kD-cNV">
+                        <rect key="frame" x="12" y="0.0" width="343" height="409"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Axe-kD-cNV" secondAttribute="bottom" constant="61" id="Kto-6k-jik"/>
-                <constraint firstAttribute="trailing" secondItem="Axe-kD-cNV" secondAttribute="trailing" constant="19" id="Qru-O1-ndX"/>
+                <constraint firstAttribute="bottom" secondItem="Axe-kD-cNV" secondAttribute="bottom" id="Kto-6k-jik"/>
+                <constraint firstAttribute="trailing" secondItem="Axe-kD-cNV" secondAttribute="trailing" constant="20" id="Qru-O1-ndX"/>
                 <constraint firstItem="Axe-kD-cNV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aXD-Ct-sCf"/>
                 <constraint firstItem="Axe-kD-cNV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="lHF-q2-OrR"/>
             </constraints>
@@ -33,7 +33,7 @@
             <connections>
                 <outlet property="showCaseImage" destination="Axe-kD-cNV" id="x3i-tV-JOa"/>
             </connections>
-            <point key="canvasLocation" x="18.5" y="223.5"/>
+            <point key="canvasLocation" x="18.5" y="223"/>
         </collectionViewCell>
     </objects>
     <resources>

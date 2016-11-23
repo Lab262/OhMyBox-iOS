@@ -22,7 +22,6 @@ class RecommendedViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "WishTableViewCell", bundle: nil), forCellReuseIdentifier: WishTableViewCell.identifier)
         
-        
     }
     
     func generateProducteCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,21 +47,17 @@ extension RecommendedViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-              return generateHeaderCell(tableView, cellForRowAt: indexPath)
-    
+            return generateHeaderCell(tableView, cellForRowAt: indexPath)
         default:
             return generateProducteCell(tableView, cellForRowAt: indexPath)
         }
       
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 5
     }
-    
-    
     
 }
 
@@ -71,7 +66,6 @@ extension RecommendedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

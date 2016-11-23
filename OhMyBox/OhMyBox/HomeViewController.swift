@@ -180,7 +180,7 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
                 
-        cell.tagType = 2
+        cell.tagType = 5
         cell.clothingtArray = self.clotingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self
@@ -224,7 +224,7 @@ extension HomeViewController: UITableViewDelegate {
         
         switch indexPath.section {
             case 0:
-                return 320
+                return 419
             case 1:
                 return 352
             case 2:

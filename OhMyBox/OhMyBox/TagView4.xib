@@ -28,7 +28,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Neon Go Coleção de duas linhas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYK-w1-5dY">
-                    <rect key="frame" x="23" y="18.5" width="238" height="53.5"/>
+                    <rect key="frame" x="23" y="18" width="238" height="53.5"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="21"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -38,9 +38,9 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="9MO-ao-VG4" secondAttribute="bottom" constant="12" id="2Hw-nO-Y51"/>
                 <constraint firstItem="9MO-ao-VG4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="DZZ-5L-J2X"/>
+                <constraint firstAttribute="trailing" secondItem="zYK-w1-5dY" secondAttribute="trailing" constant="23" id="HOi-wy-rz8"/>
                 <constraint firstItem="zYK-w1-5dY" firstAttribute="centerY" secondItem="9MO-ao-VG4" secondAttribute="centerY" id="W9N-Ti-bYX"/>
                 <constraint firstItem="9MO-ao-VG4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="eDx-Uu-0Xt"/>
-                <constraint firstItem="zYK-w1-5dY" firstAttribute="leading" secondItem="9MO-ao-VG4" secondAttribute="trailing" constant="-251" id="hRx-Qf-6pb"/>
                 <constraint firstItem="zYK-w1-5dY" firstAttribute="centerX" secondItem="9MO-ao-VG4" secondAttribute="centerX" id="lFX-nZ-lL4"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

@@ -64,6 +64,11 @@
 		<string>Axis Extrabold.otf</string>
 		<string>Muli-Light.ttf</string>
 		<string>Muli-Regular.ttf</string>
+        <string>Poppins-Light.ttf</string>
+        <string>Poppins-Bold.ttf</string>
+        <string>Poppins-Medium.ttf</string>
+        <string>Poppins-Regular.ttf</string>
+        <string>Poppins-SemiBold.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
