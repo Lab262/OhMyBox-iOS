@@ -35,6 +35,7 @@
 		2F2999A71DE54ECA00D52203 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999A21DE54ECA00D52203 /* Poppins-Medium.ttf */; };
 		2F2999A81DE54ECA00D52203 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999A31DE54ECA00D52203 /* Poppins-Regular.ttf */; };
 		2F2999A91DE54ECA00D52203 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999A41DE54ECA00D52203 /* Poppins-SemiBold.ttf */; };
+		2F2999AB1DE56F7300D52203 /* wish_default_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999AA1DE56F7300D52203 /* wish_default_image.png */; };
 		2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; };
 		2F2C8E101DDD02AE0002BB87 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F2C8E111DDD02AE0002BB87 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; };
@@ -194,6 +195,7 @@
 		2F2999A21DE54ECA00D52203 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		2F2999A31DE54ECA00D52203 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		2F2999A41DE54ECA00D52203 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		2F2999AA1DE56F7300D52203 /* wish_default_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_default_image.png; sourceTree = "<group>"; };
 		2F2C8DFF1DDCFFC40002BB87 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/Bolts.framework"; sourceTree = "<group>"; };
 		2F2C8E001DDCFFC40002BB87 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		2F2C8E011DDCFFC40002BB87 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Downloads/FacebookSDKs-iOS-4.17.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
@@ -775,6 +777,7 @@
 			children = (
 				2F4649691DB93E5E0021516F /* fashion-person.png */,
 				2F5DE1CF1DC2ED3300822826 /* storeDefault.png */,
+				2F2999AA1DE56F7300D52203 /* wish_default_image.png */,
 				2F4896E91DB7486700EADFFE /* defaultGloes.png */,
 				D4B72A2B1DC8342B004335E4 /* brand2.png */,
 				2F0777431DBD368E003C124F /* dressImage.png */,
@@ -991,6 +994,7 @@
 				2F5DE1CE1DC2966D00822826 /* ContentStoreTableViewCell.xib in Resources */,
 				2F70E8021DC7B985000AB03B /* ShoppingBox.storyboard in Resources */,
 				2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */,
+				2F2999AB1DE56F7300D52203 /* wish_default_image.png in Resources */,
 				2F0777441DBD368E003C124F /* dressImage.png in Resources */,
 				2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */,
 				2F70E83D1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.xib in Resources */,
