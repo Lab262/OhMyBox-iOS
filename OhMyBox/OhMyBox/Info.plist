@@ -32,27 +32,27 @@
 			</dict>
 		</array>
 	</dict>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb682409095270276</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>682409095270276</string>
-    <key>FacebookDisplayName</key>
-    <string>OhMyBox</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-    <key>NSAppTransportSecurity</key>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb682409095270276</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>682409095270276</string>
+	<key>FacebookDisplayName</key>
+	<string>OhMyBox</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
@@ -64,6 +64,11 @@
 		<string>Axis Extrabold.otf</string>
 		<string>Muli-Light.ttf</string>
 		<string>Muli-Regular.ttf</string>
+		<string>Poppins-Bold</string>
+		<string>Poppins-Light</string>
+		<string>Poppins-Medium</string>
+		<string>Poppins-Regular</string>
+		<string>Poppins-SemiBold</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
