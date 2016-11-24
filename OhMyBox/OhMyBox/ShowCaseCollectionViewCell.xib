@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6GS-G1-Sn6">
-                        <rect key="frame" x="8" y="0.0" width="367" height="452"/>
+                        <rect key="frame" x="8" y="0.0" width="375" height="452"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWoman" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-kD-cNV">
                                 <rect key="frame" x="0.0" y="0.0" width="367" height="452"/>
@@ -32,10 +32,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Axe-kD-cNV" firstAttribute="centerX" secondItem="6GS-G1-Sn6" secondAttribute="centerX" id="Pgl-Jg-erx"/>
+                            <constraint firstItem="Axe-kD-cNV" firstAttribute="centerX" secondItem="6GS-G1-Sn6" secondAttribute="centerX" constant="-4" id="Pgl-Jg-erx"/>
                             <constraint firstItem="Axe-kD-cNV" firstAttribute="height" secondItem="6GS-G1-Sn6" secondAttribute="height" id="VNq-pI-ZLK"/>
                             <constraint firstItem="Axe-kD-cNV" firstAttribute="centerY" secondItem="6GS-G1-Sn6" secondAttribute="centerY" id="Xbc-fF-Mly"/>
-                            <constraint firstItem="Axe-kD-cNV" firstAttribute="width" secondItem="6GS-G1-Sn6" secondAttribute="width" id="bBg-eM-RH9"/>
+                            <constraint firstItem="Axe-kD-cNV" firstAttribute="width" secondItem="6GS-G1-Sn6" secondAttribute="width" constant="-8" id="bBg-eM-RH9"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -47,7 +47,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="6GS-G1-Sn6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="YRB-kY-DDX"/>
-                <constraint firstAttribute="trailing" secondItem="6GS-G1-Sn6" secondAttribute="trailing" id="hyB-O0-O7m"/>
+                <constraint firstAttribute="trailing" secondItem="6GS-G1-Sn6" secondAttribute="trailing" constant="-8" id="hyB-O0-O7m"/>
                 <constraint firstItem="6GS-G1-Sn6" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.9" id="mbh-2f-paP"/>
                 <constraint firstItem="6GS-G1-Sn6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yp5-36-5Ep"/>
             </constraints>

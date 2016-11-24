@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="502" id="F40-Nj-Tun" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="502" id="F40-Nj-Tun" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="502"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F40-Nj-Tun" id="KxU-BM-LAY">
@@ -82,21 +82,18 @@
                                             <outlet property="collectionView" destination="1zj-LT-FPf" id="bES-WV-g6G"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="354" id="wq2-8x-Awp" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="530" width="375" height="354"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="productCell" rowHeight="502" id="wq2-8x-Awp" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="530" width="375" height="502"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wq2-8x-Awp" id="74D-S8-Ulc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-Nu-9bf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="352"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-Nu-9bf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="352" id="8fN-Jd-fLj"/>
-                                                    </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="xer-E3-jth">
-                                                        <size key="itemSize" width="370" height="352"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="xer-E3-jth" customClass="CenterCellCollectionViewFlowLayout" customModule="OhMyBox" customModuleProvider="target">
+                                                        <size key="itemSize" width="370" height="502"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -106,7 +103,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="RGM-Nu-9bf" secondAttribute="trailing" id="Lxb-Rp-g6G"/>
-                                                <constraint firstAttribute="bottom" secondItem="RGM-Nu-9bf" secondAttribute="bottom" constant="2" id="WxP-RC-Pig"/>
+                                                <constraint firstAttribute="bottom" secondItem="RGM-Nu-9bf" secondAttribute="bottom" id="WxP-RC-Pig"/>
                                                 <constraint firstItem="RGM-Nu-9bf" firstAttribute="leading" secondItem="74D-S8-Ulc" secondAttribute="leading" id="e8q-LX-Bxb"/>
                                                 <constraint firstItem="RGM-Nu-9bf" firstAttribute="top" secondItem="74D-S8-Ulc" secondAttribute="top" id="lUh-Hl-oZb"/>
                                             </constraints>

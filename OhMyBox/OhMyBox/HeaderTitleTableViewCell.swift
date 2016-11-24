@@ -10,6 +10,10 @@ import UIKit
 
 class HeaderTitleTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var widthIconConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var heightIconConstraint: NSLayoutConstraint!
+    
     
     static let identifier = "headerCell"
     

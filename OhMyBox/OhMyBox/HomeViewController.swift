@@ -225,15 +225,20 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {
-            case 0:
-                
-                let width = self.view.bounds.size.width * 0.85
+            case 0, 1:
+                let width = self.view.bounds.size.width * 0.94
                 let height = width*1.3
                 return height
-            case 1:
-                return 352
             case 2:
-                return 240
+                
+                let width = self.view.bounds.size.width * 0.66
+                let height = width*1.6
+                
+                print ("ALTURA CELL: \(height)")
+                
+                return height
+
+                //return 396
             case 3:
                 return 50
             default:
@@ -259,7 +264,9 @@ extension HomeViewController: UITableViewDelegate {
             let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
             header.firstTitleLineLabel.text = "OLHA AS"
             header.secondTitleLineLabel.text = "NOVIDADES"
-            header.iconImage.image = UIImage(named:"textureSectionImage")
+            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+            header.widthIconConstraint.constant = 35
+            header.heightIconConstraint.constant = 21
             
             return header
             
@@ -277,9 +284,10 @@ extension HomeViewController: UITableViewDelegate {
         
         if section == 0 {
             return 77
-        } else {
+        } else if section == 1{
             return 70
-            
+        } else {
+            return 0.1
         }
     }
   

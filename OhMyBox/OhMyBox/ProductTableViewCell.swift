@@ -30,6 +30,7 @@ class ProductTableViewCell: UITableViewCell {
         self.registerNibs()
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
+        self.collectionView.setScaledDesginParam(scaledPattern: .horizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 0.8)
         
     }
 
@@ -71,5 +72,35 @@ extension ProductTableViewCell: UICollectionViewDelegate {
 }
 
 extension ProductTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            
+        return 0.1
+    
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            
+        return 0.1
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            
+        let width = self.bounds.size.width * 0.94
+        let height = width*1.2
+        return CGSize(width: width, height: height)
+            
+    }
+        
+}
 
+extension ProductTableViewCell: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        collectionView.scaledVisibleCells()
+    }
+    
+    
+    
 }

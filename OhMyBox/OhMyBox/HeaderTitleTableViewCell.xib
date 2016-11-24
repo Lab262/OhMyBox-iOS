@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
@@ -10,8 +13,8 @@
         <array key="Axis Extrabold.otf">
             <string>AXIS-ExtraBold</string>
         </array>
-        <array key="Muli-Light.ttf">
-            <string>Muli-Light</string>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
     </customFonts>
     <objects>
@@ -25,60 +28,68 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendados " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoA-Ho-RJj">
-                        <rect key="frame" x="14" y="8" width="265" height="26"/>
+                        <rect key="frame" x="16" y="6" width="204.5" height="26.5"/>
                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para Você " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUQ-EU-3Um">
-                        <rect key="frame" x="50" y="39" width="140" height="26"/>
+                        <rect key="frame" x="52" y="33" width="140" height="26.5"/>
                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textureImage" translatesAutoresizingMaskIntoConstraints="NO" id="pdL-R8-HcT">
-                        <rect key="frame" x="14" y="41.5" width="28" height="22"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHeaderType6_image" translatesAutoresizingMaskIntoConstraints="NO" id="pdL-R8-HcT">
+                        <rect key="frame" x="16" y="33.5" width="33" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="28" id="3fd-2f-TBe"/>
-                            <constraint firstAttribute="height" constant="22" id="ydn-dW-QGB"/>
+                            <constraint firstAttribute="width" constant="33" id="Exl-NE-5n4"/>
+                            <constraint firstAttribute="height" constant="30" id="xB5-rU-LFD"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-zm-7DA">
-                        <rect key="frame" x="291" y="32" width="64" height="32"/>
-                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="16"/>
-                        <state key="normal" title="Ver tudo">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-zm-7DA">
+                        <rect key="frame" x="269" y="43.5" width="86" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="86" id="FhG-XZ-B1m"/>
+                            <constraint firstAttribute="height" constant="24" id="ViI-ai-g5n"/>
+                        </constraints>
+                        <state key="normal" image="container_button">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ver tudo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYn-OW-bRz">
+                        <rect key="frame" x="284" y="45.5" width="56.5" height="21"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                        <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="pdL-R8-HcT" firstAttribute="centerY" secondItem="rUQ-EU-3Um" secondAttribute="centerY" constant="2.5" id="1UL-25-DCE"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="rUQ-EU-3Um" secondAttribute="bottom" constant="9.5" id="DEu-gu-ccB"/>
-                    <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="FlQ-GN-Isc"/>
-                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="centerY" secondItem="wGS-zm-7DA" secondAttribute="centerY" id="GP7-gp-ONI"/>
-                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="TPP-ZZ-T3Y"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="30" id="TRN-pK-uZf"/>
-                    <constraint firstItem="pdL-R8-HcT" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="1" id="Uj4-zH-r89"/>
+                    <constraint firstItem="yYn-OW-bRz" firstAttribute="centerX" secondItem="wGS-zm-7DA" secondAttribute="centerX" id="1wZ-ri-hSh"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="top" secondItem="pdL-R8-HcT" secondAttribute="top" id="2eh-Vs-zx0"/>
+                    <constraint firstItem="yYn-OW-bRz" firstAttribute="centerY" secondItem="wGS-zm-7DA" secondAttribute="centerY" id="7XN-QO-GlV"/>
+                    <constraint firstItem="pdL-R8-HcT" firstAttribute="leading" secondItem="hoA-Ho-RJj" secondAttribute="leading" id="Aid-Tg-Ldc"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="pdL-R8-HcT" secondAttribute="trailing" constant="3" id="JWs-kc-anM"/>
                     <constraint firstAttribute="bottomMargin" secondItem="pdL-R8-HcT" secondAttribute="bottom" constant="5" id="XFm-BC-cZw"/>
-                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="pdL-R8-HcT" secondAttribute="trailing" constant="-1" id="bSG-AS-VSK"/>
+                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="ZZr-o8-FP7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wGS-zm-7DA" secondAttribute="trailing" constant="12" id="dwL-4n-DRW"/>
-                    <constraint firstItem="hoA-Ho-RJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="nQe-ud-t6d"/>
-                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="0.5" id="sxT-6T-bmj"/>
-                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="60" id="y4k-mA-U7o"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wGS-zm-7DA" secondAttribute="bottom" constant="5.5" id="zdq-yB-kI7"/>
+                    <constraint firstItem="rUQ-EU-3Um" firstAttribute="top" secondItem="hoA-Ho-RJj" secondAttribute="bottom" constant="0.5" id="t4G-ut-iGL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wGS-zm-7DA" secondAttribute="bottom" constant="1" id="zdq-yB-kI7"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="firstTitleLineLabel" destination="hoA-Ho-RJj" id="7ZH-O1-W30"/>
+                <outlet property="heightIconConstraint" destination="xB5-rU-LFD" id="kwl-dp-Kev"/>
                 <outlet property="iconImage" destination="pdL-R8-HcT" id="amZ-dj-wjM"/>
                 <outlet property="secondTitleLineLabel" destination="rUQ-EU-3Um" id="Zar-8p-OxQ"/>
                 <outlet property="showAllButton" destination="wGS-zm-7DA" id="rwc-p6-ycC"/>
+                <outlet property="widthIconConstraint" destination="Exl-NE-5n4" id="WYw-16-tTz"/>
             </connections>
             <point key="canvasLocation" x="113.5" y="182.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="textureImage" width="30" height="22"/>
+        <image name="container_button" width="86" height="24"/>
+        <image name="iconHeaderType6_image" width="33" height="30"/>
     </resources>
 </document>
