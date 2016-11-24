@@ -19,14 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
               Fabric.with([Crashlytics.self])
         var initialViewController: UIViewController? = nil
+        initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
+
         
-        
-        if (Defaults.sharedInstance.isLogged)!{
-               initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
-        }else {
-            
-            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
-        }
+//        if (Defaults.sharedInstance.isLogged)!{
+//               initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
+//        }else {
+//            
+//            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
+//        }
         
         self.window!.rootViewController = initialViewController
         self.setupBarsAppearance()

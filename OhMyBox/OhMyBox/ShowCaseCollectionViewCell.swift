@@ -12,9 +12,10 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "showCaseCell"
     var followingClothes = false
+    var tagView: TagView5?
     var tagType: Int? {
         didSet {
-            self.initializeTagView()
+           // self.initializeTagView()
         }
     }
     @IBOutlet weak var showCaseImage: UIImageView!
@@ -27,6 +28,7 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
     
     func initializeTagView(){
         
+    
         if tagType! == 0 {
             let tagView = TagView.instanceFromNib()
             tagView.center = CGPoint(x: self.frame.width/2-45, y: self.frame.height/2+125)
@@ -49,11 +51,13 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
             tagView4.collectionBrandName.text = "Neon Go"
             self.addSubview(tagView4)
         } else {
-            let tagView5 = TagView5.instanceFromNib() as! TagView5
-            tagView5.center = CGPoint(x: self.frame.width/2.55, y: self.frame.height/1.25)
-            tagView5.nameTagLabel.text = "VERÃO DE SAIAS"
+            self.tagView = TagView5.instanceFromNib() as? TagView5
+            self.tagView?.center = CGPoint(x: self.frame.width/2.45, y: self.frame.height/1.05)
+            self.tagView?.nameTagLabel.text = "VERÃO DE SAIAS"
     
-            self.addSubview(tagView5)
+            self.addSubview(self.tagView!)
         }
     }
+    
+    
 }

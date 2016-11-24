@@ -33,6 +33,8 @@ class HomeViewController: UIViewController {
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
         self.clotingArray?.append("cloting Three")
+        self.clotingArray?.append("cloting Four")
+        self.clotingArray?.append("cloting Five")
      //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
     
@@ -224,7 +226,10 @@ extension HomeViewController: UITableViewDelegate {
         
         switch indexPath.section {
             case 0:
-                return 419
+                
+                let width = self.view.bounds.size.width * 0.85
+                let height = width*1.3
+                return height
             case 1:
                 return 352
             case 2:

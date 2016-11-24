@@ -107,6 +107,8 @@
 		D41E8FE21DE4FAD600BA3266 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDD1DE4FAD600BA3266 /* Poppins-Medium.ttf */; };
 		D41E8FE31DE4FAD600BA3266 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDE1DE4FAD600BA3266 /* Poppins-Regular.ttf */; };
 		D41E8FE41DE4FAD600BA3266 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDF1DE4FAD600BA3266 /* Poppins-SemiBold.ttf */; };
+		D437F6821DE612290016E89E /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6801DE612290016E89E /* ScaledVisibleCellsCollectionView.swift */; };
+		D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */; };
 		D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */; };
 		D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */; };
 		D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D44457F21DC7C2B200F488FE /* jaguar_brand.png */; };
@@ -278,6 +280,9 @@
 		D41E8FDD1DE4FAD600BA3266 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		D41E8FDE1DE4FAD600BA3266 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D41E8FDF1DE4FAD600BA3266 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		D437F67F1DE612290016E89E /* ScaledVisibleCellsCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaledVisibleCellsCollectionView.h; sourceTree = "<group>"; };
+		D437F6801DE612290016E89E /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
+		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseBrandTableViewCell.xib; sourceTree = "<group>"; };
 		D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseBrandTableViewCell.swift; sourceTree = "<group>"; };
 		D44457F21DC7C2B200F488FE /* jaguar_brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaguar_brand.png; sourceTree = "<group>"; };
@@ -548,6 +553,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */,
 				2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */,
 				2F164F611DD64ECF00ED72DA /* Defaults */,
 				D4E7E08C1DD4DE0200F1DE52 /* User */,
@@ -773,6 +779,16 @@
 			name = Poppins;
 			sourceTree = "<group>";
 		};
+		D437F6811DE612290016E89E /* ScaledVisibleCellsCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D437F67F1DE612290016E89E /* ScaledVisibleCellsCollectionView.h */,
+				D437F6801DE612290016E89E /* ScaledVisibleCellsCollectionView.swift */,
+			);
+			name = ScaledVisibleCellsCollectionView;
+			path = "../../../../../../../Downloads/ScaledVisibleCellsCollectionView-master/ScaledVisibleCellsCollectionView";
+			sourceTree = "<group>";
+		};
 		D4C0D6511DB6AA00007C3113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -812,6 +828,7 @@
 				D4C0D6621DB6B32E007C3113 /* TextFieldExtension.swift */,
 				D4C0D6631DB6B32E007C3113 /* UIColorExtension.swift */,
 				D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */,
+				D437F6811DE612290016E89E /* ScaledVisibleCellsCollectionView */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1158,6 +1175,7 @@
 				A4F89AFF1DA806C900949A35 /* ViewController.swift in Sources */,
 				D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */,
 				D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */,
+				D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				2F225D001DBEFEE7009E4566 /* AttributesTableViewCell.swift in Sources */,
 				D4C0D6651DB6B32E007C3113 /* UIView+Animations.swift in Sources */,
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
@@ -1168,6 +1186,7 @@
 				2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
 				D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */,
+				D437F6821DE612290016E89E /* ScaledVisibleCellsCollectionView.swift in Sources */,
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
 				D4B72A311DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
