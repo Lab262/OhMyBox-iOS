@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -106,8 +106,8 @@
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="7vO-TG-MgE"/>
                             <constraint firstItem="HrW-v2-eNW" firstAttribute="top" secondItem="6wF-g9-I6s" secondAttribute="bottom" id="jb1-Wq-P5Q"/>
                             <constraint firstItem="6wF-g9-I6s" firstAttribute="leading" secondItem="rTo-EA-wGZ" secondAttribute="leading" id="oag-Yl-DcW"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="19" id="rmo-kV-ljm"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="90.5" id="rvy-1o-rQ5"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="-81" id="rmo-kV-ljm"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="40.5" id="rvy-1o-rQ5"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="width" secondItem="76r-qQ-ZOB" secondAttribute="width" id="xKo-br-wjI"/>
                         </constraints>
                     </view>

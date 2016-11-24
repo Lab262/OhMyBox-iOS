@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -12,6 +12,9 @@
         </array>
         <array key="Muli-Regular.ttf">
             <string>Muli</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -38,20 +41,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashion-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="onA-fz-x7F">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="223" id="R67-Id-w1U"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="parallaxIntesity">
                                                             <integer key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contentName" translatesAutoresizingMaskIntoConstraints="NO" id="u39-WW-c4o">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contente_profile" translatesAutoresizingMaskIntoConstraints="NO" id="u39-WW-c4o">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="61" id="T8T-9G-lWa"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARIA BETANIA " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-VS-83C">
                                                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -64,11 +70,13 @@
                                                 <constraint firstItem="onA-fz-x7F" firstAttribute="top" secondItem="Fhe-lp-liu" secondAttribute="top" id="Qy9-91-7cc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="u39-WW-c4o" secondAttribute="bottom" constant="6" id="Shy-n7-XY2"/>
                                                 <constraint firstItem="u39-WW-c4o" firstAttribute="centerY" secondItem="iDH-VS-83C" secondAttribute="centerY" id="Xwa-1B-P2c"/>
+                                                <constraint firstAttribute="bottom" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="41" id="kOe-Mz-YSd"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="33" id="zgs-52-cMF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameProfileLabel" destination="iDH-VS-83C" id="5gf-CJ-NpW"/>
+                                            <outlet property="parallaxConstraint" destination="R67-Id-w1U" id="Ai1-bP-2bf"/>
                                             <outlet property="photoProfileImage" destination="onA-fz-x7F" id="H4l-jf-M0z"/>
                                         </connections>
                                     </tableViewCell>
@@ -80,15 +88,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-ys-22w">
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
-                                                    <state key="normal" title="Meus dados" backgroundImage="buttonSegmentON">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
+                                                    <state key="normal" title="Meus dados" backgroundImage="profile_mydata_button">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
-                                                    <state key="normal" title="Sobre a box" backgroundImage="buttonSegmentOFF">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                    <state key="normal" title="Sobre a box" backgroundImage="profile_about_button">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -177,11 +185,11 @@
     </scenes>
     <resources>
         <image name="box_button" width="28" height="28"/>
-        <image name="buttonSegmentOFF" width="167" height="48"/>
-        <image name="buttonSegmentON" width="167" height="48"/>
-        <image name="contentName" width="353" height="62"/>
+        <image name="contente_profile" width="342" height="60"/>
         <image name="fashion-person.png" width="640" height="426"/>
         <image name="profileIconDeselected_button" width="29" height="27"/>
         <image name="profileIconSelected_button" width="29" height="28"/>
+        <image name="profile_about_button" width="167" height="49"/>
+        <image name="profile_mydata_button" width="167" height="49"/>
     </resources>
 </document>

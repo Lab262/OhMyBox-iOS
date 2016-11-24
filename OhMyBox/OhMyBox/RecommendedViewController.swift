@@ -28,7 +28,7 @@ class RecommendedViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: WishTableViewCell.identifier, for: indexPath) as! WishTableViewCell
         cell.selectionStyle = .none
-       cell.productImage.image = UIImage(named:"jacketImage")
+       cell.productImage.image = UIImage(named:"wish_default_image")
         return cell
     }
     
@@ -73,7 +73,7 @@ extension RecommendedViewController: UITableViewDelegate {
         case 0:
             return 70
         default:
-            return 497
+            return 580
         }
         
         

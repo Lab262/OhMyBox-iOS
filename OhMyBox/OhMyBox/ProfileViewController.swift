@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
 
+class ProfileViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     var segmentButtonIndexPath = IndexPath.init(row: 1, section: 0)
     var isSegment = true
@@ -36,6 +37,7 @@ class ProfileViewController: UIViewController {
     func generatePhotoProfileCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PhotoProfileTableViewCell.identifier, for: indexPath) as! PhotoProfileTableViewCell
+        cell.scrollViewDidScroll(self.tableView)
         cell.selectionStyle = .none
         
         return cell
@@ -63,21 +65,27 @@ class ProfileViewController: UIViewController {
     func selectAboutBox (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SegmentTableViewCell.identifier, for:segmentButtonIndexPath) as! SegmentTableViewCell
         
-        cell.aboutBoxButton.setBackgroundImage(UIImage(named:"buttonSegmentON"), for: UIControlState.normal)
-            cell.dataUserButton.setBackgroundImage(UIImage(named:"buttonSegmentOFF"), for: UIControlState.normal)
+        cell.aboutBoxButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
+            cell.dataUserButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
 
+        cell.aboutBoxButton.setTitleColor(UIColor.white, for:UIControlState.normal)
+        cell.dataUserButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
             self.isSegment = false
             self.tableView.reloadData()
+    
     }
  
     
     func selectDateUser (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SegmentTableViewCell.identifier, for:segmentButtonIndexPath) as! SegmentTableViewCell
-        cell.dataUserButton.setBackgroundImage(UIImage(named:"buttonSegmentON"), for: UIControlState.normal)
-             cell.aboutBoxButton.setBackgroundImage(UIImage(named:"buttonSegmentOFF"), for: UIControlState.normal)
-            self.isSegment = true
- 
-            self.tableView.reloadData()
+        cell.aboutBoxButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
+
+        cell.dataUserButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
+                       self.isSegment = true
+            cell.dataUserButton.setTitleColor(UIColor.white, for:UIControlState.normal)
+            cell.aboutBoxButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
+        
+        self.tableView.reloadData()
     }
     
     
@@ -85,11 +93,10 @@ class ProfileViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
         
-        
         return cell
     }
     
-   
+    
     
 
     
@@ -118,6 +125,8 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.secondTitleLineLabel.text = "DE COMPRA"
                         cell.iconImage.image = UIImage(named:"textureText1")
                         cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
+                        cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
+
                         cell.selectionStyle = .none
                     
                         return cell
@@ -147,7 +156,8 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.secondTitleLineLabel.text = "PRECISA SABER"
                         cell.iconImage.image = UIImage(named:"icon_header_profile")
                         cell.selectionStyle = .none
-                    
+                    cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
+
                         return cell
                     
                 }else if indexPath.row == 1 {
@@ -184,6 +194,8 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.secondTitleLineLabel.text = "MEDIDAS"
                         cell.iconImage.image = UIImage(named:"textureText2")
                         cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
+                        cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
+
                         cell.selectionStyle = .none
                     
                         return cell
@@ -226,6 +238,8 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.secondTitleLineLabel.text = "A GENTE"
                         cell.iconImage.image = UIImage(named:"icon_header_profile")
                         cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
+                        cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
+
                         cell.selectionStyle = .none
                     
                         return cell
@@ -257,6 +271,8 @@ extension ProfileViewController: UITableViewDataSource {
                 cell.secondTitleLineLabel.text = "E SENHA"
                 cell.iconImage.image = UIImage(named:"textTexture3")
                 cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
+                cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
+
                 cell.selectionStyle = .none
 
                 return cell
@@ -302,6 +318,7 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
 }
+
 
 extension ProfileViewController: UITableViewDelegate {
     
