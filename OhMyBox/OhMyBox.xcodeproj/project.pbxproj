@@ -102,11 +102,6 @@
 		D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */; };
 		D41E8FD71DE4F28200BA3266 /* TagView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E8FD61DE4F28200BA3266 /* TagView5.swift */; };
 		D41E8FD91DE4F28F00BA3266 /* TagView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FD81DE4F28F00BA3266 /* TagView5.xib */; };
-		D41E8FE01DE4FAD600BA3266 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDB1DE4FAD600BA3266 /* Poppins-Bold.ttf */; };
-		D41E8FE11DE4FAD600BA3266 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDC1DE4FAD600BA3266 /* Poppins-Light.ttf */; };
-		D41E8FE21DE4FAD600BA3266 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDD1DE4FAD600BA3266 /* Poppins-Medium.ttf */; };
-		D41E8FE31DE4FAD600BA3266 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDE1DE4FAD600BA3266 /* Poppins-Regular.ttf */; };
-		D41E8FE41DE4FAD600BA3266 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FDF1DE4FAD600BA3266 /* Poppins-SemiBold.ttf */; };
 		D437F6821DE612290016E89E /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6801DE612290016E89E /* ScaledVisibleCellsCollectionView.swift */; };
 		D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */; };
 		D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */; };
@@ -275,11 +270,6 @@
 		D402E01F1DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		D41E8FD61DE4F28200BA3266 /* TagView5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView5.swift; sourceTree = "<group>"; };
 		D41E8FD81DE4F28F00BA3266 /* TagView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView5.xib; sourceTree = "<group>"; };
-		D41E8FDB1DE4FAD600BA3266 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		D41E8FDC1DE4FAD600BA3266 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
-		D41E8FDD1DE4FAD600BA3266 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		D41E8FDE1DE4FAD600BA3266 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		D41E8FDF1DE4FAD600BA3266 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D437F67F1DE612290016E89E /* ScaledVisibleCellsCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaledVisibleCellsCollectionView.h; sourceTree = "<group>"; };
 		D437F6801DE612290016E89E /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
 		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -422,7 +412,6 @@
 		2F4896EC1DB7E94200EADFFE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D41E8FDA1DE4FAC700BA3266 /* Poppins */,
 				2F4896EE1DB7E98C00EADFFE /* Axis */,
 				2F4896ED1DB7E97700EADFFE /* Muli-fonts */,
 			);
@@ -767,18 +756,6 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
-		D41E8FDA1DE4FAC700BA3266 /* Poppins */ = {
-			isa = PBXGroup;
-			children = (
-				D41E8FDB1DE4FAD600BA3266 /* Poppins-Bold.ttf */,
-				D41E8FDC1DE4FAD600BA3266 /* Poppins-Light.ttf */,
-				D41E8FDD1DE4FAD600BA3266 /* Poppins-Medium.ttf */,
-				D41E8FDE1DE4FAD600BA3266 /* Poppins-Regular.ttf */,
-				D41E8FDF1DE4FAD600BA3266 /* Poppins-SemiBold.ttf */,
-			);
-			name = Poppins;
-			sourceTree = "<group>";
-		};
 		D437F6811DE612290016E89E /* ScaledVisibleCellsCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,14 +954,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */,
-				D41E8FE11DE4FAD600BA3266 /* Poppins-Light.ttf in Resources */,
 				2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */,
 				2F70E8411DC9925C000AB03B /* ProductPurchaseTableViewCell.xib in Resources */,
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
 				D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
-				D41E8FE01DE4FAD600BA3266 /* Poppins-Bold.ttf in Resources */,
 				2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */,
 				2F044CE71DBE41D600B54468 /* coatProduct.png in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
@@ -1005,11 +980,9 @@
 				2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */,
 				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,
 				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
-				D41E8FE21DE4FAD600BA3266 /* Poppins-Medium.ttf in Resources */,
 				2F2C8E201DDE310B0002BB87 /* imagePromo.png in Resources */,
 				D4C0D65C1DB6AF2C007C3113 /* TagView.xib in Resources */,
 				2F5DE1CA1DC13F1400822826 /* SimpleTextViewTableViewCell.xib in Resources */,
-				D41E8FE41DE4FAD600BA3266 /* Poppins-SemiBold.ttf in Resources */,
 				2F70E8351DC969EC000AB03B /* OrderTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
@@ -1028,7 +1001,6 @@
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 				2FAD48C11DB6FE2C00074D55 /* ShowProductCollectionViewCell.xib in Resources */,
 				D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */,
-				D41E8FE31DE4FAD600BA3266 /* Poppins-Regular.ttf in Resources */,
 				D44F35031DD0FF2500AE7E9E /* TagView3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
