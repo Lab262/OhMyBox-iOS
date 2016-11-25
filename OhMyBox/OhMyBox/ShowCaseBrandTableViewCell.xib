@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,33 +18,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="showCaseBrandCell" rowHeight="296" id="z2l-u5-TN5" customClass="ShowCaseBrandTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="showCaseBrandCell" rowHeight="415" id="z2l-u5-TN5" customClass="ShowCaseBrandTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="485"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z2l-u5-TN5" id="b4A-IT-6as">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
+                <rect key="frame" x="0.0" y="0.0" width="376" height="484"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jaguar_brand.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-hs-Nyj">
-                        <rect key="frame" x="11" y="8" width="353" height="209"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="209" id="l2r-Oh-hyT"/>
-                        </constraints>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jaguar_brand.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-hs-Nyj">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="414"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="showCaseBrandBox_image" translatesAutoresizingMaskIntoConstraints="NO" id="8CE-GF-5Hb">
-                        <rect key="frame" x="14" y="217" width="347" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="70" id="WSx-Vm-JEo"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="414" width="376" height="70"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAY CLOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-yA-QXC">
-                        <rect key="frame" x="30" y="232" width="88" height="19"/>
+                        <rect key="frame" x="30" y="437" width="88" height="19"/>
                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-px-M3V">
-                        <rect key="frame" x="251" y="238" width="91" height="28"/>
+                        <rect key="frame" x="252" y="435" width="91" height="28"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <state key="normal" image="follow_button"/>
                         <connections>
@@ -51,7 +46,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seguir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-gH-cRl">
-                        <rect key="frame" x="274.5" y="243.5" width="45" height="19"/>
+                        <rect key="frame" x="275" y="440" width="45" height="19"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                         </accessibility>
@@ -60,7 +55,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indie Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hur-4K-OIE">
-                        <rect key="frame" x="30" y="253" width="73" height="18"/>
+                        <rect key="frame" x="30" y="458" width="73" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -69,18 +64,19 @@
                 <constraints>
                     <constraint firstItem="0H8-gH-cRl" firstAttribute="centerX" secondItem="gG1-px-M3V" secondAttribute="centerX" id="0YQ-Fa-4fX"/>
                     <constraint firstItem="gG1-px-M3V" firstAttribute="centerY" secondItem="8CE-GF-5Hb" secondAttribute="centerY" id="2e6-sl-Fc5"/>
-                    <constraint firstItem="6a5-yA-QXC" firstAttribute="top" secondItem="w1T-hs-Nyj" secondAttribute="bottom" constant="15" id="5Xh-aX-1a4"/>
+                    <constraint firstItem="6a5-yA-QXC" firstAttribute="top" secondItem="w1T-hs-Nyj" secondAttribute="bottom" constant="23" id="5Xh-aX-1a4"/>
                     <constraint firstItem="6a5-yA-QXC" firstAttribute="leading" secondItem="b4A-IT-6as" secondAttribute="leadingMargin" constant="22" id="7gv-sU-jRp"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gG1-px-M3V" secondAttribute="trailing" constant="25" id="7hb-2O-3RC"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="8CE-GF-5Hb" secondAttribute="trailing" constant="6" id="A3W-cA-hC6"/>
                     <constraint firstItem="0H8-gH-cRl" firstAttribute="centerY" secondItem="gG1-px-M3V" secondAttribute="centerY" id="MEE-Pv-LSA"/>
                     <constraint firstItem="Hur-4K-OIE" firstAttribute="top" secondItem="6a5-yA-QXC" secondAttribute="bottom" constant="2" id="NsM-LG-tup"/>
-                    <constraint firstItem="8CE-GF-5Hb" firstAttribute="leading" secondItem="b4A-IT-6as" secondAttribute="leadingMargin" constant="6" id="Q9t-EV-alI"/>
+                    <constraint firstItem="8CE-GF-5Hb" firstAttribute="leading" secondItem="b4A-IT-6as" secondAttribute="leading" id="PJQ-T4-FcC"/>
+                    <constraint firstItem="w1T-hs-Nyj" firstAttribute="height" secondItem="b4A-IT-6as" secondAttribute="height" multiplier="0.855" id="cSx-Kl-CxT"/>
                     <constraint firstItem="8CE-GF-5Hb" firstAttribute="top" secondItem="w1T-hs-Nyj" secondAttribute="bottom" id="jmA-yV-BvR"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="w1T-hs-Nyj" secondAttribute="trailing" constant="3" id="k1M-F2-5kF"/>
-                    <constraint firstItem="w1T-hs-Nyj" firstAttribute="leading" secondItem="b4A-IT-6as" secondAttribute="leadingMargin" constant="3" id="ld5-aW-D11"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="w1T-hs-Nyj" secondAttribute="trailing" constant="-8" id="k1M-F2-5kF"/>
+                    <constraint firstItem="w1T-hs-Nyj" firstAttribute="leading" secondItem="b4A-IT-6as" secondAttribute="leadingMargin" constant="-8" id="ld5-aW-D11"/>
+                    <constraint firstAttribute="trailing" secondItem="8CE-GF-5Hb" secondAttribute="trailing" id="sjG-Hj-cI5"/>
                     <constraint firstItem="Hur-4K-OIE" firstAttribute="leading" secondItem="b4A-IT-6as" secondAttribute="leadingMargin" constant="22" id="yru-1g-4ST"/>
-                    <constraint firstItem="w1T-hs-Nyj" firstAttribute="top" secondItem="b4A-IT-6as" secondAttribute="topMargin" id="zqu-RV-6is"/>
+                    <constraint firstItem="w1T-hs-Nyj" firstAttribute="top" secondItem="b4A-IT-6as" secondAttribute="topMargin" constant="-8" id="zqu-RV-6is"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -90,7 +86,7 @@
                 <outlet property="subtitleBrandLabel" destination="Hur-4K-OIE" id="cDw-nd-Wum"/>
                 <outlet property="titleBrandLabel" destination="6a5-yA-QXC" id="g8Y-aJ-Egd"/>
             </connections>
-            <point key="canvasLocation" x="286.5" y="281"/>
+            <point key="canvasLocation" x="287" y="306.5"/>
         </tableViewCell>
     </objects>
     <resources>

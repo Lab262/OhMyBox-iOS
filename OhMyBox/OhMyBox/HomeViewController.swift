@@ -282,10 +282,8 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == 0 {
+        if section == 0 || section == 1 {
             return 77
-        } else if section == 1{
-            return 70
         } else {
             return 0.1
         }

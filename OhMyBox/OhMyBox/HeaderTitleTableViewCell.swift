@@ -14,6 +14,9 @@ class HeaderTitleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var heightIconConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var titleButtonLabel: UILabel!
+    
+    
     
     static let identifier = "headerCell"
     

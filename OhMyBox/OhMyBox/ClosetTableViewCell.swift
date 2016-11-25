@@ -54,6 +54,7 @@ class ClosetTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
 }
 
 extension ClosetTableViewCell: UICollectionViewDataSource {
@@ -61,18 +62,9 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath) as! ShowCaseCollectionViewCell
-        //cell.layoutSubviews()
+      
         cell.followingClothes = self.followingClothes
         cell.tagType = tagType
-        //cell.clipsToBounds = false
-        cell.tagView = TagView5.instanceFromNib() as? TagView5
-        cell.tagView!.center = CGPoint(x: self.frame.width/2.65, y: self.frame.height/1.20)
-        cell.tagView!.nameTagLabel.text = "VERÃO DE SAIAS"
-        cell.tagView?.clipsToBounds = false
-        cell.addSubview(cell.tagView!)
-        
-      //  cell.layoutSubviews()
-        //cell.layoutIfNeeded()
 
         return cell
         

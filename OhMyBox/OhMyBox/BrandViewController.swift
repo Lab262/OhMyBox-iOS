@@ -76,7 +76,10 @@ class BrandViewController: UIViewController {
         let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
         
         header.firstTitleLineLabel.text = "MARCAS QUE"
-        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderOrangePink_image")
+        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+        header.widthIconConstraint.constant = 35
+        header.heightIconConstraint.constant = 21
+        header.layoutIfNeeded()
         header.secondTitleLineLabel.text = "EU SIGO"
         
         return header
@@ -87,7 +90,10 @@ class BrandViewController: UIViewController {
         let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
         
         header.firstTitleLineLabel.text = "RECOMENDADOS"
-        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType4_image")
+        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+        header.widthIconConstraint.constant = 35
+        header.heightIconConstraint.constant = 21
+        header.layoutIfNeeded()
         header.secondTitleLineLabel.text = "PARA VOCÊ"
         
         return header
@@ -99,8 +105,13 @@ class BrandViewController: UIViewController {
         
         header.firstTitleLineLabel.text = "TODAS"
         header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType5_image")
-        header.secondTitleLineLabel.text = "AS LOJAS"
-        header.showAllButton.isHidden = true
+        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+        header.widthIconConstraint.constant = 35
+        header.heightIconConstraint.constant = 21
+        header.layoutIfNeeded()
+        header.secondTitleLineLabel.text = "AS MARCAS"
+        header.titleButtonLabel.text = "Filtrar"
+        
         
         return header
     }
@@ -166,7 +177,7 @@ extension BrandViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 70
+        return 77
     }
     
     
@@ -175,12 +186,17 @@ extension BrandViewController: UITableViewDelegate {
         
         switch indexPath.section {
             
-        case 0:
-            return 310
-        case 1:
-            return 310
+        case 0, 1:
+            let width = self.view.bounds.size.width * 0.94
+            let height = width*1.3
+            return height
         default:
-            return 290
+            let width = self.view.bounds.size.width * 0.98
+            let height = width*1.34
+            print ("HEIGHT BRAND: \(height)")
+            
+            return height
+            
         }
     }
 }
