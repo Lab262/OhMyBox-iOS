@@ -33,6 +33,8 @@ class HomeViewController: UIViewController {
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
         self.clotingArray?.append("cloting Three")
+        self.clotingArray?.append("cloting Four")
+        self.clotingArray?.append("cloting Five")
      //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
     
@@ -180,7 +182,7 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
                 
-        cell.tagType = 2
+        cell.tagType = 5
         cell.clothingtArray = self.clotingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self
@@ -223,12 +225,20 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {
-            case 0:
-                return 320
-            case 1:
-                return 352
+            case 0, 1:
+                let width = self.view.bounds.size.width * 0.94
+                let height = width*1.3
+                return height
             case 2:
-                return 240
+                
+                let width = self.view.bounds.size.width * 0.66
+                let height = width*1.6
+                
+                print ("ALTURA CELL: \(height)")
+                
+                return height
+
+                //return 396
             case 3:
                 return 50
             default:
@@ -254,7 +264,9 @@ extension HomeViewController: UITableViewDelegate {
             let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
             header.firstTitleLineLabel.text = "OLHA AS"
             header.secondTitleLineLabel.text = "NOVIDADES"
-            header.iconImage.image = UIImage(named:"textureSectionImage")
+            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+            header.widthIconConstraint.constant = 35
+            header.heightIconConstraint.constant = 21
             
             return header
             
@@ -270,11 +282,10 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == 0 {
+        if section == 0 || section == 1 {
             return 77
         } else {
-            return 70
-            
+            return 0.1
         }
     }
   

@@ -14,6 +14,7 @@ protocol callSegueProtocol {
 
 class ClosetTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     var identifierSegue: String?
     var tagType: Int?
@@ -31,11 +32,18 @@ class ClosetTableViewCell: UITableViewCell {
         self.collectionView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ShowCaseCollectionViewCell.identifier)
     }
     
+    
+    override func didMoveToWindow() {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.registerNibs()
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
+        self.collectionView.setScaledDesginParam(scaledPattern: .horizontalCenter, maxScale: 1.0, minScale: 0.97, maxAlpha: 1.0, minAlpha: 0.8)
+        //collectionView.scaledVisibleCells()
         
     }
 
@@ -46,6 +54,7 @@ class ClosetTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
 }
 
 extension ClosetTableViewCell: UICollectionViewDataSource {
@@ -53,10 +62,10 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath) as! ShowCaseCollectionViewCell
-        
+      
         cell.followingClothes = self.followingClothes
         cell.tagType = tagType
-        
+
         return cell
         
     }
@@ -71,7 +80,6 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     
     }
     
-    
 }
 
 extension ClosetTableViewCell: UICollectionViewDelegate {
@@ -83,3 +91,47 @@ extension ClosetTableViewCell: UICollectionViewDelegate {
     }
     
 }
+
+// MARK: - UIScrollViewDelegate
+//
+extension ClosetTableViewCell: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        collectionView.scaledVisibleCells()
+    }
+    
+
+    
+}
+
+extension ClosetTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0.1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0.1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = self.bounds.size.width * 0.94
+        let height = width*1.2
+        return CGSize(width: width, height: height)
+        
+    }
+    
+    
+    
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        
+//    }
+    
+    
+}
+

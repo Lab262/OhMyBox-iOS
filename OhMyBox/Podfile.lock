@@ -1,22 +1,34 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (4.0.0)
   - BGTableViewRowActionWithImage (0.3.6)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
+  - FalconFrameworkIOSSDK (0.1.4):
+    - Alamofire (= 4.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
   - BGTableViewRowActionWithImage
   - Crashlytics
   - Fabric
+  - FalconFrameworkIOSSDK (from `https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git`)
+
+EXTERNAL SOURCES:
+  FalconFrameworkIOSSDK:
+    :git: https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git
+
+CHECKOUT OPTIONS:
+  FalconFrameworkIOSSDK:
+    :commit: 3878b508148ed00a33463ee2ea89b0ee67a99075
+    :git: https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   BGTableViewRowActionWithImage: 3517276bcee26e559465bcca13151afc33ab6d2a
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  FalconFrameworkIOSSDK: 93fcb5241e6849ba1954be7241dc607602c18f37
 
-PODFILE CHECKSUM: 753d50cc1e5b20f7d4fe013d530450207bb1616d
+PODFILE CHECKSUM: 61b2c002c2252246bdfb50cd8fdabc3d700fe831
 
 COCOAPODS: 1.0.1

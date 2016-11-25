@@ -11,7 +11,6 @@ import UIKit
 class ShowProductCollectionViewCell: UICollectionViewCell {
     static let identifier = "showProductCell"
     
-    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nameProduct: UILabel!
     @IBOutlet weak var priceProduct: UILabel!
     @IBOutlet weak var productImage: UIImageView!
