@@ -25,6 +25,12 @@ class SwitchProductButtonTableViewCell: UITableViewCell {
     
     
     }
+    @IBAction func selectDescription(_ sender: AnyObject) {
+        
+    }
+    @IBAction func selectDetail(_ sender: AnyObject) {
+    
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

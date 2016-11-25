@@ -92,15 +92,16 @@ class DetailProductViewController: UIViewController {
         
      
         
-        cell.detailButton.backgroundColor = UIColor.white
-        cell.descriptionButton.backgroundColor = UIColor.colorWithHexString("684D8D")
+     
         
-        cell.detailButton.setTitleColor(UIColor.black, for: .normal)
-        cell.descriptionButton.setTitleColor(UIColor.white, for: .normal)
+        cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
+        cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
+        
+        cell.descriptionButton.setTitleColor(UIColor.white, for:UIControlState.normal)
+        cell.detailButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
         
         
-        
-        self.isSelect = false
+        self.isSelect = false 
         self.tableView.reloadData()
     }
     
@@ -108,12 +109,18 @@ class DetailProductViewController: UIViewController {
     func selectDetailButton (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
         
-        cell.descriptionButton.backgroundColor = UIColor.white
-        cell.detailButton.backgroundColor = UIColor.colorWithHexString("684D8D")
       
-       cell.detailButton.setTitleColor(UIColor.white, for: .normal)
-       cell.descriptionButton.setTitleColor(UIColor.black, for: .normal)
-     
+        
+        cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
+        
+        cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
+      
+        cell.detailButton.setTitleColor(UIColor.white, for:UIControlState.normal)
+        cell.descriptionButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
+        
+
+        
+        
         
         self.isSelect = true
         

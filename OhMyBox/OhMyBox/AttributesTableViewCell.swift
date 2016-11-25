@@ -24,8 +24,8 @@ class AttributesTableViewCell: UITableViewCell {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     
-        self.collectionView.layer.borderWidth = 1
-        self.collectionView.layer.borderColor = UIColor(red:184/250, green:184/250, blue:184/250, alpha: 1.0).cgColor
+        self.collectionView.layer.borderWidth = 2.5
+        self.collectionView.layer.borderColor = UIColor(red:145/250, green:76/250, blue:235/250, alpha: 1.0).cgColor
 
     }
        func initColoursDefault(){
