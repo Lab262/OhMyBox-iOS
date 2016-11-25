@@ -13,6 +13,7 @@ class ProductPurchaseTableViewCell: UITableViewCell {
       static let identifier = "productPurchaseCell"
     @IBOutlet weak var nameProductLabel: UILabel!
 
+    @IBOutlet weak var nameStoreLabel: UILabel!
     @IBOutlet weak var priceProductLabel: UILabel!
     @IBOutlet weak var unitLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!

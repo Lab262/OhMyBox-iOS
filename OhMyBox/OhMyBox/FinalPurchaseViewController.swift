@@ -23,6 +23,9 @@ class FinalPurchaseViewController: UIViewController {
     
     }
 
+    @IBAction func finalizePayment(_ sender: AnyObject) {
+        self.performSegue(withIdentifier:"goHome", sender: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

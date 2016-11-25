@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,33 +16,60 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="discountTitleCell" id="KGk-i7-Jjw" customClass="DiscountTitleTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="discountTitleCell" rowHeight="50" id="KGk-i7-Jjw" customClass="DiscountTitleTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <frame key="frameInset" width="375" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desconto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-G0-9El">
-                        <frame key="frameInset" minX="15" minY="11" width="106" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-tQ-2uJ">
-                        <frame key="frameInset" minX="216" minY="11" width="96" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-ey-EQb">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desconto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-G0-9El">
+                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-tQ-2uJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="xhi-tb-cUt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ2-sb-Ndx">
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.10196078431372549" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.92549019607843142" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gvC-G0-9El" firstAttribute="leading" secondItem="SSk-ey-EQb" secondAttribute="leadingMargin" id="3hy-kR-WW9"/>
+                            <constraint firstItem="RJ2-sb-Ndx" firstAttribute="leading" secondItem="gvC-G0-9El" secondAttribute="trailing" constant="8" id="9AU-G1-MJE"/>
+                            <constraint firstItem="1hQ-tQ-2uJ" firstAttribute="baseline" secondItem="gvC-G0-9El" secondAttribute="baseline" id="G7A-cM-3Ln"/>
+                            <constraint firstItem="gvC-G0-9El" firstAttribute="top" secondItem="RJ2-sb-Ndx" secondAttribute="top" constant="-6" id="IKY-Me-Dae"/>
+                            <constraint firstItem="1hQ-tQ-2uJ" firstAttribute="firstBaseline" secondItem="gvC-G0-9El" secondAttribute="baseline" id="NyV-9j-OJr"/>
+                            <constraint firstItem="1hQ-tQ-2uJ" firstAttribute="centerY" secondItem="gvC-G0-9El" secondAttribute="centerY" id="SvH-Rx-NFk"/>
+                            <constraint firstAttribute="trailing" secondItem="1hQ-tQ-2uJ" secondAttribute="trailing" constant="8" id="WwB-1t-JMq"/>
+                            <constraint firstItem="1hQ-tQ-2uJ" firstAttribute="top" secondItem="SSk-ey-EQb" secondAttribute="top" constant="12" id="i0K-NT-zL9"/>
+                            <constraint firstItem="1hQ-tQ-2uJ" firstAttribute="leading" secondItem="RJ2-sb-Ndx" secondAttribute="trailing" constant="-1" id="xLv-Vi-xVn"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="leadingMargin" secondItem="SSk-ey-EQb" secondAttribute="leading" constant="8" id="169-Ca-CAj"/>
+                    <constraint firstItem="SSk-ey-EQb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8L5-oz-qXd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SSk-ey-EQb" secondAttribute="bottom" constant="-10" id="GT6-PK-wUL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SSk-ey-EQb" secondAttribute="trailing" constant="-8" id="fBU-Rh-uaR"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="firstLabel" destination="gvC-G0-9El" id="qaq-iQ-fhH"/>
                 <outlet property="secondLabel" destination="1hQ-tQ-2uJ" id="JJI-xv-9up"/>
             </connections>
+            <point key="canvasLocation" x="32.5" y="101"/>
         </tableViewCell>
     </objects>
 </document>

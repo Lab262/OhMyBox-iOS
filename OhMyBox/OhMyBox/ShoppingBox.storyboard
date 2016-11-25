@@ -3,19 +3,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Muli-Regular.ttf">
-            <string>Muli</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -25,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNB-JR-pBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-730" y="42"/>
+            <point key="canvasLocation" x="-1118" y="23"/>
         </scene>
         <!--Shopping Box View Controller-->
         <scene sceneID="6za-ii-dJ4">
@@ -36,7 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HrW-v2-eNW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="76r-qQ-ZOB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTo-EA-wGZ">
@@ -46,47 +43,6 @@
                                     <outlet property="delegate" destination="Xam-Z7-ox1" id="B7n-Yf-D8S"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-4I-FPn">
-                                <frame key="frameInset" minX="42" minY="20" width="134" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="MY BOX">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeBox:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="mMq-un-2Im"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-fO-MKU">
-                                <frame key="frameInset" minX="176" minY="20" width="134" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="PEDIDOS">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="changeListOrder:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="vuQ-fr-f0F"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-7w-BCo">
-                                <frame key="frameInset" minX="341" minY="25" width="18" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" image="close_Button"/>
-                                <connections>
-                                    <action selector="backToViewController:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="aRM-qx-Sg0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wF-g9-I6s">
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -99,12 +55,64 @@
                                     <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="eLR-xa-wFd"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-Ow-8L8">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-4I-FPn">
+                                        <frame key="frameInset" minX="1" minY="18" width="134" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="MY BOX">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeBox:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="mMq-un-2Im"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-fO-MKU">
+                                        <frame key="frameInset" minX="134" minY="18" width="130" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="PEDIDOS">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeListOrder:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="vuQ-fr-f0F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uOH-Ow-8L8" secondAttribute="height" multiplier="265:59" constant="-6" id="6MQ-Nc-k9g"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-7w-BCo">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="close_Button"/>
+                                <connections>
+                                    <action selector="backToViewController:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="aRM-qx-Sg0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nBY-7w-BCo" secondAttribute="trailing" constant="-11" id="0ts-sa-uR1"/>
+                            <constraint firstItem="uOH-Ow-8L8" firstAttribute="top" secondItem="76r-qQ-ZOB" secondAttribute="topMargin" constant="14" id="2wh-QD-5jm"/>
                             <constraint firstItem="6wF-g9-I6s" firstAttribute="trailing" secondItem="rTo-EA-wGZ" secondAttribute="trailing" id="4xd-hV-U3N"/>
+                            <constraint firstItem="uOH-Ow-8L8" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" constant="-4.5" id="5Gm-Yi-cnT"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="7vO-TG-MgE"/>
+                            <constraint firstItem="nBY-7w-BCo" firstAttribute="top" secondItem="Icp-yf-q1B" secondAttribute="bottom" constant="15" id="cEo-Yf-Eda"/>
                             <constraint firstItem="HrW-v2-eNW" firstAttribute="top" secondItem="6wF-g9-I6s" secondAttribute="bottom" id="jb1-Wq-P5Q"/>
+                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="top" secondItem="uOH-Ow-8L8" secondAttribute="bottom" constant="8" symbolic="YES" id="li8-fH-BJi"/>
+                            <constraint firstItem="nBY-7w-BCo" firstAttribute="leading" secondItem="uOH-Ow-8L8" secondAttribute="trailing" constant="8" id="ljP-nV-nd3"/>
                             <constraint firstItem="6wF-g9-I6s" firstAttribute="leading" secondItem="rTo-EA-wGZ" secondAttribute="leading" id="oag-Yl-DcW"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="-81" id="rmo-kV-ljm"/>
                             <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="40.5" id="rvy-1o-rQ5"/>
@@ -114,8 +122,6 @@
                     <navigationItem key="navigationItem" id="3fQ-Qu-pij"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="boxButton" destination="ik6-4I-FPn" id="RKt-5N-otA"/>
                         <outlet property="closeButton" destination="nBY-7w-BCo" id="wmp-0D-NmH"/>
@@ -126,14 +132,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h3-DB-kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50.399999999999999" y="41.829085457271368"/>
+            <point key="canvasLocation" x="-52.5" y="13.732394366197184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T9k-Xk-PcE">
             <objects>
                 <navigationController id="LMx-MR-oGB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xj6-EP-ugh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nVm-ux-fja">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nVm-ux-fja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -154,7 +160,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RrB-Ib-FAF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lBO-Dq-3Yw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-3K-Wm3">
@@ -165,34 +171,29 @@
                                     <outlet property="delegate" destination="aZ6-Xl-MdT" id="X1n-Jb-MNr"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-7v-qiG">
-                                <items>
-                                    <barButtonItem style="plain" id="pTO-Ny-Wqg">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EzV-69-8e9">
-                                            <rect key="frame" x="16" y="7" width="342" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
-                                            <state key="normal" title="FINALIZAR COMPRA">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="zUY-FA-Mcg" kind="presentation" id="ovn-df-SYp"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iec-vl-WVR">
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Iec-vl-WVR" secondAttribute="height" multiplier="25:3" id="l9o-p0-xeh"/>
+                                </constraints>
+                                <state key="normal" title="FINALIZAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finalizePayment:" destination="aZ6-Xl-MdT" eventType="touchUpInside" id="9fT-nf-E8Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="leading" secondItem="lBO-Dq-3Yw" secondAttribute="leading" id="Boc-eU-zBH"/>
-                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="top" secondItem="lBO-Dq-3Yw" secondAttribute="top" id="C4N-N0-aey"/>
-                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="bottom" secondItem="MbI-7v-qiG" secondAttribute="bottom" id="P15-99-Uus"/>
-                            <constraint firstAttribute="trailing" secondItem="tBU-3K-Wm3" secondAttribute="trailing" id="PkX-CL-Kc8"/>
-                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="bottom" secondItem="RrB-Ib-FAF" secondAttribute="top" id="PsI-xf-Clc"/>
-                            <constraint firstItem="MbI-7v-qiG" firstAttribute="centerX" secondItem="tBU-3K-Wm3" secondAttribute="centerX" id="TN1-eI-Gv9"/>
-                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="leading" secondItem="MbI-7v-qiG" secondAttribute="leading" id="v1F-TK-e4e"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="height" secondItem="lBO-Dq-3Yw" secondAttribute="height" id="5RJ-9b-Ma4"/>
+                            <constraint firstItem="Iec-vl-WVR" firstAttribute="trailing" secondItem="tBU-3K-Wm3" secondAttribute="trailing" id="6od-dp-5Ev"/>
+                            <constraint firstItem="Iec-vl-WVR" firstAttribute="leading" secondItem="tBU-3K-Wm3" secondAttribute="leading" id="9NN-2Z-jth"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="centerY" secondItem="lBO-Dq-3Yw" secondAttribute="centerY" id="Fza-wy-WE1"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="centerX" secondItem="lBO-Dq-3Yw" secondAttribute="centerX" id="SVq-My-Exx"/>
+                            <constraint firstItem="tBU-3K-Wm3" firstAttribute="width" secondItem="lBO-Dq-3Yw" secondAttribute="width" id="WEu-5x-bnc"/>
+                            <constraint firstItem="Iec-vl-WVR" firstAttribute="centerX" secondItem="tBU-3K-Wm3" secondAttribute="centerX" id="w60-2y-WDF"/>
+                            <constraint firstItem="Iec-vl-WVR" firstAttribute="bottom" secondItem="tBU-3K-Wm3" secondAttribute="bottom" id="xrv-Ve-Nuv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MY BOX" id="BbR-ru-EpS">
@@ -206,11 +207,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tBU-3K-Wm3" id="mvk-c4-9QU"/>
+                        <segue destination="Mci-0h-cik" kind="presentation" identifier="goHome" id="LSG-BQ-Ahq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOA-ml-T3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="69"/>
+            <point key="canvasLocation" x="1548" y="68.815592203898049"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="P0h-SO-se9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Mci-0h-cik" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7V-WN-mku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2153" y="16"/>
         </scene>
         <!--Main-->
         <scene sceneID="dui-2e-8qN">
