@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XeH-0U-XdI">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kIU-G4-1W5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -29,8 +32,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roseBlur_image" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-et-F0s"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roseBlur_image" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-et-F0s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQ4-ic-Yy1">
+                                <rect key="frame" x="234" y="608" width="96" height="33"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                 <state key="normal" title="Se cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,6 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO9-4f-i91">
+                                <rect key="frame" x="192" y="419" width="135" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="Wfa-8B-5kf"/>
                                 </constraints>
@@ -49,13 +56,19 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_image" translatesAutoresizingMaskIntoConstraints="NO" id="XEU-O7-WxO">
+                                <rect key="frame" x="87" y="92" width="202" height="151"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XEU-O7-WxO" secondAttribute="height" multiplier="202:151" id="WAq-u5-kQf"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconUser_image" translatesAutoresizingMaskIntoConstraints="NO" id="wWc-wH-cv7"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPass_image" translatesAutoresizingMaskIntoConstraints="NO" id="d7G-Ib-tS3"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconUser_image" translatesAutoresizingMaskIntoConstraints="NO" id="wWc-wH-cv7">
+                                <rect key="frame" x="44" y="312" width="26" height="24"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPass_image" translatesAutoresizingMaskIntoConstraints="NO" id="d7G-Ib-tS3">
+                                <rect key="frame" x="46" y="384" width="20" height="20"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijW-cm-45Z">
+                                <rect key="frame" x="74" y="315" width="250" height="23"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
@@ -67,12 +80,14 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shr-nB-25y">
+                                <rect key="frame" x="77" y="340" width="250" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="q8k-pI-gZw"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68s-Lf-Z4a">
+                                <rect key="frame" x="47" y="491" width="298" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="68s-Lf-Z4a" secondAttribute="height" multiplier="149:28" id="Q81-AN-XHI"/>
                                 </constraints>
@@ -82,6 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqW-LW-7Lw">
+                                <rect key="frame" x="31" y="608" width="126" height="33"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                 <state key="normal" title="Ir com Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,11 +107,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTRAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98h-Ee-dHr">
+                                <rect key="frame" x="76" y="509" width="76" height="21"/>
                                 <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8j-4Y-Khs">
+                                <rect key="frame" x="75" y="387" width="250" height="23"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
@@ -107,10 +125,11 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byc-v1-uAb">
+                                <rect key="frame" x="75" y="409" width="250" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="t8j-4Y-Khs" firstAttribute="width" secondItem="byc-v1-uAb" secondAttribute="width" id="9Ck-cM-Hkz"/>
                             <constraint firstItem="GQ4-ic-Yy1" firstAttribute="top" secondItem="r5f-et-F0s" secondAttribute="bottom" constant="-59" id="9Eg-sS-XbK"/>
@@ -173,13 +192,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roseBlur_image" translatesAutoresizingMaskIntoConstraints="NO" id="coQ-Xo-O3i"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roseBlur_image" translatesAutoresizingMaskIntoConstraints="NO" id="coQ-Xo-O3i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_image" translatesAutoresizingMaskIntoConstraints="NO" id="u4T-hE-7V6">
+                                <rect key="frame" x="87" y="92" width="202" height="151"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="u4T-hE-7V6" secondAttribute="height" multiplier="202:151" id="r0I-L9-r4u"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0n3-IO-YQa">
+                                <rect key="frame" x="241" y="608" width="82" height="33"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                 <state key="normal" title="Fazer login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,8 +211,11 @@
                                     <segue destination="jkX-1g-SZT" kind="show" id="TuB-ag-Z7M"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconUser_image" translatesAutoresizingMaskIntoConstraints="NO" id="Bsh-zn-Ay3"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconUser_image" translatesAutoresizingMaskIntoConstraints="NO" id="Bsh-zn-Ay3">
+                                <rect key="frame" x="42" y="275" width="26" height="24"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JhU-PR-B8m">
+                                <rect key="frame" x="75" y="279" width="252" height="23"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
@@ -201,13 +227,17 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jko-aE-4iR">
+                                <rect key="frame" x="75" y="301" width="252" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="xvj-Lh-KkD"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconEmail_image" translatesAutoresizingMaskIntoConstraints="NO" id="cbE-40-OJN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconEmail_image" translatesAutoresizingMaskIntoConstraints="NO" id="cbE-40-OJN">
+                                <rect key="frame" x="46" y="349" width="20" height="17"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uD9-cM-B0l">
+                                <rect key="frame" x="74" y="349" width="252" height="23"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
@@ -219,10 +249,14 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmU-fD-Yuo">
+                                <rect key="frame" x="74" y="371" width="252" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPass_image" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-yN-HIN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPass_image" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-yN-HIN">
+                                <rect key="frame" x="46" y="417" width="20" height="20"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mP3-Fg-as3">
+                                <rect key="frame" x="74" y="420" width="252" height="23"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
@@ -234,9 +268,11 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-Yi-6nE">
+                                <rect key="frame" x="74" y="442" width="252" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxS-nV-VQ0">
+                                <rect key="frame" x="47" y="509" width="298" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DxS-nV-VQ0" secondAttribute="height" multiplier="149:28" id="iSd-uy-NbP"/>
                                 </constraints>
@@ -246,18 +282,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ear-DP-EMB">
+                                <rect key="frame" x="31" y="608" width="126" height="33"/>
                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                 <state key="normal" title="Ir com Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CADASTRAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEl-yt-Fam">
+                                <rect key="frame" x="55" y="527" width="107" height="20"/>
                                 <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Bsh-zn-Ay3" firstAttribute="centerY" secondItem="coQ-Xo-O3i" secondAttribute="centerY" multiplier="0.86" id="5QM-q2-AKs"/>
                             <constraint firstItem="u4T-hE-7V6" firstAttribute="centerX" secondItem="coQ-Xo-O3i" secondAttribute="centerX" id="6qR-M6-Ggs"/>
@@ -331,8 +369,67 @@
             </objects>
             <point key="canvasLocation" x="1124" y="120.98950524737631"/>
         </scene>
+        <!--Authentication Container View Controller-->
+        <scene sceneID="Kpl-Cj-DXO">
+            <objects>
+                <viewController id="kIU-G4-1W5" customClass="AuthenticationContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9nK-Eh-sBm"/>
+                        <viewControllerLayoutGuide type="bottom" id="HfR-Yl-Bys"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VMt-N0-fzu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="4YF-bg-yiA" userLabel="backgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBlur_image" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-l2-15n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roseBlur_image" translatesAutoresizingMaskIntoConstraints="NO" id="auG-oI-MJZ" userLabel="Background Image Rose">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-p5-kGP">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="XeH-0U-XdI" kind="embed" id="jTL-KW-MzR"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xdt-p5-kGP" firstAttribute="width" secondItem="VMt-N0-fzu" secondAttribute="width" id="4mD-LZ-5Rp"/>
+                            <constraint firstItem="4YF-bg-yiA" firstAttribute="width" secondItem="VMt-N0-fzu" secondAttribute="width" id="7MN-y6-Oqa"/>
+                            <constraint firstItem="6rj-l2-15n" firstAttribute="height" secondItem="4YF-bg-yiA" secondAttribute="height" id="AZs-3K-dq7"/>
+                            <constraint firstItem="6rj-l2-15n" firstAttribute="centerY" secondItem="4YF-bg-yiA" secondAttribute="centerY" id="ING-mP-srp"/>
+                            <constraint firstItem="6rj-l2-15n" firstAttribute="width" secondItem="4YF-bg-yiA" secondAttribute="width" id="Lsl-mY-nuK"/>
+                            <constraint firstItem="4YF-bg-yiA" firstAttribute="centerY" secondItem="VMt-N0-fzu" secondAttribute="centerY" id="P6C-fk-k0p"/>
+                            <constraint firstItem="auG-oI-MJZ" firstAttribute="centerY" secondItem="6rj-l2-15n" secondAttribute="centerY" id="R85-NL-HL5"/>
+                            <constraint firstItem="Xdt-p5-kGP" firstAttribute="centerX" secondItem="VMt-N0-fzu" secondAttribute="centerX" id="Re0-St-eJQ"/>
+                            <constraint firstItem="auG-oI-MJZ" firstAttribute="centerX" secondItem="6rj-l2-15n" secondAttribute="centerX" id="dRd-kC-5If"/>
+                            <constraint firstItem="Xdt-p5-kGP" firstAttribute="height" secondItem="VMt-N0-fzu" secondAttribute="height" id="gh7-m7-beK"/>
+                            <constraint firstItem="4YF-bg-yiA" firstAttribute="centerX" secondItem="VMt-N0-fzu" secondAttribute="centerX" id="hdI-Ar-dRP"/>
+                            <constraint firstItem="4YF-bg-yiA" firstAttribute="height" secondItem="VMt-N0-fzu" secondAttribute="height" id="jkY-k6-hWa"/>
+                            <constraint firstItem="auG-oI-MJZ" firstAttribute="height" secondItem="6rj-l2-15n" secondAttribute="height" id="pzC-yn-1l4"/>
+                            <constraint firstItem="Xdt-p5-kGP" firstAttribute="centerY" secondItem="VMt-N0-fzu" secondAttribute="centerY" id="qkz-Qk-okU"/>
+                            <constraint firstItem="auG-oI-MJZ" firstAttribute="width" secondItem="6rj-l2-15n" secondAttribute="width" id="yVn-8P-O7W"/>
+                            <constraint firstItem="6rj-l2-15n" firstAttribute="centerX" secondItem="4YF-bg-yiA" secondAttribute="centerX" id="zGp-7q-Th2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageBlue" destination="6rj-l2-15n" id="8yG-Ty-0cd"/>
+                        <outlet property="pinkBackgroundImage" destination="auG-oI-MJZ" id="WMJ-Bd-wMz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIE-hi-nHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="121"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backgroundImage" width="375" height="667"/>
+        <image name="blueBlur_image" width="375" height="667"/>
         <image name="buttonField2_button" width="301" height="56"/>
         <image name="iconEmail_image" width="20" height="17"/>
         <image name="iconPass_image" width="20" height="20"/>
