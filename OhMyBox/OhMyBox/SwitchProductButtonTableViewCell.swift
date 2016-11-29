@@ -16,13 +16,7 @@ class SwitchProductButtonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.detailButton.layer.borderWidth = 1
-        self.detailButton.layer.borderColor = UIColor(red:184/250, green:184/250, blue:184/250, alpha: 1.0).cgColor
-    
-    
-        self.descriptionButton.layer.borderWidth = 1
-        self.descriptionButton.layer.borderColor = UIColor(red:184/250, green:184/250, blue:184/250, alpha: 1.0).cgColor
-    
+  
     
     }
     @IBAction func selectDescription(_ sender: AnyObject) {
