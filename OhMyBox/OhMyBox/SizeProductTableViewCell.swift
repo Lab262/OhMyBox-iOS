@@ -40,6 +40,7 @@ extension SizeProductTableViewCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"sizeProductCell", for: indexPath) as! SizeProductCollectionViewCell
         
         cell.titleSizeLabel.text = self.size[indexPath.row]
+        cell.circleBorder.isHidden = true
         
         return cell
         
@@ -54,16 +55,49 @@ extension SizeProductTableViewCell: UICollectionViewDataSource {
     
 }
 
-extension SizeProductTableViewCell: UICollectionViewDelegate {
+extension SizeProductTableViewCell: UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"sizeProductCell", for: indexPath) as! SizeProductCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! SizeProductCollectionViewCell
+
+        
+        cell.circleBorder.isHidden = false
+        cell.titleSizeLabel.textColor = UIColor.white
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SizeProductCollectionViewCell
+
         
+        cell.circleBorder.isHidden = true
+        cell.titleSizeLabel.textColor = UIColor.hexStringToUIColor(hex:"914CEB")
+
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        let cellWidth = 66
+        let cellCount = self.size.count
+        let cellSpacing = 0
+        
+        let totalCellWidth = cellWidth * cellCount
+        let totalSpacingWidth = cellSpacing * (cellCount - 1)
+        
+        var leftInset = ((self.window?.frame.width)! - CGFloat(totalCellWidth + totalSpacingWidth)) / 2;
+        var rightInset = leftInset
+        
+        if rightInset < 0 {
+            rightInset = 0
+        }
+        
+        if leftInset < 0 {
+            leftInset = 0
+        }
+        
+        return UIEdgeInsetsMake(5, leftInset, 0, rightInset)
+    }
 }
