@@ -55,7 +55,7 @@ extension SizeProductTableViewCell: UICollectionViewDataSource {
     
 }
 
-extension SizeProductTableViewCell: UICollectionViewDelegate {
+extension SizeProductTableViewCell: UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -78,4 +78,26 @@ extension SizeProductTableViewCell: UICollectionViewDelegate {
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        let cellWidth = 66
+        let cellCount = self.size.count
+        let cellSpacing = 0
+        
+        let totalCellWidth = cellWidth * cellCount
+        let totalSpacingWidth = cellSpacing * (cellCount - 1)
+        
+        var leftInset = ((self.window?.frame.width)! - CGFloat(totalCellWidth + totalSpacingWidth)) / 2;
+        var rightInset = leftInset
+        
+        if rightInset < 0 {
+            rightInset = 0
+        }
+        
+        if leftInset < 0 {
+            leftInset = 0
+        }
+        
+        return UIEdgeInsetsMake(5, leftInset, 0, rightInset)
+    }
 }

@@ -43,11 +43,10 @@ class AttributesTableViewCell: UITableViewCell {
      
         let colourBlueDark = Colour.init(colourid:"4", colourHex: "809BBC")
         self.colours.append(colourBlueDark)
-        self.colours.append(colourBlueDark)
-        self.colours.append(colourBlueDark)
-        self.colours.append(colourBlueDark)
-        self.colours.append(colourBlueDark)
-        self.colours.append(colourBlueDark)
+
+       // self.colours.append(colourBlueDark)
+       // self.colours.append(colourBlueDark)
+        //self.colours.append(colourBlueDark)
 
         
     }
@@ -66,7 +65,7 @@ extension AttributesTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"colorCell", for: indexPath) as! ColorCollectionViewCell
         let colour = colours[indexPath.row]
-        cell.circleColor.backgroundColor = UIColor.hexStringToUIColor(hex: colour.colourHex!)
+        cell.colourModel = colour
         cell.layoutIfNeeded()
         
         return cell
@@ -84,32 +83,11 @@ extension AttributesTableViewCell: UICollectionViewDelegate, UICollectionViewDel
     
   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       let cell = collectionView.cellForItem(at: indexPath) as! ColorCollectionViewCell
-       //let colour = colours[indexPath.row]
-       
-        //cell.roundToCircle()
-        //cell.backgroundColor = UIColor.hexStringToUIColor(hex: "989898")
-        //cell.circleInternal.roundToCircle()
-        //cell.circleInternal.backgroundColor = UIColor.hexStringToUIColor(hex: colour.colourHex!)
-        //cell.circleColor.roundToCircle()
-       // cell.circleColor.backgroundColor = .white
-        if (indexPath != self.lastIndexPath){
-            self.lastIndexPath = indexPath
+        
+        for (index,colour) in colours.enumerated() {
+                colour.isSelected = (index == indexPath.row)
         }
-      
-        cell.checkColor.isHidden = false
-    }
-    
-     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: self.lastIndexPath) as! ColorCollectionViewCell
-        
-        //let colour = colours[indexPath.row]
-        //cell.circleColor.roundToCircle()
-        //cell.circleColor.backgroundColor = UIColor.hexStringToUIColor(hex: colour.colourHex!)
-        //cell.backgroundColor = UIColor.clear
-        //cell.circleInternal.backgroundColor = UIColor.clear
-        cell.checkColor.isHidden = true 
-        
+        self.collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

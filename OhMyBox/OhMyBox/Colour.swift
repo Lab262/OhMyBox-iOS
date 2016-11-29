@@ -11,7 +11,7 @@ import UIKit
 class Colour: NSObject {
     var colourid : String?
     var colourHex : String?
-    
+    var isSelected: Bool? = false
     /** Inicializa colour
      */
     override init() {
