@@ -14,9 +14,11 @@ protocol callSegueProtocol {
 
 class ClosetTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     var identifierSegue: String?
+    var imageCloset: UIImage?
     var tagType: Int?
     var followingClothes = false
     var clothingtArray: [String]? {
@@ -62,9 +64,13 @@ extension ClosetTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowCaseCollectionViewCell.identifier, for: indexPath) as! ShowCaseCollectionViewCell
-      
+        
         cell.followingClothes = self.followingClothes
         cell.tagType = tagType
+        
+        if imageCloset != nil {
+            cell.showCaseImage.image = self.imageCloset
+        }
 
         return cell
         
@@ -120,17 +126,12 @@ extension ClosetTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = self.bounds.size.width * 0.94
-        let height = width*1.2
+        let height = width*1.25
+        
+        //1.2
         return CGSize(width: width, height: height)
         
     }
-    
-    
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        
-//    }
     
     
 }

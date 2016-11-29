@@ -10,6 +10,7 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
+    var isAutomaticLayout: Bool? = false
     @IBOutlet weak var collectionView: UICollectionView!
     static let identifier = "productCell"
     let identifierSegue = "detailProduct"
@@ -51,6 +52,7 @@ extension ProductTableViewCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShowProductCollectionViewCell.identifier, for: indexPath) as! ShowProductCollectionViewCell
         
         cell.nameProduct.text = "Enfeite Fluffy"
+       
         
         return cell
     }
@@ -86,7 +88,12 @@ extension ProductTableViewCell: UICollectionViewDelegateFlowLayout {
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            
+        
+        if isAutomaticLayout! {
+
+            return CGSize(width: self.bounds.size.width * 0.94, height: self.bounds.size.height)
+        }
+        
         let width = self.bounds.size.width * 0.94
         let height = width*1.2
         return CGSize(width: width, height: height)

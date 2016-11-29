@@ -16,6 +16,7 @@ class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var showAll: UIButton!
     
+    @IBOutlet weak var titleButtonLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

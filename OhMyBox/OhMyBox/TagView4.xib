@@ -28,7 +28,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Neon Go Coleção de duas linhas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYK-w1-5dY">
-                    <rect key="frame" x="23" y="18" width="238" height="53.5"/>
+                    <rect key="frame" x="23" y="18.5" width="238" height="53.5"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="21"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
