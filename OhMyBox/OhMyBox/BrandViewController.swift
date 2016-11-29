@@ -34,6 +34,7 @@ class BrandViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         cell.tagType = 2
+        cell.imageCloset = #imageLiteral(resourceName: "defaultBrand3_image")
         cell.delegate = self
         cell.followingClothes = false
         cell.identifierSegue = "detailBrandView"
@@ -45,6 +46,7 @@ class BrandViewController: UIViewController {
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
+        cell.imageCloset = #imageLiteral(resourceName: "defaultBrand2_image")
         cell.tagType = 2
         cell.delegate = self
         cell.followingClothes = true
@@ -57,7 +59,7 @@ class BrandViewController: UIViewController {
     func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ShowCaseBrandTableViewCell.identifier, for: indexPath) as! ShowCaseBrandTableViewCell
-        
+        cell.brandImage.image = #imageLiteral(resourceName: "defaultBrand4_image")
         
         return cell
     }
