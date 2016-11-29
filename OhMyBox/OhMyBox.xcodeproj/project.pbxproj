@@ -112,6 +112,8 @@
 		D41E8FD71DE4F28200BA3266 /* TagView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41E8FD61DE4F28200BA3266 /* TagView5.swift */; };
 		D41E8FD91DE4F28F00BA3266 /* TagView5.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41E8FD81DE4F28F00BA3266 /* TagView5.xib */; };
 		D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */; };
+		D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44066481DEE125E0053927B /* IconNavigationBar.xib */; };
+		D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44066491DEE125E0053927B /* IconNavigationBar.swift */; };
 		D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */; };
 		D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */; };
 		D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D44457F21DC7C2B200F488FE /* jaguar_brand.png */; };
@@ -289,6 +291,8 @@
 		D41E8FD61DE4F28200BA3266 /* TagView5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView5.swift; sourceTree = "<group>"; };
 		D41E8FD81DE4F28F00BA3266 /* TagView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView5.xib; sourceTree = "<group>"; };
 		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		D44066481DEE125E0053927B /* IconNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconNavigationBar.xib; sourceTree = "<group>"; };
+		D44066491DEE125E0053927B /* IconNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconNavigationBar.swift; sourceTree = "<group>"; };
 		D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseBrandTableViewCell.xib; sourceTree = "<group>"; };
 		D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseBrandTableViewCell.swift; sourceTree = "<group>"; };
 		D44457F21DC7C2B200F488FE /* jaguar_brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaguar_brand.png; sourceTree = "<group>"; };
@@ -581,6 +585,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				D44066471DEE11F70053927B /* NavigationBar */,
 				2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */,
 				A4422AD41DED003B00A2593B /* Constants */,
 				2F164F611DD64ECF00ED72DA /* Defaults */,
@@ -795,6 +800,15 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		D44066471DEE11F70053927B /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				D44066481DEE125E0053927B /* IconNavigationBar.xib */,
+				D44066491DEE125E0053927B /* IconNavigationBar.swift */,
+			);
+			name = NavigationBar;
+			sourceTree = "<group>";
+		};
 		D4A848931DE8945300E5401F /* ScaledVisibleCellsCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1006,6 +1020,7 @@
 				2F044CE71DBE41D600B54468 /* coatProduct.png in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
 				2F0777481DBD8FBF003C124F /* MeasuresUserTableViewCell.xib in Resources */,
+				D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */,
 				D402DFFF1DB68CAD007855D6 /* Brand.storyboard in Resources */,
 				D4B72A321DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib in Resources */,
 				D457D7301DC3F60900443B63 /* TagView2.xib in Resources */,
@@ -1239,6 +1254,7 @@
 				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
 				2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */,
 				D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */,
+				D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */,
 				D4C0D65E1DB6B1F2007C3113 /* TagView.swift in Sources */,
 				2F70E8371DC987AE000AB03B /* FinalPurchaseViewController.swift in Sources */,
 				2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */,
