@@ -12,7 +12,6 @@ class PresentationBrandDetailTableViewCell: UITableViewCell {
     
     static let identifier = "presentationBrandCell"
 
-    @IBOutlet weak var brandNameLabel: UILabel!
     
     
     override func awakeFromNib() {

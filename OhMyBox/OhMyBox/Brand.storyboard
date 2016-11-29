@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Axis Extrabold.otf">
-            <string>AXIS-ExtraBold</string>
-        </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
@@ -25,7 +22,7 @@
                     <tabBarItem key="tabBarItem" title="marcas" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -132,39 +129,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jaguar_brand.png" translatesAutoresizingMaskIntoConstraints="NO" id="WDr-t3-SRf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBrand_image" translatesAutoresizingMaskIntoConstraints="NO" id="WDr-t3-SRf">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="193" id="vsN-VN-26x"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailBrandTag_image" translatesAutoresizingMaskIntoConstraints="NO" id="Bai-cM-j2u">
-                                                    <rect key="frame" x="11" y="171" width="353" height="68"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Weak Br Store TAMANHO TESTE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-nf-BVK">
-                                                    <rect key="frame" x="19" y="180" width="337" height="51"/>
-                                                    <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="WDr-t3-SRf" secondAttribute="trailing" id="2GF-95-WsW"/>
-                                                <constraint firstAttribute="trailing" secondItem="Bai-cM-j2u" secondAttribute="trailing" constant="11" id="9IX-cC-cPk"/>
-                                                <constraint firstItem="zn1-nf-BVK" firstAttribute="centerY" secondItem="Bai-cM-j2u" secondAttribute="centerY" constant="0.5" id="9LM-wV-LLp"/>
-                                                <constraint firstItem="zn1-nf-BVK" firstAttribute="leading" secondItem="8ip-uN-ayl" secondAttribute="leadingMargin" constant="11" id="DnO-2E-g1c"/>
-                                                <constraint firstAttribute="bottom" secondItem="Bai-cM-j2u" secondAttribute="bottom" id="EsG-UI-klf"/>
-                                                <constraint firstItem="Bai-cM-j2u" firstAttribute="leading" secondItem="8ip-uN-ayl" secondAttribute="leading" constant="11" id="GeN-ds-EGX"/>
                                                 <constraint firstItem="WDr-t3-SRf" firstAttribute="top" secondItem="8ip-uN-ayl" secondAttribute="top" id="bJL-uZ-BPM"/>
                                                 <constraint firstItem="WDr-t3-SRf" firstAttribute="leading" secondItem="8ip-uN-ayl" secondAttribute="leading" id="dr5-BN-Wg9"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zn1-nf-BVK" secondAttribute="trailing" constant="11" id="mL6-Sa-e7s"/>
                                                 <constraint firstAttribute="bottom" secondItem="WDr-t3-SRf" secondAttribute="bottom" constant="46" id="yx0-El-GMl"/>
-                                                <constraint firstItem="zn1-nf-BVK" firstAttribute="centerX" secondItem="Bai-cM-j2u" secondAttribute="centerX" id="z6p-Sh-1Zl"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="brandNameLabel" destination="zn1-nf-BVK" id="dyh-xp-CUb"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="354" id="3b3-OZ-Mfw" customClass="ProductTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="267" width="375" height="354"/>
@@ -179,7 +157,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="352" id="loO-CF-nAC"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="yb8-Fl-BwV">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="yb8-Fl-BwV" customClass="CenterCellCollectionViewFlowLayout" customModule="OhMyBox" customModuleProvider="target">
                                                         <size key="itemSize" width="370" height="352"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -217,8 +195,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="icU-Fl-RTM" secondAttribute="trailing" constant="3" id="4qd-bz-8Fo"/>
                                                 <constraint firstItem="3Nz-L9-OaO" firstAttribute="centerX" secondItem="icU-Fl-RTM" secondAttribute="centerX" id="5Tu-iN-f2o"/>
-                                                <constraint firstItem="icU-Fl-RTM" firstAttribute="centerX" secondItem="Msc-k8-12K" secondAttribute="centerX" id="bs9-bq-bUS"/>
+                                                <constraint firstItem="icU-Fl-RTM" firstAttribute="leading" secondItem="Msc-k8-12K" secondAttribute="leadingMargin" constant="3" id="NCd-sT-4HW"/>
                                                 <constraint firstItem="3Nz-L9-OaO" firstAttribute="centerY" secondItem="icU-Fl-RTM" secondAttribute="centerY" id="dTr-ZW-SxP"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="icU-Fl-RTM" secondAttribute="bottom" constant="7" id="ik9-Vs-Hye"/>
                                                 <constraint firstItem="icU-Fl-RTM" firstAttribute="centerY" secondItem="Msc-k8-12K" secondAttribute="centerY" id="qZd-uN-gcs"/>
@@ -241,7 +220,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="408" id="uxe-jt-jrB"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="xwq-rA-G78">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="xwq-rA-G78" customClass="CenterCellCollectionViewFlowLayout" customModule="OhMyBox" customModuleProvider="target">
                                                         <size key="itemSize" width="370" height="375"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -293,7 +272,6 @@
         <image name="brandIconDeselected_button" width="34" height="26"/>
         <image name="brandIconSelected_button" width="32" height="25"/>
         <image name="containerDouble_image" width="353" height="48"/>
-        <image name="detailBrandTag_image" width="353" height="68"/>
-        <image name="jaguar_brand.png" width="6000" height="3376"/>
+        <image name="defaultBrand_image" width="375" height="297"/>
     </resources>
 </document>

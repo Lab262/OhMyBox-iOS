@@ -14,6 +14,7 @@ class DetailBrandViewController: UIViewController {
     var clotingArray: [String]?
     
     func registerNibs() {
+        
         self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
         
         self.tableView.register(UINib(nibName: "HeaderTitleSecondTypeTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleSecondTypeTableViewCell.identifier)
@@ -23,7 +24,7 @@ class DetailBrandViewController: UIViewController {
     
     func configureTableView () {
         
-        self.tableView.estimatedRowHeight = 300
+        self.tableView.estimatedRowHeight = 500
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.layoutIfNeeded()
         
@@ -137,7 +138,7 @@ extension DetailBrandViewController: UITableViewDelegate {
             let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleSecondTypeTableViewCell.identifier) as! HeaderTitleSecondTypeTableViewCell
             
             header.titleLabel.text = "DESTAQUES"
-            header.iconImage.image = UIImage(named: "iconHeaderOrange_image")
+            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
             
             header.showAll.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
 
@@ -147,7 +148,7 @@ extension DetailBrandViewController: UITableViewDelegate {
             let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleSecondTypeTableViewCell.identifier) as! HeaderTitleSecondTypeTableViewCell
             
             header.titleLabel.text = "COLEÇÕES"
-            header.iconImage.image = UIImage(named: "iconHeaderPink_image")
+            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
             
             return header
 
@@ -157,7 +158,7 @@ extension DetailBrandViewController: UITableViewDelegate {
             
             header.firstTitleLineLabel.text = "OH YEAH,"
             header.secondTitleLineLabel.text = "PROMOÇÕES!"
-            header.iconImage.image = UIImage(named: "iconHeaderPinkBlue_image")
+            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
             
             return header
             
@@ -206,7 +207,6 @@ extension DetailBrandViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PresentationBrandDetailTableViewCell.identifier, for: indexPath) as! PresentationBrandDetailTableViewCell
         
-        cell.brandNameLabel.text = "INDIE STORE"
         
         return cell
     }
@@ -224,7 +224,7 @@ extension DetailBrandViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleSecondTypeTableViewCell.identifier, for: indexPath) as! HeaderTitleSecondTypeTableViewCell
         
         cell.titleLabel.text = "COLEÇÕES"
-        cell.iconImage.image = UIImage(named: "iconHeaderPink_image")
+        cell.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
         
         return cell
     }
@@ -247,11 +247,14 @@ extension DetailBrandViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         
-        cell.tagType = 3
+        
+        cell.tagType = 0
+        cell.imageCloset = #imageLiteral(resourceName: "defaultCollection_image")
         cell.delegate = self
         cell.followingClothes = true
         cell.identifierSegue = "detailBrandView"
         cell.clothingtArray = self.clotingArray!
+        cell.layoutIfNeeded()
         
         return cell
     }
@@ -259,6 +262,9 @@ extension DetailBrandViewController {
     func generatePromotionProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
+        
+        cell.isAutomaticLayout = true
+   
         
         cell.delegate = self
         
@@ -269,6 +275,7 @@ extension DetailBrandViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
         
+        cell.isAutomaticLayout = true
         cell.delegate = self
         
         return cell

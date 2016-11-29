@@ -65,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupBarsAppearance(){
         
-        
         UIApplication.shared.statusBarStyle = .lightContent
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.isTranslucent = true
@@ -73,8 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.barTintColor =  UIColor.white
         navigationBarAppearance.backgroundColor =  UIColor.white
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
-        
-              
     }
     
 }

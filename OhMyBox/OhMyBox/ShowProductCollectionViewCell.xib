@@ -33,26 +33,12 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="containerInformationsView_image" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-Oz-Prs">
                         <rect key="frame" x="9" y="367" width="364" height="125"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-7" translatesAutoresizingMaskIntoConstraints="NO" id="nkz-lX-5Wf">
-                        <rect key="frame" x="18" y="377" width="121" height="46"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enfeite Fluffy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-kK-58K">
-                                <rect key="frame" x="0.0" y="0.0" width="121" height="33"/>
-                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by fashion store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h34-D0-feT">
-                                <rect key="frame" x="0.0" y="26" width="121" height="20"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="h34-D0-feT" firstAttribute="top" secondItem="DGF-kK-58K" secondAttribute="bottom" constant="-7" id="0Pb-sn-VzJ"/>
-                        </constraints>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Enfeite Fluffy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-kK-58K">
+                        <rect key="frame" x="20" y="378.5" width="120" height="33"/>
+                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Hez-Zf-NIe">
                         <rect key="frame" x="8" y="0.0" width="367" height="367"/>
                         <subviews>
@@ -67,7 +53,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="seY-Px-enk" firstAttribute="centerX" secondItem="Hez-Zf-NIe" secondAttribute="centerX" id="0On-Oz-A9F"/>
-                            <constraint firstItem="seY-Px-enk" firstAttribute="height" secondItem="Hez-Zf-NIe" secondAttribute="height" id="Jl6-cL-fjS"/>
+                            <constraint firstItem="seY-Px-enk" firstAttribute="height" secondItem="Hez-Zf-NIe" secondAttribute="height" id="IuC-nY-WJX"/>
+                            <constraint firstAttribute="height" constant="367" id="XMh-AY-SJY"/>
                             <constraint firstItem="seY-Px-enk" firstAttribute="centerY" secondItem="Hez-Zf-NIe" secondAttribute="centerY" id="f7z-dc-xNL"/>
                             <constraint firstItem="seY-Px-enk" firstAttribute="width" secondItem="Hez-Zf-NIe" secondAttribute="width" id="xrC-Cu-lQr"/>
                         </constraints>
@@ -77,7 +64,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrQ-U4-8vr">
-                        <rect key="frame" x="270" y="435" width="28" height="25"/>
+                        <rect key="frame" x="270" y="437.5" width="28" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="SxL-sZ-k8J"/>
                             <constraint firstAttribute="width" constant="28" id="dom-Tf-myb"/>
@@ -87,40 +74,48 @@
                             <action selector="setFavorite:" destination="crS-W9-U3m" eventType="touchUpInside" id="FUt-XJ-q6F"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-NY-TFh">
-                        <rect key="frame" x="253" y="381" width="102" height="38"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-NY-TFh">
+                        <rect key="frame" x="253.5" y="378.5" width="101.5" height="38"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="23"/>
                         <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DU7-8W-mFA">
-                        <rect key="frame" x="322" y="433" width="30" height="29"/>
+                        <rect key="frame" x="322" y="435.5" width="30" height="29"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="29" id="RS0-1S-p3m"/>
                             <constraint firstAttribute="width" constant="30" id="taS-gR-Her"/>
                         </constraints>
                         <state key="normal" image="box_button"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by fashion store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h34-D0-feT">
+                        <rect key="frame" x="20" y="412.5" width="121" height="20"/>
+                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="DU7-8W-mFA" secondAttribute="trailing" constant="23" id="64n-mr-xjp"/>
-                <constraint firstAttribute="trailing" secondItem="nf2-NY-TFh" secondAttribute="trailing" constant="20" id="7bg-ie-yis"/>
-                <constraint firstAttribute="bottom" secondItem="5r5-Oz-Prs" secondAttribute="bottom" constant="10" id="Bb3-CY-JJt"/>
-                <constraint firstItem="DU7-8W-mFA" firstAttribute="top" secondItem="nf2-NY-TFh" secondAttribute="bottom" constant="14" id="CqN-J9-4mG"/>
+                <constraint firstItem="nf2-NY-TFh" firstAttribute="top" secondItem="DGF-kK-58K" secondAttribute="top" id="9lp-AK-Y8G"/>
                 <constraint firstItem="Hez-Zf-NIe" firstAttribute="height" secondItem="crS-W9-U3m" secondAttribute="height" multiplier="0.73" id="DTh-Aa-fK0"/>
-                <constraint firstItem="FrQ-U4-8vr" firstAttribute="centerY" secondItem="DU7-8W-mFA" secondAttribute="centerY" id="HXz-l4-Xsy"/>
+                <constraint firstItem="DGF-kK-58K" firstAttribute="centerY" secondItem="5r5-Oz-Prs" secondAttribute="centerY" multiplier="0.92" id="DlF-Vh-0m2"/>
                 <constraint firstItem="5r5-Oz-Prs" firstAttribute="top" secondItem="seY-Px-enk" secondAttribute="bottom" id="IVC-ZU-Ktu"/>
-                <constraint firstItem="nkz-lX-5Wf" firstAttribute="top" secondItem="seY-Px-enk" secondAttribute="bottom" constant="10" id="Lyi-l2-xRA"/>
-                <constraint firstItem="nkz-lX-5Wf" firstAttribute="leading" secondItem="crS-W9-U3m" secondAttribute="leading" constant="18" id="Olz-uA-mg6"/>
                 <constraint firstAttribute="trailing" secondItem="Hez-Zf-NIe" secondAttribute="trailing" id="PuI-lw-ii8"/>
+                <constraint firstItem="DGF-kK-58K" firstAttribute="leading" secondItem="crS-W9-U3m" secondAttribute="leading" constant="20" id="PxN-5u-f5L"/>
+                <constraint firstItem="DU7-8W-mFA" firstAttribute="centerY" secondItem="FrQ-U4-8vr" secondAttribute="centerY" id="RSo-Oe-4ty"/>
                 <constraint firstItem="5r5-Oz-Prs" firstAttribute="width" secondItem="seY-Px-enk" secondAttribute="width" multiplier="0.99" id="UGb-go-fiY"/>
-                <constraint firstItem="5r5-Oz-Prs" firstAttribute="centerX" secondItem="seY-Px-enk" secondAttribute="centerX" constant="-1" id="VUa-7O-aTZ"/>
+                <constraint firstItem="5r5-Oz-Prs" firstAttribute="centerX" secondItem="seY-Px-enk" secondAttribute="centerX" id="VUa-7O-aTZ"/>
+                <constraint firstItem="FrQ-U4-8vr" firstAttribute="centerY" secondItem="5r5-Oz-Prs" secondAttribute="centerY" multiplier="1.05" id="Z9q-f6-Mj1"/>
+                <constraint firstAttribute="trailing" secondItem="nf2-NY-TFh" secondAttribute="trailing" constant="20" id="Zca-Qn-vZA"/>
                 <constraint firstItem="Hez-Zf-NIe" firstAttribute="top" secondItem="crS-W9-U3m" secondAttribute="top" id="aTE-pp-zcy"/>
+                <constraint firstItem="h34-D0-feT" firstAttribute="leading" secondItem="DGF-kK-58K" secondAttribute="leading" id="g6u-OL-cpZ"/>
+                <constraint firstItem="h34-D0-feT" firstAttribute="top" secondItem="DGF-kK-58K" secondAttribute="bottom" constant="1" id="hxA-Kl-YW8"/>
                 <constraint firstItem="Hez-Zf-NIe" firstAttribute="leading" secondItem="crS-W9-U3m" secondAttribute="leading" constant="8" id="lNz-p1-QxE"/>
-                <constraint firstItem="nf2-NY-TFh" firstAttribute="centerY" secondItem="nkz-lX-5Wf" secondAttribute="centerY" id="m9l-OD-lMK"/>
                 <constraint firstItem="DU7-8W-mFA" firstAttribute="leading" secondItem="FrQ-U4-8vr" secondAttribute="trailing" constant="24" id="xSD-8a-rfW"/>
+                <constraint firstAttribute="bottom" secondItem="5r5-Oz-Prs" secondAttribute="bottom" constant="10" id="xV3-WU-xXf"/>
             </constraints>
             <size key="customSize" width="267" height="420"/>
             <userDefinedRuntimeAttributes>
