@@ -89,6 +89,8 @@
 		2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */; };
 		2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */; };
 		88A6DF794C8D5276CE936DC2 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D20B1E77921CD37EE4FC5B7 /* Pods_OhMyBoxTests.framework */; };
+		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
+		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
 		A4D81D141DEBCF01008B269A /* AuthenticationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */; };
 		A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89AFC1DA806C900949A35 /* AppDelegate.swift */; };
 		A4F89AFF1DA806C900949A35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89AFE1DA806C900949A35 /* ViewController.swift */; };
@@ -259,6 +261,8 @@
 		2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountTitleTableViewCell.xib; sourceTree = "<group>"; };
 		593CC679AF27F8876E27C4DF /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
+		A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputScrollView.swift; sourceTree = "<group>"; };
+		A4422AD51DED004200A2593B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationContainerViewController.swift; sourceTree = "<group>"; };
 		A4F89AF91DA806C900949A35 /* OhMyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhMyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F89AFC1DA806C900949A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -545,6 +549,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A4422AD41DED003B00A2593B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A4422AD51DED004200A2593B /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A4F89AF01DA806C900949A35 = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */,
+				A4422AD41DED003B00A2593B /* Constants */,
 				2F164F611DD64ECF00ED72DA /* Defaults */,
 				D4E7E08C1DD4DE0200F1DE52 /* User */,
 				D4E7E0891DD4DBA300F1DE52 /* Requests */,
@@ -834,6 +847,7 @@
 				D4C0D6621DB6B32E007C3113 /* TextFieldExtension.swift */,
 				D4C0D6631DB6B32E007C3113 /* UIColorExtension.swift */,
 				D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */,
+				A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1160,6 +1174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */,
+				A4422AD61DED004200A2593B /* Colors.swift in Sources */,
 				D4C0D6671DB6B32E007C3113 /* TextFieldExtension.swift in Sources */,
 				2F225D0E1DBFEB8F009E4566 /* SizeProductCollectionViewCell.swift in Sources */,
 				D4A848921DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift in Sources */,
@@ -1205,6 +1220,7 @@
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */,
+				A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */,
 				2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */,
 				D41E8FD71DE4F28200BA3266 /* TagView5.swift in Sources */,
 				2F5DE1C21DC1386700822826 /* SwitchProductButtonTableViewCell.swift in Sources */,

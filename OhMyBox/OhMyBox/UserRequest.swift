@@ -69,11 +69,12 @@ class UserRequest: NSObject {
         }
         
     }
-    static func loginUserWithFacebook (id: String, email: String,mediaType:Int,completionHandler: @escaping (_ sucess: Bool, _ msg: String, _ user: User?) -> Void) {
+    static func loginUserWithFacebook (id: String, email: String,userName: String ,mediaType:Int,completionHandler: @escaping (_ sucess: Bool, _ msg: String, _ user: User?) -> Void) {
         
         let body = [
             "email": email,
             "socialMediaType": mediaType,
+            "name": userName,
              "socialMediaId":id,
              "password": "AQWgd$j[QGe]Bh.Ugkf>?B3y696?2$#B2xwfN3hrVhFrE348g\(id)"
             ] as [String : Any]

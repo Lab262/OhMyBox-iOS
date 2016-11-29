@@ -18,22 +18,24 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     
+    @IBOutlet weak var buttonSquare: UIView!
+    
     @IBOutlet weak var passwordTextField: UITextField!
     var dictionaryTextFields = Dictionary <String, String>()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         FBSDKLoginManager().logOut()
+        FBSDKLoginManager().logOut()
     }
-
+    
     @IBAction func loginApp(_ sender: AnyObject) {
         
         if let msgError = self.verifyInformations() {
             
             self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage: msgError), animated: true, completion: nil)
             
-          
+            
             return
         }
         self.getRequestLogin()
@@ -43,7 +45,7 @@ class LoginViewController: UIViewController {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         
         fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
-          
+            
             if error == nil {
                 self.view.loadAnimation()
                 let fbloginresult : FBSDKLoginManagerLoginResult = result!
@@ -52,21 +54,15 @@ class LoginViewController: UIViewController {
                     self.view.unload()
                     return
                 }
-                
                 if(fbloginresult.grantedPermissions.contains("email")) {
-                    
                     self.returnUserData()
-                    
                 }
             } else {
-            
+                
             }
-            
         }
-
-        
-    
     }
+    
     func returnUserData(){
         
         if((FBSDKAccessToken.current()) != nil){
@@ -74,23 +70,18 @@ class LoginViewController: UIViewController {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 
                 if (error == nil) {
-                    
-                    print(result)
-                    
                     let data:[String:AnyObject] = result as! [String : AnyObject]
+                    let userName = "\(data["first_name"] as! String) \(data["last_name"] as! String)"
                     
-                    UserRequest.loginUserWithFacebook(id: data["id"] as! String, email: data["email"] as! String,mediaType:SocialMediaType.facebook.rawValue, completionHandler: { (success, msg, user) in
+                    UserRequest.loginUserWithFacebook(id: data["id"] as! String, email: data["email"] as! String,userName: userName,mediaType:SocialMediaType.facebook.rawValue,completionHandler: { (success, msg, user) in
                         
-                            if success {
+                        if success {
                             Defaults.sharedInstance.isLogged = true
                             self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
-
-                                print (user)
-                            }else {
-                                self.view.unload()
-                                self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage: msg), animated: true, completion: nil)
-                            }                    })
-                    
+                        }else {
+                            self.view.unload()
+                            self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage: msg), animated: true, completion: nil)
+                        }                    })
                 }
             })
         }
@@ -130,10 +121,10 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
         UserRequest.loginUser(email:loginTextField.text!, pass:passwordTextField.text!) { (sucess,msg, user) in
             if (sucess){
-                  self.present( self.alertControllerActionWithTitle(msg, _withMessage:"Seja bem vindo!"), animated: true, completion: nil)
+                self.present( self.alertControllerActionWithTitle(msg, _withMessage:"Seja bem vindo!"), animated: true, completion: nil)
             }else{
                 self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage:msg), animated: true, completion: nil)
-
+                
             }
             
             
@@ -145,10 +136,55 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(title: _title, message: _message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
-             self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
+            self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
             Defaults.sharedInstance.isLogged = true
         }))
         return alert
     }
     
 }
+
+//Mark: Animations
+extension LoginViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let _ = segue.destination as? CreateAccountViewController {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.alpha = 0
+            })
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.alpha = 1
+        })
+        self.doBackgroundChangeAnimation()
+    }
+    
+    func doBackgroundChangeAnimation() {
+        
+        //Author - André Brandão
+        UIView.animate(withDuration: 5.0, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+            if self.buttonSquare.backgroundColor == UIColor.squaresButtonBlueColor {
+                
+                self.buttonSquare.backgroundColor = UIColor.squaresButtonPinkColor
+                
+            } else {
+                
+                self.buttonSquare.backgroundColor = UIColor.squaresButtonBlueColor
+            }
+            
+        }) { (finished) in
+            
+            if finished {
+                self.doBackgroundChangeAnimation()
+            }
+        }
+        
+    }
+
+}
+
