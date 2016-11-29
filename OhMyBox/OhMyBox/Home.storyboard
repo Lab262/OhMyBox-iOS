@@ -232,7 +232,7 @@
                                                                     </collectionViewFlowLayout>
                                                                     <cells>
                                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="lae-lc-XR6" customClass="ColorCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="1.5" width="60" height="60"/>
+                                                                            <rect key="frame" x="0.0" y="2" width="60" height="60"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -308,7 +308,7 @@
                                                                     </collectionViewFlowLayout>
                                                                     <cells>
                                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sizeProductCell" id="kmV-bt-lTS" customClass="SizeProductCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="-0.5" width="70" height="60"/>
+                                                                            <rect key="frame" x="0.0" y="-1" width="70" height="60"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
@@ -428,7 +428,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="TKO-PC-Ld2">
                                         <view key="customView" contentMode="scaleToFill" id="qZz-vh-pUQ">
-                                            <rect key="frame" x="97" y="5.5" width="1" height="33"/>
+                                            <rect key="frame" x="97" y="6" width="1" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -447,7 +447,7 @@
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="7Pg-AX-6QM"/>
                                     <barButtonItem style="plain" id="Dn2-WW-dpz">
                                         <view key="customView" contentMode="scaleToFill" id="p3p-fO-K1a">
-                                            <rect key="frame" x="285" y="5.5" width="1" height="33"/>
+                                            <rect key="frame" x="285" y="6" width="1" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -601,7 +601,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

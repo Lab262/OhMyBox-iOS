@@ -228,6 +228,7 @@ extension HomeViewController: UITableViewDelegate {
             case 0, 1:
                 let width = self.view.bounds.size.width * 0.94
                 let height = width*1.3
+                //1.3
                 return height
             case 2:
                 
@@ -283,7 +284,8 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         if section == 0 || section == 1 {
-            return 77
+            return 70
+            //77
         } else {
             return 0.1
         }

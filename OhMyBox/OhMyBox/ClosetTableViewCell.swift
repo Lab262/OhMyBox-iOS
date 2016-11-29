@@ -126,7 +126,9 @@ extension ClosetTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = self.bounds.size.width * 0.94
-        let height = width*1.2
+        let height = width*1.25
+        
+        //1.2
         return CGSize(width: width, height: height)
         
     }

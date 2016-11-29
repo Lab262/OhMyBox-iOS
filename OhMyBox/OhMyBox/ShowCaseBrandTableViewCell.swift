@@ -34,11 +34,19 @@ class ShowCaseBrandTableViewCell: UITableViewCell {
         if self.followButton.isSelected {
             self.followButton.isSelected = false
             self.followLabel.text = "Seguir"
+            
+            
+            
+            self.followButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
+            )
+            self.followButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
             self.followLabel.textColor = UIColor.colorWithHexString("241932")
             
         } else {
             self.followButton.isSelected = true
             self.followLabel.text = "Seguindo"
+            self.followButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn)
+            self.followButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
             self.followLabel.textColor = UIColor.white
         }
     }
