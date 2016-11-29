@@ -188,7 +188,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="140" y="29" width="95" height="21"/>
+                                                    <rect key="frame" x="143" y="29.5" width="89.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

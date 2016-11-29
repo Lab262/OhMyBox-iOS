@@ -21,8 +21,8 @@ class TagView2: UIView {
     
     override func awakeFromNib() {
     
-        self.followButton.setImage(#imageLiteral(resourceName: "follow_button"), for: .normal)
-        self.followButton.setImage(#imageLiteral(resourceName: "following_button"), for: .selected)
+        self.followButton.setImage(#imageLiteral(resourceName: "containerFollow_button"), for: .normal)
+        self.followButton.setImage(#imageLiteral(resourceName: "containerUnfollow_button"), for: .selected)
     }
     
     func setInitialButtonState() {

@@ -43,12 +43,14 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
             self.addSubview(tagView!)
             
         } else if tagType! == 2 {
-
-            self.tagView2?.center = CGPoint(x: self.frame.width/1.85, y: self.frame.height/1.10)
-            self.tagView2?.followButton.isSelected = followingClothes
-            self.tagView2?.setInitialButtonState()
             
-            self.addSubview(tagView2!)
+            let widthTagView2 = self.frame.width*0.860 // width cell / width tag
+            let heightTagView2  = widthTagView2*0.247
+
+            self.tagView2?.frame.size = CGSize(width: widthTagView2, height: heightTagView2)
+            self.tagView2?.center = CGPoint(x: self.frame.width/2.2, y: self.frame.height/1.11)
+          
+            
             
         } else if tagType! == 3 {
             
@@ -66,7 +68,7 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
         } else {
             
             let widthTagView5 = self.frame.width*0.627
-            let heightTagView5  = widthTagView5*0.289
+            let heightTagView5  = widthTagView5*0.289 //the height is 0.289 of the width size, height/widht
             
             self.tagView5?.frame.size = CGSize(width: widthTagView5, height: heightTagView5)
             self.tagView5?.center = CGPoint(x: self.frame.width/3.05, y: self.frame.height/1.08)
@@ -91,8 +93,10 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
             
             self.tagView2?.removeFromSuperview()
             self.tagView2 = TagView2.instanceFromNib() as? TagView2
- 
             
+            self.tagView2?.followButton.isSelected = followingClothes
+            self.tagView2?.setInitialButtonState()
+ 
             self.addSubview(tagView2!)
             
         } else if tagType! == 3 {

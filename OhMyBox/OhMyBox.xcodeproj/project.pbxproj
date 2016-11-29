@@ -582,7 +582,6 @@
 			isa = PBXGroup;
 			children = (
 				2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */,
-
 				A4422AD41DED003B00A2593B /* Constants */,
 				2F164F611DD64ECF00ED72DA /* Defaults */,
 				D4E7E08C1DD4DE0200F1DE52 /* User */,

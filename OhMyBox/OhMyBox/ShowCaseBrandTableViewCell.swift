@@ -25,8 +25,8 @@ class ShowCaseBrandTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.followButton.setImage(#imageLiteral(resourceName: "follow_button"), for: .normal)
-        self.followButton.setImage(#imageLiteral(resourceName: "following_button"), for: .selected)
+        self.followButton.setImage(#imageLiteral(resourceName: "containerFollow_button"), for: .normal)
+        self.followButton.setImage(#imageLiteral(resourceName: "containerUnfollow_button"), for: .selected)
     }
     
     @IBAction func clickedFollowButton(_ sender: Any) {

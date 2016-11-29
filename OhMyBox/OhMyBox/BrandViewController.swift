@@ -33,7 +33,7 @@ class BrandViewController: UIViewController {
     func generateRecommendedBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        cell.tagType = 1
+        cell.tagType = 2
         cell.delegate = self
         cell.followingClothes = false
         cell.identifierSegue = "detailBrandView"
@@ -45,7 +45,7 @@ class BrandViewController: UIViewController {
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        cell.tagType = 1
+        cell.tagType = 2
         cell.delegate = self
         cell.followingClothes = true
         cell.identifierSegue = "detailBrandView"
