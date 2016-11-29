@@ -318,10 +318,10 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
         self.viewSearch?.isHidden = true
       // self.navigationController?.isNavigationBarHidden = false
         //  self.navigationController?.isToolbarHidden = false
-        self.navigationItem.title = "OH-MY-BOX"
-        self.navigationController?.navigationItem.title = "OH-MY-BOX"
-        self.searchController.searchBar.alpha = 0
-        self.searchController.isActive = false
+       // self.navigationItem.title = "OH-MY-BOX"
+      //  self.navigationController?.navigationItem.title = "OH-MY-BOX"
+       // self.searchController.searchBar.alpha = 0
+//        self.searchController.isActive = false
 
     }
     

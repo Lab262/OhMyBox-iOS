@@ -40,6 +40,7 @@ extension SizeProductTableViewCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"sizeProductCell", for: indexPath) as! SizeProductCollectionViewCell
         
         cell.titleSizeLabel.text = self.size[indexPath.row]
+        cell.circleBorder.isHidden = true
         
         return cell
         
@@ -58,11 +59,22 @@ extension SizeProductTableViewCell: UICollectionViewDelegate {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"sizeProductCell", for: indexPath) as! SizeProductCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! SizeProductCollectionViewCell
+
+        
+        cell.circleBorder.isHidden = false
+        cell.titleSizeLabel.textColor = UIColor.white
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SizeProductCollectionViewCell
+
         
+        cell.circleBorder.isHidden = true
+        cell.titleSizeLabel.textColor = UIColor.hexStringToUIColor(hex:"914CEB")
+
     }
     
     
