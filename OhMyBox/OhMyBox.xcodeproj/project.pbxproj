@@ -99,6 +99,7 @@
 		A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F89B051DA806C900949A35 /* LaunchScreen.storyboard */; };
 		A4F89B121DA806C900949A35 /* OhMyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89B111DA806C900949A35 /* OhMyBoxTests.swift */; };
 		A8BD14BCA7DC790910C4E485 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8100773A4B12C234FA1527F /* Pods_OhMyBox.framework */; };
+		B5E771C8E3F5F78E5CDC87D5 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EAB43540D41D586857FCAA /* Pods_OhMyBox.framework */; };
 		D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFF81DB68C7F007855D6 /* Home.storyboard */; };
 		D402DFFF1DB68CAD007855D6 /* Brand.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402DFFE1DB68CAD007855D6 /* Brand.storyboard */; };
 		D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E0041DB68CE5007855D6 /* Wishlist.storyboard */; };
@@ -113,6 +114,7 @@
 		D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */; };
 		D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44066481DEE125E0053927B /* IconNavigationBar.xib */; };
 		D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44066491DEE125E0053927B /* IconNavigationBar.swift */; };
+		D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */; };
 		D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */; };
 		D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */; };
 		D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D44457F21DC7C2B200F488FE /* jaguar_brand.png */; };
@@ -292,6 +294,7 @@
 		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D44066481DEE125E0053927B /* IconNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconNavigationBar.xib; sourceTree = "<group>"; };
 		D44066491DEE125E0053927B /* IconNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconNavigationBar.swift; sourceTree = "<group>"; };
+		D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Navigation.swift"; sourceTree = "<group>"; };
 		D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseBrandTableViewCell.xib; sourceTree = "<group>"; };
 		D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseBrandTableViewCell.swift; sourceTree = "<group>"; };
 		D44457F21DC7C2B200F488FE /* jaguar_brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaguar_brand.png; sourceTree = "<group>"; };
@@ -342,6 +345,7 @@
 				2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */,
 				2F2C8E131DDD02AE0002BB87 /* FBSDKLoginKit.framework in Frameworks */,
 				2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */,
+				B5E771C8E3F5F78E5CDC87D5 /* Pods_OhMyBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,6 +856,7 @@
 			children = (
 				D4A848931DE8945300E5401F /* ScaledVisibleCellsCollectionView */,
 				2F225D031DBF04F2009E4566 /* UIColor+Util.swift */,
+				D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */,
 				2F5EEE8C1DD25EA8006D1FD9 /* UIView+IBInspector.swift */,
 				2F225D011DBF04E4009E4566 /* UIview+Util.swift */,
 				D4C0D6601DB6B32E007C3113 /* UIView+Animations.swift */,
@@ -1132,7 +1137,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A4B5CAAA1DA811FB003260BA /* Fabric */ = {
@@ -1161,7 +1166,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E1ECE27E305BFB85E65B920E /* [CP] Copy Pods Resources */ = {
@@ -1224,6 +1229,7 @@
 				D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */,
 				2F225D021DBF04E4009E4566 /* UIview+Util.swift in Sources */,
 				2F164F631DD64F7800ED72DA /* Defaults.swift in Sources */,
+				D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */,
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
 				D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */,

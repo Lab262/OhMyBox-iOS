@@ -12,14 +12,23 @@ import UIKit
 class IconNavigationBar: UIView {
 
     @IBOutlet var view: UIView!
+    @IBOutlet weak var boxButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+ //   @IBOutlet weak var leftButtonIconImage: UIImageView!
+    @IBOutlet weak var leftBarButton: UIButton!
    
+    @IBAction func leftAction(_ sender: Any) {
+        if let navController = UIApplication.topViewController()?.navigationController {
+            navController.popViewController(animated: true)
+        }
+    }
     
-//    @IBAction func leftAction(_ sender: Any) {
-//        
-//        if let navController = UIApplication.topViewController()?.navigationController {
-//            navController.popViewController(animated: true)
-//        }
-//    }
+    @IBAction func actionGoCart(_ sender: Any) {
+        UIApplication.topViewController()?.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("ShoppingBox")!, animated: true, completion: nil)
+        
+       //  self.performSegue(withIdentifier:"goCart", sender:nil)
+    }
     
     
     override init(frame: CGRect) {
@@ -28,21 +37,21 @@ class IconNavigationBar: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //self.nibInit()
+        self.nibInit()
     }
     
-//    func nibInit() {
-//        Bundle.main.loadNibNamed("IconNavigationBar", owner: self, options: nil)?[0]
-//        self.addSubview(view)
-//        view.frame = self.bounds
-//    }
+    func nibInit() {
+        Bundle.main.loadNibNamed("IconNavigationBar", owner: self, options: nil)?[0]
+        self.addSubview(view)
+        view.frame = self.bounds
+    }
 //    
-//    @IBInspectable var leftButtonIconImage: UIImage? {
+//    @IBInspectable var leftButtonIcon: UIImage? {
 //        set {
 //            self.leftButtonIconImage.image = newValue
 //        }
 //        get {
-//            return self.leftButtonIcon.image
+//            return self.leftButtonIconImage.image
 //        }
 //    }
     
@@ -65,15 +74,15 @@ class IconNavigationBar: UIView {
 //    }
 //
 //    
-//    @IBInspectable var titleLabelText: String? {
-//        set {
-//            self.titleLabel.text = newValue
-//        }
-//        get {
-//            return self.titleLabel.text
-//        }
-//    }
-//    
+    @IBInspectable var titleLabelText: String? {
+        set {
+            self.titleLabel.text = newValue
+        }
+        get {
+            return self.titleLabel.text
+        }
+    }
+    
 }
 
 

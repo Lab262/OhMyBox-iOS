@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    
+    @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
     var viewSearch: UIView?
     var searchController: UISearchController!
@@ -22,13 +24,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
-        //self.configureTableView()
         
-         let rightboxBarButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
-        
-        let rightSearchBarButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
-             navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
-        
+//         let rightboxBarButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
+//        
+//        let rightSearchBarButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
+//             navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
+//        
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
@@ -38,8 +39,21 @@ class HomeViewController: UIViewController {
      //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
     
+    
+    func configureNavigationBar() {
+     
+        self.navigationBarView.leftBarButton.isHidden = true
+        //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
+        self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
+        self.navigationBarView.layoutIfNeeded()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.configureSearchBar()
+        self.configureNavigationBar()
+        self.navigationController?.navigationBar.isHidden = true
+        
         
     }
     
