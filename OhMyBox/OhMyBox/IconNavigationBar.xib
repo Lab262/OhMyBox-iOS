@@ -27,17 +27,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="IconNavigationBar" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OH MY BOX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-DZ-yQ8">
-                    <rect key="frame" x="136" y="34" width="103" height="21"/>
+                    <rect key="frame" x="136.5" y="30" width="102.5" height="20"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blf-2Q-kqU">
-                    <rect key="frame" x="334" y="32" width="25" height="24"/>
+                    <rect key="frame" x="334" y="27.5" width="25" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Blf-2Q-kqU" secondAttribute="height" multiplier="25:24" id="UpM-HS-aIo"/>
                         <constraint firstAttribute="height" constant="24" id="x22-GM-hD9"/>
@@ -48,7 +48,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-Pk-sEt">
-                    <rect key="frame" x="294" y="33" width="20" height="22"/>
+                    <rect key="frame" x="294" y="28.5" width="20" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Mra-Pk-sEt" secondAttribute="height" multiplier="10:11" id="OWp-g9-SJ1"/>
                         <constraint firstAttribute="height" constant="22" id="djc-3N-r5b"/>
@@ -56,7 +56,7 @@
                     <state key="normal" image="searchIcon"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34E-pe-8Yc">
-                    <rect key="frame" x="16" y="35" width="9" height="18"/>
+                    <rect key="frame" x="16" y="30.5" width="9" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="34E-pe-8Yc" secondAttribute="height" multiplier="1:2" id="K0e-ou-qFR"/>
                         <constraint firstAttribute="height" constant="18" id="Wf2-V0-t7B"/>
@@ -75,11 +75,11 @@
                 <constraint firstItem="34E-pe-8Yc" firstAttribute="centerY" secondItem="zTA-DZ-yQ8" secondAttribute="centerY" id="e6R-dN-BoU"/>
                 <constraint firstItem="Mra-Pk-sEt" firstAttribute="centerY" secondItem="zTA-DZ-yQ8" secondAttribute="centerY" id="hxn-sU-EBl"/>
                 <constraint firstItem="Blf-2Q-kqU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.85" id="ufK-E6-mZ8"/>
-                <constraint firstItem="zTA-DZ-yQ8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="umj-Wo-kbA"/>
+                <constraint firstItem="zTA-DZ-yQ8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.25" id="umj-Wo-kbA"/>
                 <constraint firstItem="Blf-2Q-kqU" firstAttribute="centerY" secondItem="zTA-DZ-yQ8" secondAttribute="centerY" id="v8i-7V-uHW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="128.5" y="251"/>
+            <point key="canvasLocation" x="128.5" y="250.5"/>
         </view>
     </objects>
     <resources>

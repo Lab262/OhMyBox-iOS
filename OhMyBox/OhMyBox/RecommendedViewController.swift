@@ -9,26 +9,35 @@
 import UIKit
 
 class RecommendedViewController: UIViewController {
+    
+    @IBOutlet weak var navigationBarView: IconNavigationBar!
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
-      
         self.navigationController?.navigationBar.backItem?.title = ""
     }
     
-    func registerNib() {
-        
-        self.tableView.register(UINib(nibName: "WishTableViewCell", bundle: nil), forCellReuseIdentifier: WishTableViewCell.identifier)
-        
+    override func viewWillAppear(_ animated: Bool) {
+        self.configureNavigationBar()
     }
     
-    func generateProducteCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func registerNib(){
+        self.tableView.register(UINib(nibName: "ShowProductTableViewCell", bundle: nil), forCellReuseIdentifier: ShowProductTableViewCell.identifier)
+    }
+    
+    func configureNavigationBar() {
+       self.navigationBarView.searchButton.isHidden = true
+    }
+    
+    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: WishTableViewCell.identifier, for: indexPath) as! WishTableViewCell
-        cell.selectionStyle = .none
-       cell.productImage.image = UIImage(named:"wish_default_image")
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShowProductTableViewCell.identifier, for: indexPath) as! ShowProductTableViewCell
+        
+        cell.productImage.image = #imageLiteral(resourceName: "defaultWoman")
+        
         return cell
     }
     
@@ -48,8 +57,9 @@ extension RecommendedViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             return generateHeaderCell(tableView, cellForRowAt: indexPath)
+        
         default:
-            return generateProducteCell(tableView, cellForRowAt: indexPath)
+            return generateProductCell(tableView, cellForRowAt: indexPath)
         }
       
     }
@@ -71,12 +81,13 @@ extension RecommendedViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-            return 70
+            return 44
         default:
-            return 580
+            let width = self.view.bounds.size.width * 0.94
+            let height = width*1.3
+            //1.3
+            return height
         }
-        
-        
         
     }
     

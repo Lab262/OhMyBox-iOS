@@ -146,6 +146,8 @@
 		D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */; };
 		D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */; };
 		D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */; };
+		D4E36E951DEE74080012431F /* ShowProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */; };
+		D4E36E961DEE74080012431F /* ShowProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E36E941DEE74080012431F /* ShowProductTableViewCell.xib */; };
 		D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */; };
 		D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */; };
 		D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08D1DD4DEAD00F1DE52 /* User.swift */; };
@@ -327,6 +329,8 @@
 		D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProductTableViewCell.swift; sourceTree = "<group>"; };
+		D4E36E941DEE74080012431F /* ShowProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductTableViewCell.xib; sourceTree = "<group>"; };
 		D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		D4E7E08D1DD4DEAD00F1DE52 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -799,6 +803,8 @@
 				2F4896DD1DB72C3900EADFFE /* PromotionTableViewCell.swift */,
 				2F4896DE1DB72C3900EADFFE /* PromotionTableViewCell.xib */,
 				2F0777411DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift */,
+				D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */,
+				D4E36E941DEE74080012431F /* ShowProductTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1016,6 +1022,7 @@
 				2F2999A51DE54ECA00D52203 /* Poppins-Bold.ttf in Resources */,
 				2F70E8411DC9925C000AB03B /* ProductPurchaseTableViewCell.xib in Resources */,
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
+				D4E36E961DEE74080012431F /* ShowProductTableViewCell.xib in Resources */,
 				D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
@@ -1264,6 +1271,7 @@
 				2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */,
 				2F70E8401DC9925C000AB03B /* ProductPurchaseTableViewCell.swift in Sources */,
 				2F4896F81DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift in Sources */,
+				D4E36E951DEE74080012431F /* ShowProductTableViewCell.swift in Sources */,
 				2F225CFA1DBEE8A3009E4566 /* ColorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
