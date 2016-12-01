@@ -81,10 +81,11 @@ extension WishViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-  
-            return 582
-       
+        let width = self.view.bounds.size.width * 0.94
+        let height = width*1.3
         
+        return height
+       
     }
   
     

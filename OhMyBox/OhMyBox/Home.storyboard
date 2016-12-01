@@ -210,7 +210,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-Ds-351">
-                                                    <rect key="frame" x="130" y="283.5" width="116" height="28"/>
+                                                    <rect key="frame" x="130" y="273" width="116" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="VDx-kL-6yi"/>
                                                         <constraint firstAttribute="width" constant="116" id="c9P-s2-iCJ"/>
@@ -220,7 +220,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capa Tropical" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-cF-T4h">
-                                                    <rect key="frame" x="111.5" y="237" width="153" height="36.5"/>
+                                                    <rect key="frame" x="120" y="237" width="136" height="26"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -493,7 +493,7 @@
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B76-rR-cFm">
-                                                            <rect key="frame" x="196" y="41" width="167" height="49"/>
+                                                            <rect key="frame" x="196" y="40" width="167" height="49"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <state key="normal" title="Detalhes" backgroundImage="profile_about_button">
                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -609,7 +609,7 @@
             </objects>
             <point key="canvasLocation" x="2326" y="-1260"/>
         </scene>
-        <!--RECOMENDADOS-->
+        <!--Recommended View Controller-->
         <scene sceneID="88A-Kb-TVN">
             <objects>
                 <viewController id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -659,7 +659,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="100.5" y="6.5" width="174" height="31"/>
+                                                    <rect key="frame" x="106" y="7" width="163" height="30"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -698,14 +698,6 @@
                             <constraint firstItem="p8S-8n-96d" firstAttribute="bottom" secondItem="8mk-mP-kSC" secondAttribute="top" id="yH8-SX-Hcx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="RECOMENDADOS" id="4NX-5T-Gyj">
-                        <barButtonItem key="rightBarButtonItem" image="box_button" id="pn6-a6-aTL">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="nA4-py-4Ng" kind="presentation" id="GLb-5X-wKm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
@@ -732,7 +724,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

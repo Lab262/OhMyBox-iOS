@@ -53,8 +53,6 @@ class HomeViewController: UIViewController {
         self.configureSearchBar()
         self.configureNavigationBar()
         self.navigationController?.navigationBar.isHidden = true
-        
-        
     }
     
     func configureTableView () {

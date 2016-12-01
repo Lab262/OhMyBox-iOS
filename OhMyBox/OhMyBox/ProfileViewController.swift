@@ -11,15 +11,32 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
     var segmentButtonIndexPath = IndexPath.init(row: 1, section: 0)
     var isSegment = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationBar()
         self.registerNib()
        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func configureNavigationBar() {
+        
+        self.navigationBarView.leftBarButton.isHidden = true
+        self.navigationBarView.searchButton.isHidden = true
+        //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
+       // self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
+       
+    }
+    
+    
     
     func registerNib() {
         

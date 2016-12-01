@@ -44,7 +44,8 @@ class RecommendedViewController: UIViewController {
     func generateHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderRecommendedTableViewCell.identifier, for: indexPath) as! HeaderRecommendedTableViewCell
-        cell.selectionStyle = .none
+        
+        
       
         return cell
     }
