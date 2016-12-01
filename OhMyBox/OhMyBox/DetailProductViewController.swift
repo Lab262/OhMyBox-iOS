@@ -10,18 +10,16 @@ import UIKit
 
 class DetailProductViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
- 
-    @IBOutlet weak var boxBarButton: UIBarButtonItem!
-    @IBOutlet weak var buyButton: UIBarButtonItem!
-    @IBOutlet weak var favoriteBarButton: UIBarButtonItem!
+    @IBOutlet weak var navigationBarView: IconNavigationBar!
+    
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
     var isSelect = true
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
+        
         self.setupNavigationAppearance()
     }
     
@@ -109,18 +107,12 @@ class DetailProductViewController: UIViewController {
     func selectDetailButton (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
         
-      
-        
         cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
         
         cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
       
         cell.detailButton.setTitleColor(UIColor.white, for:UIControlState.normal)
-        cell.descriptionButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
-        
-
-        
-        
+    cell.descriptionButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
         
         self.isSelect = true
         

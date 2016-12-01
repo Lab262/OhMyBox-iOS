@@ -47,11 +47,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsw-05-hZM" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="CsA-HX-BVh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftButtonIconImage" value="ic_button_back"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Marcas"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OF2-9x-pJh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="375" id="rl7-82-d2s" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="375" id="rl7-82-d2s" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rl7-82-d2s" id="LPe-wX-Sej">
@@ -91,13 +103,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OF2-9x-pJh" firstAttribute="width" secondItem="PvB-aO-x9x" secondAttribute="width" id="1KW-ZM-7tW"/>
-                            <constraint firstItem="OF2-9x-pJh" firstAttribute="height" secondItem="PvB-aO-x9x" secondAttribute="height" id="Ufg-HS-xHs"/>
+                            <constraint firstItem="rsw-05-hZM" firstAttribute="leading" secondItem="PvB-aO-x9x" secondAttribute="leading" id="DlN-0G-WeK"/>
+                            <constraint firstAttribute="trailing" secondItem="rsw-05-hZM" secondAttribute="trailing" id="MLn-1H-RNt"/>
+                            <constraint firstItem="OF2-9x-pJh" firstAttribute="top" secondItem="rsw-05-hZM" secondAttribute="bottom" id="Uef-8W-H5L"/>
                             <constraint firstItem="OF2-9x-pJh" firstAttribute="centerX" secondItem="PvB-aO-x9x" secondAttribute="centerX" id="XdF-cW-Wfn"/>
+                            <constraint firstItem="rsw-05-hZM" firstAttribute="top" secondItem="PvB-aO-x9x" secondAttribute="top" id="Znl-Nl-7AR"/>
                             <constraint firstItem="OF2-9x-pJh" firstAttribute="centerY" secondItem="PvB-aO-x9x" secondAttribute="centerY" id="y4d-gf-ai2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Marca" id="cta-CZ-svg"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="navigationBarView" destination="rsw-05-hZM" id="5rD-C0-Wp5"/>
                         <outlet property="tableView" destination="OF2-9x-pJh" id="nag-aI-bQR"/>
                         <segue destination="AYZ-9D-ZUt" kind="show" identifier="detailBrandView" id="pHj-kN-S82"/>
                     </connections>
@@ -188,7 +205,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="140.5" y="29" width="95" height="21"/>
+                                                    <rect key="frame" x="140" y="29" width="95" height="21"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -246,11 +263,26 @@
                                     <outlet property="delegate" destination="AYZ-9D-ZUt" id="CYO-cy-odq"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DC-Eg-yja" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Rpl-2j-O24"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftButtonIconImage" value="ic_button_back"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Detalhe Marca"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hii-EO-Vbm" firstAttribute="centerX" secondItem="y7I-av-ZB9" secondAttribute="centerX" id="0I5-Fi-AVf"/>
-                            <constraint firstItem="hii-EO-Vbm" firstAttribute="height" secondItem="y7I-av-ZB9" secondAttribute="height" id="9bz-l3-8cy"/>
+                            <constraint firstItem="1DC-Eg-yja" firstAttribute="top" secondItem="y7I-av-ZB9" secondAttribute="top" id="Dmh-1S-Q50"/>
+                            <constraint firstAttribute="trailing" secondItem="1DC-Eg-yja" secondAttribute="trailing" id="GWh-K5-hk0"/>
+                            <constraint firstItem="hii-EO-Vbm" firstAttribute="height" secondItem="y7I-av-ZB9" secondAttribute="height" id="LhJ-s8-bGB"/>
+                            <constraint firstItem="1DC-Eg-yja" firstAttribute="leading" secondItem="y7I-av-ZB9" secondAttribute="leading" id="Nhf-uE-nsr"/>
                             <constraint firstItem="hii-EO-Vbm" firstAttribute="centerY" secondItem="y7I-av-ZB9" secondAttribute="centerY" id="fkJ-ge-9Re"/>
                             <constraint firstItem="hii-EO-Vbm" firstAttribute="width" secondItem="y7I-av-ZB9" secondAttribute="width" id="zWC-q1-vVj"/>
                         </constraints>
@@ -260,6 +292,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
+                        <outlet property="navigationBarView" destination="1DC-Eg-yja" id="IlK-dr-GAs"/>
                         <outlet property="tableView" destination="hii-EO-Vbm" id="Mza-Gj-VME"/>
                     </connections>
                 </viewController>
@@ -273,5 +306,7 @@
         <image name="brandIconSelected_button" width="32" height="25"/>
         <image name="containerDouble_image" width="353" height="48"/>
         <image name="defaultBrand_image" width="375" height="297"/>
+        <image name="ic_button_back" width="34" height="26"/>
+        <image name="profile_dummy" width="34" height="26"/>
     </resources>
 </document>

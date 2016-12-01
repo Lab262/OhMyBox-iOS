@@ -10,6 +10,9 @@ import UIKit
 
 class BrandViewController: UIViewController {
     
+    
+    @IBOutlet weak var navigationBarView: IconNavigationBar!
+    
     @IBOutlet weak var tableView: UITableView!
     var clotingArray: [String]?
     
@@ -19,9 +22,14 @@ class BrandViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "ShowCaseBrandTableViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseBrandTableViewCell.identifier)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavigationBar()
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
@@ -29,6 +37,13 @@ class BrandViewController: UIViewController {
         self.registerNibs()
     }
     
+    func configureNavigationBar() {
+        
+        self.navigationBarView.leftBarButton.isHidden = true
+        //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
+        //self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
+        
+    }
 
     func generateRecommendedBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
