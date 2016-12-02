@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Muli-Regular.ttf">
-            <string>Muli</string>
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderCell" rowHeight="112" id="KGk-i7-Jjw" customClass="OrderTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderCell" rowHeight="130" id="KGk-i7-Jjw" customClass="OrderTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="181"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultGloes.png" translatesAutoresizingMaskIntoConstraints="NO" id="WIk-oz-oKZ">
+                        <rect key="frame" x="15" y="12.5" width="92" height="100.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="WIk-oz-oKZ" secondAttribute="height" multiplier="126:137" id="Ac8-aS-Nvi"/>
+                            <constraint firstAttribute="width" secondItem="WIk-oz-oKZ" secondAttribute="height" multiplier="23:25" id="9uu-4J-XKP"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -38,59 +43,58 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                 <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="1"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="SAIA COLECTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drM-61-6Od">
-                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-ia-gfi">
-                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="19"/>
-                        <color key="textColor" red="0.58039215686274503" green="0.5607843137254902" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="124" y="15" width="148" height="30"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                        <color key="textColor" red="0.058823529411764705" green="0.039215686274509803" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By fashion store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY7-wp-Q4U">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="144" id="wew-WE-7oP"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="124" y="40" width="132" height="28"/>
+                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
                         <color key="textColor" red="0.48627450980392156" green="0.46274509803921571" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0h-oy-VtD">
-                        <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.45490196078431372" green="0.33725490196078434" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="i0h-oy-VtD" secondAttribute="height" multiplier="437:1" id="Re1-e1-nuJ"/>
+                            <constraint firstAttribute="height" constant="1" id="yf7-00-SZl"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 unidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cno-fC-wha">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="90" id="pCi-sN-umh"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
+                        <rect key="frame" x="126" y="76" width="92.5" height="31.5"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="19"/>
+                        <color key="textColor" red="0.58039215686274503" green="0.5607843137254902" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-ia-gfi">
+                        <rect key="frame" x="265" y="75" width="88.5" height="32"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="19"/>
                         <color key="textColor" red="0.58039215686274503" green="0.5607843137254902" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="n3p-ia-gfi" firstAttribute="baseline" secondItem="cno-fC-wha" secondAttribute="firstBaseline" id="0F4-Gc-zDp"/>
-                    <constraint firstItem="n3p-ia-gfi" firstAttribute="centerY" secondItem="cno-fC-wha" secondAttribute="centerY" constant="1.25" id="52P-0q-3EG"/>
-                    <constraint firstItem="WIk-oz-oKZ" firstAttribute="top" secondItem="i0h-oy-VtD" secondAttribute="bottom" constant="8" symbolic="YES" id="Bqy-ES-PM4"/>
-                    <constraint firstItem="i0h-oy-VtD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="DEl-ti-7Nw"/>
-                    <constraint firstItem="n3p-ia-gfi" firstAttribute="top" secondItem="cno-fC-wha" secondAttribute="top" id="Ffd-B2-a1U"/>
-                    <constraint firstItem="WY7-wp-Q4U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="55" id="GfI-aV-7CY"/>
-                    <constraint firstItem="i0h-oy-VtD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KG4-dd-lEw"/>
-                    <constraint firstItem="n3p-ia-gfi" firstAttribute="leading" secondItem="cno-fC-wha" secondAttribute="trailing" constant="-3" id="VGz-sU-4rb"/>
-                    <constraint firstItem="WIk-oz-oKZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VJd-TA-0Ed"/>
-                    <constraint firstItem="cno-fC-wha" firstAttribute="top" secondItem="WY7-wp-Q4U" secondAttribute="bottom" constant="16" id="WbF-4V-8z4"/>
-                    <constraint firstItem="WY7-wp-Q4U" firstAttribute="top" secondItem="drM-61-6Od" secondAttribute="bottom" constant="1" id="Ypd-40-bhB"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="n3p-ia-gfi" secondAttribute="trailing" constant="-8" id="aa6-lb-WdG"/>
-                    <constraint firstItem="WIk-oz-oKZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="d5l-Sq-wUy"/>
-                    <constraint firstItem="cno-fC-wha" firstAttribute="leading" secondItem="WIk-oz-oKZ" secondAttribute="trailing" constant="0.5" id="dZv-em-nqm"/>
-                    <constraint firstItem="drM-61-6Od" firstAttribute="leading" secondItem="WIk-oz-oKZ" secondAttribute="trailing" constant="8" symbolic="YES" id="n9X-6h-tnx"/>
-                    <constraint firstAttribute="trailing" secondItem="i0h-oy-VtD" secondAttribute="trailing" id="t15-yS-QET"/>
-                    <constraint firstItem="WY7-wp-Q4U" firstAttribute="leading" secondItem="WIk-oz-oKZ" secondAttribute="trailing" constant="8" symbolic="YES" id="zNU-Tw-TYH"/>
+                    <constraint firstItem="cno-fC-wha" firstAttribute="bottom" secondItem="WIk-oz-oKZ" secondAttribute="bottom" multiplier="0.95" id="1oW-6l-DST"/>
+                    <constraint firstItem="WIk-oz-oKZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.97" id="3nr-2M-qfm"/>
+                    <constraint firstItem="drM-61-6Od" firstAttribute="leading" secondItem="WIk-oz-oKZ" secondAttribute="trailing" constant="17" id="4fu-uy-12N"/>
+                    <constraint firstItem="cno-fC-wha" firstAttribute="leading" secondItem="WIk-oz-oKZ" secondAttribute="trailing" constant="19" id="SRp-sh-jEj"/>
+                    <constraint firstItem="WY7-wp-Q4U" firstAttribute="top" secondItem="drM-61-6Od" secondAttribute="bottom" constant="-5" id="Sjq-Hx-b1G"/>
+                    <constraint firstAttribute="trailing" secondItem="i0h-oy-VtD" secondAttribute="trailing" id="Uch-W9-Iks"/>
+                    <constraint firstItem="n3p-ia-gfi" firstAttribute="centerY" secondItem="cno-fC-wha" secondAttribute="centerY" id="VTS-vC-pKN"/>
+                    <constraint firstItem="WY7-wp-Q4U" firstAttribute="leading" secondItem="drM-61-6Od" secondAttribute="leading" id="XYJ-7v-XKf"/>
+                    <constraint firstItem="n3p-ia-gfi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.65" id="aIv-Ym-h7Y"/>
+                    <constraint firstItem="i0h-oy-VtD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e3i-fr-iAM"/>
+                    <constraint firstItem="WIk-oz-oKZ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.78" id="frf-r3-h2U"/>
+                    <constraint firstItem="i0h-oy-VtD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kPd-3K-mak"/>
+                    <constraint firstItem="drM-61-6Od" firstAttribute="top" secondItem="WIk-oz-oKZ" secondAttribute="top" multiplier="1.2" id="zK6-mK-IqU"/>
+                    <constraint firstItem="WIk-oz-oKZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zRz-QC-MAJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -100,7 +104,7 @@
                 <outlet property="price" destination="n3p-ia-gfi" id="fn2-vt-2Wu"/>
                 <outlet property="unitProduct" destination="cno-fC-wha" id="wQX-rO-KVC"/>
             </connections>
-            <point key="canvasLocation" x="130" y="184"/>
+            <point key="canvasLocation" x="133.5" y="153"/>
         </tableViewCell>
     </objects>
     <resources>
