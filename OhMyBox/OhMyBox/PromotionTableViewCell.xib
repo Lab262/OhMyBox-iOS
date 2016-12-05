@@ -35,7 +35,7 @@
                         <rect key="frame" x="19.5" y="133.5" width="334" height="145"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-mw-PaI">
-                        <rect key="frame" x="106" y="147" width="161.5" height="55.5"/>
+                        <rect key="frame" x="106" y="147.5" width="161.5" height="55.5"/>
                         <string key="text">Oh yeah,
 promoções!</string>
                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="23"/>
@@ -43,7 +43,7 @@ promoções!</string>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-pZ-gl9">
-                        <rect key="frame" x="123" y="216.5" width="126" height="44"/>
+                        <rect key="frame" x="123" y="219" width="126" height="44"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                         <state key="normal" title="Quero" backgroundImage="promotion_button">
                             <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,6 +52,7 @@ promoções!</string>
                 </subviews>
                 <constraints>
                     <constraint firstItem="LQ4-mw-PaI" firstAttribute="centerY" secondItem="5rX-st-1G3" secondAttribute="centerY" multiplier="0.85" id="5gz-zX-Hcf"/>
+                    <constraint firstItem="ejB-pZ-gl9" firstAttribute="centerY" secondItem="5rX-st-1G3" secondAttribute="centerY" multiplier="1.17" id="6DQ-NB-Pgo"/>
                     <constraint firstItem="XuX-y4-REV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AeG-Ha-Sl6"/>
                     <constraint firstItem="LQ4-mw-PaI" firstAttribute="centerX" secondItem="5rX-st-1G3" secondAttribute="centerX" id="EdV-IK-ZyX"/>
                     <constraint firstItem="5rX-st-1G3" firstAttribute="centerY" secondItem="XuX-y4-REV" secondAttribute="centerY" id="G5B-e3-Z65"/>
@@ -62,7 +63,6 @@ promoções!</string>
                     <constraint firstAttribute="bottomMargin" secondItem="XuX-y4-REV" secondAttribute="bottom" id="W2u-nb-GEv"/>
                     <constraint firstItem="ejB-pZ-gl9" firstAttribute="centerX" secondItem="LQ4-mw-PaI" secondAttribute="centerX" id="eQl-53-yfv"/>
                     <constraint firstItem="ejB-pZ-gl9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="115" id="hRj-dK-zMv"/>
-                    <constraint firstItem="ejB-pZ-gl9" firstAttribute="top" secondItem="LQ4-mw-PaI" secondAttribute="bottom" constant="14" id="oy2-VG-LYz"/>
                     <constraint firstItem="5rX-st-1G3" firstAttribute="centerX" secondItem="XuX-y4-REV" secondAttribute="centerX" constant="-1" id="upB-LV-jpB"/>
                 </constraints>
             </tableViewCellContentView>
