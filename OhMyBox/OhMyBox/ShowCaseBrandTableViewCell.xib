@@ -28,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="376" height="500"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z2l-u5-TN5" id="b4A-IT-6as">
-                <rect key="frame" x="0.0" y="0.0" width="376" height="499"/>
+                <rect key="frame" x="0.0" y="0.0" width="376" height="499.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jaguar_brand.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-hs-Nyj">
@@ -46,7 +46,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seguir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-gH-cRl">
-                        <rect key="frame" x="269.5" y="458" width="45" height="19"/>
+                        <rect key="frame" x="271" y="458.5" width="43.5" height="17.5"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                         </accessibility>
@@ -55,13 +55,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indie Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hur-4K-OIE">
-                        <rect key="frame" x="18" y="462.5" width="92" height="30"/>
+                        <rect key="frame" x="18" y="458" width="87.5" height="21"/>
                         <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAY CLOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-yA-QXC">
-                        <rect key="frame" x="18" y="440.5" width="107" height="30"/>
+                        <rect key="frame" x="18" y="445" width="107" height="21"/>
                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

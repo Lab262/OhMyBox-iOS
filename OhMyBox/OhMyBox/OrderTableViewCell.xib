@@ -68,14 +68,14 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 unidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cno-fC-wha">
-                        <rect key="frame" x="126" y="76" width="92.5" height="31.5"/>
-                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="19"/>
+                        <rect key="frame" x="126" y="79.5" width="139" height="28"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                         <color key="textColor" red="0.58039215686274503" green="0.5607843137254902" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-ia-gfi">
-                        <rect key="frame" x="265" y="75" width="88.5" height="32"/>
-                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="19"/>
+                        <rect key="frame" x="270" y="79" width="79" height="28"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                         <color key="textColor" red="0.58039215686274503" green="0.5607843137254902" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -89,6 +89,7 @@
                     <constraint firstAttribute="trailing" secondItem="i0h-oy-VtD" secondAttribute="trailing" id="Uch-W9-Iks"/>
                     <constraint firstItem="n3p-ia-gfi" firstAttribute="centerY" secondItem="cno-fC-wha" secondAttribute="centerY" id="VTS-vC-pKN"/>
                     <constraint firstItem="WY7-wp-Q4U" firstAttribute="leading" secondItem="drM-61-6Od" secondAttribute="leading" id="XYJ-7v-XKf"/>
+                    <constraint firstItem="n3p-ia-gfi" firstAttribute="leading" secondItem="cno-fC-wha" secondAttribute="trailing" constant="5" id="Znk-zS-EZs"/>
                     <constraint firstItem="n3p-ia-gfi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.65" id="aIv-Ym-h7Y"/>
                     <constraint firstItem="i0h-oy-VtD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e3i-fr-iAM"/>
                     <constraint firstItem="WIk-oz-oKZ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.78" id="frf-r3-h2U"/>
