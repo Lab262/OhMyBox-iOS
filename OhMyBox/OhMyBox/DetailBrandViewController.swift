@@ -55,7 +55,20 @@ class DetailBrandViewController: UIViewController {
     }
     
     func showAllFeatureds (sender: UIButton) {
+        self.performSegue(withIdentifier: "goProductsView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == "goProductsView" {
+            
+            if let destinationViewController = segue.destination as? RecommendedViewController {
+                
+                destinationViewController.isHiddenRecommendedTitle = true
+                
+            }
+        }
+
     }
 
 }
@@ -137,7 +150,7 @@ extension DetailBrandViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+       
         
     }
     
@@ -161,6 +174,7 @@ extension DetailBrandViewController: UITableViewDelegate {
             
             header.titleLabel.text = "COLEÇÕES"
             header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+            header.showAll.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
             
             return header
 
@@ -171,6 +185,7 @@ extension DetailBrandViewController: UITableViewDelegate {
             header.firstTitleLineLabel.text = "OH YEAH,"
             header.secondTitleLineLabel.text = "PROMOÇÕES!"
             header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
+            header.showAllButton.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
             
             return header
             
@@ -287,8 +302,10 @@ extension DetailBrandViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
         
+        
         cell.isAutomaticLayout = true
         cell.delegate = self
+        
         
         return cell
     }

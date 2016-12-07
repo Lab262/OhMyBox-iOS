@@ -185,9 +185,7 @@
         <!--Detail Product View Controller-->
         <scene sceneID="A6M-GZ-xLo">
             <objects>
-
                 <viewController storyboardIdentifier="detailProduct" hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
-
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SoA-AK-pD0"/>
                         <viewControllerLayoutGuide type="bottom" id="oRT-An-T9b"/>
@@ -282,7 +280,7 @@
                                                                     </collectionViewFlowLayout>
                                                                     <cells>
                                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="lae-lc-XR6" customClass="ColorCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                                                            <rect key="frame" x="50" y="18.5" width="66" height="60"/>
+                                                                            <rect key="frame" x="50" y="19" width="66" height="60"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="60"/>
@@ -397,7 +395,7 @@
                                                                     </collectionViewFlowLayout>
                                                                     <cells>
                                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sizeProductCell" id="kmV-bt-lTS" customClass="SizeProductCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="-0.5" width="68" height="60"/>
+                                                                            <rect key="frame" x="0.0" y="-1" width="68" height="60"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="60"/>
@@ -639,9 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-w8-DRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="3065" y="30"/>
-
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="iXg-BB-Gle">
@@ -709,7 +705,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="101" y="7.5" width="174" height="31"/>
+                                                    <rect key="frame" x="101" y="6.5" width="174" height="31"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -754,7 +750,6 @@
                         <outlet property="navigationBarView" destination="Zmc-b7-wbT" id="8p7-iP-BER"/>
                         <outlet property="tableView" destination="p8S-8n-96d" id="8IJ-ve-mgZ"/>
                         <segue destination="MiG-iR-diQ" kind="show" identifier="goProductDetail" id="h0O-tD-HkS"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2I-w8-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -776,7 +771,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -805,7 +800,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="XgR-lH-71A"/>
         <segue reference="h0O-tD-HkS"/>
-
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.14117647059999999" green="0.094117647060000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

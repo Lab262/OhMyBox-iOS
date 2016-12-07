@@ -11,7 +11,7 @@ import UIKit
 class RecommendedViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
-
+    var isHiddenRecommendedTitle: Bool = false
     @IBOutlet weak var tableView: UITableView!
     internal var productAllData = [String: [Product]]()
     var titleHeader = String()
@@ -63,6 +63,9 @@ extension RecommendedViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
+            if isHiddenRecommendedTitle {
+                return generateProductCell(tableView, cellForRowAt: indexPath)
+            }
             return generateHeaderCell(tableView, cellForRowAt: indexPath)
         
         default:
@@ -92,6 +95,12 @@ extension RecommendedViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
+            if isHiddenRecommendedTitle {
+                let width = self.view.bounds.size.width * 0.94
+                let height = width*1.3
+                //1.3
+                return height
+            }
             return 44
         default:
             let width = self.view.bounds.size.width * 0.94
