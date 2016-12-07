@@ -22,7 +22,7 @@
                     <tabBarItem key="tabBarItem" title="marcas" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -117,6 +117,7 @@
                         <outlet property="navigationBarView" destination="rsw-05-hZM" id="5rD-C0-Wp5"/>
                         <outlet property="tableView" destination="OF2-9x-pJh" id="nag-aI-bQR"/>
                         <segue destination="AYZ-9D-ZUt" kind="show" identifier="detailBrandView" id="pHj-kN-S82"/>
+                        <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="BYE-Rs-ycl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXX-qs-1K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +206,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="143.5" y="30" width="89.5" height="20"/>
+                                                    <rect key="frame" x="140" y="29.5" width="95" height="21"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -295,12 +296,12 @@
                         <outlet property="navigationBarView" destination="1DC-Eg-yja" id="IlK-dr-GAs"/>
                         <outlet property="tableView" destination="hii-EO-Vbm" id="Mza-Gj-VME"/>
                         <segue destination="OXc-UR-xWl" kind="show" identifier="detailProduct" id="ODc-aA-aVd"/>
-                        <segue destination="Pq7-hS-a8H" kind="show" id="Qsl-tW-DYd"/>
+                        <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="Qsl-tW-DYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3N-RD-wqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="70.164917541229386"/>
+            <point key="canvasLocation" x="1958" y="66"/>
         </scene>
         <!--RecommendedView-->
         <scene sceneID="1n4-Zs-HGf">
@@ -308,7 +309,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="RecommendedView" storyboardName="Home" referencedIdentifier="RecommendedView" id="Pq7-hS-a8H" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6QU-n4-1HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733" y="-143"/>
+            <point key="canvasLocation" x="898" y="858"/>
         </scene>
         <!--detailProduct-->
         <scene sceneID="0Gi-u0-Ppd">
@@ -327,4 +328,7 @@
         <image name="ic_button_back" width="28" height="28"/>
         <image name="profile_dummy" width="34" height="26"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BYE-Rs-ycl"/>
+    </inferredMetricsTieBreakers>
 </document>

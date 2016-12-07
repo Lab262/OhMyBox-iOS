@@ -39,9 +39,28 @@ class BrandViewController: UIViewController {
         self.registerNibs()
     }
     
+    func showAllFeatureds (sender: UIButton) {
+        self.performSegue(withIdentifier: "goProductsView", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goProductsView" {
+            
+            if let destinationViewController = segue.destination as? RecommendedViewController {
+                
+                destinationViewController.isHiddenRecommendedTitle = true
+                
+            }
+        }
+        
+    }
+    
     func configureNavigationBar() {
         
         self.navigationBarView.leftBarButton.isHidden = true
+        self.navigationBarView.searchButton.isHidden = true
         //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
         //self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
         
@@ -96,11 +115,13 @@ class BrandViewController: UIViewController {
         let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
         
         header.firstTitleLineLabel.text = "MARCAS QUE"
+        
         header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
         header.widthIconConstraint.constant = 35
         header.heightIconConstraint.constant = 21
         header.layoutIfNeeded()
         header.secondTitleLineLabel.text = "EU SIGO"
+        header.showAllButton.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
         
         return header
     }
@@ -115,6 +136,7 @@ class BrandViewController: UIViewController {
         header.heightIconConstraint.constant = 21
         header.layoutIfNeeded()
         header.secondTitleLineLabel.text = "PARA VOCÊ"
+        header.showAllButton.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
         
         return header
     }
@@ -131,7 +153,6 @@ class BrandViewController: UIViewController {
         header.layoutIfNeeded()
         header.secondTitleLineLabel.text = "AS MARCAS"
         header.titleButtonLabel.text = "Filtrar"
-        
         
         return header
     }
