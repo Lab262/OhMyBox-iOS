@@ -23,7 +23,8 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var searchBarButton: UIBarButtonItem!
     var filtered:[String] = []
     var searchActive : Bool = false
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var allProduct = [Product]()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,12 @@ class HomeViewController: UIViewController{
         self.clotingArray?.append("cloting Five")
      //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
- 
+    func initialProduct (){
+        //self.allProduct.append(Product(_id:"1", _photo:"teste", _photoImage:#imageLiteral(resourceName: "defaultGloes.png") , _price:"R$ 50", _descriptionProduc:"Bota super elegante", _detail:"aksfjkakf")
+        
+        
+    }
+    
     
     func configureNavigationBar() {
      
