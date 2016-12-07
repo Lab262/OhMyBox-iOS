@@ -13,10 +13,10 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var boxButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
-
+    var product = Product()
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
     var isSelect = true
-
+    
     
     override func viewDidLoad() {
              super.viewDidLoad()

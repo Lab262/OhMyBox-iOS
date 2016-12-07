@@ -34,7 +34,7 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y1g-1a-SW9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y1g-1a-SW9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -71,11 +71,20 @@
                     <connections>
                         <outlet property="navigationBarView" destination="idB-lx-S8i" id="Nce-kr-zDl"/>
                         <outlet property="tableView" destination="Y1g-1a-SW9" id="Kn1-Gs-icJ"/>
+                        <segue destination="mt1-m0-ImJ" kind="show" identifier="goDetailProduct" id="jJy-49-fEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NY-zN-d1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1092" y="67.916041979010501"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ii6-aW-97Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="mt1-m0-ImJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFs-eg-nmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="67"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="6z0-aT-Fa4">

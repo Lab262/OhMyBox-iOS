@@ -8,9 +8,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
     var viewSearch: UIView?
@@ -20,6 +21,9 @@ class HomeViewController: UIViewController {
     var searchButtonItem: UIBarButtonItem?
     @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
     @IBOutlet weak var searchBarButton: UIBarButtonItem!
+    var filtered:[String] = []
+    var searchActive : Bool = false
+    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,7 @@ class HomeViewController: UIViewController {
 //        
 //        let rightSearchBarButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
 //             navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
-//        
+        searchBar.delegate = self
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
@@ -38,7 +42,7 @@ class HomeViewController: UIViewController {
         self.clotingArray?.append("cloting Five")
      //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
-    
+ 
     
     func configureNavigationBar() {
      
@@ -82,13 +86,41 @@ class HomeViewController: UIViewController {
         self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
           self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailProduct" {
+            
+            if let destinationVC = segue.destination as? DetailProductViewController {
+                
+            }
+        }
+        
+        
+        if segue.identifier == "goPromotion" {
+            
+            if let destinationVC = segue.destination as? RecommendedViewController {
+                destinationVC.title = "Promoções"
+                destinationVC.titleHeader = "Promoções"
+               
+            }
+        }
+        
+        if segue.identifier == "goRecommended" {
+            
+            if let destinationVC = segue.destination as? RecommendedViewController {
+                destinationVC.title = "Recomendados"
+                destinationVC.titleHeader = "Recomendados"
+                
+            }
+        }
+        
+    }
     
     
     @IBAction func searchProducts(_ sender: AnyObject) {
-        self.showSearchBar()
+      //  self.showSearchBar()
     
     }
-    
     
     func configureSearchBar () {
         //self.searchBarButton.isEnabled = false
@@ -230,8 +262,13 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    
+        if indexPath.section == 2{
+            if indexPath.row == 0{
+                self.performSegue(withIdentifier:"goPromotion", sender:self)
+
+            }
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -325,6 +362,16 @@ extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, U
 
     }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         

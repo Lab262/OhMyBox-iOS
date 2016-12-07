@@ -13,11 +13,14 @@ class RecommendedViewController: UIViewController {
     @IBOutlet weak var navigationBarView: IconNavigationBar!
 
     @IBOutlet weak var tableView: UITableView!
+    internal var productAllData = [String: [Product]]()
+    var titleHeader = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNib()
         self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationBarView.titleLabelText = titleHeader
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +48,7 @@ class RecommendedViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderRecommendedTableViewCell.identifier, for: indexPath) as! HeaderRecommendedTableViewCell
         
-        
+        cell.headerTitleLabel.text = titleHeader
       
         return cell
     }
@@ -75,7 +78,9 @@ extension RecommendedViewController: UITableViewDataSource {
 extension RecommendedViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.row > 0{
+            self.performSegue(withIdentifier:"goProductDetail", sender:nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

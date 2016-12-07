@@ -75,6 +75,10 @@ extension WishViewController: UITableViewDataSource {
 extension WishViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let viewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Home", identifier: "detailProduct")
+        
+         self.navigationController?.pushViewController(viewController!, animated: true)
+      
         
     }
     
