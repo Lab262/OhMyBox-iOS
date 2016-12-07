@@ -41,6 +41,7 @@ class RecommendedViewController: UIViewController {
         
         cell.productImage.image = #imageLiteral(resourceName: "defaultWoman")
         
+        
         return cell
     }
     
@@ -49,6 +50,7 @@ class RecommendedViewController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderRecommendedTableViewCell.identifier, for: indexPath) as! HeaderRecommendedTableViewCell
         
         cell.headerTitleLabel.text = titleHeader
+
       
         return cell
     }
@@ -78,9 +80,11 @@ extension RecommendedViewController: UITableViewDataSource {
 extension RecommendedViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         if indexPath.row > 0{
             self.performSegue(withIdentifier:"goProductDetail", sender:nil)
         }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -96,6 +100,4 @@ extension RecommendedViewController: UITableViewDelegate {
         }
         
     }
-    
-    
 }

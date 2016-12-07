@@ -185,7 +185,9 @@
         <!--Detail Product View Controller-->
         <scene sceneID="A6M-GZ-xLo">
             <objects>
+
                 <viewController storyboardIdentifier="detailProduct" hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SoA-AK-pD0"/>
                         <viewControllerLayoutGuide type="bottom" id="oRT-An-T9b"/>
@@ -637,7 +639,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-w8-DRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-135"/>
+
+            <point key="canvasLocation" x="3065" y="30"/>
+
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="iXg-BB-Gle">
@@ -645,7 +649,7 @@
                 <viewControllerPlaceholder storyboardName="ShoppingBox" id="ibz-ad-nfE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VE-X2-oD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3872" y="-225"/>
+            <point key="canvasLocation" x="4502" y="30"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="yXG-IB-EN4">
@@ -658,7 +662,7 @@
         <!--Recommended View Controller-->
         <scene sceneID="88A-Kb-TVN">
             <objects>
-                <viewController id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommendedView" id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y8j-Ju-caw"/>
                         <viewControllerLayoutGuide type="bottom" id="8mk-mP-kSC"/>
@@ -705,7 +709,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="101" y="7" width="174" height="31"/>
+                                                    <rect key="frame" x="101" y="7.5" width="174" height="31"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -750,6 +754,7 @@
                         <outlet property="navigationBarView" destination="Zmc-b7-wbT" id="8p7-iP-BER"/>
                         <outlet property="tableView" destination="p8S-8n-96d" id="8IJ-ve-mgZ"/>
                         <segue destination="MiG-iR-diQ" kind="show" identifier="goProductDetail" id="h0O-tD-HkS"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2I-w8-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -800,6 +805,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="XgR-lH-71A"/>
         <segue reference="h0O-tD-HkS"/>
+
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.14117647059999999" green="0.094117647060000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

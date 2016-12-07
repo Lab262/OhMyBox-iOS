@@ -214,6 +214,7 @@ extension HomeViewController: UITableViewDataSource {
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
+        
         cell.delegate = self
 
         return cell
@@ -236,7 +237,7 @@ extension HomeViewController: UITableViewDataSource {
         cell.clothingtArray = self.clotingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self
-
+        
         return cell
     }
     
@@ -268,6 +269,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         if indexPath.section == 2{
             if indexPath.row == 0{
                 self.performSegue(withIdentifier:"goPromotion", sender:self)
@@ -275,12 +277,14 @@ extension HomeViewController: UITableViewDelegate {
             }
             
         }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.section {
             case 0, 1:
+
                 let width = self.view.bounds.size.width * 0.95
                 let height = width*1.3
                 //1.3
@@ -294,7 +298,7 @@ extension HomeViewController: UITableViewDelegate {
                 
                 return height
 
-                //return 396
+        
             case 3:
                 return 50
             default:

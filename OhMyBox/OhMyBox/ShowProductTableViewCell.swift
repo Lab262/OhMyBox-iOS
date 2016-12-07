@@ -19,12 +19,12 @@ class ShowProductTableViewCell: UITableViewCell {
     @IBOutlet weak var valueProductLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var boxButton: UIButton!
-    
-    
+     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.initializeStatesButtons()
     }
+
 
     func initializeStatesButtons() {
         
