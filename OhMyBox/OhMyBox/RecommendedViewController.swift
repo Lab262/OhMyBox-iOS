@@ -36,6 +36,7 @@ class RecommendedViewController: UIViewController {
        self.navigationBarView.searchButton.isHidden = true
     }
     
+    
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ShowProductTableViewCell.identifier, for: indexPath) as! ShowProductTableViewCell

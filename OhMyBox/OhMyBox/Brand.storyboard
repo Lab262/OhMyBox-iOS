@@ -117,6 +117,7 @@
                         <outlet property="navigationBarView" destination="rsw-05-hZM" id="5rD-C0-Wp5"/>
                         <outlet property="tableView" destination="OF2-9x-pJh" id="nag-aI-bQR"/>
                         <segue destination="AYZ-9D-ZUt" kind="show" identifier="detailBrandView" id="pHj-kN-S82"/>
+                        <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="BYE-Rs-ycl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXX-qs-1K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3N-RD-wqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="70.164917541229386"/>
+            <point key="canvasLocation" x="1958" y="66"/>
         </scene>
         <!--RecommendedView-->
         <scene sceneID="1n4-Zs-HGf">
@@ -308,7 +309,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="RecommendedView" storyboardName="Home" referencedIdentifier="RecommendedView" id="Pq7-hS-a8H" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6QU-n4-1HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733" y="-143"/>
+            <point key="canvasLocation" x="898" y="858"/>
         </scene>
         <!--detailProduct-->
         <scene sceneID="0Gi-u0-Ppd">
@@ -327,4 +328,7 @@
         <image name="ic_button_back" width="28" height="28"/>
         <image name="profile_dummy" width="34" height="26"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BYE-Rs-ycl"/>
+    </inferredMetricsTieBreakers>
 </document>
