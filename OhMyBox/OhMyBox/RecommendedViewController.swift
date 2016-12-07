@@ -33,6 +33,7 @@ class RecommendedViewController: UIViewController {
     
     func configureNavigationBar() {
        self.navigationBarView.searchButton.isHidden = true
+       self.navigationBarView.searchButton.isHidden = true
     }
     
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

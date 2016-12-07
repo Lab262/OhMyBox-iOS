@@ -42,6 +42,7 @@ class BrandViewController: UIViewController {
     func configureNavigationBar() {
         
         self.navigationBarView.leftBarButton.isHidden = true
+        self.navigationBarView.searchButton.isHidden = true
         //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
         //self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
         
