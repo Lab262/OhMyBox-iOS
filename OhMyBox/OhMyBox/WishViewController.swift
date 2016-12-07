@@ -24,7 +24,9 @@ class WishViewController: UIViewController {
         self.configureNavigationBar()
        
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     func configureNavigationBar() {
         
         self.navigationBarView.leftBarButton.isHidden = true
@@ -65,7 +67,7 @@ extension WishViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return ApplicationState.sharedInstance.favoriteProducts.count
     }
     
    

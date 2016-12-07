@@ -24,8 +24,8 @@ let TOKEN = ["token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRtYjA3
 class ApplicationState: NSObject {
     
 //    var allReadings = [Reading]()
-//    var favoriteReads = [Reading]()
-//    var unreadReadings = [Reading]()
+        var favoriteProducts = [Product]()
+        var cartProducts   = [Product]()
 //    var currentUser: User?
     
     static let sharedInstance : ApplicationState = {

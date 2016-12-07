@@ -36,6 +36,9 @@ class ShowProductCollectionViewCell: UICollectionViewCell {
     
     @IBAction func setFavorite(_ sender: AnyObject) {
         self.changeFavoriteButtonState()
+       let product = Product.init(_id:"1", _photo:"", _photoImage:#imageLiteral(resourceName: "defaultWoman"), _price:"R$ 50", _descriptionProduc:"teste", _detail:"aslkfjalksfj ")
+        
+        ApplicationState.sharedInstance.favoriteProducts.append(product)
     }
     
     func changeFavoriteButtonState() {
