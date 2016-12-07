@@ -29,7 +29,9 @@ class BrandViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.configureNavigationBar()
+        
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
@@ -61,6 +63,7 @@ class BrandViewController: UIViewController {
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
+        
         cell.imageCloset = #imageLiteral(resourceName: "defaultBrand2_image")
         cell.tagType = 2
         cell.delegate = self
@@ -194,7 +197,7 @@ extension BrandViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 77
+        return 70
     }
     
     

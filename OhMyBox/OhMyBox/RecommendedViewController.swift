@@ -38,14 +38,13 @@ class RecommendedViewController: UIViewController {
         
         cell.productImage.image = #imageLiteral(resourceName: "defaultWoman")
         
+        
         return cell
     }
     
     func generateHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderRecommendedTableViewCell.identifier, for: indexPath) as! HeaderRecommendedTableViewCell
-        
-        
       
         return cell
     }
@@ -75,7 +74,7 @@ extension RecommendedViewController: UITableViewDataSource {
 extension RecommendedViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.performSegue(withIdentifier:"detailProduct", sender:self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -91,6 +90,4 @@ extension RecommendedViewController: UITableViewDelegate {
         }
         
     }
-    
-    
 }

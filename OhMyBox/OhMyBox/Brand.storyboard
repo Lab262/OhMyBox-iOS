@@ -205,7 +205,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="140" y="29" width="95" height="21"/>
+                                                    <rect key="frame" x="143.5" y="30" width="89.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -294,11 +294,29 @@
                     <connections>
                         <outlet property="navigationBarView" destination="1DC-Eg-yja" id="IlK-dr-GAs"/>
                         <outlet property="tableView" destination="hii-EO-Vbm" id="Mza-Gj-VME"/>
+                        <segue destination="OXc-UR-xWl" kind="show" identifier="detailProduct" id="ODc-aA-aVd"/>
+                        <segue destination="Pq7-hS-a8H" kind="show" id="Qsl-tW-DYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3N-RD-wqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860" y="70.164917541229386"/>
+        </scene>
+        <!--RecommendedView-->
+        <scene sceneID="1n4-Zs-HGf">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RecommendedView" storyboardName="Home" referencedIdentifier="RecommendedView" id="Pq7-hS-a8H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QU-n4-1HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733" y="-143"/>
+        </scene>
+        <!--DetailProduct-->
+        <scene sceneID="0Gi-u0-Ppd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="DetailProduct" id="OXc-UR-xWl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJm-io-jFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2875" y="71"/>
         </scene>
     </scenes>
     <resources>
@@ -306,7 +324,7 @@
         <image name="brandIconSelected_button" width="32" height="25"/>
         <image name="containerDouble_image" width="353" height="48"/>
         <image name="defaultBrand_image" width="375" height="297"/>
-        <image name="ic_button_back" width="34" height="26"/>
+        <image name="ic_button_back" width="28" height="28"/>
         <image name="profile_dummy" width="34" height="26"/>
     </resources>
 </document>

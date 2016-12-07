@@ -176,6 +176,7 @@ extension HomeViewController: UITableViewDataSource {
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
+        
         cell.delegate = self
 
         return cell
@@ -198,7 +199,7 @@ extension HomeViewController: UITableViewDataSource {
         cell.clothingtArray = self.clotingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self
-
+        
         return cell
     }
     
@@ -231,7 +232,7 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-    
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -239,6 +240,7 @@ extension HomeViewController: UITableViewDelegate {
         switch indexPath.section {
             case 0, 1:
                 let width = self.view.bounds.size.width * 0.94
+                
                 let height = width*1.3
                 //1.3
                 return height

@@ -13,7 +13,7 @@ class ProductTableViewCell: UITableViewCell {
     var isAutomaticLayout: Bool? = false
     @IBOutlet weak var collectionView: UICollectionView!
     static let identifier = "productCell"
-    let identifierSegue = "detailProduct"
+    let segueIdentifier = "detailProduct"
 
     var delegate : callSegueProtocol?
     
@@ -68,7 +68,7 @@ extension ProductTableViewCell: UICollectionViewDataSource {
 extension ProductTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.callViewController(segueIndentifier: identifierSegue)
+        self.delegate?.callViewController(segueIndentifier: segueIdentifier)
     }
     
 }

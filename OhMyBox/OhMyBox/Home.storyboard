@@ -171,7 +171,7 @@
         <!--Detail Product View Controller-->
         <scene sceneID="A6M-GZ-xLo">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailProduct" hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SoA-AK-pD0"/>
                         <viewControllerLayoutGuide type="bottom" id="oRT-An-T9b"/>
@@ -220,7 +220,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capa Tropical" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-cF-T4h">
-                                                    <rect key="frame" x="120" y="237" width="136" height="26"/>
+                                                    <rect key="frame" x="120.5" y="237" width="135.5" height="26"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -591,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-w8-DRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063.1999999999998" y="-225.78710644677662"/>
+            <point key="canvasLocation" x="3065" y="30"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="iXg-BB-Gle">
@@ -599,7 +599,7 @@
                 <viewControllerPlaceholder storyboardName="ShoppingBox" id="ibz-ad-nfE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VE-X2-oD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3872" y="-225"/>
+            <point key="canvasLocation" x="4502" y="30"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="yXG-IB-EN4">
@@ -612,7 +612,7 @@
         <!--Recommended View Controller-->
         <scene sceneID="88A-Kb-TVN">
             <objects>
-                <viewController id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommendedView" id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y8j-Ju-caw"/>
                         <viewControllerLayoutGuide type="bottom" id="8mk-mP-kSC"/>
@@ -659,7 +659,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="106" y="7" width="163" height="30"/>
+                                                    <rect key="frame" x="100.5" y="6.5" width="174" height="31"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -703,6 +703,7 @@
                     <connections>
                         <outlet property="navigationBarView" destination="Zmc-b7-wbT" id="8p7-iP-BER"/>
                         <outlet property="tableView" destination="p8S-8n-96d" id="8IJ-ve-mgZ"/>
+                        <segue destination="MiG-iR-diQ" kind="show" identifier="detailProduct" id="bcF-ic-uIs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2I-w8-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -724,7 +725,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -750,5 +751,8 @@
         <image name="profile_dummy" width="13" height="21"/>
         <image name="profile_mydata_button" width="167" height="49"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bcF-ic-uIs"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.14117647059999999" green="0.094117647060000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -71,6 +71,7 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
             let heightTagView5  = widthTagView5*0.289 //the height is 0.289 of the width size, height/widht
             
             self.tagView5?.frame.size = CGSize(width: widthTagView5, height: heightTagView5)
+            
             self.tagView5?.center = CGPoint(x: self.frame.width/3.05, y: self.frame.height/1.08)
             self.tagView5?.nameTagLabel.text = "VERÃO DE SAIAS"
             self.tagView5?.layoutIfNeeded()
