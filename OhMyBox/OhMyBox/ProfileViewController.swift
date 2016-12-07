@@ -31,9 +31,6 @@ class ProfileViewController: UIViewController {
         
         self.navigationBarView.leftBarButton.isHidden = true
         self.navigationBarView.searchButton.isHidden = true
-        //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
-       // self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
-       
     }
     
     
@@ -141,10 +138,9 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.firstTitleLineLabel.text = "DADOS"
                         cell.secondTitleLineLabel.text = "DE COMPRA"
                         cell.iconImage.image = UIImage(named:"textureText1")
-                        cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
-                        cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
-
-                        cell.selectionStyle = .none
+                        cell.titleButtonLabel.text = "Editar"
+                        cell.showAllButton.isHidden = false
+                     
                     
                         return cell
                     
@@ -152,7 +148,7 @@ extension ProfileViewController: UITableViewDataSource {
                         let cell = tableView.dequeueReusableCell(withIdentifier: DataUserTextFieldTableViewCell.identifier, for: indexPath) as! DataUserTextFieldTableViewCell
                         cell.nameFieldLabel.text = "Cartão"
                         cell.infoUserLabel.text = "*****-3336"
-                        cell.selectionStyle = .none
+                        
                     
                     
                         return cell
@@ -173,9 +169,9 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.secondTitleLineLabel.text = "PRECISA SABER"
                         cell.iconImage.image = UIImage(named:"icon_header_profile")
                         cell.selectionStyle = .none
-                    cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
-
-                        return cell
+                        cell.titleButtonLabel.text = ""
+                        cell.showAllButton.isHidden = true
+                    return cell
                     
                 }else if indexPath.row == 1 {
                         let cell = tableView.dequeueReusableCell(withIdentifier: TermTableViewCell.identifier, for: indexPath) as! TermTableViewCell
@@ -210,9 +206,11 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.firstTitleLineLabel.text = "MINHAS"
                         cell.secondTitleLineLabel.text = "MEDIDAS"
                         cell.iconImage.image = UIImage(named:"textureText2")
-                        cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
-                        cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
+                        cell.showAllButton.isHidden = false
+                        cell.titleButtonLabel.text = "Editar"
+                        
 
+                        
                         cell.selectionStyle = .none
                     
                         return cell
@@ -254,17 +252,15 @@ extension ProfileViewController: UITableViewDataSource {
                         cell.firstTitleLineLabel.text = "OLHA"
                         cell.secondTitleLineLabel.text = "A GENTE"
                         cell.iconImage.image = UIImage(named:"icon_header_profile")
-                        cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
-                        cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
-
-                        cell.selectionStyle = .none
+                        cell.titleButtonLabel.text = ""
+                        cell.showAllButton.isHidden = true
                     
                         return cell
                     
                 }else if indexPath.row == 1{
                         let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextTableViewCell.identifier, for: indexPath) as! SimpleTextTableViewCell
                         cell.simpleTitleLabel.text = "SOBRE O OH MY BOX"
-                        cell.selectionStyle = .none
+                    
                     
                         return cell
                     

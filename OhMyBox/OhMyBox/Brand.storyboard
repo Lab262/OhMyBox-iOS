@@ -22,7 +22,7 @@
                     <tabBarItem key="tabBarItem" title="marcas" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -60,7 +60,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OF2-9x-pJh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="closetCell" rowHeight="375" id="rl7-82-d2s" customClass="ClosetTableViewCell" customModule="OhMyBox" customModuleProvider="target">
@@ -108,7 +108,7 @@
                             <constraint firstItem="OF2-9x-pJh" firstAttribute="top" secondItem="rsw-05-hZM" secondAttribute="bottom" id="Uef-8W-H5L"/>
                             <constraint firstItem="OF2-9x-pJh" firstAttribute="centerX" secondItem="PvB-aO-x9x" secondAttribute="centerX" id="XdF-cW-Wfn"/>
                             <constraint firstItem="rsw-05-hZM" firstAttribute="top" secondItem="PvB-aO-x9x" secondAttribute="top" id="Znl-Nl-7AR"/>
-                            <constraint firstItem="OF2-9x-pJh" firstAttribute="centerY" secondItem="PvB-aO-x9x" secondAttribute="centerY" id="y4d-gf-ai2"/>
+                            <constraint firstItem="OF2-9x-pJh" firstAttribute="centerY" secondItem="PvB-aO-x9x" secondAttribute="centerY" constant="7.5" id="y4d-gf-ai2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Marca" id="cta-CZ-svg"/>
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXX-qs-1K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="71"/>
+            <point key="canvasLocation" x="856.79999999999995" y="70.614692653673174"/>
         </scene>
         <!--Nome da Marca-->
         <scene sceneID="mYO-VF-44n">

@@ -239,8 +239,8 @@ extension HomeViewController: UITableViewDelegate {
         
         switch indexPath.section {
             case 0, 1:
-                let width = self.view.bounds.size.width * 0.94
-                
+
+                let width = self.view.bounds.size.width * 0.95
                 let height = width*1.3
                 //1.3
                 return height
@@ -253,7 +253,7 @@ extension HomeViewController: UITableViewDelegate {
                 
                 return height
 
-                //return 396
+        
             case 3:
                 return 50
             default:

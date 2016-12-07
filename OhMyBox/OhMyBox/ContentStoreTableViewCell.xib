@@ -1,93 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Muli-Light.ttf">
-            <string>Muli-Light</string>
-        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli</string>
+        </array>
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contentStoreViewCell" rowHeight="150" id="KGk-i7-Jjw" customClass="ContentStoreTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="378" height="150"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contentStoreViewCell" rowHeight="104" id="KGk-i7-Jjw" customClass="ContentStoreTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="378" height="149"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhr-da-lfA">
+                        <rect key="frame" x="0.0" y="1" width="375" height="88"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Fashion Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfB-on-VE9">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="zMz-pg-1Yb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAY CLOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XA6-Qh-sVo">
+                                <rect key="frame" x="10" y="11.5" width="107" height="30"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go your style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXr-Lh-Gl4">
-                                <frame key="frameInset" minX="8" minY="46" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indie Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t0-YI-cD7">
+                                <rect key="frame" x="10" y="32" width="92" height="30"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK0-7Q-Hbd">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="EK0-7Q-Hbd" secondAttribute="height" multiplier="98:47" id="PJY-op-2Jo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="seguir">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePi-j7-KRC">
+                                <rect key="frame" x="244" y="14" width="112" height="42"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="containerFollow_button"/>
+                                <connections>
+                                    <action selector="clickedFollowButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YwS-UF-Xvk"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seguir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-U5-g9A">
+                                <rect key="frame" x="277.5" y="25.5" width="45" height="19"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="EK0-7Q-Hbd" firstAttribute="leading" secondItem="tfB-on-VE9" secondAttribute="trailing" constant="31" id="9ry-Gq-JKl"/>
-                            <constraint firstItem="EK0-7Q-Hbd" firstAttribute="trailing" secondItem="hhr-da-lfA" secondAttribute="trailingMargin" id="B10-4Y-FxZ"/>
-                            <constraint firstItem="EK0-7Q-Hbd" firstAttribute="centerY" secondItem="hhr-da-lfA" secondAttribute="centerY" id="Hl4-Qk-VmF"/>
-                            <constraint firstItem="EK0-7Q-Hbd" firstAttribute="top" secondItem="hhr-da-lfA" secondAttribute="top" constant="17" id="NFa-xC-emk"/>
-                            <constraint firstAttribute="width" constant="343" id="PwR-w4-Kjm"/>
-                            <constraint firstItem="tfB-on-VE9" firstAttribute="top" secondItem="hhr-da-lfA" secondAttribute="top" constant="13" id="SxO-gi-NQw"/>
-                            <constraint firstAttribute="height" constant="80" id="gf2-TA-7BW"/>
-                            <constraint firstItem="tfB-on-VE9" firstAttribute="leading" secondItem="hhr-da-lfA" secondAttribute="leadingMargin" id="wNn-lZ-VAq"/>
+                            <constraint firstItem="3t0-YI-cD7" firstAttribute="top" secondItem="XA6-Qh-sVo" secondAttribute="bottom" multiplier="0.75" id="ASx-b9-3Og"/>
+                            <constraint firstItem="3t0-YI-cD7" firstAttribute="leading" secondItem="XA6-Qh-sVo" secondAttribute="leading" id="EwK-9d-BYE"/>
+                            <constraint firstItem="ePi-j7-KRC" firstAttribute="centerY" secondItem="hhr-da-lfA" secondAttribute="centerY" multiplier="0.8" id="QHa-V6-amm"/>
+                            <constraint firstItem="XA6-Qh-sVo" firstAttribute="leading" secondItem="hhr-da-lfA" secondAttribute="leading" constant="10" id="a76-IJ-GXt"/>
+                            <constraint firstItem="KWA-U5-g9A" firstAttribute="centerY" secondItem="ePi-j7-KRC" secondAttribute="centerY" id="d7W-vw-SjM"/>
+                            <constraint firstItem="XA6-Qh-sVo" firstAttribute="centerY" secondItem="hhr-da-lfA" secondAttribute="centerY" multiplier="0.6" id="fwq-3m-4g8"/>
+                            <constraint firstItem="ePi-j7-KRC" firstAttribute="centerX" secondItem="hhr-da-lfA" secondAttribute="centerX" multiplier="1.6" id="lIl-dE-bBk"/>
+                            <constraint firstItem="KWA-U5-g9A" firstAttribute="centerX" secondItem="ePi-j7-KRC" secondAttribute="centerX" id="r3u-zD-woe"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="hhr-da-lfA" secondAttribute="trailing" constant="9" id="DFH-Mi-T8S"/>
-                    <constraint firstItem="hhr-da-lfA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="FCD-Kq-HTx"/>
-                    <constraint firstItem="hhr-da-lfA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="No5-93-ghw"/>
+                    <constraint firstItem="hhr-da-lfA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Wj-YJ-f3d"/>
+                    <constraint firstItem="hhr-da-lfA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="aYD-ms-tRt"/>
+                    <constraint firstItem="hhr-da-lfA" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.99" id="cSB-bu-QsB"/>
+                    <constraint firstItem="hhr-da-lfA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="oEa-Kv-w0f"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="backgroundContent" destination="hhr-da-lfA" id="o1h-Pj-nE1"/>
-                <outlet property="followButton" destination="EK0-7Q-Hbd" id="3QC-yu-nnm"/>
-                <outlet property="nameStore" destination="tfB-on-VE9" id="Zdi-W4-sLv"/>
-                <outlet property="phraseStore" destination="HXr-Lh-Gl4" id="GOr-sN-adi"/>
+                <outlet property="followButton" destination="ePi-j7-KRC" id="s9r-c4-aQW"/>
+                <outlet property="followLabel" destination="KWA-U5-g9A" id="q9J-7y-Oll"/>
+                <outlet property="nameStore" destination="XA6-Qh-sVo" id="3ma-H4-4Xj"/>
+                <outlet property="phraseStore" destination="3t0-YI-cD7" id="Z03-Bt-Q8e"/>
             </connections>
-            <point key="canvasLocation" x="167" y="97"/>
+            <point key="canvasLocation" x="163.5" y="88"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="containerFollow_button" width="112" height="42"/>
+    </resources>
 </document>

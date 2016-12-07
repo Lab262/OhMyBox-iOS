@@ -11,18 +11,84 @@ import UIKit
 class DetailProductViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBarView: IconNavigationBar!
-    
+    @IBOutlet weak var boxButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
+
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
     var isSelect = true
 
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+             super.viewDidLoad()
         self.registerNib()
         
+       self.initializeStatesButtons()
         self.setupNavigationAppearance()
+        self.setConfigurationBar()
     }
     
+    func setConfigurationBar() {
+        self.navigationBarView.searchButton.isHidden = true
+        self.navigationBarView.titleLabel.text = ""
+    }
+    func initializeStatesButtons() {
+        
+        self.likeButton.setImage(#imageLiteral(resourceName: "heartEmpty_button"), for: .normal)
+        self.likeButton.setImage(#imageLiteral(resourceName: "heartFull_button"), for: .selected)
+        
+        self.boxButton.setImage(#imageLiteral(resourceName: "box_button"), for: .normal)
+        self.boxButton.setImage(#imageLiteral(resourceName: "boxSelected_button"), for: .selected)
+    }
+    
+    
+    @IBAction func addToCart(_ sender: Any) {
+        self.changeBoxButtonState()
+    }
+    
+    @IBAction func setFavorite(_ sender: Any) {
+        self.changeFavoriteButtonState()
+        
+    }
+    
+    func changeFavoriteButtonState() {
+        if self.likeButton.isSelected {
+            self.likeButton.isSelected = false
+            
+            self.likeButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
+            )
+            self.likeButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
+            
+            
+        } else {
+            self.likeButton.isSelected = true
+            
+            self.likeButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
+            )
+            self.likeButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
+        }
+    }
+
+    func changeBoxButtonState() {
+        
+        if self.boxButton.isSelected {
+            self.boxButton.isSelected = false
+            
+            self.boxButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
+            )
+            self.boxButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
+            
+            
+        } else {
+            self.boxButton.isSelected = true
+            
+            self.boxButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
+            )
+            self.boxButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
+        }
+        
+    }
+
+
     func registerNib() {
         
         self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
@@ -186,7 +252,7 @@ extension DetailProductViewController: UITableViewDelegate {
         case 4:
             return 300
         case 5 :
-            return 100
+            return 88
         case 6:
             return 100 
             

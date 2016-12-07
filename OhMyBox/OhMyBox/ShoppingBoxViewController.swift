@@ -18,7 +18,7 @@ class ShoppingBoxViewController: UIViewController {
     var isActiveBox = true
     @IBOutlet weak var boxButton: UIButton!
     @IBOutlet weak var orderButton: UIButton!
-    var productsMail: [String] = ["joia"]
+    var productsMail: [String] = ["joia", "camisa"]
     var productsOrdersStorage: [String] = ["joia","calça","roupa"]
     @IBAction func buyAction(_ sender: AnyObject) {
         performSegue(withIdentifier:"segueFinalPurchase", sender:self)
@@ -107,7 +107,7 @@ class ShoppingBoxViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: StatusOrderTableViewCell.identifier, for: indexPath) as! StatusOrderTableViewCell
         cell.isEditing = false
-        if (indexPath.row==5){
+        if indexPath.row == self.productsOrdersStorage.count+self.productsMail.count+1 {
             cell.footContentView.backgroundColor = UIColor.hexStringToUIColor(hex:"ff8591")
              cell.headContentView.backgroundColor = UIColor.hexStringToUIColor(hex:"ffeeef")
             
@@ -131,11 +131,11 @@ extension ShoppingBoxViewController: UITableViewDataSource {
             return self.generateShoppingCell(tableView, cellForRowAt:indexPath)
         }else {
             //self.buyShopBar.isHidden = true
-            if (indexPath.row == 3){
+            if (indexPath.row == self.productsOrdersStorage.count){
                 return self.generateStatusCell(tableView, cellForRowAt:indexPath)
             }
             
-            if (indexPath.row == 5){
+            if (indexPath.row == self.productsOrdersStorage.count+self.productsMail.count+1){
                 return self.generateStatusCell(tableView, cellForRowAt:indexPath)
             }
             return self.generateOrderCell(tableView, cellForRowAt:indexPath)
@@ -168,19 +168,29 @@ extension ShoppingBoxViewController: UITableViewDelegate {
     }
     
     
+ 
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if (self.isActiveBox == true){
             return 150
-        }else if (self.productsOrdersStorage.count+1==indexPath.row){
-            return 200
-        }else if (self.productsMail.count+1==indexPath.row){
-            return 200
+            
         }
         
-        return 200
-        
-        
+        if (self.productsOrdersStorage.count>indexPath.row){
+            let height = self.view.bounds.size.width * 0.348
+            return height
+            
+        } else if self.productsOrdersStorage.count == indexPath.row {
+                       return 200
+            
+        } else if self.productsOrdersStorage.count+self.productsMail.count+1 > indexPath.row {
+            let height = self.view.bounds.size.width * 0.348
+            return height
+        } else {
+            return 200
+        }
+    
         
     }
     

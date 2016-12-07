@@ -36,7 +36,7 @@ class FinalPurchaseViewController: UIViewController {
         self.tableView.register(UINib(nibName: "HeaderFinalPurchaseTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderFinalPurchaseTableViewCell.identifier)
         
         
-        self.tableView.register(UINib(nibName: "ProductPurchaseTableViewCell", bundle: nil), forCellReuseIdentifier: ProductPurchaseTableViewCell.identifier)
+        self.tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: OrderTableViewCell.identifier)
         
         
         self.tableView.register(UINib(nibName: "DiscountTitleTableViewCell", bundle: nil), forCellReuseIdentifier: DiscountTitleTableViewCell.identifier)
@@ -98,7 +98,9 @@ class FinalPurchaseViewController: UIViewController {
     func generateProductPurchaseCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductPurchaseTableViewCell.identifier, for: indexPath) as! ProductPurchaseTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.identifier, for: indexPath) as! OrderTableViewCell
+        cell.lineSectionView.isHidden = true
+        
         return cell
     }
 

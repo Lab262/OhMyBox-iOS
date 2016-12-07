@@ -538,8 +538,8 @@
 			children = (
 				2F70E83A1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.swift */,
 				2F70E83B1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.xib */,
-				2F70E83E1DC9925C000AB03B /* ProductPurchaseTableViewCell.swift */,
 				2F70E83F1DC9925C000AB03B /* ProductPurchaseTableViewCell.xib */,
+				2F70E83E1DC9925C000AB03B /* ProductPurchaseTableViewCell.swift */,
 				2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */,
 				2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */,
 			);
