@@ -275,7 +275,7 @@ extension DetailBrandViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
         
         
-        cell.tagType = 0
+        cell.tagType = .none
         cell.imageCloset = #imageLiteral(resourceName: "defaultCollection_image")
         cell.delegate = self
         cell.followingClothes = true

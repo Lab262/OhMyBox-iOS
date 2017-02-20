@@ -10,15 +10,41 @@ import UIKit
 
 class ShowCaseCollectionViewCell: UICollectionViewCell {
 
+    enum TagViewType {
+        case one
+        case two
+        case three
+        case four
+        case five
+        case none
+        
+        var size: CGSize {
+            
+            let s: CGSize
+            
+            switch self {
+            case .one: s = CGSize(width: 246 * UIView.widthScaleProportion(), height: 66 * UIView.widthScaleProportion())
+            case .two: s = CGSize(width: 303 * UIView.widthScaleProportion(), height: 75 * UIView.widthScaleProportion())
+            case .three: s = CGSize(width: 246 * UIView.widthScaleProportion(), height: 72 * UIView.widthScaleProportion())
+            case .four: s = CGSize(width: 284 * UIView.widthScaleProportion(), height: 89 * UIView.widthScaleProportion())
+            case .five: s = CGSize(width: 232 * UIView.widthScaleProportion(), height: 83 * UIView.widthScaleProportion())
+            case .none: s = CGSize()
+            }
+            
+            return s
+        }
+        
+        var leadingConstant: CGFloat {
+            return 6.0
+        }
+    }
+    
     static let identifier = "showCaseCell"
     var followingClothes = false
     
-    var tagView: TagView?
-    var tagView2: TagView2?
-    var tagView3: TagView3?
-    var tagView4: TagView4?
-    var tagView5: TagView5?
-    var tagType: Int? {
+    var tagView: UIView!
+    
+    var tagType: TagViewType! {
         didSet {
            self.initializeTagView()
         }
@@ -28,95 +54,70 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        if tagType! == 0 {
-            
-            return
-        }else if tagType! == 1 {
-            
-            self.tagView?.center = CGPoint(x: self.frame.width/2-45, y: self.frame.height/2+125)
-            self.addSubview(tagView!)
-            
-        } else if tagType! == 2 {
-            
-            let widthTagView2 = self.frame.width*0.860 // width cell / width tag
-            let heightTagView2  = widthTagView2*0.247
-
-            self.tagView2?.frame.size = CGSize(width: widthTagView2, height: heightTagView2)
-            self.tagView2?.center = CGPoint(x: self.frame.width/2.2, y: self.frame.height/1.11)
-          
-            
-            
-        } else if tagType! == 3 {
-            
-
-            tagView3?.center = CGPoint(x: self.frame.width/3.25, y: self.frame.height/1.25)
-            
-            self.addSubview(tagView3!)
-            
-        } else if tagType! == 4 {
-
-            self.tagView4?.center = CGPoint(x: self.frame.width/2.45, y: self.frame.height/1.25)
-            self.tagView4?.collectionBrandName.text = "Neon Go"
-            self.addSubview(tagView4!)
-            
-        } else {
-            
-            let widthTagView5 = self.frame.width*0.627
-            let heightTagView5  = widthTagView5*0.289 //the height is 0.289 of the width size, height/widht
-            
-            self.tagView5?.frame.size = CGSize(width: widthTagView5, height: heightTagView5)
-            
-            self.tagView5?.center = CGPoint(x: self.frame.width/3.05, y: self.frame.height/1.08)
-            self.tagView5?.nameTagLabel.text = "VERÃO DE SAIAS"
-            self.tagView5?.layoutIfNeeded()
-        }
-        
-
+        createTagConstraints(tagView, tagType.leadingConstant)
     }
-    func initializeTagView(){
+    
+    func initializeTagView() {
         
-        if tagType! == 0 {
-            return
+        switch tagType! {
+        case .one:
             
-        } else if tagType! == 1 {
+            let tagView1 = TagView1.instanceFromNib() as! TagView1
+            tagView1.frame = CGRect(origin: CGPoint(), size: tagType.size)
             
-            self.tagView?.removeFromSuperview()
-            self.tagView = TagView.instanceFromNib() as? TagView
-          
+            tagView = tagView1
             
-        } else if tagType! == 2 {
+        case .two:
             
-            self.tagView2?.removeFromSuperview()
-            self.tagView2 = TagView2.instanceFromNib() as? TagView2
+            let tagView2 = TagView2.instanceFromNib() as! TagView2
+            tagView2.frame = CGRect(origin: CGPoint(), size: tagType.size)
             
-            self.tagView2?.followButton.isSelected = followingClothes
-            self.tagView2?.setInitialButtonState()
- 
-            self.addSubview(tagView2!)
+            tagView = tagView2
             
-        } else if tagType! == 3 {
+        case .three:
             
-            self.tagView3?.removeFromSuperview()
-            self.tagView3 = TagView3.instanceFromNib() as? TagView3
-  
+            let tagView3 = TagView3.instanceFromNib() as! TagView3
+            tagView3.frame = CGRect(origin: CGPoint(), size: tagType.size)
             
-        } else if tagType! == 4 {
+            tagView = tagView3
             
-            self.tagView4?.removeFromSuperview()
-            self.tagView4 = TagView4.instanceFromNib() as? TagView4
+        case .four:
             
-        } else {
+            let tagView4 = TagView4.instanceFromNib() as! TagView4
+            tagView4.frame = CGRect(origin: CGPoint(), size: tagType.size)
+            tagView4.collectionBrandName.text = "Neon Go"
             
-            self.tagView5?.removeFromSuperview()
-            self.tagView5 = TagView5.instanceFromNib() as? TagView5
-            self.addSubview(tagView5!)
+            tagView = tagView4
+            
+        case .five:
+            
+            let tagView5 = TagView5.instanceFromNib() as! TagView5
+            tagView5.frame = CGRect(origin: CGPoint(), size: tagType.size)
+            tagView5.nameTagLabel.text = "VERÃO DE SAIAS"
+            
+            tagView = tagView5
+            
+        case .none:
+            tagView = nil
         }
         
+        if let tagView = tagView {
+            addSubview(tagView)
+        }
+    }
+    
+    func createTagConstraints(_ tag: UIView, _ leadingConstant: CGFloat) {
+        
+        let bottomConstraint = NSLayoutConstraint(item: tag, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: leadingConstant)
+        bottomConstraint.isActive = true
+        
+        tag.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        tag.translatesAutoresizingMaskIntoConstraints = false
+        tag.layoutIfNeeded()
     }
 }

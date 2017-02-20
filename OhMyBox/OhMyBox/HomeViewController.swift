@@ -53,7 +53,7 @@ class HomeViewController: UIViewController{
     func configureNavigationBar() {
      
         self.navigationBarView.leftBarButton.isHidden = true
-        self.navigationBarView.searchButton.isHidden = true
+//        self.navigationBarView.searchButton.isHidden = true
         //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
         self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
         self.navigationBarView.layoutIfNeeded()
@@ -125,7 +125,7 @@ class HomeViewController: UIViewController{
     
     
     @IBAction func searchProducts(_ sender: AnyObject) {
-      //  self.showSearchBar()
+        self.showSearchBar()
     
     }
     
@@ -234,7 +234,7 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
                 
-        cell.tagType = 5
+        cell.tagType = .five
         cell.clothingtArray = self.clotingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self

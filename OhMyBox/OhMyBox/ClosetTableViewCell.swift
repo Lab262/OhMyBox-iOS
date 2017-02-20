@@ -19,7 +19,7 @@ class ClosetTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     var identifierSegue: String?
     var imageCloset: UIImage?
-    var tagType: Int?
+    var tagType: ShowCaseCollectionViewCell.TagViewType = .none
     var followingClothes = false
     var clothingtArray: [String]? {
         didSet {

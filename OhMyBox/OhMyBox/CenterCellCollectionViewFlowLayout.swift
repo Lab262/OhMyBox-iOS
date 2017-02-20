@@ -10,61 +10,96 @@ import UIKit
 
 class CenterCellCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
+    @IBInspectable var centerOffset = CGPoint()
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
+        let targetContentOffset: CGPoint
+        
         if let cv = self.collectionView {
             
-            let cvBounds = cv.bounds
-            let halfWidth = cvBounds.size.width * 0.5;
-            let proposedContentOffsetCenterX = proposedContentOffset.x + halfWidth;
+            let isGoingLeftMultiplier =  (velocity.x == 0) ? 0 : ((velocity.x < 0) ? -1 : 1)
             
-            if let attributesForVisibleCells = self.layoutAttributesForElements(in: cvBounds) {
+            let offsetLocation = cv.contentOffset + CGPoint(x: sectionInset.left, y: sectionInset.top) + centerOffset
+            let currentIndexPath = indexPath(in: cv, at: offsetLocation)
+            
+            if let currentIndexPath = currentIndexPath {
                 
-                var candidateAttributes : UICollectionViewLayoutAttributes?
-                for attributes in attributesForVisibleCells {
+                let proposedIndex = currentIndexPath.item + (1 * isGoingLeftMultiplier)
+                let proposedIndexPath = IndexPath(item: proposedIndex, section: 0)
+                
+                // If the proposed index is between 0 and Max, it is valid
+                if proposedIndex >= 0 || proposedIndex <= (cv.numberOfItems(inSection: 0) - 1) {
                     
-                    // == Skip comparison with non-cell items (headers and footers) == //
-                    if attributes.representedElementCategory != UICollectionElementCategory.cell {
-                            continue
-                    }
+                    let proposedCell = validCell(in: cv, doubty: proposedIndexPath, valid: currentIndexPath)
                     
+                    let offsetX = proposedCell.frame.origin.x - sectionInset.left
+                    targetContentOffset = CGPoint(x: offsetX, y: proposedContentOffset.y)
                     
-                    if (attributes.center.x == 0) || (attributes.center.x > (cv.contentOffset.x + halfWidth) && velocity.x < 0) {
-                        continue
-                    }
-                    
-                    // == First time in the loop == //
-                    guard let candAttrs = candidateAttributes else {
-                        candidateAttributes = attributes
-                        continue
-                    }
-                    
-                    let a = attributes.center.x - proposedContentOffsetCenterX
-                    let b = candAttrs.center.x - proposedContentOffsetCenterX
-                    
-                    if fabsf(Float(a)) < fabsf(Float(b)) {
-                        candidateAttributes = attributes;
-                    }
-                    
-                    
+                } else {
+                    targetContentOffset = super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
                 }
                 
-                // Beautification step , I don't know why it works!
-                if(proposedContentOffset.x == -(cv.contentInset.left)) {
-                    return proposedContentOffset
-                }
-                
-                
-                return CGPoint(x: floor(candidateAttributes!.center.x - halfWidth), y: proposedContentOffset.y)
-                
+            } else {
+                targetContentOffset = super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
             }
             
-            
+        } else {
+            targetContentOffset = super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
         }
         
-        // fallback
-        return super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
+        return targetContentOffset
     }
-   
+    
+    private func validCell(in collectionView: UICollectionView, doubty doubtyIndexPath: IndexPath, valid validIndexPath: IndexPath) -> UICollectionViewCell {
+        
+        let validCell: UICollectionViewCell
+        
+        if let cell = collectionView.cellForItem(at: doubtyIndexPath) {
+            validCell = cell
+        } else {
+            validCell = collectionView.cellForItem(at: validIndexPath)!
+        }
+        
+        return validCell
+    }
+    
+    private func indexPath(in collectionView: UICollectionView, at offsetLocation: CGPoint) -> IndexPath? {
+        
+        var currentIndexPath: IndexPath?
+        
+        if let ci = collectionView.indexPathForItem(at: offsetLocation) {
+            
+            currentIndexPath = ci
+            
+        } else if let cell = closestCell(to: offsetLocation, collectionView) {
+            
+            let ci = collectionView.indexPath(for: cell)!
+            currentIndexPath = ci
+        }
+        
+        return currentIndexPath
+    }
+    
+    private func closestCell(to point: CGPoint, _ collectionView: UICollectionView) -> UICollectionViewCell? {
+        let cells = collectionView.visibleCells
+        
+        guard cells.count > 0 else {
+            return nil
+        }
+        
+        var closestCell: UICollectionViewCell = cells[0]
+        
+        for i in 1..<cells.count {
+            let cell = cells[i]
+            
+            if point.distance(to: cell.frame.origin) < point.distance(to: closestCell.frame.origin) {
+                closestCell = cell
+            }
+        }
+        
+        return closestCell
+    }
+    
+    
 }

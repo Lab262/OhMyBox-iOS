@@ -8,14 +8,13 @@
 
 import UIKit
 
-class TagView: UIView {
+class TagView1: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     
     class func instanceFromNib() -> UIView {
-        return UINib(nibName: "TagView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        return UINib(nibName: "TagView1", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TagView1
     }
-    
     
     override func awakeFromNib() {
 

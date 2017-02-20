@@ -55,7 +55,21 @@ class ViewUtil: NSObject {
         return image
         
     }
+    
+}
+
+extension UIView {
+    
+    static func heightScaleProportion() -> CGFloat {
+        return UIScreen.main.bounds.height / 667.0
+    }
+    
+    static func widthScaleProportion() -> CGFloat {
+        return UIScreen.main.bounds.width / 375.0
+    }
+}
 
 
-
+protocol UIViewNib: class {
+    static func instanceFromNib() -> Self
 }
