@@ -45,6 +45,9 @@
                     <real key="value" value="5"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="showCaseImage" destination="qhl-NF-v3H" id="7Jh-xy-S2X"/>
+            </connections>
             <point key="canvasLocation" x="18.5" y="269"/>
         </collectionViewCell>
     </objects>
