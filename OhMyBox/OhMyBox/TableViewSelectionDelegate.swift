@@ -10,5 +10,5 @@ import UIKit
 
 protocol TableViewSelectionDelegate: class {
     
-    func tableViewDelegate(_ tableViewDelegate: UITableViewDelegate, _ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    func tableViewDelegate(_ tableViewDelegate: UITableViewDelegate, didSelectRowWith title: String)
 }

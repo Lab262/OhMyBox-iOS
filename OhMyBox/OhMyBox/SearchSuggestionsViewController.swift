@@ -76,6 +76,6 @@ extension SearchSuggestionsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectionDelegate?.tableViewDelegate(self, tableView, didSelectRowAt: indexPath)
+        selectionDelegate?.tableViewDelegate(self, didSelectRowWith: suggestions[indexPath.row])
     }
 }

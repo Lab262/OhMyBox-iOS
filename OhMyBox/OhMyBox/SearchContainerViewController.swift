@@ -27,6 +27,12 @@ class SearchContainerViewController: UIViewController {
         }
     }
     
+    struct RestorableStateKeys {
+        static let searchControllerIsActive = "searchControllerIsActiveKey"
+        static let searchBarIsFirstResponder = "searchBarIsFirstResponderKey"
+        static let searchBarText = "searchBarTextKey"
+    }
+    
     @IBOutlet weak var searchViewContainer: UIView!
     @IBOutlet weak var searchSuggestionsViewContainer: UIView!
     
@@ -38,12 +44,22 @@ class SearchContainerViewController: UIViewController {
     var searchSuggestionsViewController: SearchSuggestionsViewController!
     var searchResultsTitle: String?
     
+    var searchControllerWasActive = false
+    var searchControllerSearchFieldWasFirstResponder = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchController()
         getChildViewControllersReferences()
         navigationController?.isNavigationBarHidden = true
+        definesPresentationContext = true
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if searchControllerSearchFieldWasFirstResponder {
+            searchController.searchBar.becomeFirstResponder()
+        }
     }
     
     func getChildViewControllersReferences() {
@@ -70,11 +86,10 @@ class SearchContainerViewController: UIViewController {
         // Getting rid of weird black separator
         searchController.searchBar.borderWidth = 1.0
         searchController.searchBar.borderColor = UIColor.white
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        searchController.searchBar.tintColor = .black
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.definesPresentationContext = false
     }
     
     func setActiveController(_ controller: SearchControllers) {
@@ -97,7 +112,7 @@ class SearchContainerViewController: UIViewController {
             vc.products = [Product(), Product(), Product()]
             vc.navigationBarTitle = searchResultsTitle
             
-            searchController.isActive = false
+            searchControllerSearchFieldWasFirstResponder = searchController.searchBar.isFirstResponder
         }
     }
     
@@ -126,12 +141,14 @@ extension SearchContainerViewController: UISearchControllerDelegate {
 
 extension SearchContainerViewController: TableViewSelectionDelegate {
     
-    func tableViewDelegate(_ tableViewDelegate: UITableViewDelegate, _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableViewDelegate(_ tableViewDelegate: UITableViewDelegate, didSelectRowWith title: String) {
         
         if tableViewDelegate === searchViewController {
-            print("selected item on searchViewController")
+            searchResultsTitle = title
+            performSegue(withIdentifier: "goToSearchResults", sender: nil)
         } else if tableViewDelegate === searchSuggestionsViewController {
-            print("selected item on searchSuggestionsViewController")
+            searchResultsTitle = title
+            performSegue(withIdentifier: "goToSearchResults", sender: nil)
         }
     }
 }
