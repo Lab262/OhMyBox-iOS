@@ -10,6 +10,25 @@ import UIKit
 
 class SearchContainerViewController: UIViewController {
 
+    enum SearchControllers {
+        case search
+        case searchSuggestions
+        case searchResults
+        
+        var presentedAlphas: (search: CGFloat, searchSuggestions: CGFloat, searchResults: CGFloat) {
+            
+            let alphas: (search: CGFloat, searchSuggestions: CGFloat, searchResults: CGFloat)
+            
+            switch self {
+            case .search: alphas = (1, 0, 0)
+            case .searchSuggestions: alphas = (0, 1, 0)
+            case .searchResults: alphas = (0, 0, 1)
+            }
+            
+            return alphas
+        }
+    }
+    
     @IBOutlet weak var searchViewContainer: UIView!
     @IBOutlet weak var searchSuggestionsViewContainer: UIView!
     @IBOutlet weak var searchResultsViewContainer: UIView!
@@ -20,8 +39,20 @@ class SearchContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBarContainer.addSubview(searchController.searchBar)
+        setUpSearchController()
         // Do any additional setup after loading the view.
+    }
+    
+    func setUpSearchController() {
+        searchBarContainer.addSubview(searchController.searchBar)
+        searchController.searchBar.delegate = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.barTintColor = .white
+        
+        
+        // Getting rid of weird black separator
+        searchController.searchBar.borderWidth = 1.0
+        searchController.searchBar.borderColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +60,21 @@ class SearchContainerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setActiveController(_ controller: SearchControllers) {
 
+        let alphas = controller.presentedAlphas
+        
+        controllerSwitchAnimate {
+            self.searchViewContainer.alpha = alphas.search
+            self.searchSuggestionsViewContainer.alpha = alphas.searchSuggestions
+            self.searchResultsViewContainer.alpha = alphas.searchResults
+        }
+    }
+
+    func controllerSwitchAnimate(_ animations: @escaping () -> ()) {
+        UIView.animate(withDuration: 0.25, animations: animations)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -40,4 +85,23 @@ class SearchContainerViewController: UIViewController {
     }
     */
 
+}
+
+extension SearchContainerViewController: UISearchBarDelegate {
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        setActiveController(.searchSuggestions)
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        setActiveController(.search)
+    }
+}
+
+extension SearchContainerViewController: UISearchControllerDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
 }

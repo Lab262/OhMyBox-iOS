@@ -89,6 +89,9 @@
 		2FAD48C71DB7031300074D55 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD48C61DB7031300074D55 /* ProductTableViewCell.swift */; };
 		2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */; };
 		2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */; };
+		4C8AAF1E1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF1C1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift */; };
+		4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8AAF1D1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib */; };
+		4C8AAF211E5F5ED300258116 /* SearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF201E5F5ED300258116 /* SearchSuggestionTableViewCell.swift */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */; };
@@ -275,6 +278,9 @@
 		2FAD48C61DB7031300074D55 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountTitleTableViewCell.swift; sourceTree = "<group>"; };
 		2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountTitleTableViewCell.xib; sourceTree = "<group>"; };
+		4C8AAF1C1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		4C8AAF1D1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchSuggestionsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		4C8AAF201E5F5ED300258116 /* SearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CE3B87E1E5E29210065A293 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -582,6 +588,17 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		4C8AAF1B1E5F5DFC00258116 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4CE3B8891E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift */,
+				4CE3B88A1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib */,
+				4C8AAF1C1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift */,
+				4C8AAF1D1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		4CE3B87B1E5E28B40065A293 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,8 +613,7 @@
 			children = (
 				4CE3B8821E5E2B960065A293 /* Storyboard */,
 				4CE3B8881E5E2C740065A293 /* Cells */,
-				4CE3B8891E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift */,
-				4CE3B88A1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib */,
+				4C8AAF1B1E5F5DFC00258116 /* Headers */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -624,6 +640,7 @@
 			isa = PBXGroup;
 			children = (
 				4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */,
+				4C8AAF201E5F5ED300258116 /* SearchSuggestionTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1145,6 +1162,7 @@
 				2F2999A61DE54ECA00D52203 /* Poppins-Light.ttf in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
+				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
 				D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */,
 				2F0777501DBDAE0D003C124F /* TermTableViewCell.xib in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
@@ -1325,6 +1343,7 @@
 				2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */,
 				D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */,
 				2F225D021DBF04E4009E4566 /* UIview+Util.swift in Sources */,
+				4C8AAF211E5F5ED300258116 /* SearchSuggestionTableViewCell.swift in Sources */,
 				2F164F631DD64F7800ED72DA /* Defaults.swift in Sources */,
 				D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */,
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
@@ -1360,6 +1379,7 @@
 				D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */,
 				D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */,
 				D4C0D65E1DB6B1F2007C3113 /* TagView1.swift in Sources */,
+				4C8AAF1E1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				4CE3B8901E5E30A80065A293 /* SearchContainerViewController.swift in Sources */,
 				2F70E8371DC987AE000AB03B /* FinalPurchaseViewController.swift in Sources */,
 				2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */,

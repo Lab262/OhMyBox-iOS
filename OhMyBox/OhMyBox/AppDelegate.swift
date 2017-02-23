@@ -72,6 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.barTintColor =  UIColor.white
         navigationBarAppearance.backgroundColor =  UIColor.white
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
+        
+        let app = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        app.borderWidth = 1
+        app.borderColor = UIColor.colorWithHexString("E0E0E0")
+        app.cornerRadius = 5.0
     }
     
 }

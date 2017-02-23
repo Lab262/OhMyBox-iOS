@@ -10,12 +10,18 @@ import UIKit
 
 class SearchSuggestionsViewController: UIViewController {
 
-    
+    @IBOutlet weak var tableView: UITableView!
+    let suggestions = ["Brinco", "Bota", "Cachecol"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        registerNibs()
         // Do any additional setup after loading the view.
+    }
+    
+    func registerNibs() {
+        
+        tableView.register(UINib(nibName: "SearchSuggestionsHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: SearchSuggestionsHeaderTableViewCell.identifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,4 +40,37 @@ class SearchSuggestionsViewController: UIViewController {
     }
     */
 
+}
+
+extension SearchSuggestionsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return suggestions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchSuggestionTableViewCell.identifier) as! SearchSuggestionTableViewCell
+        cell.suggestionTitle = suggestions[indexPath.row]
+        
+        return cell
+    }
+}
+
+extension SearchSuggestionsViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 51.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: SearchSuggestionsHeaderTableViewCell.identifier) as! SearchSuggestionsHeaderTableViewCell
+        header.headerTitle = "Buscas Recentes"
+        
+        return header
+    }
+    
 }
