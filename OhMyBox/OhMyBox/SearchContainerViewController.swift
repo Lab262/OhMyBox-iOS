@@ -13,16 +13,14 @@ class SearchContainerViewController: UIViewController {
     enum SearchControllers {
         case search
         case searchSuggestions
-        case searchResults
         
-        var presentedAlphas: (search: CGFloat, searchSuggestions: CGFloat, searchResults: CGFloat) {
+        var presentedAlphas: (search: CGFloat, searchSuggestions: CGFloat) {
             
-            let alphas: (search: CGFloat, searchSuggestions: CGFloat, searchResults: CGFloat)
+            let alphas: (search: CGFloat, searchSuggestions: CGFloat)
             
             switch self {
-            case .search: alphas = (1, 0, 0)
-            case .searchSuggestions: alphas = (0, 1, 0)
-            case .searchResults: alphas = (0, 0, 1)
+            case .search: alphas = (1, 0)
+            case .searchSuggestions: alphas = (0, 1)
             }
             
             return alphas
@@ -31,7 +29,6 @@ class SearchContainerViewController: UIViewController {
     
     @IBOutlet weak var searchViewContainer: UIView!
     @IBOutlet weak var searchSuggestionsViewContainer: UIView!
-    @IBOutlet weak var searchResultsViewContainer: UIView!
     
     @IBOutlet weak var searchBarContainer: UIView!
     
@@ -67,7 +64,6 @@ class SearchContainerViewController: UIViewController {
         controllerSwitchAnimate {
             self.searchViewContainer.alpha = alphas.search
             self.searchSuggestionsViewContainer.alpha = alphas.searchSuggestions
-            self.searchResultsViewContainer.alpha = alphas.searchResults
         }
     }
 
