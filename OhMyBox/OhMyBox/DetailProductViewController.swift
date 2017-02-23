@@ -28,7 +28,6 @@ class DetailProductViewController: UIViewController {
     }
     
     func setConfigurationBar() {
-        self.navigationBarView.searchButton.isHidden = true
         self.navigationBarView.titleLabel.text = ""
     }
     func initializeStatesButtons() {

@@ -25,7 +25,7 @@ class SearchResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        registerNibs()
+        registerNibs()
         setUpNavigationBar()
         setUpFilterButton()
         // Do any additional setup after loading the view.
@@ -46,8 +46,10 @@ class SearchResultsViewController: UIViewController {
     }
     
     func setUpNavigationBar() {
-        
+        navigationController?.isNavigationBarHidden = true
+        navigationBar.leftBarButton.setImage(#imageLiteral(resourceName: "searchIcon"), for: .normal)
         navigationBar.titleLabelText = navigationBarTitle
+        
     }
     
     func registerNibs() {
@@ -88,5 +90,12 @@ extension SearchResultsViewController: UITableViewDataSource {
         // align model with cell fields
         
         return cell
+    }
+}
+
+extension SearchResultsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 502.0
     }
 }

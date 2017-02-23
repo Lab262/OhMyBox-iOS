@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B1g-v0-IpY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gXe-FC-F7r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -71,6 +71,8 @@
                             <constraint firstItem="TQY-VE-gcq" firstAttribute="leading" secondItem="uyS-qJ-obA" secondAttribute="leading" id="vuD-jO-UfF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2hm-bQ-UDg"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="searchBarContainer" destination="bzh-0g-Vhk" id="nlc-jj-kv3"/>
                         <outlet property="searchSuggestionsViewContainer" destination="Zw7-lD-5LW" id="ghA-st-ccR"/>
@@ -80,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXR-kH-O4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1092" y="124.58770614692655"/>
+            <point key="canvasLocation" x="-152.80000000000001" y="124.58770614692655"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="OKD-MB-9jc">
@@ -250,12 +252,24 @@
                                 <color key="tintColor" red="0.57647058823529407" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Filtro" backgroundImage="container_button"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-Bv-auP">
+                                <rect key="frame" x="0.0" y="134.5" width="375" height="532.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="q2x-LN-QMD" id="1qc-HM-QQY"/>
+                                    <outlet property="delegate" destination="q2x-LN-QMD" id="swj-p1-DxI"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ydm-2g-k2R" firstAttribute="top" secondItem="Vgb-aM-rQw" secondAttribute="bottom" constant="24" id="6pP-rh-erQ"/>
+                            <constraint firstAttribute="bottom" secondItem="DcG-Bv-auP" secondAttribute="bottom" id="DrQ-AY-O3H"/>
+                            <constraint firstItem="DcG-Bv-auP" firstAttribute="leading" secondItem="EUo-Kp-5tT" secondAttribute="leading" id="FAL-mo-BPa"/>
+                            <constraint firstAttribute="trailing" secondItem="DcG-Bv-auP" secondAttribute="trailing" id="KZx-oH-6zi"/>
                             <constraint firstAttribute="trailing" secondItem="m3f-6v-Mx8" secondAttribute="trailing" constant="15" id="NLY-pZ-Dh8"/>
                             <constraint firstItem="Ydm-2g-k2R" firstAttribute="leading" secondItem="EUo-Kp-5tT" secondAttribute="leading" constant="17" id="Tqx-17-w1B"/>
+                            <constraint firstItem="DcG-Bv-auP" firstAttribute="top" secondItem="Ydm-2g-k2R" secondAttribute="bottom" constant="20" id="UWH-Lo-clV"/>
                             <constraint firstItem="Vgb-aM-rQw" firstAttribute="leading" secondItem="EUo-Kp-5tT" secondAttribute="leading" id="hnr-k4-rue"/>
                             <constraint firstItem="m3f-6v-Mx8" firstAttribute="top" secondItem="Ydm-2g-k2R" secondAttribute="top" id="toZ-2p-K4n"/>
                             <constraint firstItem="Vgb-aM-rQw" firstAttribute="top" secondItem="EUo-Kp-5tT" secondAttribute="top" id="xEc-f4-zcW"/>
@@ -266,11 +280,30 @@
                         <outlet property="filterButton" destination="m3f-6v-Mx8" id="kD4-fY-H8S"/>
                         <outlet property="navigationBar" destination="Vgb-aM-rQw" id="24t-tH-liW"/>
                         <outlet property="productCountLabel" destination="Ydm-2g-k2R" id="yle-Gp-NxJ"/>
+                        <outlet property="tableView" destination="DcG-Bv-auP" id="OVo-Ec-nTj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ean-7E-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="125"/>
+            <point key="canvasLocation" x="748" y="124.58770614692655"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q1M-d3-68Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gXe-FC-F7r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hjj-0l-7GI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B1g-v0-IpY" kind="relationship" relationship="rootViewController" id="Gf7-Um-Xmc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UqF-kf-Gms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1092" y="124.58770614692655"/>
         </scene>
     </scenes>
     <resources>

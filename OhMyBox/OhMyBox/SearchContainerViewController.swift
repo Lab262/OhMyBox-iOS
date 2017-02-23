@@ -42,6 +42,7 @@ class SearchContainerViewController: UIViewController {
         super.viewDidLoad()
         setUpSearchController()
         getChildViewControllersReferences()
+        navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -95,6 +96,8 @@ class SearchContainerViewController: UIViewController {
             let vc = segue.destination as! SearchResultsViewController
             vc.products = [Product(), Product(), Product()]
             vc.navigationBarTitle = searchResultsTitle
+            
+            searchController.isActive = false
         }
     }
     
@@ -118,6 +121,7 @@ extension SearchContainerViewController: UISearchControllerDelegate {
         searchResultsTitle = searchBar.text
         performSegue(withIdentifier: "goToSearchResults", sender: nil)
     }
+    
 }
 
 extension SearchContainerViewController: TableViewSelectionDelegate {

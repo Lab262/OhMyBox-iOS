@@ -30,7 +30,6 @@ class ProfileViewController: UIViewController {
     func configureNavigationBar() {
         
         self.navigationBarView.leftBarButton.isHidden = true
-        self.navigationBarView.searchButton.isHidden = true
     }
     
     

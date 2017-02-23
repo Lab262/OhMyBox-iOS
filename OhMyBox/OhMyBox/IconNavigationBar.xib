@@ -20,7 +20,6 @@
             <connections>
                 <outlet property="boxButton" destination="Blf-2Q-kqU" id="bp0-8Q-9Pj"/>
                 <outlet property="leftBarButton" destination="34E-pe-8Yc" id="X0G-lZ-CeP"/>
-                <outlet property="searchButton" destination="Mra-Pk-sEt" id="FB6-Pp-TsT"/>
                 <outlet property="titleLabel" destination="zTA-DZ-yQ8" id="KUb-Pc-gvj"/>
                 <outlet property="view" destination="iN0-l3-epB" id="AeI-ye-a1z"/>
             </connections>
@@ -47,18 +46,9 @@
                         <action selector="actionGoCart:" destination="-1" eventType="touchUpInside" id="zb9-mS-Z7c"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-Pk-sEt">
-                    <rect key="frame" x="294" y="28.5" width="20" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="Mra-Pk-sEt" secondAttribute="height" multiplier="10:11" id="OWp-g9-SJ1"/>
-                        <constraint firstAttribute="height" constant="22" id="djc-3N-r5b"/>
-                    </constraints>
-                    <state key="normal" image="searchIcon"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34E-pe-8Yc">
-                    <rect key="frame" x="16" y="30.5" width="9" height="18"/>
+                    <rect key="frame" x="16" y="30.5" width="11" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="34E-pe-8Yc" secondAttribute="height" multiplier="1:2" id="K0e-ou-qFR"/>
                         <constraint firstAttribute="height" constant="18" id="Wf2-V0-t7B"/>
                     </constraints>
                     <state key="normal" image="backIcon_button"/>
@@ -69,11 +59,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Mra-Pk-sEt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.62" id="5Dm-d2-2lf"/>
                 <constraint firstItem="34E-pe-8Yc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Lrk-C0-NmW"/>
                 <constraint firstItem="zTA-DZ-yQ8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nit-iI-VMJ"/>
                 <constraint firstItem="34E-pe-8Yc" firstAttribute="centerY" secondItem="zTA-DZ-yQ8" secondAttribute="centerY" id="e6R-dN-BoU"/>
-                <constraint firstItem="Mra-Pk-sEt" firstAttribute="centerY" secondItem="zTA-DZ-yQ8" secondAttribute="centerY" id="hxn-sU-EBl"/>
                 <constraint firstItem="Blf-2Q-kqU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.85" id="ufK-E6-mZ8"/>
                 <constraint firstItem="zTA-DZ-yQ8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.25" id="umj-Wo-kbA"/>
                 <constraint firstItem="Blf-2Q-kqU" firstAttribute="centerY" secondItem="zTA-DZ-yQ8" secondAttribute="centerY" id="v8i-7V-uHW"/>
@@ -85,6 +73,5 @@
     <resources>
         <image name="backIcon_button" width="11" height="18"/>
         <image name="box_button" width="28" height="28"/>
-        <image name="searchIcon" width="20" height="20"/>
     </resources>
 </document>

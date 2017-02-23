@@ -13,7 +13,7 @@ class IconNavigationBar: UIView {
 
     @IBOutlet var view: UIView!
     @IBOutlet weak var boxButton: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
+//    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
  //   @IBOutlet weak var leftButtonIconImage: UIImageView!
     @IBOutlet weak var leftBarButton: UIButton!

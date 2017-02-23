@@ -32,8 +32,6 @@ class RecommendedViewController: UIViewController {
     }
     
     func configureNavigationBar() {
-       self.navigationBarView.searchButton.isHidden = true
-       self.navigationBarView.searchButton.isHidden = true
     }
     
     

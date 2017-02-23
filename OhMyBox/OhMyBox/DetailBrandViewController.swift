@@ -36,7 +36,7 @@ class DetailBrandViewController: UIViewController {
     func configureNavigationBar() {
         
         //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
-        self.navigationBarView.searchButton.isHidden = true
+        
         //self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
        
     }
