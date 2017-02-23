@@ -72,6 +72,7 @@
                         <outlet property="searchBarContainer" destination="bzh-0g-Vhk" id="nlc-jj-kv3"/>
                         <outlet property="searchSuggestionsViewContainer" destination="Zw7-lD-5LW" id="ghA-st-ccR"/>
                         <outlet property="searchViewContainer" destination="TQY-VE-gcq" id="Wfv-yr-256"/>
+                        <segue destination="q2x-LN-QMD" kind="show" identifier="goToSearchResults" id="Ib5-ob-Oew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXR-kH-O4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,25 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gt-tU-csS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194.40000000000001" y="116.49175412293854"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3fD-yD-YGr">
-            <objects>
-                <viewController id="X3x-vK-fCV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="emi-f5-kXV"/>
-                        <viewControllerLayoutGuide type="bottom" id="2oz-qa-4ic"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aNw-ab-wW9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfZ-3b-adP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-194" y="761"/>
+            <point key="canvasLocation" x="-1420" y="868"/>
         </scene>
         <!--Search Suggestions View Controller-->
         <scene sceneID="O77-J8-P3L">
@@ -231,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5i-1P-Iq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194.40000000000001" y="-524.8875562218891"/>
+            <point key="canvasLocation" x="-764" y="869"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3x3-Bd-kim">
@@ -245,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ean-7E-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1142" y="-581"/>
+            <point key="canvasLocation" x="-190" y="125"/>
         </scene>
     </scenes>
     <resources>

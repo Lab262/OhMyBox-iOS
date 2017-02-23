@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchContainerViewController: UIViewController {
-
+    
     enum SearchControllers {
         case search
         case searchSuggestions
@@ -34,10 +34,28 @@ class SearchContainerViewController: UIViewController {
     
     var searchController: UISearchController = UISearchController(searchResultsController: nil)
     
+    var searchViewController: SearchViewController!
+    var searchSuggestionsViewController: SearchSuggestionsViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchController()
+        getChildViewControllersReferences()
         // Do any additional setup after loading the view.
+    }
+    
+    func getChildViewControllersReferences() {
+        let vcs = childViewControllers
+        for vc in vcs {
+            
+            if vc is SearchViewController {
+                searchViewController = vc as! SearchViewController
+                searchViewController.selectionDelegate = self
+            } else if vc is SearchSuggestionsViewController {
+                searchSuggestionsViewController = vc as! SearchSuggestionsViewController
+                searchSuggestionsViewController.selectionDelegate = self
+            }
+        }
     }
     
     func setUpSearchController() {
@@ -51,14 +69,14 @@ class SearchContainerViewController: UIViewController {
         searchController.searchBar.borderWidth = 1.0
         searchController.searchBar.borderColor = UIColor.white
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func setActiveController(_ controller: SearchControllers) {
-
+        
         let alphas = controller.presentedAlphas
         
         controllerSwitchAnimate {
@@ -66,21 +84,21 @@ class SearchContainerViewController: UIViewController {
             self.searchSuggestionsViewContainer.alpha = alphas.searchSuggestions
         }
     }
-
+    
     func controllerSwitchAnimate(_ animations: @escaping () -> ()) {
         UIView.animate(withDuration: 0.25, animations: animations)
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension SearchContainerViewController: UISearchBarDelegate {
@@ -99,5 +117,17 @@ extension SearchContainerViewController: UISearchControllerDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+    }
+}
+
+extension SearchContainerViewController: TableViewSelectionDelegate {
+    
+    func tableViewDelegate(_ tableViewDelegate: UITableViewDelegate, _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if tableViewDelegate === searchViewController {
+            print("selected item on searchViewController")
+        } else if tableViewDelegate === searchSuggestionsViewController {
+            print("selected item on searchSuggestionsViewController")
+        }
     }
 }

@@ -13,6 +13,8 @@ class SearchSuggestionsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let suggestions = ["Brinco", "Bota", "Cachecol"]
     
+    var selectionDelegate: TableViewSelectionDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
@@ -73,4 +75,7 @@ extension SearchSuggestionsViewController: UITableViewDelegate {
         return header
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectionDelegate?.tableViewDelegate(self, tableView, didSelectRowAt: indexPath)
+    }
 }

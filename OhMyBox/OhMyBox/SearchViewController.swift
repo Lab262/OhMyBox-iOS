@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     
     let categories = ["ACESSÓRIOS", "BLUSAS", "CALÇAS", "SAPATOS", "BOLSA", "CASA"]
     
+    var selectionDelegate: TableViewSelectionDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
@@ -75,5 +77,9 @@ extension SearchViewController: UITableViewDelegate {
         }
 
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectionDelegate?.tableViewDelegate(self, tableView, didSelectRowAt: indexPath)
     }
 }
