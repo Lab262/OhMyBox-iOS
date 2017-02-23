@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -109,7 +112,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgw-8e-4up">
-                                                    <rect key="frame" x="34" y="9.5" width="78" height="25"/>
+                                                    <rect key="frame" x="34" y="9" width="78" height="25"/>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -169,14 +172,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_suggestion_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="rCY-lP-Ms6">
-                                                    <rect key="frame" x="17" y="18.5" width="6" height="6"/>
+                                                    <rect key="frame" x="17" y="19" width="6" height="6"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="6" id="kZr-Eg-H09"/>
                                                         <constraint firstAttribute="width" secondItem="rCY-lP-Ms6" secondAttribute="height" multiplier="1:1" id="t3U-Lk-6Po"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-pX-G3d">
-                                                    <rect key="frame" x="34" y="9.5" width="39.5" height="25"/>
+                                                    <rect key="frame" x="34" y="10" width="40" height="25"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -216,15 +219,54 @@
             </objects>
             <point key="canvasLocation" x="-764" y="869"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="3x3-Bd-kim">
             <objects>
-                <viewController id="q2x-LN-QMD" sceneMemberID="viewController">
+                <viewController id="q2x-LN-QMD" customClass="SearchResultsViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EUo-Kp-5tT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-aM-rQw" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="GQo-dT-6xT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydm-2g-k2R">
+                                <rect key="frame" x="17" y="88" width="44" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                <color key="textColor" red="0.57647058823529407" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3f-6v-Mx8">
+                                <rect key="frame" x="290.5" y="88" width="69.5" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="GIx-ml-HfE"/>
+                                    <constraint firstAttribute="width" secondItem="m3f-6v-Mx8" secondAttribute="height" multiplier="69:23" id="XaH-dZ-q4G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                <color key="tintColor" red="0.57647058823529407" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Filtro" backgroundImage="container_button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ydm-2g-k2R" firstAttribute="top" secondItem="Vgb-aM-rQw" secondAttribute="bottom" constant="24" id="6pP-rh-erQ"/>
+                            <constraint firstAttribute="trailing" secondItem="m3f-6v-Mx8" secondAttribute="trailing" constant="15" id="NLY-pZ-Dh8"/>
+                            <constraint firstItem="Ydm-2g-k2R" firstAttribute="leading" secondItem="EUo-Kp-5tT" secondAttribute="leading" constant="17" id="Tqx-17-w1B"/>
+                            <constraint firstItem="Vgb-aM-rQw" firstAttribute="leading" secondItem="EUo-Kp-5tT" secondAttribute="leading" id="hnr-k4-rue"/>
+                            <constraint firstItem="m3f-6v-Mx8" firstAttribute="top" secondItem="Ydm-2g-k2R" secondAttribute="top" id="toZ-2p-K4n"/>
+                            <constraint firstItem="Vgb-aM-rQw" firstAttribute="top" secondItem="EUo-Kp-5tT" secondAttribute="top" id="xEc-f4-zcW"/>
+                            <constraint firstAttribute="trailing" secondItem="Vgb-aM-rQw" secondAttribute="trailing" id="yfe-vm-C1B"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="filterButton" destination="m3f-6v-Mx8" id="kD4-fY-H8S"/>
+                        <outlet property="navigationBar" destination="Vgb-aM-rQw" id="24t-tH-liW"/>
+                        <outlet property="productCountLabel" destination="Ydm-2g-k2R" id="yle-Gp-NxJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ean-7E-eCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,6 +275,7 @@
     </scenes>
     <resources>
         <image name="category_indicator" width="6" height="15"/>
+        <image name="container_button" width="86" height="24"/>
         <image name="search_suggestion_indicator" width="6" height="6"/>
     </resources>
 </document>

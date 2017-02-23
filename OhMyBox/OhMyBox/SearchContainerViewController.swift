@@ -36,6 +36,7 @@ class SearchContainerViewController: UIViewController {
     
     var searchViewController: SearchViewController!
     var searchSuggestionsViewController: SearchSuggestionsViewController!
+    var searchResultsTitle: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,15 +90,13 @@ class SearchContainerViewController: UIViewController {
         UIView.animate(withDuration: 0.25, animations: animations)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSearchResults" {
+            let vc = segue.destination as! SearchResultsViewController
+            vc.products = [Product(), Product(), Product()]
+            vc.navigationBarTitle = searchResultsTitle
+        }
+    }
     
 }
 
@@ -116,7 +115,8 @@ extension SearchContainerViewController: UISearchBarDelegate {
 extension SearchContainerViewController: UISearchControllerDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        searchResultsTitle = searchBar.text
+        performSegue(withIdentifier: "goToSearchResults", sender: nil)
     }
 }
 

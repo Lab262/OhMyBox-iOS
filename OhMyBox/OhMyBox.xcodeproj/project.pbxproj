@@ -93,6 +93,10 @@
 		4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8AAF1D1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib */; };
 		4C8AAF211E5F5ED300258116 /* SearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF201E5F5ED300258116 /* SearchSuggestionTableViewCell.swift */; };
 		4C8AAF231E5F731E00258116 /* TableViewSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF221E5F731E00258116 /* TableViewSelectionDelegate.swift */; };
+		4C8AAF251E5F83BF00258116 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF241E5F83BF00258116 /* SearchResultsViewController.swift */; };
+		4C8AAF2A1E5F845C00258116 /* CollectionPickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8AAF271E5F845C00258116 /* CollectionPickerViewCell.xib */; };
+		4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */; };
+		4C8AAF2C1E5F845C00258116 /* CollectionPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */; };
@@ -283,6 +287,10 @@
 		4C8AAF1D1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchSuggestionsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4C8AAF201E5F5ED300258116 /* SearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		4C8AAF221E5F731E00258116 /* TableViewSelectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSelectionDelegate.swift; sourceTree = "<group>"; };
+		4C8AAF241E5F83BF00258116 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		4C8AAF271E5F845C00258116 /* CollectionPickerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerViewCell.xib; sourceTree = "<group>"; };
+		4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerViewCell.swift; sourceTree = "<group>"; };
+		4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerController.swift; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CE3B87E1E5E29210065A293 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -601,6 +609,16 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		4C8AAF261E5F845000258116 /* CollectionPicker */ = {
+			isa = PBXGroup;
+			children = (
+				4C8AAF271E5F845C00258116 /* CollectionPickerViewCell.xib */,
+				4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */,
+				4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */,
+			);
+			name = CollectionPicker;
+			sourceTree = "<group>";
+		};
 		4CE3B87B1E5E28B40065A293 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +645,7 @@
 				4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */,
 				4CE3B88D1E5E305E0065A293 /* SearchSuggestionsViewController.swift */,
 				4CE3B88F1E5E30A80065A293 /* SearchContainerViewController.swift */,
+				4C8AAF241E5F83BF00258116 /* SearchResultsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -694,6 +713,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				4C8AAF261E5F845000258116 /* CollectionPicker */,
 				D44066471DEE11F70053927B /* NavigationBar */,
 				2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */,
 				A4422AD41DED003B00A2593B /* Constants */,
@@ -1144,6 +1164,7 @@
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
 				2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */,
 				2F3359511DE38AE400540116 /* StatusOrderTableViewCell.xib in Resources */,
+				4C8AAF2A1E5F845C00258116 /* CollectionPickerViewCell.xib in Resources */,
 				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */,
 				D41E8FD91DE4F28F00BA3266 /* TagView5.xib in Resources */,
@@ -1321,6 +1342,7 @@
 				2F225D001DBEFEE7009E4566 /* AttributesTableViewCell.swift in Sources */,
 				D4C0D6651DB6B32E007C3113 /* UIView+Animations.swift in Sources */,
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
+				4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */,
 				D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */,
 				D44F35011DD0FF1500AE7E9E /* TagView3.swift in Sources */,
 				2F0777421DBD2EA9003C124F /* HeaderRecommendedTableViewCell.swift in Sources */,
@@ -1356,8 +1378,10 @@
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */,
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
+				4C8AAF251E5F83BF00258116 /* SearchResultsViewController.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */,
+				4C8AAF2C1E5F845C00258116 /* CollectionPickerController.swift in Sources */,
 				A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */,
 				2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */,
 				D41E8FD71DE4F28200BA3266 /* TagView5.swift in Sources */,
