@@ -14,6 +14,10 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var productCountLabel: UILabel!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var navigationBar: IconNavigationBar!
+    @IBOutlet weak var collectionPickerView: CollectionPickerView!
+    @IBOutlet weak var collectionPickerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var collectionPickerViewHeightZeroConstraint: NSLayoutConstraint!
+    
     
     var navigationBarTitle: String?
     var products: [Product] = [] {
@@ -22,17 +26,33 @@ class SearchResultsViewController: UIViewController {
         }
     }
     var productCount: Int = 0
+    var hasCarousel = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
         setUpNavigationBar()
         setUpFilterButton()
+        
+        setUpCollectionPickerView()
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setUpProductCountLabel()
+        if hasCarousel {
+            collectionPickerViewHeightConstraint.isActive = true
+            collectionPickerView.isHidden = false
+        } else {
+            collectionPickerViewHeightConstraint.isActive = false
+            collectionPickerView.isHidden = true
+        }
+    }
+    
+    func setUpCollectionPickerView() {
+        collectionPickerView.collectionPickerOptions = ["TUDO", "BRINCOS", "COLARES"]
+        collectionPickerView.collectionPickerHandlers = [{}, {}, {}]
     }
     
     func setUpProductCountLabel() {

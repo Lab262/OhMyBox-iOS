@@ -30,13 +30,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OH MY BOX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-DZ-yQ8">
-                    <rect key="frame" x="136.5" y="30" width="102.5" height="20"/>
+                    <rect key="frame" x="136" y="30" width="103" height="21"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blf-2Q-kqU">
-                    <rect key="frame" x="334" y="27.5" width="25" height="24"/>
+                    <rect key="frame" x="334" y="28" width="25" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Blf-2Q-kqU" secondAttribute="height" multiplier="25:24" id="UpM-HS-aIo"/>
                         <constraint firstAttribute="height" constant="24" id="x22-GM-hD9"/>
@@ -47,7 +47,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34E-pe-8Yc">
-                    <rect key="frame" x="16" y="30.5" width="11" height="18"/>
+                    <rect key="frame" x="16" y="31" width="11" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="Wf2-V0-t7B"/>
                     </constraints>

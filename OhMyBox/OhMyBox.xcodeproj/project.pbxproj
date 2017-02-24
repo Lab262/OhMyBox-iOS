@@ -98,6 +98,8 @@
 		4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */; };
 		4C8AAF2C1E5F845C00258116 /* CollectionPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
+		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
+		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
 		4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */; };
 		4CE3B8841E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */; };
@@ -292,6 +294,8 @@
 		4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerViewCell.swift; sourceTree = "<group>"; };
 		4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerController.swift; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
+		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
+		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
 		4CE3B87E1E5E29210065A293 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -615,6 +619,8 @@
 				4C8AAF271E5F845C00258116 /* CollectionPickerViewCell.xib */,
 				4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */,
 				4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */,
+				4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */,
+				4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */,
 			);
 			name = CollectionPicker;
 			sourceTree = "<group>";
@@ -1167,6 +1173,7 @@
 				4C8AAF2A1E5F845C00258116 /* CollectionPickerViewCell.xib in Resources */,
 				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */,
+				4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */,
 				D41E8FD91DE4F28F00BA3266 /* TagView5.xib in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
@@ -1374,6 +1381,7 @@
 				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
 				D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */,
+				4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */,
 				2F70E83C1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */,

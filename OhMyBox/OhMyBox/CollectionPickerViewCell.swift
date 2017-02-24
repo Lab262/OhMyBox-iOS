@@ -10,6 +10,7 @@ import UIKit
 
 class CollectionPickerViewCell: UICollectionViewCell {
     
+    static let cellSize = CGSize(width: 125.0, height: 58.0)
     static let identifier = "collectionPickerViewCell"
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -19,4 +20,5 @@ class CollectionPickerViewCell: UICollectionViewCell {
             titleLabel.attributedText = title?.with(characterSpacing: 3.49)
         }
     }
+
 }

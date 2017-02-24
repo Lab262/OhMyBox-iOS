@@ -43,6 +43,7 @@ class SearchContainerViewController: UIViewController {
     var searchViewController: SearchViewController!
     var searchSuggestionsViewController: SearchSuggestionsViewController!
     var searchResultsTitle: String?
+    var searchResultsHasCarousel = false
     
     var searchControllerWasActive = false
     var searchControllerSearchFieldWasFirstResponder = false
@@ -97,13 +98,13 @@ class SearchContainerViewController: UIViewController {
         let alphas = controller.presentedAlphas
         
         controllerSwitchAnimate {
-            self.searchViewContainer.alpha = alphas.search
+//            self.searchViewContainer.alpha = alphas.search
             self.searchSuggestionsViewContainer.alpha = alphas.searchSuggestions
         }
     }
     
     func controllerSwitchAnimate(_ animations: @escaping () -> ()) {
-        UIView.animate(withDuration: 0.25, animations: animations)
+        UIView.animate(withDuration: 0.15, animations: animations)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -111,7 +112,7 @@ class SearchContainerViewController: UIViewController {
             let vc = segue.destination as! SearchResultsViewController
             vc.products = [Product(), Product(), Product()]
             vc.navigationBarTitle = searchResultsTitle
-            
+            vc.hasCarousel = searchResultsHasCarousel
             searchControllerSearchFieldWasFirstResponder = searchController.searchBar.isFirstResponder
         }
     }
@@ -145,9 +146,11 @@ extension SearchContainerViewController: TableViewSelectionDelegate {
         
         if tableViewDelegate === searchViewController {
             searchResultsTitle = title
+            searchResultsHasCarousel = true
             performSegue(withIdentifier: "goToSearchResults", sender: nil)
         } else if tableViewDelegate === searchSuggestionsViewController {
             searchResultsTitle = title
+            searchResultsHasCarousel = false
             performSegue(withIdentifier: "goToSearchResults", sender: nil)
         }
     }
