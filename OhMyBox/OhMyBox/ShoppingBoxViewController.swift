@@ -10,7 +10,7 @@ import UIKit
 import BGTableViewRowActionWithImage
 
 class ShoppingBoxViewController: UIViewController {
-
+    
     @IBOutlet weak var buyShopBar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
@@ -30,7 +30,7 @@ class ShoppingBoxViewController: UIViewController {
             self.boxButton.backgroundColor = UIColor.hexStringToUIColor(hex:"FFFFFF")
             self.boxButton.setTitleColor(UIColor.hexStringToUIColor(hex:"241932"), for:UIControlState.normal)
             self.orderButton.setTitleColor(UIColor.hexStringToUIColor(hex:"FFFFFF"), for:UIControlState.normal)
-                self.isActiveBox = false
+            self.isActiveBox = false
             self.boxButton.borderWidth = 1
             self.boxButton.borderColor = UIColor.black
             self.tableView.reloadData()
@@ -45,9 +45,9 @@ class ShoppingBoxViewController: UIViewController {
             self.boxButton.setTitleColor(UIColor.hexStringToUIColor(hex:"FFFFFF"), for:UIControlState.normal)
             self.orderButton.setTitleColor(UIColor.hexStringToUIColor(hex:"241932"), for:UIControlState.normal)
             self.isActiveBox = true
-              self.tableView.reloadData()
+            self.tableView.reloadData()
         }
-    
+        
     }
     
     
@@ -56,42 +56,42 @@ class ShoppingBoxViewController: UIViewController {
         self.registerNib()
         
         
-       
+        
     }
-
+    
     
     @IBAction func backToViewController(_ sender: AnyObject) {
-    
+        
         self.dismiss(animated: true, completion: nil)
-       
+        
     }
-
+    
     
     func registerNib(){
-        
-        self.tableView.register(UINib(nibName: "ShoppingBoxTableViewCell", bundle: nil), forCellReuseIdentifier: ShoppingBoxTableViewCell.identifier)
+        let nib = UINib(nibName: "ShoppingBoxTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: ShoppingBoxTableViewCell.identifier)
         
         self.tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: OrderTableViewCell.identifier)
         
         self.tableView.register(UINib(nibName: "StatusOrderTableViewCell", bundle: nil), forCellReuseIdentifier: StatusOrderTableViewCell.identifier)
-    
+        
     }
     
     func generateShoppingCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingBoxTableViewCell.identifier, for: indexPath) as! ShoppingBoxTableViewCell
-               return cell
+        return cell
     }
     
     func generateOrderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.identifier, for: indexPath) as! OrderTableViewCell
-         cell.isEditing = false
+        cell.isEditing = false
         cell.lineSectionView.isHidden = true
         
         if ((self.productsMail.count+self.productsOrdersStorage.count)==indexPath.row){
             cell.lineSectionView.backgroundColor = UIColor.hexStringToUIColor(hex:"ffbdc3")
-             cell.lineSectionView.isHidden = false
+            cell.lineSectionView.isHidden = false
         }
         if (indexPath.row == 0){
             cell.lineSectionView.isHidden = false
@@ -101,7 +101,7 @@ class ShoppingBoxViewController: UIViewController {
         
         return cell
     }
-
+    
     
     func generateStatusCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -109,16 +109,16 @@ class ShoppingBoxViewController: UIViewController {
         cell.isEditing = false
         if indexPath.row == self.productsOrdersStorage.count+self.productsMail.count+1 {
             cell.footContentView.backgroundColor = UIColor.hexStringToUIColor(hex:"ff8591")
-             cell.headContentView.backgroundColor = UIColor.hexStringToUIColor(hex:"ffeeef")
+            cell.headContentView.backgroundColor = UIColor.hexStringToUIColor(hex:"ffeeef")
             
         }
         
         return cell
-    
-    
+        
+        
     }
-
-
+    
+    
 }
 
 
@@ -127,7 +127,7 @@ extension ShoppingBoxViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (self.isActiveBox==true){
             //self.buyShopBar.isHidden = false
-
+            
             return self.generateShoppingCell(tableView, cellForRowAt:indexPath)
         }else {
             //self.buyShopBar.isHidden = true
@@ -141,8 +141,8 @@ extension ShoppingBoxViewController: UITableViewDataSource {
             return self.generateOrderCell(tableView, cellForRowAt:indexPath)
             
         }
-      
-     
+        
+        
         
     }
     
@@ -168,12 +168,12 @@ extension ShoppingBoxViewController: UITableViewDelegate {
     }
     
     
- 
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if (self.isActiveBox == true){
-            return 150
+            return ShoppingBoxTableViewCell.cellHeight
             
         }
         
@@ -182,7 +182,7 @@ extension ShoppingBoxViewController: UITableViewDelegate {
             return height
             
         } else if self.productsOrdersStorage.count == indexPath.row {
-                       return 200
+            return 200
             
         } else if self.productsOrdersStorage.count+self.productsMail.count+1 > indexPath.row {
             let height = self.view.bounds.size.width * 0.348
@@ -190,9 +190,9 @@ extension ShoppingBoxViewController: UITableViewDelegate {
         } else {
             return 200
         }
-    
+        
         
     }
     
-       
+    
 }

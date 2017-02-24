@@ -11,10 +11,10 @@ import UIKit
 class ShoppingBoxTableViewCell: UITableViewCell {
     
     static let identifier = "shoppingBoxCell"
-
+    static let cellHeight: CGFloat = 178
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var bgViewCell: UIView!
+//    @IBOutlet weak var bgViewCell: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var lessButton: UIButton!
     @IBOutlet weak var productImage: UIImageView!
@@ -26,8 +26,8 @@ class ShoppingBoxTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.bgViewCell.layer.borderWidth = 1.5
-        self.bgViewCell.layer.borderColor = UIColor.black.cgColor
+//        self.bgViewCell.layer.borderWidth = 1.5
+//        self.bgViewCell.layer.borderColor = UIColor.black.cgColor
         self.configureImage()
     }
     
