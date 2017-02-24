@@ -10,7 +10,8 @@ import UIKit
 
 extension String {
     
-    func with(characterSpacing characterSpacing: Double) -> NSAttributedString {
+    func with(characterSpacing: Double) -> NSAttributedString {
+        
         let att = NSMutableAttributedString(string: self)
         att.addAttribute(NSKernAttributeName, value: characterSpacing, range: NSRange(location: 0, length: att.length - 1))
         

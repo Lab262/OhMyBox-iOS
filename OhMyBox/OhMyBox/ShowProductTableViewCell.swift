@@ -11,15 +11,43 @@ import UIKit
 class ShowProductTableViewCell: UITableViewCell {
 
     
+    static let cellHeight: CGFloat = 472.0
     static let identifier = "productTableCell"
     
     @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var nameProductLabel: UILabel!
-    @IBOutlet weak var nameBrandLabel: UILabel!
-    @IBOutlet weak var valueProductLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var brandNameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var boxButton: UIButton!
-     
+    
+    var brandName: String? {
+        didSet {
+            if let brandName = brandName {
+                brandNameLabel.attributedText = brandName.with(characterSpacing: 1.0)
+            } else {
+                brandNameLabel.attributedText = nil
+            }
+        }
+    }
+    
+    var productName: String? {
+        didSet {
+            productNameLabel.text = productName
+        }
+    }
+    
+    var price: Double? {
+        didSet {
+            if let price = price {
+                let priceString = String(format: "R$ %.2lf", price).replacingOccurrences(of: ".", with: ",")
+                priceLabel.text = priceString
+            } else {
+                priceLabel.text = nil
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.initializeStatesButtons()

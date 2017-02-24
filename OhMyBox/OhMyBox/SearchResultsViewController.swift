@@ -88,6 +88,10 @@ extension SearchResultsViewController: UITableViewDataSource {
 //        let product = products[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ShowProductTableViewCell.identifier) as! ShowProductTableViewCell
         // align model with cell fields
+        //placeholder
+        cell.brandName = "Por fashion store"
+        cell.productName = "Óculos Cool"
+        cell.price = 50.0
         
         return cell
     }
@@ -96,6 +100,6 @@ extension SearchResultsViewController: UITableViewDataSource {
 extension SearchResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 502.0
+        return ShowProductTableViewCell.cellHeight
     }
 }

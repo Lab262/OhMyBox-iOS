@@ -42,13 +42,13 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQY-VE-gcq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
                                     <segue destination="Nia-7Y-f07" kind="embed" id="XFR-jB-daa"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zw7-lD-5LW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
                                     <segue destination="kgb-l5-Jnq" kind="embed" id="qiI-ck-hYs"/>
                                 </connections>
@@ -93,11 +93,11 @@
                         <viewControllerLayoutGuide type="bottom" id="eqe-dE-5Ax"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C1i-xA-uaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-p4-ADz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" id="BiP-YM-hfQ" customClass="SearchCategoryTableViewCell" customModule="OhMyBox" customModuleProvider="target">
@@ -114,7 +114,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgw-8e-4up">
-                                                    <rect key="frame" x="34" y="9" width="78" height="25"/>
+                                                    <rect key="frame" x="34" y="13" width="65.5" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -158,12 +158,16 @@
         <scene sceneID="O77-J8-P3L">
             <objects>
                 <viewController id="kgb-l5-Jnq" customClass="SearchSuggestionsViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uLg-1j-RTg"/>
+                        <viewControllerLayoutGuide type="bottom" id="3kE-hc-lZW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KEx-pm-Gh5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ep-Aa-bVU">
-                                <rect key="frame" x="0.0" y="17" width="375" height="586"/>
+                                <rect key="frame" x="0.0" y="17" width="375" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="searchSuggestionCell" id="3oP-UE-TKJ" customClass="SearchSuggestionTableViewCell" customModule="OhMyBox" customModuleProvider="target">
@@ -181,7 +185,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-pX-G3d">
-                                                    <rect key="frame" x="34" y="10" width="40" height="25"/>
+                                                    <rect key="frame" x="34" y="14" width="37" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -225,6 +229,10 @@
         <scene sceneID="3x3-Bd-kim">
             <objects>
                 <viewController id="q2x-LN-QMD" customClass="SearchResultsViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z5h-cl-VGD"/>
+                        <viewControllerLayoutGuide type="bottom" id="WUW-Po-kOb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EUo-Kp-5tT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +261,7 @@
                                 <state key="normal" title="Filtro" backgroundImage="container_button"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-Bv-auP">
-                                <rect key="frame" x="0.0" y="134.5" width="375" height="532.5"/>
+                                <rect key="frame" x="0.0" y="135" width="375" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="q2x-LN-QMD" id="1qc-HM-QQY"/>
@@ -263,8 +271,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WUW-Po-kOb" firstAttribute="top" secondItem="DcG-Bv-auP" secondAttribute="bottom" id="3V9-IU-qee"/>
                             <constraint firstItem="Ydm-2g-k2R" firstAttribute="top" secondItem="Vgb-aM-rQw" secondAttribute="bottom" constant="24" id="6pP-rh-erQ"/>
-                            <constraint firstAttribute="bottom" secondItem="DcG-Bv-auP" secondAttribute="bottom" id="DrQ-AY-O3H"/>
                             <constraint firstItem="DcG-Bv-auP" firstAttribute="leading" secondItem="EUo-Kp-5tT" secondAttribute="leading" id="FAL-mo-BPa"/>
                             <constraint firstAttribute="trailing" secondItem="DcG-Bv-auP" secondAttribute="trailing" id="KZx-oH-6zi"/>
                             <constraint firstAttribute="trailing" secondItem="m3f-6v-Mx8" secondAttribute="trailing" constant="15" id="NLY-pZ-Dh8"/>
@@ -292,6 +300,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gXe-FC-F7r" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hjj-0l-7GI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
