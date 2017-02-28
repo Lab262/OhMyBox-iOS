@@ -43,7 +43,7 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func registerNibs() {
-        collectionView.registerNibFrom(HighlightCollectionViewCell.self)
+        collectionView.registerNibFrom(MiniProductCollectionViewCell.self)
     }
 }
 
@@ -59,9 +59,9 @@ extension NewsTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HighlightCollectionViewCell.identifier, for: indexPath) as! HighlightCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiniProductCollectionViewCell.identifier, for: indexPath) as! MiniProductCollectionViewCell
         
-        cell.imageView.image = highlights[indexPath.item]
+        // set cell product
         
         return cell
     }
@@ -70,6 +70,6 @@ extension NewsTableViewCell: UICollectionViewDataSource {
 extension NewsTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return HighlightCollectionViewCell.cellSize
+        return MiniProductCollectionViewCell.cellSize
     }
 }

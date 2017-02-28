@@ -23,6 +23,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="270" height="277"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verao_de_saias" translatesAutoresizingMaskIntoConstraints="NO" id="ifX-pl-cFV">
+                        <rect key="frame" x="0.0" y="41" width="270" height="195"/>
+                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzO-WG-vip">
                         <rect key="frame" x="0.0" y="236" width="270" height="41"/>
                         <subviews>
@@ -37,7 +40,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por fashion store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV2-ga-Rkz">
                                 <rect key="frame" x="128" y="7.5" width="131" height="25"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -50,6 +53,14 @@
                             <constraint firstItem="si2-xl-iDm" firstAttribute="leading" secondItem="yu7-4l-N6M" secondAttribute="trailing" constant="17" id="nD4-DH-FNg"/>
                             <constraint firstAttribute="trailing" secondItem="YV2-ga-Rkz" secondAttribute="trailing" constant="11" id="sDz-7P-oNl"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.42999999999999999" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-Ue-m13">
                         <rect key="frame" x="0.0" y="0.0" width="270" height="41"/>
@@ -75,10 +86,15 @@
                             <constraint firstAttribute="trailing" secondItem="KWd-o4-Shi" secondAttribute="trailing" constant="11" id="ht6-dW-rN0"/>
                             <constraint firstItem="KWd-o4-Shi" firstAttribute="centerY" secondItem="uUp-kf-qWV" secondAttribute="centerY" id="nvi-bJ-7OR"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.42999999999999999" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verao_de_saias" translatesAutoresizingMaskIntoConstraints="NO" id="ifX-pl-cFV">
-                        <rect key="frame" x="0.0" y="41" width="270" height="195"/>
-                    </imageView>
                 </subviews>
             </view>
             <constraints>
@@ -94,6 +110,13 @@
                 <constraint firstItem="MzO-WG-vip" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nX1-de-xjU"/>
                 <constraint firstAttribute="bottom" secondItem="MzO-WG-vip" secondAttribute="bottom" id="nmN-ik-4Gb"/>
             </constraints>
+            <connections>
+                <outlet property="boxButton" destination="yu7-4l-N6M" id="gGs-Kt-2yE"/>
+                <outlet property="brandCreditsLabel" destination="YV2-ga-Rkz" id="yAB-W6-Jby"/>
+                <outlet property="heartButton" destination="si2-xl-iDm" id="UjX-Ef-jmT"/>
+                <outlet property="nameLabel" destination="uUp-kf-qWV" id="Ct9-2L-bKP"/>
+                <outlet property="priceLabel" destination="KWd-o4-Shi" id="dSO-bd-y1L"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

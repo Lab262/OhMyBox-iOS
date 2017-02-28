@@ -66,6 +66,7 @@ class HomeViewController: UIViewController{
         
         //Cells
         tableView.registerNibFrom(HighlightsTableViewCell.self)
+        tableView.registerNibFrom(NewsTableViewCell.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -99,7 +100,7 @@ extension HomeViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0: cell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateNewsCell(tableView, cellForRowAt: indexPath)
         case 2: cell = generatePromotionCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
@@ -116,6 +117,14 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
 
+    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as! NewsTableViewCell
+        
+        cell.products = [1, 2, 3]
+        
+        return cell
+    }
     
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -166,7 +175,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
 }
@@ -188,6 +197,7 @@ extension HomeViewController: UITableViewDelegate {
         
         switch indexPath.section {
         case 0: height = HighlightsTableViewCell.cellHeight
+        case 1: height = NewsTableViewCell.cellHeight
         default: height = 0
         }
         
