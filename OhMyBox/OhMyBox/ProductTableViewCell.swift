@@ -12,7 +12,9 @@ class ProductTableViewCell: UITableViewCell {
 
     var isAutomaticLayout: Bool? = false
     @IBOutlet weak var collectionView: UICollectionView!
-    static let identifier = "productCell"
+    static var identifier: String {
+        return "productCell"
+    }
     let segueIdentifier = "detailProduct"
 
     var delegate : callSegueProtocol?

@@ -10,7 +10,9 @@ import UIKit
 
 class DiscountTitleTableViewCell: UITableViewCell {
     
-    static let identifier = "discountTitleCell"
+    static var identifier: String {
+        return "discountTitleCell"
+    }
 
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!

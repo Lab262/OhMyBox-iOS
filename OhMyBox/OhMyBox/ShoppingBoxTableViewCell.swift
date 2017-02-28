@@ -10,8 +10,12 @@ import UIKit
 
 class ShoppingBoxTableViewCell: UITableViewCell {
     
-    static let identifier = "shoppingBoxCell"
-    static let cellHeight: CGFloat = 178
+    static var identifier: String {
+        return "shoppingBoxCell"
+    }
+    static var cellHeight: CGFloat {
+        return 178
+    }
     
     @IBOutlet weak var scrollView: UIScrollView!
 //    @IBOutlet weak var bgViewCell: UIView!

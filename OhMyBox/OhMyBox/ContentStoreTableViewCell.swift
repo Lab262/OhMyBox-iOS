@@ -10,9 +10,10 @@ import UIKit
 
 class ContentStoreTableViewCell: UITableViewCell {
     
-    static let identifier = "contentStoreViewCell"
+    static var identifier: String {
+        return "contentStoreViewCell"
+    }
 
-    
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var phraseStore: UILabel!
     @IBOutlet weak var nameStore: UILabel!

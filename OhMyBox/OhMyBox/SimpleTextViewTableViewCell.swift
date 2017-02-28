@@ -9,7 +9,9 @@
 import UIKit
 
 class SimpleTextViewTableViewCell: UITableViewCell {
-    static let identifier = "simpleTextViewCell"
+    static var identifier: String {
+        return "simpleTextViewCell"
+    }
     
     
     @IBOutlet weak var textDetailLabel: UILabel!

@@ -10,7 +10,9 @@ import UIKit
 
 class SearchHeaderTableViewCell: UITableViewCell {
 
-    static let identifier = "searchHeaderCell"
+    static var identifier: String {
+        return "searchHeaderCell"
+    }
     
     @IBOutlet weak var headerTitleLabel: UILabel!
     

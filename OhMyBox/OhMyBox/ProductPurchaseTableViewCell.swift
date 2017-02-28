@@ -10,9 +10,11 @@ import UIKit
 
 class ProductPurchaseTableViewCell: UITableViewCell {
     
-      static let identifier = "productPurchaseCell"
+    static var identifier: String {
+        return "productPurchaseCell"
+    }
     @IBOutlet weak var nameProductLabel: UILabel!
-
+    
     @IBOutlet weak var nameStoreLabel: UILabel!
     @IBOutlet weak var priceProductLabel: UILabel!
     @IBOutlet weak var unitLabel: UILabel!
@@ -22,10 +24,10 @@ class ProductPurchaseTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

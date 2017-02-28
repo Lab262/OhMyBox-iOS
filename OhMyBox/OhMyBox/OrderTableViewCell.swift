@@ -10,7 +10,9 @@ import UIKit
 
 class OrderTableViewCell: UITableViewCell {
     
-    static let identifier = "orderCell"
+    static var identifier: String {
+        return "orderCell"
+    }
 
     @IBOutlet weak var lineSectionView: UIView!
     @IBOutlet weak var orderImageView: UIImageView!

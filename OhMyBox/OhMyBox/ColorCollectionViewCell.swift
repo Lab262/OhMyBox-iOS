@@ -9,7 +9,9 @@
 import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
-      static let identifier = "ColorCollectionCell"
+    static var identifier: String {
+        return "ColorCollectionCell"
+    }
     @IBOutlet weak var circleInternal: UIView!
     @IBOutlet weak var circleColor: UIView!
     @IBOutlet weak var checkColor: UIImageView!

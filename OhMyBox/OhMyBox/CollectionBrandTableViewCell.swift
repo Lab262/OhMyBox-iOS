@@ -11,7 +11,9 @@ import UIKit
 class CollectionBrandTableViewCell: UITableViewCell {
     
     
-    static let identifier = "collectionBrandCell"
+    static var identifier: String {
+        return "collectionBrandCell"
+    }
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var tagNameImage: UIImageView!

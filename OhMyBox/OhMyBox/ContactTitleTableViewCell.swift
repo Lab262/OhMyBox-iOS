@@ -10,7 +10,9 @@ import UIKit
 
 class ContactTitleTableViewCell: UITableViewCell {
     
-    static let identifier = "contactTitleCell"
+    static var identifier: String {
+        return "contactTitleCell"
+    }
     
     @IBOutlet weak var contactTitleLabel: UILabel!
     

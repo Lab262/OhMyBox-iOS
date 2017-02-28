@@ -18,7 +18,9 @@ class HeaderTitleTableViewCell: UITableViewCell {
     
     
     
-    static let identifier = "headerCell"
+    static var identifier: String {
+        return "headerCell"
+    }
     
     @IBOutlet weak var firstTitleLineLabel: UILabel!
     @IBOutlet weak var secondTitleLineLabel: UILabel!

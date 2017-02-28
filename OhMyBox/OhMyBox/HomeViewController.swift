@@ -15,10 +15,8 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
     var viewSearch: UIView?
-    var searchController: UISearchController!
     var boxButtonItem: UIBarButtonItem?
     var clotingArray: [String]?
-    var searchButtonItem: UIBarButtonItem?
     @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
     @IBOutlet weak var searchBarButton: UIBarButtonItem!
     var filtered:[String] = []
@@ -30,11 +28,6 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         self.registerNib()
         
-//         let rightboxBarButtonItem = UIBarButtonItem(image: UIImage(named:"box_button"), style: .done, target: self, action: #selector(actionGoCart(_:)))
-//        
-//        let rightSearchBarButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
-//             navigationItem.rightBarButtonItems = [rightboxBarButtonItem, rightSearchBarButtonItem]
-        searchBar.delegate = self
         self.clotingArray = [String]()
         self.clotingArray?.append("Cloting One")
         self.clotingArray?.append("Cloting Two")
@@ -60,7 +53,6 @@ class HomeViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.configureSearchBar()
         self.configureNavigationBar()
         self.navigationController?.navigationBar.isHidden = true
     }
@@ -77,13 +69,6 @@ class HomeViewController: UIViewController{
         
         self.performSegue(withIdentifier:"goCart", sender:nil)
     
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        if self.searchController.isActive {
-            self.searchController.isActive = false
-            self.searchController.searchBar.resignFirstResponder()
-        }
     }
     
     func registerNib() {
@@ -122,70 +107,6 @@ class HomeViewController: UIViewController{
         
     }
     
-    
-    @IBAction func searchProducts(_ sender: AnyObject) {
-        self.showSearchBar()
-    
-    }
-    
-    func configureSearchBar () {
-        //self.searchBarButton.isEnabled = false
-        self.searchController = UISearchController(searchResultsController: nil)
-        self.searchController.searchResultsUpdater = self
-        self.searchController.searchBar.delegate = self
-     // self.searchController.searchBar.setImage(UIImage(named: ""), for: .search, state: UIControlState())
-        self.searchController.delegate = self
-        self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.dimsBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Buscar"
-        self.searchController.searchBar.setValue("Cancelar", forKey: "_cancelButtonText")
-        
-        self.searchController.searchBar.setBackgroundImage(ViewUtil.imageFromColor(.clear, forSize: self.searchController.searchBar.frame.size, withCornerRadius: 0), for: .any, barMetrics: .default)
-        
-        
-        self.searchController.searchBar.tintColor = UIColor.colorWithHexString("AFAFB3")
-        
-        searchController.hidesBottomBarWhenPushed = true
-        let searchField = self.searchController.searchBar.value(forKey: "searchField") as? UITextField
-        
-        
-        searchField?.backgroundColor = UIColor.colorWithHexString("F4F4F4")
-        searchField?.textColor = UIColor.black
-        searchField?.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Buscar", comment: ""), attributes: [NSForegroundColorAttributeName: UIColor.colorWithHexString("AFAFB3")])
-       //   searchBarButton.isEnabled = true
-        
-        
-        
-        self.viewSearch = UIView(frame: CGRect(x: self.searchController.searchBar.frame.origin.x, y: self.searchController.searchBar.frame.origin.y, width: self.searchController.searchBar.bounds.size.width-15, height: self.searchController.searchBar.bounds.size.height))
-       
-       
-        
-        self.viewSearch?.backgroundColor = UIColor.white
-        
-        self.viewSearch?.addSubview(self.searchController.searchBar)
-        
-    }
-   
-    func showSearchBar() {
-        
-        self.searchController.isActive = true
-        self.searchController.searchBar.alpha = 0
-       // searchBarButton.isEnabled = false
-       // searchBarButton.tintColor = UIColor.clear
-       
-        let leftNavBarButton = UIBarButtonItem(customView: self.viewSearch!)
-        navigationItem.setLeftBarButton(leftNavBarButton, animated: true)
-        self.viewSearch?.isHidden = false
-
-      
-        UIView.animate(withDuration: 0.2, animations: {
-            self.searchController.searchBar.alpha = 1
-            }, completion: { finished in
-                self.searchController.searchBar.becomeFirstResponder()
-        })
-    }
-    
-
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -357,55 +278,3 @@ extension HomeViewController: callSegueProtocol {
         self.performSegue(withIdentifier:segueIndentifier, sender:self)
     }
 }
-
-extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
-    
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-    
-    
-    func presentSearchController(_ searchController: UISearchController) {
-        self.searchController.searchBar.becomeFirstResponder()
-       
-
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        
-    }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-       
-        self.viewSearch?.isHidden = true
-      // self.navigationController?.isNavigationBarHidden = false
-        //  self.navigationController?.isToolbarHidden = false
-       // self.navigationItem.title = "OH-MY-BOX"
-      //  self.navigationController?.navigationItem.title = "OH-MY-BOX"
-       // self.searchController.searchBar.alpha = 0
-//        self.searchController.isActive = false
-
-    }
-    
-    func didDismissSearchController(_ searchController: UISearchController) {
-        self.searchController.searchBar.resignFirstResponder()
-        
-    }
-    
-    func willDismissSearchController(_ searchController: UISearchController) {
-        
-        //    self.title = "OHMYBOX"
-         self.viewSearch?.isHidden = true
-    }
-}
-
-

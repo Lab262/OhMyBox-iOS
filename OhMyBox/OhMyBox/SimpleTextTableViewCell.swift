@@ -9,7 +9,9 @@
 import UIKit
 
 class SimpleTextTableViewCell: UITableViewCell {
-    static let identifier = "simpleTextCell"
+    static var identifier: String {
+        return "simpleTextCell"
+    }
     
     @IBOutlet weak var simpleTitleLabel: UILabel!
     override func awakeFromNib() {

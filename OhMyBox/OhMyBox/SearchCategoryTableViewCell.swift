@@ -10,7 +10,9 @@ import UIKit
 
 class SearchCategoryTableViewCell: UITableViewCell {
 
-    static let identifier = "categoryCell"
+    static var identifier: String {
+        return "categoryCell"
+    }
     
     @IBOutlet weak var categoryNameLabel: UILabel!
     

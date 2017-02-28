@@ -10,7 +10,9 @@ import UIKit
 
 class HeaderTitleSecondTypeTableViewCell: UITableViewCell {
     
-    static let identifier = "headerSecondTypeCell"
+    static var identifier: String {
+        return "headerSecondTypeCell"
+    }
 
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

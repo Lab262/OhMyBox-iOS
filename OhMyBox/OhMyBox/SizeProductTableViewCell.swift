@@ -9,7 +9,9 @@
 import UIKit
 private let reuseIdentifier = "sizeProductCell"
 class SizeProductTableViewCell: UITableViewCell {
-    static let identifier = "sizeProductCell"
+    static var identifier: String {
+        return "sizeProductCell"
+    }
     var size = ["P","PP","M","G","GG"]
     
     @IBOutlet weak var collectionView: UICollectionView!

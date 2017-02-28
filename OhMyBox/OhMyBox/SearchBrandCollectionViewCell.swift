@@ -10,8 +10,12 @@ import UIKit
 
 class SearchBrandCollectionViewCell: UICollectionViewCell {
 
-    static let cellSize = CGSize(width: 75.0, height: 75.0)
-    static let identifier = "searchBrandCollectionViewCell"
+    static var cellSize: CGSize {
+        return CGSize(width: 75.0, height: 75.0)
+    }
+    static var identifier: String {
+        return "searchBrandCollectionViewCell"
+    }
     @IBOutlet weak var brandImageView: UIImageView!
     
     override func awakeFromNib() {

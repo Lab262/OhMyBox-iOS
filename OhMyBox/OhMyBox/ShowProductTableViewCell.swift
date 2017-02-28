@@ -11,8 +11,12 @@ import UIKit
 class ShowProductTableViewCell: UITableViewCell {
 
     
-    static let cellHeight: CGFloat = 472.0
-    static let identifier = "productTableCell"
+    static var cellHeight: CGFloat {
+        return 472.0
+    }
+    static var identifier: String {
+        return "productTableCell"
+    }
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!

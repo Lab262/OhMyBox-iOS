@@ -16,8 +16,9 @@ class AttributesTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    static let identifier = "attributeCell"
-    
+    static var identifier: String {
+        return "attributeCell"
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         self.initColoursDefault()

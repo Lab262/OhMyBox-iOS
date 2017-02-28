@@ -10,7 +10,9 @@ import UIKit
 
 class SearchSuggestionsHeaderTableViewCell: UITableViewCell {
 
-    static let identifier = "searchSuggestionHeaderCell"
+    static var identifier: String {
+        return "searchSuggestionHeaderCell"
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
     

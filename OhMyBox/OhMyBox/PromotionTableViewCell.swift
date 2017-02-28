@@ -9,7 +9,9 @@
 import UIKit
 
 class PromotionTableViewCell: UITableViewCell {
-    static let identifier = "promotionCell"
+    static var identifier: String {
+        return "promotionCell"
+    }
     
     @IBOutlet weak var secondFirstLabel: UILabel!
     @IBOutlet weak var firsTextLabel: UILabel!

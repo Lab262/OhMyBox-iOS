@@ -39,7 +39,9 @@ class ShowCaseCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    static let identifier = "showCaseCell"
+    static var identifier: String {
+        return "showCaseCell"
+    }
     var followingClothes = false
     
     var tagView: UIView!

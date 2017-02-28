@@ -9,7 +9,9 @@
 import UIKit
 
 class ShowProductCollectionViewCell: UICollectionViewCell {
-    static let identifier = "showProductCell"
+    static var identifier: String {
+        return "showProductCell"
+    }
     
     @IBOutlet weak var nameProduct: UILabel!
     @IBOutlet weak var priceProduct: UILabel!

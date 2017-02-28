@@ -14,7 +14,9 @@ class StatusOrderTableViewCell: UITableViewCell {
     @IBOutlet weak var dataTime: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var footContentView: UIView!
-     static let identifier = "statusOrderCell"
+     static var identifier: String {
+        return "statusOrderCell"
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

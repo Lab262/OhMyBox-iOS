@@ -10,8 +10,12 @@ import UIKit
 
 class CollectionPickerViewCell: UICollectionViewCell {
     
-    static let cellSize = CGSize(width: 125.0, height: 58.0)
-    static let identifier = "collectionPickerViewCell"
+    static var cellSize: CGSize {
+        return CGSize(width: 125.0, height: 58.0)
+    }
+    static var identifier: String {
+        return "collectionPickerViewCell"
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
     

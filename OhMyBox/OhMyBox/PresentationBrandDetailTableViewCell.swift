@@ -10,7 +10,9 @@ import UIKit
 
 class PresentationBrandDetailTableViewCell: UITableViewCell {
     
-    static let identifier = "presentationBrandCell"
+    static var identifier: String {
+        return "presentationBrandCell"
+    }
 
     
     

@@ -10,8 +10,12 @@ import UIKit
 
 class SearchHighlightsTableViewCell: UITableViewCell {
 
-    static let cellHeight: CGFloat = 163.0
-    static let identifier = "searchHighlightsTableViewCell"
+    static var cellHeight: CGFloat {
+        return 163.0
+    }
+    static var identifier: String {
+        return "searchHighlightsTableViewCell"
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     
     let marginWidth: CGFloat = 17.0

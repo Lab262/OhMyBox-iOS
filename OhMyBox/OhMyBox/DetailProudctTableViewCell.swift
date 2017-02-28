@@ -9,7 +9,9 @@
 import UIKit
 
 class DetailProudctTableViewCell: UITableViewCell {
-    static let identifier = "detailProductCell"
+    static var identifier: String {
+        return "detailProductCell"
+    }
     
     @IBOutlet weak var nameProduct: UILabel!
     @IBOutlet weak var priceProduct: UILabel!

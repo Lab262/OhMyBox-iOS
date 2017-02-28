@@ -9,7 +9,9 @@
 import UIKit
 
 class WishTableViewCell: UITableViewCell {
-    static let identifier = "wishCell"
+    static var identifier: String {
+        return "wishCell"
+    }
    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var nameProductLabel: UILabel!

@@ -27,7 +27,9 @@ class ClosetTableViewCell: UITableViewCell {
         }
     }
     
-    static let identifier = "closetCell"
+    static var identifier: String {
+        return "closetCell"
+    }
     var delegate: callSegueProtocol?
     
     func registerNibs () {

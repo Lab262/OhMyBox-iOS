@@ -9,7 +9,9 @@
 import UIKit
 
 class PhotoProfileTableViewCell: UITableViewCell {
-    static let identifier = "photoProfileCell"
+    static var identifier: String {
+        return "photoProfileCell"
+    }
 
     @IBOutlet weak var parallaxConstraint: NSLayoutConstraint!
     @IBOutlet weak var photoProfileImage: UIImageView!

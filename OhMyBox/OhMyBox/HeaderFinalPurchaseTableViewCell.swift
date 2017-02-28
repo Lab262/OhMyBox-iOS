@@ -9,7 +9,9 @@
 import UIKit
 
 class HeaderFinalPurchaseTableViewCell: UITableViewCell {
-    static let identifier = "headerFinalPurchaseCell"
+    static var identifier: String {
+        return "headerFinalPurchaseCell"
+    }
 
     @IBOutlet weak var headerTitleLabel: UILabel!
     override func awakeFromNib() {

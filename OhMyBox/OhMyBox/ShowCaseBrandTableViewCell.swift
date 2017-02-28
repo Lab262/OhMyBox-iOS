@@ -20,7 +20,9 @@ class ShowCaseBrandTableViewCell: UITableViewCell {
     
     @IBOutlet weak var subtitleBrandLabel: UILabel!
 
-    static let identifier = "showCaseBrandCell"
+    static var identifier: String {
+        return "showCaseBrandCell"
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

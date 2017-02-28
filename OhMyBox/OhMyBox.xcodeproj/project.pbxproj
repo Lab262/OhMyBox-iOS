@@ -89,6 +89,8 @@
 		2FAD48C71DB7031300074D55 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD48C61DB7031300074D55 /* ProductTableViewCell.swift */; };
 		2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */; };
 		2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */; };
+		4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */; };
+		4C2F24ED1E6602C20043A90B /* UICollectionViewCell+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F24EC1E6602C20043A90B /* UICollectionViewCell+Utils.swift */; };
 		4C459F1C1E636EA00076D962 /* SearchBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */; };
 		4C459F1F1E636F980076D962 /* SearchBrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F1D1E636F980076D962 /* SearchBrandCollectionViewCell.swift */; };
 		4C459F201E636F980076D962 /* SearchBrandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C459F1E1E636F980076D962 /* SearchBrandCollectionViewCell.xib */; };
@@ -293,6 +295,8 @@
 		2FAD48C61DB7031300074D55 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountTitleTableViewCell.swift; sourceTree = "<group>"; };
 		2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountTitleTableViewCell.xib; sourceTree = "<group>"; };
+		4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Utils.swift"; sourceTree = "<group>"; };
+		4C2F24EC1E6602C20043A90B /* UICollectionViewCell+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Utils.swift"; sourceTree = "<group>"; };
 		4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBrandsTableViewCell.swift; sourceTree = "<group>"; };
 		4C459F1D1E636F980076D962 /* SearchBrandCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBrandCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C459F1E1E636F980076D962 /* SearchBrandCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBrandCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1027,6 +1031,8 @@
 				D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */,
 				A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */,
 				4CB29DE71E5B64FC007FA758 /* CGOperations.swift */,
+				4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */,
+				4C2F24EC1E6602C20043A90B /* UICollectionViewCell+Utils.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1419,6 +1425,7 @@
 				4C459F291E6373770076D962 /* SearchHighlightCollectionViewCell.swift in Sources */,
 				4C8AAF251E5F83BF00258116 /* SearchResultsViewController.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
+				4C2F24ED1E6602C20043A90B /* UICollectionViewCell+Utils.swift in Sources */,
 				4C459F1F1E636F980076D962 /* SearchBrandCollectionViewCell.swift in Sources */,
 				2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */,
 				4C8AAF2C1E5F845C00258116 /* CollectionPickerController.swift in Sources */,
@@ -1427,6 +1434,7 @@
 				D41E8FD71DE4F28200BA3266 /* TagView5.swift in Sources */,
 				2F5DE1C21DC1386700822826 /* SwitchProductButtonTableViewCell.swift in Sources */,
 				2F70E8041DC7B9AC000AB03B /* ShoppingBoxViewController.swift in Sources */,
+				4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */,
 				D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */,
 				2F07774B1DBD9B95003C124F /* SimpleTextTableViewCell.swift in Sources */,
 				A4D81D141DEBCF01008B269A /* AuthenticationContainerViewController.swift in Sources */,

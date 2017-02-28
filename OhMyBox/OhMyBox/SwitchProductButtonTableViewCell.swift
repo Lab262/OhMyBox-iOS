@@ -9,7 +9,9 @@
 import UIKit
 
 class SwitchProductButtonTableViewCell: UITableViewCell {
-    static let identifier = "switchButtonProductCell"
+    static var identifier: String {
+        return "switchButtonProductCell"
+    }
    
     @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var descriptionButton: UIButton!

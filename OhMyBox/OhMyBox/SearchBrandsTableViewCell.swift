@@ -10,8 +10,12 @@ import UIKit
 
 class SearchBrandsTableViewCell: UITableViewCell {
 
-    static let cellHeight: CGFloat = 75.0
-    static let identifier = "searchBrandTableViewCell"
+    static var cellHeight: CGFloat {
+        return 75.0
+    }
+    static var identifier: String {
+        return "searchBrandTableViewCell"
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     
     let marginWidth: CGFloat = 17.0

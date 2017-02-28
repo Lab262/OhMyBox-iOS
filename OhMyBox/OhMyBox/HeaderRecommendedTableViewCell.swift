@@ -9,7 +9,9 @@
 import UIKit
 
 class HeaderRecommendedTableViewCell: UITableViewCell {
-    static let identifier = "headerRecommendedCell"
+    static var identifier: String {
+        return "headerRecommendedCell"
+    }
     
     @IBOutlet weak var headerTitleLabel: UILabel!
       override func awakeFromNib() {
