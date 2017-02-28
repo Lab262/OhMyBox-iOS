@@ -11,6 +11,7 @@ import UIKit
 protocol UICollectionViewCellHelper: class {
     static var cellSize: CGSize { get }
     static var identifier: String { get }
+    static var nibName: String { get }
 }
 
 extension UICollectionViewCellHelper {
@@ -21,8 +22,24 @@ extension UICollectionViewCellHelper {
     static var identifier: String {
         return ""
     }
+    
+    static var nibName: String {
+        return ""
+    }
 }
 
 extension UICollectionViewCell: UICollectionViewCellHelper {
     
+}
+
+extension UICollectionView {
+    
+    func registerNibFrom(_ cellClass: UICollectionViewCell.Type) {
+        
+        let nibName = cellClass.value(forKey: "nibName") as! String
+        let cellIdentifier = cellClass.value(forKey: "identifier") as! String
+        
+        let nib = UINib(nibName: nibName, bundle: nil)
+        self.register(nib, forCellWithReuseIdentifier: cellIdentifier)
+    }
 }

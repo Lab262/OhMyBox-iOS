@@ -18,6 +18,10 @@ class HomeTableViewHeaderView: UITableViewCell {
         return "homeHeaderView"
     }
     
+    static var nibName: String {
+        return "HomeTableViewHeaderView"
+    }
+    
     @IBOutlet weak var topLineLabel: UILabel!
     @IBOutlet weak var bottomLineLabel: UILabel!
     @IBOutlet weak var showAllButton: UIButton!

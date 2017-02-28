@@ -62,11 +62,10 @@ class HomeViewController: UIViewController{
     func registerNibs() {
         
         //Header
-        self.tableView.register(UINib(nibName: "HomeTableViewHeaderView", bundle: nil), forCellReuseIdentifier: HomeTableViewHeaderView.identifier)
+        tableView.registerNibFrom(HomeTableViewHeaderView.self)
         
         //Cells
-        self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
-          self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
+        tableView.registerNibFrom(HighlightsTableViewCell.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -99,7 +98,7 @@ extension HomeViewController: UITableViewDataSource {
         let cell: UITableViewCell
         
         switch indexPath.section {
-        case 0: cell = generateClosetCell(tableView, cellForRowAt: indexPath)
+        case 0: cell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
         case 1: cell = generateProductCell(tableView, cellForRowAt: indexPath)
         case 2: cell = generatePromotionCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
@@ -107,6 +106,16 @@ extension HomeViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsTableViewCell.identifier, for: indexPath) as! HighlightsTableViewCell
+        
+        cell.highlights = [#imageLiteral(resourceName: "verao_de_saias"), #imageLiteral(resourceName: "verao_de_saias"), #imageLiteral(resourceName: "verao_de_saias")]
+        
+        return cell
+    }
+
     
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -157,7 +166,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 1
     }
 
 }
@@ -166,8 +175,8 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        if indexPath.section == 2{
-            if indexPath.row == 0{
+        if indexPath.section == 2 {
+            if indexPath.row == 0 {
                 performSegue(withIdentifier:"goPromotion", sender:self)
             }
         }
@@ -175,28 +184,14 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        switch indexPath.section {
-            case 0, 1:
-
-                let width = self.view.bounds.size.width * 0.95
-                let height = width*1.3
-                //1.3
-                return height
-            case 2:
-                
-                let width = self.view.bounds.size.width * 0.66
-                let height = width*1.6
-                
-                print ("ALTURA CELL: \(height)")
-                
-                return height
-
+        let height: CGFloat
         
-            case 3:
-                return 50
-            default:
-                return 0
+        switch indexPath.section {
+        case 0: height = HighlightsTableViewCell.cellHeight
+        default: height = 0
         }
+        
+        return height
         
     }
     

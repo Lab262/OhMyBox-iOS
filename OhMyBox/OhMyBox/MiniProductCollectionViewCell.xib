@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MiniProductCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="270" height="277"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="270" height="277"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzO-WG-vip">
+                        <rect key="frame" x="0.0" y="236" width="270" height="41"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu7-4l-N6M">
+                                <rect key="frame" x="11" y="7" width="27" height="26"/>
+                                <state key="normal" image="box_button_gray"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si2-xl-iDm">
+                                <rect key="frame" x="55" y="9" width="25" height="22"/>
+                                <state key="normal" image="heart_button_gray"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por fashion store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV2-ga-Rkz">
+                                <rect key="frame" x="128" y="7.5" width="131" height="25"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yu7-4l-N6M" firstAttribute="centerY" secondItem="MzO-WG-vip" secondAttribute="centerY" id="W6u-Yp-Itl"/>
+                            <constraint firstItem="yu7-4l-N6M" firstAttribute="leading" secondItem="MzO-WG-vip" secondAttribute="leading" constant="11" id="Zk5-9r-8b3"/>
+                            <constraint firstItem="YV2-ga-Rkz" firstAttribute="centerY" secondItem="yu7-4l-N6M" secondAttribute="centerY" id="hgg-EF-yDY"/>
+                            <constraint firstItem="si2-xl-iDm" firstAttribute="centerY" secondItem="yu7-4l-N6M" secondAttribute="centerY" id="mFz-cp-PuS"/>
+                            <constraint firstItem="si2-xl-iDm" firstAttribute="leading" secondItem="yu7-4l-N6M" secondAttribute="trailing" constant="17" id="nD4-DH-FNg"/>
+                            <constraint firstAttribute="trailing" secondItem="YV2-ga-Rkz" secondAttribute="trailing" constant="11" id="sDz-7P-oNl"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-Ue-m13">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUp-kf-qWV">
+                                <rect key="frame" x="11" y="7.5" width="50" height="27"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWd-o4-Shi">
+                                <rect key="frame" x="192.5" y="8" width="66.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="7oZ-vx-960"/>
+                            <constraint firstItem="uUp-kf-qWV" firstAttribute="leading" secondItem="Z1b-Ue-m13" secondAttribute="leading" constant="11" id="IWv-cK-Guf"/>
+                            <constraint firstItem="uUp-kf-qWV" firstAttribute="centerY" secondItem="Z1b-Ue-m13" secondAttribute="centerY" id="gJH-pc-UiE"/>
+                            <constraint firstAttribute="trailing" secondItem="KWd-o4-Shi" secondAttribute="trailing" constant="11" id="ht6-dW-rN0"/>
+                            <constraint firstItem="KWd-o4-Shi" firstAttribute="centerY" secondItem="uUp-kf-qWV" secondAttribute="centerY" id="nvi-bJ-7OR"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verao_de_saias" translatesAutoresizingMaskIntoConstraints="NO" id="ifX-pl-cFV">
+                        <rect key="frame" x="0.0" y="41" width="270" height="195"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MzO-WG-vip" secondAttribute="trailing" id="6z8-rr-1Yl"/>
+                <constraint firstAttribute="trailing" secondItem="ifX-pl-cFV" secondAttribute="trailing" id="FUL-50-6hr"/>
+                <constraint firstItem="ifX-pl-cFV" firstAttribute="top" secondItem="Z1b-Ue-m13" secondAttribute="bottom" id="La9-fe-BRY"/>
+                <constraint firstItem="MzO-WG-vip" firstAttribute="height" secondItem="Z1b-Ue-m13" secondAttribute="height" id="M8G-Eo-RZf"/>
+                <constraint firstItem="ifX-pl-cFV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XjW-GD-gjq"/>
+                <constraint firstItem="Z1b-Ue-m13" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="foy-I1-6g4"/>
+                <constraint firstAttribute="trailing" secondItem="Z1b-Ue-m13" secondAttribute="trailing" id="gQW-7W-pxc"/>
+                <constraint firstItem="MzO-WG-vip" firstAttribute="top" secondItem="ifX-pl-cFV" secondAttribute="bottom" id="i6d-mh-Vro"/>
+                <constraint firstItem="Z1b-Ue-m13" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jzB-r4-5jd"/>
+                <constraint firstItem="MzO-WG-vip" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nX1-de-xjU"/>
+                <constraint firstAttribute="bottom" secondItem="MzO-WG-vip" secondAttribute="bottom" id="nmN-ik-4Gb"/>
+            </constraints>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="box_button_gray" width="27" height="26"/>
+        <image name="heart_button_gray" width="25" height="22"/>
+        <image name="verao_de_saias" width="358" height="345"/>
+    </resources>
+</document>

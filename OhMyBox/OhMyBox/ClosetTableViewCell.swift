@@ -43,19 +43,9 @@ class ClosetTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.registerNibs()
-        self.collectionView.delegate = self;
-        self.collectionView.dataSource = self;
-        self.collectionView.setScaledDesginParam(scaledPattern: .horizontalCenter, maxScale: 1.0, minScale: 0.97, maxAlpha: 1.0, minAlpha: 0.8)
-        //collectionView.scaledVisibleCells()
+        registerNibs()
         
-    }
-
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        collectionView.setScaledDesginParam(scaledPattern: .horizontalCenter, maxScale: 1.0, minScale: 0.97, maxAlpha: 1.0, minAlpha: 0.8)
     }
     
     
@@ -107,9 +97,6 @@ extension ClosetTableViewCell: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.scaledVisibleCells()
     }
-    
-
-    
 }
 
 extension ClosetTableViewCell: UICollectionViewDelegateFlowLayout {
