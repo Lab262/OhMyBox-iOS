@@ -66,7 +66,7 @@ class HomeViewController: UIViewController{
         
         //Cells
         tableView.registerNibFrom(HighlightsTableViewCell.self)
-        tableView.registerNibFrom(NewsTableViewCell.self)
+        tableView.registerNibFrom(MiniProductsTableViewCell.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -100,8 +100,8 @@ extension HomeViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0: cell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateNewsCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generatePromotionCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateMiniProductsCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateSalesCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -117,49 +117,21 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
 
-    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateMiniProductsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
         
         cell.products = [1, 2, 3]
         
         return cell
     }
     
-    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
         
-        cell.delegate = self
-
-        return cell
-    }
-    
-    
-    func generatePromotionCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: PromotionTableViewCell.identifier, for: indexPath) as! PromotionTableViewCell
-        cell.selectionStyle = .none
-        
-        return cell
-    }
-    
-    func generateClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-                
-        cell.tagType = .five
-        cell.clothingtArray = self.clothingArray
-        cell.identifierSegue = "goRecommended"
-        cell.delegate = self
-        
-        return cell
-    }
-    
-    func generateHeaderClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-          cell.selectionStyle = .none
+        // set sales products
+        cell.products = [1, 2, 3]
         
         return cell
     }
@@ -175,7 +147,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
 }
@@ -197,7 +169,7 @@ extension HomeViewController: UITableViewDelegate {
         
         switch indexPath.section {
         case 0: height = HighlightsTableViewCell.cellHeight
-        case 1: height = NewsTableViewCell.cellHeight
+        case 1, 2: height = MiniProductsTableViewCell.cellHeight
         default: height = 0
         }
         
@@ -247,7 +219,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat.leastNonzeroMagnitude
+        return 40.0
     }
   
 }

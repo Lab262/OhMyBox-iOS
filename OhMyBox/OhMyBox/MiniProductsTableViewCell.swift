@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
+class MiniProductsTableViewCell: UITableViewCell {
 
     static var identifier: String {
-        return "newsTableViewCell"
+        return "miniProductsTableViewCell"
     }
     
     static var cellHeight: CGFloat {
@@ -19,7 +19,7 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     static var nibName: String {
-        return "NewsTableViewCell"
+        return "MiniProductsTableViewCell"
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,7 +47,7 @@ class NewsTableViewCell: UITableViewCell {
     }
 }
 
-extension NewsTableViewCell: UICollectionViewDataSource {
+extension MiniProductsTableViewCell: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -67,7 +67,7 @@ extension NewsTableViewCell: UICollectionViewDataSource {
     }
 }
 
-extension NewsTableViewCell: UICollectionViewDelegateFlowLayout {
+extension MiniProductsTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return MiniProductCollectionViewCell.cellSize
