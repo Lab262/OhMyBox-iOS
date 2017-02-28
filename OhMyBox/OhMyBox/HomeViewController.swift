@@ -10,8 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController{
     
-    
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
     var viewSearch: UIView?
@@ -34,6 +32,8 @@ class HomeViewController: UIViewController{
         self.clotingArray?.append("cloting Three")
         self.clotingArray?.append("cloting Four")
         self.clotingArray?.append("cloting Five")
+        
+        self.configureNavigationBar()
      //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
     }
     func initialProduct (){
@@ -45,16 +45,9 @@ class HomeViewController: UIViewController{
     
     func configureNavigationBar() {
      
-        self.navigationBarView.leftBarButton.isHidden = true
-//        self.navigationBarView.searchButton.isHidden = true
-        //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
-        self.navigationBarView.layoutIfNeeded()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.configureNavigationBar()
         self.navigationController?.navigationBar.isHidden = true
+        self.navigationBarView.leftBarButton.isHidden = true
+        self.navigationBarView.layoutIfNeeded()
     }
     
     func configureTableView () {
@@ -77,34 +70,26 @@ class HomeViewController: UIViewController{
         self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
           self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "detailProduct" {
-            
-            if let destinationVC = segue.destination as? DetailProductViewController {
-                
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "detailProduct": break
+            case "goPromotion":
+                if let destinationVC = segue.destination as? RecommendedViewController {
+                    destinationVC.title = "Promoções"
+                    destinationVC.titleHeader = "Promoções"
+                    
+                }
+            case "goRecommended":
+                if let destinationVC = segue.destination as? RecommendedViewController {
+                    destinationVC.title = "Recomendados"
+                    destinationVC.titleHeader = "Recomendados"
+                }
+            default: break
             }
         }
-        
-        
-        if segue.identifier == "goPromotion" {
-            
-            if let destinationVC = segue.destination as? RecommendedViewController {
-                destinationVC.title = "Promoções"
-                destinationVC.titleHeader = "Promoções"
-               
-            }
-        }
-        
-        if segue.identifier == "goRecommended" {
-            
-            if let destinationVC = segue.destination as? RecommendedViewController {
-                destinationVC.title = "Recomendados"
-                destinationVC.titleHeader = "Recomendados"
-                
-            }
-        }
-        
     }
     
 }
@@ -113,23 +98,16 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        if indexPath.section == 0{
-            
-            return self.generateClosetCell(tableView, cellForRowAt: indexPath)
-        }else if indexPath.section == 1{
-            
-            
-            return self.generateProductCell(tableView, cellForRowAt: indexPath)
-
-        }else if indexPath.section == 2{
-           return self.generatePromotionCell(tableView, cellForRowAt: indexPath)
-        }else {
-            return UITableViewCell()
+        let cell: UITableViewCell
+        
+        switch indexPath.section {
+        case 0: cell = generateClosetCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generatePromotionCell(tableView, cellForRowAt: indexPath)
+        default: cell = UITableViewCell()
         }
         
-        
-        
-        
+        return cell
     }
     
     func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -176,12 +154,11 @@ extension HomeViewController: UITableViewDataSource {
             case 0, 1, 2:
                 return 1
             default:
-                return 1
+                return 0
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 5
     }
 
@@ -193,12 +170,9 @@ extension HomeViewController: UITableViewDelegate {
 
         if indexPath.section == 2{
             if indexPath.row == 0{
-                self.performSegue(withIdentifier:"goPromotion", sender:self)
-
+                performSegue(withIdentifier:"goPromotion", sender:self)
             }
-            
         }
-
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -230,6 +204,7 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        let headerView: UIView?
         
         switch section {
         case 0:
@@ -239,7 +214,7 @@ extension HomeViewController: UITableViewDelegate {
             header.firstTitleLineLabel.text = "Recomendados"
             header.secondTitleLineLabel.text = "Para Você"
             
-            return header
+            headerView = header
         case 1:
             
             let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
@@ -249,16 +224,13 @@ extension HomeViewController: UITableViewDelegate {
             header.widthIconConstraint.constant = 35
             header.heightIconConstraint.constant = 21
             
-            return header
+            headerView = header
             
         default:
-            
-            let view = UIView()
-            view.backgroundColor = UIColor.clear
-            
-            return view
+            headerView = nil
         }
         
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -274,7 +246,7 @@ extension HomeViewController: UITableViewDelegate {
 }
 extension HomeViewController: callSegueProtocol {
     
-    func callViewController(segueIndentifier:String){
-        self.performSegue(withIdentifier:segueIndentifier, sender:self)
+    func callViewController(segueIndentifier: String){
+        self.performSegue(withIdentifier: segueIndentifier, sender: self)
     }
 }
