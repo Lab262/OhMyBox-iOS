@@ -125,7 +125,7 @@ class ShoppingBoxViewController: UIViewController {
 extension ShoppingBoxViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (self.isActiveBox==true){
+        if (self.isActiveBox) {
             //self.buyShopBar.isHidden = false
             
             return self.generateShoppingCell(tableView, cellForRowAt:indexPath)
@@ -142,21 +142,22 @@ extension ShoppingBoxViewController: UITableViewDataSource {
             
         }
         
-        
-        
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if (isActiveBox == false){
+        if (!isActiveBox) {
             return (self.productsOrdersStorage.count+self.productsMail.count)+2
         }
-        
-        return 3
+        return 1
     }
     
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if (!isActiveBox) {
+            return 1
+        }
+        return 3
+    }
     
     
 }
@@ -167,12 +168,9 @@ extension ShoppingBoxViewController: UITableViewDelegate {
         
     }
     
-    
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if (self.isActiveBox == true){
+        if (self.isActiveBox) {
             return ShoppingBoxTableViewCell.cellHeight
             
         }
@@ -190,9 +188,17 @@ extension ShoppingBoxViewController: UITableViewDelegate {
         } else {
             return 200
         }
-        
-        
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if isActiveBox {
+            return 25.0
+        } else {
+            return 0
+        }
+    }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
 }

@@ -154,15 +154,6 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        if indexPath.section == 2 {
-            if indexPath.row == 0 {
-                performSegue(withIdentifier:"goPromotion", sender:self)
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let height: CGFloat

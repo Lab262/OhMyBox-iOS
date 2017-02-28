@@ -144,17 +144,24 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By fashion store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo0-Ch-qo1">
-                                    <rect key="frame" x="169" y="46" width="124" height="27"/>
+                                    <rect key="frame" x="169" y="46" width="124" height="26.5"/>
                                     <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="16"/>
                                     <color key="textColor" red="0.41176470590000003" green="0.41176470590000003" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO2-IR-3uj">
-                                    <rect key="frame" x="169" y="81" width="79" height="30"/>
+                                    <rect key="frame" x="169" y="80.5" width="78.5" height="30"/>
                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view alpha="0.54000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQb-cg-XzA">
+                                    <rect key="frame" x="375" y="7" width="1" height="165"/>
+                                    <color key="backgroundColor" red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="P3K-sO-Fag"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -174,13 +181,16 @@
                                 <constraint firstItem="zxc-8m-Rj3" firstAttribute="top" secondItem="F3K-A0-KWf" secondAttribute="bottom" id="QDw-cQ-4Ti"/>
                                 <constraint firstAttribute="bottom" secondItem="rMm-4n-s52" secondAttribute="bottom" constant="6" id="Qm8-sC-h0e"/>
                                 <constraint firstItem="rMm-4n-s52" firstAttribute="top" secondItem="zxc-8m-Rj3" secondAttribute="bottom" id="QmW-Uj-wDK"/>
+                                <constraint firstAttribute="trailing" secondItem="pQb-cg-XzA" secondAttribute="trailing" constant="-1" id="R0f-iG-6R8"/>
                                 <constraint firstItem="rMm-4n-s52" firstAttribute="top" secondItem="xRh-qf-dgy" secondAttribute="bottom" id="aaV-lI-kNV"/>
                                 <constraint firstItem="GJL-rE-VGe" firstAttribute="leading" secondItem="Zn2-tv-qav" secondAttribute="trailing" id="adC-sA-O7y"/>
                                 <constraint firstItem="F3K-A0-KWf" firstAttribute="leading" secondItem="Zn2-tv-qav" secondAttribute="trailing" id="bOP-VX-1Lj"/>
                                 <constraint firstItem="KlE-vq-Ehp" firstAttribute="leading" secondItem="Zn2-tv-qav" secondAttribute="trailing" constant="72" id="cDU-Hn-yWR"/>
                                 <constraint firstItem="lhc-wu-h6S" firstAttribute="top" secondItem="F3K-A0-KWf" secondAttribute="bottom" id="cuP-BD-cDo"/>
+                                <constraint firstItem="pQb-cg-XzA" firstAttribute="top" secondItem="GJL-rE-VGe" secondAttribute="bottom" constant="-1" id="d36-ST-aAq"/>
                                 <constraint firstItem="fO2-IR-3uj" firstAttribute="top" secondItem="oo0-Ch-qo1" secondAttribute="bottom" constant="8" id="d4h-fk-z7Y"/>
                                 <constraint firstItem="lhc-wu-h6S" firstAttribute="leading" secondItem="zxc-8m-Rj3" secondAttribute="trailing" id="f4H-9e-koq"/>
+                                <constraint firstItem="rMm-4n-s52" firstAttribute="top" secondItem="pQb-cg-XzA" secondAttribute="bottom" constant="-1" id="gEJ-M0-R5I"/>
                                 <constraint firstItem="fO2-IR-3uj" firstAttribute="leading" secondItem="oo0-Ch-qo1" secondAttribute="leading" id="h3a-MF-E0M"/>
                                 <constraint firstAttribute="bottom" secondItem="Zn2-tv-qav" secondAttribute="bottom" id="hHb-BC-a3j"/>
                                 <constraint firstAttribute="trailing" secondItem="rMm-4n-s52" secondAttribute="trailing" id="hnd-5d-sJ8"/>
@@ -230,7 +240,7 @@
                 <outlet property="productImage" destination="Zn2-tv-qav" id="wKX-jp-J21"/>
                 <outlet property="scrollView" destination="cbQ-wr-6jt" id="mJ1-aU-EED"/>
             </connections>
-            <point key="canvasLocation" x="309" y="-172"/>
+            <point key="canvasLocation" x="308.5" y="-172"/>
         </view>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
