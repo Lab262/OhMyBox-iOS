@@ -12,50 +12,45 @@ class HomeViewController: UIViewController{
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
-    var viewSearch: UIView?
+    
     var boxButtonItem: UIBarButtonItem?
-    var clotingArray: [String]?
-    @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
-    @IBOutlet weak var searchBarButton: UIBarButtonItem!
+    var clothingArray: [String] = []
+    
     var filtered:[String] = []
-    var searchActive : Bool = false
     var allProduct = [Product]()
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerNib()
         
-        self.clotingArray = [String]()
-        self.clotingArray?.append("Cloting One")
-        self.clotingArray?.append("Cloting Two")
-        self.clotingArray?.append("cloting Three")
-        self.clotingArray?.append("cloting Four")
-        self.clotingArray?.append("cloting Five")
+        fillClothingArray()
         
-        self.configureNavigationBar()
-     //   self.navigationItem.setRightBarButtonItems([boxButtonItem!, searchButtonItem!], animated: false)
-    }
-    func initialProduct (){
-        //self.allProduct.append(Product(_id:"1", _photo:"teste", _photoImage:#imageLiteral(resourceName: "defaultGloes.png") , _price:"R$ 50", _descriptionProduc:"Bota super elegante", _detail:"aksfjkakf")
-        
-        
+        registerNibs()
+        setUpNavigationBar()
+        setUpTableView()
     }
     
+    func fillClothingArray() {
+        
+        clothingArray.append("Cloting One")
+        clothingArray.append("Cloting Two")
+        clothingArray.append("cloting Three")
+        clothingArray.append("cloting Four")
+        clothingArray.append("cloting Five")
+    }
     
-    func configureNavigationBar() {
+    func setUpNavigationBar() {
      
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationBarView.leftBarButton.isHidden = true
-        self.navigationBarView.layoutIfNeeded()
+        navigationController?.navigationBar.isHidden = true
+        navigationBarView.leftBarButton.isHidden = true
+        navigationBarView.layoutIfNeeded()
     }
     
-    func configureTableView () {
+    func setUpTableView() {
         
-        self.tableView.estimatedRowHeight = 300
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.layoutIfNeeded()
-        
+        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.backgroundColor = .white
+        tableView.layoutIfNeeded()
     }
 
     @IBAction func actionGoCart(_ sender: AnyObject) {
@@ -64,9 +59,12 @@ class HomeViewController: UIViewController{
     
     }
     
-    func registerNib() {
+    func registerNibs() {
         
-        self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
+        //Header
+        self.tableView.register(UINib(nibName: "HomeTableViewHeaderView", bundle: nil), forCellReuseIdentifier: HomeTableViewHeaderView.identifier)
+        
+        //Cells
         self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
           self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
     }
@@ -133,7 +131,7 @@ extension HomeViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
                 
         cell.tagType = .five
-        cell.clothingtArray = self.clotingArray
+        cell.clothingtArray = self.clothingArray
         cell.identifierSegue = "goRecommended"
         cell.delegate = self
         
@@ -207,22 +205,19 @@ extension HomeViewController: UITableViewDelegate {
         let headerView: UIView?
         
         switch section {
-        case 0:
-            
-            let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-            
-            header.firstTitleLineLabel.text = "Recomendados"
-            header.secondTitleLineLabel.text = "Para Você"
-            
-            headerView = header
         case 1:
             
-            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-            header.firstTitleLineLabel.text = "OLHA AS"
-            header.secondTitleLineLabel.text = "NOVIDADES"
-            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-            header.widthIconConstraint.constant = 35
-            header.heightIconConstraint.constant = 21
+            let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
+            
+            header.topLineLabel.text = "OLHA AS"
+            header.bottomLineLabel.text = "NOVIDADES"
+            
+            headerView = header
+        case 2:
+            
+            let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
+            header.topLineLabel.text = "GENTE,"
+            header.bottomLineLabel.text = "PROMOÇÃO!"
             
             headerView = header
             
@@ -235,12 +230,19 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == 0 || section == 1 {
-            return 70
-            //77
-        } else {
-            return 0.1
+        let height: CGFloat
+        
+        switch section {
+        case 1, 2:
+            height = HomeTableViewHeaderView.cellHeight
+        default:
+            height = 0
         }
+        return height
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNonzeroMagnitude
     }
   
 }
