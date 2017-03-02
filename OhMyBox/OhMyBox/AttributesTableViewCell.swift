@@ -65,8 +65,8 @@ extension AttributesTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"colorCell", for: indexPath) as! ColorCollectionViewCell
-        let colour = colours[indexPath.row]
-        cell.colourModel = colour
+//        let colour = colours[indexPath.row]
+//        cell.colourModel = colour
         cell.layoutIfNeeded()
         
         return cell

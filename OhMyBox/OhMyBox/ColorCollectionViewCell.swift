@@ -1,41 +1,48 @@
 //
 //  ColorCollectionViewCell.swift
-//  OhMyBox
+//  OhMyBoxSellersIos
 //
-//  Created by Felipe perius on 24/10/16.
-//  Copyright © 2016 Lab262. All rights reserved.
+//  Created by André Marques da Silva Rodrigues on 20/02/17.
+//  Copyright © 2017 Lab262. All rights reserved.
 //
 
 import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
+
     static var identifier: String {
-        return "ColorCollectionCell"
+        return "colorCell"
     }
-    @IBOutlet weak var circleInternal: UIView!
-    @IBOutlet weak var circleColor: UIView!
-    @IBOutlet weak var checkColor: UIImageView!
     
-    var colourModel: Colour! {
+    static var cellSize: CGSize {
+        return CGSize(width: 33.0, height: 33.0)
+    }
+
+    static var nibName: String {
+        return "ColorCollectionViewCell"
+    }
+    
+    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var selectedView: UIImageView!
+    
+    var color: UIColor? {
         didSet {
-            setupCell()
+            colorView.backgroundColor = color
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.circleColor.roundToCircle()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        colorView.cornerRadius = colorView.frame.height/2
+        // Initialization code
     }
     
-    func setupCell(){
-        
-        if self.colourModel.isSelected! {
-            self.checkColor.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseInOut)
-            self.checkColor.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
-        } else {
-            self.checkColor.alpha = 0
-        }
-        self.circleColor.backgroundColor = UIColor.hexStringToUIColor(hex: self.colourModel.colourHex!)
+    override func changeToSelectedStyle() {
+        selectedView.isHidden = false
     }
     
+    override func changeToUnselectedStyle() {
+        selectedView.isHidden = true
+    }
+
 }

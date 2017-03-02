@@ -18,3 +18,10 @@ extension CGPoint {
         return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
     }
 }
+
+extension CGSize {
+    static func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
+        return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
+    }
+
+}

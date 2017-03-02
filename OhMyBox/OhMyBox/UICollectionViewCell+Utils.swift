@@ -30,6 +30,13 @@ extension UICollectionViewCellHelper {
 
 extension UICollectionViewCell: UICollectionViewCellHelper {
     
+    func changeToSelectedStyle() {
+        
+    }
+    
+    func changeToUnselectedStyle() {
+        
+    }
 }
 
 extension UICollectionView {
