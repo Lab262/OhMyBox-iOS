@@ -60,7 +60,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="384" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Lu-Hmh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="384" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Lu-Hmh">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,10 +74,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JHU-9a-IgH" secondAttribute="trailing" id="8uj-4w-2Wg"/>
                             <constraint firstItem="f19-Lu-Hmh" firstAttribute="width" secondItem="ACp-CH-jkW" secondAttribute="width" id="LFN-ZX-hc8"/>
-                            <constraint firstItem="f19-Lu-Hmh" firstAttribute="centerY" secondItem="ACp-CH-jkW" secondAttribute="centerY" constant="7.5" id="NJz-LE-Qit"/>
+                            <constraint firstItem="f19-Lu-Hmh" firstAttribute="leading" secondItem="ACp-CH-jkW" secondAttribute="leading" id="Vdc-g0-Nq4"/>
                             <constraint firstItem="JHU-9a-IgH" firstAttribute="top" secondItem="ACp-CH-jkW" secondAttribute="top" id="bQL-9i-ULq"/>
+                            <constraint firstAttribute="trailing" secondItem="f19-Lu-Hmh" secondAttribute="trailing" id="cbc-nM-ptr"/>
                             <constraint firstItem="f19-Lu-Hmh" firstAttribute="top" secondItem="JHU-9a-IgH" secondAttribute="bottom" id="kb3-7L-FXg"/>
-                            <constraint firstItem="f19-Lu-Hmh" firstAttribute="centerX" secondItem="ACp-CH-jkW" secondAttribute="centerX" id="qYc-Wf-2Cx"/>
+                            <constraint firstItem="jJ7-lB-svP" firstAttribute="top" secondItem="f19-Lu-Hmh" secondAttribute="bottom" id="xTT-ey-N7s"/>
                             <constraint firstItem="JHU-9a-IgH" firstAttribute="leading" secondItem="ACp-CH-jkW" secondAttribute="leading" id="zbi-WD-CGd"/>
                         </constraints>
                     </view>
@@ -108,7 +109,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="346" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="346" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -130,7 +131,7 @@
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B76-rR-cFm">
-                                                            <rect key="frame" x="196" y="41" width="167" height="49"/>
+                                                            <rect key="frame" x="196" y="40" width="167" height="49"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <state key="normal" title="Detalhes" backgroundImage="profile_about_button">
                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,7 +184,7 @@
                                 <rect key="frame" x="-1" y="618" width="377" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b85-Q3-SU8">
-                                        <rect key="frame" x="90.5" y="0.0" width="196" height="50"/>
+                                        <rect key="frame" x="91" y="0.0" width="196" height="50"/>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KX3-rp-EXt"/>
@@ -195,10 +196,10 @@
                                         </state>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MS-x0-dsW">
-                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-Rq-ttS">
-                                                <rect key="frame" x="31.5" y="12" width="29" height="26"/>
+                                                <rect key="frame" x="31" y="12" width="29" height="26"/>
                                                 <state key="normal" image="heartEmpty_button"/>
                                                 <connections>
                                                     <action selector="setFavorite:" destination="MiG-iR-diQ" eventType="touchUpInside" id="jFY-sK-MKb"/>
@@ -212,10 +213,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="js9-1H-qP3">
-                                        <rect key="frame" x="286.5" y="0.0" width="90.5" height="50"/>
+                                        <rect key="frame" x="287" y="0.0" width="90" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5O-Ra-UGP">
-                                                <rect key="frame" x="31.5" y="10.5" width="28" height="28"/>
+                                                <rect key="frame" x="31" y="11" width="28" height="28"/>
                                                 <state key="normal" image="box_button"/>
                                                 <connections>
                                                     <action selector="addToCart:" destination="MiG-iR-diQ" eventType="touchUpInside" id="Efq-7U-wAH"/>
@@ -420,7 +421,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
