@@ -15,6 +15,10 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var boxButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productImageViewHeightConstraint: NSLayoutConstraint!
+    let productImageViewHeight: CGFloat = 334.0
+    
     var product = Product()
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
     var isSelect = true
@@ -23,8 +27,10 @@ class DetailProductViewController: UIViewController {
         super.viewDidLoad()
         self.registerNibs()
         
+        
+        tableView.contentInset = UIEdgeInsetsMake(334, 0, 0, 0)
         self.initializeStatesButtons()
-        self.setupNavigationAppearance()
+        self.setUpNavigationAppearance()
         self.setConfigurationBar()
     }
     
@@ -158,7 +164,7 @@ class DetailProductViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    func setupNavigationAppearance(){
+    func setUpNavigationAppearance(){
         
         self.navigationController?.navigationBar.isTranslucent = true
     }
@@ -172,9 +178,8 @@ extension DetailProductViewController: UITableViewDataSource {
         let cell: UITableViewCell
         
         switch indexPath.row {
-        case 0: cell = generateProductHeaderCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateProductLabelCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
+        case 0: cell = generateProductLabelCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -182,7 +187,7 @@ extension DetailProductViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
 }
 
@@ -190,25 +195,33 @@ extension DetailProductViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
+        let height: CGFloat
+        
         switch indexPath.row {
-        case 0:
-            return ProductImageTableViewCell.cellHeight
-        case 1:
-            return ProductLabelTableViewCell.cellHeight
-        case 2:
-            return ProductOptionsTableViewCell.cellHeight
-        case 3:
-            return 100
-        case 4:
-            return 300
-        case 5 :
-            return 88
-        case 6:
-            return 100
-            
-        default:
-            return 497
+        case 0: height = ProductLabelTableViewCell.cellHeight
+        case 1: height = ProductOptionsTableViewCell.cellHeight
+        default: height = 0
         }
+        
+        return height
     }
     
+}
+
+extension DetailProductViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        print("xd")
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let yoffset = scrollView.contentOffset.y + scrollView.contentInset.top
+        
+        if yoffset < 0 {
+            productImageViewHeightConstraint.constant = productImageViewHeight + (-yoffset)
+        } else {
+            productImageViewHeightConstraint.constant = productImageViewHeight
+        }
+    }
 }

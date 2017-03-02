@@ -109,9 +109,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="v9O-NA-5E0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="334" id="OHz-Tl-meA"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="346" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="switchButtonProductCell" rowHeight="132" id="tyj-Di-GWU" customClass="SwitchProductButtonTableViewCell" customModule="OhMyBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="132"/>
@@ -131,7 +137,7 @@
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B76-rR-cFm">
-                                                            <rect key="frame" x="196" y="40" width="167" height="49"/>
+                                                            <rect key="frame" x="196" y="41" width="167" height="49"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <state key="normal" title="Detalhes" backgroundImage="profile_about_button">
                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,7 +264,10 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MMt-p2-aM4" secondAttribute="trailing" id="1EX-Nz-CHU"/>
                             <constraint firstItem="oRT-An-T9b" firstAttribute="top" secondItem="SLe-vn-urf" secondAttribute="bottom" constant="-1" id="2ol-6x-UGv"/>
+                            <constraint firstItem="v9O-NA-5E0" firstAttribute="top" secondItem="gZZ-hH-Rt7" secondAttribute="top" id="7nl-Wh-cg2"/>
+                            <constraint firstItem="v9O-NA-5E0" firstAttribute="leading" secondItem="gZZ-hH-Rt7" secondAttribute="leading" id="9AN-aG-sSl"/>
                             <constraint firstItem="MMt-p2-aM4" firstAttribute="top" secondItem="gZZ-hH-Rt7" secondAttribute="top" id="Agl-97-ruc"/>
+                            <constraint firstAttribute="trailing" secondItem="v9O-NA-5E0" secondAttribute="trailing" id="GTL-fN-kvc"/>
                             <constraint firstItem="bYV-MR-9nk" firstAttribute="top" secondItem="gZZ-hH-Rt7" secondAttribute="top" id="Y5s-lc-wri"/>
                             <constraint firstItem="SLe-vn-urf" firstAttribute="leading" secondItem="gZZ-hH-Rt7" secondAttribute="leading" constant="-1" id="afh-b1-1MO"/>
                             <constraint firstItem="SLe-vn-urf" firstAttribute="top" secondItem="MMt-p2-aM4" secondAttribute="bottom" id="di7-XR-bYB"/>
@@ -282,12 +291,14 @@
                         <outlet property="boxButton" destination="l5O-Ra-UGP" id="J0t-UL-j2o"/>
                         <outlet property="likeButton" destination="UTe-Rq-ttS" id="nhT-41-gzc"/>
                         <outlet property="navigationBarView" destination="bYV-MR-9nk" id="GT9-1G-Dyf"/>
+                        <outlet property="productImageView" destination="v9O-NA-5E0" id="wZu-bg-67Q"/>
+                        <outlet property="productImageViewHeightConstraint" destination="OHz-Tl-meA" id="qhW-lF-h4H"/>
                         <outlet property="tableView" destination="MMt-p2-aM4" id="vPO-FA-5wD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-w8-DRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3062" y="-216"/>
+            <point key="canvasLocation" x="3061.5999999999999" y="-216.34182908545728"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="iXg-BB-Gle">
@@ -421,7 +432,7 @@
                     <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -436,6 +447,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundImage" width="375" height="667"/>
         <image name="box_button" width="28" height="28"/>
         <image name="heartEmpty_button" width="29" height="26"/>
         <image name="ic_button_back" width="28" height="28"/>
