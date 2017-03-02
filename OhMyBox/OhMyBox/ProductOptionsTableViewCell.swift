@@ -15,7 +15,7 @@ class ProductOptionsTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 111.0
+        return 230.0
     }
     
     static var nibName: String {
@@ -31,12 +31,20 @@ class ProductOptionsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         registerNibs()
+        setUpInsets()
     }
     
     func setUpInsets() {
         
-        centerContentHorizontally(in: colorsCollectionView)
-        centerContentHorizontally(in: sizesCollectionView)
+        let margin: CGFloat = 18.0
+        
+        let colorsFlowLayout = colorsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        colorsFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
+        colorsFlowLayout.minimumLineSpacing = 20.0
+        
+        let sizesFlowLayout = sizesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        sizesFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
+        sizesFlowLayout.minimumLineSpacing = 35.0
     }
     
     func centerContentHorizontally(in collectionView: UICollectionView) {

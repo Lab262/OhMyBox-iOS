@@ -9,27 +9,30 @@
 import UIKit
 
 class DetailProductViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var boxButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
+    
     var product = Product()
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
     var isSelect = true
     
-    
     override func viewDidLoad() {
-             super.viewDidLoad()
-        self.registerNib()
+        super.viewDidLoad()
+        self.registerNibs()
         
-       self.initializeStatesButtons()
+        self.initializeStatesButtons()
         self.setupNavigationAppearance()
         self.setConfigurationBar()
     }
     
     func setConfigurationBar() {
         self.navigationBarView.titleLabel.text = ""
+        self.navigationBarView.view.backgroundColor = .clear
     }
+    
     func initializeStatesButtons() {
         
         self.likeButton.setImage(#imageLiteral(resourceName: "heartEmpty_button"), for: .normal)
@@ -66,7 +69,7 @@ class DetailProductViewController: UIViewController {
             self.likeButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
         }
     }
-
+    
     func changeBoxButtonState() {
         
         if self.boxButton.isSelected {
@@ -86,76 +89,47 @@ class DetailProductViewController: UIViewController {
         }
         
     }
-
-
-    func registerNib() {
-        
-        self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
-        
-         self.tableView.register(UINib(nibName: "ContentStoreTableViewCell", bundle: nil), forCellReuseIdentifier: ContentStoreTableViewCell.identifier)
     
+    
+    func registerNibs() {
+        
+        tableView.registerNibFrom(ProductImageTableViewCell.self)
+        tableView.registerNibFrom(ProductLabelTableViewCell.self)
+        tableView.registerNibFrom(ProductOptionsTableViewCell.self)
+        
     }
     
-    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateProductHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: DetailProudctTableViewCell.identifier, for: indexPath) as! DetailProudctTableViewCell
-        cell.selectionStyle = .none
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductImageTableViewCell.identifier) as! ProductImageTableViewCell
         return cell
     }
     
-    func generateStoreCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateProductLabelCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductLabelTableViewCell.identifier) as! ProductLabelTableViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ContentStoreTableViewCell.identifier, for: indexPath) as! ContentStoreTableViewCell
-        cell.selectionStyle = .none
-        return cell
-    }
-    
-    func generateAttributCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: AttributesTableViewCell.identifier, for: indexPath) as! AttributesTableViewCell
-        cell.selectionStyle = .none
-        
-        return cell
-    }
-    func generateSizeProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: SizeProductTableViewCell.identifier, for: indexPath) as! SizeProductTableViewCell
-        cell.selectionStyle = .none
-        
-        return cell
-    }
-
-    func generateSimpleTextViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextViewTableViewCell.identifier, for: indexPath) as! SimpleTextViewTableViewCell
-        cell.selectionStyle = .none
+        cell.name = "Capa tropical"
+        cell.price = 40.0
         
         return cell
     }
     
-    func generateSwitchCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateProductOptionsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductOptionsTableViewCell.identifier) as! ProductOptionsTableViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier:SwitchProductButtonTableViewCell.identifier, for: indexPath) as! SwitchProductButtonTableViewCell
-        cell.selectionStyle = .none
-        
-        
-       
-        
-        cell.detailButton.addTarget(self, action: #selector(selectDetailButton(_:)), for: .touchUpInside)
-        
-        cell.descriptionButton.addTarget(self, action:#selector(selectDescriptionButton(_:)), for:.touchUpInside)
-        
-    
+        cell.colors = [.black, .red, .cyan, .purple]
+        cell.sizes = ["PP", "M", "G", "GG"]
         
         return cell
     }
+    
     
     func selectDescriptionButton (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
         
-     
         
-     
+        
+        
         
         cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
         cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
@@ -164,7 +138,7 @@ class DetailProductViewController: UIViewController {
         cell.detailButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
         
         
-        self.isSelect = false 
+        self.isSelect = false
         self.tableView.reloadData()
     }
     
@@ -175,77 +149,54 @@ class DetailProductViewController: UIViewController {
         cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
         
         cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
-      
+        
         cell.detailButton.setTitleColor(UIColor.white, for:UIControlState.normal)
-    cell.descriptionButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
+        cell.descriptionButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
         
         self.isSelect = true
         
         self.tableView.reloadData()
     }
-
+    
     func setupNavigationAppearance(){
-
+        
         self.navigationController?.navigationBar.isTranslucent = true
-        
-        
-        
     }
-
+    
 }
 
 extension DetailProductViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
-            return generateProductCell(tableView, cellForRowAt: indexPath)
         
-        case 1:
-            return generateAttributCell(tableView, cellForRowAt: indexPath)
-
-        case 2:
-            return generateSizeProductCell(tableView, cellForRowAt: indexPath)
-            
-        case 3:
-            return generateSwitchCell(tableView, cellForRowAt: indexPath)
-            
-        case 4:
-            return generateSimpleTextViewCell(tableView, cellForRowAt: indexPath)
-        case 5:
-            return generateStoreCell(tableView, cellForRowAt: indexPath)
-            
-            
-        default:
-            return UITableViewCell()
+        let cell: UITableViewCell
+        
+        switch indexPath.row {
+        case 0: cell = generateProductHeaderCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateProductLabelCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
+        default: cell = UITableViewCell()
         }
-
+        
+        return cell
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 7
+        return 3
     }
-    
 }
 
 extension DetailProductViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.row {
         case 0:
-            return 360
+            return ProductImageTableViewCell.cellHeight
         case 1:
-            return 60
+            return ProductLabelTableViewCell.cellHeight
         case 2:
-            return 80
+            return ProductOptionsTableViewCell.cellHeight
         case 3:
             return 100
         case 4:
@@ -253,11 +204,11 @@ extension DetailProductViewController: UITableViewDelegate {
         case 5 :
             return 88
         case 6:
-            return 100 
+            return 100
             
         default:
             return 497
         }
     }
-
+    
 }

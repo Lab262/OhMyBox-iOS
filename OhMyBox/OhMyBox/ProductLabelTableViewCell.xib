@@ -46,6 +46,10 @@
                     <constraint firstItem="H4M-Cd-DdF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="fR4-jk-DNF"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="AAT-FN-Jah" id="e5X-ce-m40"/>
+                <outlet property="priceLabel" destination="pub-3e-BFv" id="a4g-Je-jvp"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -19,6 +19,6 @@ extension String {
     }
     
     static func stringFromPrice(price: Double) -> String {
-        return String(format: "R$ %.2d", price).replacingOccurrences(of: ".", with: ",")
+        return String(format: "R$ %.2lf", price).replacingOccurrences(of: ".", with: ",")
     }
 }

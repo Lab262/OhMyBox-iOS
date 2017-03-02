@@ -18,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="333"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-45-YOW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="333.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-45-YOW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="334"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -30,8 +30,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="productImageView" destination="Y3b-45-YOW" id="EAP-7o-XaW"/>
+                <outlet property="productImageView" destination="Y3b-45-YOW" id="EiT-jz-J6S"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="backgroundImage" width="375" height="667"/>
+    </resources>
 </document>

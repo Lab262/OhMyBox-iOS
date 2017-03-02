@@ -77,7 +77,6 @@ extension AttributesTableViewCell: UICollectionViewDataSource {
         return self.colours.count
     }
     
-    
 }
 
 extension AttributesTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

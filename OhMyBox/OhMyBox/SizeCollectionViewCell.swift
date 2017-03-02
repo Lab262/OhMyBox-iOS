@@ -41,7 +41,7 @@ class SizeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        selectedView.cornerRadius = selectedView.frame.height/2
+        selectedView.cornerRadius = 5.0
     }
 
     override func changeToSelectedStyle() {

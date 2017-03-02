@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OH MY BOX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-DZ-yQ8">
-                    <rect key="frame" x="136" y="30" width="103" height="21"/>
+                    <rect key="frame" x="136.5" y="30.5" width="102.5" height="20"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

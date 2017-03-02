@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,11 +20,11 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CE-2T-dwU">
-                        <rect key="frame" x="11.5" y="8" width="33" height="33"/>
+                        <rect key="frame" x="13.5" y="10" width="29" height="29"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="33" id="93E-VS-8bi"/>
-                            <constraint firstAttribute="width" constant="33" id="hQf-1J-6e9"/>
+                            <constraint firstAttribute="width" secondItem="0CE-2T-dwU" secondAttribute="height" multiplier="1:1" id="Ebu-u6-6kn"/>
+                            <constraint firstAttribute="width" constant="29" id="hQf-1J-6e9"/>
                         </constraints>
                     </view>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_selection" translatesAutoresizingMaskIntoConstraints="NO" id="xAK-1f-D7L">

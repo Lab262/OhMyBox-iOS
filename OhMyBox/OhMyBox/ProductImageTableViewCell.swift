@@ -10,6 +10,18 @@ import UIKit
 
 class ProductImageTableViewCell: UITableViewCell {
 
+    static var identifier: String {
+        return "productImageTableViewCell"
+    }
+    
+    static var cellHeight: CGFloat {
+        return 334
+    }
+    
+    static var nibName: String {
+        return "ProductImageTableViewCell"
+    }
+    
     @IBOutlet weak var productImageView: UIImageView!
     
     override func awakeFromNib() {

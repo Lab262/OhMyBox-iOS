@@ -10,6 +10,18 @@ import UIKit
 
 class ProductLabelTableViewCell: UITableViewCell {
 
+    static var identifier: String {
+        return "productLabelTableViewCell"
+    }
+    
+    static var cellHeight: CGFloat {
+        return 111.0
+    }
+    
+    static var nibName: String {
+        return "ProductLabelTableViewCell"
+    }
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
