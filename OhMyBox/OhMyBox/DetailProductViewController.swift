@@ -98,17 +98,9 @@ class DetailProductViewController: UIViewController {
     
     
     func registerNibs() {
-        
-        tableView.registerNibFrom(ProductImageTableViewCell.self)
         tableView.registerNibFrom(ProductLabelTableViewCell.self)
         tableView.registerNibFrom(ProductOptionsTableViewCell.self)
-        
-    }
-    
-    func generateProductHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductImageTableViewCell.identifier) as! ProductImageTableViewCell
-        return cell
+        tableView.registerNibFrom(ProductDetailTableViewCell.self)
     }
     
     func generateProductLabelCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,13 +121,16 @@ class DetailProductViewController: UIViewController {
         return cell
     }
     
+    func generateProductDetailsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.identifier) as! ProductDetailTableViewCell
+        
+        return cell
+    }
+
+    
     
     func selectDescriptionButton (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
-        
-        
-        
-        
         
         cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
         cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
@@ -180,6 +175,7 @@ extension DetailProductViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0: cell = generateProductLabelCell(tableView, cellForRowAt: indexPath)
         case 1: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateProductDetailsCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -187,7 +183,7 @@ extension DetailProductViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
 }
 
@@ -200,6 +196,7 @@ extension DetailProductViewController: UITableViewDelegate {
         switch indexPath.row {
         case 0: height = ProductLabelTableViewCell.cellHeight
         case 1: height = ProductOptionsTableViewCell.cellHeight
+        case 2: height = ProductDetailTableViewCell.cellHeight
         default: height = 0
         }
         
