@@ -12,3 +12,8 @@ protocol TableViewSelectionDelegate: class {
     
     func tableViewDelegate(_ tableViewDelegate: UITableViewDelegate, didSelectRowWith title: String)
 }
+
+protocol CollectionViewSelectionDelegate: class {
+    
+    func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath)
+}

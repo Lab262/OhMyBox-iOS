@@ -40,7 +40,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jJ7-lB-svP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ACp-CH-jkW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHU-9a-IgH" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
@@ -68,7 +68,7 @@
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="384" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="f19-Lu-Hmh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1087"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -90,13 +90,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="OH-MY-BOX" id="muF-vK-Lz9"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="navigationBarView" destination="JHU-9a-IgH" id="Coy-jT-ynK"/>
                         <outlet property="tableView" destination="f19-Lu-Hmh" id="7wN-sj-EPx"/>
                         <segue destination="erU-ar-DLf" kind="show" identifier="goRecommended" id="XgR-lH-71A"/>
-                        <segue destination="MiG-iR-diQ" kind="show" identifier="detailProduct" id="VzE-k7-m1U"/>
+                        <segue destination="MiG-iR-diQ" kind="show" identifier="goToProductDetail" id="VzE-k7-m1U"/>
                         <segue destination="YUY-LX-DDs" kind="presentation" identifier="goCart" id="EMM-rn-Hci"/>
                         <segue destination="erU-ar-DLf" kind="show" identifier="goPromotion" id="Eew-iy-pSl"/>
                     </connections>
@@ -146,7 +144,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 50,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVn-Ds-351">
-                                                    <rect key="frame" x="130" y="283.5" width="116" height="28"/>
+                                                    <rect key="frame" x="130" y="284" width="116" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="VDx-kL-6yi"/>
                                                         <constraint firstAttribute="width" constant="116" id="c9P-s2-iCJ"/>
@@ -156,7 +154,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capa Tropical" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-cF-T4h">
-                                                    <rect key="frame" x="107.5" y="237" width="153" height="36.5"/>
+                                                    <rect key="frame" x="107" y="237" width="153" height="37"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -628,7 +626,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="101" y="6.5" width="174" height="31"/>
+                                                    <rect key="frame" x="101" y="7" width="174" height="31"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

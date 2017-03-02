@@ -22,6 +22,7 @@ class HighlightsTableViewCell: UITableViewCell {
         return "HighlightsTableViewCell"
     }
     
+    weak var selectionDelegate: CollectionViewSelectionDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     
     var highlights: [UIImage] = []
@@ -72,5 +73,12 @@ extension HighlightsTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return HighlightCollectionViewCell.cellSize
+    }
+}
+
+extension HighlightsTableViewCell: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectionDelegate?.collectionViewDelegate(self, didSelectItemAt: indexPath)
     }
 }

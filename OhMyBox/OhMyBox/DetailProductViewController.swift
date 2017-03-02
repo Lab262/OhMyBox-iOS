@@ -259,6 +259,5 @@ extension DetailProductViewController: UITableViewDelegate {
             return 497
         }
     }
-    
-    
+
 }

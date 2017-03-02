@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +18,10 @@ class HomeViewController: UIViewController{
     
     var filtered:[String] = []
     var allProduct = [Product]()
+    
+    var highlightsCollectionViewDelegate: UICollectionViewDelegate!
+    var newsCollectionViewDelegate: UICollectionViewDelegate!
+    var salesCollectionViewDelegate: UICollectionViewDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +50,7 @@ class HomeViewController: UIViewController{
     }
     
     func setUpTableView() {
-        
+    
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = .white
@@ -99,16 +103,33 @@ extension HomeViewController: UITableViewDataSource {
         let cell: UITableViewCell
         
         switch indexPath.section {
-        case 0: cell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateMiniProductsCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateSalesCell(tableView, cellForRowAt: indexPath)
+        case 0:
+            let highlightsCell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
+            
+            highlightsCell.selectionDelegate = self
+            highlightsCollectionViewDelegate = highlightsCell
+            cell = highlightsCell
+        case 1:
+            
+            let newsCell = generateNewsCell(tableView, cellForRowAt: indexPath)
+            
+            newsCell.selectionDelegate = self
+            newsCollectionViewDelegate = newsCell
+            cell = newsCell
+        case 2:
+            
+            let salesCell = generateSalesCell(tableView, cellForRowAt: indexPath)
+            
+            salesCell.selectionDelegate = self
+            salesCollectionViewDelegate = salesCell
+            cell = salesCell
         default: cell = UITableViewCell()
         }
         
         return cell
     }
     
-    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> HighlightsTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsTableViewCell.identifier, for: indexPath) as! HighlightsTableViewCell
         
@@ -117,7 +138,7 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
 
-    func generateMiniProductsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
         
@@ -126,7 +147,7 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
-    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
         
@@ -214,9 +235,23 @@ extension HomeViewController: UITableViewDelegate {
     }
   
 }
-extension HomeViewController: callSegueProtocol {
+
+extension HomeViewController: CollectionViewSelectionDelegate {
     
-    func callViewController(segueIndentifier: String){
-        self.performSegue(withIdentifier: segueIndentifier, sender: self)
+    func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
+        
+        let colletionViewDelegate: UICollectionViewDelegate! = colletionViewDelegate
+        
+        if colletionViewDelegate === highlightsCollectionViewDelegate {
+            
+            
+            
+        } else if colletionViewDelegate === newsCollectionViewDelegate {
+            performSegue(withIdentifier: SegueIdentifiers.homeToProductDetail, sender: self)
+            
+        } else if colletionViewDelegate === salesCollectionViewDelegate {
+            performSegue(withIdentifier: SegueIdentifiers.homeToProductDetail, sender: self)
+            
+        }
     }
 }

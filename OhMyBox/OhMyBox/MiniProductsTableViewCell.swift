@@ -22,6 +22,7 @@ class MiniProductsTableViewCell: UITableViewCell {
         return "MiniProductsTableViewCell"
     }
     
+    weak var selectionDelegate: CollectionViewSelectionDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     
     var products: [Any] = []
@@ -71,5 +72,12 @@ extension MiniProductsTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return MiniProductCollectionViewCell.cellSize
+    }
+}
+
+extension MiniProductsTableViewCell: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectionDelegate?.collectionViewDelegate(self, didSelectItemAt: indexPath)
     }
 }
