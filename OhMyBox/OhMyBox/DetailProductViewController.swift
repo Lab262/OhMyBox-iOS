@@ -125,7 +125,7 @@ class DetailProductViewController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.identifier) as! ProductDetailTableViewCell
         
         cell.productDescription = "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis."
-        cell.productDetails = "Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock"
+        cell.productDetails = "Blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá "
         
         return cell
     }
@@ -209,10 +209,6 @@ extension DetailProductViewController: UITableViewDelegate {
 }
 
 extension DetailProductViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        print("xd")
-    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
