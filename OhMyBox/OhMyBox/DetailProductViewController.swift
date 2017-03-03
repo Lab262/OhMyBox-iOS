@@ -18,7 +18,7 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productImageViewHeightConstraint: NSLayoutConstraint!
     let productImageViewHeight: CGFloat = 334.0
-    let bottomMargin: CGFloat = 40
+    let bottomMargin: CGFloat = 40.0
     
     var product = Product()
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
