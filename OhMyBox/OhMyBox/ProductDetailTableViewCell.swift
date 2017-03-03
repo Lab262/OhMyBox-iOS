@@ -15,7 +15,7 @@ class ProductDetailTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 237.0
+        return UITableViewAutomaticDimension
     }
     
     static var nibName: String {
@@ -25,6 +25,11 @@ class ProductDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionButton: UIButton!
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    typealias ProductDetailButtonHandler = (UIButton) -> ()
+    
+    var descriptionButtonHandler: ProductDetailButtonHandler?
+    var detailsButtonHandler: ProductDetailButtonHandler?
     
     var isDescriptionButtonHighlighted = false
     var productDescription: String? {
@@ -103,6 +108,7 @@ class ProductDetailTableViewCell: UITableViewCell {
         
         isDescriptionButtonHighlighted = true
         updateDescriptionLabelText()
+        descriptionButtonHandler?(descriptionButton)
     }
     
     func setDetailsButtonHighlighted() {
@@ -111,6 +117,7 @@ class ProductDetailTableViewCell: UITableViewCell {
         
         isDescriptionButtonHighlighted = false
         updateDescriptionLabelText()
+        detailsButtonHandler?(detailsButton)
     }
     
     func updateDescriptionLabelText() {

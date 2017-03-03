@@ -30,6 +30,9 @@ class DetailProductViewController: UIViewController {
         
         
         tableView.contentInset = UIEdgeInsetsMake(productImageViewHeight, 0, bottomMargin, 0)
+        tableView.estimatedRowHeight = 350.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         self.initializeStatesButtons()
         self.setUpNavigationAppearance()
         self.setUpNavigationBar()
@@ -127,7 +130,17 @@ class DetailProductViewController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.identifier) as! ProductDetailTableViewCell
         
         cell.productDescription = "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis."
-        cell.productDetails = "Blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá "
+        cell.productDetails = "Blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá"
+        
+        let buttonsHandler: ProductDetailTableViewCell.ProductDetailButtonHandler = { _ in
+            let contentOffset = tableView.contentOffset
+            tableView.reloadData()
+            tableView.layoutIfNeeded()
+            tableView.setContentOffset(contentOffset, animated: false)
+        }
+        
+        cell.descriptionButtonHandler = buttonsHandler
+        cell.detailsButtonHandler = buttonsHandler
         
         return cell
     }
