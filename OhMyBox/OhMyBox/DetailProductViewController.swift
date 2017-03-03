@@ -154,36 +154,6 @@ class DetailProductViewController: UIViewController {
         return cell
     }
     
-    func selectDescriptionButton (_ sender: UIButton) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
-        
-        cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
-        cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
-        
-        cell.descriptionButton.setTitleColor(UIColor.white, for:UIControlState.normal)
-        cell.detailButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
-        
-        
-        self.isSelect = false
-        self.tableView.reloadData()
-    }
-    
-    
-    func selectDetailButton (_ sender: UIButton) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
-        
-        cell.descriptionButton.setBackgroundImage(#imageLiteral(resourceName: "profile_about_button"), for: UIControlState.normal)
-        
-        cell.detailButton.setBackgroundImage(#imageLiteral(resourceName: "profile_mydata_button"), for: UIControlState.normal)
-        
-        cell.detailButton.setTitleColor(UIColor.white, for:UIControlState.normal)
-        cell.descriptionButton.setTitleColor(UIColor.hexStringToUIColor(hex:"b8b8b8"), for:UIControlState.normal)
-        
-        self.isSelect = true
-        
-        self.tableView.reloadData()
-    }
-    
     func setUpNavigationAppearance() {
         
         self.navigationController?.navigationBar.isTranslucent = true

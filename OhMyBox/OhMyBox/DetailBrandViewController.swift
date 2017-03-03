@@ -18,11 +18,6 @@ class DetailBrandViewController: UIViewController {
     
     func registerNibs() {
         
-        self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
-        
-        self.tableView.register(UINib(nibName: "HeaderTitleSecondTypeTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleSecondTypeTableViewCell.identifier)
-        
-        self.tableView.register(UINib(nibName: "SimpleTextViewTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextViewTableViewCell.identifier)
     }
     
     func configureTableView () {
@@ -84,7 +79,7 @@ extension DetailBrandViewController: UITableViewDataSource {
             case 0:
                 return generatePresentationBrandDetailCell(tableView, cellForRowAt: indexPath)
             case 1:
-                return generateDescriptionMarkViewCell(tableView, cellForRowAt: indexPath)
+                return generatePresentationBrandDetailCell(tableView, cellForRowAt: indexPath)
             case 2:
                 return generateContactTitleCell(tableView, cellForRowAt: indexPath)
             default:
@@ -252,13 +247,6 @@ extension DetailBrandViewController {
         
         cell.titleLabel.text = "COLEÇÕES"
         cell.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-        
-        return cell
-    }
-    
-    func generateDescriptionMarkViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextViewTableViewCell.identifier, for: indexPath) as! SimpleTextViewTableViewCell
         
         return cell
     }

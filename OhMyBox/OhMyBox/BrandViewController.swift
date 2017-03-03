@@ -10,37 +10,30 @@ import UIKit
 
 class BrandViewController: UIViewController {
     
-    
     @IBOutlet weak var navigationBarView: IconNavigationBar!
-    
     @IBOutlet weak var tableView: UITableView!
-    var clotingArray: [String]?
     
-    func registerNibs() {
-        self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
-        self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
-        
-        self.tableView.register(UINib(nibName: "ShowCaseBrandTableViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseBrandTableViewCell.identifier)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-    }
+    var allBrands: [Any] = [1, 2, 3]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.configureNavigationBar()
-        
-        self.clotingArray = [String]()
-        self.clotingArray?.append("Cloting One")
-        self.clotingArray?.append("Cloting Two")
-        self.clotingArray?.append("cloting Three")
-        self.registerNibs()
+        setUpNavigationBar()
+        setUpTableView()
+        registerNibs()
     }
     
-    func showAllFeatureds (sender: UIButton) {
-        self.performSegue(withIdentifier: "goProductsView", sender: self)
+    func setUpTableView() {
+        tableView.backgroundColor = .white
+    }
+    
+    func registerNibs() {
+        tableView.registerNibFrom(BrandsTableViewCell.self)
+        tableView.registerNibFrom(BrandsHeaderTableViewCell.self)
+        tableView.registerNibFrom(BrandTableViewCell.self)
+    }
+    
+    func showAllFeatureds(sender: UIButton) {
+        performSegue(withIdentifier: "goProductsView", sender: self)
     }
     
     
@@ -57,193 +50,103 @@ class BrandViewController: UIViewController {
         
     }
     
-    func configureNavigationBar() {
-        
-        self.navigationBarView.leftBarButton.isHidden = true
-        //self.navigationBarView.boxButton.addTarget(self, action: #selector(actionGoCart(_:)), for: .touchUpInside)
-        //self.navigationBarView.searchButton.addTarget(self, action: #selector(searchProducts(_:)), for: .touchUpInside)
-        
+    func setUpNavigationBar() {
+        navigationController?.navigationBar.isHidden = true
     }
-
-    func generateRecommendedBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        cell.tagType = .two
-        cell.imageCloset = #imageLiteral(resourceName: "defaultBrand3_image")
-        cell.delegate = self
-        cell.followingClothes = false
-        cell.identifierSegue = "detailBrandView"
-        cell.clothingtArray = self.clotingArray!
+        cell.brands = [1, 2, 3]
         
         return cell
     }
     
-    func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateRecommendedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-        
-        cell.imageCloset = #imageLiteral(resourceName: "defaultBrand2_image")
-        cell.tagType = .two
-        cell.delegate = self
-        cell.followingClothes = true
-        cell.identifierSegue = "detailBrandView"
-        cell.clothingtArray = self.clotingArray!
+        cell.brands = [1, 2, 3]
         
         return cell
     }
     
     func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShowCaseBrandTableViewCell.identifier, for: indexPath) as! ShowCaseBrandTableViewCell
-        cell.brandImage.image = #imageLiteral(resourceName: "defaultBrand4_image")
+        let cell = tableView.dequeueReusableCell(withIdentifier: BrandTableViewCell.identifier) as! BrandTableViewCell
         
         return cell
     }
-    
-    func generateProducteCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: WishTableViewCell.identifier, for: indexPath) as! WishTableViewCell
-        
-        cell.productImage.image = UIImage(named:"dressImage")
-        
-        return cell
-    }
-    
-    func generateHeaderFollowedBrandsCell(_ tableView: UITableView) -> UITableViewCell {
-        
-        let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-        
-        header.firstTitleLineLabel.text = "MARCAS QUE"
-        
-        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-        header.widthIconConstraint.constant = 35
-        header.heightIconConstraint.constant = 21
-        header.layoutIfNeeded()
-        header.secondTitleLineLabel.text = "EU SIGO"
-        header.showAllButton.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
-        
-        return header
-    }
-    
-    func generateHeaderRecommendedBrandsCell(_ tableView: UITableView) -> UITableViewCell {
-        
-        let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-        
-        header.firstTitleLineLabel.text = "RECOMENDADOS"
-        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-        header.widthIconConstraint.constant = 35
-        header.heightIconConstraint.constant = 21
-        header.layoutIfNeeded()
-        header.secondTitleLineLabel.text = "PARA VOCÊ"
-        header.showAllButton.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
-        
-        return header
-    }
-    
-    func generateHeaderAllBrandsCell(_ tableView: UITableView) -> UITableViewCell {
-        
-        let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-        
-        header.firstTitleLineLabel.text = "TODAS"
-        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType5_image")
-        header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-        header.widthIconConstraint.constant = 35
-        header.heightIconConstraint.constant = 21
-        header.layoutIfNeeded()
-        header.secondTitleLineLabel.text = "AS MARCAS"
-        header.titleButtonLabel.text = "Filtrar"
-        
-        return header
-    }
+
 }
 
 extension BrandViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell
         
         switch indexPath.section {
-        
-        case 0:
-            return generateFollowedBrandsCell(tableView, cellForRowAt: indexPath)
-        case 1:
-            return generateRecommendedBrandCell(tableView, cellForRowAt: indexPath)
-        case 2:
-            return generateBrandCell(tableView, cellForRowAt: indexPath)
-            
-        default:
-            return UITableViewCell()
+        case 0: cell = generateFollowedBrandsCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateRecommendedBrandsCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateBrandCell(tableView, cellForRowAt: indexPath)
+        default: cell = UITableViewCell()
         }
         
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        let number: Int
+        
         switch section {
-        case 0, 1:
-            return 1
-        default:
-            return 2
+        case 0, 1: number = 1
+        case 2: number = allBrands.count
+        default: number = 0
         }
-     
+        
+        return number
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 3
     }
 }
 
 extension BrandViewController: UITableViewDelegate {
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
+        let height: CGFloat
         
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        switch section {
-            
-        case 0:
-            return generateHeaderFollowedBrandsCell(tableView)
-        case 1:
-            return generateHeaderRecommendedBrandsCell(tableView)
-        default:
-            return generateHeaderAllBrandsCell(tableView)
+        switch indexPath.section {
+        case 0, 1: height = BrandsTableViewCell.cellHeight
+        case 2: height = BrandTableViewCell.cellHeight
+        default: height = 0
         }
         
+        return height
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 70
+        return BrandsHeaderTableViewCell.cellHeight
     }
     
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: BrandsHeaderTableViewCell.identifier) as! BrandsHeaderTableViewCell
         
-        switch indexPath.section {
-            
-        case 0, 1:
-            let width = self.view.bounds.size.width * 0.94
-            let height = width*1.3
-            return height
-        default:
-            let width = self.view.bounds.size.width * 0.98
-            let height = width*1.34
-            print ("HEIGHT BRAND: \(height)")
-            
-            return height
-            
+        switch section {
+        case 0:
+            header.topLineLabel.text = "MARCAS"
+            header.bottomLineLabel.text = "QUE SIGO"
+        case 1:
+            header.topLineLabel.text = "RECOMENDADOS"
+            header.bottomLineLabel.text = ""
+        case 2:
+            header.topLineLabel.text = "TODAS AS MARCAS"
+            header.bottomLineLabel.text = ""
+            header.showAllButton.isHidden = true
+        default: break
         }
-    }
-}
-
-extension BrandViewController: callSegueProtocol {
-    
-    func callViewController(segueIndentifier:String){
-        self.performSegue(withIdentifier:segueIndentifier, sender:self)
+        
+        return header
     }
 }
