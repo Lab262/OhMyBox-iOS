@@ -18,6 +18,7 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productImageViewHeightConstraint: NSLayoutConstraint!
     let productImageViewHeight: CGFloat = 334.0
+    let bottomMargin: CGFloat = 40
     
     var product = Product()
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
@@ -28,7 +29,7 @@ class DetailProductViewController: UIViewController {
         self.registerNibs()
         
         
-        tableView.contentInset = UIEdgeInsetsMake(productImageViewHeight, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(productImageViewHeight, 0, bottomMargin, 0)
         self.initializeStatesButtons()
         self.setUpNavigationAppearance()
         self.setUpNavigationBar()
@@ -101,6 +102,7 @@ class DetailProductViewController: UIViewController {
         tableView.registerNibFrom(ProductLabelTableViewCell.self)
         tableView.registerNibFrom(ProductOptionsTableViewCell.self)
         tableView.registerNibFrom(ProductDetailTableViewCell.self)
+        tableView.registerNibFrom(ProductBrandTableViewCell.self)
     }
     
     func generateProductLabelCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,7 +132,14 @@ class DetailProductViewController: UIViewController {
         return cell
     }
 
-    
+    func generateProductBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductBrandTableViewCell.identifier) as! ProductBrandTableViewCell
+        
+        cell.brandNameTopLine = "STAY CLOSE"
+        cell.brandNameBottomLine = "Indie Store"
+        
+        return cell
+    }
     
     func selectDescriptionButton (_ sender: UIButton) {
         let cell = tableView.dequeueReusableCell(withIdentifier: SwitchProductButtonTableViewCell.identifier, for:buttonIndexPath) as! SwitchProductButtonTableViewCell
@@ -179,6 +188,7 @@ extension DetailProductViewController: UITableViewDataSource {
         case 0: cell = generateProductLabelCell(tableView, cellForRowAt: indexPath)
         case 1: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
         case 2: cell = generateProductDetailsCell(tableView, cellForRowAt: indexPath)
+        case 3: cell = generateProductBrandCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -186,7 +196,7 @@ extension DetailProductViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
 }
 
@@ -200,6 +210,7 @@ extension DetailProductViewController: UITableViewDelegate {
         case 0: height = ProductLabelTableViewCell.cellHeight
         case 1: height = ProductOptionsTableViewCell.cellHeight
         case 2: height = ProductDetailTableViewCell.cellHeight
+        case 3: height = ProductBrandTableViewCell.cellHeight
         default: height = 0
         }
         
