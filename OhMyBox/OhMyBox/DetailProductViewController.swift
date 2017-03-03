@@ -232,7 +232,7 @@ extension DetailProductViewController: UIScrollViewDelegate {
     func updateImageScale(_ yOffset: CGFloat) {
         
         if yOffset < 0 {
-            productImageViewHeightConstraint.constant = productImageViewHeight + (-yOffset)
+            productImageViewHeightConstraint.constant = productImageViewHeight - yOffset
         } else if productImageViewHeightConstraint.constant != productImageViewHeight {
             productImageViewHeightConstraint.constant = productImageViewHeight
         }
