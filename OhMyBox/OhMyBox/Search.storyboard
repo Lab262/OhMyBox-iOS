@@ -313,7 +313,9 @@
         <scene sceneID="Q1M-d3-68Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gXe-FC-F7r" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="search_tabbar" selectedImage="search_tabbar_selected" id="HJj-h3-Cdv"/>
+                    <tabBarItem key="tabBarItem" title="" image="search_tabbar" selectedImage="search_tabbar_selected" id="HJj-h3-Cdv">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hjj-0l-7GI">

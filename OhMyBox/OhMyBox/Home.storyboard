@@ -378,7 +378,9 @@
         <scene sceneID="oNb-HY-LHx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ixR-Ni-Gjy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
+                    <tabBarItem key="tabBarItem" title="" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">

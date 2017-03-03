@@ -19,10 +19,12 @@
         <scene sceneID="KD1-Mr-vAf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fnk-Q2-tB1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
+                    <tabBarItem key="tabBarItem" title="" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -206,7 +208,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="143" y="30" width="89.5" height="20"/>
+                                                    <rect key="frame" x="140.5" y="29.5" width="95" height="21"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

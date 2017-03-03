@@ -74,7 +74,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARIA BETANIA " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-VS-83C">
-                                                    <rect key="frame" x="106.5" y="207" width="162.5" height="25"/>
+                                                    <rect key="frame" x="94.5" y="207" width="187" height="25"/>
                                                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
-                                                    <rect key="frame" x="200" y="24" width="167" height="49"/>
+                                                    <rect key="frame" x="200" y="25" width="167" height="49"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                     <state key="normal" title="Sobre a box" backgroundImage="profile_about_button">
                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,10 +192,12 @@
         <scene sceneID="ZdJ-0I-3s6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="48E-iM-OrB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF"/>
+                    <tabBarItem key="tabBarItem" title="" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9V-g4-n4P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z9V-g4-n4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

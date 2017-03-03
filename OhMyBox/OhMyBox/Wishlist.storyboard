@@ -98,10 +98,12 @@
         <scene sceneID="qLn-Il-lrc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VLa-KE-1TN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="wishIconDeselected_button" selectedImage="wishIconSelected_button" id="RbR-Ag-TeN"/>
+                    <tabBarItem key="tabBarItem" title="" image="wishIconDeselected_button" selectedImage="wishIconSelected_button" id="RbR-Ag-TeN">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hnC-Mq-5hf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hnC-Mq-5hf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
