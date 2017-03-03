@@ -123,15 +123,7 @@ extension DetailBrandViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        switch section {
-        case 0:
-            return 3
-        case 1:
-            return 1
-        default:
-            return 1
-        }
-        
+        return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -143,64 +135,6 @@ extension DetailBrandViewController: UITableViewDataSource {
 extension DetailBrandViewController: UITableViewDelegate {
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       
-        
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        switch section {
-            
-        case 1:
-            
-            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleSecondTypeTableViewCell.identifier) as! HeaderTitleSecondTypeTableViewCell
-            
-            header.titleLabel.text = "DESTAQUES"
-            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-            
-            header.showAll.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
-
-            return header
-            
-        case 2:
-            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleSecondTypeTableViewCell.identifier) as! HeaderTitleSecondTypeTableViewCell
-            
-            header.titleLabel.text = "COLEÇÕES"
-            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-            header.showAll.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
-            
-            return header
-
-        case 3:
-            
-            let header = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
-            
-            header.firstTitleLineLabel.text = "OH YEAH,"
-            header.secondTitleLineLabel.text = "PROMOÇÕES!"
-            header.iconImage.image = #imageLiteral(resourceName: "iconHeaderType7_image")
-            header.showAllButton.addTarget(self, action: #selector(showAllFeatureds(sender:)), for: .touchUpInside)
-            
-            return header
-            
-        default:
-            return UIView()
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        switch section {
-        case 1, 2:
-            return 70
-        case 3:
-            return 77
-        default:
-            return 0.1
-        }
-    }
     
  }
 

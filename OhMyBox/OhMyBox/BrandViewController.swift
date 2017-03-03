@@ -14,7 +14,12 @@ class BrandViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var allBrands: [Any] = [1, 2, 3]
-
+    var followedBrands: [Any] = [1, 2, 3]
+    var recommendedBrands: [Any] = [1, 2, 3]
+    
+    var followedBrandsCollectionViewDelegate: UICollectionViewDelegate!
+    var recommendedBrandsCollectionViewDelegate: UICollectionViewDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -32,45 +37,40 @@ class BrandViewController: UIViewController {
         tableView.registerNibFrom(BrandTableViewCell.self)
     }
     
-    func showAllFeatureds(sender: UIButton) {
-        performSegue(withIdentifier: "goProductsView", sender: self)
-    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "goProductsView" {
+        if segue.identifier == SegueIdentifiers.brandsToBrandDetail {
             
-            if let destinationViewController = segue.destination as? RecommendedViewController {
-                
-                destinationViewController.isHiddenRecommendedTitle = true
-                
-            }
         }
-        
     }
     
     func setUpNavigationBar() {
         navigationController?.navigationBar.isHidden = true
     }
     
-    func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        cell.brands = [1, 2, 3]
+        cell.brands = followedBrands
+        followedBrandsCollectionViewDelegate = cell
+        cell.selectionDelegate = self
         
         return cell
     }
     
-    func generateRecommendedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateRecommendedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        cell.brands = [1, 2, 3]
+        cell.brands = recommendedBrands
+        recommendedBrandsCollectionViewDelegate = cell
+        cell.selectionDelegate = self
         
         return cell
     }
     
-    func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandTableViewCell.identifier) as! BrandTableViewCell
         
         return cell
@@ -148,5 +148,13 @@ extension BrandViewController: UITableViewDelegate {
         }
         
         return header
+    }
+}
+
+extension BrandViewController: CollectionViewSelectionDelegate {
+    
+    func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: SegueIdentifiers.brandsToBrandDetail, sender: self)
+        // get selected brand
     }
 }

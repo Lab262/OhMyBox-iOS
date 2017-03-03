@@ -25,6 +25,7 @@ class BrandsTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var selectionDelegate: CollectionViewSelectionDelegate?
     
     let margin: CGFloat = 20.0
     let itemSpacing: CGFloat = 11.0
@@ -83,6 +84,6 @@ extension BrandsTableViewCell: UICollectionViewDelegateFlowLayout {
 extension BrandsTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        selectionDelegate?.collectionViewDelegate(self, didSelectItemAt: indexPath)
     }
 }
