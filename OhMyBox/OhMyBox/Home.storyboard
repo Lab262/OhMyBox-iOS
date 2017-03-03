@@ -374,11 +374,11 @@
             </objects>
             <point key="canvasLocation" x="3689" y="-1613"/>
         </scene>
-        <!--OMB-->
+        <!--Navigation Controller-->
         <scene sceneID="oNb-HY-LHx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ixR-Ni-Gjy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="OMB" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
+                    <tabBarItem key="tabBarItem" title="" image="ombIconDeselected_button" selectedImage="ombIconSelected_button" id="XLe-Dj-Fjn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">

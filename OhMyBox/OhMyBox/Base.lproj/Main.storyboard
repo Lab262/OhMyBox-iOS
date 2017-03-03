@@ -22,10 +22,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="fHp-bi-ybs" kind="relationship" relationship="viewControllers" id="56O-xD-byL"/>
+                        <segue destination="KqT-Au-at8" kind="relationship" relationship="viewControllers" id="kVX-gc-wza"/>
                         <segue destination="VWB-gA-slg" kind="relationship" relationship="viewControllers" id="hVQ-bg-tBO"/>
                         <segue destination="MWe-cn-Agk" kind="relationship" relationship="viewControllers" id="1BV-6s-fUA"/>
                         <segue destination="EmJ-0V-lJs" kind="relationship" relationship="viewControllers" id="lSW-ls-K8j"/>
-                        <segue destination="KqT-Au-at8" kind="relationship" relationship="viewControllers" id="kVX-gc-wza"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkw-t1-ESp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,7 +36,7 @@
         <scene sceneID="EER-nj-vDz">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="fHp-bi-ybs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="OMB" id="RXk-2Y-JHM"/>
+                    <tabBarItem key="tabBarItem" title="" id="RXk-2Y-JHM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5o-BC-c93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +46,7 @@
         <scene sceneID="6EL-qu-q4k">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="EmJ-0V-lJs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Perfil" id="MEA-G9-W0R"/>
+                    <tabBarItem key="tabBarItem" title="" id="MEA-G9-W0R"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRi-U5-uwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,27 +56,27 @@
         <scene sceneID="Hym-0X-uDb">
             <objects>
                 <viewControllerPlaceholder storyboardName="Search" id="KqT-Au-at8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="BpO-dW-3lZ"/>
+                    <tabBarItem key="tabBarItem" title="" id="BpO-dW-3lZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syX-wi-DKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49" y="328"/>
+            <point key="canvasLocation" x="-1150" y="329"/>
         </scene>
         <!--Brand-->
         <scene sceneID="2U9-BP-rgt">
             <objects>
                 <viewControllerPlaceholder storyboardName="Brand" id="VWB-gA-slg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Store" id="yzT-5a-BOW"/>
+                    <tabBarItem key="tabBarItem" title="" id="yzT-5a-BOW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZi-hn-LEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-990" y="328"/>
+            <point key="canvasLocation" x="-878" y="328"/>
         </scene>
         <!--Wishlist-->
         <scene sceneID="KAG-V3-Ogt">
             <objects>
                 <viewControllerPlaceholder storyboardName="Wishlist" id="MWe-cn-Agk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wishlist" id="rgb-am-dOl"/>
+                    <tabBarItem key="tabBarItem" title="" id="rgb-am-dOl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wpe-Rz-xq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

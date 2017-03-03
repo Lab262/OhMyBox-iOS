@@ -114,7 +114,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgw-8e-4up">
-                                                    <rect key="frame" x="34" y="9" width="78" height="25"/>
+                                                    <rect key="frame" x="34" y="9.5" width="78" height="25"/>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -313,6 +313,7 @@
         <scene sceneID="Q1M-d3-68Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gXe-FC-F7r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="search_tabbar" selectedImage="search_tabbar_selected" id="HJj-h3-Cdv"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hjj-0l-7GI">
@@ -333,5 +334,7 @@
         <image name="category_indicator" width="6" height="15"/>
         <image name="container_button" width="86" height="24"/>
         <image name="search_suggestion_indicator" width="6" height="6"/>
+        <image name="search_tabbar" width="23" height="24"/>
+        <image name="search_tabbar_selected" width="23" height="24"/>
     </resources>
 </document>

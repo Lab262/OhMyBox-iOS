@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fnk-Q2-tB1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fnk-Q2-tB1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,14 +15,14 @@
         </array>
     </customFonts>
     <scenes>
-        <!--marcas-->
+        <!--Navigation Controller-->
         <scene sceneID="KD1-Mr-vAf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fnk-Q2-tB1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="marcas" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
+                    <tabBarItem key="tabBarItem" title="" image="brandIconDeselected_button" selectedImage="brandIconSelected_button" id="4iO-iD-qAc"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -206,7 +206,7 @@
                                                     <rect key="frame" x="11" y="15" width="353" height="49"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C o n t a t o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-L9-OaO">
-                                                    <rect key="frame" x="140" y="29.5" width="95" height="21"/>
+                                                    <rect key="frame" x="143" y="30" width="89.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
