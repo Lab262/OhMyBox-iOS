@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
         <array key="Poppins-SemiBold.ttf">
             <string>Poppins-SemiBold</string>
         </array>
@@ -20,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="VLQ-le-j8T">
@@ -72,14 +75,25 @@
                             <constraint firstItem="bWY-lz-dzR" firstAttribute="height" secondItem="CaA-dU-zqG" secondAttribute="height" id="YZa-YM-hlH"/>
                         </constraints>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u82-0N-LkF">
+                        <rect key="frame" x="18" y="64" width="339" height="112"/>
+                        <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</string>
+                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="u82-0N-LkF" firstAttribute="top" secondItem="VLQ-le-j8T" secondAttribute="bottom" constant="27" id="7XG-1w-B11"/>
                     <constraint firstItem="VLQ-le-j8T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Fg1-YF-8Yk"/>
                     <constraint firstItem="VLQ-le-j8T" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MBf-Ho-Q5f"/>
+                    <constraint firstItem="u82-0N-LkF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="gOM-62-Y6z"/>
+                    <constraint firstAttribute="trailing" secondItem="u82-0N-LkF" secondAttribute="trailing" constant="18" id="rs8-wb-6F4"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionButton" destination="CaA-dU-zqG" id="MSW-BC-D8P"/>
+                <outlet property="descriptionLabel" destination="u82-0N-LkF" id="cPr-Lc-glh"/>
                 <outlet property="detailsButton" destination="bWY-lz-dzR" id="bWT-Pp-JV5"/>
             </connections>
         </tableViewCell>

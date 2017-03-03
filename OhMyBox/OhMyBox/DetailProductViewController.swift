@@ -28,15 +28,15 @@ class DetailProductViewController: UIViewController {
         self.registerNibs()
         
         
-        tableView.contentInset = UIEdgeInsetsMake(334, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(productImageViewHeight, 0, 0, 0)
         self.initializeStatesButtons()
         self.setUpNavigationAppearance()
-        self.setConfigurationBar()
+        self.setUpNavigationBar()
     }
     
-    func setConfigurationBar() {
-        self.navigationBarView.titleLabel.text = ""
-        self.navigationBarView.view.backgroundColor = .clear
+    func setUpNavigationBar() {
+        navigationBarView.titleLabel.text = ""
+        navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
     }
     
     func initializeStatesButtons() {
@@ -124,6 +124,9 @@ class DetailProductViewController: UIViewController {
     func generateProductDetailsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.identifier) as! ProductDetailTableViewCell
         
+        cell.productDescription = "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis."
+        cell.productDetails = "Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock Fock fock"
+        
         return cell
     }
 
@@ -159,7 +162,7 @@ class DetailProductViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    func setUpNavigationAppearance(){
+    func setUpNavigationAppearance() {
         
         self.navigationController?.navigationBar.isTranslucent = true
     }
@@ -213,12 +216,31 @@ extension DetailProductViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let yoffset = scrollView.contentOffset.y + scrollView.contentInset.top
+        let yOffset = scrollView.contentOffset.y + scrollView.contentInset.top
         
-        if yoffset < 0 {
-            productImageViewHeightConstraint.constant = productImageViewHeight + (-yoffset)
-        } else {
+        updateImageScale(yOffset)
+        updateNavigationBarAlpha(yOffset)
+    }
+    
+    func updateImageScale(_ yOffset: CGFloat) {
+        
+        if yOffset < 0 {
+            productImageViewHeightConstraint.constant = productImageViewHeight + (-yOffset)
+        } else if productImageViewHeightConstraint.constant != productImageViewHeight {
             productImageViewHeightConstraint.constant = productImageViewHeight
+        }
+    }
+    
+    func updateNavigationBarAlpha(_ yOffset: CGFloat) {
+        let navbarAlphaThreshold: CGFloat = 64.0
+        
+        if yOffset > (productImageViewHeight - navbarAlphaThreshold) {
+            
+            let alpha = (yOffset - productImageViewHeight + navbarAlphaThreshold)/navbarAlphaThreshold
+            
+            navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(alpha)
+        } else {
+            navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
         }
     }
 }

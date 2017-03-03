@@ -24,6 +24,39 @@ class ProductDetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionButton: UIButton!
     @IBOutlet weak var detailsButton: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var isDescriptionButtonHighlighted = false
+    var productDescription: String? {
+        didSet {
+            if isDescriptionButtonHighlighted {
+                updateDescriptionLabelText()
+            }
+        }
+    }
+    var productDetails: String? {
+        didSet {
+            if !isDescriptionButtonHighlighted {
+                updateDescriptionLabelText()
+            }
+        }
+    }
+    
+    var attributedDescription: NSAttributedString? {
+        if let description = productDescription {
+            return description.with(characterSpacing: 1.22)
+        } else {
+            return nil
+        }
+    }
+    
+    var attributedDetails: NSAttributedString? {
+        if let details = productDetails {
+            return details.with(characterSpacing: 1.22)
+        } else {
+            return nil
+        }
+    }
     
     let buttonHighlightedTitleColor = UIColor.white
     let buttonHighlightedBackgroundColor = UIColor.colorWithHexString("241932")
@@ -67,10 +100,24 @@ class ProductDetailTableViewCell: UITableViewCell {
     func setDescriptionButtonHighlighted() {
         setButtonHighlighted(descriptionButton)
         setButtonUnhighlighted(detailsButton)
+        
+        isDescriptionButtonHighlighted = true
+        updateDescriptionLabelText()
     }
+    
     func setDetailsButtonHighlighted() {
         setButtonHighlighted(detailsButton)
         setButtonUnhighlighted(descriptionButton)
+        
+        isDescriptionButtonHighlighted = false
+        updateDescriptionLabelText()
     }
     
+    func updateDescriptionLabelText() {
+        if isDescriptionButtonHighlighted {
+            descriptionLabel.attributedText = attributedDescription
+        } else {
+            descriptionLabel.attributedText = attributedDetails
+        }
+    }
 }
