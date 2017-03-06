@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -103,7 +104,7 @@
         <!--Nome da Marca-->
         <scene sceneID="mYO-VF-44n">
             <objects>
-                <viewController id="AYZ-9D-ZUt" customClass="DetailBrandViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AYZ-9D-ZUt" customClass="BrandDetailViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7H4-uX-dfc"/>
                         <viewControllerLayoutGuide type="bottom" id="yjs-2A-h7i"/>
@@ -112,14 +113,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="238" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hii-EO-Vbm">
-                                <rect key="frame" x="0.0" y="382" width="375" height="285"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="AYZ-9D-ZUt" id="m4L-dh-DwG"/>
-                                    <outlet property="delegate" destination="AYZ-9D-ZUt" id="CYO-cy-odq"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-wg-8oC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="382"/>
                                 <subviews>
@@ -190,19 +183,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yke-7u-LLO">
-                                        <rect key="frame" x="102.5" y="185" width="171" height="24"/>
+                                        <rect key="frame" x="103" y="185" width="171" height="24"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="handmade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-C0-IZm">
-                                        <rect key="frame" x="143" y="205" width="89.5" height="26.5"/>
+                                        <rect key="frame" x="143.5" y="205" width="89.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-67-7JF">
-                                        <rect key="frame" x="20" y="239" width="335" height="37"/>
+                                        <rect key="frame" x="20" y="239.5" width="335" height="37"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend dolor sic amet">
                                                 <attributes>
@@ -215,7 +208,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egp-wt-NvF">
-                                        <rect key="frame" x="122" y="288" width="130" height="32"/>
+                                        <rect key="frame" x="122" y="288.5" width="130" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="egp-wt-NvF" secondAttribute="height" multiplier="130:32" id="PRR-vT-rzv"/>
                                             <constraint firstAttribute="width" constant="130" id="cnj-qu-aTX"/>
@@ -266,6 +259,14 @@
                                     <constraint firstItem="fc2-C0-IZm" firstAttribute="centerX" secondItem="yke-7u-LLO" secondAttribute="centerX" id="s8d-E1-OSp"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QzP-WY-RLA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AYZ-9D-ZUt" id="P2C-cq-3Io"/>
+                                    <outlet property="delegate" destination="AYZ-9D-ZUt" id="I5l-Yt-cek"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DC-Eg-yja" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -274,21 +275,20 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftButtonIconImage" value="ic_button_back"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Detalhe Marca"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QzP-WY-RLA" firstAttribute="top" secondItem="y7I-av-ZB9" secondAttribute="topMargin" constant="64" id="6SI-Yc-393"/>
                             <constraint firstItem="1DC-Eg-yja" firstAttribute="top" secondItem="y7I-av-ZB9" secondAttribute="top" id="Dmh-1S-Q50"/>
                             <constraint firstAttribute="trailing" secondItem="1DC-Eg-yja" secondAttribute="trailing" id="GWh-K5-hk0"/>
                             <constraint firstItem="1DC-Eg-yja" firstAttribute="leading" secondItem="y7I-av-ZB9" secondAttribute="leading" id="Nhf-uE-nsr"/>
-                            <constraint firstAttribute="trailing" secondItem="hii-EO-Vbm" secondAttribute="trailing" id="Wqs-5v-AYB"/>
-                            <constraint firstItem="hii-EO-Vbm" firstAttribute="top" secondItem="hBQ-wg-8oC" secondAttribute="bottom" id="cFr-PE-z4a"/>
-                            <constraint firstItem="yjs-2A-h7i" firstAttribute="top" secondItem="hii-EO-Vbm" secondAttribute="bottom" id="d6H-eN-rby"/>
-                            <constraint firstItem="hii-EO-Vbm" firstAttribute="leading" secondItem="y7I-av-ZB9" secondAttribute="leading" id="dn7-x5-eRp"/>
+                            <constraint firstAttribute="trailing" secondItem="QzP-WY-RLA" secondAttribute="trailing" id="Soo-rE-ttV"/>
                             <constraint firstAttribute="trailing" secondItem="hBQ-wg-8oC" secondAttribute="trailing" id="dve-AY-YeP"/>
+                            <constraint firstItem="yjs-2A-h7i" firstAttribute="top" secondItem="QzP-WY-RLA" secondAttribute="bottom" id="kHD-uv-St8"/>
+                            <constraint firstItem="QzP-WY-RLA" firstAttribute="leading" secondItem="y7I-av-ZB9" secondAttribute="leading" id="lt9-Uo-NQT"/>
                             <constraint firstItem="hBQ-wg-8oC" firstAttribute="top" secondItem="y7I-av-ZB9" secondAttribute="top" id="qij-Yo-muY"/>
                             <constraint firstItem="hBQ-wg-8oC" firstAttribute="leading" secondItem="y7I-av-ZB9" secondAttribute="leading" id="uu8-DU-Py0"/>
                         </constraints>
@@ -296,8 +296,15 @@
                     <navigationItem key="navigationItem" title="Nome da Marca" id="gqR-gh-rxQ"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="brandBackgroundImage" destination="Exv-4M-ajz" id="Nkf-Wg-aB7"/>
+                        <outlet property="brandDescriptionLabel" destination="NPk-67-7JF" id="tp0-Er-gB2"/>
+                        <outlet property="brandHeaderViewHeightConstraint" destination="Ufy-oy-lCC" id="mdA-Mp-AX5"/>
+                        <outlet property="brandImageView" destination="3la-ze-D1X" id="Shb-2h-Za2"/>
+                        <outlet property="brandNameBottomLabel" destination="fc2-C0-IZm" id="xL0-cP-YCs"/>
+                        <outlet property="brandNameTopLabel" destination="yke-7u-LLO" id="o7E-mZ-kfa"/>
+                        <outlet property="followButton" destination="egp-wt-NvF" id="qBf-lO-s1i"/>
                         <outlet property="navigationBarView" destination="1DC-Eg-yja" id="IlK-dr-GAs"/>
-                        <outlet property="tableView" destination="hii-EO-Vbm" id="Mza-Gj-VME"/>
+                        <outlet property="tableView" destination="QzP-WY-RLA" id="jIB-Q7-OBb"/>
                         <segue destination="OXc-UR-xWl" kind="show" identifier="detailProduct" id="ODc-aA-aVd"/>
                         <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="Qsl-tW-DYd"/>
                     </connections>
