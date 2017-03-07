@@ -26,10 +26,10 @@ class ProductDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    typealias ProductDetailButtonHandler = (UIButton) -> ()
     
-    var descriptionButtonHandler: ProductDetailButtonHandler?
-    var detailsButtonHandler: ProductDetailButtonHandler?
+    
+    var descriptionButtonHandler: UIButton.ButtonHandler?
+    var detailsButtonHandler: UIButton.ButtonHandler?
     
     var isDescriptionButtonHighlighted = false
     var productDescription: String? {

@@ -56,6 +56,7 @@ class BrandDetailViewController: UIViewController {
         tableView.registerNibFrom(MiniProductsTableViewCell.self)
         tableView.registerNibFrom(BrandCollectionsTableViewCell.self)
         tableView.registerNibFrom(HomeTableViewHeaderView.self)
+        tableView.registerNibFrom(BrandShowAllProductsTableViewCell.self)
     }
     
     func setUpSearchBar() {
@@ -91,10 +92,6 @@ class BrandDetailViewController: UIViewController {
         navigationBarView.boxButton.setImage(#imageLiteral(resourceName: "box_bold"), for: .normal)
     }
     
-    func showAllFeatureds (sender: UIButton) {
-        self.performSegue(withIdentifier: "goProductsView", sender: self)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "goProductsView" {
@@ -120,6 +117,7 @@ extension BrandDetailViewController: UITableViewDataSource {
         case 0: cell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
         case 1: cell = generateCollectionsCell(tableView, cellForRowAt: indexPath)
         case 2: cell = generateSalesCell(tableView, cellForRowAt: indexPath)
+        case 3: cell = generateShowAllCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -127,7 +125,16 @@ extension BrandDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return headerForSection(section: section)
+        
+        let header: UIView?
+        
+        switch section {
+        case 0, 1, 2: header = headerForSection(section: section)
+        case 3: header = nil
+        default: header = nil
+        }
+        
+        return header
     }
     
     func headerForSection(section: Int) -> HomeTableViewHeaderView {
@@ -157,7 +164,7 @@ extension BrandDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 3
+        return 4
     }
 }
 
@@ -170,6 +177,7 @@ extension BrandDetailViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0, 2: height = MiniProductsTableViewCell.cellHeight
         case 1: height = BrandCollectionsTableViewCell.cellHeight
+        case 3: height = BrandShowAllProductsTableViewCell.cellHeight
         default: height = 0
         }
         
@@ -177,7 +185,16 @@ extension BrandDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return HomeTableViewHeaderView.cellHeight
+        
+        let height: CGFloat
+        
+        switch section {
+        case 0, 1, 2: height = HomeTableViewHeaderView.cellHeight
+        case 3: height = CGFloat.leastNonzeroMagnitude
+        default: height = 0
+        }
+        
+        return height
     }
 //
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -214,6 +231,8 @@ extension BrandDetailViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier) as! MiniProductsTableViewCell
         
         cell.products = highlights
+        cell.selectionDelegate = self
+        highlightsCollectionViewDelegate = cell
         
         return cell
     }
@@ -222,6 +241,8 @@ extension BrandDetailViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandCollectionsTableViewCell.identifier) as! BrandCollectionsTableViewCell
         
         cell.collections = brandCollections
+        cell.selectionDelegate = self
+        collectionsCollectionViewDelegate = cell
         
         return cell
     }
@@ -230,6 +251,16 @@ extension BrandDetailViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier) as! MiniProductsTableViewCell
         
         cell.products = sales
+        cell.selectionDelegate = self
+        salesCollectionViewDelegate = cell
+        
+        return cell
+    }
+    
+    func generateShowAllCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandShowAllProductsTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: BrandShowAllProductsTableViewCell.identifier) as! BrandShowAllProductsTableViewCell
+        
+        cell.productsCount = 120
         
         return cell
     }
@@ -291,5 +322,21 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         brandNameBottomLabel.alpha = alpha
         brandDescriptionLabel.alpha = alpha
         followButton.alpha = alpha
+    }
+}
+
+extension BrandDetailViewController: CollectionViewSelectionDelegate {
+    
+    func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
+        
+        if colletionViewDelegate === highlightsCollectionViewDelegate {
+            
+            performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
+        } else if colletionViewDelegate === collectionsCollectionViewDelegate {
+            
+            
+        } else if colletionViewDelegate === salesCollectionViewDelegate {
+            performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
+        }
     }
 }

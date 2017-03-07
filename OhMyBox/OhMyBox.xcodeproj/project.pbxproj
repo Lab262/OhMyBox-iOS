@@ -118,6 +118,9 @@
 		4C8AAF2A1E5F845C00258116 /* CollectionPickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8AAF271E5F845C00258116 /* CollectionPickerViewCell.xib */; };
 		4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */; };
 		4C8AAF2C1E5F845C00258116 /* CollectionPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */; };
+		4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9351E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift */; };
+		4CAEA9381E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9361E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib */; };
+		4CAEA93A1E6EEF6000FC65BD /* UIButton+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
@@ -350,6 +353,9 @@
 		4C8AAF271E5F845C00258116 /* CollectionPickerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerViewCell.xib; sourceTree = "<group>"; };
 		4C8AAF281E5F845C00258116 /* CollectionPickerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerViewCell.swift; sourceTree = "<group>"; };
 		4C8AAF291E5F845C00258116 /* CollectionPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerController.swift; sourceTree = "<group>"; };
+		4CAEA9351E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandShowAllProductsTableViewCell.swift; sourceTree = "<group>"; };
+		4CAEA9361E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandShowAllProductsTableViewCell.xib; sourceTree = "<group>"; };
+		4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Handler.swift"; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
@@ -792,6 +798,32 @@
 			name = CollectionPicker;
 			sourceTree = "<group>";
 		};
+		4CAEA9331E6EECE800FC65BD /* Brands  */ = {
+			isa = PBXGroup;
+			children = (
+				4CDBE9461E69EEE000715226 /* BrandTableViewCell.swift */,
+				4CDBE9471E69EEE000715226 /* BrandTableViewCell.xib */,
+				4CDBE94A1E69F32B00715226 /* BrandCollectionViewCell.swift */,
+				4CDBE94B1E69F32B00715226 /* BrandCollectionViewCell.xib */,
+			);
+			name = "Brands ";
+			sourceTree = "<group>";
+		};
+		4CAEA9341E6EECFE00FC65BD /* Brand Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4CDBE94E1E69F5CB00715226 /* BrandsTableViewCell.swift */,
+				4CDBE94F1E69F5CB00715226 /* BrandsTableViewCell.xib */,
+				4CE3456A1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift */,
+				4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */,
+				4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */,
+				4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */,
+				4CAEA9351E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift */,
+				4CAEA9361E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib */,
+			);
+			name = "Brand Detail";
+			sourceTree = "<group>";
+		};
 		4CDBE9411E69A4FF00715226 /* Product Brand */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1229,7 @@
 				4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */,
 				4C2F24EC1E6602C20043A90B /* UICollectionViewCell+Utils.swift */,
 				4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */,
+				4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1204,16 +1237,8 @@
 		D4E7E0841DD3889300F1DE52 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4CDBE9461E69EEE000715226 /* BrandTableViewCell.swift */,
-				4CDBE9471E69EEE000715226 /* BrandTableViewCell.xib */,
-				4CDBE94A1E69F32B00715226 /* BrandCollectionViewCell.swift */,
-				4CDBE94B1E69F32B00715226 /* BrandCollectionViewCell.xib */,
-				4CDBE94E1E69F5CB00715226 /* BrandsTableViewCell.swift */,
-				4CDBE94F1E69F5CB00715226 /* BrandsTableViewCell.xib */,
-				4CE3456A1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift */,
-				4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */,
-				4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */,
-				4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */,
+				4CAEA9331E6EECE800FC65BD /* Brands  */,
+				4CAEA9341E6EECFE00FC65BD /* Brand Detail */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1407,6 +1432,7 @@
 				4C459F201E636F980076D962 /* SearchBrandCollectionViewCell.xib in Resources */,
 				2F2999A61DE54ECA00D52203 /* Poppins-Light.ttf in Resources */,
 				4C4DB5771E68C0C2005D44C1 /* SizeCollectionViewCell.xib in Resources */,
+				4CAEA9381E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
@@ -1584,6 +1610,7 @@
 				4C2F25011E66305A0043A90B /* MiniProductsTableViewCell.swift in Sources */,
 				2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
+				4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */,
 				D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */,
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
 				D4B72A311DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift in Sources */,
@@ -1617,6 +1644,7 @@
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
 				4C459F291E6373770076D962 /* SearchHighlightCollectionViewCell.swift in Sources */,
 				4C8AAF251E5F83BF00258116 /* SearchResultsViewController.swift in Sources */,
+				4CAEA93A1E6EEF6000FC65BD /* UIButton+Handler.swift in Sources */,
 				D402E0201DB69FDC007855D6 /* ShowCaseCollectionViewCell.swift in Sources */,
 				4C2F24ED1E6602C20043A90B /* UICollectionViewCell+Utils.swift in Sources */,
 				4C459F1F1E636F980076D962 /* SearchBrandCollectionViewCell.swift in Sources */,
