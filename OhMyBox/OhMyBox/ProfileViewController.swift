@@ -18,33 +18,24 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureNavigationBar()
-        self.registerNib()
+        configureNavigationBar()
+        registerNibs()
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
     }
     
     func configureNavigationBar() {
         
-        self.navigationBarView.leftBarButton.isHidden = true
+        navigationBarView.leftBarButton.isHidden = true
     }
     
     
     
-    func registerNib() {
+    func registerNibs() {
         
-        self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
-        
-        self.tableView.register(UINib(nibName: "DataUserTextFieldTableViewCell", bundle: nil), forCellReuseIdentifier: DataUserTextFieldTableViewCell.identifier)
-        
-        self.tableView.register(UINib(nibName: "MeasuresUserTableViewCell", bundle: nil), forCellReuseIdentifier: MeasuresUserTableViewCell.identifier)
-
-          self.tableView.register(UINib(nibName: "SimpleTextTableViewCell", bundle: nil), forCellReuseIdentifier: SimpleTextTableViewCell.identifier)
-    
-          self.tableView.register(UINib(nibName: "TermTableViewCell", bundle: nil), forCellReuseIdentifier: TermTableViewCell.identifier)
     }
     
     func generatePhotoProfileCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,229 +95,25 @@ class ProfileViewController: UIViewController {
     
     func generateHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-        
-        return cell
+        return UITableViewCell()
     }
-    
-    
-    
-
-    
-
 }
 
 extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        
-        if indexPath.section == 0{
-            if indexPath.row == 0{
-                return generatePhotoProfileCell(tableView, cellForRowAt: indexPath)
-            
-            }else if indexPath.row == 1 {
-                return generateSegmentCell(tableView, cellForRowAt: indexPath)
-            }else {
-                return UITableViewCell()
-            }
-        }else if indexPath.section == 1{
-            if isSegment{
-                    if indexPath.row == 0{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                        cell.firstTitleLineLabel.text = "DADOS"
-                        cell.secondTitleLineLabel.text = "DE COMPRA"
-                        cell.iconImage.image = UIImage(named:"textureText1")
-                        cell.titleButtonLabel.text = "Editar"
-                        cell.showAllButton.isHidden = false
-                     
-                    
-                        return cell
-                    
-                }else if indexPath.row == 1 {
-                        let cell = tableView.dequeueReusableCell(withIdentifier: DataUserTextFieldTableViewCell.identifier, for: indexPath) as! DataUserTextFieldTableViewCell
-                        cell.nameFieldLabel.text = "Cartão"
-                        cell.infoUserLabel.text = "*****-3336"
-                        
-                    
-                    
-                        return cell
-                }else if indexPath.row == 2 {
-                        let cell = tableView.dequeueReusableCell(withIdentifier: DataUserTextFieldTableViewCell.identifier, for: indexPath) as! DataUserTextFieldTableViewCell
-                        cell.nameFieldLabel.text = "Aonde entregar"
-                        cell.infoUserLabel.text = "Quadra Sqn 309 Asa"
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                }else {
-                        return UITableViewCell()
-                }
-            }else {
-                if indexPath.row == 0{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                        cell.firstTitleLineLabel.text = "TUDO O QUE VOCE"
-                        cell.secondTitleLineLabel.text = "PRECISA SABER"
-                        cell.iconImage.image = UIImage(named:"icon_header_profile")
-                        cell.selectionStyle = .none
-                        cell.titleButtonLabel.text = ""
-                        cell.showAllButton.isHidden = true
-                    return cell
-                    
-                }else if indexPath.row == 1 {
-                        let cell = tableView.dequeueReusableCell(withIdentifier: TermTableViewCell.identifier, for: indexPath) as! TermTableViewCell
-                        cell.frameIconView.backgroundColor = UIColor.colorWithHexString("FD8693")
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                }else if indexPath.row == 2 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: TermTableViewCell.identifier, for: indexPath) as! TermTableViewCell
-                    cell.frameIconView.backgroundColor = UIColor.colorWithHexString("25D76B")
-                    cell.selectionStyle = .none
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                }else if indexPath.row == 3 {
-                    let cell = tableView.dequeueReusableCell(withIdentifier: TermTableViewCell.identifier, for: indexPath) as! TermTableViewCell
-                    cell.frameIconView.backgroundColor = UIColor.colorWithHexString("DF417C")
-                    cell.selectionStyle = .none
-                  
-                    
-                    return cell
-                }else {
-                        return UITableViewCell()
-                }
-
-            }
-           
-        }else if indexPath.section == 2{
-            if isSegment{
-                    if indexPath.row == 0{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                        cell.firstTitleLineLabel.text = "MINHAS"
-                        cell.secondTitleLineLabel.text = "MEDIDAS"
-                        cell.iconImage.image = UIImage(named:"textureText2")
-                        cell.showAllButton.isHidden = false
-                        cell.titleButtonLabel.text = "Editar"
-                        
-
-                        
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                    
-                }else if indexPath.row == 1{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: MeasuresUserTableViewCell.identifier, for: indexPath) as! MeasuresUserTableViewCell
-                        cell.sizeImage.image = UIImage(named:"t-shirtIcon")
-                        cell.titleMeasure.text = "Blusa"
-                        cell.TitleSizeLabel.text = "P"
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                    
-                }else if indexPath.row == 2{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: MeasuresUserTableViewCell.identifier, for: indexPath) as! MeasuresUserTableViewCell
-                        cell.sizeImage.image = UIImage(named:"pantsIcon")
-                        cell.titleMeasure.text = "Cintura"
-                        cell.TitleSizeLabel.text = "36"
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                    
-                }else if indexPath.row == 3{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: MeasuresUserTableViewCell.identifier, for: indexPath) as! MeasuresUserTableViewCell
-                        cell.sizeImage.image = UIImage(named:"shoes_Icon")
-                        cell.titleMeasure.text = "Calçado"
-                        cell.TitleSizeLabel.text = "34"
-                        cell.selectionStyle = .none
-                        
-                        return cell
-                    
-                }else {
-                    return UITableViewCell()
-                }
-
-            }else {
-                if indexPath.row == 0{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                        cell.firstTitleLineLabel.text = "OLHA"
-                        cell.secondTitleLineLabel.text = "A GENTE"
-                        cell.iconImage.image = UIImage(named:"icon_header_profile")
-                        cell.titleButtonLabel.text = ""
-                        cell.showAllButton.isHidden = true
-                    
-                        return cell
-                    
-                }else if indexPath.row == 1{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextTableViewCell.identifier, for: indexPath) as! SimpleTextTableViewCell
-                        cell.simpleTitleLabel.text = "SOBRE O OH MY BOX"
-                    
-                    
-                        return cell
-                    
-                }else if indexPath.row == 2{
-                        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextTableViewCell.identifier, for: indexPath) as! SimpleTextTableViewCell
-                        cell.simpleTitleLabel.text = "FALE COM A GENTE!"
-
-                        cell.selectionStyle = .none
-                    
-                        return cell
-                    
-                }else {
-                    return UITableViewCell()
-                }
-            }
-        
-        }else if indexPath.section == 3{
-            if indexPath.row == 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                cell.firstTitleLineLabel.text = "EMAIL"
-                cell.secondTitleLineLabel.text = "E SENHA"
-                cell.iconImage.image = UIImage(named:"textTexture3")
-                cell.showAllButton.setTitle("Editar", for: UIControlState.normal)
-                cell.showAllButton.setBackgroundImage(#imageLiteral(resourceName: "profile_edit_button"), for:UIControlState.normal)
-
-                cell.selectionStyle = .none
-
-                return cell
-                
-            }else if indexPath.row == 1{
-                let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextTableViewCell.identifier, for: indexPath) as! SimpleTextTableViewCell
-                cell.simpleTitleLabel.text = "mariabetania@gmail.com"
-                cell.selectionStyle = .none
-
-                return cell
-                
-            }else if indexPath.row == 2{
-                let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTextTableViewCell.identifier, for: indexPath) as! SimpleTextTableViewCell
-                cell.simpleTitleLabel.text = "***********"
-                cell.selectionStyle = .none
-
-                return cell
-                
-            }else {
-                 return UITableViewCell()
-            }
-            
-        }else{
-            return UITableViewCell()
-        }
-        
-        
+        return UITableViewCell()
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if isSegment{
-            return 4
-        }else {
-            return 3
-        }
-        
+        return 0
     }
     
 }

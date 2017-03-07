@@ -46,8 +46,6 @@
 		2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46496B1DB942840021516F /* SegmentTableViewCell.swift */; };
 		2F4896E21DB72D0000EADFFE /* defaultWomanImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */; };
 		2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896E31DB73F2200EADFFE /* WishViewController.swift */; };
-		2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896E51DB7438A00EADFFE /* WishTableViewCell.swift */; };
-		2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896E61DB7438A00EADFFE /* WishTableViewCell.xib */; };
 		2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896E91DB7486700EADFFE /* defaultGloes.png */; };
 		2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896EF1DB7E99B00EADFFE /* Axis Extrabold.otf */; };
 		2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4896F01DB7E9A400EADFFE /* Muli-Light.ttf */; };
@@ -115,6 +113,8 @@
 		4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9351E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift */; };
 		4CAEA9381E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9361E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib */; };
 		4CAEA93A1E6EEF6000FC65BD /* UIButton+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */; };
+		4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */; };
+		4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
@@ -263,8 +263,6 @@
 		2F46496B1DB942840021516F /* SegmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableViewCell.swift; sourceTree = "<group>"; };
 		2F4896E11DB72D0000EADFFE /* defaultWomanImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultWomanImage.png; sourceTree = "<group>"; };
 		2F4896E31DB73F2200EADFFE /* WishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishViewController.swift; sourceTree = "<group>"; };
-		2F4896E51DB7438A00EADFFE /* WishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
-		2F4896E61DB7438A00EADFFE /* WishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishTableViewCell.xib; sourceTree = "<group>"; };
 		2F4896E91DB7486700EADFFE /* defaultGloes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultGloes.png; sourceTree = "<group>"; };
 		2F4896EF1DB7E99B00EADFFE /* Axis Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Axis Extrabold.otf"; sourceTree = "<group>"; };
 		2F4896F01DB7E9A400EADFFE /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
@@ -332,6 +330,8 @@
 		4CAEA9351E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandShowAllProductsTableViewCell.swift; sourceTree = "<group>"; };
 		4CAEA9361E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandShowAllProductsTableViewCell.xib; sourceTree = "<group>"; };
 		4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Handler.swift"; sourceTree = "<group>"; };
+		4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistCountTableViewCell.swift; sourceTree = "<group>"; };
+		4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishlistCountTableViewCell.xib; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
@@ -508,8 +508,8 @@
 		2F4896EB1DB7E1D600EADFFE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2F4896E51DB7438A00EADFFE /* WishTableViewCell.swift */,
-				2F4896E61DB7438A00EADFFE /* WishTableViewCell.xib */,
+				4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */,
+				4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1336,7 +1336,6 @@
 				D4E36E961DEE74080012431F /* ShowProductTableViewCell.xib in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
-				2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */,
 				2F044CE71DBE41D600B54468 /* coatProduct.png in Resources */,
 				4CE3456D1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
@@ -1375,6 +1374,7 @@
 				2F2999A61DE54ECA00D52203 /* Poppins-Light.ttf in Resources */,
 				4C4DB5771E68C0C2005D44C1 /* SizeCollectionViewCell.xib in Resources */,
 				4CAEA9381E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib in Resources */,
+				4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
@@ -1525,6 +1525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */,
+				4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */,
 				4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */,
 				4C2F24F81E6623020043A90B /* HighlightsTableViewCell.swift in Sources */,
 				A4422AD61DED004200A2593B /* Colors.swift in Sources */,
@@ -1568,7 +1569,6 @@
 				4C4DB5651E68BE8D005D44C1 /* ProductLabelTableViewCell.swift in Sources */,
 				2F164F631DD64F7800ED72DA /* Defaults.swift in Sources */,
 				D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */,
-				2F4896E71DB7438A00EADFFE /* WishTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
 				D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */,
 				4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */,
