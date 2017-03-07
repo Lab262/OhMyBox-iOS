@@ -288,11 +288,11 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             let alpha = (yOffset - brandHeaderHeight + navbarAlphaThreshold)/navbarAlphaScale
             
             brandHeaderBlurView?.alpha = alpha
-            //            brandBackgroundFilterView.alpha = (1 - alpha)/2
+            brandBackgroundFilterView.alpha = max((2 - alpha) * 0.25, 0.25)
             
         } else {
             brandHeaderBlurView?.alpha = 0.0
-            //            brandBackgroundFilterView.alpha = 0.5
+            brandBackgroundFilterView.alpha = 0.5
         }
     }
     

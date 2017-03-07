@@ -13,14 +13,14 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
-    var segmentButtonIndexPath = IndexPath.init(row: 1, section: 0)
-    var isSegment = true
+    
+    weak var buttonSegmentedView: ButtonSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
         registerNibs()
-        
+        setUpTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,12 +32,17 @@ class ProfileViewController: UIViewController {
         navigationBarView.leftBarButton.isHidden = true
     }
     
-    
+    func setUpTableView() {
+        tableView.estimatedRowHeight = 100.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.layoutIfNeeded()
+    }
     
     func registerNibs() {
         tableView.registerNibFrom(ProfilePhotoTableViewCell.self)
         tableView.registerNibFrom(ProfileLabelTableViewCell.self)
         tableView.registerNibFrom(ProfileSegmentTableViewCell.self)
+        tableView.registerNibFrom(ProfilePurchaseInfoTableViewCell.self)
     }
     
     func generateProfilePhotoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfilePhotoTableViewCell {
@@ -54,9 +59,40 @@ class ProfileViewController: UIViewController {
         return cell
     }
     
-    func generateProfieSegmentedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileSegmentTableViewCell {
+    func generateProfileSegmentedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileSegmentTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSegmentTableViewCell.identifier) as! ProfileSegmentTableViewCell
+        
+        buttonSegmentedView = cell.buttonSegmentedView
+        
+        return cell
+    }
+    
+    func generateProfilePurchaseInfoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfilePurchaseInfoTableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfilePurchaseInfoTableViewCell.identifier) as! ProfilePurchaseInfoTableViewCell
+        
+        return cell
+    }
+    
+    func generateCardInfoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfilePurchaseInfoTableViewCell {
+        
+        let cell = generateProfilePurchaseInfoCell(tableView, cellForRowAt: indexPath)
+        
+        cell.backgroundColor = .clear
+        cell.titleLabel.text = "Cartão"
+        cell.infoLabel.text = "****8492"
+        
+        return cell
+    }
+    
+    func generateDeliveryInfoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfilePurchaseInfoTableViewCell {
+        
+        let cell = generateProfilePurchaseInfoCell(tableView, cellForRowAt: indexPath)
+        
+        cell.backgroundColor = .clear
+        cell.titleLabel.text = "Aonde entregar"
+        cell.infoLabel.text = "Quadra Sqn 309\nAsa Norte,\nBrasilia - DF"
         
         return cell
     }
@@ -78,23 +114,53 @@ extension ProfileViewController: UITableViewDataSource {
             switch indexPath.row {
             case 0: cell = generateProfilePhotoCell(tableView, cellForRowAt: indexPath)
             case 1: cell = generateProfileLabelCell(tableView, cellForRowAt: indexPath)
-            case 2: cell = generateProfieSegmentedCell(tableView, cellForRowAt: indexPath)
+            case 2: cell = generateProfileSegmentedCell(tableView, cellForRowAt: indexPath)
             default: cell = UITableViewCell()
             }
+        case 1: cell = dataCells(at: indexPath, inTableView: tableView)
         default: cell = UITableViewCell()
         }
         
         return cell
     }
-    
+    func dataCells(at indexPath: IndexPath, inTableView tableView: UITableView) -> UITableViewCell {
+        
+        let cell: UITableViewCell
+        
+        if buttonSegmentedView.leftButtonHighlighted { // Meus dados
+            
+            switch indexPath.section {
+            case 1:
+                switch indexPath.row {
+                case 0: cell = generateCardInfoCell(tableView, cellForRowAt: indexPath)
+                case 1: cell = generateDeliveryInfoCell(tableView, cellForRowAt: indexPath)
+                default: cell = UITableViewCell()
+                }
+            default: cell = UITableViewCell()
+            }
+            
+        } else { // Sobre a Box
+            
+            cell = UITableViewCell()
+        }
+        
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        let number: Int
+        
+        switch section {
+        case 0: number = 3
+        case 1: number = 2
+        default: number = 0
+        }
+        return number
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
 }
@@ -119,6 +185,7 @@ extension ProfileViewController: UITableViewDelegate {
             case 2: height = ProfileSegmentTableViewCell.cellHeight
             default: height = 0
             }
+        case 1: height = UITableViewAutomaticDimension
         default: height = 0
         }
         
