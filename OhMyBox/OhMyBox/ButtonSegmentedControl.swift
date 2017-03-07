@@ -83,6 +83,7 @@ class ButtonSegmentedControl: UIView {
     
     @IBAction func rightButtonAction(sender: UIButton) {
         setRightButtonHighlighted()
+        rightButtonHandler?(sender)
     }
     
 }

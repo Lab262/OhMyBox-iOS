@@ -15,9 +15,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     weak var buttonSegmentedView: ButtonSegmentedControl!
+    var buttonSegmentedViewLeftButtonHighlighted = true
     
     typealias MeasuresType = [(title: String, info: Any)]
-    var measures:MeasuresType  = [("BLUSA", "P"), ("CALÇA", 36), ("SAPATO", 34)]
+    
+    var measures: MeasuresType  = [("BLUSA", "P"), ("CALÇA", 36), ("SAPATO", 34)]
+    var aboutInfoOptions = ["POLÍTICA DE TROCAS", "POLÍTICA DE VENDAS", "POLÍTICA DE PRIVACIDADE"]
+    var aboutOMBOptions = ["SOBRE OH MY BOX", "OI, PODE FALAR!"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +54,7 @@ class ProfileViewController: UIViewController {
         tableView.registerNibFrom(ProfilePurchaseInfoTableViewCell.self)
         tableView.registerNibFrom(ProfileMeasureTableViewCell.self)
         tableView.registerNibFrom(ProfileCredentialsTableViewCell.self)
+        tableView.registerNibFrom(ArrowIndicatorTableViewCell.self)
         tableView.registerNibFrom(HomeTableViewHeaderView.self)
     }
     
@@ -79,7 +86,7 @@ extension ProfileViewController: UITableViewDataSource {
         
         let cell: UITableViewCell
         
-        if buttonSegmentedView.leftButtonHighlighted { // Meus dados
+        if buttonSegmentedViewLeftButtonHighlighted { // Meus dados
             
             switch indexPath.section {
             case 1:
@@ -100,7 +107,15 @@ extension ProfileViewController: UITableViewDataSource {
             
         } else { // Sobre a Box
             
-            cell = UITableViewCell()
+            let arrowCell = generateAboutInfoCell(tableView, cellForRowAt: indexPath)
+            
+            switch indexPath.section {
+            case 1: arrowCell.title = aboutInfoOptions[indexPath.row]
+            case 2: arrowCell.title = aboutOMBOptions[indexPath.row]
+            default: break
+            }
+            
+            cell = arrowCell
         }
         
         return cell
@@ -110,18 +125,39 @@ extension ProfileViewController: UITableViewDataSource {
         
         let number: Int
         
-        switch section {
-        case 0: number = 3
-        case 1: number = 2
-        case 2: number = measures.count
-        case 3: number = 2
-        default: number = 0
+        if buttonSegmentedViewLeftButtonHighlighted {
+            
+            switch section {
+            case 0: number = 3
+            case 1: number = 2
+            case 2: number = measures.count
+            case 3: number = 2
+            default: number = 0
+            }
+        } else {
+            
+            switch section {
+            case 0: number = 3
+            case 1: number = aboutInfoOptions.count
+            case 2: number = aboutOMBOptions.count
+            default: number = 0
+            }
         }
+        
         return number
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        
+        let number: Int
+        
+        if buttonSegmentedViewLeftButtonHighlighted {
+            number = 4
+        } else {
+            number = 3
+        }
+        
+        return number
     }
     
 }
@@ -138,18 +174,32 @@ extension ProfileViewController: UITableViewDelegate {
         
         let height: CGFloat
         
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0: height = ProfilePhotoTableViewCell.cellHeight
-            case 1: height = ProfileLabelTableViewCell.cellHeight
-            case 2: height = ProfileSegmentTableViewCell.cellHeight
+        if buttonSegmentedViewLeftButtonHighlighted {
+            switch indexPath.section {
+            case 0:
+                switch indexPath.row {
+                case 0: height = ProfilePhotoTableViewCell.cellHeight
+                case 1: height = ProfileLabelTableViewCell.cellHeight
+                case 2: height = ProfileSegmentTableViewCell.cellHeight
+                default: height = 0
+                }
+            case 1: height = UITableViewAutomaticDimension
+            case 2: height = ProfileMeasureTableViewCell.cellHeight
+            case 3: height = ProfileCredentialsTableViewCell.cellHeight
             default: height = 0
             }
-        case 1: height = UITableViewAutomaticDimension
-        case 2: height = ProfileMeasureTableViewCell.cellHeight
-        case 3: height = ProfileCredentialsTableViewCell.cellHeight
-        default: height = 0
+        } else {
+            switch indexPath.section {
+            case 0:
+                switch indexPath.row {
+                case 0: height = ProfilePhotoTableViewCell.cellHeight
+                case 1: height = ProfileLabelTableViewCell.cellHeight
+                case 2: height = ProfileSegmentTableViewCell.cellHeight
+                default: height = 0
+                }
+            default: height = ArrowIndicatorTableViewCell.cellHeight
+            }
+            
         }
         
         return height
@@ -159,9 +209,16 @@ extension ProfileViewController: UITableViewDelegate {
         
         let height: CGFloat
         
-        switch section {
-        case 1, 2, 3: height = HomeTableViewHeaderView.cellHeight
-        default: height = 0
+        if buttonSegmentedViewLeftButtonHighlighted {
+            switch section {
+            case 1, 2, 3: height = HomeTableViewHeaderView.cellHeight
+            default: height = 0
+            }
+        } else {
+            switch section {
+            case 1, 2, 3: height = HomeTableViewHeaderView.cellHeight
+            default: height = 0
+            }
         }
         
         return height
@@ -221,6 +278,19 @@ extension ProfileViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSegmentTableViewCell.identifier) as! ProfileSegmentTableViewCell
         
         buttonSegmentedView = cell.buttonSegmentedView
+        
+        let buttonHandler: UIButton.ButtonHandler = { button in
+            self.buttonSegmentedViewLeftButtonHighlighted = self.buttonSegmentedView.leftButtonHighlighted
+            
+            let contentOffset = self.tableView.contentOffset
+            self.tableView.reloadData()
+            self.tableView.layoutIfNeeded()
+            self.tableView.setContentOffset(contentOffset, animated: false)
+        }
+
+        
+        buttonSegmentedView.leftButtonHandler = buttonHandler
+        buttonSegmentedView.rightButtonHandler = buttonHandler
         
         return cell
     }
@@ -286,6 +356,12 @@ extension ProfileViewController {
         let cell = generateCredentialsCell(tableView, cellForRowAt: indexPath)
         cell.setSeparatorHidden(true)
         cell.title = "************"
+        
+        return cell
+    }
+    
+    func generateAboutInfoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ArrowIndicatorTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ArrowIndicatorTableViewCell.identifier) as! ArrowIndicatorTableViewCell
         
         return cell
     }
