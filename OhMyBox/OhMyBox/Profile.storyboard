@@ -6,20 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Axis Extrabold.otf">
-            <string>AXIS-ExtraBold</string>
-        </array>
-        <array key="Muli-Regular.ttf">
-            <string>Muli</string>
-        </array>
-        <array key="Poppins-Regular.ttf">
-            <string>Poppins-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Perfil-->
         <scene sceneID="jCa-2f-UBk">
@@ -33,9 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background" translatesAutoresizingMaskIntoConstraints="NO" id="FmJ-h2-9W9">
+                                <rect key="frame" x="226" y="25" width="179" height="288"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFt-QX-EFM" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="QeV-jM-YvR"/>
                                 </constraints>
@@ -45,106 +36,9 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="242" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="242" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="539"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoProfileCell" rowHeight="264" id="q52-06-fef" customClass="PhotoProfileTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="264"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q52-06-fef" id="Fhe-lp-liu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashion-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="onA-fz-x7F">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="223" id="R67-Id-w1U"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxIntesity">
-                                                            <integer key="value" value="20"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contente_profile" translatesAutoresizingMaskIntoConstraints="NO" id="u39-WW-c4o">
-                                                    <rect key="frame" x="8" y="189" width="359" height="61"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="61" id="T8T-9G-lWa"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARIA BETANIA " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-VS-83C">
-                                                    <rect key="frame" x="94.5" y="207" width="187" height="25"/>
-                                                    <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="onA-fz-x7F" firstAttribute="leading" secondItem="Fhe-lp-liu" secondAttribute="leading" id="B4z-HR-D2E"/>
-                                                <constraint firstItem="onA-fz-x7F" firstAttribute="centerX" secondItem="Fhe-lp-liu" secondAttribute="centerX" id="FTB-C2-uNd"/>
-                                                <constraint firstItem="onA-fz-x7F" firstAttribute="centerX" secondItem="u39-WW-c4o" secondAttribute="centerX" id="ICx-Jo-1gI"/>
-                                                <constraint firstItem="u39-WW-c4o" firstAttribute="leading" secondItem="Fhe-lp-liu" secondAttribute="leadingMargin" id="KmC-gx-8iw"/>
-                                                <constraint firstItem="onA-fz-x7F" firstAttribute="centerX" secondItem="iDH-VS-83C" secondAttribute="centerX" id="OQ7-40-aFw"/>
-                                                <constraint firstItem="onA-fz-x7F" firstAttribute="top" secondItem="Fhe-lp-liu" secondAttribute="top" id="Qy9-91-7cc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="u39-WW-c4o" secondAttribute="bottom" constant="6" id="Shy-n7-XY2"/>
-                                                <constraint firstItem="u39-WW-c4o" firstAttribute="centerY" secondItem="iDH-VS-83C" secondAttribute="centerY" id="Xwa-1B-P2c"/>
-                                                <constraint firstAttribute="bottom" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="41" id="kOe-Mz-YSd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="onA-fz-x7F" secondAttribute="bottom" constant="33" id="zgs-52-cMF"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameProfileLabel" destination="iDH-VS-83C" id="5gf-CJ-NpW"/>
-                                            <outlet property="parallaxConstraint" destination="R67-Id-w1U" id="Ai1-bP-2bf"/>
-                                            <outlet property="photoProfileImage" destination="onA-fz-x7F" id="H4l-jf-M0z"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="segmentCell" rowHeight="96" id="0AM-vx-Vuz" customClass="SegmentTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="292" width="375" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0AM-vx-Vuz" id="Rq4-lm-ZoO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-ys-22w">
-                                                    <rect key="frame" x="8" y="24" width="167" height="49"/>
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="17"/>
-                                                    <state key="normal" title="Meus dados" backgroundImage="profile_mydata_button">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
-                                                    <rect key="frame" x="200" y="25" width="167" height="49"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                    <state key="normal" title="Sobre a box" backgroundImage="profile_about_button">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="d8p-zi-fso" firstAttribute="width" secondItem="wZt-ys-22w" secondAttribute="width" id="9OY-ip-EtT"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="d8p-zi-fso" secondAttribute="trailing" id="Bu6-do-K89"/>
-                                                <constraint firstItem="wZt-ys-22w" firstAttribute="centerY" secondItem="Rq4-lm-ZoO" secondAttribute="centerY" id="H0c-Uc-oXL"/>
-                                                <constraint firstItem="wZt-ys-22w" firstAttribute="leading" secondItem="Rq4-lm-ZoO" secondAttribute="leadingMargin" id="PU3-m3-rea"/>
-                                                <constraint firstItem="d8p-zi-fso" firstAttribute="height" secondItem="wZt-ys-22w" secondAttribute="height" id="fAQ-zT-T1J"/>
-                                                <constraint firstItem="wZt-ys-22w" firstAttribute="baseline" secondItem="d8p-zi-fso" secondAttribute="baseline" id="fPG-vK-QV9"/>
-                                                <constraint firstItem="d8p-zi-fso" firstAttribute="leading" secondItem="wZt-ys-22w" secondAttribute="trailing" constant="25" id="nrI-Ff-y4g"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="aboutBoxButton" destination="d8p-zi-fso" id="lPr-2b-mQL"/>
-                                            <outlet property="dataUserButton" destination="wZt-ys-22w" id="LTu-Tl-Yf9"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dataUserCell" rowHeight="103" id="e3Q-ac-yzA" customClass="DataUserTextFieldTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="388" width="375" height="103"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3Q-ac-yzA" id="IbL-wR-QSx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WCe-Hc-Oby" id="mAK-cK-SjI"/>
                                     <outlet property="delegate" destination="WCe-Hc-Oby" id="CrE-q5-04X"/>
@@ -155,7 +49,9 @@
                         <constraints>
                             <constraint firstItem="Rtn-OT-VLB" firstAttribute="width" secondItem="lHJ-t0-MnT" secondAttribute="width" id="8e3-fJ-kMD"/>
                             <constraint firstItem="Rtn-OT-VLB" firstAttribute="top" secondItem="GFt-QX-EFM" secondAttribute="bottom" id="CSn-lj-WCL"/>
+                            <constraint firstAttribute="trailing" secondItem="FmJ-h2-9W9" secondAttribute="trailing" constant="-30" id="Fv1-72-rUz"/>
                             <constraint firstItem="GFt-QX-EFM" firstAttribute="top" secondItem="lHJ-t0-MnT" secondAttribute="top" id="RAd-fn-2fJ"/>
+                            <constraint firstItem="FmJ-h2-9W9" firstAttribute="top" secondItem="lHJ-t0-MnT" secondAttribute="top" constant="25" id="Wl8-Q8-qzu"/>
                             <constraint firstAttribute="trailing" secondItem="GFt-QX-EFM" secondAttribute="trailing" id="aAS-Td-eCE"/>
                             <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerY" secondItem="lHJ-t0-MnT" secondAttribute="centerY" id="drE-Ev-5Lc"/>
                             <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerX" secondItem="lHJ-t0-MnT" secondAttribute="centerX" id="efP-9E-8gv"/>
@@ -186,7 +82,7 @@
                 <viewControllerPlaceholder storyboardName="ShoppingBox" id="ocJ-Hg-kLf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfw-bs-rTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="-205"/>
+            <point key="canvasLocation" x="2003" y="-404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZdJ-0I-3s6">
@@ -213,13 +109,10 @@
     </scenes>
     <resources>
         <image name="box_button" width="28" height="28"/>
-        <image name="contente_profile" width="342" height="60"/>
-        <image name="fashion-person.png" width="640" height="426"/>
         <image name="ic_button_back" width="28" height="28"/>
         <image name="profileIconDeselected_button" width="29" height="27"/>
         <image name="profileIconSelected_button" width="29" height="28"/>
-        <image name="profile_about_button" width="167" height="49"/>
+        <image name="profile_background" width="179" height="288"/>
         <image name="profile_dummy" width="28" height="28"/>
-        <image name="profile_mydata_button" width="167" height="49"/>
     </resources>
 </document>

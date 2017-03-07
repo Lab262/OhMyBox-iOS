@@ -116,6 +116,10 @@
 		4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */; };
 		4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */; };
 		4CAEA9401E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA93F1E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib */; };
+		4CAEA9451E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9431E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.swift */; };
+		4CAEA9461E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9441E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.xib */; };
+		4CAEA9491E6F127400FC65BD /* ProfileLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9471E6F127400FC65BD /* ProfileLabelTableViewCell.swift */; };
+		4CAEA94A1E6F127400FC65BD /* ProfileLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9481E6F127400FC65BD /* ProfileLabelTableViewCell.xib */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
@@ -334,6 +338,10 @@
 		4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistCountTableViewCell.swift; sourceTree = "<group>"; };
 		4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishlistCountTableViewCell.xib; sourceTree = "<group>"; };
 		4CAEA93F1E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArrowIndicatorTableViewCell.xib; sourceTree = "<group>"; };
+		4CAEA9431E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoTableViewCell.swift; sourceTree = "<group>"; };
+		4CAEA9441E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePhotoTableViewCell.xib; sourceTree = "<group>"; };
+		4CAEA9471E6F127400FC65BD /* ProfileLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLabelTableViewCell.swift; sourceTree = "<group>"; };
+		4CAEA9481E6F127400FC65BD /* ProfileLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileLabelTableViewCell.xib; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
@@ -779,6 +787,25 @@
 			name = "Brand Detail";
 			sourceTree = "<group>";
 		};
+		4CAEA9411E6F0D5A00FC65BD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D402E0091DB68D10007855D6 /* Profile.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		4CAEA9421E6F0D6000FC65BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4CAEA9431E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.swift */,
+				4CAEA9441E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.xib */,
+				4CAEA9471E6F127400FC65BD /* ProfileLabelTableViewCell.swift */,
+				4CAEA9481E6F127400FC65BD /* ProfileLabelTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		4CDBE9411E69A4FF00715226 /* Product Brand */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,7 +1079,8 @@
 		D402E0071DB68CF3007855D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D402E0091DB68D10007855D6 /* Profile.storyboard */,
+				4CAEA9421E6F0D6000FC65BD /* Cells */,
+				4CAEA9411E6F0D5A00FC65BD /* Storyboard */,
 				2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */,
 				2F46496B1DB942840021516F /* SegmentTableViewCell.swift */,
 				2F8460611DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift */,
@@ -1378,11 +1406,13 @@
 				4C4DB5771E68C0C2005D44C1 /* SizeCollectionViewCell.xib in Resources */,
 				4CAEA9381E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.xib in Resources */,
 				4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */,
+				4CAEA94A1E6F127400FC65BD /* ProfileLabelTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
 				D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */,
 				2F0777501DBDAE0D003C124F /* TermTableViewCell.xib in Resources */,
+				4CAEA9461E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.xib in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */,
 				A4F89B021DA806C900949A35 /* Main.storyboard in Resources */,
@@ -1600,6 +1630,8 @@
 				2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */,
 				4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */,
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
+				4CAEA9451E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.swift in Sources */,
+				4CAEA9491E6F127400FC65BD /* ProfileLabelTableViewCell.swift in Sources */,
 				4C2F24FC1E6623E00043A90B /* HighlightCollectionViewCell.swift in Sources */,
 				D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */,
 				4C4DB55D1E68B2FD005D44C1 /* SegueIdentifiers.swift in Sources */,
