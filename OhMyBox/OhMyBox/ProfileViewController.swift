@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController {
         tableView.registerNibFrom(ProfileMeasureTableViewCell.self)
         tableView.registerNibFrom(ProfileCredentialsTableViewCell.self)
         tableView.registerNibFrom(ArrowIndicatorTableViewCell.self)
-        tableView.registerNibFrom(HomeTableViewHeaderView.self)
+        tableView.registerNibFrom(ProfileTableHeaderView.self)
         tableView.registerNibFrom(BrandsHeaderTableViewCell.self)
     }
     
@@ -388,9 +388,10 @@ extension ProfileViewController {
         return cell
     }
     
-    func generateHeaderView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> HomeTableViewHeaderView {
+    func generateHeaderView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> ProfileTableHeaderView {
         
-        let header = tableView.dequeueReusableCell(withIdentifier: HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
+        let header = tableView.dequeueReusableCell(withIdentifier: ProfileTableHeaderView.identifier) as! ProfileTableHeaderView
+        header.backgroundColor = .clear
         return header
     }
     
@@ -398,6 +399,7 @@ extension ProfileViewController {
         
         let header = tableView.dequeueReusableCell(withIdentifier: BrandsHeaderTableViewCell.identifier) as! BrandsHeaderTableViewCell
         header.showAllButton.isHidden = true
+        header.backgroundColor = .clear
         return header
     }
 

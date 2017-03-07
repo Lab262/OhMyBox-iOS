@@ -130,6 +130,8 @@
 		4CAEA95D1E6F483D00FC65BD /* ProfileMeasureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA95B1E6F483D00FC65BD /* ProfileMeasureTableViewCell.xib */; };
 		4CAEA9601E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA95E1E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.swift */; };
 		4CAEA9611E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA95F1E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib */; };
+		4CAEA9691E6F5B9D00FC65BD /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9671E6F5B9D00FC65BD /* ProfileTableHeaderView.swift */; };
+		4CAEA96A1E6F5B9D00FC65BD /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
@@ -362,6 +364,8 @@
 		4CAEA95B1E6F483D00FC65BD /* ProfileMeasureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileMeasureTableViewCell.xib; sourceTree = "<group>"; };
 		4CAEA95E1E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCredentialsTableViewCell.swift; sourceTree = "<group>"; };
 		4CAEA95F1E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCredentialsTableViewCell.xib; sourceTree = "<group>"; };
+		4CAEA9671E6F5B9D00FC65BD /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
+		4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
@@ -862,6 +866,8 @@
 		4CAEA9621E6F58C900FC65BD /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				4CAEA9671E6F5B9D00FC65BD /* ProfileTableHeaderView.swift */,
+				4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -1499,6 +1505,7 @@
 				2F70E83D1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.xib in Resources */,
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 				4CDBE9511E69F5CB00715226 /* BrandsTableViewCell.xib in Resources */,
+				4CAEA96A1E6F5B9D00FC65BD /* ProfileTableHeaderView.xib in Resources */,
 				4CDBE94D1E69F32B00715226 /* BrandCollectionViewCell.xib in Resources */,
 				D44F35031DD0FF2500AE7E9E /* TagView3.xib in Resources */,
 			);
@@ -1669,6 +1676,7 @@
 				2F225D021DBF04E4009E4566 /* UIView+Util.swift in Sources */,
 				4CAEA9601E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.swift in Sources */,
 				4C4DB57D1E68DB71005D44C1 /* ProductDetailTableViewCell.swift in Sources */,
+				4CAEA9691E6F5B9D00FC65BD /* ProfileTableHeaderView.swift in Sources */,
 				4C8AAF211E5F5ED300258116 /* SearchSuggestionTableViewCell.swift in Sources */,
 				4C4DB5651E68BE8D005D44C1 /* ProductLabelTableViewCell.swift in Sources */,
 				4CAEA9581E6F2D9300FC65BD /* ProfilePurchaseInfoTableViewCell.swift in Sources */,

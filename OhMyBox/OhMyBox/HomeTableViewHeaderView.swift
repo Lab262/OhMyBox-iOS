@@ -26,7 +26,7 @@ class HomeTableViewHeaderView: UITableViewCell {
     @IBOutlet weak var bottomLineLabel: UILabel!
     @IBOutlet weak var showAllButton: UIButton!
     
-    var showAllAction: ((UIButton) -> ())?
+    var showAllAction: UIButton.ButtonHandler?
     
     @IBAction func showAll(_ sender: UIButton) {
         showAllAction?(sender)
