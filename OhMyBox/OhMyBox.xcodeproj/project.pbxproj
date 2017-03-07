@@ -859,6 +859,13 @@
 			name = Info;
 			sourceTree = "<group>";
 		};
+		4CAEA9621E6F58C900FC65BD /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		4CDBE9411E69A4FF00715226 /* Product Brand */ = {
 			isa = PBXGroup;
 			children = (
@@ -1133,6 +1140,7 @@
 		D402E0071DB68CF3007855D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4CAEA9621E6F58C900FC65BD /* Headers */,
 				4CAEA9421E6F0D6000FC65BD /* Cells */,
 				4CAEA9411E6F0D5A00FC65BD /* Storyboard */,
 				2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */,

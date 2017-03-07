@@ -56,6 +56,7 @@ class ProfileViewController: UIViewController {
         tableView.registerNibFrom(ProfileCredentialsTableViewCell.self)
         tableView.registerNibFrom(ArrowIndicatorTableViewCell.self)
         tableView.registerNibFrom(HomeTableViewHeaderView.self)
+        tableView.registerNibFrom(BrandsHeaderTableViewCell.self)
     }
     
 }
@@ -216,7 +217,7 @@ extension ProfileViewController: UITableViewDelegate {
             }
         } else {
             switch section {
-            case 1, 2, 3: height = HomeTableViewHeaderView.cellHeight
+            case 1, 2: height = BrandsHeaderTableViewCell.cellHeight
             default: height = 0
             }
         }
@@ -228,26 +229,47 @@ extension ProfileViewController: UITableViewDelegate {
         
         let view: UIView?
         
-        switch section {
-        case 1:
-            let header = generateHeaderView(tableView, viewForHeaderInSection: section)
-            header.topLineLabel.text = "DADOS"
-            header.bottomLineLabel.text = "DE COMPRA"
+        if buttonSegmentedViewLeftButtonHighlighted {
             
-            view = header
-        case 2:
-            let header = generateHeaderView(tableView, viewForHeaderInSection: section)
-            header.topLineLabel.text = "MINHAS"
-            header.bottomLineLabel.text = "MEDIDAS"
+            switch section {
+            case 1:
+                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+                header.topLineLabel.text = "DADOS"
+                header.bottomLineLabel.text = "DE COMPRA"
+                
+                view = header
+            case 2:
+                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+                header.topLineLabel.text = "MINHAS"
+                header.bottomLineLabel.text = "MEDIDAS"
+                
+                view = header
+            case 3:
+                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+                header.topLineLabel.text = "EMAIL"
+                header.bottomLineLabel.text = "E SENHA"
+                
+                view = header
+            default: view = nil
+            }
             
-            view = header
-        case 3:
-            let header = generateHeaderView(tableView, viewForHeaderInSection: section)
-            header.topLineLabel.text = "EMAIL"
-            header.bottomLineLabel.text = "E SENHA"
+        } else {
             
-            view = header
-        default: view = nil
+            switch section {
+            case 1:
+                let header = generateAboutHeaderView(tableView, viewForHeaderInSection: section)
+                header.topLineLabel.text = "TUDO O QUE"
+                header.bottomLineLabel.text = "VOCÊ PRECISA SABER"
+                
+                view = header
+            case 2:
+                let header = generateAboutHeaderView(tableView, viewForHeaderInSection: section)
+                header.topLineLabel.text = "DENTRO"
+                header.bottomLineLabel.text = "DA BOX"
+                
+                view = header
+            default: view = nil
+            }
         }
         
         return view
@@ -371,5 +393,13 @@ extension ProfileViewController {
         let header = tableView.dequeueReusableCell(withIdentifier: HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
         return header
     }
+    
+    func generateAboutHeaderView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> BrandsHeaderTableViewCell {
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: BrandsHeaderTableViewCell.identifier) as! BrandsHeaderTableViewCell
+        header.showAllButton.isHidden = true
+        return header
+    }
+
 
 }
