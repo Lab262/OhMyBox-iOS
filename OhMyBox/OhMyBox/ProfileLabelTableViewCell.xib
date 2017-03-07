@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foi só um grão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUf-nF-qDO">
-                                <rect key="frame" x="43.5" y="23" width="109" height="25"/>
+                                <rect key="frame" x="44" y="23" width="109" height="25"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                 <color key="textColor" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

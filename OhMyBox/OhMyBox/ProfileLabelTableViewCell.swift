@@ -15,7 +15,7 @@ class ProfileLabelTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 171.0
+        return 83.0
     }
     
     static var nibName: String {

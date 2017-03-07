@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
     func registerNibs() {
         tableView.registerNibFrom(ProfilePhotoTableViewCell.self)
         tableView.registerNibFrom(ProfileLabelTableViewCell.self)
+        tableView.registerNibFrom(ProfileSegmentTableViewCell.self)
     }
     
     func generateProfilePhotoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfilePhotoTableViewCell {
@@ -50,6 +51,13 @@ class ProfileViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileLabelTableViewCell.identifier) as! ProfileLabelTableViewCell
         cell.backgroundColor = .clear
+        return cell
+    }
+    
+    func generateProfieSegmentedCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileSegmentTableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSegmentTableViewCell.identifier) as! ProfileSegmentTableViewCell
+        
         return cell
     }
     
@@ -70,6 +78,7 @@ extension ProfileViewController: UITableViewDataSource {
             switch indexPath.row {
             case 0: cell = generateProfilePhotoCell(tableView, cellForRowAt: indexPath)
             case 1: cell = generateProfileLabelCell(tableView, cellForRowAt: indexPath)
+            case 2: cell = generateProfieSegmentedCell(tableView, cellForRowAt: indexPath)
             default: cell = UITableViewCell()
             }
         default: cell = UITableViewCell()
@@ -81,7 +90,7 @@ extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return 3
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,6 +116,7 @@ extension ProfileViewController: UITableViewDelegate {
             switch indexPath.row {
             case 0: height = ProfilePhotoTableViewCell.cellHeight
             case 1: height = ProfileLabelTableViewCell.cellHeight
+            case 2: height = ProfileSegmentTableViewCell.cellHeight
             default: height = 0
             }
         default: height = 0
