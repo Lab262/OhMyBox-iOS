@@ -30,6 +30,13 @@ extension UITableViewCellHelper {
 
 extension UITableViewCell: UITableViewCellHelper {
     
+    func setSeparatorHidden(_ hidden: Bool) {
+        if hidden {
+            separatorInset.left = 1000
+        } else {
+            separatorInset = UIEdgeInsets()
+        }
+    }
 }
 
 extension UITableView {

@@ -43,12 +43,14 @@ class ProfileViewController: UIViewController {
         tableView.registerNibFrom(ProfileLabelTableViewCell.self)
         tableView.registerNibFrom(ProfileSegmentTableViewCell.self)
         tableView.registerNibFrom(ProfilePurchaseInfoTableViewCell.self)
+        tableView.registerNibFrom(HomeTableViewHeaderView.self)
     }
     
     func generateProfilePhotoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfilePhotoTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfilePhotoTableViewCell.identifier) as! ProfilePhotoTableViewCell
         cell.backgroundColor = .clear
+        
         return cell
     }
     
@@ -56,6 +58,7 @@ class ProfileViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileLabelTableViewCell.identifier) as! ProfileLabelTableViewCell
         cell.backgroundColor = .clear
+        
         return cell
     }
     
@@ -97,9 +100,10 @@ class ProfileViewController: UIViewController {
         return cell
     }
     
-    func generateHeaderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateHeaderView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> HomeTableViewHeaderView {
         
-        return UITableViewCell()
+        let header = tableView.dequeueReusableCell(withIdentifier: HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
+        return header
     }
 }
 
@@ -192,5 +196,45 @@ extension ProfileViewController: UITableViewDelegate {
         return height
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        let height: CGFloat
+        
+        switch section {
+        case 1, 2, 3: height = HomeTableViewHeaderView.cellHeight
+        default: height = 0
+        }
+        
+        return height
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view: UIView?
+        
+        switch section {
+        case 1:
+            let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+            header.topLineLabel.text = "DADOS"
+            header.bottomLineLabel.text = "DE COMPRA"
+            
+            view = header
+        case 2:
+            let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+            header.topLineLabel.text = "MINHAS"
+            header.bottomLineLabel.text = "MEDIDAS"
+            
+            view = header
+        case 3:
+            let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+            header.topLineLabel.text = "EMAIL"
+            header.bottomLineLabel.text = "E SENHA"
+            
+            view = header
+        default: view = nil
+        }
+        
+        return view
+    }
     
 }

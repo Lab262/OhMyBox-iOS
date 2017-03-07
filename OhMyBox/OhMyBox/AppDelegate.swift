@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.window!.rootViewController = initialViewController
-        self.setupBarsAppearance()
+        setUpBarsAppearance()
         
         return true
     }
@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func setupBarsAppearance(){
+    func setUpBarsAppearance(){
         
         UIApplication.shared.statusBarStyle = .lightContent
         let navigationBarAppearance = UINavigationBar.appearance()
