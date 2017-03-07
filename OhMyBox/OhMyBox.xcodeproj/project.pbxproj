@@ -132,6 +132,10 @@
 		4CDBE9561E69FCE600715226 /* BrandsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBE9541E69FCE600715226 /* BrandsHeaderTableViewCell.swift */; };
 		4CDBE9571E69FCE600715226 /* BrandsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBE9551E69FCE600715226 /* BrandsHeaderTableViewCell.xib */; };
 		4CE345651E6E453D005C51F2 /* UIImageView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */; };
+		4CE345681E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */; };
+		4CE345691E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */; };
+		4CE3456C1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3456A1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift */; };
+		4CE3456D1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */; };
 		4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */; };
 		4CE3B8841E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */; };
@@ -360,6 +364,10 @@
 		4CDBE9541E69FCE600715226 /* BrandsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		4CDBE9551E69FCE600715226 /* BrandsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Blur.swift"; sourceTree = "<group>"; };
+		4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandCollectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandCollectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		4CE3456A1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandCollectionsTableViewCell.swift; sourceTree = "<group>"; };
+		4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandCollectionsTableViewCell.xib; sourceTree = "<group>"; };
 		4CE3B87E1E5E29210065A293 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -1202,6 +1210,10 @@
 				4CDBE94B1E69F32B00715226 /* BrandCollectionViewCell.xib */,
 				4CDBE94E1E69F5CB00715226 /* BrandsTableViewCell.swift */,
 				4CDBE94F1E69F5CB00715226 /* BrandsTableViewCell.xib */,
+				4CE3456A1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift */,
+				4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */,
+				4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */,
+				4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1356,6 +1368,7 @@
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
 				2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */,
 				2F044CE71DBE41D600B54468 /* coatProduct.png in Resources */,
+				4CE3456D1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
 				4C2F24FD1E6623E00043A90B /* HighlightCollectionViewCell.xib in Resources */,
 				2F0777481DBD8FBF003C124F /* MeasuresUserTableViewCell.xib in Resources */,
@@ -1405,6 +1418,7 @@
 				4CDBE9451E69A52A00715226 /* ProductBrandTableViewCell.xib in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
 				4C4DB57E1E68DB71005D44C1 /* ProductDetailTableViewCell.xib in Resources */,
+				4CE345691E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib in Resources */,
 				2F70E8021DC7B985000AB03B /* ShoppingBox.storyboard in Resources */,
 				2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */,
 				4CDBE9491E69EEE000715226 /* BrandTableViewCell.xib in Resources */,
@@ -1554,6 +1568,7 @@
 				4C459F251E6372F70076D962 /* SearchHighlightsTableViewCell.swift in Sources */,
 				2F0777471DBD8FBF003C124F /* MeasuresUserTableViewCell.swift in Sources */,
 				A4F89AFF1DA806C900949A35 /* ViewController.swift in Sources */,
+				4CE345681E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift in Sources */,
 				D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */,
 				4C4DB5751E68C0C2005D44C1 /* ProductOptionsTableViewCell.swift in Sources */,
 				D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */,
@@ -1642,6 +1657,7 @@
 				4C4DB5781E68C0C2005D44C1 /* SizeCollectionViewCell.swift in Sources */,
 				4C8AAF231E5F731E00258116 /* TableViewSelectionDelegate.swift in Sources */,
 				2F4896DF1DB72C3900EADFFE /* PromotionTableViewCell.swift in Sources */,
+				4CE3456C1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift in Sources */,
 				4CE3B88B1E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift in Sources */,
 				4C2F24EF1E6616DC0043A90B /* HomeTableViewHeaderView.swift in Sources */,
 				4CE345651E6E453D005C51F2 /* UIImageView+Blur.swift in Sources */,

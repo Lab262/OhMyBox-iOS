@@ -35,6 +35,7 @@ class BrandDetailViewController: UIViewController {
     
     var highlights: [Any] = [1, 2, 3]
     var sales: [Any] = [1, 2, 3]
+    var brandCollections: [Any] = [1, 2, 3]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,7 @@ class BrandDetailViewController: UIViewController {
     
     func registerNibs() {
         tableView.registerNibFrom(MiniProductsTableViewCell.self)
+        tableView.registerNibFrom(BrandCollectionsTableViewCell.self)
         tableView.registerNibFrom(HomeTableViewHeaderView.self)
     }
     
@@ -85,6 +87,8 @@ class BrandDetailViewController: UIViewController {
     func setUpNavigationBar() {
        navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
         navigationBarView.titleLabelText = ""
+        navigationBarView.leftBarButton.setImage(#imageLiteral(resourceName: "back_bold"), for: .normal)
+        navigationBarView.boxButton.setImage(#imageLiteral(resourceName: "box_bold"), for: .normal)
     }
     
     func showAllFeatureds (sender: UIButton) {
@@ -165,7 +169,7 @@ extension BrandDetailViewController: UITableViewDelegate {
         
         switch indexPath.section {
         case 0, 2: height = MiniProductsTableViewCell.cellHeight
-        case 1: height = 44.0
+        case 1: height = BrandCollectionsTableViewCell.cellHeight
         default: height = 0
         }
         
@@ -215,7 +219,11 @@ extension BrandDetailViewController {
     }
     
     func generateCollectionsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: BrandCollectionsTableViewCell.identifier) as! BrandCollectionsTableViewCell
+        
+        cell.collections = brandCollections
+        
+        return cell
     }
     
     func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
