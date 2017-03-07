@@ -47,6 +47,7 @@ class ProfileViewController: UIViewController {
         tableView.registerNibFrom(ProfileSegmentTableViewCell.self)
         tableView.registerNibFrom(ProfilePurchaseInfoTableViewCell.self)
         tableView.registerNibFrom(ProfileMeasureTableViewCell.self)
+        tableView.registerNibFrom(ProfileCredentialsTableViewCell.self)
         tableView.registerNibFrom(HomeTableViewHeaderView.self)
     }
     
@@ -66,7 +67,7 @@ extension ProfileViewController: UITableViewDataSource {
             case 2: cell = generateProfileSegmentedCell(tableView, cellForRowAt: indexPath)
             default: cell = UITableViewCell()
             }
-        case 1, 2: cell = dataCells(at: indexPath, inTableView: tableView)
+        case 1, 2, 3, 4: cell = dataCells(at: indexPath, inTableView: tableView)
         default: cell = UITableViewCell()
         }
         
@@ -88,6 +89,12 @@ extension ProfileViewController: UITableViewDataSource {
                 default: cell = UITableViewCell()
                 }
             case 2: cell = generateMeasureInfoCell(tableView, cellForRowAt: indexPath)
+            case 3:
+                switch indexPath.row {
+                case 0: cell = generateUsernameCell(tableView, cellForRowAt: indexPath)
+                case 1: cell = generatePasswordCell(tableView, cellForRowAt: indexPath)
+                default: cell = UITableViewCell()
+                }
             default: cell = UITableViewCell()
             }
             
@@ -107,6 +114,7 @@ extension ProfileViewController: UITableViewDataSource {
         case 0: number = 3
         case 1: number = 2
         case 2: number = measures.count
+        case 3: number = 2
         default: number = 0
         }
         return number
@@ -140,6 +148,7 @@ extension ProfileViewController: UITableViewDelegate {
             }
         case 1: height = UITableViewAutomaticDimension
         case 2: height = ProfileMeasureTableViewCell.cellHeight
+        case 3: height = ProfileCredentialsTableViewCell.cellHeight
         default: height = 0
         }
         
@@ -254,6 +263,29 @@ extension ProfileViewController {
         if indexPath.row == measures.count - 1 {
             cell.setSeparatorHidden(true)
         }
+        
+        return cell
+    }
+    
+    func generateCredentialsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileCredentialsTableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCredentialsTableViewCell.identifier) as! ProfileCredentialsTableViewCell
+        
+        return cell
+    }
+    
+    func generateUsernameCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileCredentialsTableViewCell {
+        let cell = generateCredentialsCell(tableView, cellForRowAt: indexPath)
+        
+        cell.title = "mariabetania@gmail.com"
+        
+        return cell
+    }
+    
+    func generatePasswordCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileCredentialsTableViewCell {
+        let cell = generateCredentialsCell(tableView, cellForRowAt: indexPath)
+        cell.setSeparatorHidden(true)
+        cell.title = "************"
         
         return cell
     }
