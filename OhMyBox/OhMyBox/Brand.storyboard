@@ -296,6 +296,7 @@
                     <navigationItem key="navigationItem" title="Nome da Marca" id="gqR-gh-rxQ"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="brandBackgroundFilterView" destination="JxD-HK-d2K" id="yjb-oE-3H9"/>
                         <outlet property="brandBackgroundImage" destination="Exv-4M-ajz" id="Nkf-Wg-aB7"/>
                         <outlet property="brandDescriptionLabel" destination="NPk-67-7JF" id="tp0-Er-gB2"/>
                         <outlet property="brandHeaderViewHeightConstraint" destination="Ufy-oy-lCC" id="mdA-Mp-AX5"/>

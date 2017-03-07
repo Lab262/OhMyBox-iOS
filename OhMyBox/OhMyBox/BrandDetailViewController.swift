@@ -15,6 +15,7 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     
     @IBOutlet weak var brandBackgroundImage: UIImageView!
+    @IBOutlet weak var brandBackgroundFilterView: UIView!
     @IBOutlet weak var brandImageView: UIImageView!
     @IBOutlet weak var brandNameTopLabel: UILabel!
     @IBOutlet weak var brandNameBottomLabel: UILabel!
@@ -22,6 +23,7 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var followButton: UIButton!
     
     @IBOutlet weak var brandHeaderViewHeightConstraint: NSLayoutConstraint!
+    weak var brandHeaderBlurView: UIVisualEffectView?
     
     weak var highlightsCollectionViewDelegate: UICollectionViewDelegate!
     weak var collectionsCollectionViewDelegate: UICollectionViewDelegate!
@@ -40,6 +42,9 @@ class BrandDetailViewController: UIViewController {
         setUpNavigationBar()
         setUpSearchBar()
         registerNibs()
+        
+        brandHeaderBlurView = brandBackgroundImage.blurWithStyle(.light)
+        brandHeaderBlurView?.alpha = 0
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -246,16 +251,16 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         let navbarAlphaThreshold: CGFloat = 128.0
         let navbarAlphaScale: CGFloat = 64.0
         
-        
-        
         if yOffset > (brandHeaderHeight - navbarAlphaThreshold) {
             
             let alpha = (yOffset - brandHeaderHeight + navbarAlphaThreshold)/navbarAlphaScale
             
-            navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(alpha)
+            brandHeaderBlurView?.alpha = alpha
+//            brandBackgroundFilterView.alpha = (1 - alpha)/2
             
         } else {
-            navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
+            brandHeaderBlurView?.alpha = 0.0
+//            brandBackgroundFilterView.alpha = 0.5
         }
     }
     
