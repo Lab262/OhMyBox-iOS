@@ -23,7 +23,8 @@ class SearchViewController: UIViewController {
     }
 
     func registerNibs() {
-        tableView.register(UINib.init(nibName: "SearchHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: SearchHeaderTableViewCell.identifier)
+        tableView.registerNibFrom(SearchHeaderTableViewCell.self)
+        tableView.registerNibFrom(ArrowIndicatorTableViewCell.self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,9 +55,9 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchCategoryTableViewCell.identifier) as! SearchCategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ArrowIndicatorTableViewCell.identifier) as! ArrowIndicatorTableViewCell
         
-        cell.categoryName = categories[indexPath.row]
+        cell.title = categories[indexPath.row]
         
         return cell
     }
@@ -65,7 +66,7 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 58.0
+        return SearchHeaderTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

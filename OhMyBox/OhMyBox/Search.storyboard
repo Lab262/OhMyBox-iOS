@@ -99,39 +99,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-p4-ADz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" id="BiP-YM-hfQ" customClass="SearchCategoryTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BiP-YM-hfQ" id="iXq-Z1-kEJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="HEP-pi-ptc">
-                                                    <rect key="frame" x="18" y="14" width="6" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="HEP-pi-ptc" secondAttribute="height" multiplier="2:5" id="CyB-UD-Z2J"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgw-8e-4up">
-                                                    <rect key="frame" x="34" y="9.5" width="78" height="25"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
-                                                    <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="jgw-8e-4up" firstAttribute="centerY" secondItem="HEP-pi-ptc" secondAttribute="centerY" id="B4A-lB-ei2"/>
-                                                <constraint firstItem="HEP-pi-ptc" firstAttribute="centerY" secondItem="iXq-Z1-kEJ" secondAttribute="centerY" id="bcr-eU-u2m"/>
-                                                <constraint firstItem="HEP-pi-ptc" firstAttribute="leading" secondItem="iXq-Z1-kEJ" secondAttribute="leading" constant="18" id="kOK-g4-6Gy"/>
-                                                <constraint firstItem="jgw-8e-4up" firstAttribute="leading" secondItem="HEP-pi-ptc" secondAttribute="trailing" constant="10" id="wOE-Es-wUN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="categoryNameLabel" destination="jgw-8e-4up" id="Lbs-Dc-8XQ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Nia-7Y-f07" id="VFt-bX-dIt"/>
                                     <outlet property="delegate" destination="Nia-7Y-f07" id="DwD-mf-fIa"/>
@@ -185,7 +152,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-pX-G3d">
-                                                    <rect key="frame" x="34" y="10" width="40" height="25"/>
+                                                    <rect key="frame" x="34" y="14" width="37" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -245,7 +212,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydm-2g-k2R">
-                                <rect key="frame" x="17" y="134" width="44" height="27"/>
+                                <rect key="frame" x="17" y="134" width="39.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.57647058823529407" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -261,7 +228,7 @@
                                 <state key="normal" title="Filtro" backgroundImage="container_button"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-Bv-auP">
-                                <rect key="frame" x="0.0" y="181" width="375" height="437"/>
+                                <rect key="frame" x="0.0" y="173" width="375" height="445"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="q2x-LN-QMD" id="1qc-HM-QQY"/>
@@ -318,7 +285,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hjj-0l-7GI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hjj-0l-7GI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -333,7 +300,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="category_indicator" width="6" height="15"/>
         <image name="container_button" width="86" height="24"/>
         <image name="search_suggestion_indicator" width="6" height="6"/>
         <image name="search_tabbar" width="23" height="24"/>

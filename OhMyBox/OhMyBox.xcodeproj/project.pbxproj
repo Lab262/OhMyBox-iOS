@@ -115,6 +115,7 @@
 		4CAEA93A1E6EEF6000FC65BD /* UIButton+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */; };
 		4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */; };
 		4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */; };
+		4CAEA9401E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA93F1E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
@@ -135,7 +136,7 @@
 		4CE3456D1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */; };
 		4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */; };
-		4CE3B8841E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */; };
+		4CE3B8841E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8831E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift */; };
 		4CE3B8861E5E2BDA0065A293 /* String+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8851E5E2BDA0065A293 /* String+CharacterSpacing.swift */; };
 		4CE3B88B1E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8891E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift */; };
 		4CE3B88C1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B88A1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib */; };
@@ -332,6 +333,7 @@
 		4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Handler.swift"; sourceTree = "<group>"; };
 		4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistCountTableViewCell.swift; sourceTree = "<group>"; };
 		4CAEA93C1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishlistCountTableViewCell.xib; sourceTree = "<group>"; };
+		4CAEA93F1E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArrowIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
@@ -352,7 +354,7 @@
 		4CE3456B1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandCollectionsTableViewCell.xib; sourceTree = "<group>"; };
 		4CE3B87E1E5E29210065A293 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4CE3B8801E5E2B8E0065A293 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		4CE3B8831E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowIndicatorTableViewCell.swift; sourceTree = "<group>"; };
 		4CE3B8851E5E2BDA0065A293 /* String+CharacterSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CharacterSpacing.swift"; sourceTree = "<group>"; };
 		4CE3B8891E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		4CE3B88A1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -845,7 +847,8 @@
 		4CE3B8881E5E2C740065A293 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4CE3B8831E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift */,
+				4CE3B8831E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift */,
+				4CAEA93F1E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib */,
 				4C8AAF201E5F5ED300258116 /* SearchSuggestionTableViewCell.swift */,
 				4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */,
 				4C459F211E6372570076D962 /* SearchBrandsTableViewCell.xib */,
@@ -1386,6 +1389,7 @@
 				4CDBE9451E69A52A00715226 /* ProductBrandTableViewCell.xib in Resources */,
 				D402E00A1DB68D10007855D6 /* Profile.storyboard in Resources */,
 				4C4DB57E1E68DB71005D44C1 /* ProductDetailTableViewCell.xib in Resources */,
+				4CAEA9401E6F0A9800FC65BD /* ArrowIndicatorTableViewCell.xib in Resources */,
 				4CE345691E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib in Resources */,
 				2F70E8021DC7B985000AB03B /* ShoppingBox.storyboard in Resources */,
 				2F8460641DBA79AB002D25FE /* DataUserTextFieldTableViewCell.xib in Resources */,
@@ -1557,7 +1561,7 @@
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				D457D7321DC3F64900443B63 /* TagView2.swift in Sources */,
 				D4E7E0901DD4DFF700F1DE52 /* ErrorMessage.swift in Sources */,
-				4CE3B8841E5E2BAB0065A293 /* SearchCategoryTableViewCell.swift in Sources */,
+				4CE3B8841E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift in Sources */,
 				D4B72A2E1DC8374A004335E4 /* BrandDetailViewController.swift in Sources */,
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,

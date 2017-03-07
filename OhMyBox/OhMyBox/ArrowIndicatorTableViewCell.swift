@@ -1,5 +1,5 @@
 //
-//  SearchCategoryTableViewCell.swift
+//  ArrowIndicatorTableViewCell
 //  OhMyBox
 //
 //  Created by André Marques da Silva Rodrigues on 22/02/17.
@@ -8,20 +8,28 @@
 
 import UIKit
 
-class SearchCategoryTableViewCell: UITableViewCell {
+class ArrowIndicatorTableViewCell: UITableViewCell {
 
     static var identifier: String {
-        return "categoryCell"
+        return "arrowIndicatorTableViewCell"
     }
     
-    @IBOutlet weak var categoryNameLabel: UILabel!
+    static var cellHeight: CGFloat {
+        return 44.0
+    }
     
-    var categoryName: String? {
+    static var nibName: String {
+        return "ArrowIndicatorTableViewCell"
+    }
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var title: String? {
         didSet {
-            if let categoryName = categoryName {
-                categoryNameLabel.attributedText = categoryName.uppercased().with(characterSpacing: 0.84)
+            if let title = title {
+                titleLabel.attributedText = title.uppercased().with(characterSpacing: 0.84)
             } else {
-                categoryNameLabel.attributedText = nil
+                titleLabel.attributedText = nil
             }
         }
     }

@@ -14,6 +14,14 @@ class SearchHeaderTableViewCell: UITableViewCell {
         return "searchHeaderCell"
     }
     
+    static var cellHeight: CGFloat {
+        return 58.0
+    }
+    
+    static var nibName: String {
+        return "SearchHeaderTableViewCell"
+    }
+    
     @IBOutlet weak var headerTitleLabel: UILabel!
     
     var headerTitle: String? {
