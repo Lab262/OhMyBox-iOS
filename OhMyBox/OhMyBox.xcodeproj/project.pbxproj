@@ -174,8 +174,6 @@
 		D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44066481DEE125E0053927B /* IconNavigationBar.xib */; };
 		D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44066491DEE125E0053927B /* IconNavigationBar.swift */; };
 		D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */; };
-		D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */; };
-		D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */; };
 		D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D44457F21DC7C2B200F488FE /* jaguar_brand.png */; };
 		D44F35011DD0FF1500AE7E9E /* TagView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44F35001DD0FF1500AE7E9E /* TagView3.swift */; };
 		D44F35031DD0FF2500AE7E9E /* TagView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44F35021DD0FF2500AE7E9E /* TagView3.xib */; };
@@ -184,16 +182,11 @@
 		D457D7321DC3F64900443B63 /* TagView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D7311DC3F64900443B63 /* TagView2.swift */; };
 		D4778E281DD2716C005B2914 /* TagView4.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4778E271DD2716C005B2914 /* TagView4.xib */; };
 		D4778E2A1DD27186005B2914 /* TagView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4778E291DD27186005B2914 /* TagView4.swift */; };
-		D47E83BC1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */; };
-		D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */; };
-		D47E83C01DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */; };
 		D4A848921DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A848911DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift */; };
 		D4AE07761DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */; };
 		D4AE07771DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */; };
 		D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B72A2B1DC8342B004335E4 /* brand2.png */; };
 		D4B72A2E1DC8374A004335E4 /* BrandDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B72A2D1DC8374A004335E4 /* BrandDetailViewController.swift */; };
-		D4B72A311DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B72A2F1DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift */; };
-		D4B72A321DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B72A301DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib */; };
 		D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6541DB6AA6C007C3113 /* jacketImage.png */; };
 		D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D6561DB6AA6C007C3113 /* shoesImage.png */; };
 		D4C0D65C1DB6AF2C007C3113 /* TagView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C0D65B1DB6AF2C007C3113 /* TagView1.xib */; };
@@ -415,8 +408,6 @@
 		D44066481DEE125E0053927B /* IconNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconNavigationBar.xib; sourceTree = "<group>"; };
 		D44066491DEE125E0053927B /* IconNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconNavigationBar.swift; sourceTree = "<group>"; };
 		D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Navigation.swift"; sourceTree = "<group>"; };
-		D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCaseBrandTableViewCell.xib; sourceTree = "<group>"; };
-		D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseBrandTableViewCell.swift; sourceTree = "<group>"; };
 		D44457F21DC7C2B200F488FE /* jaguar_brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaguar_brand.png; sourceTree = "<group>"; };
 		D44F35001DD0FF1500AE7E9E /* TagView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView3.swift; sourceTree = "<group>"; };
 		D44F35021DD0FF2500AE7E9E /* TagView3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView3.xib; sourceTree = "<group>"; };
@@ -425,17 +416,12 @@
 		D457D7311DC3F64900443B63 /* TagView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView2.swift; sourceTree = "<group>"; };
 		D4778E271DD2716C005B2914 /* TagView4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView4.xib; sourceTree = "<group>"; };
 		D4778E291DD27186005B2914 /* TagView4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView4.swift; sourceTree = "<group>"; };
-		D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBrandTableViewCell.swift; sourceTree = "<group>"; };
-		D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTitleTableViewCell.swift; sourceTree = "<group>"; };
-		D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationBrandDetailTableViewCell.swift; sourceTree = "<group>"; };
 		D4A848901DE8942600E5401F /* ScaledVisibleCellsCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaledVisibleCellsCollectionView.h; sourceTree = "<group>"; };
 		D4A848911DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
 		D4AE07741DB6DDF800D2F2BA /* HeaderTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleTableViewCell.swift; sourceTree = "<group>"; };
 		D4AE07751DB6DDF800D2F2BA /* HeaderTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleTableViewCell.xib; sourceTree = "<group>"; };
 		D4B72A2B1DC8342B004335E4 /* brand2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brand2.png; sourceTree = "<group>"; };
 		D4B72A2D1DC8374A004335E4 /* BrandDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandDetailViewController.swift; sourceTree = "<group>"; };
-		D4B72A2F1DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleSecondTypeTableViewCell.swift; sourceTree = "<group>"; };
-		D4B72A301DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleSecondTypeTableViewCell.xib; sourceTree = "<group>"; };
 		D4C0D6541DB6AA6C007C3113 /* jacketImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jacketImage.png; sourceTree = "<group>"; };
 		D4C0D6561DB6AA6C007C3113 /* shoesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoesImage.png; sourceTree = "<group>"; };
 		D4C0D65B1DB6AF2C007C3113 /* TagView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView1.xib; sourceTree = "<group>"; };
@@ -1045,13 +1031,6 @@
 				4CDBE9531E69FCCD00715226 /* Headers */,
 				D4E7E0841DD3889300F1DE52 /* Cells */,
 				4CDBE9521E69FCC700715226 /* Storyboard */,
-				D44457EE1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib */,
-				D44457F01DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift */,
-				D4B72A2F1DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift */,
-				D4B72A301DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib */,
-				D47E83BB1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift */,
-				D47E83BD1DC91871003F5EA7 /* ContactTitleTableViewCell.swift */,
-				D47E83BF1DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1388,7 +1367,6 @@
 				4C2F24F91E6623020043A90B /* HighlightsTableViewCell.xib in Resources */,
 				A4F89B071DA806C900949A35 /* LaunchScreen.storyboard in Resources */,
 				D4E36E961DEE74080012431F /* ShowProductTableViewCell.xib in Resources */,
-				D44457EF1DC7C08D00F488FE /* ShowCaseBrandTableViewCell.xib in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
 				2F4896E81DB7438A00EADFFE /* WishTableViewCell.xib in Resources */,
@@ -1401,7 +1379,6 @@
 				4C4DB5741E68C0C2005D44C1 /* ProductOptionsTableViewCell.xib in Resources */,
 				D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */,
 				D402DFFF1DB68CAD007855D6 /* Brand.storyboard in Resources */,
-				D4B72A321DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.xib in Resources */,
 				D457D7301DC3F60900443B63 /* TagView2.xib in Resources */,
 				2F2999A81DE54ECA00D52203 /* Poppins-Regular.ttf in Resources */,
 				D402E0211DB69FDC007855D6 /* ShowCaseCollectionViewCell.xib in Resources */,
@@ -1611,9 +1588,7 @@
 				2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
 				4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */,
-				D44457F11DC7C11B00F488FE /* ShowCaseBrandTableViewCell.swift in Sources */,
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
-				D4B72A311DC84B87004335E4 /* HeaderTitleSecondTypeTableViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
 				4C2F25051E6631750043A90B /* MiniProductCollectionViewCell.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
@@ -1625,7 +1600,6 @@
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,
 				2FAD48C31DB6FE3400074D55 /* ShowProductCollectionViewCell.swift in Sources */,
-				D47E83BC1DC90B90003F5EA7 /* CollectionBrandTableViewCell.swift in Sources */,
 				2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */,
 				D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */,
 				2F225D021DBF04E4009E4566 /* UIView+Util.swift in Sources */,
@@ -1669,13 +1643,11 @@
 				D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */,
 				4C4DB55D1E68B2FD005D44C1 /* SegueIdentifiers.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
-				D47E83C01DC9193A003F5EA7 /* PresentationBrandDetailTableViewCell.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,
 				4C4DB5791E68C0C2005D44C1 /* ColorCollectionViewCell.swift in Sources */,
 				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
 				2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */,
 				4CE3B88E1E5E305E0065A293 /* SearchSuggestionsViewController.swift in Sources */,
-				D47E83BE1DC91871003F5EA7 /* ContactTitleTableViewCell.swift in Sources */,
 				D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */,
 				D4C0D65E1DB6B1F2007C3113 /* TagView1.swift in Sources */,
 				4C8AAF1E1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,

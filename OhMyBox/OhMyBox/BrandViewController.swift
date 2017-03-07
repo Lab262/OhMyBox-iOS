@@ -48,6 +48,7 @@ class BrandViewController: UIViewController {
     
     func setUpNavigationBar() {
         navigationController?.navigationBar.isHidden = true
+        navigationBarView.leftBarButton.isHidden = true
     }
     
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
