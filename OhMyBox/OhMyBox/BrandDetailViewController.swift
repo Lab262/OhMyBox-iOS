@@ -65,7 +65,7 @@ class BrandDetailViewController: UIViewController {
         header.addSubview(searchController.searchBar)
         tableView.tableHeaderView = header
         tableView.backgroundView = nil
-//        searchController.searchBar.delegate = self
+        //        searchController.searchBar.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.barTintColor = .white
         
@@ -86,7 +86,7 @@ class BrandDetailViewController: UIViewController {
     }
     
     func setUpNavigationBar() {
-       navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
+        navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
         navigationBarView.titleLabelText = ""
         navigationBarView.leftBarButton.setImage(#imageLiteral(resourceName: "back_bold"), for: .normal)
         navigationBarView.boxButton.setImage(#imageLiteral(resourceName: "box_bold"), for: .normal)
@@ -102,9 +102,9 @@ class BrandDetailViewController: UIViewController {
                 
             }
         }
-
+        
     }
-
+    
 }
 
 extension BrandDetailViewController: UITableViewDataSource {
@@ -196,7 +196,7 @@ extension BrandDetailViewController: UITableViewDelegate {
         
         return height
     }
-//
+    //
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20.0
     }
@@ -204,17 +204,10 @@ extension BrandDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20.0))
         view.backgroundColor = .white
-
+        
         return view
     }
     
- }
-
-extension BrandDetailViewController: callSegueProtocol {
-    
-    func callViewController(segueIndentifier:String){
-        self.performSegue(withIdentifier:segueIndentifier, sender:self)
-    }
 }
 
 // MARK: - Generate Cells
@@ -295,11 +288,11 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             let alpha = (yOffset - brandHeaderHeight + navbarAlphaThreshold)/navbarAlphaScale
             
             brandHeaderBlurView?.alpha = alpha
-//            brandBackgroundFilterView.alpha = (1 - alpha)/2
+            //            brandBackgroundFilterView.alpha = (1 - alpha)/2
             
         } else {
             brandHeaderBlurView?.alpha = 0.0
-//            brandBackgroundFilterView.alpha = 0.5
+            //            brandBackgroundFilterView.alpha = 0.5
         }
     }
     
