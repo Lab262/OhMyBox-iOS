@@ -27,13 +27,9 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var brandHeaderViewHeightConstraint: NSLayoutConstraint!
     weak var brandHeaderBlurView: UIVisualEffectView?
     
-    
-    
     weak var highlightsCollectionViewDelegate: UICollectionViewDelegate!
     weak var collectionsCollectionViewDelegate: UICollectionViewDelegate!
     weak var salesCollectionViewDelegate: UICollectionViewDelegate!
-    
-    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchBarTopConstraint: NSLayoutConstraint!
@@ -75,32 +71,10 @@ class BrandDetailViewController: UIViewController {
     
     func setUpSearchBar() {
         
-//        let header = UIView(frame: searchBar.frame)
-//        header.addSubview(searchBar)
-//        header.isUserInteractionEnabled = true
-////        tableView.tableHeaderView = header
-//        
-//        view.addSubview(header)
-//        view.bringSubview(toFront: header)
-//        
-//        header.translatesAutoresizingMaskIntoConstraints = false
-//        searchBarTopConstraint = header.topAnchor.constraint(equalTo: navigationBarView.bottomAnchor)
-//        searchBarTopConstraint?.isActive = true
-//        header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-//        header.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-//        
         searchBar.placeholder = "Search"
         searchBar.delegate = self
-        searchController.dimsBackgroundDuringPresentation = false
         
         setUpSearchBarAppearance()
-        
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        searchController.definesPresentationContext = false
-//        searchController.delegate = self
-        
-        
-//        let v = view.hitTest(view.convert(searchBar.center, from: searchBar), with: nil)
     }
     
     func setUpSearchBarAppearance() {
@@ -116,7 +90,7 @@ class BrandDetailViewController: UIViewController {
     
     func setUpTableView() {
         tableView.backgroundColor = .clear
-        tableView.contentInset = UIEdgeInsetsMake(searchController.searchBar.frame.height + brandHeaderHeight - tableViewTopMargin, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(32.0 + searchBar.frame.height + brandHeaderHeight - tableViewTopMargin, 0, 0, 0)
     }
     
     func setUpNavigationBar() {
@@ -303,7 +277,7 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         updateNavigationBarAlpha(yOffset)
         updateHeaderViewsAlpha(yOffset)
         
-        let searchBarConstraintConstant = searchController.searchBar.frame.height + scrollView.contentOffset.y
+        let searchBarConstraintConstant = searchBar.frame.height + scrollView.contentOffset.y
         searchBarTopConstraint?.constant = max(0, -searchBarConstraintConstant)
     }
     
@@ -373,17 +347,17 @@ extension BrandDetailViewController: CollectionViewSelectionDelegate {
 
 extension BrandDetailViewController: UISearchBarDelegate {
     
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
-        
-        return true
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.resignFirstResponder()
     }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+    }
     
 }
