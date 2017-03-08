@@ -14,6 +14,8 @@ class BrandDetailViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     
+    @IBOutlet weak var brandHeaderView: UIView!
+    
     @IBOutlet weak var brandBackgroundImage: UIImageView!
     @IBOutlet weak var brandBackgroundFilterView: UIView!
     @IBOutlet weak var brandImageView: UIImageView!
@@ -25,11 +27,17 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var brandHeaderViewHeightConstraint: NSLayoutConstraint!
     weak var brandHeaderBlurView: UIVisualEffectView?
     
+    
+    
     weak var highlightsCollectionViewDelegate: UICollectionViewDelegate!
     weak var collectionsCollectionViewDelegate: UICollectionViewDelegate!
     weak var salesCollectionViewDelegate: UICollectionViewDelegate!
     
     let searchController = UISearchController(searchResultsController: nil)
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBarTopConstraint: NSLayoutConstraint!
+    
     let brandHeaderHeight: CGFloat = 382.0
     let tableViewTopMargin: CGFloat = 64
     
@@ -37,12 +45,18 @@ class BrandDetailViewController: UIViewController {
     var sales: [Any] = [1, 2, 3]
     var brandCollections: [Any] = [1, 2, 3]
     
+    var tableViewOffset = CGPoint()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpSearchBar()
         setUpTableView()
         setUpNavigationBar()
-        setUpSearchBar()
         registerNibs()
+        
+//        tableView.isHidden = true
+//        brandHeaderView.isHidden = true
+        
         
         brandHeaderBlurView = brandBackgroundImage.blurWithStyle(.light)
         brandHeaderBlurView?.alpha = 0
@@ -61,28 +75,48 @@ class BrandDetailViewController: UIViewController {
     
     func setUpSearchBar() {
         
-        let header = UIView(frame: searchController.searchBar.frame)
-        header.addSubview(searchController.searchBar)
-        tableView.tableHeaderView = header
-        tableView.backgroundView = nil
-        //        searchController.searchBar.delegate = self
+//        let header = UIView(frame: searchBar.frame)
+//        header.addSubview(searchBar)
+//        header.isUserInteractionEnabled = true
+////        tableView.tableHeaderView = header
+//        
+//        view.addSubview(header)
+//        view.bringSubview(toFront: header)
+//        
+//        header.translatesAutoresizingMaskIntoConstraints = false
+//        searchBarTopConstraint = header.topAnchor.constraint(equalTo: navigationBarView.bottomAnchor)
+//        searchBarTopConstraint?.isActive = true
+//        header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+//        header.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+//        
+        searchBar.placeholder = "Search"
+        searchBar.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.barTintColor = .white
         
+        setUpSearchBarAppearance()
+        
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        searchController.definesPresentationContext = false
+//        searchController.delegate = self
+        
+        
+//        let v = view.hitTest(view.convert(searchBar.center, from: searchBar), with: nil)
+    }
+    
+    func setUpSearchBarAppearance() {
+        searchBar.barTintColor = .white
         
         // Getting rid of weird black separator
-        searchController.searchBar.borderWidth = 1.0
-        searchController.searchBar.borderColor = UIColor.white
+        searchBar.borderWidth = 1.0
+        searchBar.borderColor = UIColor.white
         
-        searchController.searchBar.tintColor = .black
-        searchController.searchBar.backgroundColor = .white
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.definesPresentationContext = false
+        searchBar.tintColor = .black
+        searchBar.backgroundColor = .white
     }
     
     func setUpTableView() {
         tableView.backgroundColor = .clear
-        tableView.contentInset = UIEdgeInsetsMake(brandHeaderHeight - tableViewTopMargin, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(searchController.searchBar.frame.height + brandHeaderHeight - tableViewTopMargin, 0, 0, 0)
     }
     
     func setUpNavigationBar() {
@@ -268,6 +302,9 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         updateImageScale(yOffset)
         updateNavigationBarAlpha(yOffset)
         updateHeaderViewsAlpha(yOffset)
+        
+        let searchBarConstraintConstant = searchController.searchBar.frame.height + scrollView.contentOffset.y
+        searchBarTopConstraint?.constant = max(0, -searchBarConstraintConstant)
     }
     
     func updateImageScale(_ yOffset: CGFloat) {
@@ -332,4 +369,21 @@ extension BrandDetailViewController: CollectionViewSelectionDelegate {
             performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
         }
     }
+}
+
+extension BrandDetailViewController: UISearchBarDelegate {
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        
+        searchBar.setShowsCancelButton(true, animated: true)
+        
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    
 }
