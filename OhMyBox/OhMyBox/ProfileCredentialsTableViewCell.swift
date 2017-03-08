@@ -46,4 +46,8 @@ class ProfileCredentialsTableViewCell: UITableViewCell {
         separatorView.isHidden = hidden
     }
     
+    override func prepareForReuse() {
+        setSeparatorHidden(false)
+    }
+    
 }

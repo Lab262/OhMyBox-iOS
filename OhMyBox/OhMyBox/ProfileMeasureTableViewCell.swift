@@ -42,4 +42,7 @@ class ProfileMeasureTableViewCell: UITableViewCell {
         separatorView.isHidden = hidden
     }
     
+    override func prepareForReuse() {
+        setSeparatorHidden(false)
+    }
 }
