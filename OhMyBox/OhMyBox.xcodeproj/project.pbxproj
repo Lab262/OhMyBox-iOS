@@ -166,6 +166,8 @@
 		4CE5DFF11E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFEF1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib */; };
 		4CE5DFF41E71E21E0093CC0E /* ShoppingProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF21E71E21E0093CC0E /* ShoppingProductTableViewCell.swift */; };
 		4CE5DFF51E71E21E0093CC0E /* ShoppingProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */; };
+		4CE5DFF81E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */; };
+		4CE5DFF91E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF71E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib */; };
 		88A6DF794C8D5276CE936DC2 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D20B1E77921CD37EE4FC5B7 /* Pods_OhMyBoxTests.framework */; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
 		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
@@ -408,6 +410,8 @@
 		4CE5DFEF1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingRequestsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4CE5DFF21E71E21E0093CC0E /* ShoppingProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingProductTableViewCell.swift; sourceTree = "<group>"; };
 		4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingProductTableViewCell.xib; sourceTree = "<group>"; };
+		4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingResultsTableViewCell.swift; sourceTree = "<group>"; };
+		4CE5DFF71E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingResultsTableViewCell.xib; sourceTree = "<group>"; };
 		593CC679AF27F8876E27C4DF /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputScrollView.swift; sourceTree = "<group>"; };
@@ -999,6 +1003,8 @@
 				4CE5DFEF1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib */,
 				4CE5DFF21E71E21E0093CC0E /* ShoppingProductTableViewCell.swift */,
 				4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */,
+				4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */,
+				4CE5DFF71E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -1059,7 +1065,6 @@
 				D4E7E08C1DD4DE0200F1DE52 /* User */,
 				D4E7E0891DD4DBA300F1DE52 /* Requests */,
 				D4E7E0861DD38C7000F1DE52 /* Tags */,
-				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				D4C0D65F1DB6B315007C3113 /* Extensions */,
 				D4C0D6511DB6AA00007C3113 /* Resources */,
 				D402E00B1DB68D16007855D6 /* Login */,
@@ -1068,6 +1073,7 @@
 				D402DFFB1DB68C8C007855D6 /* Brand */,
 				D402DFF71DB68C55007855D6 /* Home */,
 				4CE3B87B1E5E28B40065A293 /* Search */,
+				2F70E7FB1DC7B861000AB03B /* ShoppingBox */,
 				A4F89AFC1DA806C900949A35 /* AppDelegate.swift */,
 				A4F89AFE1DA806C900949A35 /* ViewController.swift */,
 				A4F89B001DA806C900949A35 /* Main.storyboard */,
@@ -1559,6 +1565,7 @@
 				4CAEA96A1E6F5B9D00FC65BD /* ProfileTableHeaderView.xib in Resources */,
 				4CDBE94D1E69F32B00715226 /* BrandCollectionViewCell.xib in Resources */,
 				D44F35031DD0FF2500AE7E9E /* TagView3.xib in Resources */,
+				4CE5DFF91E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1719,6 +1726,7 @@
 				4C2F25051E6631750043A90B /* MiniProductCollectionViewCell.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				D457D7321DC3F64900443B63 /* TagView2.swift in Sources */,
+				4CE5DFF81E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift in Sources */,
 				D4E7E0901DD4DFF700F1DE52 /* ErrorMessage.swift in Sources */,
 				4CE3B8841E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift in Sources */,
 				D4B72A2E1DC8374A004335E4 /* BrandDetailViewController.swift in Sources */,

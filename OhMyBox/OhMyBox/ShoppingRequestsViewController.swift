@@ -14,6 +14,7 @@ class ShoppingRequestsViewController: UIViewController {
     @IBOutlet weak var emptyView: ShoppingBoxEmptyView!
     
     var isEmptyInfo: ShoppingBoxEmptyView.Info?
+    var resultsInfo: ShoppingResultsTableViewCell.Info?
     
     var requestBrands: [Int] = []
     var requests: [Int: [Any]] = [:] { // Brand: Products
@@ -26,13 +27,14 @@ class ShoppingRequestsViewController: UIViewController {
         registerNibs()
         setUpEmptyView()
         setUpTableView()
-        requests = [1: [1, 2], 2: [1], 3: [3, 5]]
+        requests = [1: [1, 2, 3], 2: [1], 3: [3, 5]]
         // Do any additional setup after loading the view.
     }
 
     func registerNibs() {
         tableView.registerNibFrom(ShoppingProductTableViewCell.self)
         tableView.registerNibFrom(ShoppingRequestsHeaderTableViewCell.self)
+        tableView.registerNibFrom(ShoppingResultsTableViewCell.self)
     }
     
     func setUpTableView() {
@@ -77,9 +79,13 @@ extension ShoppingRequestsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingProductTableViewCell.identifier) as! ShoppingProductTableViewCell
+        let cell: UITableViewCell
         
-        cell.info = (#imageLiteral(resourceName: "product_placeholder"), "SAIA COLLECTION", "fashion store", 1, 50)
+        switch indexPath.row {
+        case 0, 1: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+        default: cell = UITableViewCell()
+        }
         
         return cell
     }
@@ -89,7 +95,14 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return ShoppingProductTableViewCell.cellHeight
+        let height: CGFloat
+        
+        switch indexPath.row {
+        case 0, 1: height = ShoppingProductTableViewCell.cellHeight
+        case 2: height = ShoppingResultsTableViewCell.cellHeight
+        default: height = 0
+        }
+        return height
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -115,5 +128,21 @@ extension ShoppingRequestsViewController { // Cells generation
         
         return header
         
+    }
+    
+    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingProductTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingProductTableViewCell.identifier) as! ShoppingProductTableViewCell
+        
+        cell.info = (#imageLiteral(resourceName: "product_placeholder"), "SAIA COLLECTION", "fashion store", 1, 50)
+        
+        return cell
+    }
+    
+    func generateResultsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingResultsTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingResultsTableViewCell.identifier) as! ShoppingResultsTableViewCell
+        
+        cell.info = (0, 100)
+        
+        return cell
     }
 }
