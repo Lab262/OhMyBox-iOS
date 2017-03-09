@@ -10,6 +10,7 @@ import UIKit
 
 class ButtonSegmentedControl: UIView {
 
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var view: UIView!
@@ -17,21 +18,49 @@ class ButtonSegmentedControl: UIView {
     var leftButtonHandler: UIButton.ButtonHandler?
     var rightButtonHandler: UIButton.ButtonHandler?
     
+    var leftButtonFont: UIFont = UIFont.systemFont(ofSize: UIFont.systemFontSize) {
+        didSet {
+            leftButton?.titleLabel?.font = leftButtonFont
+        }
+    }
+    var rightButtonFont: UIFont = UIFont.systemFont(ofSize: UIFont.systemFontSize) {
+        didSet {
+            rightButton?.titleLabel?.font = rightButtonFont
+        }
+    }
+    
+    @IBInspectable var leftButtonCornerRadius: CGFloat = 2.0 {
+        didSet {
+            leftButton?.cornerRadius = leftButtonCornerRadius
+        }
+    }
+    @IBInspectable var rightButtonCornerRadius: CGFloat = 2.0 {
+        didSet {
+            rightButton?.cornerRadius = rightButtonCornerRadius
+        }
+    }
+    
+    @IBInspectable var buttonSpacing: CGFloat = 5 {
+        didSet {
+            stackView?.spacing = buttonSpacing
+        }
+    }
+    
     @IBInspectable var leftButtonHighlightedTitle: String = ""
     @IBInspectable var rightButtonHighlightedTitle: String = ""
     
     @IBInspectable var leftButtonNormalTitle: String = ""
     @IBInspectable var rightButtonNormalTitle: String = ""
     
-    var buttonHighlightedTitleColor = UIColor.white
-    var buttonHighlightedBackgroundColor = UIColor.colorWithHexString("241932")
-    var buttonHighlightedBorderColor = UIColor.clear
-    var buttonHighlightedBorderWidth: CGFloat = 0.0
+    @IBInspectable var buttonHighlightedTitleColor: UIColor = .white
+    @IBInspectable var buttonHighlightedBackgroundColor: UIColor = .colorWithHexString("241932")
+    @IBInspectable var buttonHighlightedBorderColor: UIColor = .clear
+    @IBInspectable var buttonHighlightedBorderWidth: CGFloat = 0.0
     
-    var buttonNormalTitleColor = UIColor.colorWithHexString("919191")
-    var buttonNormalBorderColor = UIColor.colorWithHexString("919191")
-    var buttonNormalBackgroundColor = UIColor.white
-    var buttonNormalBorderWidth: CGFloat = 1.625
+    @IBInspectable var buttonNormalTitleColor: UIColor = .colorWithHexString("919191")
+    @IBInspectable var buttonNormalBackgroundColor: UIColor = .white
+    @IBInspectable var buttonNormalBorderColor: UIColor = .colorWithHexString("919191")
+    @IBInspectable var buttonNormalBorderWidth: CGFloat = 1.625
     
     var leftButtonHighlighted = false
     
@@ -40,6 +69,18 @@ class ButtonSegmentedControl: UIView {
         addSubview(view)
         view.frame = self.bounds
         leftButtonAction(sender: leftButton)
+        
+        updateLayout()
+    }
+    
+    func updateLayout() {
+        leftButton?.cornerRadius = leftButtonCornerRadius
+        rightButton?.cornerRadius = rightButtonCornerRadius
+        
+        stackView?.spacing = buttonSpacing
+        
+        leftButton?.titleLabel?.font = leftButtonFont
+        rightButton?.cornerRadius = rightButtonCornerRadius
     }
     
     func setButtonHighlighted(_ button: UIButton) {
@@ -47,6 +88,8 @@ class ButtonSegmentedControl: UIView {
         button.backgroundColor = buttonHighlightedBackgroundColor
         button.borderColor = buttonHighlightedBorderColor
         button.borderWidth = buttonHighlightedBorderWidth
+        
+        bringSubview(toFront: button)
     }
     
     func setButtonUnhighlighted(_ button: UIButton) {

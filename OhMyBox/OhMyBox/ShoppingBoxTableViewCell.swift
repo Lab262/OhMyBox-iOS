@@ -14,54 +14,57 @@ class ShoppingBoxTableViewCell: UITableViewCell {
         return "shoppingBoxCell"
     }
     static var cellHeight: CGFloat {
-        return 178
+        return 136
+    }
+    
+    static var nibName: String {
+        return "ShoppingBoxTableViewCell"
     }
     
     @IBOutlet weak var scrollView: UIScrollView!
-//    @IBOutlet weak var bgViewCell: UIView!
+
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var lessButton: UIButton!
-    @IBOutlet weak var productImage: UIImageView!
+    
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    
+    @IBOutlet weak var productImageViewContainer: UIView!
+    @IBOutlet weak var productImageView: UIImageView!
+    
+    
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var nameProuct: UILabel!
-    var number: Int = 1
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productBrandNameLabel: UILabel!
+    
+    var productCount: Int = 1 {
+        didSet {
+            self.countLabel.text = String(format: "%02d", productCount)
+        }
+    }
  
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        self.bgViewCell.layer.borderWidth = 1.5
-//        self.bgViewCell.layer.borderColor = UIColor.black.cgColor
-        self.configureImage()
     }
     
     @IBAction func decrease(_ sender: AnyObject) {
-        if (number > 1){
-            number = number-1
-            self.countLabel.text = String(number)
-
+        if (productCount > 1){
+            productCount -= 1
         }
-        
-    }
-    @IBAction func increase(_ sender: AnyObject) {
-        number = number+1
-        self.countLabel.text = String(number)
     }
     
-   
-    func configureImage (){
-        
+    @IBAction func increase(_ sender: AnyObject) {
+        productCount += 1
     }
+    
     @IBAction func deleteProduct(_ sender: AnyObject) {
     
-    print("FOI DELETE")
+        print("FOI DELETE")
     }
     
     @IBAction func setFavorite(_ sender: AnyObject) {
     
         print("FOI favorite")
-
-    
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -71,7 +74,7 @@ class ShoppingBoxTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.scrollView.contentSize.width = self.bounds.width + 80 ;
+        self.scrollView.contentSize.width = self.bounds.width + 80
     }
    
 }

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +14,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -24,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1118" y="23"/>
         </scene>
-        <!--Shopping Box View Controller-->
+        <!--Shopping Box Container View Controller-->
         <scene sceneID="6za-ii-dJ4">
             <objects>
-                <viewController id="Xam-Z7-ox1" customClass="ShoppingBoxViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xam-Z7-ox1" customClass="ShoppingBoxContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Icp-yf-q1B"/>
                         <viewControllerLayoutGuide type="bottom" id="HrW-v2-eNW"/>
@@ -36,97 +38,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTo-EA-wGZ">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxP-Wy-eow">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <connections>
+                                    <segue destination="4d9-6Q-XC3" kind="embed" id="1ns-SF-Hvy"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-HF-bUJ" customClass="ButtonSegmentedControl" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="35" width="375" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Xam-Z7-ox1" id="jLU-mo-Yhj"/>
-                                    <outlet property="delegate" destination="Xam-Z7-ox1" id="B7n-Yf-D8S"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wF-g9-I6s">
-                                <color key="backgroundColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Qv7-MJ-gpE"/>
+                                    <constraint firstAttribute="height" constant="35" id="CTe-Us-sWh"/>
                                 </constraints>
-                                <state key="normal" title="COMPRAR">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="eLR-xa-wFd"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-Ow-8L8">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-4I-FPn">
-                                        <frame key="frameInset" minX="1" minY="18" width="134" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="MY BOX">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changeBox:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="mMq-un-2Im"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-fO-MKU">
-                                        <frame key="frameInset" minX="134" minY="18" width="130" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="PEDIDOS">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="changeListOrder:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="vuQ-fr-f0F"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="uOH-Ow-8L8" secondAttribute="height" multiplier="265:59" constant="-6" id="6MQ-Nc-k9g"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftButtonHighlightedTitle" value="MY BOX"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightButtonHighlightedTitle" value="PEDIDOS"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftButtonNormalTitle" value="MY BOX"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightButtonNormalTitle" value="PEDIDOS"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonHighlightedTitleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonHighlightedBackgroundColor">
+                                        <color key="value" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonHighlightedBorderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonHighlightedBorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonNormalTitleColor">
+                                        <color key="value" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonNormalBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonNormalBorderColor">
+                                        <color key="value" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonNormalBorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftButtonCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightButtonCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonSpacing">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-7w-BCo">
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" image="close_Button"/>
-                                <connections>
-                                    <action selector="backToViewController:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="aRM-qx-Sg0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="nBY-7w-BCo" secondAttribute="trailing" constant="-11" id="0ts-sa-uR1"/>
-                            <constraint firstItem="uOH-Ow-8L8" firstAttribute="top" secondItem="76r-qQ-ZOB" secondAttribute="topMargin" constant="14" id="2wh-QD-5jm"/>
-                            <constraint firstItem="6wF-g9-I6s" firstAttribute="trailing" secondItem="rTo-EA-wGZ" secondAttribute="trailing" id="4xd-hV-U3N"/>
-                            <constraint firstItem="uOH-Ow-8L8" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" constant="-4.5" id="5Gm-Yi-cnT"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerX" secondItem="76r-qQ-ZOB" secondAttribute="centerX" id="7vO-TG-MgE"/>
-                            <constraint firstItem="nBY-7w-BCo" firstAttribute="top" secondItem="Icp-yf-q1B" secondAttribute="bottom" constant="15" id="cEo-Yf-Eda"/>
-                            <constraint firstItem="HrW-v2-eNW" firstAttribute="top" secondItem="6wF-g9-I6s" secondAttribute="bottom" id="jb1-Wq-P5Q"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="top" secondItem="uOH-Ow-8L8" secondAttribute="bottom" constant="8" symbolic="YES" id="li8-fH-BJi"/>
-                            <constraint firstItem="nBY-7w-BCo" firstAttribute="leading" secondItem="uOH-Ow-8L8" secondAttribute="trailing" constant="8" id="ljP-nV-nd3"/>
-                            <constraint firstItem="6wF-g9-I6s" firstAttribute="leading" secondItem="rTo-EA-wGZ" secondAttribute="leading" id="oag-Yl-DcW"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="height" secondItem="76r-qQ-ZOB" secondAttribute="height" constant="-81" id="rmo-kV-ljm"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="centerY" secondItem="76r-qQ-ZOB" secondAttribute="centerY" constant="40.5" id="rvy-1o-rQ5"/>
-                            <constraint firstItem="rTo-EA-wGZ" firstAttribute="width" secondItem="76r-qQ-ZOB" secondAttribute="width" id="xKo-br-wjI"/>
+                            <constraint firstItem="3Yd-HF-bUJ" firstAttribute="top" secondItem="76r-qQ-ZOB" secondAttribute="top" constant="35" id="FrG-dg-YwG"/>
+                            <constraint firstAttribute="bottom" secondItem="PxP-Wy-eow" secondAttribute="bottom" id="P5T-sd-8Mz"/>
+                            <constraint firstAttribute="trailing" secondItem="3Yd-HF-bUJ" secondAttribute="trailing" id="Txg-Zo-YoA"/>
+                            <constraint firstItem="PxP-Wy-eow" firstAttribute="leading" secondItem="76r-qQ-ZOB" secondAttribute="leading" id="UYs-b9-Hzp"/>
+                            <constraint firstItem="PxP-Wy-eow" firstAttribute="top" secondItem="3Yd-HF-bUJ" secondAttribute="bottom" constant="20" id="WI9-35-n1n"/>
+                            <constraint firstAttribute="trailing" secondItem="PxP-Wy-eow" secondAttribute="trailing" id="XmW-9j-wy0"/>
+                            <constraint firstItem="3Yd-HF-bUJ" firstAttribute="leading" secondItem="76r-qQ-ZOB" secondAttribute="leading" id="raP-Zn-H27"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3fQ-Qu-pij"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="boxButton" destination="ik6-4I-FPn" id="RKt-5N-otA"/>
-                        <outlet property="closeButton" destination="nBY-7w-BCo" id="wmp-0D-NmH"/>
-                        <outlet property="orderButton" destination="RVK-fO-MKU" id="1k1-vl-kiH"/>
-                        <outlet property="tableView" destination="rTo-EA-wGZ" id="Kyv-mU-jgD"/>
+                        <outlet property="buttonSegmentedControl" destination="3Yd-HF-bUJ" id="FAl-85-Yuy"/>
                         <segue destination="LMx-MR-oGB" kind="presentation" identifier="segueFinalPurchase" id="D1K-M1-hvF"/>
                     </connections>
                 </viewController>
@@ -134,12 +114,96 @@
             </objects>
             <point key="canvasLocation" x="-52.5" y="13.732394366197184"/>
         </scene>
+        <!--Shopping Box View Controller-->
+        <scene sceneID="tUB-U0-yig">
+            <objects>
+                <viewController id="4d9-6Q-XC3" customClass="ShoppingBoxViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7a-g2-6hy"/>
+                        <viewControllerLayoutGuide type="bottom" id="EMr-aR-AmH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2az-xy-c3V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-aC-vPT">
+                                <rect key="frame" x="0.0" y="533" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tKn-AR-jBI"/>
+                                </constraints>
+                                <state key="normal" title="COMPRAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="7tc-DK-j94"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4d9-6Q-XC3" id="POR-Xl-Ti3"/>
+                                    <outlet property="delegate" destination="4d9-6Q-XC3" id="dWq-Dj-ZHb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BRl-aC-vPT" firstAttribute="leading" secondItem="2az-xy-c3V" secondAttribute="leading" id="4SN-iq-7gq"/>
+                            <constraint firstItem="hf0-Ry-tNN" firstAttribute="top" secondItem="2az-xy-c3V" secondAttribute="top" id="CS5-cu-0j9"/>
+                            <constraint firstAttribute="trailing" secondItem="BRl-aC-vPT" secondAttribute="trailing" id="FiF-mq-wQO"/>
+                            <constraint firstAttribute="bottom" secondItem="BRl-aC-vPT" secondAttribute="bottom" id="M1s-gq-boy"/>
+                            <constraint firstItem="hf0-Ry-tNN" firstAttribute="leading" secondItem="2az-xy-c3V" secondAttribute="leading" id="ox9-YV-kA6"/>
+                            <constraint firstAttribute="trailing" secondItem="hf0-Ry-tNN" secondAttribute="trailing" id="sFx-wS-89Y"/>
+                            <constraint firstItem="BRl-aC-vPT" firstAttribute="top" secondItem="hf0-Ry-tNN" secondAttribute="bottom" id="w4j-wf-Mc9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buyButton" destination="BRl-aC-vPT" id="nSd-aX-KFH"/>
+                        <outlet property="tableView" destination="hf0-Ry-tNN" id="kGy-xW-paT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="575-Yn-fW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="737"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YG9-OT-Wxd">
+            <objects>
+                <viewController id="z1F-Qz-qAl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TRm-HF-NHK"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOq-Jm-vEx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eBd-OB-B1e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-uJ-3sf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EOq-Jm-vEx" firstAttribute="top" secondItem="Hms-uJ-3sf" secondAttribute="bottom" id="C5Y-vE-5I4"/>
+                            <constraint firstAttribute="trailing" secondItem="Hms-uJ-3sf" secondAttribute="trailing" id="cRk-ZJ-4DU"/>
+                            <constraint firstItem="Hms-uJ-3sf" firstAttribute="top" secondItem="eBd-OB-B1e" secondAttribute="top" id="rju-TO-Pgw"/>
+                            <constraint firstItem="Hms-uJ-3sf" firstAttribute="leading" secondItem="eBd-OB-B1e" secondAttribute="leading" id="zaV-Ju-QPB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-9T-TG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="777"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="T9k-Xk-PcE">
             <objects>
                 <navigationController id="LMx-MR-oGB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xj6-EP-ugh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nVm-ux-fja">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nVm-ux-fja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -164,6 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-3K-Wm3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
@@ -172,6 +237,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iec-vl-WVR">
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Iec-vl-WVR" secondAttribute="height" multiplier="25:3" id="l9o-p0-xeh"/>
@@ -233,6 +299,5 @@
     </scenes>
     <resources>
         <image name="arrow_Button" width="11" height="18"/>
-        <image name="close_Button" width="18" height="17"/>
     </resources>
 </document>
