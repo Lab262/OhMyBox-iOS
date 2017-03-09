@@ -37,7 +37,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="242" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WCe-Hc-Oby" id="mAK-cK-SjI"/>
@@ -47,14 +47,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="width" secondItem="lHJ-t0-MnT" secondAttribute="width" id="8e3-fJ-kMD"/>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="top" secondItem="GFt-QX-EFM" secondAttribute="bottom" id="CSn-lj-WCL"/>
+                            <constraint firstAttribute="trailing" secondItem="Rtn-OT-VLB" secondAttribute="trailing" id="1Qm-u8-qhG"/>
                             <constraint firstAttribute="trailing" secondItem="FmJ-h2-9W9" secondAttribute="trailing" constant="-30" id="Fv1-72-rUz"/>
                             <constraint firstItem="GFt-QX-EFM" firstAttribute="top" secondItem="lHJ-t0-MnT" secondAttribute="top" id="RAd-fn-2fJ"/>
                             <constraint firstItem="FmJ-h2-9W9" firstAttribute="top" secondItem="lHJ-t0-MnT" secondAttribute="top" constant="25" id="Wl8-Q8-qzu"/>
+                            <constraint firstItem="Qym-34-JOd" firstAttribute="top" secondItem="Rtn-OT-VLB" secondAttribute="bottom" id="XzX-KW-lRv"/>
                             <constraint firstAttribute="trailing" secondItem="GFt-QX-EFM" secondAttribute="trailing" id="aAS-Td-eCE"/>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerY" secondItem="lHJ-t0-MnT" secondAttribute="centerY" id="drE-Ev-5Lc"/>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerX" secondItem="lHJ-t0-MnT" secondAttribute="centerX" id="efP-9E-8gv"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="leading" secondItem="lHJ-t0-MnT" secondAttribute="leading" id="g3D-Pq-sOy"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="top" secondItem="GFt-QX-EFM" secondAttribute="bottom" id="juU-tL-Pva"/>
                             <constraint firstItem="GFt-QX-EFM" firstAttribute="leading" secondItem="lHJ-t0-MnT" secondAttribute="leading" id="z0a-PD-iVJ"/>
                         </constraints>
                     </view>
@@ -93,7 +93,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z9V-g4-n4P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9V-g4-n4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

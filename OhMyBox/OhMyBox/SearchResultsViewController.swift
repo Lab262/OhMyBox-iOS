@@ -66,7 +66,6 @@ class SearchResultsViewController: UIViewController {
     }
     
     func setUpNavigationBar() {
-        navigationController?.isNavigationBarHidden = true
         navigationBar.leftBarButton.setImage(#imageLiteral(resourceName: "searchIcon"), for: .normal)
         navigationBar.titleLabelText = navigationBarTitle
         

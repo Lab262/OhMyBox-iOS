@@ -52,7 +52,6 @@ class SearchContainerViewController: UIViewController {
         super.viewDidLoad()
         setUpSearchController()
         getChildViewControllersReferences()
-        navigationController?.isNavigationBarHidden = true
         definesPresentationContext = true
         // Do any additional setup after loading the view.
     }

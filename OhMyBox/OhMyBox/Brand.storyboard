@@ -31,7 +31,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -79,13 +79,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OF2-9x-pJh" firstAttribute="width" secondItem="PvB-aO-x9x" secondAttribute="width" id="1KW-ZM-7tW"/>
+                            <constraint firstItem="OF2-9x-pJh" firstAttribute="top" secondItem="rsw-05-hZM" secondAttribute="bottom" id="92D-YM-UAo"/>
+                            <constraint firstAttribute="trailing" secondItem="OF2-9x-pJh" secondAttribute="trailing" id="Anh-7H-Yjv"/>
                             <constraint firstItem="rsw-05-hZM" firstAttribute="leading" secondItem="PvB-aO-x9x" secondAttribute="leading" id="DlN-0G-WeK"/>
+                            <constraint firstItem="OF2-9x-pJh" firstAttribute="leading" secondItem="PvB-aO-x9x" secondAttribute="leading" id="L3t-N4-qRs"/>
                             <constraint firstAttribute="trailing" secondItem="rsw-05-hZM" secondAttribute="trailing" id="MLn-1H-RNt"/>
-                            <constraint firstItem="OF2-9x-pJh" firstAttribute="top" secondItem="rsw-05-hZM" secondAttribute="bottom" id="Uef-8W-H5L"/>
-                            <constraint firstItem="OF2-9x-pJh" firstAttribute="centerX" secondItem="PvB-aO-x9x" secondAttribute="centerX" id="XdF-cW-Wfn"/>
                             <constraint firstItem="rsw-05-hZM" firstAttribute="top" secondItem="PvB-aO-x9x" secondAttribute="top" id="Znl-Nl-7AR"/>
-                            <constraint firstItem="OF2-9x-pJh" firstAttribute="centerY" secondItem="PvB-aO-x9x" secondAttribute="centerY" constant="7.5" id="y4d-gf-ai2"/>
+                            <constraint firstItem="10P-Na-zNH" firstAttribute="top" secondItem="OF2-9x-pJh" secondAttribute="bottom" id="ahs-1Q-aEC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Marca" id="cta-CZ-svg"/>
@@ -351,6 +351,6 @@
         <image name="profile_dummy" width="34" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qsl-tW-DYd"/>
+        <segue reference="BYE-Rs-ycl"/>
     </inferredMetricsTieBreakers>
 </document>
