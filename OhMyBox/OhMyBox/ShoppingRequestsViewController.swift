@@ -25,12 +25,18 @@ class ShoppingRequestsViewController: UIViewController {
         super.viewDidLoad()
         registerNibs()
         setUpEmptyView()
-//        requests = [1: [], 2: [], 3: []]
+        setUpTableView()
+        requests = [1: [1, 2], 2: [1], 3: [3, 5]]
         // Do any additional setup after loading the view.
     }
 
     func registerNibs() {
+        tableView.registerNibFrom(ShoppingProductTableViewCell.self)
         tableView.registerNibFrom(ShoppingRequestsHeaderTableViewCell.self)
+    }
+    
+    func setUpTableView() {
+        
     }
     
     func setUpEmptyView() {
@@ -71,14 +77,19 @@ extension ShoppingRequestsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingProductTableViewCell.identifier) as! ShoppingProductTableViewCell
+        
+        cell.info = (#imageLiteral(resourceName: "product_placeholder"), "SAIA COLLECTION", "fashion store", 1, 50)
+        
+        return cell
     }
 }
 
 extension ShoppingRequestsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
+        
+        return ShoppingProductTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -88,6 +99,7 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let header = generateRequestHeader(tableView, viewForHeaderInSection: section)
+        header.backgroundColor = .white
         
         return header
     }

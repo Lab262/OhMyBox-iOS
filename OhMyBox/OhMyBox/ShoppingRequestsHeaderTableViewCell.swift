@@ -15,7 +15,7 @@ class ShoppingRequestsHeaderTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 44.0
+        return 68.0
     }
     
     static var nibName: String {
