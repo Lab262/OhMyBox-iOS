@@ -23,12 +23,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-C2-h7d">
-                    <rect key="frame" x="20" y="0.0" width="335" height="36"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFH-4m-TTG">
-                            <rect key="frame" x="0.0" y="0.0" width="165" height="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="185" height="36"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="165" id="T25-Nh-ydg"/>
                                 <constraint firstAttribute="height" constant="36" id="Xc1-GN-CT5"/>
                             </constraints>
                             <state key="normal" title="Button"/>
@@ -42,10 +41,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NE-Ed-q6b">
-                            <rect key="frame" x="170" y="0.0" width="165" height="36"/>
+                            <rect key="frame" x="190" y="0.0" width="185" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="BBY-93-M1i"/>
-                                <constraint firstAttribute="width" constant="165" id="Wcu-kb-UVf"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
@@ -58,11 +56,16 @@
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="9NE-Ed-q6b" firstAttribute="width" secondItem="OFH-4m-TTG" secondAttribute="width" id="f6I-yU-OtY"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ol9-C2-h7d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8j6-JF-G08"/>
+                <constraint firstAttribute="trailing" secondItem="Ol9-C2-h7d" secondAttribute="trailing" id="F5j-wg-z5U"/>
+                <constraint firstItem="Ol9-C2-h7d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lrd-CI-XNf"/>
                 <constraint firstItem="Ol9-C2-h7d" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l8e-GY-h9G"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
