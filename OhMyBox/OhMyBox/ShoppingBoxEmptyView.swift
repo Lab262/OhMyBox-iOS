@@ -38,8 +38,13 @@ class ShoppingBoxEmptyView: UIView {
     }
     
     func updateInfo() {
-        titleLabel.attributedText = info?.title.with(characterSpacing: 1.08)
-        textLabel.attributedText = info?.text.with(characterSpacing: 1.11)
+        
+        let titleAtt = info?.title.with(characterSpacing: 1.08, lineSpacing: -15, alignment: NSTextAlignment.center)
+        
+        
+        
+        titleLabel.attributedText = titleAtt
+        textLabel.attributedText = info?.text.with(characterSpacing: 1.11, lineSpacing: -15, alignment: NSTextAlignment.center)
         imageView.image = info?.image
         buttonHandler = info?.buttonHandler
     }

@@ -13,6 +13,8 @@ class ShoppingRequestsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: ShoppingBoxEmptyView!
     
+    var isEmptyInfo: ShoppingBoxEmptyView.Info?
+    
     var requestBrands: [Int] = []
     var requests: [Int: [Any]] = [:] { // Brand: Products
         didSet {
@@ -22,8 +24,8 @@ class ShoppingRequestsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
-        
-        requests = [1: [], 2: [], 3: []]
+        setUpEmptyView()
+//        requests = [1: [], 2: [], 3: []]
         // Do any additional setup after loading the view.
     }
 
@@ -31,12 +33,32 @@ class ShoppingRequestsViewController: UIViewController {
         tableView.registerNibFrom(ShoppingRequestsHeaderTableViewCell.self)
     }
     
+    func setUpEmptyView() {
+        isEmptyInfo = (#imageLiteral(resourceName: "empty_requests"), "Opa, você precisa fazer umas comprinhas", "Tem vários produtos que são a sua cara aqui na OH MY BOX, não se reprima!", { button in
+            self.showAllProducts()
+        })
+        
+        emptyView.info = isEmptyInfo
+    }
+    
+    func showAllProducts() {
+        
+    }
 }
 
 extension ShoppingRequestsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        updateIsTableViewHidden()
         return requestBrands.count
+    }
+    
+    func updateIsTableViewHidden() {
+        let count = requestBrands.count
+        
+        let isTableViewHidden = count == 0
+        tableView.isHidden = isTableViewHidden
+        emptyView.isHidden = !isTableViewHidden
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
