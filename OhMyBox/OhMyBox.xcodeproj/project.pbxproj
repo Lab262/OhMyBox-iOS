@@ -161,6 +161,9 @@
 		4CE3B8901E5E30A80065A293 /* SearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B88F1E5E30A80065A293 /* SearchContainerViewController.swift */; };
 		4CE5DFE71E71B8700093CC0E /* ShoppingBoxEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFE61E71B8700093CC0E /* ShoppingBoxEmptyView.swift */; };
 		4CE5DFEA1E71BA250093CC0E /* ShoppingBoxEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFE91E71BA250093CC0E /* ShoppingBoxEmptyView.xib */; };
+		4CE5DFEC1E71C43E0093CC0E /* ShoppingRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFEB1E71C43E0093CC0E /* ShoppingRequestsViewController.swift */; };
+		4CE5DFF01E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFEE1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.swift */; };
+		4CE5DFF11E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFEF1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib */; };
 		88A6DF794C8D5276CE936DC2 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D20B1E77921CD37EE4FC5B7 /* Pods_OhMyBoxTests.framework */; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
 		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
@@ -398,6 +401,9 @@
 		4CE3B88F1E5E30A80065A293 /* SearchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContainerViewController.swift; sourceTree = "<group>"; };
 		4CE5DFE61E71B8700093CC0E /* ShoppingBoxEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxEmptyView.swift; sourceTree = "<group>"; };
 		4CE5DFE91E71BA250093CC0E /* ShoppingBoxEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingBoxEmptyView.xib; sourceTree = "<group>"; };
+		4CE5DFEB1E71C43E0093CC0E /* ShoppingRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingRequestsViewController.swift; sourceTree = "<group>"; };
+		4CE5DFEE1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingRequestsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		4CE5DFEF1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingRequestsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		593CC679AF27F8876E27C4DF /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputScrollView.swift; sourceTree = "<group>"; };
@@ -614,6 +620,7 @@
 				2F70E8361DC987AE000AB03B /* FinalPurchaseViewController.swift */,
 				4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */,
 				4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */,
+				4CE5DFEB1E71C43E0093CC0E /* ShoppingRequestsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -621,8 +628,9 @@
 		2F70E8051DC7C3C6000AB03B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2F70E8391DC987DE000AB03B /* CellFinalPurchase */,
 				2F70E8381DC987CB000AB03B /* Box */,
+				4CE5DFED1E71C74F0093CC0E /* Requests */,
+				2F70E8391DC987DE000AB03B /* CellFinalPurchase */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -978,6 +986,15 @@
 				4CE5DFE91E71BA250093CC0E /* ShoppingBoxEmptyView.xib */,
 			);
 			name = "Empty Views";
+			sourceTree = "<group>";
+		};
+		4CE5DFED1E71C74F0093CC0E /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4CE5DFEE1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.swift */,
+				4CE5DFEF1E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		64612CF48B1EAC2E4BDDFE27 /* Frameworks */ = {
@@ -1490,6 +1507,7 @@
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
 				4CE3B88C1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib in Resources */,
 				D4778E281DD2716C005B2914 /* TagView4.xib in Resources */,
+				4CE5DFF11E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.xib in Resources */,
 				2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */,
 				2F4896F31DB7EA0000EADFFE /* Muli-Light.ttf in Resources */,
 				2F4896F41DB7EA0300EADFFE /* Muli-Regular.ttf in Resources */,
@@ -1747,11 +1765,13 @@
 				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
 				4C278CC71E71A18200C80E8D /* ShoppingBoxContainerViewController.swift in Sources */,
 				2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */,
+				4CE5DFF01E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.swift in Sources */,
 				4CE3B88E1E5E305E0065A293 /* SearchSuggestionsViewController.swift in Sources */,
 				D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */,
 				D4C0D65E1DB6B1F2007C3113 /* TagView1.swift in Sources */,
 				4C8AAF1E1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				4CDBE94C1E69F32B00715226 /* BrandCollectionViewCell.swift in Sources */,
+				4CE5DFEC1E71C43E0093CC0E /* ShoppingRequestsViewController.swift in Sources */,
 				4CE3B8901E5E30A80065A293 /* SearchContainerViewController.swift in Sources */,
 				4CAEA94C1E6F181500FC65BD /* ButtonSegmentedControl.swift in Sources */,
 				2F70E8371DC987AE000AB03B /* FinalPurchaseViewController.swift in Sources */,

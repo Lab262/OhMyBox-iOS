@@ -19,7 +19,7 @@ class ShoppingBoxViewController: UIViewController {
     
     var products: [Any] = []
     
-    var isEmptyInfo: (image: UIImage, title: String, text: String, buttonHandler: UIButton.ButtonHandler)!
+    var isEmptyInfo: ShoppingBoxEmptyView.Info?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +39,7 @@ class ShoppingBoxViewController: UIViewController {
             self.showAllProducts()
         })
         
-        emptyView.imageView.image = isEmptyInfo.image
-        emptyView.title = isEmptyInfo.title
-        emptyView.text = isEmptyInfo.text
-        emptyView.buttonHandler = isEmptyInfo.buttonHandler
+        emptyView.info = isEmptyInfo
     }
     
     func showAllProducts() {
@@ -73,6 +70,7 @@ extension ShoppingBoxViewController: UITableViewDataSource {
         
         let isTableViewHidden = count == 0
         tableView.isHidden = isTableViewHidden
+        buyButton.isHidden = isTableViewHidden
         emptyView.isHidden = !isTableViewHidden
     }
     

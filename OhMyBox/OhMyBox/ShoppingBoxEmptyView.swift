@@ -10,6 +10,8 @@ import UIKit
 
 class ShoppingBoxEmptyView: UIView {
     
+    typealias Info = (image: UIImage, title: String, text: String, buttonHandler: UIButton.ButtonHandler)
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
@@ -17,15 +19,9 @@ class ShoppingBoxEmptyView: UIView {
     
     @IBOutlet weak var view: UIView!
     
-    var title: String? {
+    var info: Info? {
         didSet {
-            titleLabel.attributedText = title?.with(characterSpacing: 1.08)
-        }
-    }
-    
-    var text: String? {
-        didSet {
-            textLabel.attributedText = text?.with(characterSpacing: 1.11)
+            updateInfo()
         }
     }
     
@@ -39,6 +35,13 @@ class ShoppingBoxEmptyView: UIView {
     
     @IBAction func buttonAction(_ sender: UIButton) {
         buttonHandler?(sender)
+    }
+    
+    func updateInfo() {
+        titleLabel.attributedText = info?.title.with(characterSpacing: 1.08)
+        textLabel.attributedText = info?.text.with(characterSpacing: 1.11)
+        imageView.image = info?.image
+        buttonHandler = info?.buttonHandler
     }
     
 }
