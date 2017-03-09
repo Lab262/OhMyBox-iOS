@@ -10,15 +10,7 @@ import UIKit
 
 extension String {
     
-    func with(characterSpacing: Double) -> NSAttributedString {
-        
-        let att = NSMutableAttributedString(string: self)
-        att.addAttribute(NSKernAttributeName, value: characterSpacing, range: NSRange(location: 0, length: att.length - 1))
-        
-        return att
-    }
-    
-    func with(characterSpacing: Double, lineSpacing: CGFloat, alignment: NSTextAlignment = NSTextAlignment.left) -> NSAttributedString {
+    func with(characterSpacing: Double, lineSpacing: CGFloat = 0, alignment: NSTextAlignment = NSTextAlignment.left) -> NSAttributedString {
         
         let att = NSMutableAttributedString(string: self)
         
@@ -31,7 +23,6 @@ extension String {
         style.alignment = alignment
         
         att.addAttribute(NSParagraphStyleAttributeName, value: style, range: attributeRange)
-        
         
         return att
     }
