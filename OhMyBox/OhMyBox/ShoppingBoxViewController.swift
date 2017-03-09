@@ -12,24 +12,42 @@ class ShoppingBoxViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var emptyView: ShoppingBoxEmptyView!
     
     let cellSpacing: CGFloat = 25.0
     let footerView = UIView()
     
-    var products: [Any] = [1, 2, 3]
+    var products: [Any] = []
+    
+    var isEmptyInfo: (image: UIImage, title: String, text: String, buttonHandler: UIButton.ButtonHandler)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
+        setUpEmptyView()
         
         footerView.backgroundColor = .white
         footerView.frame.size = CGSize(width: view.frame.width, height: cellSpacing)
     }
-
+    
     func registerNibs() {
         tableView.registerNibFrom(ShoppingBoxTableViewCell.self)
     }
     
+    func setUpEmptyView() {
+        isEmptyInfo = (#imageLiteral(resourceName: "empty_box"), "Opa, vamos encher essa box, migx?", "Tem vários produtos que são a sua cara para você adicionar aqui", { button in
+            self.showAllProducts()
+        })
+        
+        emptyView.imageView.image = isEmptyInfo.image
+        emptyView.title = isEmptyInfo.title
+        emptyView.text = isEmptyInfo.text
+        emptyView.buttonHandler = isEmptyInfo.buttonHandler
+    }
+    
+    func showAllProducts() {
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -46,7 +64,16 @@ class ShoppingBoxViewController: UIViewController {
 extension ShoppingBoxViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        updateIsTableViewHidden()
         return products.count
+    }
+    
+    func updateIsTableViewHidden() {
+        let count = products.count
+        
+        let isTableViewHidden = count == 0
+        tableView.isHidden = isTableViewHidden
+        emptyView.isHidden = !isTableViewHidden
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

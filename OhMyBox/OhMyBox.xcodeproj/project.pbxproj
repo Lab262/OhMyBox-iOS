@@ -159,6 +159,8 @@
 		4CE3B88C1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B88A1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib */; };
 		4CE3B88E1E5E305E0065A293 /* SearchSuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B88D1E5E305E0065A293 /* SearchSuggestionsViewController.swift */; };
 		4CE3B8901E5E30A80065A293 /* SearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B88F1E5E30A80065A293 /* SearchContainerViewController.swift */; };
+		4CE5DFE71E71B8700093CC0E /* ShoppingBoxEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFE61E71B8700093CC0E /* ShoppingBoxEmptyView.swift */; };
+		4CE5DFEA1E71BA250093CC0E /* ShoppingBoxEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFE91E71BA250093CC0E /* ShoppingBoxEmptyView.xib */; };
 		88A6DF794C8D5276CE936DC2 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D20B1E77921CD37EE4FC5B7 /* Pods_OhMyBoxTests.framework */; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
 		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
@@ -394,6 +396,8 @@
 		4CE3B88A1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4CE3B88D1E5E305E0065A293 /* SearchSuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsViewController.swift; sourceTree = "<group>"; };
 		4CE3B88F1E5E30A80065A293 /* SearchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContainerViewController.swift; sourceTree = "<group>"; };
+		4CE5DFE61E71B8700093CC0E /* ShoppingBoxEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxEmptyView.swift; sourceTree = "<group>"; };
+		4CE5DFE91E71BA250093CC0E /* ShoppingBoxEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingBoxEmptyView.xib; sourceTree = "<group>"; };
 		593CC679AF27F8876E27C4DF /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		844DEEFA5B25952F098D285F /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
 		A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputScrollView.swift; sourceTree = "<group>"; };
@@ -598,7 +602,8 @@
 			isa = PBXGroup;
 			children = (
 				2F70E8051DC7C3C6000AB03B /* Cells */,
-				2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */,
+				4CE5DFE51E71B85D0093CC0E /* Storyboard */,
+				4CE5DFE81E71B8730093CC0E /* Empty Views */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -617,12 +622,12 @@
 			isa = PBXGroup;
 			children = (
 				2F70E8391DC987DE000AB03B /* CellFinalPurchase */,
-				2F70E8381DC987CB000AB03B /* CellShoppingBox */,
+				2F70E8381DC987CB000AB03B /* Box */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		2F70E8381DC987CB000AB03B /* CellShoppingBox */ = {
+		2F70E8381DC987CB000AB03B /* Box */ = {
 			isa = PBXGroup;
 			children = (
 				2F70E80A1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift */,
@@ -632,7 +637,7 @@
 				2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */,
 				2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */,
 			);
-			name = CellShoppingBox;
+			name = Box;
 			sourceTree = "<group>";
 		};
 		2F70E8391DC987DE000AB03B /* CellFinalPurchase */ = {
@@ -956,6 +961,23 @@
 				4C459F281E6373770076D962 /* SearchHighlightCollectionViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		4CE5DFE51E71B85D0093CC0E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2F70E8011DC7B985000AB03B /* ShoppingBox.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		4CE5DFE81E71B8730093CC0E /* Empty Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CE5DFE61E71B8700093CC0E /* ShoppingBoxEmptyView.swift */,
+				4CE5DFE91E71BA250093CC0E /* ShoppingBoxEmptyView.xib */,
+			);
+			name = "Empty Views";
 			sourceTree = "<group>";
 		};
 		64612CF48B1EAC2E4BDDFE27 /* Frameworks */ = {
@@ -1432,6 +1454,7 @@
 				2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */,
 				4CAEA94E1E6F182300FC65BD /* ButtonSegmentedControl.xib in Resources */,
 				4C2F25061E6631750043A90B /* MiniProductCollectionViewCell.xib in Resources */,
+				4CE5DFEA1E71BA250093CC0E /* ShoppingBoxEmptyView.xib in Resources */,
 				2F2999A51DE54ECA00D52203 /* Poppins-Bold.ttf in Resources */,
 				2F70E8411DC9925C000AB03B /* ProductPurchaseTableViewCell.xib in Resources */,
 				4C2F24F91E6623020043A90B /* HighlightsTableViewCell.xib in Resources */,
@@ -1638,6 +1661,7 @@
 				4CAEA9521E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift in Sources */,
 				2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */,
 				4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */,
+				4CE5DFE71E71B8700093CC0E /* ShoppingBoxEmptyView.swift in Sources */,
 				4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */,
 				4C2F24F81E6623020043A90B /* HighlightsTableViewCell.swift in Sources */,
 				A4422AD61DED004200A2593B /* Colors.swift in Sources */,

@@ -14,7 +14,7 @@ class ShoppingBoxTableViewCell: UITableViewCell {
         return "shoppingBoxCell"
     }
     static var cellHeight: CGFloat {
-        return 136
+        return 137
     }
     
     static var nibName: String {

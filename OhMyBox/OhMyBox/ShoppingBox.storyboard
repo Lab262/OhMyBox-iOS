@@ -14,7 +14,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,6 +135,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-aM-Z0L" customClass="ShoppingBoxEmptyView" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4d9-6Q-XC3" id="POR-Xl-Ti3"/>
+                                    <outlet property="delegate" destination="4d9-6Q-XC3" id="dWq-Dj-ZHb"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-aC-vPT">
                                 <rect key="frame" x="0.0" y="533" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,21 +160,17 @@
                                     <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="7tc-DK-j94"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="4d9-6Q-XC3" id="POR-Xl-Ti3"/>
-                                    <outlet property="delegate" destination="4d9-6Q-XC3" id="dWq-Dj-ZHb"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bbV-aM-Z0L" firstAttribute="leading" secondItem="2az-xy-c3V" secondAttribute="leading" id="09d-ks-5pI"/>
+                            <constraint firstAttribute="bottom" secondItem="bbV-aM-Z0L" secondAttribute="bottom" id="22X-16-876"/>
                             <constraint firstItem="BRl-aC-vPT" firstAttribute="leading" secondItem="2az-xy-c3V" secondAttribute="leading" id="4SN-iq-7gq"/>
+                            <constraint firstItem="bbV-aM-Z0L" firstAttribute="top" secondItem="2az-xy-c3V" secondAttribute="top" id="Brd-GV-jhf"/>
                             <constraint firstItem="hf0-Ry-tNN" firstAttribute="top" secondItem="2az-xy-c3V" secondAttribute="top" id="CS5-cu-0j9"/>
                             <constraint firstAttribute="trailing" secondItem="BRl-aC-vPT" secondAttribute="trailing" id="FiF-mq-wQO"/>
                             <constraint firstAttribute="bottom" secondItem="BRl-aC-vPT" secondAttribute="bottom" id="M1s-gq-boy"/>
+                            <constraint firstAttribute="trailing" secondItem="bbV-aM-Z0L" secondAttribute="trailing" id="hPk-bi-LXd"/>
                             <constraint firstItem="hf0-Ry-tNN" firstAttribute="leading" secondItem="2az-xy-c3V" secondAttribute="leading" id="ox9-YV-kA6"/>
                             <constraint firstAttribute="trailing" secondItem="hf0-Ry-tNN" secondAttribute="trailing" id="sFx-wS-89Y"/>
                             <constraint firstItem="BRl-aC-vPT" firstAttribute="top" secondItem="hf0-Ry-tNN" secondAttribute="bottom" id="w4j-wf-Mc9"/>
@@ -170,6 +178,7 @@
                     </view>
                     <connections>
                         <outlet property="buyButton" destination="BRl-aC-vPT" id="nSd-aX-KFH"/>
+                        <outlet property="emptyView" destination="bbV-aM-Z0L" id="cL0-jC-8sE"/>
                         <outlet property="tableView" destination="hf0-Ry-tNN" id="kGy-xW-paT"/>
                     </connections>
                 </viewController>
@@ -212,7 +221,7 @@
             <objects>
                 <navigationController id="LMx-MR-oGB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xj6-EP-ugh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nVm-ux-fja">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nVm-ux-fja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
