@@ -271,6 +271,8 @@ extension BrandDetailViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        print(scrollView.contentOffset)
+        
         let yOffset = scrollView.contentOffset.y + scrollView.contentInset.top
         
         updateImageScale(yOffset)
@@ -278,7 +280,39 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         updateHeaderViewsAlpha(yOffset)
         
         let searchBarConstraintConstant = searchBar.frame.height + scrollView.contentOffset.y
+        
         searchBarTopConstraint?.constant = max(0, -searchBarConstraintConstant)
+        
+    }
+    
+    func scrollTableViewToTop() {
+        
+//        var count = 0
+//        let fps = 120
+//        let duration = 0.25
+//        
+//        let numberOfFrames = Int(Double(fps) * (duration))
+//        
+//        let delta = (-self.searchBar.frame.height - self.tableView.contentOffset.y)
+//        let pace = delta/CGFloat(numberOfFrames)
+//        
+//        Timer.scheduledTimer(withTimeInterval: 1/Double(fps), repeats: true) { (timer) in
+//            count += 1
+//            
+//            self.tableView.contentOffset.y += pace
+//            
+//            if count == numberOfFrames {
+//                timer.invalidate()
+//            }
+//        }
+        
+        
+        tableView.setContentOffset(CGPoint(x: 0, y: -44), animated: true)
+    
+//        UIView.animate(withDuration: 0.25) {
+//            self.tableView.contentOffset = CGPoint(x: 0, y: -self.searchBar.frame.height)
+//        }
+        
     }
     
     func updateImageScale(_ yOffset: CGFloat) {
@@ -349,6 +383,7 @@ extension BrandDetailViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
+        scrollTableViewToTop()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
