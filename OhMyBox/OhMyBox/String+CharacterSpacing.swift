@@ -10,11 +10,11 @@ import UIKit
 
 extension String {
     
-    func with(characterSpacing: Double, lineSpacing: CGFloat = 0, alignment: NSTextAlignment = NSTextAlignment.left) -> NSAttributedString {
+    func with(characterSpacing: Double, lineSpacing: CGFloat = 0, alignment: NSTextAlignment = NSTextAlignment.left, color: UIColor = UIColor.clear) -> NSAttributedString {
         
         let att = NSMutableAttributedString(string: self)
         
-        let attributeRange = NSRange(location: 0, length: att.length - 1)
+        let attributeRange = NSRange(location: 0, length: att.length)
         
         att.addAttribute(NSKernAttributeName, value: characterSpacing, range: attributeRange)
         
@@ -23,6 +23,10 @@ extension String {
         style.alignment = alignment
         
         att.addAttribute(NSParagraphStyleAttributeName, value: style, range: attributeRange)
+        if color != .clear {
+            att.addAttribute(NSForegroundColorAttributeName, value: color, range: attributeRange)
+        }
+        
         
         return att
     }

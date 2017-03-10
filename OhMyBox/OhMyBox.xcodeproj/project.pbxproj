@@ -74,6 +74,8 @@
 		4C0B04AE1E731DB500F457BB /* ShoppingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */; };
 		4C0B04B11E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B04AF1E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift */; };
 		4C0B04B21E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04B01E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib */; };
+		4C0B04B51E732B5400F457BB /* ShoppingPlusProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B04B31E732B5400F457BB /* ShoppingPlusProductsTableViewCell.swift */; };
+		4C0B04B61E732B5400F457BB /* ShoppingPlusProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04B41E732B5400F457BB /* ShoppingPlusProductsTableViewCell.xib */; };
 		4C278CC51E718EB300C80E8D /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */; };
 		4C278CC71E71A18200C80E8D /* ShoppingBoxContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */; };
 		4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */; };
@@ -322,6 +324,8 @@
 		4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingStatusTableViewCell.xib; sourceTree = "<group>"; };
 		4C0B04AF1E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingRequestFooterTableViewCell.swift; sourceTree = "<group>"; };
 		4C0B04B01E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingRequestFooterTableViewCell.xib; sourceTree = "<group>"; };
+		4C0B04B31E732B5400F457BB /* ShoppingPlusProductsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingPlusProductsTableViewCell.swift; sourceTree = "<group>"; };
+		4C0B04B41E732B5400F457BB /* ShoppingPlusProductsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingPlusProductsTableViewCell.xib; sourceTree = "<group>"; };
 		4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxViewController.swift; sourceTree = "<group>"; };
 		4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxContainerViewController.swift; sourceTree = "<group>"; };
 		4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Utils.swift"; sourceTree = "<group>"; };
@@ -1017,6 +1021,8 @@
 				4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */,
 				4C0B04AF1E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift */,
 				4C0B04B01E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib */,
+				4C0B04B31E732B5400F457BB /* ShoppingPlusProductsTableViewCell.swift */,
+				4C0B04B41E732B5400F457BB /* ShoppingPlusProductsTableViewCell.xib */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -1514,6 +1520,7 @@
 				D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */,
 				D402DFFF1DB68CAD007855D6 /* Brand.storyboard in Resources */,
 				D457D7301DC3F60900443B63 /* TagView2.xib in Resources */,
+				4C0B04B61E732B5400F457BB /* ShoppingPlusProductsTableViewCell.xib in Resources */,
 				2F2999A81DE54ECA00D52203 /* Poppins-Regular.ttf in Resources */,
 				4C459F2A1E6373770076D962 /* SearchHighlightCollectionViewCell.xib in Resources */,
 				4C2F25021E66305A0043A90B /* MiniProductsTableViewCell.xib in Resources */,
@@ -1763,6 +1770,7 @@
 				2F70E83C1DC988B1000AB03B /* HeaderFinalPurchaseTableViewCell.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */,
+				4C0B04B51E732B5400F457BB /* ShoppingPlusProductsTableViewCell.swift in Sources */,
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
 				4CE5DFF41E71E21E0093CC0E /* ShoppingProductTableViewCell.swift in Sources */,
 				4C459F291E6373770076D962 /* SearchHighlightCollectionViewCell.swift in Sources */,
