@@ -89,6 +89,7 @@ class BrandDetailViewController: UIViewController {
     }
     
     func setUpTableView() {
+        tableView.keyboardDismissMode = .interactive
         tableView.backgroundColor = .clear
         tableView.contentInset = UIEdgeInsetsMake(32.0 + searchBar.frame.height + brandHeaderHeight - tableViewTopMargin, 0, 0, 0)
     }
@@ -270,9 +271,7 @@ extension BrandDetailViewController {
 extension BrandDetailViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        print(scrollView.contentOffset)
-        
+
         let yOffset = scrollView.contentOffset.y + scrollView.contentInset.top
         
         updateImageScale(yOffset)
@@ -305,7 +304,6 @@ extension BrandDetailViewController: UIScrollViewDelegate {
 //                timer.invalidate()
 //            }
 //        }
-        
         
         tableView.setContentOffset(CGPoint(x: 0, y: -44), animated: true)
     
