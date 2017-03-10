@@ -70,6 +70,10 @@
 		2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */; };
 		2FCB73B21DC9AC8800C93585 /* DiscountTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */; };
 		2FCB73B31DC9AC8800C93585 /* DiscountTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */; };
+		4C0B04AD1E731DB500F457BB /* ShoppingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B04AB1E731DB500F457BB /* ShoppingStatusTableViewCell.swift */; };
+		4C0B04AE1E731DB500F457BB /* ShoppingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */; };
+		4C0B04B11E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B04AF1E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift */; };
+		4C0B04B21E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04B01E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib */; };
 		4C278CC51E718EB300C80E8D /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */; };
 		4C278CC71E71A18200C80E8D /* ShoppingBoxContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */; };
 		4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */; };
@@ -314,6 +318,10 @@
 		2FAD48C41DB6FE4C00074D55 /* productDefaultimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productDefaultimage.png; sourceTree = "<group>"; };
 		2FCB73B01DC9AC8800C93585 /* DiscountTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountTitleTableViewCell.swift; sourceTree = "<group>"; };
 		2FCB73B11DC9AC8800C93585 /* DiscountTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountTitleTableViewCell.xib; sourceTree = "<group>"; };
+		4C0B04AB1E731DB500F457BB /* ShoppingStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingStatusTableViewCell.swift; sourceTree = "<group>"; };
+		4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingStatusTableViewCell.xib; sourceTree = "<group>"; };
+		4C0B04AF1E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingRequestFooterTableViewCell.swift; sourceTree = "<group>"; };
+		4C0B04B01E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingRequestFooterTableViewCell.xib; sourceTree = "<group>"; };
 		4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxViewController.swift; sourceTree = "<group>"; };
 		4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBoxContainerViewController.swift; sourceTree = "<group>"; };
 		4C2F24EA1E6602A00043A90B /* UITableViewCell+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Utils.swift"; sourceTree = "<group>"; };
@@ -1005,6 +1013,10 @@
 				4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */,
 				4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */,
 				4CE5DFF71E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib */,
+				4C0B04AB1E731DB500F457BB /* ShoppingStatusTableViewCell.swift */,
+				4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */,
+				4C0B04AF1E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift */,
+				4C0B04B01E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -1512,6 +1524,7 @@
 				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */,
 				4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */,
+				4C0B04AE1E731DB500F457BB /* ShoppingStatusTableViewCell.xib in Resources */,
 				D41E8FD91DE4F28F00BA3266 /* TagView5.xib in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
@@ -1538,6 +1551,7 @@
 				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
 				D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */,
 				2F0777501DBDAE0D003C124F /* TermTableViewCell.xib in Resources */,
+				4C0B04B21E73249800F457BB /* ShoppingRequestFooterTableViewCell.xib in Resources */,
 				4CAEA9461E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.xib in Resources */,
 				D402E0051DB68CE5007855D6 /* Wishlist.storyboard in Resources */,
 				2F4896EA1DB7486700EADFFE /* defaultGloes.png in Resources */,
@@ -1765,12 +1779,14 @@
 				D41E8FD71DE4F28200BA3266 /* TagView5.swift in Sources */,
 				4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */,
 				2F07774B1DBD9B95003C124F /* SimpleTextTableViewCell.swift in Sources */,
+				4C0B04B11E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift in Sources */,
 				A4D81D141DEBCF01008B269A /* AuthenticationContainerViewController.swift in Sources */,
 				2F9B19B31DF883FF000C2553 /* Product.swift in Sources */,
 				2F70E80C1DC7C502000AB03B /* ShoppingBoxTableViewCell.swift in Sources */,
 				4CE3B8811E5E2B8E0065A293 /* SearchViewController.swift in Sources */,
 				D402E0111DB69541007855D6 /* HomeViewController.swift in Sources */,
 				4CAEA9451E6F0F4B00FC65BD /* ProfilePhotoTableViewCell.swift in Sources */,
+				4C0B04AD1E731DB500F457BB /* ShoppingStatusTableViewCell.swift in Sources */,
 				4CAEA9491E6F127400FC65BD /* ProfileLabelTableViewCell.swift in Sources */,
 				4C2F24FC1E6623E00043A90B /* HighlightCollectionViewCell.swift in Sources */,
 				D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */,

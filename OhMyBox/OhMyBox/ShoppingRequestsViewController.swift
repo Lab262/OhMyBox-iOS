@@ -22,12 +22,18 @@ class ShoppingRequestsViewController: UIViewController {
             requestBrands = requests.keys.sorted()
         }
     }
+    
+    let sectionMargin: CGFloat = 31.0
+    let footerView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
         setUpEmptyView()
         setUpTableView()
         requests = [1: [1, 2, 3], 2: [1], 3: [3, 5]]
+        footerView.backgroundColor = .white
+        footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
         // Do any additional setup after loading the view.
     }
 
@@ -35,6 +41,8 @@ class ShoppingRequestsViewController: UIViewController {
         tableView.registerNibFrom(ShoppingProductTableViewCell.self)
         tableView.registerNibFrom(ShoppingRequestsHeaderTableViewCell.self)
         tableView.registerNibFrom(ShoppingResultsTableViewCell.self)
+        tableView.registerNibFrom(ShoppingStatusTableViewCell.self)
+        tableView.registerNibFrom(ShoppingRequestFooterTableViewCell.self)
     }
     
     func setUpTableView() {
@@ -56,11 +64,6 @@ class ShoppingRequestsViewController: UIViewController {
 
 extension ShoppingRequestsViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        updateIsTableViewHidden()
-        return requestBrands.count
-    }
-    
     func updateIsTableViewHidden() {
         let count = requestBrands.count
         
@@ -69,21 +72,35 @@ extension ShoppingRequestsViewController: UITableViewDataSource {
         emptyView.isHidden = !isTableViewHidden
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        updateIsTableViewHidden()
+        return requestBrands.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let brand = requestBrands[section]
         let brandRequests = requests[brand]!
         
-        return brandRequests.count
+        let footerCellsCount = 3
+        
+        return brandRequests.count + footerCellsCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell: UITableViewCell
         
+        let brand = requestBrands[indexPath.section]
+        let brandRequests = requests[brand]!
+        
+        let productCellsCount = min(brandRequests.count, 2)
+        
         switch indexPath.row {
-        case 0, 1: cell = generateProductCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+        case 0..<productCellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+        case productCellsCount: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+        case productCellsCount + 1: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
+        case productCellsCount + 2: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -97,9 +114,16 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
         
         let height: CGFloat
         
+        let brand = requestBrands[indexPath.section]
+        let brandRequests = requests[brand]!
+        
+        let productCellsCount = min(brandRequests.count, 2)
+        
         switch indexPath.row {
-        case 0, 1: height = ShoppingProductTableViewCell.cellHeight
-        case 2: height = ShoppingResultsTableViewCell.cellHeight
+        case 0..<productCellsCount: height = ShoppingProductTableViewCell.cellHeight
+        case productCellsCount: height = ShoppingResultsTableViewCell.cellHeight
+        case productCellsCount + 1: height = ShoppingStatusTableViewCell.cellHeight
+        case productCellsCount + 2: height = ShoppingRequestFooterTableViewCell.cellHeight
         default: height = 0
         }
         return height
@@ -115,6 +139,14 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
         header.backgroundColor = .white
         
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return sectionMargin
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return footerView
     }
 }
 
@@ -142,6 +174,20 @@ extension ShoppingRequestsViewController { // Cells generation
         let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingResultsTableViewCell.identifier) as! ShoppingResultsTableViewCell
         
         cell.info = (0, 100)
+        
+        return cell
+    }
+    
+    func generateStatusCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingStatusTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingStatusTableViewCell.identifier) as! ShoppingStatusTableViewCell
+        
+        cell.info = (Date(), "No estoque")
+        
+        return cell
+    }
+    
+    func generateFooterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingRequestFooterTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingRequestFooterTableViewCell.identifier) as! ShoppingRequestFooterTableViewCell
         
         return cell
     }
