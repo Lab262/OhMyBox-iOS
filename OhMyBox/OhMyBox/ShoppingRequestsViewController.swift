@@ -31,7 +31,7 @@ class ShoppingRequestsViewController: UIViewController {
         registerNibs()
         setUpEmptyView()
         setUpTableView()
-        requests = [1: [1, 2, 3, 4], 2: [1], 3: [3, 5]]
+//        requests = [1: [1, 2, 3, 4], 2: [1], 3: [3, 5]]
         footerView.backgroundColor = .white
         footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
         // Do any additional setup after loading the view.
@@ -56,6 +56,10 @@ class ShoppingRequestsViewController: UIViewController {
         })
         
         emptyView.info = isEmptyInfo
+        emptyView.buttonHandler = { button in
+            self.dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: Notifications.selectHomeViewController, object: nil)
+        }
     }
     
     func showAllProducts() {

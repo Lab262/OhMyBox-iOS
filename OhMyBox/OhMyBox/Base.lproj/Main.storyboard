@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="OYz-C2-3qN">
             <objects>
-                <tabBarController id="I7j-22-wTo" sceneMemberID="viewController">
+                <tabBarController id="I7j-22-wTo" customClass="TabBarController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Les-cr-vCI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

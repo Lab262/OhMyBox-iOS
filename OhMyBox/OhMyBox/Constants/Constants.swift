@@ -21,3 +21,9 @@ struct SegueIdentifiers {
     static let brandDetailToProductDetail = "goToProductDetail"
     static let brandDetailToCollecions = "goToCollections"
 }
+
+
+struct Notifications {
+    
+    static let selectHomeViewController = NSNotification.Name(rawValue: "selectHomeViewController")
+}

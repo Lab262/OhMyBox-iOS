@@ -40,6 +40,10 @@ class ShoppingBoxViewController: UIViewController {
         })
         
         emptyView.info = isEmptyInfo
+        emptyView.buttonHandler = { button in
+            self.dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: Notifications.selectHomeViewController, object: nil)
+        }
     }
     
     func showAllProducts() {
