@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M39-57-L0M" customClass="ButtonSegmentedControl" customModule="OhMyBox" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                        <rect key="frame" x="20" y="0.0" width="280" height="35"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="leftButtonHighlightedTitle" value="Meus dados"/>
@@ -31,8 +31,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="M39-57-L0M" secondAttribute="bottom" id="728-f1-um9"/>
-                    <constraint firstItem="M39-57-L0M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9Sj-8g-kgO"/>
-                    <constraint firstAttribute="trailing" secondItem="M39-57-L0M" secondAttribute="trailing" id="Epf-hJ-y5a"/>
+                    <constraint firstItem="M39-57-L0M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9Sj-8g-kgO"/>
+                    <constraint firstAttribute="trailing" secondItem="M39-57-L0M" secondAttribute="trailing" constant="20" id="Epf-hJ-y5a"/>
                     <constraint firstItem="M39-57-L0M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xmc-m7-Dgv"/>
                 </constraints>
             </tableViewCellContentView>
