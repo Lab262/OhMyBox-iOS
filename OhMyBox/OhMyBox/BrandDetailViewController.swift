@@ -113,6 +113,7 @@ class BrandDetailViewController: UIViewController {
             vc.emailInfo = ("EMAIL", "bolado@gmail.com")
             vc.phoneInfo = ("TELEFONE", "(61) 98789-0987")
             vc.locationInfo = ("ONDE ESTÁ", "RUA 13 Norte Lt. 1/3 Loja 168  Vitrinni Shopping Águas Claras, DF 71909-720")
+            vc.socialNetworkInfos = [(#imageLiteral(resourceName: "instagram_icon"), "@boladourban"), (#imageLiteral(resourceName: "facebook_icon"), "/boladourban"), (#imageLiteral(resourceName: "twitter_icon"), "@boladourban"), (#imageLiteral(resourceName: "youtube_icon"), "/boladourban")]
         }
     }
     

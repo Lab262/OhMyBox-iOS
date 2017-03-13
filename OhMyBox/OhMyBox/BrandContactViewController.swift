@@ -17,16 +17,23 @@ class BrandContactViewController: UIViewController {
     var emailInfo: BrandContactInfoTableViewCell.Info?
     var phoneInfo: BrandContactInfoTableViewCell.Info?
     var locationInfo: BrandContactLocationTableViewCell.Info?
+    var socialNetworkInfos: [BrandContactSocialNetworkTableViewCell.Info] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
         setUpTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpNavigationBar()
+    }
 
     func registerNibs() {
         tableView.registerNibFrom(BrandContactInfoTableViewCell.self)
         tableView.registerNibFrom(BrandContactLocationTableViewCell.self)
+        tableView.registerNibFrom(BrandContactHeaderTableViewCell.self)
+        tableView.registerNibFrom(BrandContactSocialNetworkTableViewCell.self)
     }
 
     func setUpTableView() {
@@ -46,24 +53,83 @@ class BrandContactViewController: UIViewController {
 extension BrandContactViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        
+        let rowsCount: Int
+        
+        switch section {
+        case 0: rowsCount = 3
+        case 1: rowsCount = socialNetworkInfos.count
+        default: rowsCount = 0
+        }
+        
+        return rowsCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: UITableViewCell
         
-        switch indexPath.row {
-        case 0, 1: cell = generateInfoCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateLocationCell(tableView, cellForRowAt: indexPath)
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0, 1: cell = generateInfoCell(tableView, cellForRowAt: indexPath)
+            case 2: cell = generateLocationCell(tableView, cellForRowAt: indexPath)
+            default: cell = UITableViewCell()
+            }
+        case 1:
+            cell = generateSocialNetworkCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view: UIView?
+        
+        switch section {
+        case 1: view = generateHeader(tableView, viewForHeaderInSection: section)
+        default: view = nil
+        }
+        
+        return view
+    }
+}
+
+extension BrandContactViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let height: CGFloat
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0, 1: height = BrandContactInfoTableViewCell.cellHeight
+            case 2: height = BrandContactLocationTableViewCell.cellHeight
+            default: height = 0
+            }
+        case 1: height = BrandContactSocialNetworkTableViewCell.cellHeight
+        default: height = 0
+        }
+        
+        return height
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        let height: CGFloat
+        
+        switch section {
+        case 1: height = BrandContactHeaderTableViewCell.cellHeight
+        default: height = CGFloat.leastNonzeroMagnitude
+        }
+        
+        return height
     }
 }
 
@@ -90,5 +156,21 @@ extension BrandContactViewController {
         cell.info = locationInfo
         
         return cell
+    }
+    
+    func generateSocialNetworkCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandContactSocialNetworkTableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: BrandContactSocialNetworkTableViewCell.identifier) as! BrandContactSocialNetworkTableViewCell
+        cell.info = socialNetworkInfos[indexPath.row]
+        return cell
+    }
+
+    
+    func generateHeader(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: BrandContactHeaderTableViewCell.identifier) as! BrandContactHeaderTableViewCell
+        
+        header.info = ("BOLADO", "NAS REDES")
+        
+        return header
     }
 }

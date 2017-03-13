@@ -352,6 +352,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grid_background" translatesAutoresizingMaskIntoConstraints="NO" id="6Sc-Pc-EFs">
+                                <rect key="frame" x="160" y="452" width="215" height="215"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNJ-US-ihB" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -361,7 +364,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MXg-pr-RZE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="oPY-7F-LaV" id="8fr-i4-bZL"/>
                                     <outlet property="delegate" destination="oPY-7F-LaV" id="Afs-b8-kOA"/>
@@ -371,11 +374,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iBu-Kv-w44" firstAttribute="top" secondItem="MXg-pr-RZE" secondAttribute="bottom" id="1PD-mk-2Oo"/>
+                            <constraint firstAttribute="trailing" secondItem="6Sc-Pc-EFs" secondAttribute="trailing" id="9aG-6S-W6Q"/>
                             <constraint firstItem="MXg-pr-RZE" firstAttribute="top" secondItem="oNJ-US-ihB" secondAttribute="bottom" id="ABs-es-mEq"/>
                             <constraint firstItem="oNJ-US-ihB" firstAttribute="leading" secondItem="ByC-RQ-yvh" secondAttribute="leading" id="BRc-XY-KRV"/>
                             <constraint firstItem="MXg-pr-RZE" firstAttribute="leading" secondItem="ByC-RQ-yvh" secondAttribute="leading" id="DpT-es-qa9"/>
                             <constraint firstAttribute="trailing" secondItem="MXg-pr-RZE" secondAttribute="trailing" id="EI7-bv-uXZ"/>
                             <constraint firstAttribute="trailing" secondItem="oNJ-US-ihB" secondAttribute="trailing" id="PY2-Gk-g0h"/>
+                            <constraint firstItem="iBu-Kv-w44" firstAttribute="top" secondItem="6Sc-Pc-EFs" secondAttribute="bottom" id="aYC-g1-ZgW"/>
                             <constraint firstItem="oNJ-US-ihB" firstAttribute="top" secondItem="ByC-RQ-yvh" secondAttribute="top" id="bNx-mF-7Dx"/>
                         </constraints>
                     </view>
@@ -402,6 +407,7 @@
         <image name="brandIconSelected_button" width="32" height="25"/>
         <image name="brand_detail_placeholder" width="375" height="353"/>
         <image name="brand_placeholder_image" width="375" height="277"/>
+        <image name="grid_background" width="215" height="215"/>
         <image name="ic_button_back" width="28" height="28"/>
         <image name="profile_dummy" width="34" height="26"/>
     </resources>

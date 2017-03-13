@@ -1,5 +1,5 @@
 //
-//  BrandContactLocationTableViewCell.swift
+//  BrandContactSocialNetworkTableViewCell.swift
 //  OhMyBox
 //
 //  Created by André Marques da Silva Rodrigues on 13/03/17.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-class BrandContactLocationTableViewCell: UITableViewCell {
+class BrandContactSocialNetworkTableViewCell: UITableViewCell {
 
     static var identifier: String {
-        return "brandContactLocationTableViewCell"
+        return "brandContactSocialNetworkTableViewCell"
     }
     
     static var cellHeight: CGFloat {
-        return UITableViewAutomaticDimension
+        return 65.0
     }
     
     static var nibName: String {
-        return "BrandContactLocationTableViewCell"
+        return "BrandContactSocialNetworkTableViewCell"
     }
     
-    typealias Info = (title: String, value: String)
+    typealias Info = (image: UIImage, title: String)
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
     
     var info: Info? {
         didSet {
@@ -45,16 +45,8 @@ class BrandContactLocationTableViewCell: UITableViewCell {
     }
     
     func updateInfo() {
-        if let info = info {
-            
-            titleLabel.text = info.title
-            valueLabel.attributedText = info.value.with(characterSpacing: 1.7)
-        } else {
-            
-            titleLabel.text = nil
-            valueLabel.attributedText = nil
-        }
+        titleLabel.attributedText = info?.title.with(characterSpacing: 1.7)
+        iconImageView.image = info?.image
     }
-
     
 }

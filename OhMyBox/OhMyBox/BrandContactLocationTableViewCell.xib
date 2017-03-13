@@ -45,6 +45,7 @@
                     <constraint firstItem="RcH-je-shT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="u9l-c1-BEo"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="titleLabel" destination="RcH-je-shT" id="ezX-fz-ND4"/>
                 <outlet property="valueLabel" destination="zLA-F4-IWx" id="x5O-rB-l5p"/>

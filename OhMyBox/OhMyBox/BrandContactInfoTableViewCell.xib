@@ -43,6 +43,7 @@
                     <constraint firstItem="9sZ-Yh-c4e" firstAttribute="centerY" secondItem="WKh-to-1zi" secondAttribute="centerY" id="mJb-fk-n69"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="titleLabel" destination="WKh-to-1zi" id="KOx-x0-b9z"/>
                 <outlet property="valueLabel" destination="9sZ-Yh-c4e" id="A59-hJ-Ge3"/>
