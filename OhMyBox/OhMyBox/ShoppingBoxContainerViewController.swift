@@ -32,12 +32,31 @@ class ShoppingBoxContainerViewController: UIViewController {
     @IBOutlet weak var shoppingBoxContainer: UIView!
     @IBOutlet weak var shoppingRequestsContainer: UIView!
     
+    var shoppingBoxViewController: ShoppingBoxViewController!
+    var shoppingRequestsViewController: ShoppingRequestsViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpButtonSegmentedControl()
         setPresentedController(.box)
+        getChildViewControllersReferences()
         // Do any additional setup after loading the view.
+    }
+    
+    func getChildViewControllersReferences() {
+        let vcs = childViewControllers
+        for vc in vcs {
+            
+            if vc is ShoppingBoxViewController {
+                shoppingBoxViewController = vc as! ShoppingBoxViewController
+                shoppingBoxViewController.buyButtonHandler = { button in
+                    self.performSegue(withIdentifier: SegueIdentifiers.shoppingBoxToPurchase, sender: self)
+                }
+            } else if vc is ShoppingRequestsViewController {
+                shoppingRequestsViewController = vc as! ShoppingRequestsViewController
+            }
+        }
     }
     
     func setUpButtonSegmentedControl() {

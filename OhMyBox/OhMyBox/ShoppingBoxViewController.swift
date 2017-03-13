@@ -17,9 +17,10 @@ class ShoppingBoxViewController: UIViewController {
     let cellSpacing: CGFloat = 25.0
     let footerView = UIView()
     
-    var products: [Any] = []
-    
+    var products: [Any] = [1]
     var isEmptyInfo: ShoppingBoxEmptyView.Info?
+    
+    var buyButtonHandler: UIButton.ButtonHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,10 @@ class ShoppingBoxViewController: UIViewController {
     
     func showAllProducts() {
         
+    }
+    
+    @IBAction func buyButtonAction(_ sender: UIButton!) {
+        buyButtonHandler?(sender)
     }
 
     /*

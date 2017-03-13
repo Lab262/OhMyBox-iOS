@@ -20,41 +20,41 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-RY-Ac6">
-                        <rect key="frame" x="18" y="37" width="42" height="27"/>
+                        <rect key="frame" x="18" y="36.5" width="42" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desconto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gJ-Pp-RMe">
-                        <rect key="frame" x="18" y="0.0" width="78" height="27"/>
+                        <rect key="frame" x="18" y="0.0" width="78" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6k-3l-dKD">
-                        <rect key="frame" x="209" y="0.0" width="23" height="27"/>
+                        <rect key="frame" x="209" y="0.0" width="23" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.058823529411764705" green="0.039215686274509803" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-PL-bwe">
-                        <rect key="frame" x="209" y="37" width="77" height="27"/>
+                        <rect key="frame" x="209" y="36.5" width="77" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.058823529409999999" green="0.039215686270000001" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30H-HX-loJ">
-                        <rect key="frame" x="64" y="37" width="140" height="27"/>
+                        <rect key="frame" x="64" y="36.5" width="140" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="0.5" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yml-PE-ieS">
-                        <rect key="frame" x="101" y="0.0" width="103" height="27"/>
+                        <rect key="frame" x="101" y="0.0" width="103" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="0.5" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -89,6 +89,7 @@
                 <outlet property="discountSeparatorLabel" destination="Yml-PE-ieS" id="hEc-2w-Jvv"/>
                 <outlet property="discountTitleLabel" destination="3gJ-Pp-RMe" id="jis-Fz-OHw"/>
                 <outlet property="discountValueLabel" destination="B6k-3l-dKD" id="Ypf-a2-Pzw"/>
+                <outlet property="separatorView" destination="eOY-tf-fYe" id="okX-Zc-hSV"/>
                 <outlet property="totalSeparatorLabel" destination="30H-HX-loJ" id="6xS-e0-Rqc"/>
                 <outlet property="totalTitleLabel" destination="dPE-RY-Ac6" id="4cH-Uh-Jhh"/>
                 <outlet property="totalValueLabel" destination="KDO-PL-bwe" id="ea7-kA-6Fc"/>

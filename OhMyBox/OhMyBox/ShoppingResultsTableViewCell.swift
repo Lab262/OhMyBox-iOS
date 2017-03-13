@@ -33,6 +33,8 @@ class ShoppingResultsTableViewCell: UITableViewCell {
     @IBOutlet weak var discountSeparatorLabel: UILabel!
     @IBOutlet weak var totalSeparatorLabel: UILabel!
     
+    @IBOutlet weak var separatorView: UIView!
+    
     var info: Info? {
         didSet {
             if let info = info {
@@ -75,6 +77,10 @@ class ShoppingResultsTableViewCell: UITableViewCell {
         
         discountSeparatorLabel.attributedText = discountSeparator.with(characterSpacing: 1.5)
         totalSeparatorLabel.attributedText = totalSeparator.with(characterSpacing: 1.5)
+    }
+    
+    override func setSeparatorHidden(_ hidden: Bool) {
+        separatorView.isHidden = hidden
     }
     
 }

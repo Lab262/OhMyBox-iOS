@@ -39,7 +39,7 @@ class ShoppingProductTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         productImageView.layer.cornerRadius = 3.0
-        updateInfo()
+//        updateInfo()
     }
     
     func updateInfo() {
