@@ -31,7 +31,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -113,44 +113,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-Rj-aCB">
-                                <rect key="frame" x="-1" y="332" width="377" height="32"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIv-2h-z33">
-                                        <rect key="frame" x="0.0" y="0.0" width="189" height="32"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                                        <state key="normal" title="Contato">
-                                            <color key="titleColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcS-V6-K4p">
-                                        <rect key="frame" x="188" y="0.0" width="189" height="32"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                                        <state key="normal" title="Políticas">
-                                            <color key="titleColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="3El-fD-bBS"/>
-                                </constraints>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-wg-8oC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="332"/>
                                 <subviews>
@@ -189,7 +151,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="handmade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-C0-IZm">
-                                        <rect key="frame" x="144.5" y="205" width="89.5" height="26.5"/>
+                                        <rect key="frame" x="143.5" y="205" width="89.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -264,6 +226,47 @@
                                     <outlet property="delegate" destination="AYZ-9D-ZUt" id="I5l-Yt-cek"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-Rj-aCB">
+                                <rect key="frame" x="-1" y="332" width="377" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIv-2h-z33">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="32"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                        <state key="normal" title="Contato">
+                                            <color key="titleColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="contactButtonAction:" destination="AYZ-9D-ZUt" eventType="touchUpInside" id="a7i-fe-1Oi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcS-V6-K4p">
+                                        <rect key="frame" x="188" y="0.0" width="189" height="32"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                        <state key="normal" title="Políticas">
+                                            <color key="titleColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3El-fD-bBS"/>
+                                </constraints>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DC-Eg-yja" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -312,13 +315,17 @@
                         <outlet property="brandImageView" destination="3la-ze-D1X" id="Shb-2h-Za2"/>
                         <outlet property="brandNameBottomLabel" destination="fc2-C0-IZm" id="xL0-cP-YCs"/>
                         <outlet property="brandNameTopLabel" destination="yke-7u-LLO" id="o7E-mZ-kfa"/>
+                        <outlet property="buttonsStackView" destination="ChS-Rj-aCB" id="uud-GX-gLD"/>
+                        <outlet property="contactButton" destination="rIv-2h-z33" id="o2S-sD-iJ5"/>
                         <outlet property="followButton" destination="egp-wt-NvF" id="qBf-lO-s1i"/>
                         <outlet property="navigationBarView" destination="1DC-Eg-yja" id="IlK-dr-GAs"/>
+                        <outlet property="policyButton" destination="wcS-V6-K4p" id="9IL-ee-ho1"/>
                         <outlet property="searchBar" destination="C4K-Vs-5dS" id="O3f-gu-Tif"/>
                         <outlet property="searchBarTopConstraint" destination="Wj4-GW-kET" id="KU9-R2-ccf"/>
                         <outlet property="tableView" destination="QzP-WY-RLA" id="jIB-Q7-OBb"/>
                         <segue destination="OXc-UR-xWl" kind="show" identifier="goToProductDetail" id="ODc-aA-aVd"/>
                         <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="Qsl-tW-DYd"/>
+                        <segue destination="oPY-7F-LaV" kind="show" identifier="brandDetailToContact" id="gef-Ym-O0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3N-RD-wqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,6 +339,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6QU-n4-1HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="898" y="858"/>
+        </scene>
+        <!--Brand Contact View Controller-->
+        <scene sceneID="zaF-Cg-rOg">
+            <objects>
+                <viewController id="oPY-7F-LaV" customClass="BrandContactViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v3Z-ax-HZa"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBu-Kv-w44"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ByC-RQ-yvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNJ-US-ihB" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="vFh-6K-EgJ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MXg-pr-RZE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oPY-7F-LaV" id="8fr-i4-bZL"/>
+                                    <outlet property="delegate" destination="oPY-7F-LaV" id="Afs-b8-kOA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iBu-Kv-w44" firstAttribute="top" secondItem="MXg-pr-RZE" secondAttribute="bottom" id="1PD-mk-2Oo"/>
+                            <constraint firstItem="MXg-pr-RZE" firstAttribute="top" secondItem="oNJ-US-ihB" secondAttribute="bottom" id="ABs-es-mEq"/>
+                            <constraint firstItem="oNJ-US-ihB" firstAttribute="leading" secondItem="ByC-RQ-yvh" secondAttribute="leading" id="BRc-XY-KRV"/>
+                            <constraint firstItem="MXg-pr-RZE" firstAttribute="leading" secondItem="ByC-RQ-yvh" secondAttribute="leading" id="DpT-es-qa9"/>
+                            <constraint firstAttribute="trailing" secondItem="MXg-pr-RZE" secondAttribute="trailing" id="EI7-bv-uXZ"/>
+                            <constraint firstAttribute="trailing" secondItem="oNJ-US-ihB" secondAttribute="trailing" id="PY2-Gk-g0h"/>
+                            <constraint firstItem="oNJ-US-ihB" firstAttribute="top" secondItem="ByC-RQ-yvh" secondAttribute="top" id="bNx-mF-7Dx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="oNJ-US-ihB" id="EMR-Ct-Rhd"/>
+                        <outlet property="tableView" destination="MXg-pr-RZE" id="tId-QM-yQA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aif-zQ-WLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3129" y="-344"/>
         </scene>
         <!--detailProduct-->
         <scene sceneID="0Gi-u0-Ppd">
@@ -351,6 +406,6 @@
         <image name="profile_dummy" width="34" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BYE-Rs-ycl"/>
+        <segue reference="Qsl-tW-DYd"/>
     </inferredMetricsTieBreakers>
 </document>

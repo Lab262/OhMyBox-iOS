@@ -10,6 +10,8 @@ import UIKit
 
 class BrandDetailViewController: UIViewController {
     
+// Mark: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
@@ -24,7 +26,13 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var brandDescriptionLabel: UILabel!
     @IBOutlet weak var followButton: UIButton!
     
+    @IBOutlet weak var buttonsStackView: UIStackView!
+    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var policyButton: UIButton!
+    
     @IBOutlet weak var brandHeaderViewHeightConstraint: NSLayoutConstraint!
+
+// Mark: - Properties
     weak var brandHeaderBlurView: UIVisualEffectView?
     
     weak var highlightsCollectionViewDelegate: UICollectionViewDelegate!
@@ -49,10 +57,6 @@ class BrandDetailViewController: UIViewController {
         setUpTableView()
         setUpNavigationBar()
         registerNibs()
-        
-//        tableView.isHidden = true
-//        brandHeaderView.isHidden = true
-        
         
         brandHeaderBlurView = brandBackgroundImage.blurWithStyle(.light)
         brandHeaderBlurView?.alpha = 0
@@ -103,17 +107,18 @@ class BrandDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "goProductsView" {
+        if segue.identifier == SegueIdentifiers.brandDetailToContact {
             
-            if let destinationViewController = segue.destination as? RecommendedViewController {
-                
-                destinationViewController.isHiddenRecommendedTitle = true
-                
-            }
+            let vc = segue.destination as! BrandContactViewController
+            vc.emailInfo = ("EMAIL", "bolado@gmail.com")
+            vc.phoneInfo = ("TELEFONE", "(61) 98789-0987")
+            vc.locationInfo = ("ONDE ESTÁ", "RUA 13 Norte Lt. 1/3 Loja 168  Vitrinni Shopping Águas Claras, DF 71909-720")
         }
-        
     }
     
+    @IBAction func contactButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueIdentifiers.brandDetailToContact, sender: self)
+    }
 }
 
 extension BrandDetailViewController: UITableViewDataSource {
@@ -221,7 +226,7 @@ extension BrandDetailViewController: UITableViewDelegate {
 
 // MARK: - Generate Cells
 
-extension BrandDetailViewController {
+extension BrandDetailViewController /* generate cells */ {
     
     func generateHeader(_ tableView: UITableView, viewForHeaderInSection section: Int) -> HomeTableViewHeaderView {
         let header = tableView.dequeueReusableCell(withIdentifier: HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
@@ -277,6 +282,8 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         updateImageScale(yOffset)
         updateNavigationBarAlpha(yOffset)
         updateHeaderViewsAlpha(yOffset)
+        updateStackButtonsZPosition(yOffset)
+        
         
         let searchBarConstraintConstant = searchBar.frame.height + scrollView.contentOffset.y
         
@@ -285,32 +292,7 @@ extension BrandDetailViewController: UIScrollViewDelegate {
     }
     
     func scrollTableViewToTop() {
-        
-//        var count = 0
-//        let fps = 120
-//        let duration = 0.25
-//        
-//        let numberOfFrames = Int(Double(fps) * (duration))
-//        
-//        let delta = (-self.searchBar.frame.height - self.tableView.contentOffset.y)
-//        let pace = delta/CGFloat(numberOfFrames)
-//        
-//        Timer.scheduledTimer(withTimeInterval: 1/Double(fps), repeats: true) { (timer) in
-//            count += 1
-//            
-//            self.tableView.contentOffset.y += pace
-//            
-//            if count == numberOfFrames {
-//                timer.invalidate()
-//            }
-//        }
-        
         tableView.setContentOffset(CGPoint(x: 0, y: -44), animated: true)
-    
-//        UIView.animate(withDuration: 0.25) {
-//            self.tableView.contentOffset = CGPoint(x: 0, y: -self.searchBar.frame.height)
-//        }
-        
     }
     
     func updateImageScale(_ yOffset: CGFloat) {
@@ -349,6 +331,15 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             setHeaderViewsAlpha(alpha)
         } else {
             setHeaderViewsAlpha(1)
+        }
+    }
+    
+    func updateStackButtonsZPosition(_ yOffset: CGFloat) {
+        if yOffset <= 0 {
+            
+            view.bringSubview(toFront: buttonsStackView)
+        } else {
+            view.sendSubview(toBack: buttonsStackView)
         }
     }
     
