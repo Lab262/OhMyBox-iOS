@@ -17,17 +17,30 @@ class PurchaseSuccessfulViewController: UIViewController {
     let headerImageTopMargin: CGFloat = 37.0
     
     let headerInfo: PurchaseSuccessfulHeaderTableViewCell.Info = ("TUDO CERTO", "COM SUA COMPRA!", "AQUI ALGUNS PASSOS PARA FICAR TUDO BELEZA")
+    let footerButtonTitles: [String] = ["Acompanhar pedido", "Entendi, obrigado!"]
+    var footerButtonHandlers: [UIButton.ButtonHandler] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
         setUpTableView()
+        
+        let followRequestHandler: UIButton.ButtonHandler = { button in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        let dismissHandler: UIButton.ButtonHandler = { button in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        footerButtonHandlers = [followRequestHandler, dismissHandler]
         // Do any additional setup after loading the view.
     }
     
     func registerNibs() {
         tableView.registerNibFrom(PurchaseSuccessfulTableViewCell.self)
         tableView.registerNibFrom(PurchaseSuccessfulHeaderTableViewCell.self)
+        tableView.registerNibFrom(PurchaseSuccessfulButtonTableViewCell.self)
     }
     
     func setUpTableView() {
@@ -44,30 +57,73 @@ class PurchaseSuccessfulViewController: UIViewController {
 extension PurchaseSuccessfulViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PurchaseSuccessfulTips.tips.count
+        
+        let numberOfRows: Int
+        
+        switch section {
+        case 0: numberOfRows = PurchaseSuccessfulTips.tips.count
+        case 1: numberOfRows = footerButtonTitles.count
+        default: numberOfRows = 0
+        }
+        
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return generatePurchaseSuccessfulCell(tableView, cellForRowAt: indexPath)
+        
+        let cell: UITableViewCell
+        
+        switch indexPath.section {
+        case 0: cell = generatePurchaseSuccessfulCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateButtonCell(tableView, cellForRowAt: indexPath)
+        default: cell = UITableViewCell()
+        }
+        
+        return cell
     }
 }
 
 extension PurchaseSuccessfulViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return PurchaseSuccessfulTableViewCell.cellHeight
+        
+        let height: CGFloat
+        
+        switch indexPath.section {
+        case 0: height = PurchaseSuccessfulTableViewCell.cellHeight
+        case 1: height = PurchaseSuccessfulButtonTableViewCell.cellHeight
+        default: height = 0
+        }
+        
+        return height
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return PurchaseSuccessfulHeaderTableViewCell.cellHeight
+        
+        let height: CGFloat
+        
+        switch section {
+        case 0: height = PurchaseSuccessfulHeaderTableViewCell.cellHeight
+        default: height = 0
+        }
+        
+        return height
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return generateHeaderView(tableView, viewForHeaderInSection: section)
+        
+        let view: UIView?
+        
+        switch section {
+        case 0: view = generateHeaderView(tableView, viewForHeaderInSection: section)
+        default: view = nil
+        }
+        
+        return view
     }
     
 }
@@ -81,10 +137,12 @@ extension PurchaseSuccessfulViewController {
         return cell
     }
     
-    func generateSubtitleCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateButtonCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseSuccessfulButtonTableViewCell.identifier) as! PurchaseSuccessfulButtonTableViewCell
         
+        cell.buttonTitle = footerButtonTitles[indexPath.row]
+        cell.buttonHandler = footerButtonHandlers[indexPath.row]
         return cell
     }
     
@@ -116,7 +174,6 @@ extension PurchaseSuccessfulViewController: UIScrollViewDelegate {
             headerImageHeightConstraint.constant = headerImageDefaultHeight
         }
     }
-    
     
 }
 

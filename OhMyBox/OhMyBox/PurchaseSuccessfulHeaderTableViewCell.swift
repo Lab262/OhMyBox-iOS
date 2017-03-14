@@ -17,7 +17,7 @@ class PurchaseSuccessfulHeaderTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 128.0
+        return 156.0
     }
     
     static var nibName: String {
