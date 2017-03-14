@@ -26,10 +26,14 @@ class PurchaseSuccessfulViewController: UIViewController {
         setUpTableView()
         
         let followRequestHandler: UIButton.ButtonHandler = { button in
-            self.dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: Notifications.selectHomeViewController, object: nil)
+            self.dismiss(animated: true, completion: {
+                NotificationCenter.default.post(name: Notifications.goToBoxViewController, object: nil)
+            })
         }
         
         let dismissHandler: UIButton.ButtonHandler = { button in
+            NotificationCenter.default.post(name: Notifications.selectHomeViewController, object: nil)
             self.dismiss(animated: true, completion: nil)
         }
         

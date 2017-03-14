@@ -31,6 +31,9 @@ class HomeViewController: UIViewController {
         registerNibs()
         setUpNavigationBar()
         setUpTableView()
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.goToBoxViewController(_:)), name: Notifications.goToBoxViewController, object: nil)
     }
     
     func fillClothingArray() {
@@ -92,6 +95,11 @@ class HomeViewController: UIViewController {
             default: break
             }
         }
+    }
+    
+    func goToBoxViewController(_ notification: Notification) {
+        navigationBarView.actionGoCart(notification)
+        NotificationCenter.default.post(name: Notifications.selectBoxRequestsViewController, object: nil)
     }
     
 }

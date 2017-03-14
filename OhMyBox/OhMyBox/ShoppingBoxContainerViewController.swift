@@ -35,11 +35,20 @@ class ShoppingBoxContainerViewController: UIViewController {
     var shoppingBoxViewController: ShoppingBoxViewController!
     var shoppingRequestsViewController: ShoppingRequestsViewController!
     
+    var startsInBox = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpButtonSegmentedControl()
-        setPresentedController(.box)
+        if startsInBox {
+            setPresentedController(.box)
+        } else {
+            setPresentedController(.requests)
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ShoppingBoxContainerViewController.setPresentedControllerRequests), name: Notifications.selectBoxRequestsViewController, object: nil)
+        
         getChildViewControllersReferences()
         // Do any additional setup after loading the view.
     }
@@ -81,6 +90,10 @@ class ShoppingBoxContainerViewController: UIViewController {
         
         shoppingBoxContainer.alpha = alphas.box
         shoppingRequestsContainer.alpha = alphas.requests
+    }
+    
+    func setPresentedControllerRequests() {
+        setPresentedController(.requests)
     }
     
     @IBAction func closeButton(_ sender: UIButton) {

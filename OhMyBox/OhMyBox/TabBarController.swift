@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    var homeRootViewController: HomeViewController?
+    
     override func viewDidLoad() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(TabBarController.selectHomeViewController(_:)), name: Notifications.selectHomeViewController, object: nil)
@@ -21,6 +23,9 @@ class TabBarController: UITabBarController {
     
     func selectHomeViewController(_ notification: Notification) {
         selectViewController(at: 0)
+        _ = viewControllers?[0].navigationController?.popToRootViewController(animated: false)
+        
+        
     }
 
 }

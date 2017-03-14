@@ -29,6 +29,8 @@ struct SegueIdentifiers {
 struct Notifications {
     
     static let selectHomeViewController = NSNotification.Name(rawValue: "selectHomeViewController")
+    static let goToBoxViewController = NSNotification.Name(rawValue: "selectBoxViewController")
+    static let selectBoxRequestsViewController = NSNotification.Name(rawValue: "selectBoxRequestsViewController")
 }
 
 struct PurchaseSuccessfulTips {
