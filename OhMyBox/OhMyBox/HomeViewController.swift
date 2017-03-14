@@ -98,8 +98,10 @@ class HomeViewController: UIViewController {
     }
     
     func goToBoxViewController(_ notification: Notification) {
-        navigationBarView.actionGoCart(notification)
-        NotificationCenter.default.post(name: Notifications.selectBoxRequestsViewController, object: nil)
+        navigationBarView.goToCart {
+            NotificationCenter.default.post(name: Notifications.selectBoxRequestsViewController, object: nil)
+        }
+        
     }
     
 }

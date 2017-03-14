@@ -93,7 +93,7 @@ class ShoppingBoxContainerViewController: UIViewController {
     }
     
     func setPresentedControllerRequests() {
-        setPresentedController(.requests)
+        buttonSegmentedControl.rightButtonAction(sender: buttonSegmentedControl.rightButton)
     }
     
     @IBAction func closeButton(_ sender: UIButton) {

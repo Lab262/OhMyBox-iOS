@@ -25,8 +25,11 @@ class IconNavigationBar: UIView {
     }
     
     @IBAction func actionGoCart(_ sender: Any) {
-        UIApplication.topViewController()?.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("ShoppingBox")!, animated: true, completion: nil)
+        goToCart(nil)
+    }
     
+    func goToCart(_ completion: (() -> ())?) {
+        UIApplication.topViewController()?.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("ShoppingBox")!, animated: true, completion: completion)
     }
     
     
