@@ -37,6 +37,10 @@ class PurchaseViewController: UIViewController {
         
     }
     
+    @IBAction func purchaseButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
+    }
+    
 }
 
 extension PurchaseViewController: UITableViewDataSource {

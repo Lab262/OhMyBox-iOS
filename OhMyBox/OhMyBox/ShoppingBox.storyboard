@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -247,6 +247,7 @@
                                 <connections>
                                     <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="tu3-J6-RKm"/>
                                     <action selector="buyButtonAction:" destination="4d9-6Q-XC3" eventType="touchUpInside" id="la7-p3-4LW"/>
+                                    <action selector="purchaseButtonAction:" destination="TIn-S5-4yd" eventType="touchUpInside" id="OYi-Dq-NGE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -266,11 +267,59 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="wam-j2-pfD" id="FHa-28-sJd"/>
+                        <segue destination="WnB-uH-sYk" kind="show" identifier="purchaseToPurchaseSuccessful" id="bpP-8I-gvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMI-I4-Ybq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017" y="13"/>
+        </scene>
+        <!--Purchase Successful View Controller-->
+        <scene sceneID="YEa-Oj-AHT">
+            <objects>
+                <viewController id="WnB-uH-sYk" customClass="PurchaseSuccessfulViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gvE-16-h0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="cQw-JL-1A3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uOY-pH-fTr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase_sucessful" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-rf-YpV">
+                                <rect key="frame" x="39.5" y="37" width="296" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="3eW-ss-zF2"/>
+                                    <constraint firstAttribute="height" constant="182" id="SCk-3j-FTu"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6aW-yT-kYF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WnB-uH-sYk" id="745-xN-9La"/>
+                                    <outlet property="delegate" destination="WnB-uH-sYk" id="w93-FF-rI3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tu3-rf-YpV" firstAttribute="centerX" secondItem="uOY-pH-fTr" secondAttribute="centerX" id="DQr-8O-aBp"/>
+                            <constraint firstItem="cQw-JL-1A3" firstAttribute="top" secondItem="6aW-yT-kYF" secondAttribute="bottom" id="TeP-2t-rfW"/>
+                            <constraint firstItem="6aW-yT-kYF" firstAttribute="top" secondItem="uOY-pH-fTr" secondAttribute="top" id="V31-Vi-hdV"/>
+                            <constraint firstItem="6aW-yT-kYF" firstAttribute="leading" secondItem="uOY-pH-fTr" secondAttribute="leading" id="esK-dp-pFo"/>
+                            <constraint firstAttribute="trailing" secondItem="6aW-yT-kYF" secondAttribute="trailing" id="qnp-03-pNB"/>
+                            <constraint firstItem="Tu3-rf-YpV" firstAttribute="top" secondItem="uOY-pH-fTr" secondAttribute="top" constant="37" id="t7w-VF-ukq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headerImageHeightConstraint" destination="SCk-3j-FTu" id="dS3-Yh-9qZ"/>
+                        <outlet property="tableView" destination="6aW-yT-kYF" id="kVb-2O-YSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kem-Fj-f1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="12.143928035982009"/>
         </scene>
         <!--Shopping Requests View Controller-->
         <scene sceneID="YG9-OT-Wxd">
@@ -329,5 +378,6 @@
     </scenes>
     <resources>
         <image name="close_Button" width="19" height="16"/>
+        <image name="purchase_sucessful" width="296" height="182"/>
     </resources>
 </document>

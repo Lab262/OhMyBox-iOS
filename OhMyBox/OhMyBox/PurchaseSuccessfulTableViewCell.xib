@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PurchaseSuccessfulTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVX-gL-u9k">
+                        <rect key="frame" x="20" y="8" width="11" height="11"/>
+                        <color key="backgroundColor" red="1" green="0.52156862745098043" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="H7f-Ld-r3Q"/>
+                            <constraint firstAttribute="width" secondItem="yVX-gL-u9k" secondAttribute="height" multiplier="1:1" id="Zna-N0-hA1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-bZ-L7I">
+                        <rect key="frame" x="38" y="0.0" width="246" height="29.5"/>
+                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yVX-gL-u9k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2Wb-je-6lP"/>
+                    <constraint firstAttribute="trailing" secondItem="KKH-bZ-L7I" secondAttribute="trailing" constant="36" id="T4O-lh-J9e"/>
+                    <constraint firstItem="KKH-bZ-L7I" firstAttribute="leading" secondItem="yVX-gL-u9k" secondAttribute="trailing" constant="7" id="Y0o-w8-qP8"/>
+                    <constraint firstAttribute="bottom" secondItem="KKH-bZ-L7I" secondAttribute="bottom" constant="14" id="fDR-Pn-aAa"/>
+                    <constraint firstItem="yVX-gL-u9k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="idX-DE-VhE"/>
+                    <constraint firstItem="KKH-bZ-L7I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lTu-zH-6N7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="KKH-bZ-L7I" id="IAI-MR-rNj"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
