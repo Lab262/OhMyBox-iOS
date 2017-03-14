@@ -16,6 +16,8 @@ class PurchaseSuccessfulViewController: UIViewController {
     let headerImageDefaultHeight: CGFloat = 182.0
     let headerImageTopMargin: CGFloat = 37.0
     
+    let headerInfo: PurchaseSuccessfulHeaderTableViewCell.Info = ("TUDO CERTO", "COM SUA COMPRA!", "AQUI ALGUNS PASSOS PARA FICAR TUDO BELEZA")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
@@ -25,7 +27,7 @@ class PurchaseSuccessfulViewController: UIViewController {
     
     func registerNibs() {
         tableView.registerNibFrom(PurchaseSuccessfulTableViewCell.self)
-        tableView.registerNibFrom(BrandContactHeaderTableViewCell.self)
+        tableView.registerNibFrom(PurchaseSuccessfulHeaderTableViewCell.self)
     }
     
     func setUpTableView() {
@@ -34,6 +36,7 @@ class PurchaseSuccessfulViewController: UIViewController {
         tableView.estimatedRowHeight = 200.0
         
         tableView.contentInset = UIEdgeInsets(top: headerImageDefaultHeight + headerImageTopMargin, left: 0, bottom: 20.0, right: 0)
+        tableView.backgroundColor = .clear
     }
 
 }
@@ -60,11 +63,11 @@ extension PurchaseSuccessfulViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+        return PurchaseSuccessfulHeaderTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
+        return generateHeaderView(tableView, viewForHeaderInSection: section)
     }
     
 }
@@ -76,6 +79,22 @@ extension PurchaseSuccessfulViewController {
         
         cell.title = PurchaseSuccessfulTips.tips[indexPath.row]
         return cell
+    }
+    
+    func generateSubtitleCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        
+        return cell
+    }
+    
+    func generateHeaderView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: PurchaseSuccessfulHeaderTableViewCell.identifier) as! PurchaseSuccessfulHeaderTableViewCell
+        header.info = headerInfo
+        
+        header.backgroundColor = .white
+        
+        return header
     }
 }
 
