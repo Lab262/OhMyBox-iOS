@@ -25,11 +25,14 @@ class IconNavigationBar: UIView {
     }
     
     @IBAction func actionGoCart(_ sender: Any) {
-        goToCart(nil)
+        goToCart(startsInBox: true, nil)
     }
     
-    func goToCart(_ completion: (() -> ())?) {
-        UIApplication.topViewController()?.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("ShoppingBox")!, animated: true, completion: completion)
+    func goToCart(startsInBox: Bool, _ completion: (() -> ())?) {
+        let navController = ViewUtil.viewControllerFromStoryboardWithIdentifier("ShoppingBox") as! UINavigationController
+        let vc = navController.topViewController as! ShoppingBoxContainerViewController
+        vc.startsInBox = startsInBox
+        UIApplication.topViewController()?.present(navController, animated: true, completion: completion)
     }
     
     
@@ -43,7 +46,7 @@ class IconNavigationBar: UIView {
     }
     
     func nibInit() {
-        Bundle.main.loadNibNamed("IconNavigationBar", owner: self, options: nil)?[0]
+        Bundle.main.loadNibNamed("IconNavigationBar", owner: self, options: nil)
         self.addSubview(view)
         view.frame = self.bounds
     }

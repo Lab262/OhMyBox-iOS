@@ -42,9 +42,11 @@ class ShoppingBoxContainerViewController: UIViewController {
         
         setUpButtonSegmentedControl()
         if startsInBox {
-            setPresentedController(.box)
+//            setPresentedController(.box)
+            buttonSegmentedControl.leftButtonAction(sender: buttonSegmentedControl.leftButton)
         } else {
-            setPresentedController(.requests)
+//            setPresentedController(.requests)
+            buttonSegmentedControl.rightButtonAction(sender: buttonSegmentedControl.rightButton)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(ShoppingBoxContainerViewController.setPresentedControllerRequests), name: Notifications.selectBoxRequestsViewController, object: nil)
