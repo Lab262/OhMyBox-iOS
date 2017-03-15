@@ -92,12 +92,14 @@ class ShoppingBoxContainerViewController: UIViewController {
         shoppingRequestsContainer.alpha = alphas.requests
     }
     
-    func setPresentedControllerRequests() {
-        buttonSegmentedControl.rightButtonAction(sender: buttonSegmentedControl.rightButton)
-    }
-    
     @IBAction func closeButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+// Mark: - Notification Handlers
+    
+    func setPresentedControllerRequests() {
+        buttonSegmentedControl.rightButtonAction(sender: buttonSegmentedControl.rightButton)
     }
 
 }

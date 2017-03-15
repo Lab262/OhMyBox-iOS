@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating_1" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-J9-Kgb">
-                                <rect key="frame" x="21.5" y="16" width="331" height="244"/>
+                                <rect key="frame" x="22" y="16" width="331" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="244" id="6q9-pU-xUl"/>
                                     <constraint firstAttribute="width" secondItem="vqB-J9-Kgb" secondAttribute="height" multiplier="331:244" id="dHI-e5-ZiD"/>
@@ -81,6 +81,9 @@
                                 <state key="normal" title="PULAR">
                                     <color key="titleColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="dismissButtonAction:" destination="PdY-Hv-6Dg" eventType="touchUpInside" id="FnA-2o-f8e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
