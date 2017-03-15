@@ -10,10 +10,16 @@ import UIKit
 
 extension UIImageView {
     
-    func blurWithStyle(_ style: UIBlurEffectStyle) -> UIVisualEffectView {
+    func blurWithStyle(_ style: UIBlurEffectStyle?) -> UIVisualEffectView {
         
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        let blurEffectView: UIVisualEffectView
+        
+        if let style = style {
+            let blurEffect = UIBlurEffect(style: style)
+            blurEffectView = UIVisualEffectView(effect: blurEffect)
+        } else {
+            blurEffectView = UIVisualEffectView()
+        }
         
         blurEffectView.translatesAutoresizingMaskIntoConstraints = false
         

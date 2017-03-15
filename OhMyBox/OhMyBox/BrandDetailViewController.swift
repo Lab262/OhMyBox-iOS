@@ -34,6 +34,7 @@ class BrandDetailViewController: UIViewController {
 
 // Mark: - Properties
     weak var brandHeaderBlurView: UIVisualEffectView?
+    var blurAnimator: UIViewPropertyAnimator?
     
     weak var highlightsCollectionViewDelegate: UICollectionViewDelegate!
     weak var collectionsCollectionViewDelegate: UICollectionViewDelegate!
@@ -58,8 +59,12 @@ class BrandDetailViewController: UIViewController {
         setUpNavigationBar()
         registerNibs()
         
-        brandHeaderBlurView = brandBackgroundImage.blurWithStyle(.light)
-        brandHeaderBlurView?.alpha = 0
+        brandHeaderBlurView = brandBackgroundImage.blurWithStyle(nil)
+        blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: { 
+            self.brandHeaderBlurView?.effect = UIBlurEffect(style: .regular)
+        })
+        blurAnimator?.startAnimation()
+        blurAnimator?.pauseAnimation()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -313,11 +318,14 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             
             let alpha = (yOffset - brandHeaderHeight + navbarAlphaThreshold)/navbarAlphaScale
             
-            brandHeaderBlurView?.alpha = alpha
+            blurAnimator?.fractionComplete = alpha
+            
+//            brandHeaderBlurView?.alpha = alpha
             brandBackgroundFilterView.alpha = max((2 - alpha) * 0.25, 0.25)
             
         } else {
-            brandHeaderBlurView?.alpha = 0.0
+//            brandHeaderBlurView?.alpha = 0.0
+            blurAnimator?.fractionComplete = 0.0
             brandBackgroundFilterView.alpha = 0.5
         }
     }
