@@ -14,6 +14,8 @@ class WishViewController: UIViewController {
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     
+    var wishlistProducts: [Any] = [1, 2]
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
@@ -54,7 +56,7 @@ class WishViewController: UIViewController {
     func generateWishlistCountCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: WishlistCountTableViewCell.identifier, for: indexPath) as! WishlistCountTableViewCell
-        cell.wishlistCount = ApplicationState.sharedInstance.favoriteProducts.count
+        cell.wishlistCount = wishlistProducts.count
         
         return cell
     }
@@ -77,7 +79,7 @@ extension WishViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return ApplicationState.sharedInstance.favoriteProducts.count + 1
+        return wishlistProducts.count + 1
     }
     
 }
