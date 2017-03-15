@@ -32,7 +32,7 @@ class ShoppingRequestsViewController: UIViewController {
         setUpEmptyView()
         setUpTableView()
         requests = [1: [1, 2, 3, 4], 2: [1], 3: [3, 5]]
-        footerView.backgroundColor = .white
+        footerView.backgroundColor = .clear
         footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
         // Do any additional setup after loading the view.
     }
