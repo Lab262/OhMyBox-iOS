@@ -31,7 +31,7 @@ class ShoppingRequestsViewController: UIViewController {
         registerNibs()
         setUpEmptyView()
         setUpTableView()
-//        requests = [1: [1, 2, 3, 4], 2: [1], 3: [3, 5]]
+        requests = [1: [1, 2, 3, 4], 2: [1], 3: [3, 5]]
         footerView.backgroundColor = .white
         footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
         // Do any additional setup after loading the view.
@@ -65,6 +65,24 @@ class ShoppingRequestsViewController: UIViewController {
     func showAllProducts() {
         
     }
+    
+    func productCellsCount(in section: Int) -> Int {
+        let brand = requestBrands[section]
+        let brandRequests = requests[brand]!
+        
+        let count = min(2, brandRequests.count)
+        
+        return count
+    }
+    
+    func extraProductCount(for brandIndex: Int) -> Int {
+        let brand = requestBrands[brandIndex]
+        let brandRequests = requests[brand]!
+        
+        let count = max(0, brandRequests.count - 2)
+        
+        return count
+    }
 }
 
 extension ShoppingRequestsViewController: UITableViewDataSource {
@@ -96,32 +114,27 @@ extension ShoppingRequestsViewController: UITableViewDataSource {
     
         let cell: UITableViewCell
         
-        let brand = requestBrands[indexPath.section]
-        let brandRequests = requests[brand]!
+        let count = extraProductCount(for: indexPath.section)
+        let cellsCount = productCellsCount(in: indexPath.section)
         
-        let productCellsCount = min(brandRequests.count, 2)
-        let extraProductCount = max(0, brandRequests.count - 2)
-        
-        if extraProductCount > 0 {
+        if count > 0 {
             switch indexPath.row {
-            case 0..<productCellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount: cell = generateExtraProductsCountCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount + 1: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount + 2: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount + 3: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
+            case 0..<cellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+            case cellsCount: cell = generateExtraProductsCountCell(tableView, cellForRowAt: indexPath)
+            case cellsCount + 1: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+            case cellsCount + 2: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
+            case cellsCount + 3: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
             default: cell = UITableViewCell()
             }
         } else {
             switch indexPath.row {
-            case 0..<productCellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount + 1: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
-            case productCellsCount + 2: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
+            case 0..<cellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+            case cellsCount: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+            case cellsCount + 1: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
+            case cellsCount + 2: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
             default: cell = UITableViewCell()
             }
         }
-        
-        
         
         return cell
     }
@@ -133,27 +146,24 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
         
         let height: CGFloat
         
-        let brand = requestBrands[indexPath.section]
-        let brandRequests = requests[brand]!
+        let count = extraProductCount(for: indexPath.section)
+        let cellsCount = productCellsCount(in: indexPath.section)
         
-        let productCellsCount = min(brandRequests.count, 2)
-        let extraProductCount = max(0, brandRequests.count - 2)
-        
-        if extraProductCount > 0 {
+        if count > 0 {
             switch indexPath.row {
-            case 0..<productCellsCount: height = ShoppingProductTableViewCell.cellHeight
-            case productCellsCount: height = ShoppingPlusProductsTableViewCell.cellHeight
-            case productCellsCount + 1: height = ShoppingResultsTableViewCell.cellHeight
-            case productCellsCount + 2: height = ShoppingStatusTableViewCell.cellHeight
-            case productCellsCount + 3: height = ShoppingRequestFooterTableViewCell.cellHeight
+            case 0..<cellsCount: height = ShoppingProductTableViewCell.cellHeight
+            case cellsCount: height = ShoppingPlusProductsTableViewCell.cellHeight
+            case cellsCount + 1: height = ShoppingResultsTableViewCell.cellHeight
+            case cellsCount + 2: height = ShoppingStatusTableViewCell.cellHeight
+            case cellsCount + 3: height = ShoppingRequestFooterTableViewCell.cellHeight
             default: height = 0
             }
         } else {
             switch indexPath.row {
-            case 0..<productCellsCount: height = ShoppingProductTableViewCell.cellHeight
-            case productCellsCount: height = ShoppingResultsTableViewCell.cellHeight
-            case productCellsCount + 1: height = ShoppingStatusTableViewCell.cellHeight
-            case productCellsCount + 2: height = ShoppingRequestFooterTableViewCell.cellHeight
+            case 0..<cellsCount: height = ShoppingProductTableViewCell.cellHeight
+            case cellsCount: height = ShoppingResultsTableViewCell.cellHeight
+            case cellsCount + 1: height = ShoppingStatusTableViewCell.cellHeight
+            case cellsCount + 2: height = ShoppingRequestFooterTableViewCell.cellHeight
             default: height = 0
             }
         }
@@ -181,6 +191,7 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return footerView
     }
+    
 }
 
 extension ShoppingRequestsViewController { // Cells generation
@@ -221,18 +232,17 @@ extension ShoppingRequestsViewController { // Cells generation
     
     func generateFooterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingRequestFooterTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingRequestFooterTableViewCell.identifier) as! ShoppingRequestFooterTableViewCell
-        
+        cell.buttonHandler = { button in
+            self.performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRating, sender: self)
+        }
         return cell
     }
     
     func generateExtraProductsCountCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingPlusProductsTableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: ShoppingPlusProductsTableViewCell.identifier) as! ShoppingPlusProductsTableViewCell
         
-        let brand = requestBrands[indexPath.section]
-        let brandRequests = requests[brand]!
-        
-        let extraProductCount = max(0, brandRequests.count - 2)
-        cell.extraProductCount = extraProductCount
+        let count = extraProductCount(for: indexPath.section)
+        cell.extraProductCount = count
         
         return cell
     }

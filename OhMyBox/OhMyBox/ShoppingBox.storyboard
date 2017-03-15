@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -361,11 +361,20 @@
                     <connections>
                         <outlet property="emptyView" destination="7De-oD-GxG" id="9Py-37-Q3h"/>
                         <outlet property="tableView" destination="Hms-uJ-3sf" id="KdW-v0-zZe"/>
+                        <segue destination="rwh-zI-5A7" kind="presentation" identifier="shoppingRequestsToRating" id="UWY-jg-2X6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-9T-TG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="246" y="736"/>
+        </scene>
+        <!--Rating-->
+        <scene sceneID="SIa-80-LPT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rating" id="rwh-zI-5A7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxD-GI-xfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="729"/>
         </scene>
         <!--Main-->
         <scene sceneID="dui-2e-8qN">

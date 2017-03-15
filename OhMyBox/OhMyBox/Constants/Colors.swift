@@ -33,6 +33,8 @@ extension UIColor {
             return UIColor.colorWithHexString("E03D7B")
         }
     }
+    
+    static let darkPurple = UIColor.colorWithHexString("241932")
   
 }
 

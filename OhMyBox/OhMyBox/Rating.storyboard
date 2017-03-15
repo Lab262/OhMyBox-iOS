@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="74n-xE-GDc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Axis Extrabold.otf">
+            <string>AXIS-ExtraBold</string>
+        </array>
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Rating1 View Controller-->
+        <scene sceneID="i7k-1p-bSa">
+            <objects>
+                <viewController id="PdY-Hv-6Dg" customClass="Rating1ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hK1-At-pUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="GiB-mj-CvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XpS-tJ-T4g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating_1" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-J9-Kgb">
+                                <rect key="frame" x="21.5" y="16" width="331" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="6q9-pU-xUl"/>
+                                    <constraint firstAttribute="width" secondItem="vqB-J9-Kgb" secondAttribute="height" multiplier="331:244" id="dHI-e5-ZiD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUHU, VOCÊ FINALIZOU SUA COMPRA!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJb-wP-s4y">
+                                <rect key="frame" x="18" y="298" width="257" height="48"/>
+                                <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Tt-SvH">
+                                <rect key="frame" x="18" y="360" width="227" height="40"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="E aí, como foi? Queremos saber tudo, e com detalhes!">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Poppins-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.76000000000000001" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnZ-iA-dre">
+                                <rect key="frame" x="18" y="440" width="267" height="52"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="FLv-c8-FTP"/>
+                                    <constraint firstAttribute="width" secondItem="gnZ-iA-dre" secondAttribute="height" multiplier="267:52" id="G7b-EO-B39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                <state key="normal" title="Vamos lá, conta pra gente!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" alpha="0.46999999999999997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-cI-rET">
+                                <rect key="frame" x="304" y="626" width="50" height="40"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
+                                <state key="normal" title="PULAR">
+                                    <color key="titleColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gnZ-iA-dre" firstAttribute="leading" secondItem="vJp-Tt-SvH" secondAttribute="leading" id="1Wp-81-K3L"/>
+                            <constraint firstItem="vqB-J9-Kgb" firstAttribute="top" secondItem="XpS-tJ-T4g" secondAttribute="top" constant="16" id="7Ic-yB-tfr"/>
+                            <constraint firstItem="vJp-Tt-SvH" firstAttribute="top" secondItem="zJb-wP-s4y" secondAttribute="bottom" constant="14" id="EtF-tn-FIc"/>
+                            <constraint firstAttribute="trailing" secondItem="vJp-Tt-SvH" secondAttribute="trailing" constant="130" id="M9w-UG-hCG"/>
+                            <constraint firstItem="vJp-Tt-SvH" firstAttribute="leading" secondItem="zJb-wP-s4y" secondAttribute="leading" id="MRk-UL-MWj"/>
+                            <constraint firstItem="GiB-mj-CvE" firstAttribute="top" secondItem="PfV-cI-rET" secondAttribute="bottom" constant="1" id="Mas-ee-Bv1"/>
+                            <constraint firstItem="zJb-wP-s4y" firstAttribute="leading" secondItem="XpS-tJ-T4g" secondAttribute="leading" constant="18" id="VzA-NE-Zcs"/>
+                            <constraint firstItem="vqB-J9-Kgb" firstAttribute="centerX" secondItem="XpS-tJ-T4g" secondAttribute="centerX" id="XqF-Mk-84W"/>
+                            <constraint firstAttribute="trailing" secondItem="PfV-cI-rET" secondAttribute="trailing" constant="21" id="akT-Nc-D8Z"/>
+                            <constraint firstItem="gnZ-iA-dre" firstAttribute="top" secondItem="vJp-Tt-SvH" secondAttribute="bottom" constant="40" id="dRa-bZ-bjB"/>
+                            <constraint firstItem="zJb-wP-s4y" firstAttribute="top" secondItem="vqB-J9-Kgb" secondAttribute="bottom" constant="38" id="hQS-La-A9t"/>
+                            <constraint firstAttribute="trailing" secondItem="zJb-wP-s4y" secondAttribute="trailing" constant="100" id="odb-Ec-Via"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="gnZ-iA-dre" id="bK6-SJ-sE0"/>
+                        <outlet property="dismissButton" destination="PfV-cI-rET" id="gIH-ro-89b"/>
+                        <outlet property="subtitleLabel" destination="vJp-Tt-SvH" id="Ggq-nG-gcJ"/>
+                        <outlet property="titleLabel" destination="zJb-wP-s4y" id="ckh-nE-ECo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiY-sR-aF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="47.226386806596707"/>
+        </scene>
+        <!--Rating Container View Controller-->
+        <scene sceneID="yff-FC-q5w">
+            <objects>
+                <viewController id="74n-xE-GDc" customClass="RatingContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a9D-oV-Xna"/>
+                        <viewControllerLayoutGuide type="bottom" id="OEz-WJ-mYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ros-lP-SI9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating_background" translatesAutoresizingMaskIntoConstraints="NO" id="SL4-cW-jkb">
+                                <rect key="frame" x="0.0" y="481" width="224" height="186"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8I6-ek-abv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="PdY-Hv-6Dg" kind="embed" id="VIl-DT-8Bv"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8I6-ek-abv" secondAttribute="trailing" id="3rA-Bf-8nI"/>
+                            <constraint firstItem="SL4-cW-jkb" firstAttribute="leading" secondItem="Ros-lP-SI9" secondAttribute="leading" id="Oy7-Hi-BFJ"/>
+                            <constraint firstAttribute="bottom" secondItem="8I6-ek-abv" secondAttribute="bottom" id="Vaa-HM-YZD"/>
+                            <constraint firstItem="OEz-WJ-mYO" firstAttribute="top" secondItem="SL4-cW-jkb" secondAttribute="bottom" id="XyK-Lq-EZy"/>
+                            <constraint firstItem="8I6-ek-abv" firstAttribute="leading" secondItem="Ros-lP-SI9" secondAttribute="leading" id="b3Q-1C-x9M"/>
+                            <constraint firstItem="8I6-ek-abv" firstAttribute="top" secondItem="Ros-lP-SI9" secondAttribute="top" id="f3r-Yb-oyQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rating1Container" destination="8I6-ek-abv" id="TKA-md-Uam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egl-R0-s7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="-714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rating_1" width="331" height="244"/>
+        <image name="rating_background" width="224" height="186"/>
+    </resources>
+</document>

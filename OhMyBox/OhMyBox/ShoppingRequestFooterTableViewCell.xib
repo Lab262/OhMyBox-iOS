@@ -30,6 +30,9 @@
                         <state key="normal" title="Avisar que já chegou">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oZ4-cc-b1d"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

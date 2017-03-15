@@ -21,7 +21,12 @@ struct SegueIdentifiers {
     static let brandDetailToProductDetail = "goToProductDetail"
     static let brandDetailToCollecions = "goToCollections"
     static let brandDetailToContact = "brandDetailToContact"
+    
+    // From shopping box
     static let shoppingBoxToPurchase = "shoppingBoxToPurchase"
+    static let shoppingRequestsToRating = "shoppingRequestsToRating"
+    
+    // From purchase
     static let purchaseToPurchaseSuccessful = "purchaseToPurchaseSuccessful"
 }
 
@@ -88,3 +93,5 @@ struct PurchaseSuccessfulTips {
         return [tip0, tip1, tip2]
     }
 }
+
+
