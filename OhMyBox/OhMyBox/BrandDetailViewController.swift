@@ -60,9 +60,14 @@ class BrandDetailViewController: UIViewController {
         registerNibs()
         
         brandHeaderBlurView = brandBackgroundImage.blurWithStyle(nil)
-        blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: { 
+        blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: {})
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        brandHeaderBlurView?.effect = nil
+        blurAnimator?.addAnimations {
             self.brandHeaderBlurView?.effect = UIBlurEffect(style: .regular)
-        })
+        }
         blurAnimator?.startAnimation()
         blurAnimator?.pauseAnimation()
     }
@@ -318,7 +323,8 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             
             let alpha = (yOffset - brandHeaderHeight + navbarAlphaThreshold)/navbarAlphaScale
             
-            blurAnimator?.fractionComplete = alpha
+            print(alpha)
+            blurAnimator?.fractionComplete = min(alpha * 0.5, 0.5)
             
 //            brandHeaderBlurView?.alpha = alpha
             brandBackgroundFilterView.alpha = max((2 - alpha) * 0.25, 0.25)
