@@ -61,15 +61,24 @@ class BrandDetailViewController: UIViewController {
         
         brandHeaderBlurView = brandBackgroundImage.blurWithStyle(nil)
         blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: {})
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(BrandDetailViewController.reloadBlurAnimation), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        reloadBlurAnimation()
+    }
+    
+    func reloadBlurAnimation() {
         brandHeaderBlurView?.effect = nil
         blurAnimator?.addAnimations {
             self.brandHeaderBlurView?.effect = UIBlurEffect(style: .regular)
         }
         blurAnimator?.startAnimation()
         blurAnimator?.pauseAnimation()
+        
+        let yOffset = tableView.contentOffset.y + tableView.contentInset.top
+        updateBlurAnimation(yOffset)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -291,7 +300,7 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         let yOffset = scrollView.contentOffset.y + scrollView.contentInset.top
         
         updateImageScale(yOffset)
-        updateNavigationBarAlpha(yOffset)
+        updateBlurAnimation(yOffset)
         updateHeaderViewsAlpha(yOffset)
         updateStackButtonsZPosition(yOffset)
         
@@ -315,7 +324,7 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         }
     }
     
-    func updateNavigationBarAlpha(_ yOffset: CGFloat) {
+    func updateBlurAnimation(_ yOffset: CGFloat) {
         let navbarAlphaThreshold: CGFloat = 128.0
         let navbarAlphaScale: CGFloat = 64.0
         
@@ -323,7 +332,6 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             
             let alpha = (yOffset - brandHeaderHeight + navbarAlphaThreshold)/navbarAlphaScale
             
-            print(alpha)
             blurAnimator?.fractionComplete = min(alpha * 0.5, 0.5)
             
 //            brandHeaderBlurView?.alpha = alpha
