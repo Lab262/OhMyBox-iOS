@@ -15,6 +15,8 @@ class Rating1ViewController: UIViewController {
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     
+    var acceptButtonHandler: UIButton.ButtonHandler?
+    
     let dismissButtonTitle = "PULAR"
     
     override func viewDidLoad() {
@@ -36,4 +38,8 @@ class Rating1ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func acceptButtonAction(_ sender: UIButton) {
+        acceptButtonHandler?(sender)
+    }
+    
 }
