@@ -14,6 +14,7 @@ class RatingContainerViewController: UIViewController {
         
         case rating1
         case rating2
+        case rating3
         
         var presentedLeadingOffset: CGFloat {
             
@@ -23,6 +24,7 @@ class RatingContainerViewController: UIViewController {
             switch self {
             case .rating1: offset = 0
             case .rating2: offset = -screenWidth
+            case .rating3: offset = (-screenWidth * 2)
             }
             
             return offset
@@ -30,10 +32,11 @@ class RatingContainerViewController: UIViewController {
     }
     
     @IBOutlet weak var rating1LeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var rating1Container: UIView!
-    @IBOutlet weak var rating2Container: UIView!
+    @IBOutlet var ratingContainers: [UIView]!
     
     let rating2Info: Rating2ViewController.Info = (#imageLiteral(resourceName: "rating_logo"), "BOLADO URBAN")
+    
+    var rating: Int?
     
     weak var rating1ViewController: Rating1ViewController! {
         didSet {
@@ -46,6 +49,22 @@ class RatingContainerViewController: UIViewController {
     weak var rating2ViewController: Rating2ViewController! {
         didSet {
             rating2ViewController.info = rating2Info
+            rating2ViewController.rateHandler = { rating in
+                self.rating = rating
+                self.setPresentedController(.rating3)
+                
+                if let rating = self.rating {
+                    self.rating3ViewController.info = (self.rating2Info.brandImage, rating)
+                }
+            }
+        }
+    }
+    
+    weak var rating3ViewController: Rating3ViewController! {
+        didSet {
+            rating3ViewController.doneButtonHandler = { button in
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
@@ -56,7 +75,7 @@ class RatingContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        switchAnimator = UIViewPropertyAnimator(duration: 0.25, curve: .easeInOut, animations: nil)
+        switchAnimator = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut, animations: nil)
         switchAnimation = {
             self.view.layoutIfNeeded()
         }
@@ -76,12 +95,13 @@ class RatingContainerViewController: UIViewController {
                 rating1ViewController = vc as! Rating1ViewController
             } else if vc is Rating2ViewController {
                 rating2ViewController = vc as! Rating2ViewController
+            } else if vc is Rating3ViewController {
+                rating3ViewController = vc as! Rating3ViewController
             }
         }
     }
     
     func setPresentedController(_ controller: RateControllers) {
-        
         rating1LeadingConstraint.constant = controller.presentedLeadingOffset
         switchAnimator.addAnimations(switchAnimation)
         switchAnimator.startAnimation()

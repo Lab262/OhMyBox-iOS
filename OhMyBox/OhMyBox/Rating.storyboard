@@ -14,6 +14,9 @@
         <array key="Axis Extrabold.otf">
             <string>AXIS-ExtraBold</string>
         </array>
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins</string>
+        </array>
         <array key="Poppins-Light.ttf">
             <string>Poppins-Light</string>
         </array>
@@ -118,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiY-sR-aF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52" y="47"/>
+            <point key="canvasLocation" x="409" y="46"/>
         </scene>
         <!--Rating Container View Controller-->
         <scene sceneID="yff-FC-q5w">
@@ -147,11 +150,20 @@
                                     <segue destination="vXp-sp-Ygc" kind="embed" id="0LG-U7-LgK"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VE1-4I-7WI">
+                                <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="rpW-wO-NWV" kind="embed" id="UYI-3n-G9V"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VE1-4I-7WI" firstAttribute="height" secondItem="Ros-lP-SI9" secondAttribute="height" id="5Ky-7O-rYM"/>
+                            <constraint firstItem="VE1-4I-7WI" firstAttribute="width" secondItem="Ros-lP-SI9" secondAttribute="width" id="6sV-ZG-Iin"/>
                             <constraint firstItem="fOH-9L-TZc" firstAttribute="height" secondItem="Ros-lP-SI9" secondAttribute="height" id="BYt-mL-EfB"/>
                             <constraint firstItem="fOH-9L-TZc" firstAttribute="leading" secondItem="8I6-ek-abv" secondAttribute="trailing" id="Bjh-5H-ECj"/>
+                            <constraint firstItem="VE1-4I-7WI" firstAttribute="top" secondItem="Ros-lP-SI9" secondAttribute="top" id="GNO-7N-QBO"/>
                             <constraint firstItem="fOH-9L-TZc" firstAttribute="width" secondItem="Ros-lP-SI9" secondAttribute="width" id="M1w-gw-YM2"/>
                             <constraint firstItem="fOH-9L-TZc" firstAttribute="top" secondItem="Ros-lP-SI9" secondAttribute="top" id="M9X-LP-lmI"/>
                             <constraint firstItem="SL4-cW-jkb" firstAttribute="leading" secondItem="Ros-lP-SI9" secondAttribute="leading" id="Oy7-Hi-BFJ"/>
@@ -159,13 +171,15 @@
                             <constraint firstItem="8I6-ek-abv" firstAttribute="width" secondItem="Ros-lP-SI9" secondAttribute="width" id="Yr9-S8-dOQ"/>
                             <constraint firstItem="8I6-ek-abv" firstAttribute="leading" secondItem="Ros-lP-SI9" secondAttribute="leading" id="b3Q-1C-x9M"/>
                             <constraint firstItem="8I6-ek-abv" firstAttribute="top" secondItem="Ros-lP-SI9" secondAttribute="top" id="f3r-Yb-oyQ"/>
+                            <constraint firstItem="VE1-4I-7WI" firstAttribute="leading" secondItem="fOH-9L-TZc" secondAttribute="trailing" id="sAs-0m-NVD"/>
                             <constraint firstItem="8I6-ek-abv" firstAttribute="height" secondItem="Ros-lP-SI9" secondAttribute="height" id="zdq-w1-Ip7"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="rating1Container" destination="8I6-ek-abv" id="TKA-md-Uam"/>
                         <outlet property="rating1LeadingConstraint" destination="b3Q-1C-x9M" id="5b5-gk-nQ1"/>
-                        <outlet property="rating2Container" destination="fOH-9L-TZc" id="5vx-6r-RE0"/>
+                        <outletCollection property="ratingContainers" destination="8I6-ek-abv" collectionClass="NSMutableArray" id="lOu-7R-2RJ"/>
+                        <outletCollection property="ratingContainers" destination="fOH-9L-TZc" collectionClass="NSMutableArray" id="b2b-Nb-3TT"/>
+                        <outletCollection property="ratingContainers" destination="VE1-4I-7WI" collectionClass="NSMutableArray" id="haP-3u-E0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egl-R0-s7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,30 +258,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="suZ-j9-n4O">
-                                <rect key="frame" x="9.5" y="393" width="357" height="56.5"/>
+                                <rect key="frame" x="8.5" y="393" width="359" height="57.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUl-b8-7eW">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="57.5"/>
                                         <state key="normal" image="rating_star_button"/>
+                                        <connections>
+                                            <action selector="star1Action:" destination="vXp-sp-Ygc" eventType="touchUpInside" id="8Em-EW-rGi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybg-EQ-zay">
-                                        <rect key="frame" x="74" y="0.0" width="61" height="56.5"/>
+                                        <rect key="frame" x="74.5" y="0.0" width="61.5" height="57.5"/>
                                         <state key="normal" image="rating_star_button"/>
+                                        <connections>
+                                            <action selector="star2Action:" destination="vXp-sp-Ygc" eventType="touchUpInside" id="vLh-b7-hx6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEU-y3-m35">
-                                        <rect key="frame" x="148" y="0.0" width="61" height="56.5"/>
+                                        <rect key="frame" x="149" y="0.0" width="61" height="57.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lEU-y3-m35" secondAttribute="height" multiplier="61:57" id="Eab-ni-Yu1"/>
                                         </constraints>
                                         <state key="normal" image="rating_star_button"/>
+                                        <connections>
+                                            <action selector="star3Action:" destination="vXp-sp-Ygc" eventType="touchUpInside" id="4vt-um-cru"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iG-tC-kF5">
-                                        <rect key="frame" x="222" y="0.0" width="61" height="56.5"/>
+                                        <rect key="frame" x="223" y="0.0" width="61.5" height="57.5"/>
                                         <state key="normal" image="rating_star_button"/>
+                                        <connections>
+                                            <action selector="star4Action:" destination="vXp-sp-Ygc" eventType="touchUpInside" id="Jee-v2-hLx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-iv-yk1">
-                                        <rect key="frame" x="296" y="0.0" width="61" height="56.5"/>
+                                        <rect key="frame" x="297.5" y="0.0" width="61.5" height="57.5"/>
                                         <state key="normal" image="rating_star_button"/>
+                                        <connections>
+                                            <action selector="star5Action:" destination="vXp-sp-Ygc" eventType="touchUpInside" id="Ar3-30-uzL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -308,11 +337,284 @@
             </objects>
             <point key="canvasLocation" x="1092" y="47"/>
         </scene>
+        <!--Rating3 View Controller-->
+        <scene sceneID="3RX-DY-lY2">
+            <objects>
+                <viewController id="rpW-wO-NWV" customClass="Rating3ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJk-Qt-lMA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3A-rs-t5T">
+                                <rect key="frame" x="136" y="44" width="103" height="96"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="rating_logo" translatesAutoresizingMaskIntoConstraints="NO" id="saF-fz-cBT">
+                                        <rect key="frame" x="4" y="3" width="95" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="saF-fz-cBT" secondAttribute="height" multiplier="120:113" id="lks-Nq-aVd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="saF-fz-cBT" firstAttribute="width" secondItem="J3A-rs-t5T" secondAttribute="width" multiplier="120/130" id="Lgk-PU-KD0"/>
+                                    <constraint firstItem="saF-fz-cBT" firstAttribute="centerY" secondItem="J3A-rs-t5T" secondAttribute="centerY" id="PhB-Fh-lf9"/>
+                                    <constraint firstItem="saF-fz-cBT" firstAttribute="centerX" secondItem="J3A-rs-t5T" secondAttribute="centerX" id="Yle-eT-BYA"/>
+                                    <constraint firstAttribute="width" secondItem="J3A-rs-t5T" secondAttribute="height" multiplier="130:121" id="sCC-cu-N2u"/>
+                                    <constraint firstAttribute="width" constant="103" id="zhV-we-hmD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUITO OBRIGADO!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-9w-Xqz">
+                                <rect key="frame" x="91" y="168" width="193" height="24"/>
+                                <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.51999998092651367" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn6-qD-LPC">
+                                <rect key="frame" x="79" y="204" width="218" height="3"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.23921568630000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="sk4-am-OYq"/>
+                                    <constraint firstAttribute="width" constant="218" id="yog-p6-Xrt"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVALIADO EM X ESTRELAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-TV-2BE">
+                                <rect key="frame" x="102" y="219" width="172" height="23"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OhX-pH-9h1">
+                                <rect key="frame" x="63" y="263" width="250" height="32"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rating_star" translatesAutoresizingMaskIntoConstraints="NO" id="Uta-01-h9d">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="32"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rating_star" translatesAutoresizingMaskIntoConstraints="NO" id="Zdf-oB-kTw">
+                                        <rect key="frame" x="54" y="0.0" width="34" height="32"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rating_star" translatesAutoresizingMaskIntoConstraints="NO" id="tYR-U2-SqY">
+                                        <rect key="frame" x="108" y="0.0" width="34" height="32"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rating_star" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-B9-3Od">
+                                        <rect key="frame" x="162" y="0.0" width="34" height="32"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rating_star" translatesAutoresizingMaskIntoConstraints="NO" id="DKa-Bk-Ytz">
+                                        <rect key="frame" x="216" y="0.0" width="34" height="32"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Nd8-G7-rjD"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-Z9-N7v">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4oS-Ut-FuF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
+                                <state key="normal" title="Pronto, terminei">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donoButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="o54-bW-n7y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO QUE VOCÊ MAIS GOSTOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8he-xE-G8r">
+                                <rect key="frame" x="73.5" y="361" width="229.5" height="25"/>
+                                <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-uD-Jgi">
+                                <rect key="frame" x="27" y="428" width="323" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-cA-sgS">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="148" id="GgW-us-fWl"/>
+                                            <constraint firstAttribute="width" secondItem="bMp-cA-sgS" secondAttribute="height" multiplier="148:33" id="Ovg-zZ-NkD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                        <state key="normal" title="Responde rápido">
+                                            <color key="titleColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.13"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUX-Ss-reV">
+                                        <rect key="frame" x="175" y="0.0" width="148" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fUX-Ss-reV" secondAttribute="height" multiplier="148:33" id="vkj-uG-LnC"/>
+                                            <constraint firstAttribute="width" constant="148" id="ygi-bk-U1e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                        <state key="normal" title="Amei o produto">
+                                            <color key="titleColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.13"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fUX-Ss-reV" firstAttribute="width" secondItem="fUX-Ss-reV" secondAttribute="height" multiplier="148:33" id="51k-RK-qiV"/>
+                                    <constraint firstItem="fUX-Ss-reV" firstAttribute="width" secondItem="fUX-Ss-reV" secondAttribute="height" multiplier="148:33" id="BAB-1H-Jzb"/>
+                                    <constraint firstItem="fUX-Ss-reV" firstAttribute="width" secondItem="fUX-Ss-reV" secondAttribute="height" multiplier="148:33" id="iZw-O2-Z0r"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="pm3-zO-1Vf">
+                                <rect key="frame" x="27" y="486" width="323" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-6S-Hgm">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yQn-6S-Hgm" secondAttribute="height" multiplier="148:33" id="Ax5-qh-PI2"/>
+                                            <constraint firstAttribute="width" constant="148" id="EWg-bQ-n1K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                        <state key="normal" title="Chegou no prazo">
+                                            <color key="titleColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.13"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxB-7e-haG">
+                                        <rect key="frame" x="175" y="0.0" width="148" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HxB-7e-haG" secondAttribute="height" multiplier="148:33" id="GBw-qr-ya1"/>
+                                            <constraint firstAttribute="width" constant="148" id="q6n-BE-klq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                        <state key="normal" title="Muito atenciosos">
+                                            <color key="titleColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.13"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yQn-6S-Hgm" firstAttribute="width" secondItem="yQn-6S-Hgm" secondAttribute="height" multiplier="148:33" id="67j-xK-CSw"/>
+                                    <constraint firstItem="HxB-7e-haG" firstAttribute="width" secondItem="HxB-7e-haG" secondAttribute="height" multiplier="148:33" id="Ui4-IE-kNe"/>
+                                    <constraint firstItem="yQn-6S-Hgm" firstAttribute="width" secondItem="yQn-6S-Hgm" secondAttribute="height" multiplier="148:33" id="dx2-jN-gxC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mn6-qD-LPC" firstAttribute="centerX" secondItem="OtQ-9w-Xqz" secondAttribute="centerX" id="2uB-W2-RaV"/>
+                            <constraint firstItem="8hn-Z9-N7v" firstAttribute="leading" secondItem="OJk-Qt-lMA" secondAttribute="leading" id="30Y-qe-pQ4"/>
+                            <constraint firstItem="mn6-qD-LPC" firstAttribute="top" secondItem="OtQ-9w-Xqz" secondAttribute="bottom" constant="12" id="7Kh-RQ-4po"/>
+                            <constraint firstItem="D2m-TV-2BE" firstAttribute="top" secondItem="mn6-qD-LPC" secondAttribute="bottom" constant="12" id="A44-w1-wFV"/>
+                            <constraint firstItem="hDM-uD-Jgi" firstAttribute="top" secondItem="8he-xE-G8r" secondAttribute="bottom" constant="42" id="Cei-gj-76P"/>
+                            <constraint firstItem="J3A-rs-t5T" firstAttribute="centerX" secondItem="OJk-Qt-lMA" secondAttribute="centerX" id="Ea8-b9-PN0"/>
+                            <constraint firstItem="hDM-uD-Jgi" firstAttribute="centerX" secondItem="8he-xE-G8r" secondAttribute="centerX" id="NOX-PH-0fB"/>
+                            <constraint firstItem="OtQ-9w-Xqz" firstAttribute="top" secondItem="J3A-rs-t5T" secondAttribute="bottom" constant="28" id="QQp-8c-s0Z"/>
+                            <constraint firstItem="8he-xE-G8r" firstAttribute="centerX" secondItem="OhX-pH-9h1" secondAttribute="centerX" id="UIe-dU-WrF"/>
+                            <constraint firstItem="OhX-pH-9h1" firstAttribute="centerX" secondItem="D2m-TV-2BE" secondAttribute="centerX" id="UkM-4q-7Rf"/>
+                            <constraint firstAttribute="bottom" secondItem="8hn-Z9-N7v" secondAttribute="bottom" id="Wi8-uC-ai9"/>
+                            <constraint firstItem="pm3-zO-1Vf" firstAttribute="top" secondItem="hDM-uD-Jgi" secondAttribute="bottom" constant="25" id="Y27-Io-2eo"/>
+                            <constraint firstAttribute="trailing" secondItem="8hn-Z9-N7v" secondAttribute="trailing" id="axt-TS-6zn"/>
+                            <constraint firstItem="8he-xE-G8r" firstAttribute="top" secondItem="OhX-pH-9h1" secondAttribute="bottom" constant="66" id="e6B-36-ieY"/>
+                            <constraint firstItem="J3A-rs-t5T" firstAttribute="top" secondItem="OJk-Qt-lMA" secondAttribute="top" constant="44" id="gBu-cZ-6b4"/>
+                            <constraint firstItem="J3A-rs-t5T" firstAttribute="width" secondItem="J3A-rs-t5T" secondAttribute="height" multiplier="130:121" id="jM6-b3-zTe"/>
+                            <constraint firstItem="OhX-pH-9h1" firstAttribute="top" secondItem="D2m-TV-2BE" secondAttribute="bottom" constant="21" id="lo7-NZ-Jtx"/>
+                            <constraint firstItem="OtQ-9w-Xqz" firstAttribute="centerX" secondItem="J3A-rs-t5T" secondAttribute="centerX" id="m8s-92-rL9"/>
+                            <constraint firstItem="D2m-TV-2BE" firstAttribute="centerX" secondItem="mn6-qD-LPC" secondAttribute="centerX" id="pEb-fp-HLV"/>
+                            <constraint firstItem="pm3-zO-1Vf" firstAttribute="centerX" secondItem="hDM-uD-Jgi" secondAttribute="centerX" id="wpG-cH-OMy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="8hn-Z9-N7v" id="Dq9-Xb-w1W"/>
+                        <outlet property="imageView" destination="saF-fz-cBT" id="SOy-Mt-dz0"/>
+                        <outlet property="ratingLabel" destination="D2m-TV-2BE" id="GtC-Pb-r7D"/>
+                        <outlet property="thankYouLabel" destination="OtQ-9w-Xqz" id="jUg-kN-vWc"/>
+                        <outletCollection property="starImageViews" destination="Uta-01-h9d" collectionClass="NSMutableArray" id="Z4E-lx-p4E"/>
+                        <outletCollection property="starImageViews" destination="Zdf-oB-kTw" collectionClass="NSMutableArray" id="gJS-Yv-T3j"/>
+                        <outletCollection property="starImageViews" destination="tYR-U2-SqY" collectionClass="NSMutableArray" id="xpA-uv-t5a"/>
+                        <outletCollection property="starImageViews" destination="hMK-B9-3Od" collectionClass="NSMutableArray" id="8RN-co-0dt"/>
+                        <outletCollection property="starImageViews" destination="DKa-Bk-Ytz" collectionClass="NSMutableArray" id="78K-iQ-ICZ"/>
+                        <outletCollection property="feedbackButtons" destination="bMp-cA-sgS" collectionClass="NSMutableArray" id="csr-YG-EQd"/>
+                        <outletCollection property="feedbackButtons" destination="fUX-Ss-reV" collectionClass="NSMutableArray" id="ukE-TP-mCf"/>
+                        <outletCollection property="feedbackButtons" destination="yQn-6S-Hgm" collectionClass="NSMutableArray" id="ABI-DA-ncQ"/>
+                        <outletCollection property="feedbackButtons" destination="HxB-7e-haG" collectionClass="NSMutableArray" id="ZzK-dN-sSz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDe-NJ-iYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="45"/>
+        </scene>
     </scenes>
     <resources>
         <image name="rating_1" width="331" height="244"/>
         <image name="rating_background" width="224" height="186"/>
         <image name="rating_logo" width="120" height="113"/>
+        <image name="rating_star" width="34" height="33"/>
         <image name="rating_star_button" width="62" height="57"/>
     </resources>
 </document>

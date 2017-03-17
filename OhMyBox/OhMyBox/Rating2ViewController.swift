@@ -23,6 +23,8 @@ class Rating2ViewController: UIViewController {
     @IBOutlet weak var brandNameLabel: UILabel!
     @IBOutlet weak var ratingMattersLabel: UILabel!
     
+    var rateHandler: ((Int) -> ())?
+    
     var info: Info? {
         didSet {
             updateInfo()
@@ -49,5 +51,29 @@ class Rating2ViewController: UIViewController {
         
         ratingMattersLabel.attributedText = Rating2ViewController.ratingMattersString.with(characterSpacing: Rating2ViewController.ratingMattersStringSpacing)
     }
+    
+    @IBAction func star1Action(_ sender: UIButton) {
+        rate(1)
+    }
+    
+    @IBAction func star2Action(_ sender: UIButton) {
+        rate(2)
+    }
+    
+    @IBAction func star3Action(_ sender: UIButton) {
+        rate(3)
+    }
+    
+    @IBAction func star4Action(_ sender: UIButton) {
+        rate(4)
+    }
+    
+    @IBAction func star5Action(_ sender: UIButton) {
+        rate(5)
+    }
 
+    func rate(_ rating: Int) {
+        rateHandler?(rating)
+    }
+    
 }
