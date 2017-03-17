@@ -431,7 +431,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="donoButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="o54-bW-n7y"/>
+                                    <action selector="doneButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="Rpf-rA-4BO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO QUE VOCÊ MAIS GOSTOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8he-xE-G8r">
@@ -468,6 +468,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="feedbackButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="gsQ-Py-inC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUX-Ss-reV">
                                         <rect key="frame" x="175" y="0.0" width="148" height="33"/>
@@ -494,6 +497,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="feedbackButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="RDh-X7-h6Q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -530,6 +536,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="feedbackButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="gpK-ac-1JW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxB-7e-haG">
                                         <rect key="frame" x="175" y="0.0" width="148" height="33"/>
@@ -556,6 +565,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="feedbackButtonAction:" destination="rpW-wO-NWV" eventType="touchUpInside" id="zhK-KE-Xui"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -591,6 +603,7 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="8hn-Z9-N7v" id="Dq9-Xb-w1W"/>
+                        <outlet property="feedbackAskLabel" destination="8he-xE-G8r" id="6fy-Zy-qwM"/>
                         <outlet property="imageView" destination="saF-fz-cBT" id="SOy-Mt-dz0"/>
                         <outlet property="ratingLabel" destination="D2m-TV-2BE" id="GtC-Pb-r7D"/>
                         <outlet property="thankYouLabel" destination="OtQ-9w-Xqz" id="jUg-kN-vWc"/>
