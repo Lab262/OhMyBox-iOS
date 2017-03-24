@@ -133,10 +133,13 @@ class DetailProductViewController: UIViewController {
         cell.productDetails = "Blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá"
         
         let buttonsHandler: UIButton.ButtonHandler = { _ in
+            
             let contentOffset = tableView.contentOffset
-            tableView.reloadData()
-            tableView.layoutIfNeeded()
-            tableView.setContentOffset(contentOffset, animated: false)
+            
+            tableView.beginUpdates()
+//            tableView.setContentOffset(contentOffset, animated: false)
+            tableView.endUpdates()
+            tableView.setContentOffset(contentOffset, animated: true)
         }
         
         cell.descriptionButtonHandler = buttonsHandler

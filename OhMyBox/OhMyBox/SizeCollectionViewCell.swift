@@ -31,7 +31,7 @@ class SizeCollectionViewCell: UICollectionViewCell {
     var size: String? {
         didSet {
             if let size = size {
-                sizeLabel.attributedText = size.with(characterSpacing: 2.34)
+                sizeLabel.attributedText = size.with(characterSpacing: 2.34, alignment: .center)
             } else {
                 sizeLabel.attributedText = nil
             }
