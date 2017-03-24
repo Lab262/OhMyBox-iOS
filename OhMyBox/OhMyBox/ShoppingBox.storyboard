@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -287,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase_sucessful" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-rf-YpV">
-                                <rect key="frame" x="39.5" y="37" width="296" height="182"/>
+                                <rect key="frame" x="40" y="37" width="296" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="3eW-ss-zF2"/>
                                     <constraint firstAttribute="height" constant="182" id="SCk-3j-FTu"/>
@@ -375,14 +375,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxD-GI-xfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1129" y="729"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="dui-2e-8qN">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="zUY-FA-Mcg" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MpY-ph-oNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2402" y="606"/>
         </scene>
     </scenes>
     <resources>

@@ -30,6 +30,7 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var policyButton: UIButton!
     
+    @IBOutlet weak var brandHeaderViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var brandHeaderViewHeightConstraint: NSLayoutConstraint!
 
 // Mark: - Properties
@@ -303,12 +304,14 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         updateBlurAnimation(yOffset)
         updateHeaderViewsAlpha(yOffset)
         updateStackButtonsZPosition(yOffset)
+        updateSearchBarPosition(scrollView.contentOffset.y)
+    }
+    
+    func updateSearchBarPosition(_ yOffset: CGFloat) {
         
-        
-        let searchBarConstraintConstant = searchBar.frame.height + scrollView.contentOffset.y
+        let searchBarConstraintConstant = searchBar.frame.height + yOffset
         
         searchBarTopConstraint?.constant = max(0, -searchBarConstraintConstant)
-        
     }
     
     func scrollTableViewToTop() {
@@ -319,8 +322,11 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         
         if yOffset < 0 {
             brandHeaderViewHeightConstraint.constant = brandHeaderHeight - yOffset
+            brandHeaderViewTopConstraint.constant = 0
         } else if brandHeaderViewHeightConstraint.constant != brandHeaderHeight {
             brandHeaderViewHeightConstraint.constant = brandHeaderHeight
+        } else if yOffset <= brandHeaderHeight - tableViewTopMargin {
+            brandHeaderViewTopConstraint.constant = -(yOffset * 0.5)
         }
     }
     

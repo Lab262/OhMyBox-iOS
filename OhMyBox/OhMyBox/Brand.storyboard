@@ -145,7 +145,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yke-7u-LLO">
-                                        <rect key="frame" x="103" y="185" width="171" height="24"/>
+                                        <rect key="frame" x="103.5" y="185" width="171" height="24"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -312,6 +312,7 @@
                         <outlet property="brandDescriptionLabel" destination="NPk-67-7JF" id="tp0-Er-gB2"/>
                         <outlet property="brandHeaderView" destination="hBQ-wg-8oC" id="dFI-mg-sfI"/>
                         <outlet property="brandHeaderViewHeightConstraint" destination="Ufy-oy-lCC" id="mdA-Mp-AX5"/>
+                        <outlet property="brandHeaderViewTopConstraint" destination="qij-Yo-muY" id="5DV-Q1-n2b"/>
                         <outlet property="brandImageView" destination="3la-ze-D1X" id="Shb-2h-Za2"/>
                         <outlet property="brandNameBottomLabel" destination="fc2-C0-IZm" id="xL0-cP-YCs"/>
                         <outlet property="brandNameTopLabel" destination="yke-7u-LLO" id="o7E-mZ-kfa"/>

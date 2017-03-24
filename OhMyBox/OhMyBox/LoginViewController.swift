@@ -84,7 +84,7 @@ class LoginViewController: UIViewController {
                             self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
                         }else {
                             self.view.unload()
-                            self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage: msg), animated: true, completion: nil)
+                            self.present(ViewUtil.alertController(withTitle: "Erro", message: msg), animated: true, completion: nil)
                         }                    })
                 }
             })
@@ -127,7 +127,7 @@ class LoginViewController: UIViewController {
             if (sucess){
                 self.present( self.alertControllerActionWithTitle(msg, _withMessage:"Seja bem vindo!"), animated: true, completion: nil)
             }else{
-                self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage:msg), animated: true, completion: nil)
+                self.present(ViewUtil.alertController(withTitle: "Erro", message:msg), animated: true, completion: nil)
                 
             }
             

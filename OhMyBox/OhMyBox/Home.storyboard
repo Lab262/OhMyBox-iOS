@@ -315,7 +315,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="101" y="6.5" width="174" height="31"/>
+                                                    <rect key="frame" x="106.5" y="7.5" width="163" height="29.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -366,14 +366,6 @@
             </objects>
             <point key="canvasLocation" x="2998" y="-1249"/>
         </scene>
-        <!--ShoppingBox-->
-        <scene sceneID="VRA-pb-NLh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ShoppingBox" id="nA4-py-4Ng" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fIH-R5-cxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3689" y="-1613"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oNb-HY-LHx">
             <objects>
@@ -383,7 +375,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

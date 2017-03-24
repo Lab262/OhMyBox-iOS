@@ -14,22 +14,19 @@ class ViewUtil: NSObject {
     
     class func viewControllerFromStoryboardWithIdentifier(_ name: String, identifier: String = "")->UIViewController?{
         
-        if let storyboard : UIStoryboard = UIStoryboard(name: name as String, bundle: nil){
-            if identifier != "" {
-                return storyboard.instantiateViewController(withIdentifier: identifier as String)
-            }else{
-                return storyboard.instantiateInitialViewController()!
-            }
+        let storyboard : UIStoryboard = UIStoryboard(name: name as String, bundle: nil)
+        if identifier != "" {
+            return storyboard.instantiateViewController(withIdentifier: identifier as String)
         }else{
-            return nil
+            return storyboard.instantiateInitialViewController()!
         }
         
     }
     
   
-    static func alertControllerWithTitle (_title: String, _withMessage _message: String) -> UIAlertController {
+    static func alertController(withTitle title: String, message: String) -> UIAlertController {
         
-        let alert = UIAlertController(title: _title, message: _message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         

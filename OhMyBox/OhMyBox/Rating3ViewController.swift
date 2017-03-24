@@ -119,6 +119,6 @@ class Rating3ViewController: UIViewController {
     
     @IBAction func feedbackButtonAction(_ sender: UIButton) {
         
-        let index = feedbackButtons.index(of: sender)
+//        let index = feedbackButtons.index(of: sender)
     }
 }

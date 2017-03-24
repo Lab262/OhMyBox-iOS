@@ -20,7 +20,7 @@ class CreateAccountViewController: UIViewController {
 
     @IBAction func registerUser(_ sender: Any) {
         if let msgError = verifyInformations(){
-            self.present(ViewUtil.alertControllerWithTitle(_title:"erroo", _withMessage:msgError), animated: true, completion: nil)
+            self.present(ViewUtil.alertController(withTitle: "erroo", message: msgError), animated: true, completion: nil)
             
             return
         }
@@ -33,7 +33,7 @@ class CreateAccountViewController: UIViewController {
                 self.present( self.alertControllerActionWithTitle("Sucesso!!", _withMessage:msg), animated: true, completion: nil)
                 
             }else {
-                self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage:msg), animated: true, completion: nil)
+                self.present(ViewUtil.alertController(withTitle: "Erro", message: msg), animated: true, completion: nil)
             }
             
             
@@ -124,7 +124,7 @@ class CreateAccountViewController: UIViewController {
                             
                         }else {
                             self.view.unload()
-                            self.present(ViewUtil.alertControllerWithTitle(_title: "Erro", _withMessage: msg), animated: true, completion: nil)
+                            self.present(ViewUtil.alertController(withTitle: "Erro", message: msg), animated: true, completion: nil)
                         }                    })
                     
                 }
@@ -134,7 +134,7 @@ class CreateAccountViewController: UIViewController {
     
     
     @IBAction func showLogin(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
 }
