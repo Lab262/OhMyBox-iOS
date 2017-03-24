@@ -37,7 +37,9 @@ class BrandViewController: UIViewController {
         tableView.registerNibFrom(BrandTableViewCell.self)
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = preferredStatusBarStyle
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

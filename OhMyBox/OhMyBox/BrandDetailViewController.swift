@@ -12,6 +12,11 @@ class BrandDetailViewController: UIViewController {
     
 // Mark: - Outlets
     
+    // A8 77 60
+    // 1A 13 0F
+    
+    let gradientPlaceholderColors = [UIColor.colorWithHexString("A87760").withAlphaComponent(0.63), UIColor.colorWithHexString("1A130F")]
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
@@ -29,6 +34,9 @@ class BrandDetailViewController: UIViewController {
     @IBOutlet weak var buttonsStackView: UIStackView!
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var policyButton: UIButton!
+    
+    @IBOutlet weak var productNavbarTitleLabel: UILabel!
+    @IBOutlet weak var navbarTitleLabelCenterYConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var brandHeaderViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var brandHeaderViewHeightConstraint: NSLayoutConstraint!
@@ -68,6 +76,7 @@ class BrandDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         reloadBlurAnimation()
+        UIApplication.shared.statusBarStyle = preferredStatusBarStyle
     }
     
     func reloadBlurAnimation() {
@@ -120,6 +129,10 @@ class BrandDetailViewController: UIViewController {
     
     func setUpNavigationBar() {
         navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
+        
+        navigationBarView.boxButton.tintColor = .white
+        navigationBarView.leftBarButton.tintColor = .white
+        
         navigationBarView.titleLabelText = ""
         navigationBarView.leftBarButton.setImage(#imageLiteral(resourceName: "back_bold"), for: .normal)
         navigationBarView.boxButton.setImage(#imageLiteral(resourceName: "box_bold"), for: .normal)
@@ -305,6 +318,7 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         updateHeaderViewsAlpha(yOffset)
         updateStackButtonsZPosition(yOffset)
         updateSearchBarPosition(scrollView.contentOffset.y)
+        updateNavbarTitleYPosition(yOffset)
     }
     
     func updateSearchBarPosition(_ yOffset: CGFloat) {
@@ -340,11 +354,9 @@ extension BrandDetailViewController: UIScrollViewDelegate {
             
             blurAnimator?.fractionComplete = min(alpha * 0.5, 0.5)
             
-//            brandHeaderBlurView?.alpha = alpha
             brandBackgroundFilterView.alpha = max((2 - alpha) * 0.25, 0.25)
             
         } else {
-//            brandHeaderBlurView?.alpha = 0.0
             blurAnimator?.fractionComplete = 0.0
             brandBackgroundFilterView.alpha = 0.5
         }
@@ -370,6 +382,17 @@ extension BrandDetailViewController: UIScrollViewDelegate {
         } else {
             view.sendSubview(toBack: buttonsStackView)
         }
+    }
+    
+    func updateNavbarTitleYPosition(_ yOffset: CGFloat) {
+        
+        let defaultYPosition: CGFloat = brandHeaderHeight - 25
+        
+        navbarTitleLabelCenterYConstraint.constant = max(defaultYPosition - yOffset, 7)
+        
+        let alpha = (30 - (defaultYPosition - yOffset))/20
+        
+        productNavbarTitleLabel.alpha = alpha
     }
     
     func setHeaderViewsAlpha(_ alpha: CGFloat) {

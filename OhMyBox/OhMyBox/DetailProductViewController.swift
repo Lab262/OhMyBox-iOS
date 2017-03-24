@@ -63,7 +63,6 @@ class DetailProductViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadBlurAnimation()
-        setNeedsStatusBarAppearanceUpdate()
         UIApplication.shared.statusBarStyle = self.preferredStatusBarStyle
     }
     

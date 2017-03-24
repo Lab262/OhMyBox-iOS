@@ -151,13 +151,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="handmade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-C0-IZm">
-                                        <rect key="frame" x="142" y="205" width="90" height="27"/>
+                                        <rect key="frame" x="144.5" y="205" width="89.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-67-7JF">
-                                        <rect key="frame" x="20" y="240" width="335" height="37"/>
+                                        <rect key="frame" x="20" y="239.5" width="335" height="37"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend dolor sic amet">
                                                 <attributes>
@@ -170,7 +170,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egp-wt-NvF">
-                                        <rect key="frame" x="122" y="289" width="130" height="32"/>
+                                        <rect key="frame" x="122" y="288.5" width="130" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="egp-wt-NvF" secondAttribute="height" multiplier="130:32" id="PRR-vT-rzv"/>
                                             <constraint firstAttribute="width" constant="130" id="cnj-qu-aTX"/>
@@ -269,8 +269,18 @@
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DC-Eg-yja" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YY-tb-cA6">
+                                        <rect key="frame" x="114.5" y="29.5" width="145.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="2YY-tb-cA6" firstAttribute="centerY" secondItem="1DC-Eg-yja" secondAttribute="centerY" constant="7" id="Jrf-Yb-TkN"/>
+                                    <constraint firstItem="2YY-tb-cA6" firstAttribute="centerX" secondItem="1DC-Eg-yja" secondAttribute="centerX" id="Pjk-1g-bce"/>
                                     <constraint firstAttribute="height" constant="64" id="Rpl-2j-O24"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -319,8 +329,10 @@
                         <outlet property="buttonsStackView" destination="ChS-Rj-aCB" id="uud-GX-gLD"/>
                         <outlet property="contactButton" destination="rIv-2h-z33" id="o2S-sD-iJ5"/>
                         <outlet property="followButton" destination="egp-wt-NvF" id="qBf-lO-s1i"/>
+                        <outlet property="navbarTitleLabelCenterYConstraint" destination="Jrf-Yb-TkN" id="hfj-ka-Vfq"/>
                         <outlet property="navigationBarView" destination="1DC-Eg-yja" id="IlK-dr-GAs"/>
                         <outlet property="policyButton" destination="wcS-V6-K4p" id="9IL-ee-ho1"/>
+                        <outlet property="productNavbarTitleLabel" destination="2YY-tb-cA6" id="KE7-hH-njo"/>
                         <outlet property="searchBar" destination="C4K-Vs-5dS" id="O3f-gu-Tif"/>
                         <outlet property="searchBarTopConstraint" destination="Wj4-GW-kET" id="KU9-R2-ccf"/>
                         <outlet property="tableView" destination="QzP-WY-RLA" id="jIB-Q7-OBb"/>
