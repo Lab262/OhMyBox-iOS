@@ -17,7 +17,16 @@ class DetailProductViewController: UIViewController {
     
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productImageViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var productImageViewTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var productNavbarTitleLabel: UILabel!
+    @IBOutlet weak var navbarTitleLabelCenterYConstraint: NSLayoutConstraint!
+    
+    weak var productImageBlurView: UIVisualEffectView?
+    var blurAnimator: UIViewPropertyAnimator?
+    
     let productImageViewHeight: CGFloat = 334.0
+    let navigationBarHeight: CGFloat = 64
     let bottomMargin: CGFloat = 40.0
     
     var product = Product()
@@ -26,16 +35,54 @@ class DetailProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerNibs()
         
+        registerNibs()
+        initializeStatesButtons()
+        setUpNavigationAppearance()
+        setUpNavigationBar()
+        setUpTableView()
+        setUpBlurAnimator()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .fade
+    }
+    
+    func setUpBlurAnimator() {
         
-        tableView.contentInset = UIEdgeInsetsMake(productImageViewHeight, 0, bottomMargin, 0)
+        productImageBlurView = productImageView.blurWithStyle(nil)
+        blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: {})
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailProductViewController.reloadBlurAnimation), name: .UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadBlurAnimation()
+        setNeedsStatusBarAppearanceUpdate()
+        UIApplication.shared.statusBarStyle = self.preferredStatusBarStyle
+    }
+    
+    func reloadBlurAnimation() {
+        productImageBlurView?.effect = nil
+        blurAnimator?.addAnimations {
+            self.productImageBlurView?.effect = UIBlurEffect(style: .light)
+        }
+        blurAnimator?.startAnimation()
+        blurAnimator?.pauseAnimation()
+        
+        let yOffset = tableView.contentOffset.y + tableView.contentInset.top
+        updateBlurAnimation(yOffset)
+    }
+    
+    func setUpTableView() {
+        tableView.contentInset = UIEdgeInsetsMake(productImageViewHeight - navigationBarHeight, 0, bottomMargin, 0)
         tableView.estimatedRowHeight = 350.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        self.initializeStatesButtons()
-        self.setUpNavigationAppearance()
-        self.setUpNavigationBar()
     }
     
     func setUpNavigationBar() {
@@ -160,6 +207,9 @@ class DetailProductViewController: UIViewController {
     func setUpNavigationAppearance() {
         
         self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationBarView.boxButton.setImage(#imageLiteral(resourceName: "box_bold"), for: .normal)
+        self.navigationBarView.leftBarButton.setImage(#imageLiteral(resourceName: "back_bold"), for: .normal)
     }
     
 }
@@ -212,7 +262,9 @@ extension DetailProductViewController: UIScrollViewDelegate {
         let yOffset = scrollView.contentOffset.y + scrollView.contentInset.top
         
         updateImageScale(yOffset)
-        updateNavigationBarAlpha(yOffset)
+//        updateNavigationBarAlpha(yOffset)
+        updateBlurAnimation(yOffset)
+        updateNavbarTitleYPosition(yOffset)
     }
     
     func updateImageScale(_ yOffset: CGFloat) {
@@ -221,19 +273,44 @@ extension DetailProductViewController: UIScrollViewDelegate {
             productImageViewHeightConstraint.constant = productImageViewHeight - yOffset
         } else if productImageViewHeightConstraint.constant != productImageViewHeight {
             productImageViewHeightConstraint.constant = productImageViewHeight
+        } else if yOffset <= productImageViewHeight - navigationBarHeight {
+            productImageViewTopConstraint.constant = -(yOffset * 0.5)
         }
     }
     
     func updateNavigationBarAlpha(_ yOffset: CGFloat) {
-        let navbarAlphaThreshold: CGFloat = 64.0
+        let navbarAlphaThreshold: CGFloat = 128
         
+        print(productImageViewHeight)
         if yOffset > (productImageViewHeight - navbarAlphaThreshold) {
             
-            let alpha = (yOffset - productImageViewHeight + navbarAlphaThreshold)/navbarAlphaThreshold
+            let alpha = (yOffset - (productImageViewHeight - navbarAlphaThreshold))/navigationBarHeight
             
             navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(alpha)
         } else {
             navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
         }
+    }
+    
+    func updateBlurAnimation(_ yOffset: CGFloat) {
+        let navbarAlphaThreshold: CGFloat = 128.0
+        let navbarAlphaScale: CGFloat = 64.0
+        
+        if yOffset > (productImageViewHeight - navbarAlphaThreshold) {
+            
+            let alpha = (yOffset - (productImageViewHeight - navbarAlphaThreshold))/navbarAlphaScale
+            
+            blurAnimator?.fractionComplete = min(alpha * 0.5, 0.5)
+            
+        } else {
+            //            brandHeaderBlurView?.alpha = 0.0
+            blurAnimator?.fractionComplete = 0.0
+        }
+    }
+    
+    func updateNavbarTitleYPosition(_ yOffset: CGFloat) {
+        
+        let defaultYPosition: CGFloat = 341
+        navbarTitleLabelCenterYConstraint.constant = max(defaultYPosition - yOffset, 7)
     }
 }

@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OH MY BOX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-DZ-yQ8">
-                    <rect key="frame" x="136" y="30" width="103" height="21"/>
+                    <rect key="frame" x="136.5" y="30.5" width="102.5" height="20"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                     <color key="textColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -41,6 +41,7 @@
                         <constraint firstAttribute="width" secondItem="Blf-2Q-kqU" secondAttribute="height" multiplier="25:24" id="UpM-HS-aIo"/>
                         <constraint firstAttribute="height" constant="24" id="x22-GM-hD9"/>
                     </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" image="box_button"/>
                     <connections>
                         <action selector="actionGoCart:" destination="-1" eventType="touchUpInside" id="zb9-mS-Z7c"/>
@@ -51,6 +52,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="Wf2-V0-t7B"/>
                     </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" image="backIcon_button"/>
                     <connections>
                         <action selector="leftAction:" destination="-1" eventType="touchUpInside" id="qRl-w8-Pb4"/>
