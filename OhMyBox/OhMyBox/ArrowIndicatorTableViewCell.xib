@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Ugn-jY-dK4" customClass="ArrowIndicatorTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ugn-jY-dK4" id="iuI-wv-s98">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="tRe-co-LXS">
+                        <rect key="frame" x="18" y="14" width="6" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="tRe-co-LXS" secondAttribute="height" multiplier="2:5" id="SQJ-4k-eNg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpY-QX-TRr">
+                        <rect key="frame" x="34" y="9" width="78" height="25"/>
+                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                        <color key="textColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZpY-QX-TRr" firstAttribute="leading" secondItem="tRe-co-LXS" secondAttribute="trailing" constant="10" id="MtF-p9-MNA"/>
+                    <constraint firstItem="tRe-co-LXS" firstAttribute="centerY" secondItem="iuI-wv-s98" secondAttribute="centerY" id="NCj-M4-uAB"/>
+                    <constraint firstItem="tRe-co-LXS" firstAttribute="leading" secondItem="iuI-wv-s98" secondAttribute="leading" constant="18" id="NeN-HG-ATW"/>
+                    <constraint firstItem="ZpY-QX-TRr" firstAttribute="centerY" secondItem="tRe-co-LXS" secondAttribute="centerY" id="hv9-eL-OS9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="ZpY-QX-TRr" id="fVB-Z8-alK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="category_indicator" width="6" height="15"/>
+    </resources>
+</document>

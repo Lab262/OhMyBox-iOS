@@ -9,16 +9,29 @@
 import UIKit
 import Fabric
 import Crashlytics
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
               Fabric.with([Crashlytics.self])
-        self.setupBarsAppearance()
+        var initialViewController: UIViewController? = nil
+        initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
+
+        
+        if (Defaults.sharedInstance.isLogged)!{
+               initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
+        }else {
+            
+            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
+        }
+        
+        self.window!.rootViewController = initialViewController
+        setUpBarsAppearance()
+        
         return true
     }
 
@@ -43,10 +56,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    func setupBarsAppearance(){
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
-        
-        UIApplication.shared.statusBarStyle = .lightContent
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
+    
+    func setUpBarsAppearance(){
+    
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.isTranslucent = true
         navigationBarAppearance.tintColor = UIColor.black
@@ -54,7 +72,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.backgroundColor =  UIColor.white
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
         
-              
+        let app = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        app.borderWidth = 1
+        app.borderColor = UIColor.colorWithHexString("E0E0E0")
+        app.cornerRadius = 5.0
     }
     
 }

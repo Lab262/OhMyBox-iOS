@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Axis Extrabold.otf">
+            <string>AXIS-ExtraBold</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Sok-zA-TIE" customClass="ProfileTableHeaderView" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_background_image" translatesAutoresizingMaskIntoConstraints="NO" id="al2-hM-BcA">
+                    <rect key="frame" x="13" y="1" width="108" height="99"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="99" id="VlH-xe-xGe"/>
+                        <constraint firstAttribute="width" constant="108" id="jzL-qt-WcR"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d0v-UP-gd3">
+                    <rect key="frame" x="15" y="25" width="122" height="46"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na9-wK-crR">
+                            <rect key="frame" x="0.0" y="0.0" width="122" height="23"/>
+                            <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="de compra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhs-cW-em8">
+                            <rect key="frame" x="0.0" y="23" width="122" height="23"/>
+                            <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2B-yl-3ts">
+                    <rect key="frame" x="284" y="37" width="71" height="22"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="NED-yw-YYK"/>
+                        <constraint firstAttribute="height" constant="22" id="h6h-lA-cB0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                    <state key="normal" title="Editar">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="edit:" destination="Sok-zA-TIE" eventType="touchUpInside" id="wjk-wU-BbW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="al2-hM-BcA" firstAttribute="leading" secondItem="Sok-zA-TIE" secondAttribute="leading" constant="13" id="4a7-Zd-6Jq"/>
+                <constraint firstAttribute="bottom" secondItem="d0v-UP-gd3" secondAttribute="bottom" constant="29" id="Zz7-Ga-9hE"/>
+                <constraint firstAttribute="bottom" secondItem="l2B-yl-3ts" secondAttribute="bottom" constant="41" id="cVT-Dd-NXu"/>
+                <constraint firstAttribute="trailing" secondItem="l2B-yl-3ts" secondAttribute="trailing" constant="20" id="luU-pZ-ozg"/>
+                <constraint firstAttribute="bottom" secondItem="al2-hM-BcA" secondAttribute="bottom" id="mPZ-ha-t0T"/>
+                <constraint firstItem="d0v-UP-gd3" firstAttribute="leading" secondItem="Sok-zA-TIE" secondAttribute="leading" constant="15" id="qdT-9C-lX9"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomLineLabel" destination="Hhs-cW-em8" id="8Jd-Hh-nR2"/>
+                <outlet property="editButton" destination="l2B-yl-3ts" id="IDg-Kg-K3d"/>
+                <outlet property="topLineLabel" destination="Na9-wK-crR" id="ZRs-pQ-LI3"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="114.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_header_background_image" width="109" height="100"/>
+    </resources>
+</document>

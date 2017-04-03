@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonSegmentedControl" customModule="OhMyBox" customModuleProvider="target">
+            <connections>
+                <outlet property="leftButton" destination="OFH-4m-TTG" id="Noq-rq-ckw"/>
+                <outlet property="rightButton" destination="9NE-Ed-q6b" id="SCf-oo-GAm"/>
+                <outlet property="stackView" destination="Ol9-C2-h7d" id="4GC-Dw-yvU"/>
+                <outlet property="view" destination="iN0-l3-epB" id="eMy-VU-yfr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-C2-h7d">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFH-4m-TTG">
+                            <rect key="frame" x="0.0" y="0.0" width="185" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="Xc1-GN-CT5"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="leftButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="N59-sf-UtL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NE-Ed-q6b">
+                            <rect key="frame" x="190" y="0.0" width="185" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="BBY-93-M1i"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="rightButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="mhH-Ek-HoL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="9NE-Ed-q6b" firstAttribute="width" secondItem="OFH-4m-TTG" secondAttribute="width" id="f6I-yU-OtY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ol9-C2-h7d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8j6-JF-G08"/>
+                <constraint firstAttribute="trailing" secondItem="Ol9-C2-h7d" secondAttribute="trailing" id="F5j-wg-z5U"/>
+                <constraint firstItem="Ol9-C2-h7d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lrd-CI-XNf"/>
+                <constraint firstItem="Ol9-C2-h7d" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l8e-GY-h9G"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="56" y="58"/>
+        </view>
+    </objects>
+</document>

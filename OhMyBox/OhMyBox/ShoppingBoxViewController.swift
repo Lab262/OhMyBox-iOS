@@ -2,109 +2,109 @@
 //  ShoppingBoxViewController.swift
 //  OhMyBox
 //
-//  Created by Felipe perius on 31/10/16.
-//  Copyright © 2016 Lab262. All rights reserved.
+//  Created by André Marques da Silva Rodrigues on 09/03/17.
+//  Copyright © 2017 Lab262. All rights reserved.
 //
 
 import UIKit
-import BGTableViewRowActionWithImage
 
 class ShoppingBoxViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    var textSegmentLabel: UILabel?
+    @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var emptyView: ShoppingBoxEmptyView!
     
-    @IBAction func buyAction(_ sender: AnyObject) {
-        performSegue(withIdentifier:"segueFinalPurchase", sender:self)
-    }
+    let cellSpacing: CGFloat = 25.0
+    let footerView = UIView()
     
+    var products: [Any] = [1]
+    var isEmptyInfo: ShoppingBoxEmptyView.Info?
+    
+    var buyButtonHandler: UIButton.ButtonHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerNib()
-        segmentControl.layer.cornerRadius = 0.0
-        segmentControl.layer.borderWidth = 1
+        registerNibs()
+        setUpEmptyView()
         
+        footerView.backgroundColor = .white
+        footerView.frame.size = CGSize(width: view.frame.width, height: cellSpacing)
+    }
+    
+    func registerNibs() {
+        tableView.registerNibFrom(ShoppingBoxTableViewCell.self)
+    }
+    
+    func setUpEmptyView() {
+        isEmptyInfo = (#imageLiteral(resourceName: "empty_box"), "Opa, vamos encher essa box, migx?", "Tem vários produtos que são a sua cara para você adicionar aqui", { button in
+            self.showAllProducts()
+        })
         
-       
+        emptyView.info = isEmptyInfo
+        emptyView.buttonHandler = { button in
+            self.dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: Notifications.selectHomeViewController, object: nil)
+        }
+    }
+    
+    func showAllProducts() {
+        
+    }
+    
+    @IBAction func buyButtonAction(_ sender: UIButton!) {
+        buyButtonHandler?(sender)
     }
 
-    @IBAction func backToViewController(_ sender: AnyObject) {
-    
-        self.dismiss(animated: true, completion: nil)
-       
-    }
+    /*
+    // MARK: - Navigation
 
-    @IBAction func selectUnitOrBox(_ sender: AnyObject) {
-    
-        self.tableView.reloadData()
-        
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
-    
-    func registerNib(){
-        
-        self.tableView.register(UINib(nibName: "ShoppingBoxTableViewCell", bundle: nil), forCellReuseIdentifier: ShoppingBoxTableViewCell.identifier)
-        
-        self.tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: OrderTableViewCell.identifier)
-    }
-    
-    func generateShoppingCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingBoxTableViewCell.identifier, for: indexPath) as! ShoppingBoxTableViewCell
-               return cell
-    }
-    
-    func generateOrderCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.identifier, for: indexPath) as! OrderTableViewCell
-         cell.isEditing = false
-        return cell
-    }
+    */
 
 }
 
-
 extension ShoppingBoxViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (self.segmentControl.selectedSegmentIndex == 0){
-            
-            return self.generateShoppingCell(tableView, cellForRowAt:indexPath)
-        }else {
-            
-            return self.generateOrderCell(tableView, cellForRowAt:indexPath)
-        }
-      
-     
-        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        updateIsTableViewHidden()
+        return products.count
     }
     
+    func updateIsTableViewHidden() {
+        let count = products.count
+        
+        let isTableViewHidden = count == 0
+        tableView.isHidden = isTableViewHidden
+        buyButton.isHidden = isTableViewHidden
+        emptyView.isHidden = !isTableViewHidden
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 2
+        return 1
     }
     
-    
-    
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingBoxTableViewCell.identifier) as! ShoppingBoxTableViewCell
+        
+        return cell
+    }
 }
 
 extension ShoppingBoxViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        
-            return 150
-       
+        return ShoppingBoxTableViewCell.cellHeight
     }
     
-       
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return cellSpacing
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return footerView
+    }
 }

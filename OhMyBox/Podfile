@@ -8,6 +8,8 @@ target 'OhMyBox' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'BGTableViewRowActionWithImage'
+    pod 'FalconFrameworkIOSSDK', :git => 'https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git'
+
 # Pods for OhMyBox
 
   target 'OhMyBoxTests' do

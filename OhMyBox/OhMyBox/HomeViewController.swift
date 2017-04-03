@@ -10,197 +10,184 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
-    var viewSearch: UIView?
-    var searchController: UISearchController!
-    var leftButtonItem: UIBarButtonItem?
-    var clotingArray: [String]?
-    var rightButtonItem: UIBarButtonItem?
-    @IBOutlet weak var searchBarBoxButton: UIBarButtonItem!
-    @IBOutlet weak var searchBarButton: UIBarButtonItem!
+    
+    var boxButtonItem: UIBarButtonItem?
+    var clothingArray: [String] = []
+    
+    var filtered:[String] = []
+    var allProduct = [Product]()
+    
+    var highlightsCollectionViewDelegate: UICollectionViewDelegate!
+    var newsCollectionViewDelegate: UICollectionViewDelegate!
+    var salesCollectionViewDelegate: UICollectionViewDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerNib()
-         self.rightButtonItem = UIBarButtonItem(image: UIImage(named:"searchIcon"), style: .done, target: self, action: #selector(searchProducts(_:)))
         
-        self.clotingArray = [String]()
-        self.clotingArray?.append("Cloting One")
-        self.clotingArray?.append("Cloting Two")
-        self.clotingArray?.append("cloting Three")
+        fillClothingArray()
+        
+        registerNibs()
+        setUpNavigationBar()
+        setUpTableView()
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.goToBoxViewController(_:)), name: Notifications.goToBoxViewController, object: nil)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .fade
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.configureSearchBar()
-        
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = preferredStatusBarStyle
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        if self.searchController.isActive {
-            self.searchController.isActive = false
-            self.searchController.searchBar.resignFirstResponder()
+    func fillClothingArray() {
+        
+        clothingArray.append("Cloting One")
+        clothingArray.append("Cloting Two")
+        clothingArray.append("cloting Three")
+        clothingArray.append("cloting Four")
+        clothingArray.append("cloting Five")
+    }
+    
+    func setUpNavigationBar() {
+     
+        navigationController?.navigationBar.isHidden = true
+        navigationBarView.leftBarButton.isHidden = true
+        navigationBarView.layoutIfNeeded()
+    }
+    
+    func setUpTableView() {
+    
+        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.backgroundColor = .white
+        tableView.layoutIfNeeded()
+    }
+
+    @IBAction func actionGoCart(_ sender: AnyObject) {
+        
+        self.performSegue(withIdentifier:"goCart", sender:nil)
+    
+    }
+    
+    func registerNibs() {
+        
+        //Header
+        tableView.registerNibFrom(HomeTableViewHeaderView.self)
+        
+        //Cells
+        tableView.registerNibFrom(HighlightsTableViewCell.self)
+        tableView.registerNibFrom(MiniProductsTableViewCell.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "detailProduct": break
+            case "goPromotion":
+                if let destinationVC = segue.destination as? RecommendedViewController {
+                    destinationVC.title = "Promoções"
+                    destinationVC.titleHeader = "Promoções"
+                    
+                }
+            case "goRecommended":
+                if let destinationVC = segue.destination as? RecommendedViewController {
+                    destinationVC.title = "Recomendados"
+                    destinationVC.titleHeader = "Recomendados"
+                }
+            default: break
+            }
         }
     }
     
-    func registerNib() {
-        
-        self.tableView.register(UINib(nibName: "HeaderTitleTableViewCell", bundle: nil), forCellReuseIdentifier: HeaderTitleTableViewCell.identifier)
-        self.tableView.register(UINib(nibName: "ShowCaseCollectionViewCell", bundle: nil), forCellReuseIdentifier: ShowCaseCollectionViewCell.identifier)
-          self.tableView.register(UINib(nibName: "PromotionTableViewCell", bundle: nil), forCellReuseIdentifier: PromotionTableViewCell.identifier)
+    func goToBoxViewController(_ notification: Notification) {
+        navigationBarView.goToCart(startsInBox: false, nil)
     }
     
-    
-    @IBAction func searchProducts(_ sender: AnyObject) {
-        self.showSearchBar()
-    
-    }
-    
-    
-    func configureSearchBar () {
-        //self.searchBarButton.isEnabled = false
-        self.searchController = UISearchController(searchResultsController: nil)
-        self.searchController.searchResultsUpdater = self
-        self.searchController.searchBar.delegate = self
-        self.searchController.searchBar.setImage(UIImage(named: "searchIcon"), for: .search, state: UIControlState())
-        self.searchController.delegate = self
-        self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.dimsBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Buscar"
-        self.searchController.searchBar.setValue("Cancelar", forKey: "_cancelButtonText")
-        
-        self.searchController.searchBar.setBackgroundImage(ViewUtil.imageFromColor(.clear, forSize: self.searchController.searchBar.frame.size, withCornerRadius: 0), for: .any, barMetrics: .default)
-        
-        
-        self.searchController.searchBar.tintColor = UIColor.colorWithHexString("AFAFB3")
-        
-        searchController.hidesBottomBarWhenPushed = true
-        let searchField = self.searchController.searchBar.value(forKey: "searchField") as? UITextField
-        
-        
-        searchField?.backgroundColor = UIColor.colorWithHexString("F4F4F4")
-        searchField?.textColor = UIColor.black
-        searchField?.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Buscar", comment: ""), attributes: [NSForegroundColorAttributeName: UIColor.colorWithHexString("AFAFB3")])
-       //   searchBarButton.isEnabled = true
-        
-        
-        
-        self.viewSearch = UIView(frame: CGRect(x: self.searchController.searchBar.frame.origin.x, y: self.searchController.searchBar.frame.origin.y, width: self.searchController.searchBar.bounds.size.width-15, height: self.searchController.searchBar.bounds.size.height))
-        
-        
-        self.viewSearch?.backgroundColor = UIColor.clear
-        
-        self.viewSearch?.addSubview(self.searchController.searchBar)
-        
-    }
-   
-    func showSearchBar() {
-        
-        self.searchController.isActive = true
-        self.searchController.searchBar.alpha = 0
-       // searchBarButton.isEnabled = false
-       // searchBarButton.tintColor = UIColor.clear
-       
-        let leftNavBarButton = UIBarButtonItem(customView: self.viewSearch!)
-        navigationItem.setLeftBarButton(leftNavBarButton, animated: true)
-        
-        navigationItem.setRightBarButton(nil, animated: true)
-        UIView.animate(withDuration: 0.2, animations: {
-            self.searchController.searchBar.alpha = 1
-            }, completion: { finished in
-                self.searchController.searchBar.becomeFirstResponder()
-        })
-    }
-    
-
 }
 
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        if indexPath.section == 0{
-            switch indexPath.row {
-                case 0:
-                    return self.generateHeaderClosetCell(tableView, cellForRowAt: indexPath)
-                case 1:
-                    return self.generateClosetCell(tableView, cellForRowAt: indexPath)
-                default:
-                    return UITableViewCell()
-            }
-        }else if indexPath.section == 1{
-            switch indexPath.row {
-                case 0:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-                    cell.firstTitleLineLabel.text = "OLHA AS"
-                    cell.secondTitleLineLabel.text = "NOVIDADES"
-                    cell.iconImage.image = UIImage(named:"textureSectionImage")
-                    
-                    return cell
-                case 1:
-                    return self.generateProductCell(tableView, cellForRowAt: indexPath)
-                default:
-                    return UITableViewCell()
-            }
-        }else if indexPath.section == 2{
-            switch indexPath.row {
-            case 0:
-                return self.generatePromotionCell(tableView, cellForRowAt: indexPath)
-            default:
-                return UITableViewCell()
-            }
+        let cell: UITableViewCell
         
-        }else {
-            return UITableViewCell()
+        switch indexPath.section {
+        case 0:
+            let highlightsCell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
+            
+            highlightsCell.selectionDelegate = self
+            highlightsCollectionViewDelegate = highlightsCell
+            cell = highlightsCell
+        case 1:
+            
+            let newsCell = generateNewsCell(tableView, cellForRowAt: indexPath)
+            
+            newsCell.selectionDelegate = self
+            newsCollectionViewDelegate = newsCell
+            cell = newsCell
+        case 2:
+            
+            let salesCell = generateSalesCell(tableView, cellForRowAt: indexPath)
+            
+            salesCell.selectionDelegate = self
+            salesCollectionViewDelegate = salesCell
+            cell = salesCell
+        default: cell = UITableViewCell()
         }
         
-        
-        
-        
+        return cell
     }
     
-    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> HighlightsTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
-        cell.delegate = self
+        let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsTableViewCell.identifier, for: indexPath) as! HighlightsTableViewCell
+        
+        cell.highlights = [#imageLiteral(resourceName: "verao_de_saias"), #imageLiteral(resourceName: "verao_de_saias"), #imageLiteral(resourceName: "verao_de_saias")]
+        
+        return cell
+    }
 
-        return cell
-    }
-    
-    func generatePromotionCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: PromotionTableViewCell.identifier, for: indexPath) as! PromotionTableViewCell
-        cell.selectionStyle = .none
+        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
+        
+        cell.products = [1, 2, 3]
         
         return cell
     }
     
-    func generateClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ClosetTableViewCell.identifier, for: indexPath) as! ClosetTableViewCell
-                
-        cell.tagType = 0
-        cell.clothingtArray = self.clotingArray
-        cell.identifierSegue = "goRecommended"
-        cell.delegate = self
-
-        return cell
-    }
-    
-    func generateHeaderClosetCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTitleTableViewCell.identifier, for: indexPath) as! HeaderTitleTableViewCell
-          cell.selectionStyle = .none
+        // set sales products
+        cell.products = [1, 2, 3]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        switch section {
+            case 0, 1, 2:
+                return 1
+            default:
+                return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 3
     }
 
@@ -208,117 +195,83 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
+        let height: CGFloat
+        
         switch indexPath.section {
-            
-            case 0:
-            
-            switch indexPath.row {
-                
-            case 0:
-                return 70
-            case 1:
-                return 310
-            default:
-                return 0
-            }
-            
-        case 1:
-            switch indexPath.row {
-            case 0:
-                return 70
-            case 1:
-                return 310
-            default:
-                return 0
-            }
-        case 2:
-            switch indexPath.row {
-            case 0:
-                return 170
-            default:
-                return 0
-            }
-
-        default:
-            return 100
+        case 0: height = HighlightsTableViewCell.cellHeight
+        case 1, 2: height = MiniProductsTableViewCell.cellHeight
+        default: height = 0
         }
+        
+        return height
         
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if section  == 0 {
+        let headerView: UIView?
+        
+        switch section {
+        case 1:
             
-            let header = tableView.dequeueReusableCell(withIdentifier:HeaderTitleTableViewCell.identifier) as! HeaderTitleTableViewCell
+            let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
             
-            header.firstTitleLineLabel.text = "Recomendados"
-            header.secondTitleLineLabel.text = "Para Você"
+            header.topLineLabel.text = "OLHA AS"
+            header.bottomLineLabel.text = "NOVIDADES"
             
-            return header
-        }else {
-            let view = UIView()
-            view.backgroundColor = UIColor.clear
-            return view
+            headerView = header
+        case 2:
+            
+            let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
+            header.topLineLabel.text = "GENTE,"
+            header.bottomLineLabel.text = "PROMOÇÃO!"
+            
+            headerView = header
+            
+        default:
+            headerView = nil
         }
+        
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == 0 {
-            return 0.1
-        } else {
-            return 70
-            
+        let height: CGFloat
+        
+        switch section {
+        case 1, 2:
+            height = HomeTableViewHeaderView.cellHeight
+        default:
+            height = 0
         }
+        return height
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 40.0
     }
   
 }
-extension HomeViewController: callSegueProtocol {
+
+extension HomeViewController: CollectionViewSelectionDelegate {
     
-    func callViewController(segueIndentifier:String){
-        self.performSegue(withIdentifier:segueIndentifier, sender:self)
+    func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
+        
+        let colletionViewDelegate: UICollectionViewDelegate! = colletionViewDelegate
+        
+        if colletionViewDelegate === highlightsCollectionViewDelegate {
+            
+            
+            
+        } else if colletionViewDelegate === newsCollectionViewDelegate {
+            performSegue(withIdentifier: SegueIdentifiers.homeToProductDetail, sender: self)
+            
+        } else if colletionViewDelegate === salesCollectionViewDelegate {
+            performSegue(withIdentifier: SegueIdentifiers.homeToProductDetail, sender: self)
+            
+        }
     }
 }
-
-extension HomeViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
-    
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-    
-    
-    func presentSearchController(_ searchController: UISearchController) {
-        self.searchController.searchBar.becomeFirstResponder()
-       
-
-    }
-    
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        self.navigationItem.leftBarButtonItem = self.leftButtonItem
-        // searchBarButton.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = self.rightButtonItem
-    
-    }
-    
-    func didDismissSearchController(_ searchController: UISearchController) {
-        self.searchController.searchBar.resignFirstResponder()
-        
-    }
-    
-    func willDismissSearchController(_ searchController: UISearchController) {
-        self.navigationItem.leftBarButtonItem = self.leftButtonItem
-        self.navigationItem.rightBarButtonItem = self.rightButtonItem
-    }
-}
-
-

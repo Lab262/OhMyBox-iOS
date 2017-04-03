@@ -9,7 +9,9 @@
 import UIKit
 
 class SegmentTableViewCell: UITableViewCell {
-    static let identifier = "segmentCell"
+    static var identifier: String {
+        return "segmentCell"
+    }
     
     @IBOutlet weak var aboutBoxButton: UIButton!
     @IBOutlet weak var dataUserButton: UIButton!

@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="48E-iM-OrB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Axis Extrabold.otf">
-            <string>AXIS-ExtraBold</string>
-        </array>
-        <array key="Muli-Regular.ttf">
-            <string>Muli</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Perfil-->
         <scene sceneID="jCa-2f-UBk">
@@ -26,82 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="242" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoProfileCell" rowHeight="264" id="q52-06-fef" customClass="PhotoProfileTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="264"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q52-06-fef" id="Fhe-lp-liu">
-                                            <frame key="frameInset" width="375" height="264"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fashion-person.png" translatesAutoresizingMaskIntoConstraints="NO" id="onA-fz-x7F">
-                                                    <frame key="frameInset" width="375" height="223"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="parallaxIntesity">
-                                                            <integer key="value" value="20"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contentName" translatesAutoresizingMaskIntoConstraints="NO" id="u39-WW-c4o">
-                                                    <frame key="frameInset" minX="8" minY="189" width="359" height="61"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MARIA BETANIA " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-VS-83C">
-                                                    <frame key="frameInset" minX="75" minY="206" width="225" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="21"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameProfileLabel" destination="iDH-VS-83C" id="5gf-CJ-NpW"/>
-                                            <outlet property="photoProfileImage" destination="onA-fz-x7F" id="H4l-jf-M0z"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="segmentCell" rowHeight="96" id="0AM-vx-Vuz" customClass="SegmentTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="356" width="375" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0AM-vx-Vuz" id="Rq4-lm-ZoO">
-                                            <frame key="frameInset" width="375" height="96"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-zi-fso">
-                                                    <frame key="frameInset" minX="200" minY="28" width="167" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
-                                                    <state key="normal" title="Sobre a box" backgroundImage="buttonSegmentOFF">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-ys-22w">
-                                                    <frame key="frameInset" minX="8" minY="28" width="167" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="20"/>
-                                                    <state key="normal" title="Meus dados" backgroundImage="buttonSegmentON">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="aboutBoxButton" destination="d8p-zi-fso" id="lPr-2b-mQL"/>
-                                            <outlet property="dataUserButton" destination="wZt-ys-22w" id="LTu-Tl-Yf9"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dataUserCell" rowHeight="103" id="e3Q-ac-yzA" customClass="DataUserTextFieldTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="452" width="375" height="103"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3Q-ac-yzA" id="IbL-wR-QSx">
-                                            <frame key="frameInset" width="375" height="103"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background" translatesAutoresizingMaskIntoConstraints="NO" id="FmJ-h2-9W9">
+                                <rect key="frame" x="226" y="25" width="179" height="288"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFt-QX-EFM" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="QeV-jM-YvR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftButtonIconImage" value="ic_button_back"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="PERFIL"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="242" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-OT-VLB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WCe-Hc-Oby" id="mAK-cK-SjI"/>
                                     <outlet property="delegate" destination="WCe-Hc-Oby" id="CrE-q5-04X"/>
@@ -110,46 +47,53 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="width" secondItem="lHJ-t0-MnT" secondAttribute="width" id="8e3-fJ-kMD"/>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerY" secondItem="lHJ-t0-MnT" secondAttribute="centerY" id="drE-Ev-5Lc"/>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="centerX" secondItem="lHJ-t0-MnT" secondAttribute="centerX" id="efP-9E-8gv"/>
-                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="height" secondItem="lHJ-t0-MnT" secondAttribute="height" id="qdF-vT-5or"/>
+                            <constraint firstAttribute="trailing" secondItem="Rtn-OT-VLB" secondAttribute="trailing" id="1Qm-u8-qhG"/>
+                            <constraint firstAttribute="trailing" secondItem="FmJ-h2-9W9" secondAttribute="trailing" constant="-30" id="Fv1-72-rUz"/>
+                            <constraint firstItem="GFt-QX-EFM" firstAttribute="top" secondItem="lHJ-t0-MnT" secondAttribute="top" id="RAd-fn-2fJ"/>
+                            <constraint firstItem="FmJ-h2-9W9" firstAttribute="top" secondItem="lHJ-t0-MnT" secondAttribute="top" constant="25" id="Wl8-Q8-qzu"/>
+                            <constraint firstItem="Qym-34-JOd" firstAttribute="top" secondItem="Rtn-OT-VLB" secondAttribute="bottom" id="XzX-KW-lRv"/>
+                            <constraint firstAttribute="trailing" secondItem="GFt-QX-EFM" secondAttribute="trailing" id="aAS-Td-eCE"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="leading" secondItem="lHJ-t0-MnT" secondAttribute="leading" id="g3D-Pq-sOy"/>
+                            <constraint firstItem="Rtn-OT-VLB" firstAttribute="top" secondItem="GFt-QX-EFM" secondAttribute="bottom" id="juU-tL-Pva"/>
+                            <constraint firstItem="GFt-QX-EFM" firstAttribute="leading" secondItem="lHJ-t0-MnT" secondAttribute="leading" id="z0a-PD-iVJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="PWe-68-0gS">
-                        <barButtonItem key="rightBarButtonItem" image="myBox" id="yiW-af-Ho5">
+                        <barButtonItem key="rightBarButtonItem" image="box_button" id="yiW-af-Ho5">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ocJ-Hg-kLf" kind="presentation" id="H4K-rB-rwT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="navigationBarView" destination="GFt-QX-EFM" id="uSj-TQ-Sch"/>
                         <outlet property="tableView" destination="Rtn-OT-VLB" id="tRJ-vz-UZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFx-qv-c3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="95.802098950524751"/>
+            <point key="canvasLocation" x="1023.75" y="92.957746478873247"/>
         </scene>
-
         <!--ShoppingBox-->
         <scene sceneID="Vc6-yI-rAF">
             <objects>
                 <viewControllerPlaceholder storyboardName="ShoppingBox" id="ocJ-Hg-kLf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfw-bs-rTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="-205"/>
+            <point key="canvasLocation" x="2003" y="-404"/>
         </scene>
-        <!--Perfil-->
-
+        <!--Navigation Controller-->
         <scene sceneID="ZdJ-0I-3s6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="48E-iM-OrB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="perfil" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF"/>
+                    <tabBarItem key="tabBarItem" title="" image="profileIconDeselected_button" selectedImage="profileIconSelected_button" id="s2k-gv-wDF">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z9V-g4-n4P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9V-g4-n4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -164,12 +108,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttonSegmentOFF" width="167" height="48"/>
-        <image name="buttonSegmentON" width="167" height="48"/>
-        <image name="contentName" width="353" height="62"/>
-        <image name="fashion-person.png" width="640" height="426"/>
-        <image name="myBox" width="28" height="28"/>
+        <image name="box_button" width="28" height="28"/>
+        <image name="ic_button_back" width="28" height="28"/>
         <image name="profileIconDeselected_button" width="29" height="27"/>
         <image name="profileIconSelected_button" width="29" height="28"/>
+        <image name="profile_background" width="179" height="288"/>
+        <image name="profile_dummy" width="28" height="28"/>
     </resources>
 </document>

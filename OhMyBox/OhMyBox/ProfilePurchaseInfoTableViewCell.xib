@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProfilePurchaseInfoTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSg-jn-Zvs">
+                        <rect key="frame" x="25" y="1" width="325" height="41.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="************9828" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yry-x0-t52">
+                                <rect key="frame" x="153" y="7" width="137" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="vLW-iU-sRS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lee-Y1-Lwf">
+                                <rect key="frame" x="15" y="7" width="81" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="k8l-6e-VIU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yry-x0-t52" firstAttribute="top" secondItem="DSg-jn-Zvs" secondAttribute="top" constant="7" id="AWz-P9-iHx"/>
+                            <constraint firstAttribute="bottom" secondItem="Yry-x0-t52" secondAttribute="bottom" constant="7" id="Cye-4J-oti"/>
+                            <constraint firstItem="lee-Y1-Lwf" firstAttribute="top" secondItem="DSg-jn-Zvs" secondAttribute="top" constant="7" id="Egb-Hl-4fr"/>
+                            <constraint firstItem="lee-Y1-Lwf" firstAttribute="leading" secondItem="DSg-jn-Zvs" secondAttribute="leading" constant="15" id="SeD-se-HId"/>
+                            <constraint firstAttribute="trailing" secondItem="Yry-x0-t52" secondAttribute="trailing" constant="35" id="czI-fF-7KU"/>
+                            <constraint firstAttribute="bottom" secondItem="lee-Y1-Lwf" secondAttribute="bottom" priority="999" constant="7" id="dve-HA-5Sp"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.33000000000000002"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DSg-jn-Zvs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="1Gn-8c-ZEI"/>
+                    <constraint firstAttribute="bottom" secondItem="DSg-jn-Zvs" secondAttribute="bottom" constant="1" id="3xC-FU-knr"/>
+                    <constraint firstAttribute="trailing" secondItem="DSg-jn-Zvs" secondAttribute="trailing" constant="25" id="eP0-ea-nmP"/>
+                    <constraint firstItem="DSg-jn-Zvs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="zZg-FF-Vom"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoLabel" destination="Yry-x0-t52" id="2Jw-NZ-xDr"/>
+                <outlet property="shadowView" destination="DSg-jn-Zvs" id="Uq6-Hz-2h5"/>
+                <outlet property="titleLabel" destination="lee-Y1-Lwf" id="cmb-pC-s6Y"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="45"/>
+        </tableViewCell>
+    </objects>
+</document>

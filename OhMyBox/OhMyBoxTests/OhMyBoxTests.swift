@@ -6,6 +6,7 @@
 //  Copyright © 2016 Lab262. All rights reserved.
 //
 
+/*
 import XCTest
 @testable import OhMyBox
 
@@ -34,3 +35,4 @@ class OhMyBoxTests: XCTestCase {
     }
 
 }
+*/

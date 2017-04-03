@@ -9,7 +9,9 @@
 import UIKit
 
 class MeasuresUserTableViewCell: UITableViewCell {
-    static let identifier = "measureUserCell"
+    static var identifier: String {
+        return "measureUserCell"
+    }
 
     @IBOutlet weak var sizeImage: UIImageView!
     @IBOutlet weak var TitleSizeLabel: UILabel!

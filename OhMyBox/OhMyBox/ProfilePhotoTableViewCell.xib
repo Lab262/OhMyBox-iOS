@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProfilePhotoTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_photo_frame" translatesAutoresizingMaskIntoConstraints="NO" id="FgK-QW-rpW">
+                        <rect key="frame" x="80" y="0.0" width="161" height="158"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="161" id="Vz8-AX-Aki"/>
+                            <constraint firstAttribute="width" secondItem="FgK-QW-rpW" secondAttribute="height" multiplier="161:158" id="nlx-2O-fZb"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nty-gS-YBK">
+                        <rect key="frame" x="92" y="10" width="136" height="136"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="136" id="ox2-tF-lwH"/>
+                            <constraint firstAttribute="width" secondItem="nty-gS-YBK" secondAttribute="height" multiplier="1:1" id="qdX-X1-fm4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="FgK-QW-rpW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7Fq-Pa-6gY"/>
+                    <constraint firstItem="nty-gS-YBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KMz-Zr-kUi"/>
+                    <constraint firstItem="nty-gS-YBK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="e8r-CP-myi"/>
+                    <constraint firstItem="FgK-QW-rpW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mRo-ND-rq3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="profilePhotoImageView" destination="nty-gS-YBK" id="9zE-UB-8zK"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="96.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="profile_photo_frame" width="161" height="158"/>
+        <image name="profile_placeholder" width="139" height="138"/>
+    </resources>
+</document>

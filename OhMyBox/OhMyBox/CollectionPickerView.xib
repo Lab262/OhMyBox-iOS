@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionPickerView" customModule="OhMyBox" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="qPQ-t8-Eua" id="oXp-6f-8yn"/>
+                <outlet property="optionIndicatorImageView" destination="k9R-oR-xd9" id="FB5-Tg-VXj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qUq-Ok-hBY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qPQ-t8-Eua">
+                    <rect key="frame" x="0.0" y="1" width="375" height="58"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="TxY-q6-3lV"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nt4-cN-Fs0" customClass="CenterCellCollectionViewFlowLayout" customModule="OhMyBox" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="k9R-oR-xd9">
+                    <rect key="frame" x="175" y="0.0" width="25" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="8XE-Qe-N9O"/>
+                        <constraint firstAttribute="width" secondItem="k9R-oR-xd9" secondAttribute="height" multiplier="25:10" id="mlr-3Z-VrG"/>
+                    </constraints>
+                </imageView>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2v-MB-hee">
+                    <rect key="frame" x="0.0" y="58" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pKT-6C-olc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k9R-oR-xd9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3zS-Bn-XUO"/>
+                <constraint firstAttribute="bottom" secondItem="qPQ-t8-Eua" secondAttribute="bottom" id="Epb-eH-Dn9"/>
+                <constraint firstAttribute="bottom" secondItem="X2v-MB-hee" secondAttribute="bottom" id="Je8-vF-8jb"/>
+                <constraint firstAttribute="trailing" secondItem="qPQ-t8-Eua" secondAttribute="trailing" id="N1q-LK-3RE"/>
+                <constraint firstItem="k9R-oR-xd9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SBo-T9-vau"/>
+                <constraint firstItem="qPQ-t8-Eua" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pU1-6d-huT"/>
+                <constraint firstItem="X2v-MB-hee" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pdB-yG-DiC"/>
+                <constraint firstAttribute="trailing" secondItem="X2v-MB-hee" secondAttribute="trailing" id="uUR-ZW-KQg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="37.5" y="46.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="option_indicator" width="25" height="10"/>
+    </resources>
+</document>

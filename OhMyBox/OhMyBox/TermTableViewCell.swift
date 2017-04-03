@@ -9,7 +9,9 @@
 import UIKit
 
 class TermTableViewCell: UITableViewCell {
-    static let identifier = "termTextCell"
+    static var identifier: String {
+        return "termTextCell"
+    }
     
     @IBOutlet weak var titleTermLabel: UILabel!
     @IBOutlet weak var frameIconView: UIView!

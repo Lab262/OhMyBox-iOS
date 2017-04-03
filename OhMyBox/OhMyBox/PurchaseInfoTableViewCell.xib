@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="eh3-bv-ITg" customClass="PurchaseInfoTableViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eh3-bv-ITg" id="7ul-vw-oMN">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="************9828" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGJ-EE-bmr">
+                        <rect key="frame" x="166" y="8" width="137" height="27.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="137" id="Lrz-W8-UfO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                        <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0No-92-yNW">
+                        <rect key="frame" x="20" y="8" width="100" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="6f3-V1-ZI2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                        <color key="textColor" red="0.87843137250000003" green="0.23921568630000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnL-ft-7rj">
+                        <rect key="frame" x="20" y="42.5" width="322" height="1"/>
+                        <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7z3-t1-DCZ"/>
+                            <constraint firstAttribute="width" constant="322" id="A0r-mH-Kr4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="fnL-ft-7rj" secondAttribute="bottom" id="2l3-rW-sYh"/>
+                    <constraint firstItem="0No-92-yNW" firstAttribute="leading" secondItem="7ul-vw-oMN" secondAttribute="leading" constant="20" id="QvM-BH-yAE"/>
+                    <constraint firstAttribute="trailing" secondItem="tGJ-EE-bmr" secondAttribute="trailing" constant="72" id="R36-bT-Dhj"/>
+                    <constraint firstAttribute="bottom" secondItem="tGJ-EE-bmr" secondAttribute="bottom" constant="8" id="ZlB-QB-Lo3"/>
+                    <constraint firstItem="tGJ-EE-bmr" firstAttribute="top" secondItem="7ul-vw-oMN" secondAttribute="top" constant="8" id="he9-OF-HML"/>
+                    <constraint firstItem="fnL-ft-7rj" firstAttribute="leading" secondItem="7ul-vw-oMN" secondAttribute="leading" constant="20" id="v8X-jV-W1U"/>
+                    <constraint firstItem="0No-92-yNW" firstAttribute="top" secondItem="7ul-vw-oMN" secondAttribute="top" constant="8" id="z11-Co-3fP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoLabel" destination="tGJ-EE-bmr" id="VG0-xt-JjM"/>
+                <outlet property="separatorView" destination="fnL-ft-7rj" id="TgP-1r-tiM"/>
+                <outlet property="titleLabel" destination="0No-92-yNW" id="Ifa-ZL-vje"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="45"/>
+        </tableViewCell>
+    </objects>
+</document>
