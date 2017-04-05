@@ -1,17 +1,21 @@
 PODS:
   - Alamofire (4.0.0)
   - BGTableViewRowActionWithImage (0.3.6)
+  - Bolts/Tasks (1.8.4)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
   - FalconFrameworkIOSSDK (0.1.9):
     - Alamofire (= 4.0)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
 
 DEPENDENCIES:
   - BGTableViewRowActionWithImage
   - Crashlytics
   - Fabric
   - FalconFrameworkIOSSDK (from `https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git`)
+  - Parse
 
 EXTERNAL SOURCES:
   FalconFrameworkIOSSDK:
@@ -25,10 +29,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   BGTableViewRowActionWithImage: 3517276bcee26e559465bcca13151afc33ab6d2a
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FalconFrameworkIOSSDK: 0815254993050a347e672c4a802b18add094fb43
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
 
-PODFILE CHECKSUM: 61b2c002c2252246bdfb50cd8fdabc3d700fe831
+PODFILE CHECKSUM: 78e1885aed08737fb7d65ca51f3d5097c1bbcdff
 
 COCOAPODS: 1.2.0
