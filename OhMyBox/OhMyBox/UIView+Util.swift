@@ -24,8 +24,6 @@ extension UIView {
         self.layer.masksToBounds = true
     }
     
-    
-    
     //MARK: Transforma uma view em um losango
     func transformToRhombus() {
         let path = UIBezierPath()
@@ -60,7 +58,6 @@ extension UIView {
     //MARK: Adicionar paralax a uma view
     func addParallaxToView(amount : CGFloat) {
         
-        
         let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         horizontal.minimumRelativeValue = -amount
         horizontal.maximumRelativeValue = amount
@@ -73,4 +70,42 @@ extension UIView {
         group.motionEffects = [horizontal, vertical]
         self.addMotionEffect(group)
     }
+    
+    static var loadingFeedbackViewTag: Int {
+        
+        return 0x192F3
+    }
+    
+    func addLoadingFeedback(indicatorStyle: UIActivityIndicatorViewStyle = .gray) {
+        
+        let tag = UIView.loadingFeedbackViewTag
+        
+        guard viewWithTag(tag) == nil else { return }
+        
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: indicatorStyle)
+        indicator.tag = tag
+        
+        indicator.frame = frame
+        
+        addSubview(indicator)
+        
+        indicator.startAnimating()
+        
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        indicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        indicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+    }
+    
+    func removeLoadingFeedback() {
+        
+        let tag = UIView.loadingFeedbackViewTag
+        
+        if let view = viewWithTag(tag) {
+            
+            view.removeFromSuperview()
+        }
+    }
+    
 }

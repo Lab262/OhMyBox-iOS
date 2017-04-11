@@ -23,10 +23,13 @@ class ProfileViewController: UIViewController {
     var aboutInfoOptions = ["POLÍTICA DE TROCAS", "POLÍTICA DE VENDAS", "POLÍTICA DE PRIVACIDADE"]
     var aboutOMBOptions = ["SOBRE OH MY BOX", "OI, PODE FALAR!"]
     
-    
+    var presenter: ProfilePresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = ProfilePresenter(controller: self)
+        
         configureNavigationBar()
         registerNibs()
         setUpTableView()
@@ -277,6 +280,13 @@ extension ProfileViewController: UITableViewDelegate {
     
 }
 
+extension ProfileViewController: ProfilePresenterDelegate {
+    
+    
+    
+    
+}
+
 // - Mark: Cells generation
 
 extension ProfileViewController {
@@ -285,12 +295,21 @@ extension ProfileViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfilePhotoTableViewCell.identifier) as! ProfilePhotoTableViewCell
         
+        cell.profilePhotoImageView.addLoadingFeedback()
+        presenter.getUserPhoto { (image) in
+            
+            cell.profilePhotoImageView.image = image
+            cell.profilePhotoImageView.removeLoadingFeedback()
+        }
+        
         return cell
     }
     
     func generateProfileLabelCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileLabelTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileLabelTableViewCell.identifier) as! ProfileLabelTableViewCell
+        
+        cell.name = presenter.userName
         
         return cell
     }
@@ -310,7 +329,6 @@ extension ProfileViewController {
             self.tableView.setContentOffset(contentOffset, animated: false)
         }
 
-        
         buttonSegmentedView.leftButtonHandler = buttonHandler
         buttonSegmentedView.rightButtonHandler = buttonHandler
         
@@ -369,7 +387,7 @@ extension ProfileViewController {
     func generateUsernameCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileCredentialsTableViewCell {
         let cell = generateCredentialsCell(tableView, cellForRowAt: indexPath)
         
-        cell.title = "mariabetania@gmail.com"
+        cell.title = presenter.userEmail
         
         return cell
     }

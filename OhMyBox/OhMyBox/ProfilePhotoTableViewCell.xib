@@ -27,17 +27,17 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nty-gS-YBK">
-                        <rect key="frame" x="92" y="10" width="136" height="136"/>
+                        <rect key="frame" x="98" y="12" width="125" height="129"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="136" id="ox2-tF-lwH"/>
-                            <constraint firstAttribute="width" secondItem="nty-gS-YBK" secondAttribute="height" multiplier="1:1" id="qdX-X1-fm4"/>
+                            <constraint firstAttribute="width" constant="125" id="ox2-tF-lwH"/>
+                            <constraint firstAttribute="width" secondItem="nty-gS-YBK" secondAttribute="height" multiplier="1:1" constant="-4" id="qdX-X1-fm4"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="FgK-QW-rpW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7Fq-Pa-6gY"/>
-                    <constraint firstItem="nty-gS-YBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KMz-Zr-kUi"/>
+                    <constraint firstItem="nty-gS-YBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="KMz-Zr-kUi"/>
                     <constraint firstItem="nty-gS-YBK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="e8r-CP-myi"/>
                     <constraint firstItem="FgK-QW-rpW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mRo-ND-rq3"/>
                 </constraints>

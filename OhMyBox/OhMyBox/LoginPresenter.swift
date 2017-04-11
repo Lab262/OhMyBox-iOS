@@ -9,6 +9,11 @@
 import Parse
 import ParseFacebookUtilsV4
 
+protocol LoginPresenterDelegate {
+    
+    func showHomeViewController()
+}
+
 class LoginPresenter: NSObject {
 
     var controller: LoginPresenterDelegate?

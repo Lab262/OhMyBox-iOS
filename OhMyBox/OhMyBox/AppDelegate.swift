@@ -22,16 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               Fabric.with([Crashlytics.self])
         var initialViewController: UIViewController? = nil
         initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
-
-        
-        if (Defaults.sharedInstance.isLogged)!{
-               initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
-        }else {
-            
-            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
-        }
         
         self.window!.rootViewController = initialViewController
+        
         setUpBarsAppearance()
         
         let configuration = ParseClientConfiguration {
@@ -44,6 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+        
+        if (User.current != nil) {
+            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
+        } else {
+            
+            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
+        }
         
         return true
     }

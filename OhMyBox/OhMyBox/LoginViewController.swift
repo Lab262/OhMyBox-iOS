@@ -10,11 +10,6 @@ import UIKit
 import Parse
 import ParseFacebookUtilsV4
 
-protocol LoginPresenterDelegate {
-    
-    func showHomeViewController()
-}
-
 class LoginViewController: UIViewController, LoginPresenterDelegate {
     
     var presenter: LoginPresenter!
