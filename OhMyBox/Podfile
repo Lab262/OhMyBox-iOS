@@ -6,6 +6,7 @@ target 'OhMyBox' do
   use_frameworks!
 
     pod 'Parse'
+    pod 'ParseFacebookUtilsV4'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'BGTableViewRowActionWithImage'

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FBSDKLoginKit
-import FBSDKCoreKit
 
 class CreateAccountViewController: UIViewController {
     
@@ -16,27 +14,23 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var buttonSquare: UIView!
-    
 
     @IBAction func registerUser(_ sender: Any) {
-        if let msgError = verifyInformations(){
-            self.present(ViewUtil.alertController(withTitle: "erroo", message: msgError), animated: true, completion: nil)
+        
+        if verifyInformations() == nil {
             
-            return
-        }
-        
-        let user = User(_name: self.nameTextField.text!, _email:self.emailTextField.text!)
-        
-        UserRequest.createAccountUser(user:user, pass:self.passwordTextField.text!) { (success,msg) in
-            if (success){
+            let user = User()
+            user.firstName = nameTextField.text
+            user.email = emailTextField.text
+            
+            UserRequest.create(user: user, password: passwordTextField.text!) { (success, message) in
                 
-                self.present( self.alertControllerActionWithTitle("Sucesso!!", _withMessage:msg), animated: true, completion: nil)
-                
-            }else {
-                self.present(ViewUtil.alertController(withTitle: "Erro", message: msg), animated: true, completion: nil)
+                if success {
+                    self.showSuccessAlert()
+                } else {
+                    self.showErrorAlert()
+                }
             }
-            
-            
         }
     }
     
@@ -63,85 +57,51 @@ class CreateAccountViewController: UIViewController {
             
             return msgErro
         }
-        return msgErro
         
+        return msgErro
     }
     
-    func alertControllerActionWithTitle (_ _title: String, _withMessage _message: String) -> UIAlertController {
+    func showErrorAlert() {
         
-        let alert = UIAlertController(title: _title, message: _message, preferredStyle: .alert)
+        showAlert(with: "Erro :(", message: "Não foi possível criar a conta", handler: nil)
+    }
+    
+    func showSuccessAlert() {
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
-            //self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
-        }))
-        return alert
+        showAlert(with: "Sucesso!", message: "Conta criada com sucesso", handler: alertSuccessHandler)
+    }
+    
+    func showAlert(with title: String, message: String, handler: (() -> ())?) {
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        alertController.title = title
+        alertController.message = message
+        
+        let action = UIAlertAction(title: "Ok", style: .default) { (action) in
+            handler?()
+        }
+        
+        alertController.addAction(action)
+        
+        DispatchQueue.main.async {
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func alertSuccessHandler() {
+        
+        self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
     }
     
     @IBAction func loginWithFacebook(_ sender: AnyObject) {
-        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        
-        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
-            
-            if error == nil {
-                self.view.loadAnimation()
-                let fbloginresult : FBSDKLoginManagerLoginResult = result!
-                
-                if (result?.isCancelled)! {
-                    self.view.unload()
-                    return
-                }
-                
-                if(fbloginresult.grantedPermissions.contains("email")) {
-                    
-                    self.returnUserData()
-                    
-                }
-            } else {
-                
-            }
-            
-        }
-        
-        
         
     }
-    func returnUserData(){
-        
-        if((FBSDKAccessToken.current()) != nil){
-            
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
-                
-                if (error == nil) {
-                    
-                    let data:[String:AnyObject] = result as! [String : AnyObject]
-                         let userName = "\(data["first_name"] as! String) \(data["last_name"] as! String)"
-                    
-                    UserRequest.loginUserWithFacebook(id: data["id"] as! String, email: data["email"] as! String,userName: userName, mediaType:SocialMediaType.facebook.rawValue, completionHandler: { (success, msg, user) in
-                        
-                        if success {
-                            Defaults.sharedInstance.isLogged = true
-                            self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
-                            
-                        }else {
-                            self.view.unload()
-                            self.present(ViewUtil.alertController(withTitle: "Erro", message: msg), animated: true, completion: nil)
-                        }                    })
-                    
-                }
-            })
-        }
-    }
-    
     
     @IBAction func showLogin(_ sender: Any) {
         _ = self.navigationController?.popViewController(animated: true)
     }
-    
-}
-
-extension CreateAccountViewController:UITextFieldDelegate{
-    
-    
     
 }
 

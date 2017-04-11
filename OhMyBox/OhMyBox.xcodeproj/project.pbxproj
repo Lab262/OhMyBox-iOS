@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DFFCA99DCC3ABAB4B580BB2 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7942C4919D121E49409D4ED /* Pods_OhMyBox.framework */; };
-		1CA6CB8CC75B416F97D93BC1 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B45C229460755F853AF2DE /* Pods_OhMyBoxTests.framework */; };
 		2F044CE51DBE3BD300B54468 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F044CE41DBE3BD300B54468 /* DetailProductViewController.swift */; };
 		2F044CE71DBE41D600B54468 /* coatProduct.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F044CE61DBE41D600B54468 /* coatProduct.png */; };
 		2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07773F1DBD1BED003C124F /* RecommendedViewController.swift */; };
@@ -39,7 +37,6 @@
 		2F2C8E141DDD02AE0002BB87 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; };
 		2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */; };
 		2F2C8E201DDE310B0002BB87 /* imagePromo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */; };
 		2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */; };
 		2F3359511DE38AE400540116 /* StatusOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */; };
@@ -112,6 +109,7 @@
 		4C4DB5791E68C0C2005D44C1 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4DB5731E68C0C2005D44C1 /* ColorCollectionViewCell.swift */; };
 		4C4DB57D1E68DB71005D44C1 /* ProductDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4DB57B1E68DB70005D44C1 /* ProductDetailTableViewCell.swift */; };
 		4C4DB57E1E68DB71005D44C1 /* ProductDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4DB57C1E68DB70005D44C1 /* ProductDetailTableViewCell.xib */; };
+		4C61E1BB1E9C2A65009A9DEA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61E1BA1E9C2A65009A9DEA /* LoginPresenter.swift */; };
 		4C6B40DF1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B40DD1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift */; };
 		4C6B40E01E781E0800622282 /* PurchaseSuccessfulTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B40DE1E781E0800622282 /* PurchaseSuccessfulTableViewCell.xib */; };
 		4C6B40E21E78250E00622282 /* PurchaseSuccessfulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B40E11E78250E00622282 /* PurchaseSuccessfulViewController.swift */; };
@@ -196,6 +194,8 @@
 		4CE5DFF51E71E21E0093CC0E /* ShoppingProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */; };
 		4CE5DFF81E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */; };
 		4CE5DFF91E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF71E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib */; };
+		7E9FF3CD45D1AEA5E0CCF531 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81C204F58CD89A19F6552BC /* Pods_OhMyBox.framework */; };
+		867BAA4D784E12A5733C44A7 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
 		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
 		A4D81D141DEBCF01008B269A /* AuthenticationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */; };
@@ -275,8 +275,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		17B45C229460755F853AF2DE /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		231AF8617F6A12CF806E5949 /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
+		042B861052387457E2BE9B37 /* Pods-OhMyBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F044CE41DBE3BD300B54468 /* DetailProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		2F044CE61DBE41D600B54468 /* coatProduct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coatProduct.png; sourceTree = "<group>"; };
 		2F07773F1DBD1BED003C124F /* RecommendedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
@@ -308,7 +307,6 @@
 		2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2F2C8E191DDD49850002BB87 /* OhMyBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OhMyBox.entitlements; sourceTree = "<group>"; };
-		2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaType.swift; sourceTree = "<group>"; };
 		2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePromo.png; sourceTree = "<group>"; };
 		2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusOrderTableViewCell.swift; sourceTree = "<group>"; };
 		2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusOrderTableViewCell.xib; sourceTree = "<group>"; };
@@ -381,6 +379,7 @@
 		4C4DB5731E68C0C2005D44C1 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C4DB57B1E68DB70005D44C1 /* ProductDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4C4DB57C1E68DB70005D44C1 /* ProductDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailTableViewCell.xib; sourceTree = "<group>"; };
+		4C61E1BA1E9C2A65009A9DEA /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		4C6B40DD1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessfulTableViewCell.swift; sourceTree = "<group>"; };
 		4C6B40DE1E781E0800622282 /* PurchaseSuccessfulTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseSuccessfulTableViewCell.xib; sourceTree = "<group>"; };
 		4C6B40E11E78250E00622282 /* PurchaseSuccessfulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessfulViewController.swift; sourceTree = "<group>"; };
@@ -465,7 +464,9 @@
 		4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingProductTableViewCell.xib; sourceTree = "<group>"; };
 		4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingResultsTableViewCell.swift; sourceTree = "<group>"; };
 		4CE5DFF71E71EFDD0093CC0E /* ShoppingResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingResultsTableViewCell.xib; sourceTree = "<group>"; };
-		A027E37E9E166E77CA919AFE /* Pods-OhMyBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E37378E2EB5ED623C01A37A /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F7235B2B7B22B0D49DC51AB /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
+		9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputScrollView.swift; sourceTree = "<group>"; };
 		A4422AD51DED004200A2593B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationContainerViewController.swift; sourceTree = "<group>"; };
@@ -479,6 +480,8 @@
 		A4F89B0D1DA806C900949A35 /* OhMyBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F89B111DA806C900949A35 /* OhMyBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhMyBoxTests.swift; sourceTree = "<group>"; };
 		A4F89B131DA806C900949A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B14C8E54CF6AD08549BC98FF /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
+		B81C204F58CD89A19F6552BC /* Pods_OhMyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D402DFF81DB68C7F007855D6 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		D402DFFE1DB68CAD007855D6 /* Brand.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Brand.storyboard; sourceTree = "<group>"; };
 		D402E0041DB68CE5007855D6 /* Wishlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
@@ -487,7 +490,6 @@
 		D402E0101DB69541007855D6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D41E8FD61DE4F28200BA3266 /* TagView5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView5.swift; sourceTree = "<group>"; };
 		D41E8FD81DE4F28F00BA3266 /* TagView5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagView5.xib; sourceTree = "<group>"; };
-		D4211FA0BD2F14AB45EB2ECD /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D44066481DEE125E0053927B /* IconNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconNavigationBar.xib; sourceTree = "<group>"; };
 		D44066491DEE125E0053927B /* IconNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconNavigationBar.swift; sourceTree = "<group>"; };
@@ -521,8 +523,6 @@
 		D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		D4E7E08D1DD4DEAD00F1DE52 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D4E7E08F1DD4DFF700F1DE52 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
-		DF8861EC67EC94F829A3EE26 /* Pods-OhMyBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.debug.xcconfig"; sourceTree = "<group>"; };
-		F7942C4919D121E49409D4ED /* Pods_OhMyBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,7 +534,7 @@
 				2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */,
 				2F2C8E131DDD02AE0002BB87 /* FBSDKLoginKit.framework in Frameworks */,
 				2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */,
-				0DFFCA99DCC3ABAB4B580BB2 /* Pods_OhMyBox.framework in Frameworks */,
+				7E9FF3CD45D1AEA5E0CCF531 /* Pods_OhMyBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +542,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CA6CB8CC75B416F97D93BC1 /* Pods_OhMyBoxTests.framework in Frameworks */,
+				867BAA4D784E12A5733C44A7 /* Pods_OhMyBoxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,18 +593,10 @@
 				2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */,
 				2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */,
 				2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */,
-				F7942C4919D121E49409D4ED /* Pods_OhMyBox.framework */,
-				17B45C229460755F853AF2DE /* Pods_OhMyBoxTests.framework */,
+				B81C204F58CD89A19F6552BC /* Pods_OhMyBox.framework */,
+				9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2F2C8E1C1DDD56B70002BB87 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				2F2C8E1A1DDD56AE0002BB87 /* SocialMediaType.swift */,
-			);
-			name = Enum;
 			sourceTree = "<group>";
 		};
 		2F4896EB1DB7E1D600EADFFE /* Cell */ = {
@@ -859,6 +851,15 @@
 				4C4DB57C1E68DB70005D44C1 /* ProductDetailTableViewCell.xib */,
 			);
 			name = "Product Details";
+			sourceTree = "<group>";
+		};
+		4C61E1BC1E9C2A6E009A9DEA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */,
+				4C61E1BA1E9C2A65009A9DEA /* LoginPresenter.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		4C6B40DC1E781DEF00622282 /* Purchase Sucessful */ = {
@@ -1129,13 +1130,13 @@
 			name = Requests;
 			sourceTree = "<group>";
 		};
-		5FA88E85D52A364400470F20 /* Pods */ = {
+		55DD07456F12FA44BD4F9CEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF8861EC67EC94F829A3EE26 /* Pods-OhMyBox.debug.xcconfig */,
-				231AF8617F6A12CF806E5949 /* Pods-OhMyBox.release.xcconfig */,
-				A027E37E9E166E77CA919AFE /* Pods-OhMyBoxTests.debug.xcconfig */,
-				D4211FA0BD2F14AB45EB2ECD /* Pods-OhMyBoxTests.release.xcconfig */,
+				B14C8E54CF6AD08549BC98FF /* Pods-OhMyBox.debug.xcconfig */,
+				5F7235B2B7B22B0D49DC51AB /* Pods-OhMyBox.release.xcconfig */,
+				042B861052387457E2BE9B37 /* Pods-OhMyBoxTests.debug.xcconfig */,
+				4E37378E2EB5ED623C01A37A /* Pods-OhMyBoxTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1169,7 +1170,7 @@
 				A4F89B101DA806C900949A35 /* OhMyBoxTests */,
 				A4F89AFA1DA806C900949A35 /* Products */,
 				64612CF48B1EAC2E4BDDFE27 /* Frameworks */,
-				5FA88E85D52A364400470F20 /* Pods */,
+				55DD07456F12FA44BD4F9CEC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1366,7 +1367,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */,
-				D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */,
+				4C61E1BC1E9C2A6E009A9DEA /* Login */,
 				D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */,
 			);
 			name = Controller;
@@ -1493,7 +1494,6 @@
 		D4E7E08C1DD4DE0200F1DE52 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				2F2C8E1C1DDD56B70002BB87 /* Enum */,
 				D4E7E08D1DD4DEAD00F1DE52 /* User.swift */,
 			);
 			name = User;
@@ -1506,14 +1506,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4F89B161DA806C900949A35 /* Build configuration list for PBXNativeTarget "OhMyBox" */;
 			buildPhases = (
-				2E187116166C107A2A25FB5B /* [CP] Check Pods Manifest.lock */,
+				EE3691F4F13FFC7F28E80EC0 /* [CP] Check Pods Manifest.lock */,
 				A4F89AF51DA806C900949A35 /* Sources */,
 				A4F89AF61DA806C900949A35 /* Frameworks */,
 				A4F89AF71DA806C900949A35 /* Resources */,
 				A4B5CAAA1DA811FB003260BA /* Fabric */,
 				2F2C8E171DDD02AE0002BB87 /* Embed Frameworks */,
-				09CBECEAD91FF948B43D572B /* [CP] Embed Pods Frameworks */,
-				4D28C6527330C446AF0295DE /* [CP] Copy Pods Resources */,
+				18FC17CE8E855ACEA479561A /* [CP] Embed Pods Frameworks */,
+				B3D3B10BE1837B6354E30864 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1528,12 +1528,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4F89B191DA806C900949A35 /* Build configuration list for PBXNativeTarget "OhMyBoxTests" */;
 			buildPhases = (
-				3A942AECB219ADA29CCC78D3 /* [CP] Check Pods Manifest.lock */,
+				C56AACDE6FA2CA409F9BD355 /* [CP] Check Pods Manifest.lock */,
 				A4F89B091DA806C900949A35 /* Sources */,
 				A4F89B0A1DA806C900949A35 /* Frameworks */,
 				A4F89B0B1DA806C900949A35 /* Resources */,
-				D3FBF2A0AEF540BA665C9EEE /* [CP] Embed Pods Frameworks */,
-				2E2B390E224654438EF87076 /* [CP] Copy Pods Resources */,
+				C06F8EDEA6CF4D51CDE20B10 /* [CP] Embed Pods Frameworks */,
+				59E4E52846A1DB7E3DBA955D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1711,7 +1711,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09CBECEAD91FF948B43D572B /* [CP] Embed Pods Frameworks */ = {
+		18FC17CE8E855ACEA479561A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1726,22 +1726,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2E187116166C107A2A25FB5B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2E2B390E224654438EF87076 /* [CP] Copy Pods Resources */ = {
+		59E4E52846A1DB7E3DBA955D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1754,36 +1739,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A942AECB219ADA29CCC78D3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4D28C6527330C446AF0295DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A4B5CAAA1DA811FB003260BA /* Fabric */ = {
@@ -1800,7 +1755,22 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/Fabric/run 2e1985f6065c4886c2f4320a20fb61e3c4323688 d2624afd5979642eef8ae5ce2ae3ee1eb86983da95e3c602e865668bb7b4bf8b";
 		};
-		D3FBF2A0AEF540BA665C9EEE /* [CP] Embed Pods Frameworks */ = {
+		B3D3B10BE1837B6354E30864 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C06F8EDEA6CF4D51CDE20B10 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1815,6 +1785,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C56AACDE6FA2CA409F9BD355 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3691F4F13FFC7F28E80EC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1823,7 +1823,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CAEA9521E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift in Sources */,
-				2F2C8E1B1DDD56AE0002BB87 /* SocialMediaType.swift in Sources */,
 				4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */,
 				4CA82ED31E773F97002C495B /* PurchaseViewController.swift in Sources */,
 				4CE5DFE71E71B8700093CC0E /* ShoppingBoxEmptyView.swift in Sources */,
@@ -1897,6 +1896,7 @@
 				4CAEA93A1E6EEF6000FC65BD /* UIButton+Handler.swift in Sources */,
 				4CA82ECE1E773E89002C495B /* PurchaseButtonHeaderTableViewCell.swift in Sources */,
 				4C2F24ED1E6602C20043A90B /* UICollectionViewCell+Utils.swift in Sources */,
+				4C61E1BB1E9C2A65009A9DEA /* LoginPresenter.swift in Sources */,
 				4C459F1F1E636F980076D962 /* SearchBrandCollectionViewCell.swift in Sources */,
 				4CA82ECA1E773D4E002C495B /* PurchaseInfoTableViewCell.swift in Sources */,
 				4CDBE9481E69EEE000715226 /* BrandTableViewCell.swift in Sources */,
@@ -2088,9 +2088,8 @@
 		};
 		A4F89B171DA806C900949A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF8861EC67EC94F829A3EE26 /* Pods-OhMyBox.debug.xcconfig */;
+			baseConfigurationReference = B14C8E54CF6AD08549BC98FF /* Pods-OhMyBox.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OhMyBox/OhMyBox.entitlements;
@@ -2117,9 +2116,8 @@
 		};
 		A4F89B181DA806C900949A35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 231AF8617F6A12CF806E5949 /* Pods-OhMyBox.release.xcconfig */;
+			baseConfigurationReference = 5F7235B2B7B22B0D49DC51AB /* Pods-OhMyBox.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OhMyBox/OhMyBox.entitlements;
@@ -2145,7 +2143,7 @@
 		};
 		A4F89B1A1DA806C900949A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A027E37E9E166E77CA919AFE /* Pods-OhMyBoxTests.debug.xcconfig */;
+			baseConfigurationReference = 042B861052387457E2BE9B37 /* Pods-OhMyBoxTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2160,7 +2158,7 @@
 		};
 		A4F89B1B1DA806C900949A35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4211FA0BD2F14AB45EB2ECD /* Pods-OhMyBoxTests.release.xcconfig */;
+			baseConfigurationReference = 4E37378E2EB5ED623C01A37A /* Pods-OhMyBoxTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

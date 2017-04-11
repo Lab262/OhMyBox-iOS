@@ -10,6 +10,8 @@ import UIKit
 import Fabric
 import Crashlytics
 import FBSDKCoreKit
+import Parse
+import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +33,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.rootViewController = initialViewController
         setUpBarsAppearance()
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "ohmyboxapi"
+            $0.clientKey = ""
+            $0.server = "http://ohmyboxapi.herokuapp.com/parse"
+            
+        }
+        
+        Parse.initialize(with: configuration)
+        
+        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
         return true
     }

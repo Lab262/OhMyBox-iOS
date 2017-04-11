@@ -1,4 +1,3 @@
-
 //
 //  User.swift
 //  OhMyBox
@@ -7,71 +6,32 @@
 //  Copyright © 2016 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
-class User: NSObject{
+class User: PFUser {
     
-    var id: String?
-    var name: String?
-    var email: String?
-    var token: String?
-
-
-    convenience init(data: (Dictionary<String, AnyObject>)) {
-        self.init()
+    enum UserType: String {
         
-        print(data)
-        self.setDataFromWS(data: data)
+        case buyer
+        case seller
     }
     
+    @NSManaged var firstName: String?
+    @NSManaged var lastName: String?
+    @NSManaged var userType: String?
+    @NSManaged var photo: PFFile?
     
-    override init() {
-        super.init()
+    static var current: User? {
+        
+        return PFUser.current() as? User
     }
     
-    init (_name:String,_email:String){
-        self.name = _name
-        self.email = _email
-    }
-    
-    
-    func setDataFromWS(data: (Dictionary<String, AnyObject>)) {
+    var fullName: String {
         
-        if let id = data ["_id"] as? String { self.id = id }
-        
-        if let email = data ["email"] as? String { self.email = email }
-        
-        if let token = data ["token"] as? String { self.token = token }
-        
-        if let name = data ["name"] as? String { self.name = name }
-        
-    }
-    
-    
-    func getAsDictionaryForWS() -> Dictionary<String, String> {
-        
-        var dic = Dictionary<String, String>()
-        
-        if let email = self.email {
-            dic ["email"] = email
+        if case let (firstName?, lastName?) = (firstName, lastName) {
+            return "\(firstName) \(lastName)"
+        } else {
+            return ""
         }
-        
-        if let name  = self.name  {
-            dic ["name"] = name
-        }
-        
-        if let id  = self.id  {
-            dic ["_id"] = id
-        }
-        if let token  = self.token
-        {
-            dic ["token"] = token
-        }
-        
-        
-        
-        
-        return dic
     }
-
 }
