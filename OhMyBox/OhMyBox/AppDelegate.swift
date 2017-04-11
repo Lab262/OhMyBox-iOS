@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
         if (User.current != nil) {
+            
             initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
         } else {
             

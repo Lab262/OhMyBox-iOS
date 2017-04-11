@@ -17,9 +17,6 @@ class ProfileViewController: UIViewController {
     weak var buttonSegmentedView: ButtonSegmentedControl!
     var buttonSegmentedViewLeftButtonHighlighted = true
     
-    typealias MeasuresType = [(title: String, info: Any)]
-    
-    var measures: MeasuresType  = [("BLUSA", "P"), ("CALÇA", 36), ("SAPATO", 34)]
     var aboutInfoOptions = ["POLÍTICA DE TROCAS", "POLÍTICA DE VENDAS", "POLÍTICA DE PRIVACIDADE"]
     var aboutOMBOptions = ["SOBRE OH MY BOX", "OI, PODE FALAR!"]
     
@@ -29,6 +26,17 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         presenter = ProfilePresenter(controller: self)
+        
+        presenter.loadCurrentUserMeasures() { measures in
+            
+            if measures != nil {
+                
+                self.tableView.reloadData()
+            } else {
+                
+                // create new?
+            }
+        }
         
         configureNavigationBar()
         registerNibs()
@@ -134,7 +142,7 @@ extension ProfileViewController: UITableViewDataSource {
             switch section {
             case 0: number = 3
             case 1: number = 2
-            case 2: number = measures.count
+            case 2: number = presenter.userMeasures?.values?.keys.count ?? 0
             case 3: number = 2
             default: number = 0
             }
@@ -298,7 +306,14 @@ extension ProfileViewController {
         cell.profilePhotoImageView.addLoadingFeedback()
         presenter.getUserPhoto { (image) in
             
-            cell.profilePhotoImageView.image = image
+            if image == nil {
+                
+                // put placeholder image
+            } else {
+                
+                cell.profilePhotoImageView.image = image
+            }
+            
             cell.profilePhotoImageView.removeLoadingFeedback()
         }
         
@@ -366,12 +381,25 @@ extension ProfileViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileMeasureTableViewCell.identifier) as! ProfileMeasureTableViewCell
         
-        let measure = measures[indexPath.row]
-        cell.titleLabel.text = measure.title
-        cell.infoLabel.text = String(describing: measure.info)
-        
-        if indexPath.row == measures.count - 1 {
-            cell.setSeparatorHidden(true)
+        if let measures = presenter.userMeasures {
+            
+            if let values = measures.values {
+                
+                var key: String?
+                for (i, k) in values.keys.enumerated() where i == indexPath.row {
+                    
+                    key = k
+                }
+                
+                guard key != nil else { return cell }
+                
+                cell.titleLabel.text = key!
+                cell.infoLabel.text = values[key!]!
+                
+                if indexPath.row == values.keys.count - 1 {
+                    cell.setSeparatorHidden(true)
+                }
+            }
         }
         
         return cell
