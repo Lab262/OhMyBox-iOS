@@ -26,13 +26,15 @@ class ProfileViewController: UIViewController {
 // MARK: - Presenter properties
     var presenter: ProfilePresenter!
     
-    var measures: Measures.ViewData? {
+    var photo: UIImage? {
         
         didSet {
             
-            tableView.reloadData()
+            photoImageView?.image = photo
         }
     }
+    
+    var measures: Measures.ViewData?
     
 // MARK: - Default methods
     override func viewDidLoad() {
@@ -300,7 +302,13 @@ extension ProfileViewController {
         
         photoImageView = cell.profilePhotoImageView
         
-        presenter.getUserPhoto()
+        if let photo = photo {
+            
+            photoImageView.image = photo
+        } else {
+            
+            presenter.getUserPhoto()
+        }
         
         return cell
     }
@@ -437,17 +445,16 @@ extension ProfileViewController: ProfileView {
         photoImageView.removeLoadingFeedback()
     }
     
-    func setPhoto(_ photo: UIImage?) {
-        
-        photoImageView.image = photo
-    }
-    
     func startLoadingMeasures() {
         
     }
     
     func finishLoadingMeasures() {
         
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
     }
     
 }

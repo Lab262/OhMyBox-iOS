@@ -9,19 +9,19 @@
 import Parse
 import ParseFacebookUtilsV4
 
-protocol LoginPresenterDelegate {
+protocol LoginView {
     
     func showHomeViewController()
 }
 
 class LoginPresenter: NSObject {
 
-    var controller: LoginPresenterDelegate?
+    var view: LoginView?
     
-    init(controller: LoginPresenterDelegate) {
+    init(view: LoginView) {
         
         super.init()
-        self.controller = controller
+        self.view = view
     }
     
     func login(with username: String, password: String) {
@@ -30,7 +30,7 @@ class LoginPresenter: NSObject {
             
             if error == nil {
                 
-                self.controller?.showHomeViewController()
+                self.view?.showHomeViewController()
             } else {
                 
                 print(error!.localizedDescription)
@@ -44,7 +44,7 @@ class LoginPresenter: NSObject {
             
             if success {
                 
-                self.controller?.showHomeViewController()
+                self.view?.showHomeViewController()
             } else if let error = error {
                 
                 print(error.localizedDescription)

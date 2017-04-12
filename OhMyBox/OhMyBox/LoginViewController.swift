@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseFacebookUtilsV4
 
-class LoginViewController: UIViewController, LoginPresenterDelegate {
+class LoginViewController: UIViewController, LoginView {
     
     var presenter: LoginPresenter!
     
@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, LoginPresenterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = LoginPresenter(controller: self)
+        presenter = LoginPresenter(view: self)
     }
     
     @IBAction func loginAction(_ sender: AnyObject) {

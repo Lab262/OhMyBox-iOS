@@ -12,12 +12,14 @@ protocol ProfileView {
     
     func startLoadingPhoto()
     func finishLoadingPhoto()
-    func setPhoto(_ photo: UIImage?)
     
     func startLoadingMeasures()
     func finishLoadingMeasures()
     
     var measures: Measures.ViewData? {get set}
+    var photo: UIImage? {get set}
+    
+    func reloadData()
 }
 
 class ProfilePresenter: NSObject {
@@ -55,11 +57,11 @@ class ProfilePresenter: NSObject {
                     
                     let image = UIImage(data: data)
                     
-                    self.view.setPhoto(image)
+                    self.view.photo = image
                     
                 } else {
                     
-                    self.view.setPhoto(nil)
+                    self.view.photo = nil
                 }
                 
                 self.view.finishLoadingPhoto()
@@ -76,7 +78,7 @@ class ProfilePresenter: NSObject {
             let query = PFQuery(className: Measures.parseClassName())
             query.whereKey(ownerKey, equalTo: user.objectId as Any)
             
-            query.findObjectsInBackground(block: { (objects, error) in
+            query.findObjectsInBackground() { (objects, error) in
                 
                 if let objects = objects {
                     
@@ -85,7 +87,9 @@ class ProfilePresenter: NSObject {
                     
                     self.view.measures = nil
                 }
-            })
+                
+                self.view.reloadData()
+            }
         }
     }
 }
