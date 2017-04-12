@@ -55,6 +55,26 @@ class Measures: PFObject {
     
 }
 
+extension Measures {
+    
+    public typealias ViewData = [(title: String, value: String)]
+    
+    var viewData: ViewData {
+        
+        var data: ViewData = []
+        if let values = values {
+            
+            for key in values.keys {
+                
+                let value = values[key]!
+                data.append((MeasureTypes.descriptions[key]!, value))
+            }
+        }
+        
+        return data
+    }
+}
+
 extension Measures: PFSubclassing {
     /**
      The name of the class as seen in the REST API.

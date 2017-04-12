@@ -11,8 +11,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+// MARK: - Outlets
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    weak var photoImageView: UIImageView!
     
     weak var buttonSegmentedView: ButtonSegmentedControl!
     var buttonSegmentedViewLeftButtonHighlighted = true
@@ -20,35 +23,33 @@ class ProfileViewController: UIViewController {
     var aboutInfoOptions = ["POLÍTICA DE TROCAS", "POLÍTICA DE VENDAS", "POLÍTICA DE PRIVACIDADE"]
     var aboutOMBOptions = ["SOBRE OH MY BOX", "OI, PODE FALAR!"]
     
+// MARK: - Presenter properties
     var presenter: ProfilePresenter!
     
+    var measures: Measures.ViewData? {
+        
+        didSet {
+            
+            tableView.reloadData()
+        }
+    }
+    
+// MARK: - Default methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = ProfilePresenter(controller: self)
+        presenter = ProfilePresenter(view: self)
         
-        presenter.loadCurrentUserMeasures() { measures in
-            
-            if measures != nil {
-                
-                self.tableView.reloadData()
-            } else {
-                
-                // create new?
-            }
-        }
+        presenter.loadCurrentUserMeasures()
         
         configureNavigationBar()
         registerNibs()
         setUpTableView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
-    
     func configureNavigationBar() {
         
+        navigationController?.navigationBar.isHidden = true
         navigationBarView.leftBarButton.isHidden = true
     }
     
@@ -72,6 +73,7 @@ class ProfileViewController: UIViewController {
     
 }
 
+// MARK: - Tableview data source
 extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -142,7 +144,7 @@ extension ProfileViewController: UITableViewDataSource {
             switch section {
             case 0: number = 3
             case 1: number = 2
-            case 2: number = presenter.userMeasures?.values?.keys.count ?? 0
+            case 2: number = measures?.count ?? 0
             case 3: number = 2
             default: number = 0
             }
@@ -174,7 +176,7 @@ extension ProfileViewController: UITableViewDataSource {
     
 }
 
-
+// MARK: - Tableview delegate
 extension ProfileViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -288,14 +290,7 @@ extension ProfileViewController: UITableViewDelegate {
     
 }
 
-extension ProfileViewController: ProfilePresenterDelegate {
-    
-    
-    
-    
-}
-
-// - Mark: Cells generation
+// MARK: - Cells generation
 
 extension ProfileViewController {
     
@@ -303,19 +298,9 @@ extension ProfileViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfilePhotoTableViewCell.identifier) as! ProfilePhotoTableViewCell
         
-        cell.profilePhotoImageView.addLoadingFeedback()
-        presenter.getUserPhoto { (image) in
-            
-            if image == nil {
-                
-                // put placeholder image
-            } else {
-                
-                cell.profilePhotoImageView.image = image
-            }
-            
-            cell.profilePhotoImageView.removeLoadingFeedback()
-        }
+        photoImageView = cell.profilePhotoImageView
+        
+        presenter.getUserPhoto()
         
         return cell
     }
@@ -381,30 +366,18 @@ extension ProfileViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileMeasureTableViewCell.identifier) as! ProfileMeasureTableViewCell
         
-        if let measures = presenter.userMeasures {
-            
-            if let values = measures.values {
-                
-                var key: String?
-                for (i, k) in values.keys.enumerated() where i == indexPath.row {
-                    
-                    key = k
-                }
-                
-                guard key != nil else { return cell }
-                
-                cell.titleLabel.text = MeasureTypes.descriptions[key!]!
-                cell.infoLabel.text = values[key!]!
-                
-                if indexPath.row == values.keys.count - 1 {
-                    cell.setSeparatorHidden(true)
-                }
-            }
-        }
+        let measure = measures![indexPath.row]
         
+        cell.titleLabel.text = measure.title
+        cell.infoLabel.text = measure.value
+        
+        if indexPath.row == measures!.count - 1 {
+            cell.setSeparatorHidden(true)
+        }
+    
         return cell
     }
-    
+
     func generateCredentialsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ProfileCredentialsTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCredentialsTableViewCell.identifier) as! ProfileCredentialsTableViewCell
@@ -449,5 +422,32 @@ extension ProfileViewController {
         return header
     }
 
+}
 
+// MARK: - Presenter protocol
+extension ProfileViewController: ProfileView {
+    
+    func startLoadingPhoto() {
+        
+        photoImageView.addLoadingFeedback()
+    }
+    
+    func finishLoadingPhoto() {
+        
+        photoImageView.removeLoadingFeedback()
+    }
+    
+    func setPhoto(_ photo: UIImage?) {
+        
+        photoImageView.image = photo
+    }
+    
+    func startLoadingMeasures() {
+        
+    }
+    
+    func finishLoadingMeasures() {
+        
+    }
+    
 }

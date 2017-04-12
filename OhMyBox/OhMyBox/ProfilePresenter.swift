@@ -8,17 +8,25 @@
 
 import Parse
 
-protocol ProfilePresenterDelegate {
+protocol ProfileView {
     
+    func startLoadingPhoto()
+    func finishLoadingPhoto()
+    func setPhoto(_ photo: UIImage?)
+    
+    func startLoadingMeasures()
+    func finishLoadingMeasures()
+    
+    var measures: Measures.ViewData? {get set}
 }
 
 class ProfilePresenter: NSObject {
     
-    var controller: ProfilePresenterDelegate?
+    var view: ProfileView
     
-    init(controller: ProfilePresenterDelegate) {
+    init(view: ProfileView) {
         
-        self.controller = controller
+        self.view = view
     }
     
     var currentUser: User? {
@@ -36,27 +44,30 @@ class ProfilePresenter: NSObject {
         return currentUser?.email ?? ""
     }
     
-    var userMeasures: Measures?
-    
-    func getUserPhoto(completionHandler: ((UIImage?) -> ())?) {
+    func getUserPhoto() {
         
         if let user = currentUser {
             
+            view.startLoadingPhoto()
             user.photo?.getDataInBackground() { (data, error) in
                 
                 if let data = data {
                     
                     let image = UIImage(data: data)
-                    completionHandler?(image)
+                    
+                    self.view.setPhoto(image)
+                    
                 } else {
                     
-                    completionHandler?(nil)
+                    self.view.setPhoto(nil)
                 }
+                
+                self.view.finishLoadingPhoto()
             }
         }
     }
     
-    func loadCurrentUserMeasures(completionHandler: ((Measures?) -> ())?) {
+    func loadCurrentUserMeasures() {
         
         if let user = currentUser {
             
@@ -69,13 +80,14 @@ class ProfilePresenter: NSObject {
                 
                 if let objects = objects {
                     
-                    self.userMeasures = objects.first as? Measures
-                    completionHandler?(self.userMeasures)
+                    self.view.measures = (objects.first as? Measures)?.viewData
                 } else {
                     
-                    completionHandler?(nil)
+                    self.view.measures = nil
                 }
             })
         }
     }
 }
+
+
