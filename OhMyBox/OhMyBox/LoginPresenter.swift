@@ -11,30 +11,25 @@ import ParseFacebookUtilsV4
 
 protocol LoginView {
     
-    func showHomeViewController()
+    func didFinishLogin(_ success: Bool, error: Error?)
 }
 
 class LoginPresenter: NSObject {
 
-    var view: LoginView?
+    var view: LoginView
     
     init(view: LoginView) {
         
-        super.init()
         self.view = view
+        
+        super.init()
     }
     
     func login(with username: String, password: String) {
         
         UserRequest.login(with: username, password: password) { (error) in
             
-            if error == nil {
-                
-                self.view?.showHomeViewController()
-            } else {
-                
-                print(error!.localizedDescription)
-            }
+            self.view.didFinishLogin(error == nil, error: error)
         }
     }
     
@@ -42,13 +37,7 @@ class LoginPresenter: NSObject {
         
         UserRequest.loginWithFacebook() { (success, error) in
             
-            if success {
-                
-                self.view?.showHomeViewController()
-            } else if let error = error {
-                
-                print(error.localizedDescription)
-            }
+            self.view.didFinishLogin(success, error: error)
         }
     }
     

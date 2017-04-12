@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseFacebookUtilsV4
 
-class LoginViewController: UIViewController, LoginView {
+class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter!
     
@@ -38,16 +38,27 @@ class LoginViewController: UIViewController, LoginView {
         presenter.loginWithFacebook()
     }
     
-    func showHomeViewController() {
-        
-        DispatchQueue.main.async {
-            self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
-        }
-    }
-    
 }
 
-//Mark: Animations
+extension LoginViewController: LoginView {
+    
+    func didFinishLogin(_ success: Bool, error: Error?) {
+        
+        if success {
+            
+            DispatchQueue.main.async {
+                
+                let vc = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!
+                self.present(vc, animated: true, completion: nil)
+            }
+        } else {
+            
+            // feedback
+        }
+    }
+}
+
+// MARK: Animations
 extension LoginViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
