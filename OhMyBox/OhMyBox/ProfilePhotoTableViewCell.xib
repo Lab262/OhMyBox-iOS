@@ -26,7 +26,7 @@
                             <constraint firstAttribute="width" secondItem="FgK-QW-rpW" secondAttribute="height" multiplier="161:158" id="nlx-2O-fZb"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nty-gS-YBK">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nty-gS-YBK">
                         <rect key="frame" x="98" y="12" width="125" height="129"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="125" id="ox2-tF-lwH"/>
@@ -50,6 +50,5 @@
     </objects>
     <resources>
         <image name="profile_photo_frame" width="161" height="158"/>
-        <image name="profile_placeholder" width="139" height="138"/>
     </resources>
 </document>

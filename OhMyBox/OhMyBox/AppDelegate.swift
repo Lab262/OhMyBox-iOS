@@ -20,10 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
               Fabric.with([Crashlytics.self])
-        var initialViewController: UIViewController? = nil
-        initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
-        
-        self.window!.rootViewController = initialViewController
         
         setUpBarsAppearance()
         
@@ -38,13 +34,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
+        let initialViewController: UIViewController
         if (User.current != nil) {
             
-            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
+            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")!
         } else {
             
-            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
+            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")!
         }
+        
+        self.window!.rootViewController = initialViewController
         
         return true
     }

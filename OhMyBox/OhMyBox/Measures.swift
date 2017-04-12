@@ -38,17 +38,20 @@ struct MeasureTypes {
         }
     }
     
-    static var shirtKey: String = "shirt"
-    static var pantsKey: String = "pants"
-    static var shoesKey: String = "shoes"
+    static var shirtKey = "shirt"
+    static var pantsKey = "pants"
+    static var shoesKey = "shoes"
+    
+    static var descriptions = [shirtKey: "Blusa",
+                        pantsKey: "Calça",
+                        shoesKey: "Sapato"]
 }
 
 
 class Measures: PFObject {
     
-    @NSManaged var owner: User?
+    @NSManaged var ownerId: String?
     @NSManaged var values: [String: String]?
-    
     
 }
 

@@ -60,10 +60,10 @@ class ProfilePresenter: NSObject {
         
         if let user = currentUser {
             
-            let ownerKey = #keyPath(Measures.owner)
+            let ownerKey = #keyPath(Measures.ownerId)
             
             let query = PFQuery(className: Measures.parseClassName())
-            query.whereKey(ownerKey, equalTo: user)
+            query.whereKey(ownerKey, equalTo: user.objectId as Any)
             
             query.findObjectsInBackground(block: { (objects, error) in
                 

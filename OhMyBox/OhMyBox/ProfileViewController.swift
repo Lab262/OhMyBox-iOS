@@ -393,7 +393,7 @@ extension ProfileViewController {
                 
                 guard key != nil else { return cell }
                 
-                cell.titleLabel.text = key!
+                cell.titleLabel.text = MeasureTypes.descriptions[key!]!
                 cell.infoLabel.text = values[key!]!
                 
                 if indexPath.row == values.keys.count - 1 {
