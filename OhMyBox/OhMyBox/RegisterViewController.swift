@@ -10,6 +10,14 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+// MARK: - Error cases
+    enum RegisterError: Error {
+        
+        case invalidName
+        case invalidEmail
+        case invalidPassword
+    }
+    
 // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,19 +29,29 @@ class RegisterViewController: UIViewController {
     
     var presenter: RegisterPresenter!
     
-    var verifiedInformations: (firstName: String, lastName: String, email: String, password: String)? {
+    func verifiedInformations() throws -> (firstName: String, lastName: String, email: String, password: String) {
         
-        let firstName = textFields[1]?.text
-        let lastName = textFields[2]?.text
-        let email = textFields[3]?.text
-        let password = textFields[4]?.text
-        let passwordConfirmation = textFields[5]?.text
+        let firstName = textFields[1]!.text!
+        let lastName = textFields[2]!.text!
+        let email = textFields[3]!.text!
+        let password = textFields[4]!.text!
+        let passwordConfirmation = textFields[5]!.text!
         
-        guard firstName != nil && lastName != nil else { return nil }
-        guard email != nil && email!.isValidEmail else { return nil }
-        guard password != nil && password == passwordConfirmation else { return nil }
+        guard firstName.length > 0 && lastName.length > 0 else {
+            
+            throw RegisterError.invalidName
+        }
         
-        return (firstName!, lastName!, email!, password!)
+        guard email.isValidEmail else {
+            
+            throw RegisterError.invalidEmail
+        }
+        guard password.length > 2 && password == passwordConfirmation else {
+            
+            throw RegisterError.invalidPassword
+        }
+        
+        return (firstName, lastName, email, password)
     }
     
 // MARK: - Default initialization methods
@@ -59,13 +77,31 @@ class RegisterViewController: UIViewController {
         
         let user = User()
         
-        if let verifiedInfo = verifiedInformations {
+        do {
+            
+            let verifiedInfo = try verifiedInformations()
             
             user.firstName = verifiedInfo.firstName
             user.lastName = verifiedInfo.lastName
             user.email = verifiedInfo.email
             
             presenter.registerUser(user, password: verifiedInfo.password)
+            
+        } catch RegisterError.invalidName {
+            
+            //Handle invalid name
+            print("invalid name")
+        } catch RegisterError.invalidEmail {
+            
+            //Handle invalid email
+            print("invalid email")
+        } catch RegisterError.invalidPassword {
+            
+            //Handle invalid password
+            print("invalid password")
+        } catch {
+            
+            print("unknown error")
         }
     }
     

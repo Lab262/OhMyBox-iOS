@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
-        
+        PFUser.logOut()
         let initialViewController: UIViewController
         if (User.current != nil) {
             
