@@ -16,6 +16,19 @@ class RegisterViewController: UIViewController {
         case invalidName
         case invalidEmail
         case invalidPassword
+        
+        var message: String {
+            
+            let message: String
+            switch self {
+                
+            case .invalidName: message = "Nome inválido"
+            case .invalidEmail: message = "Email inválido"
+            case .invalidPassword: message = "Senha inválida"
+            }
+            
+            return message
+        }
     }
     
 // MARK: - Outlets
@@ -87,21 +100,12 @@ class RegisterViewController: UIViewController {
             
             presenter.registerUser(user, password: verifiedInfo.password)
             
-        } catch RegisterError.invalidName {
+        } catch let error as RegisterError {
             
-            //Handle invalid name
-            print("invalid name")
-        } catch RegisterError.invalidEmail {
-            
-            //Handle invalid email
-            print("invalid email")
-        } catch RegisterError.invalidPassword {
-            
-            //Handle invalid password
-            print("invalid password")
+            showErrorAlert(message: error.message)
         } catch {
             
-            print("unknown error")
+            showErrorAlert(message: "Erro desconhecido")
         }
     }
     
@@ -115,9 +119,9 @@ class RegisterViewController: UIViewController {
     
 // MARK: - Alert methods
     
-    func showErrorAlert() {
+    func showErrorAlert(message: String? = nil) {
         
-        showAlert(with: "Erro :(", message: "Não foi possível criar a conta", handler: nil)
+        showAlert(with: "Erro :(", message: message ?? "Não foi possível criar a conta", handler: nil)
     }
     
     func showSuccessAlert() {
