@@ -10,56 +10,25 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonSquare: UIView!
 
-    @IBAction func registerUser(_ sender: Any) {
+    override func viewDidLoad() {
         
-        if verifyInformations() == nil {
-            
-            let user = User()
-            user.firstName = nameTextField.text
-            user.email = emailTextField.text
-            
-            UserRequest.create(user: user, password: passwordTextField.text!) { (success, message) in
-                
-                if success {
-                    self.showSuccessAlert()
-                } else {
-                    self.showErrorAlert()
-                }
-            }
-        }
+        super.viewDidLoad()
+        registerNibs()
     }
     
-    func verifyInformations() -> String? {
+    func registerNibs() {
         
-        var msgErro: String?
-        
-        if self.emailTextField.text == nil || self.emailTextField.text == "" {
-            
-            msgErro = "Email inválido"
-            
-            return msgErro
-        }
-        
-        if self.passwordTextField.text == nil ||  self.passwordTextField.text == "" {
-            
-            msgErro = "Senha inválida"
-            
-            return msgErro
-        }
-        if self.nameTextField.text == nil || self.nameTextField.text == "" {
-            
-            msgErro = "Nome inválido"
-            
-            return msgErro
-        }
-        
-        return msgErro
+        tableView.registerNibFrom(LogoTableViewCell.self)
+        tableView.registerNibFrom(RegisterFieldTableViewCell.self)
     }
+    
+    @IBAction func registerUser(_ sender: Any) {
+        
+    }
+    
     
     func showErrorAlert() {
         
@@ -147,3 +116,93 @@ extension CreateAccountViewController {
         
     }
 }
+
+extension CreateAccountViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: UITableViewCell
+        switch indexPath.row {
+        case 0: cell = generateLogoCell(tableView, cellForRowAt: indexPath)
+        default: cell = generateRegisterFieldCell(tableView, cellForRowAt: indexPath)
+        }
+        
+        return cell
+    }
+}
+
+extension CreateAccountViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let height: CGFloat
+        switch indexPath.row {
+            
+        case 0: height = LogoTableViewCell.cellHeight
+        default: height = RegisterFieldTableViewCell.cellHeight
+        }
+        
+        return height
+    }
+}
+
+// MARK: - Cells generation
+extension CreateAccountViewController {
+    
+    func generateLogoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> LogoTableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: LogoTableViewCell.identifier) as! LogoTableViewCell
+        
+        return cell
+    }
+    
+    func generateRegisterFieldCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RegisterFieldTableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: RegisterFieldTableViewCell.identifier) as! RegisterFieldTableViewCell
+        
+        switch indexPath.row {
+            
+        case 1, 2:
+            cell.iconImageView.image = #imageLiteral(resourceName: "iconUser_image")
+        case 3:
+            cell.iconImageView.image = #imageLiteral(resourceName: "iconEmail_image")
+            cell.textField.keyboardType = .emailAddress
+        case 4, 5:
+            cell.iconImageView.image = #imageLiteral(resourceName: "iconPass_image")
+            cell.textField.isSecureTextEntry = true
+        default: break
+        }
+        
+        cell.textField.placeholder = registerFieldPlaceholder(for: indexPath.row)
+        
+        return cell
+    }
+    
+    func registerFieldPlaceholder(for index: Int) -> String {
+        
+        let placeholder: String
+        switch index {
+            
+        case 1: placeholder = "Nome"
+        case 2: placeholder = "Sobrenome"
+        case 3: placeholder = "Email"
+        case 4: placeholder = "Senha"
+        case 5: placeholder = "Confirmar senha"
+        default: placeholder = ""
+        }
+        
+        return placeholder
+    }
+}
+
+

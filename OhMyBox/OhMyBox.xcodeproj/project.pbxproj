@@ -163,6 +163,10 @@
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
+		4CD370C11EA65AC800B73F68 /* LogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */; };
+		4CD370C21EA65AC800B73F68 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */; };
+		4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */; };
+		4CD370C61EA65C0800B73F68 /* RegisterFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C41EA65C0800B73F68 /* RegisterFieldTableViewCell.xib */; };
 		4CDBE9441E69A52A00715226 /* ProductBrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBE9421E69A52A00715226 /* ProductBrandTableViewCell.swift */; };
 		4CDBE9451E69A52A00715226 /* ProductBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBE9431E69A52A00715226 /* ProductBrandTableViewCell.xib */; };
 		4CDBE9481E69EEE000715226 /* BrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBE9461E69EEE000715226 /* BrandTableViewCell.swift */; };
@@ -435,6 +439,10 @@
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
+		4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoTableViewCell.swift; sourceTree = "<group>"; };
+		4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoTableViewCell.xib; sourceTree = "<group>"; };
+		4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFieldTableViewCell.swift; sourceTree = "<group>"; };
+		4CD370C41EA65C0800B73F68 /* RegisterFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFieldTableViewCell.xib; sourceTree = "<group>"; };
 		4CDBE9421E69A52A00715226 /* ProductBrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductBrandTableViewCell.swift; sourceTree = "<group>"; };
 		4CDBE9431E69A52A00715226 /* ProductBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductBrandTableViewCell.xib; sourceTree = "<group>"; };
 		4CDBE9461E69EEE000715226 /* BrandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTableViewCell.swift; sourceTree = "<group>"; };
@@ -1013,6 +1021,14 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		4CD370BE1EA65A4900B73F68 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 		4CDBE9411E69A4FF00715226 /* Product Brand */ = {
 			isa = PBXGroup;
 			children = (
@@ -1364,6 +1380,10 @@
 			isa = PBXGroup;
 			children = (
 				D402E00E1DB68D2A007855D6 /* Login.storyboard */,
+				4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */,
+				4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */,
+				4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */,
+				4CD370C41EA65C0800B73F68 /* RegisterFieldTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1373,7 +1393,7 @@
 			children = (
 				A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */,
 				4C61E1BC1E9C2A6E009A9DEA /* Login */,
-				D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */,
+				4CD370BE1EA65A4900B73F68 /* Register */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1606,6 +1626,7 @@
 			files = (
 				4C459F261E6372F70076D962 /* SearchHighlightsTableViewCell.xib in Resources */,
 				4CA82EBF1E771A9C002C495B /* BrandContactHeaderTableViewCell.xib in Resources */,
+				4CD370C21EA65AC800B73F68 /* LogoTableViewCell.xib in Resources */,
 				D402E00F1DB68D2A007855D6 /* Login.storyboard in Resources */,
 				4C459F221E6372570076D962 /* SearchBrandsTableViewCell.xib in Resources */,
 				2F46496A1DB93E5E0021516F /* fashion-person.png in Resources */,
@@ -1700,6 +1721,7 @@
 				4CA82ECF1E773E89002C495B /* PurchaseButtonHeaderTableViewCell.xib in Resources */,
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 				4CDBE9511E69F5CB00715226 /* BrandsTableViewCell.xib in Resources */,
+				4CD370C61EA65C0800B73F68 /* RegisterFieldTableViewCell.xib in Resources */,
 				4CAEA96A1E6F5B9D00FC65BD /* ProfileTableHeaderView.xib in Resources */,
 				4CDBE94D1E69F32B00715226 /* BrandCollectionViewCell.xib in Resources */,
 				D44F35031DD0FF2500AE7E9E /* TagView3.xib in Resources */,
@@ -1930,6 +1952,7 @@
 				4C4DB55D1E68B2FD005D44C1 /* Constants.swift in Sources */,
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,
+				4CD370C11EA65AC800B73F68 /* LogoTableViewCell.swift in Sources */,
 				4C4DB5791E68C0C2005D44C1 /* ColorCollectionViewCell.swift in Sources */,
 				4C016D0F1E797D1C0094C42E /* RatingContainerViewController.swift in Sources */,
 				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
@@ -1947,6 +1970,7 @@
 				4CAEA94C1E6F181500FC65BD /* ButtonSegmentedControl.swift in Sources */,
 				4C4DB5781E68C0C2005D44C1 /* SizeCollectionViewCell.swift in Sources */,
 				4C8AAF231E5F731E00258116 /* TableViewSelectionDelegate.swift in Sources */,
+				4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */,
 				4CE3456C1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift in Sources */,
 				4C016D121E797F8D0094C42E /* Rating1ViewController.swift in Sources */,
 				4CE3B88B1E5E2C8C0065A293 /* SearchHeaderTableViewCell.swift in Sources */,
