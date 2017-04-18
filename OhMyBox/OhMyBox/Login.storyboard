@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="2093.5999999999999" y="120.98950524737631"/>
         </scene>
-        <!--Create Account View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="6k3-mF-Uxf">
             <objects>
-                <viewController id="Wbg-jD-gGj" customClass="CreateAccountViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wbg-jD-gGj" customClass="RegisterViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YbM-BH-Oqq"/>
                         <viewControllerLayoutGuide type="bottom" id="FhV-6W-YkG"/>
@@ -344,7 +344,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XeH-0U-XdI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O4A-gw-hDP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O4A-gw-hDP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

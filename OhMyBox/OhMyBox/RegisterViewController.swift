@@ -1,5 +1,5 @@
 //
-//  CreateAccountViewController.swift
+//  RegisterViewController.swift
 //  OhMyBox
 //
 //  Created by Huallyd Smadi on 01/11/16.
@@ -8,14 +8,42 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class RegisterViewController: UIViewController {
+    
+// MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonSquare: UIView!
 
+    var textFields: [Int: UITextField] = [:]
+    
+// MARK: - Properties
+    
+    var presenter: RegisterPresenter!
+    
+    var verifiedInformations: (firstName: String, lastName: String, email: String, password: String)? {
+        
+        let firstName = textFields[1]?.text
+        let lastName = textFields[2]?.text
+        let email = textFields[3]?.text
+        let password = textFields[4]?.text
+        let passwordConfirmation = textFields[5]?.text
+        
+        guard firstName != nil && lastName != nil else { return nil }
+        guard email != nil && email!.isValidEmail else { return nil }
+        guard password != nil && password == passwordConfirmation else { return nil }
+        
+        return (firstName!, lastName!, email!, password!)
+    }
+    
+// MARK: - Default initialization methods
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        presenter = RegisterPresenter(view: self)
+        
         registerNibs()
     }
     
@@ -25,10 +53,31 @@ class CreateAccountViewController: UIViewController {
         tableView.registerNibFrom(RegisterFieldTableViewCell.self)
     }
     
+// MARK: - Actions
+    
     @IBAction func registerUser(_ sender: Any) {
+        
+        let user = User()
+        
+        if let verifiedInfo = verifiedInformations {
+            
+            user.firstName = verifiedInfo.firstName
+            user.lastName = verifiedInfo.lastName
+            user.email = verifiedInfo.email
+            
+            presenter.registerUser(user, password: verifiedInfo.password)
+        }
+    }
+    
+    @IBAction func loginWithFacebook(_ sender: AnyObject) {
         
     }
     
+    @IBAction func showLogin(_ sender: Any) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+// MARK: - Alert methods
     
     func showErrorAlert() {
         
@@ -64,18 +113,11 @@ class CreateAccountViewController: UIViewController {
         self.present(ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!, animated: true, completion: nil)
     }
     
-    @IBAction func loginWithFacebook(_ sender: AnyObject) {
-        
-    }
-    
-    @IBAction func showLogin(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
-    }
-    
 }
 
-//Mark: Animations
-extension CreateAccountViewController {
+// MARK: - Animations
+
+extension RegisterViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let _ = segue.destination as? LoginViewController {
@@ -117,7 +159,8 @@ extension CreateAccountViewController {
     }
 }
 
-extension CreateAccountViewController: UITableViewDataSource {
+// MARK: - Tableview set up
+extension RegisterViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -141,7 +184,7 @@ extension CreateAccountViewController: UITableViewDataSource {
     }
 }
 
-extension CreateAccountViewController: UITableViewDelegate {
+extension RegisterViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -157,7 +200,7 @@ extension CreateAccountViewController: UITableViewDelegate {
 }
 
 // MARK: - Cells generation
-extension CreateAccountViewController {
+extension RegisterViewController {
     
     func generateLogoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> LogoTableViewCell {
         
@@ -185,6 +228,8 @@ extension CreateAccountViewController {
         
         cell.textField.placeholder = registerFieldPlaceholder(for: indexPath.row)
         
+        textFields[indexPath.row] = cell.textField
+        
         return cell
     }
     
@@ -202,6 +247,37 @@ extension CreateAccountViewController {
         }
         
         return placeholder
+    }
+}
+
+// MARK: - Register view MVP
+
+extension RegisterViewController: RegisterView {
+    
+    func didRegister(withSuccess success: Bool, message: String) {
+        
+        if success {
+            
+            showSuccessAlert()
+        } else {
+            
+            showErrorAlert()
+        }
+    }
+    
+    func didFinishLoginWithFacebook(_ success: Bool, error: Error?) {
+        
+        if success {
+            
+            DispatchQueue.main.async {
+                
+                let vc = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main")!
+                self.present(vc, animated: true, completion: nil)
+            }
+        } else {
+            
+            // feedback
+        }
     }
 }
 

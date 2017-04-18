@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
     
 }
 
+// MARK: Login view MVP
 extension LoginViewController: LoginView {
     
     func didFinishLogin(_ success: Bool, error: Error?) {
@@ -63,7 +64,7 @@ extension LoginViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let _ = segue.destination as? CreateAccountViewController {
+        if let _ = segue.destination as? RegisterViewController {
             UIView.animate(withDuration: 0.5, animations: {
                 self.view.alpha = 0
             })

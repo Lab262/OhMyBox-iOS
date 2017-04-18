@@ -160,6 +160,8 @@
 		4CAEA9611E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA95F1E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib */; };
 		4CAEA9691E6F5B9D00FC65BD /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9671E6F5B9D00FC65BD /* ProfileTableHeaderView.swift */; };
 		4CAEA96A1E6F5B9D00FC65BD /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */; };
+		4CB255501EA68A0600DCCA24 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB2554F1EA68A0600DCCA24 /* String+Util.swift */; };
+		4CB255521EA68B1F00DCCA24 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB255511EA68B1F00DCCA24 /* RegisterPresenter.swift */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
@@ -244,7 +246,7 @@
 		D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6631DB6B32E007C3113 /* UIColorExtension.swift */; };
 		D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */; };
 		D4D2AC721DC971EF00C9BFC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */; };
-		D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */; };
+		D4D2AC741DC971FD00C9BFC9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2AC731DC971FD00C9BFC9 /* RegisterViewController.swift */; };
 		D4E36E951DEE74080012431F /* ShowProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */; };
 		D4E36E961DEE74080012431F /* ShowProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E36E941DEE74080012431F /* ShowProductTableViewCell.xib */; };
 		D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */; };
@@ -436,6 +438,8 @@
 		4CAEA95F1E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCredentialsTableViewCell.xib; sourceTree = "<group>"; };
 		4CAEA9671E6F5B9D00FC65BD /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableHeaderView.xib; sourceTree = "<group>"; };
+		4CB2554F1EA68A0600DCCA24 /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
+		4CB255511EA68B1F00DCCA24 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
@@ -528,7 +532,7 @@
 		D4C0D6631DB6B32E007C3113 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D4C0D6641DB6B32E007C3113 /* ViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		D4D2AC711DC971EF00C9BFC9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		D4D2AC731DC971FD00C9BFC9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProductTableViewCell.swift; sourceTree = "<group>"; };
 		D4E36E941DEE74080012431F /* ShowProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowProductTableViewCell.xib; sourceTree = "<group>"; };
 		D4E7E0871DD4DB4600F1DE52 /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
@@ -1024,7 +1028,8 @@
 		4CD370BE1EA65A4900B73F68 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				D4D2AC731DC971FD00C9BFC9 /* CreateAccountViewController.swift */,
+				D4D2AC731DC971FD00C9BFC9 /* RegisterViewController.swift */,
+				4CB255511EA68B1F00DCCA24 /* RegisterPresenter.swift */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -1475,6 +1480,7 @@
 				4C2F24EC1E6602C20043A90B /* UICollectionViewCell+Utils.swift */,
 				4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */,
 				4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */,
+				4CB2554F1EA68A0600DCCA24 /* String+Util.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1880,6 +1886,7 @@
 				4CDBE9501E69F5CB00715226 /* BrandsTableViewCell.swift in Sources */,
 				4C2F25011E66305A0043A90B /* MiniProductsTableViewCell.swift in Sources */,
 				4C6B40DF1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift in Sources */,
+				4CB255521EA68B1F00DCCA24 /* RegisterPresenter.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
 				4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */,
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
@@ -1894,7 +1901,7 @@
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,
 				2F4896F61DB7F83100EADFFE /* ProfileViewController.swift in Sources */,
-				D4D2AC741DC971FD00C9BFC9 /* CreateAccountViewController.swift in Sources */,
+				D4D2AC741DC971FD00C9BFC9 /* RegisterViewController.swift in Sources */,
 				2F225D021DBF04E4009E4566 /* UIView+Util.swift in Sources */,
 				4C433E941E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift in Sources */,
 				4CAEA9601E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.swift in Sources */,
@@ -1958,6 +1965,7 @@
 				2F46496C1DB942840021516F /* SegmentTableViewCell.swift in Sources */,
 				4C278CC71E71A18200C80E8D /* ShoppingBoxContainerViewController.swift in Sources */,
 				2F4896E41DB73F2200EADFFE /* WishViewController.swift in Sources */,
+				4CB255501EA68A0600DCCA24 /* String+Util.swift in Sources */,
 				4CE5DFF01E71C7700093CC0E /* ShoppingRequestsHeaderTableViewCell.swift in Sources */,
 				4CE3B88E1E5E305E0065A293 /* SearchSuggestionsViewController.swift in Sources */,
 				D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */,
