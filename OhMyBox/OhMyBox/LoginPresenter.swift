@@ -41,4 +41,11 @@ class LoginPresenter: NSObject {
         }
     }
     
+    func forgotPassword(forEmail email: String) {
+        
+        User.requestPasswordResetForEmail(inBackground: email) { (success, error) in
+            
+        }
+    }
+    
 }

@@ -14,16 +14,22 @@ class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter!
     
+// MARK: Outlets
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var buttonSquare: UIView!
+    
+// MARK: Default initialization methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter = LoginPresenter(view: self)
     }
+    
+// MARK: Actions
     
     @IBAction func loginAction(_ sender: AnyObject) {
         
@@ -36,6 +42,35 @@ class LoginViewController: UIViewController {
     @IBAction func loginWithFacebookAction(_ sender: AnyObject) {
         
         presenter.loginWithFacebook()
+    }
+    
+    @IBAction func forgotPasswordAction(_ sender: AnyObject) {
+        
+        let alert = UIAlertController(title: "Esqueceu a senha?", message: "Digite o email", preferredStyle: .alert)
+        
+        var alertTextField: UITextField! = nil
+        alert.addTextField { (textField) in
+            
+            alertTextField = textField
+        }
+        
+        let alertAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+            
+            let email = alertTextField.text!
+            if email.isValidEmail {
+                
+                self.presenter.forgotPassword(forEmail: email)
+                // Feedback
+            } else {
+                
+                // Feedback
+            }
+        }
+        
+        alert.addAction(alertAction)
+        
+        present(alert, animated: true, completion: nil)
+        
     }
     
 }

@@ -111,6 +111,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func loginWithFacebook(_ sender: AnyObject) {
         
+        presenter.loginWithFacebook()
     }
     
     @IBAction func showLogin(_ sender: Any) {
