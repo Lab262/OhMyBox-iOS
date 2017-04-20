@@ -56,8 +56,9 @@ class BoxCollectionViewCell: UICollectionViewCell {
     func updateInfo() {
         
         titleLabel.text = info?.title
-        descriptionLabel.attributedText = info?.description.with(lineSpacing: 15)
+        descriptionLabel.attributedText = info?.description.with(lineSpacing: -9)
         priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
+        brandImageView.image = info?.brandImage
     }
 
 }

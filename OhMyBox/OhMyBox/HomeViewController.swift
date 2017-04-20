@@ -87,6 +87,7 @@ class HomeViewController: UIViewController {
         //Cells
         tableView.registerNibFrom(HighlightsTableViewCell.self)
         tableView.registerNibFrom(MiniProductsTableViewCell.self)
+        tableView.registerNibFrom(CollectionTableViewCell.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -133,8 +134,6 @@ extension HomeViewController: UITableViewDataSource {
             
             let newsCell = generateNewsCell(tableView, cellForRowAt: indexPath)
             
-            newsCell.selectionDelegate = self
-            newsCollectionViewDelegate = newsCell
             cell = newsCell
         case 2:
             
@@ -158,14 +157,29 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
 
-    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
+    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         
-        cell.products = [1, 2, 3]
+        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
+        dataSource.boxes = [1, 2, 3]
+        
+        cell.collectionViewDataSource = dataSource
+        cell.collectionViewDelegate = dataSource
+        
+        cell.layer.masksToBounds = false
         
         return cell
     }
+    
+//    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
+//        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
+//        
+//        cell.products = [1, 2, 3]
+//        
+//        return cell
+//    }
     
     func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
         
@@ -201,7 +215,7 @@ extension HomeViewController: UITableViewDelegate {
         
         switch indexPath.section {
         case 0: height = HighlightsTableViewCell.cellHeight
-        case 1, 2: height = MiniProductsTableViewCell.cellHeight
+        case 1, 2: height = BoxCollectionViewCell.cellSize.height + 4
         default: height = 0
         }
         

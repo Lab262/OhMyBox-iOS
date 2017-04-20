@@ -90,6 +90,9 @@
 		4C433E991E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C433E971E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib */; };
 		4C4449071EA8EC9900B8715F /* BoxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4449051EA8EC9900B8715F /* BoxCollectionViewCell.swift */; };
 		4C4449081EA8EC9900B8715F /* BoxCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4449061EA8EC9900B8715F /* BoxCollectionViewCell.xib */; };
+		4C44490D1EA8F4B000B8715F /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C44490C1EA8F4B000B8715F /* CollectionTableViewCell.xib */; };
+		4C4449111EA8F54100B8715F /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4449101EA8F54100B8715F /* CollectionTableViewCell.swift */; };
+		4C4449131EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4449121EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift */; };
 		4C45512B1E7C273A00FC2415 /* Rating2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45512A1E7C273A00FC2415 /* Rating2ViewController.swift */; };
 		4C45512D1E7C683800FC2415 /* Rating3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45512C1E7C683800FC2415 /* Rating3ViewController.swift */; };
 		4C459F1C1E636EA00076D962 /* SearchBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */; };
@@ -360,6 +363,9 @@
 		4C433E971E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseSuccessfulButtonTableViewCell.xib; sourceTree = "<group>"; };
 		4C4449051EA8EC9900B8715F /* BoxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C4449061EA8EC9900B8715F /* BoxCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxCollectionViewCell.xib; sourceTree = "<group>"; };
+		4C44490C1EA8F4B000B8715F /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		4C4449101EA8F54100B8715F /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		4C4449121EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		4C45512A1E7C273A00FC2415 /* Rating2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating2ViewController.swift; sourceTree = "<group>"; };
 		4C45512C1E7C683800FC2415 /* Rating3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating3ViewController.swift; sourceTree = "<group>"; };
 		4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBrandsTableViewCell.swift; sourceTree = "<group>"; };
@@ -815,8 +821,18 @@
 			children = (
 				4C4449051EA8EC9900B8715F /* BoxCollectionViewCell.swift */,
 				4C4449061EA8EC9900B8715F /* BoxCollectionViewCell.xib */,
+				4C4449121EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift */,
 			);
 			name = Box;
+			sourceTree = "<group>";
+		};
+		4C44490B1EA8F48800B8715F /* General XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				4C44490C1EA8F4B000B8715F /* CollectionTableViewCell.xib */,
+				4C4449101EA8F54100B8715F /* CollectionTableViewCell.swift */,
+			);
+			name = "General XIBs";
 			sourceTree = "<group>";
 		};
 		4C4DB55B1E68ABA5005D44C1 /* Home */ = {
@@ -1213,6 +1229,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				4C44490B1EA8F48800B8715F /* General XIBs */,
 				4C8AAF261E5F845000258116 /* CollectionPicker */,
 				D44066471DEE11F70053927B /* NavigationBar */,
 				4CAEA94F1E6F1AC900FC65BD /* ButtonSegmentedControl */,
@@ -1630,6 +1647,7 @@
 				D4E36E961DEE74080012431F /* ShowProductTableViewCell.xib in Resources */,
 				A4F89B041DA806C900949A35 /* Assets.xcassets in Resources */,
 				4CA82ECB1E773D4E002C495B /* PurchaseInfoTableViewCell.xib in Resources */,
+				4C44490D1EA8F4B000B8715F /* CollectionTableViewCell.xib in Resources */,
 				4C433E991E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib in Resources */,
 				4CA82EBB1E770D86002C495B /* BrandContactLocationTableViewCell.xib in Resources */,
 				2FAD48C51DB6FE4C00074D55 /* productDefaultimage.png in Resources */,
@@ -1867,6 +1885,7 @@
 				4C6B40DF1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift in Sources */,
 				4CB255521EA68B1F00DCCA24 /* RegisterPresenter.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
+				4C4449131EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift in Sources */,
 				4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */,
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
@@ -1890,6 +1909,7 @@
 				4C4DB5651E68BE8D005D44C1 /* ProductLabelTableViewCell.swift in Sources */,
 				4CAEA9581E6F2D9300FC65BD /* ProfilePurchaseInfoTableViewCell.swift in Sources */,
 				2F164F631DD64F7800ED72DA /* Defaults.swift in Sources */,
+				4C4449111EA8F54100B8715F /* CollectionTableViewCell.swift in Sources */,
 				D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */,
 				4CA82EC61E773B4C002C495B /* PurchaseHeaderTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,

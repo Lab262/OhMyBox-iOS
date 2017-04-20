@@ -24,14 +24,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BoxCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BoxCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="345" height="240"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="345" height="240"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kl-VD-Gmb">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kl-VD-Gmb">
                         <rect key="frame" x="12" y="43" width="81" height="81"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="2kl-VD-Gmb" secondAttribute="height" multiplier="1:1" id="MUE-vd-SVd"/>
@@ -60,8 +60,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9v-wF-RwP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9v-wF-RwP">
                                 <rect key="frame" x="0.0" y="25.5" width="190" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="gz4-Lk-z9O"/>
+                                </constraints>
                                 <string key="text">Bateu o frio, olha só essa box
 pronta pra te salvar com estilo!</string>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -115,6 +118,7 @@ pronta pra te salvar com estilo!</string>
                 <constraint firstItem="bza-YO-8gC" firstAttribute="leading" secondItem="2kl-VD-Gmb" secondAttribute="trailing" constant="19" id="lP7-ZK-re6"/>
                 <constraint firstItem="bza-YO-8gC" firstAttribute="top" secondItem="2kl-VD-Gmb" secondAttribute="top" constant="-3" id="liR-rK-elX"/>
             </constraints>
+            <size key="customSize" width="345" height="241"/>
             <connections>
                 <outlet property="boxButton" destination="sHb-4E-XOM" id="skE-kY-UOR"/>
                 <outlet property="brandImageView" destination="2kl-VD-Gmb" id="kki-86-E65"/>
@@ -123,6 +127,7 @@ pronta pra te salvar com estilo!</string>
                 <outlet property="priceLabel" destination="hMN-Fz-cYG" id="KFy-cp-xgN"/>
                 <outlet property="titleLabel" destination="QV0-i0-f24" id="I56-dd-wwL"/>
             </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
         </collectionViewCell>
     </objects>
     <resources>
