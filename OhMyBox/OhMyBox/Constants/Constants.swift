@@ -9,6 +9,28 @@
 
 import UIKit
 
+// MARK: Register error cases
+enum RegisterError: Error {
+    
+    case invalidName
+    case invalidEmail
+    case invalidPassword
+    
+    var message: String {
+        
+        let message: String
+        switch self {
+            
+        case .invalidName: message = "Nome inválido"
+        case .invalidEmail: message = "Email inválido"
+        case .invalidPassword: message = "Senha inválida"
+        }
+        
+        return message
+    }
+}
+
+// MARK: Segue Identifiers
 struct SegueIdentifiers {
     
     // From home

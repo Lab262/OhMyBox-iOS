@@ -10,27 +10,6 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-// MARK: - Error cases
-    enum RegisterError: Error {
-        
-        case invalidName
-        case invalidEmail
-        case invalidPassword
-        
-        var message: String {
-            
-            let message: String
-            switch self {
-                
-            case .invalidName: message = "Nome inválido"
-            case .invalidEmail: message = "Email inválido"
-            case .invalidPassword: message = "Senha inválida"
-            }
-            
-            return message
-        }
-    }
-    
 // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -41,31 +20,6 @@ class RegisterViewController: UIViewController {
 // MARK: - Properties
     
     var presenter: RegisterPresenter!
-    
-    func verifiedInformations() throws -> (firstName: String, lastName: String, email: String, password: String) {
-        
-        let firstName = textFields[1]!.text!
-        let lastName = textFields[2]!.text!
-        let email = textFields[3]!.text!
-        let password = textFields[4]!.text!
-        let passwordConfirmation = textFields[5]!.text!
-        
-        guard firstName.length > 0 && lastName.length > 0 else {
-            
-            throw RegisterError.invalidName
-        }
-        
-        guard email.isValidEmail else {
-            
-            throw RegisterError.invalidEmail
-        }
-        guard password.length > 2 && password == passwordConfirmation else {
-            
-            throw RegisterError.invalidPassword
-        }
-        
-        return (firstName, lastName, email, password)
-    }
     
 // MARK: - Default initialization methods
     
@@ -92,7 +46,7 @@ class RegisterViewController: UIViewController {
         
         do {
             
-            let verifiedInfo = try verifiedInformations()
+            let verifiedInfo = try presenter.verifiedInformations()
             
             user.firstName = verifiedInfo.firstName
             user.lastName = verifiedInfo.lastName

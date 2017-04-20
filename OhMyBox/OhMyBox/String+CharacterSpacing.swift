@@ -10,7 +10,7 @@ import UIKit
 
 extension String {
     
-    func with(characterSpacing: Double, lineSpacing: CGFloat = 0, alignment: NSTextAlignment = NSTextAlignment.left, color: UIColor = UIColor.clear) -> NSAttributedString {
+    func with(characterSpacing: Double = 0, lineSpacing: CGFloat = 0, alignment: NSTextAlignment = NSTextAlignment.left, color: UIColor = UIColor.clear) -> NSAttributedString {
         
         let att = NSMutableAttributedString(string: self)
         

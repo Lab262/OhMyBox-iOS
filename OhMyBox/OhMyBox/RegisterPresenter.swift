@@ -10,6 +10,8 @@ import UIKit
 
 protocol RegisterView {
     
+    var textFields: [Int: UITextField] {get}
+    
     func didRegister(withSuccess success: Bool, message: String)
     func didFinishLoginWithFacebook(_ success: Bool, error: Error?)
 }
@@ -37,6 +39,32 @@ class RegisterPresenter: NSObject {
             
             self.view.didFinishLoginWithFacebook(success, error: error)
         }
+    }
+    
+    func verifiedInformations() throws -> (firstName: String, lastName: String, email: String, password: String) {
+        
+        let firstName = view.textFields[1]!.text!
+        let lastName = view.textFields[2]!.text!
+        let email = view.textFields[3]!.text!
+        let password = view.textFields[4]!.text!
+        let passwordConfirmation = view.textFields[5]!.text!
+        
+        guard firstName.length > 0 && lastName.length > 0 else {
+            
+            throw RegisterError.invalidName
+        }
+        
+        guard email.isValidEmail else {
+            
+            throw RegisterError.invalidEmail
+        }
+        
+        guard password.length > 2 && password == passwordConfirmation else {
+            
+            throw RegisterError.invalidPassword
+        }
+        
+        return (firstName, lastName, email, password)
     }
     
 }

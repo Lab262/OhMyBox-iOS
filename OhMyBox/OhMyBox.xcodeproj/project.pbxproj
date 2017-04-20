@@ -88,6 +88,8 @@
 		4C433E951E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C433E931E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.xib */; };
 		4C433E981E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C433E961E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.swift */; };
 		4C433E991E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C433E971E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib */; };
+		4C4449071EA8EC9900B8715F /* BoxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4449051EA8EC9900B8715F /* BoxCollectionViewCell.swift */; };
+		4C4449081EA8EC9900B8715F /* BoxCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4449061EA8EC9900B8715F /* BoxCollectionViewCell.xib */; };
 		4C45512B1E7C273A00FC2415 /* Rating2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45512A1E7C273A00FC2415 /* Rating2ViewController.swift */; };
 		4C45512D1E7C683800FC2415 /* Rating3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45512C1E7C683800FC2415 /* Rating3ViewController.swift */; };
 		4C459F1C1E636EA00076D962 /* SearchBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */; };
@@ -366,6 +368,8 @@
 		4C433E931E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseSuccessfulHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4C433E961E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessfulButtonTableViewCell.swift; sourceTree = "<group>"; };
 		4C433E971E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseSuccessfulButtonTableViewCell.xib; sourceTree = "<group>"; };
+		4C4449051EA8EC9900B8715F /* BoxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C4449061EA8EC9900B8715F /* BoxCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C45512A1E7C273A00FC2415 /* Rating2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating2ViewController.swift; sourceTree = "<group>"; };
 		4C45512C1E7C683800FC2415 /* Rating3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating3ViewController.swift; sourceTree = "<group>"; };
 		4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBrandsTableViewCell.swift; sourceTree = "<group>"; };
@@ -813,6 +817,8 @@
 				4C2F25001E66305A0043A90B /* MiniProductsTableViewCell.xib */,
 				4C2F25031E6631750043A90B /* MiniProductCollectionViewCell.swift */,
 				4C2F25041E6631750043A90B /* MiniProductCollectionViewCell.xib */,
+				4C4449051EA8EC9900B8715F /* BoxCollectionViewCell.swift */,
+				4C4449061EA8EC9900B8715F /* BoxCollectionViewCell.xib */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -1697,6 +1703,7 @@
 				4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */,
 				4CAEA94A1E6F127400FC65BD /* ProfileLabelTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
+				4C4449081EA8EC9900B8715F /* BoxCollectionViewCell.xib in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
 				D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */,
@@ -1978,6 +1985,7 @@
 				4CAEA94C1E6F181500FC65BD /* ButtonSegmentedControl.swift in Sources */,
 				4C4DB5781E68C0C2005D44C1 /* SizeCollectionViewCell.swift in Sources */,
 				4C8AAF231E5F731E00258116 /* TableViewSelectionDelegate.swift in Sources */,
+				4C4449071EA8EC9900B8715F /* BoxCollectionViewCell.swift in Sources */,
 				4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */,
 				4CE3456C1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift in Sources */,
 				4C016D121E797F8D0094C42E /* Rating1ViewController.swift in Sources */,
