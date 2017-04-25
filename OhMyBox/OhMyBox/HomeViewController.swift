@@ -126,40 +126,23 @@ extension HomeViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let highlightsCell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-            
-            highlightsCell.selectionDelegate = self
-            highlightsCollectionViewDelegate = highlightsCell
             cell = highlightsCell
         case 1:
-            
             let newsCell = generateNewsCell(tableView, cellForRowAt: indexPath)
-            
             cell = newsCell
         case 2:
-            
             let salesCell = generateSalesCell(tableView, cellForRowAt: indexPath)
-            
-            salesCell.selectionDelegate = self
-            salesCollectionViewDelegate = salesCell
             cell = salesCell
-        default: cell = UITableViewCell()
+        default:
+            cell = UITableViewCell()
         }
         
         return cell
     }
     
-    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> HighlightsTableViewCell {
+    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsTableViewCell.identifier, for: indexPath) as! HighlightsTableViewCell
-        
-        cell.highlights = [#imageLiteral(resourceName: "verao_de_saias"), #imageLiteral(resourceName: "verao_de_saias"), #imageLiteral(resourceName: "verao_de_saias")]
-        
-        return cell
-    }
-
-    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
+        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
         dataSource.boxes = [1, 2, 3]
@@ -167,26 +150,40 @@ extension HomeViewController: UITableViewDataSource {
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
         
-        cell.layer.masksToBounds = false
+        return cell
+    }
+    
+    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
+        
+        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
+        
+        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
+        dataSource.boxes = [1, 2, 3]
+        
+        cell.collectionViewDataSource = dataSource
+        cell.collectionViewDelegate = dataSource
+        
+        return cell
+    }
+
+    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
+        
+        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
+        
+        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
+        dataSource.boxes = [1, 2, 3]
+        
+        cell.collectionViewDataSource = dataSource
+        cell.collectionViewDelegate = dataSource
         
         return cell
     }
     
-//    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
-//        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
-//        
-//        cell.products = [1, 2, 3]
-//        
-//        return cell
-//    }
-    
-    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
+    func generateBoxesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier, for: indexPath) as! MiniProductsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         
-        // set sales products
-        cell.products = [1, 2, 3]
+        cell.layer.masksToBounds = false
         
         return cell
     }
@@ -214,8 +211,7 @@ extension HomeViewController: UITableViewDelegate {
         let height: CGFloat
         
         switch indexPath.section {
-        case 0: height = HighlightsTableViewCell.cellHeight
-        case 1, 2: height = BoxCollectionViewCell.cellSize.height + 4
+        case 0, 1, 2: height = BoxCollectionViewCell.cellSize.height + 4
         default: height = 0
         }
         
@@ -225,28 +221,38 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerView: UIView?
+        let headerView: HomeTableViewHeaderView?
         
         switch section {
-        case 1:
+        case 0:
             
             let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
             
+            header.topLineLabel.text = "BOXES EM ALTA"
+            header.bottomLineLabel.text = ""
+            
+            headerView = header
+        case 1:
+            
+            let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
             header.topLineLabel.text = "OLHA AS"
             header.bottomLineLabel.text = "NOVIDADES"
             
             headerView = header
+            
         case 2:
             
             let header = tableView.dequeueReusableCell(withIdentifier:HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
-            header.topLineLabel.text = "GENTE,"
-            header.bottomLineLabel.text = "PROMOÇÃO!"
+            header.topLineLabel.text = "PROMOÇÕES, GENTE!"
+            header.bottomLineLabel.text = ""
             
             headerView = header
             
         default:
             headerView = nil
         }
+        
+        headerView?.showAllButton.isHidden = true
         
         return headerView
     }
@@ -256,7 +262,7 @@ extension HomeViewController: UITableViewDelegate {
         let height: CGFloat
         
         switch section {
-        case 1, 2:
+        case 0, 1, 2:
             height = HomeTableViewHeaderView.cellHeight
         default:
             height = 0
@@ -265,7 +271,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 40.0
+        return 30.0
     }
   
 }

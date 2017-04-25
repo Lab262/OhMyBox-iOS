@@ -31,11 +31,7 @@ class CollectionPickerController: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let delegate = delegate {
-            return delegate.numberOfOptions(in: self)
-        } else {
-            return 0
-        }
+        return delegate?.numberOfOptions(in: self) ?? 0
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -104,10 +100,6 @@ extension CollectionPickerController: UICollectionViewDelegate {
 extension CollectionPickerController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if let delegate = delegate {
-            return delegate.collectionPickerController(self, sizeForItemAt: indexPath.item)
-        } else {
-            return CGSize()
-        }
+        return delegate?.collectionPickerController(self, sizeForItemAt: indexPath.item) ?? CGSize.zero
     }
 }
