@@ -184,6 +184,11 @@
 		4CDBE9511E69F5CB00715226 /* BrandsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBE94F1E69F5CB00715226 /* BrandsTableViewCell.xib */; };
 		4CDBE9561E69FCE600715226 /* BrandsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBE9541E69FCE600715226 /* BrandsHeaderTableViewCell.swift */; };
 		4CDBE9571E69FCE600715226 /* BrandsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBE9551E69FCE600715226 /* BrandsHeaderTableViewCell.xib */; };
+		4CE045EC1EAF8D980022AFC6 /* BoxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE045EB1EAF8D980022AFC6 /* BoxDetailViewController.swift */; };
+		4CE045F01EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE045EE1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift */; };
+		4CE045F11EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE045EF1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.xib */; };
+		4CE045F41EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE045F21EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.swift */; };
+		4CE045F51EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE045F31EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib */; };
 		4CE345651E6E453D005C51F2 /* UIImageView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */; };
 		4CE345681E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */; };
 		4CE345691E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */; };
@@ -457,6 +462,11 @@
 		4CDBE94F1E69F5CB00715226 /* BrandsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandsTableViewCell.xib; sourceTree = "<group>"; };
 		4CDBE9541E69FCE600715226 /* BrandsHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		4CDBE9551E69FCE600715226 /* BrandsHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandsHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		4CE045EB1EAF8D980022AFC6 /* BoxDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxDetailViewController.swift; sourceTree = "<group>"; };
+		4CE045EE1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CE045EF1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		4CE045F21EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxDetailHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		4CE045F31EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxDetailHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Blur.swift"; sourceTree = "<group>"; };
 		4CE345661E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandCollectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CE345671E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrandCollectionCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -761,6 +771,7 @@
 		4C2F24F21E66195B0043A90B /* Updated Design */ = {
 			isa = PBXGroup;
 			children = (
+				4CE045ED1EAF8E100022AFC6 /* Box Detail */,
 				4C4DB55B1E68ABA5005D44C1 /* Home */,
 				4C4DB5621E68BE3D005D44C1 /* Product Detail */,
 			);
@@ -1080,6 +1091,17 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		4CE045ED1EAF8E100022AFC6 /* Box Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4CE045EE1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift */,
+				4CE045EF1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.xib */,
+				4CE045F21EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.swift */,
+				4CE045F31EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib */,
+			);
+			name = "Box Detail";
+			sourceTree = "<group>";
+		};
 		4CE3B87B1E5E28B40065A293 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -1293,6 +1315,7 @@
 				D402E0101DB69541007855D6 /* HomeViewController.swift */,
 				2F07773F1DBD1BED003C124F /* RecommendedViewController.swift */,
 				2F044CE41DBE3BD300B54468 /* DetailProductViewController.swift */,
+				4CE045EB1EAF8D980022AFC6 /* BoxDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1678,6 +1701,7 @@
 				4C0B04AE1E731DB500F457BB /* ShoppingStatusTableViewCell.xib in Resources */,
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
+				4CE045F51EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib in Resources */,
 				2F2999A71DE54ECA00D52203 /* Poppins-Medium.ttf in Resources */,
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
 				4CE3B88C1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib in Resources */,
@@ -1695,6 +1719,7 @@
 				4CAEA93E1E6EF77C00FC65BD /* WishlistCountTableViewCell.xib in Resources */,
 				4CAEA94A1E6F127400FC65BD /* ProfileLabelTableViewCell.xib in Resources */,
 				2F5DE1D01DC2ED3300822826 /* storeDefault.png in Resources */,
+				4CE045F11EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.xib in Resources */,
 				4C4449081EA8EC9900B8715F /* BoxCollectionViewCell.xib in Resources */,
 				D4C0D6581DB6AA6C007C3113 /* jacketImage.png in Resources */,
 				4C8AAF1F1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.xib in Resources */,
@@ -1888,6 +1913,7 @@
 				4C4449131EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift in Sources */,
 				4CAEA9371E6EED9100FC65BD /* BrandShowAllProductsTableViewCell.swift in Sources */,
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
+				4CE045F01EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
 				4C2F25051E6631750043A90B /* MiniProductCollectionViewCell.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
@@ -1968,11 +1994,13 @@
 				4C8AAF1E1E5F5E1800258116 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				4CDBE94C1E69F32B00715226 /* BrandCollectionViewCell.swift in Sources */,
 				4CE5DFEC1E71C43E0093CC0E /* ShoppingRequestsViewController.swift in Sources */,
+				4CE045F41EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.swift in Sources */,
 				4C45512B1E7C273A00FC2415 /* Rating2ViewController.swift in Sources */,
 				4CE3B8901E5E30A80065A293 /* SearchContainerViewController.swift in Sources */,
 				4CAEA94C1E6F181500FC65BD /* ButtonSegmentedControl.swift in Sources */,
 				4C4DB5781E68C0C2005D44C1 /* SizeCollectionViewCell.swift in Sources */,
 				4C8AAF231E5F731E00258116 /* TableViewSelectionDelegate.swift in Sources */,
+				4CE045EC1EAF8D980022AFC6 /* BoxDetailViewController.swift in Sources */,
 				4C4449071EA8EC9900B8715F /* BoxCollectionViewCell.swift in Sources */,
 				4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */,
 				4CE3456C1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift in Sources */,

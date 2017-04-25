@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BoxProductCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="203"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="203"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SpU-QM-jeG">
+                        <rect key="frame" x="-0.5" y="0.0" width="173" height="168"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Óculos estiloso 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIV-Jg-Afd">
+                        <rect key="frame" x="7" y="176" width="110.5" height="21.5"/>
+                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVN-X7-nRe">
+                        <rect key="frame" x="141" y="9" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UVN-X7-nRe" secondAttribute="height" multiplier="1:1" id="4vY-07-4TO"/>
+                        </constraints>
+                        <state key="normal" image="box_product_button_unchecked"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UVN-X7-nRe" secondAttribute="trailing" constant="11" id="3Mr-0A-LuG"/>
+                <constraint firstItem="SpU-QM-jeG" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="168/203" id="UZz-53-rLb"/>
+                <constraint firstItem="SpU-QM-jeG" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="bL0-gS-tgN"/>
+                <constraint firstItem="zIV-Jg-Afd" firstAttribute="top" secondItem="SpU-QM-jeG" secondAttribute="bottom" constant="8" id="dkp-KZ-lKm"/>
+                <constraint firstItem="SpU-QM-jeG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ftp-jQ-uba"/>
+                <constraint firstItem="UVN-X7-nRe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="hKk-hn-qhl"/>
+                <constraint firstItem="zIV-Jg-Afd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="nb0-G7-Pt8"/>
+                <constraint firstItem="SpU-QM-jeG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rDe-Ya-VcP"/>
+                <constraint firstItem="UVN-X7-nRe" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="21/173" id="w3Y-DB-aaG"/>
+            </constraints>
+            <size key="customSize" width="197" height="194"/>
+            <connections>
+                <outlet property="checkButton" destination="UVN-X7-nRe" id="dtl-5b-FaY"/>
+                <outlet property="imageView" destination="SpU-QM-jeG" id="TKF-Fb-ehx"/>
+                <outlet property="nameLabel" destination="zIV-Jg-Afd" id="SVu-Yl-oyn"/>
+            </connections>
+            <point key="canvasLocation" x="107.5" y="126"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="box_product_button_unchecked" width="23" height="23"/>
+    </resources>
+</document>
