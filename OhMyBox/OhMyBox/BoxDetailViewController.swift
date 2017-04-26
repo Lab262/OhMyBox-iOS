@@ -17,13 +17,16 @@ class BoxDetailViewController: UIViewController {
     
     var presenter: BoxDetailPresenter!
     
+    let collectionViewEdgeMargin: CGFloat = 8
+    let collectionViewCellSpacing: CGFloat = 5
+    
     override func viewDidLoad() {
         
         presenter = BoxDetailPresenter(view: self)
         
         super.viewDidLoad()
         registerNibs()
-        
+        setUpCollectionViewLayout()
         
     }
 
@@ -33,6 +36,20 @@ class BoxDetailViewController: UIViewController {
         
         let headerNib = UINib(nibName: BoxDetailHeaderCollectionReusableView.nibName, bundle: nil)
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: BoxDetailHeaderCollectionReusableView.identifier)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.invalidateLayout()
+    }
+    
+    func setUpCollectionViewLayout() {
+        
+        let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        flowLayout.minimumInteritemSpacing = collectionViewCellSpacing
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: collectionViewEdgeMargin, bottom: 0, right: collectionViewEdgeMargin)
     }
 
 }
@@ -53,6 +70,12 @@ extension BoxDetailViewController: UICollectionViewDataSource {
         
         cell.info = (#imageLiteral(resourceName: "product_placeholder"), "Capinha cool")
         
+        cell.layer.cornerRadius = 3
+        cell.shadowColor = .black
+        cell.shadowOffset = CGSize.zero
+        cell.shadowRadius = 3
+        cell.shadowOpacity = 0.19
+        
         return cell
     }
     
@@ -61,6 +84,7 @@ extension BoxDetailViewController: UICollectionViewDataSource {
         if let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: BoxDetailHeaderCollectionReusableView.identifier, for: indexPath) as? BoxDetailHeaderCollectionReusableView {
            
             collectionHeader = view
+            view.info = presenter.boxPlaceholderInfo
             return view
         } else {
             

@@ -68,6 +68,9 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
         priceLabel.attributedText = String.stringFromPrice(price: info?.price ?? 0).with(characterSpacing: 1.12, color: UIColor.darkPurple)
         
         categoriesCountLabel.attributedText = "\(info?.categories.count ?? 0) categorias".with(characterSpacing: 1.12, color: UIColor.darkPurple)
+        
+        collectionPickerView.collectionPickerOptions = info?.categories ?? []
+        
     }
     
     override func prepareForReuse() {

@@ -43,6 +43,7 @@
                     </button>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="UVN-X7-nRe" secondAttribute="trailing" constant="11" id="3Mr-0A-LuG"/>
                 <constraint firstItem="SpU-QM-jeG" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="168/203" id="UZz-53-rLb"/>

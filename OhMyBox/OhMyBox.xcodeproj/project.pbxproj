@@ -214,6 +214,7 @@
 		4CF2237E1E9D3B050050D91A /* Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2237D1E9D3B050050D91A /* Measures.swift */; };
 		4CFAE1BB1EB1143800C58C0C /* BoxDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */; };
 		4CFAE1BE1EB11FD300C58C0C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */; };
+		4CFAE1C01EB1362400C58C0C /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BF1EB1362400C58C0C /* Array+Util.swift */; };
 		7E9FF3CD45D1AEA5E0CCF531 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81C204F58CD89A19F6552BC /* Pods_OhMyBox.framework */; };
 		867BAA4D784E12A5733C44A7 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
@@ -494,6 +495,7 @@
 		4CF2237D1E9D3B050050D91A /* Measures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measures.swift; sourceTree = "<group>"; };
 		4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxDetailPresenter.swift; sourceTree = "<group>"; };
 		4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4CFAE1BF1EB1362400C58C0C /* Array+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
 		4E37378E2EB5ED623C01A37A /* Pods-OhMyBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBoxTests/Pods-OhMyBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F7235B2B7B22B0D49DC51AB /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
 		9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1544,6 +1546,7 @@
 				4CE345641E6E453C005C51F2 /* UIImageView+Blur.swift */,
 				4CAEA9391E6EEF6000FC65BD /* UIButton+Handler.swift */,
 				4CB2554F1EA68A0600DCCA24 /* String+Util.swift */,
+				4CFAE1BF1EB1362400C58C0C /* Array+Util.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1929,6 +1932,7 @@
 				4CA82EB21E770985002C495B /* BrandContactViewController.swift in Sources */,
 				4CDBE9501E69F5CB00715226 /* BrandsTableViewCell.swift in Sources */,
 				4C2F25011E66305A0043A90B /* MiniProductsTableViewCell.swift in Sources */,
+				4CFAE1C01EB1362400C58C0C /* Array+Util.swift in Sources */,
 				4C6B40DF1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift in Sources */,
 				4CB255521EA68B1F00DCCA24 /* RegisterPresenter.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,

@@ -62,7 +62,8 @@ extension CollectionPickerView: CollectionPickerDelegate {
     }
     
     func collectionPickerController(_ collectionPickerController: CollectionPickerController, handlerForOptionAt index: Int) -> CollectionPickerOptionHandler? {
-        return collectionPickerHandlers[index]
+        
+        return collectionPickerHandlers.object(at: index)
     }
     
     func collectionPickerController(_ collectionPickerController: CollectionPickerController, sizeForItemAt index: Int) -> CGSize {
