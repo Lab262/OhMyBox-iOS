@@ -12,12 +12,12 @@ extension Array {
 
     func object(at index: Int) -> Element? {
         
-        if index >= count || index < 0 {
-            
-            return nil
-        } else {
+        if case 0..<count = index {
             
             return self[index]
+        } else {
+            
+            return nil
         }
     }
 }
