@@ -12,6 +12,8 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
     weak var collectionView: UICollectionView!
     
+    var collectionSelectionDelegate: CollectionViewSelectionDelegate?
+    
     var boxes: [Any] = []
     
     init(collectionView: UICollectionView) {
@@ -72,6 +74,10 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
 extension BoxesCollectionViewDataSource: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        collectionSelectionDelegate?.collectionViewDelegate(self, didSelectItemAt: indexPath)
+    }
 }
 
 extension BoxesCollectionViewDataSource: UICollectionViewDelegateFlowLayout {

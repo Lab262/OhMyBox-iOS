@@ -22,13 +22,29 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
         return "BoxProductCollectionViewCell"
     }
     
+    typealias Info = (image: UIImage, name: String)
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var checkButton: UIButton!
+    
+    var info: Info? {
+        
+        didSet {
+            
+            updateInfo()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
 
+    func updateInfo() {
+        
+        imageView.image = info?.image
+        nameLabel.text = info?.name
+    }
+    
 }

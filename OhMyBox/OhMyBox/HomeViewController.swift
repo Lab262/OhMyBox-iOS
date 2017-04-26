@@ -14,24 +14,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var boxButtonItem: UIBarButtonItem?
-    var clothingArray: [String] = []
     
     var filtered:[String] = []
     var allProduct = [Product]()
     
-    var highlightsCollectionViewDelegate: UICollectionViewDelegate!
-    var newsCollectionViewDelegate: UICollectionViewDelegate!
-    var salesCollectionViewDelegate: UICollectionViewDelegate!
+    var highlightsCollectionViewDelegate: BoxesCollectionViewDataSource!
+    var newsCollectionViewDelegate: BoxesCollectionViewDataSource!
+    var salesCollectionViewDelegate: BoxesCollectionViewDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fillClothingArray()
-        
         registerNibs()
         setUpNavigationBar()
         setUpTableView()
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.goToBoxViewController(_:)), name: Notifications.goToBoxViewController, object: nil)
     }
@@ -47,15 +43,6 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.statusBarStyle = preferredStatusBarStyle
-    }
-    
-    func fillClothingArray() {
-        
-        clothingArray.append("Cloting One")
-        clothingArray.append("Cloting Two")
-        clothingArray.append("cloting Three")
-        clothingArray.append("cloting Four")
-        clothingArray.append("cloting Five")
     }
     
     func setUpNavigationBar() {
@@ -93,21 +80,6 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let identifier = segue.identifier {
-            switch identifier {
-            case "detailProduct": break
-            case "goPromotion":
-                if let destinationVC = segue.destination as? RecommendedViewController {
-                    destinationVC.title = "Promoções"
-                    destinationVC.titleHeader = "Promoções"
-                    
-                }
-            case "goRecommended":
-                if let destinationVC = segue.destination as? RecommendedViewController {
-                    destinationVC.title = "Recomendados"
-                    destinationVC.titleHeader = "Recomendados"
-                }
-            default: break
-            }
         }
     }
     
@@ -146,9 +118,13 @@ extension HomeViewController: UITableViewDataSource {
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
         dataSource.boxes = [1, 2, 3]
+        dataSource.collectionSelectionDelegate = self
+        salesCollectionViewDelegate = dataSource
         
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
+        
+        
         
         return cell
     }
@@ -159,6 +135,8 @@ extension HomeViewController: UITableViewDataSource {
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
         dataSource.boxes = [1, 2, 3]
+        dataSource.collectionSelectionDelegate = self
+        highlightsCollectionViewDelegate = dataSource
         
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
@@ -172,6 +150,8 @@ extension HomeViewController: UITableViewDataSource {
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
         dataSource.boxes = [1, 2, 3]
+        dataSource.collectionSelectionDelegate = self
+        newsCollectionViewDelegate = dataSource
         
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
@@ -280,18 +260,12 @@ extension HomeViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
         
-        let colletionViewDelegate: UICollectionViewDelegate! = colletionViewDelegate
-        
-        if colletionViewDelegate === highlightsCollectionViewDelegate {
-            
-            
-            
-        } else if colletionViewDelegate === newsCollectionViewDelegate {
-            performSegue(withIdentifier: SegueIdentifiers.homeToProductDetail, sender: self)
-            
-        } else if colletionViewDelegate === salesCollectionViewDelegate {
-            performSegue(withIdentifier: SegueIdentifiers.homeToProductDetail, sender: self)
-            
-        }
+        performSegue(withIdentifier: SegueIdentifiers.homeToBoxDetail, sender: self)
     }
+}
+
+// MARK: Home View MVP
+
+extension HomeViewController: HomeView {
+    
 }

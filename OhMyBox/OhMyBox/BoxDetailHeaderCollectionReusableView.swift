@@ -10,6 +10,21 @@ import UIKit
 
 class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
 
+    static var nibName: String {
+        
+        return "BoxDetailHeaderCollectionReusableView"
+    }
+    
+    static var identifier: String {
+        
+        return "boxDetailHeaderCollectionReusableView"
+    }
+    
+    static var viewSize: CGSize {
+        
+        return CGSize(width: 375, height: 345) * UIView.heightScaleProportion()
+    }
+    
     static let categoriesCountTitle: String = "essa box tem"
     
     typealias Info = (name: String, description: String, price: Double, categories: [String])
@@ -22,7 +37,6 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var separatorView: UIView!
 
     @IBOutlet weak var collectionPickerView: CollectionPickerView!
-    
     
     @IBOutlet weak var categoriesCountTitleLabel: UILabel!
     @IBOutlet weak var categoriesCountLabel: UILabel!
@@ -41,6 +55,8 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
         super.awakeFromNib()
         
         categoriesCountLabel.attributedText = BoxDetailHeaderCollectionReusableView.categoriesCountTitle.with(characterSpacing: 1.12, color: UIColor.darkPurple)
+        
+        collectionPickerView.showsIndicator = false
     }
     
     func updateInfo() {
@@ -52,6 +68,11 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
         priceLabel.attributedText = String.stringFromPrice(price: info?.price ?? 0).with(characterSpacing: 1.12, color: UIColor.darkPurple)
         
         categoriesCountLabel.attributedText = "\(info?.categories.count ?? 0) categorias".with(characterSpacing: 1.12, color: UIColor.darkPurple)
+    }
+    
+    override func prepareForReuse() {
+        
+        collectionPickerView.optionIndicatorImageView.isHidden = true
     }
     
 }

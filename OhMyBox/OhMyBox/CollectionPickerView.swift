@@ -18,6 +18,8 @@ class CollectionPickerView: UIView {
     @IBOutlet weak var optionIndicatorImageView: UIImageView!
     
     var collectionPickerController = CollectionPickerController()
+    
+    var showsIndicator: Bool = true
 //    
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
@@ -43,6 +45,8 @@ class CollectionPickerView: UIView {
         let margin = collectionView.frame.width/3
         (collectionView.collectionViewLayout as! CenterCellCollectionViewFlowLayout).sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
         (collectionView.collectionViewLayout as! CenterCellCollectionViewFlowLayout).centerOffset = CGPoint(x: margin/2, y: 0)
+        
+        optionIndicatorImageView.isHidden = !showsIndicator
     }
 
 }

@@ -35,6 +35,7 @@ struct SegueIdentifiers {
     
     // From home
     static let homeToProductDetail = "goToProductDetail"
+    static let homeToBoxDetail = "goToBoxDetail"
     
     // From brands
     static let brandsToBrandDetail = "goToBrandDetail"
