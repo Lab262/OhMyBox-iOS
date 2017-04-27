@@ -20,4 +20,20 @@ extension Array {
             return nil
         }
     }
+    
+}
+
+extension Array where Element : Equatable {
+    
+    mutating func remove(_ element: Element) -> Element? {
+        
+        if let index = self.index(of: element) {
+            
+            self.remove(at: index)
+            return self[index]
+        } else {
+            
+            return nil
+        }
+    }
 }

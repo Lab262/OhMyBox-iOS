@@ -63,7 +63,7 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
         
         nameLabel.attributedText = info?.name.with(characterSpacing: 1.12, color: UIColor.darkPurple)
         
-        descriptionLabel.attributedText = info?.name.with(characterSpacing: 1.22, color: UIColor.colorWithHexString("8F8F8F"))
+        descriptionLabel.attributedText = info?.description.with(characterSpacing: 1.22, color: UIColor.colorWithHexString("8F8F8F"))
         
         priceLabel.attributedText = String.stringFromPrice(price: info?.price ?? 0).with(characterSpacing: 1.12, color: UIColor.darkPurple)
         

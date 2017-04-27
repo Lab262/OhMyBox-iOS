@@ -70,6 +70,18 @@ extension BoxDetailViewController: UICollectionViewDataSource {
         
         cell.info = (#imageLiteral(resourceName: "product_placeholder"), "Capinha cool")
         
+        let selectedCategoryIndex = self.presenter.selectedCategoryIndex
+        
+        cell.checkButtonHandler = { button in
+            
+            self.presenter.checkedItem(at: indexPath.item)
+        }
+        
+        if presenter.checkedProductsIndexes[selectedCategoryIndex].contains(indexPath.item) {
+            
+            cell.setChecked(true)
+        }
+        
         cell.layer.cornerRadius = 3
         cell.shadowColor = .black
         cell.shadowOffset = CGSize.zero
@@ -85,6 +97,15 @@ extension BoxDetailViewController: UICollectionViewDataSource {
            
             collectionHeader = view
             view.info = presenter.boxPlaceholderInfo
+            
+            view.collectionPickerView.collectionPickerHandlers = (0..<presenter.categories.count).map { index in
+                
+                return {
+                    
+                    self.presenter.selectedCategoryIndex = index
+                }
+            }
+            
             return view
         } else {
             
@@ -115,4 +136,8 @@ extension BoxDetailViewController: UICollectionViewDelegate {
 
 extension BoxDetailViewController: BoxDetailView {
     
+    func reloadData() {
+        
+        collectionView.reloadData()
+    }
 }

@@ -36,15 +36,38 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var checkButtonHandler: UIButton.ButtonHandler?
+    
     override func awakeFromNib() {
-        super.awakeFromNib()
         
+        super.awakeFromNib()
     }
 
     func updateInfo() {
         
         imageView.image = info?.image
         nameLabel.text = info?.name
+    }
+    
+    func setChecked(_ checked: Bool) {
+        
+        if checked {
+            
+            checkButton.setImage(#imageLiteral(resourceName: "box_product_button_checked"), for: .normal)
+        } else {
+            
+            checkButton.setImage(#imageLiteral(resourceName: "box_product_button_unchecked"), for: .normal)
+        }
+    }
+    
+    override func prepareForReuse() {
+        
+        setChecked(false)
+    }
+    
+    @IBAction func checkButtonAction(_ sender: UIButton) {
+        
+        checkButtonHandler?(sender)
     }
     
 }
