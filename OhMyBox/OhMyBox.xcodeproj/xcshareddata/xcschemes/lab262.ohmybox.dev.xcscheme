@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A4F89AF81DA806C900949A35"
-               BuildableName = "lab262.ohmybox.dev.app"
-               BlueprintName = "lab262.ohmybox.dev"
+               BuildableName = "lab262.ohmybox.store.dev.app"
+               BlueprintName = "lab262.ohmybox.store.dev"
                ReferencedContainer = "container:OhMyBox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4F89AF81DA806C900949A35"
-            BuildableName = "lab262.ohmybox.dev.app"
-            BlueprintName = "lab262.ohmybox.dev"
+            BuildableName = "lab262.ohmybox.store.dev.app"
+            BlueprintName = "lab262.ohmybox.store.dev"
             ReferencedContainer = "container:OhMyBox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4F89AF81DA806C900949A35"
-            BuildableName = "lab262.ohmybox.dev.app"
-            BlueprintName = "lab262.ohmybox.dev"
+            BuildableName = "lab262.ohmybox.store.dev.app"
+            BlueprintName = "lab262.ohmybox.store.dev"
             ReferencedContainer = "container:OhMyBox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -85,8 +85,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4F89AF81DA806C900949A35"
-            BuildableName = "lab262.ohmybox.dev.app"
-            BlueprintName = "lab262.ohmybox.dev"
+            BuildableName = "lab262.ohmybox.store.dev.app"
+            BlueprintName = "lab262.ohmybox.store.dev"
             ReferencedContainer = "container:OhMyBox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

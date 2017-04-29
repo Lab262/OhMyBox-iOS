@@ -218,7 +218,6 @@
 		762AEAFE38953055EE77CE8D /* Pods_lab262_ohmybox_production.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE36320447B0D257311C98D7 /* Pods_lab262_ohmybox_production.framework */; };
 		7E9FF3CD45D1AEA5E0CCF531 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81C204F58CD89A19F6552BC /* Pods_OhMyBox.framework */; };
 		867BAA4D784E12A5733C44A7 /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */; };
-		A414FCA41EB548A9008FCAC0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414FCA31EB548A9008FCAC0 /* AppConfig.swift */; };
 		A414FCA81EB5490A008FCAC0 /* ProfileSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9501E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift */; };
 		A414FCA91EB5490A008FCAC0 /* WishlistCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */; };
 		A414FCAA1EB5490A008FCAC0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA82ED11E773F97002C495B /* PurchaseViewController.swift */; };
@@ -228,7 +227,6 @@
 		A414FCAE1EB5490A008FCAC0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
 		A414FCAF1EB5490A008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */; };
 		A414FCB01EB5490A008FCAC0 /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */; };
-		A414FCB11EB5490A008FCAC0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414FCA31EB548A9008FCAC0 /* AppConfig.swift */; };
 		A414FCB21EB5490A008FCAC0 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6621DB6B32E007C3113 /* TextFieldExtension.swift */; };
 		A414FCB31EB5490A008FCAC0 /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A848911DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift */; };
 		A414FCB41EB5490A008FCAC0 /* SearchHighlightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F231E6372F70076D962 /* SearchHighlightsTableViewCell.swift */; };
@@ -406,7 +404,6 @@
 		A414FD621EB5490A008FCAC0 /* ShoppingBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */; };
 		A414FD631EB5490A008FCAC0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		A414FD641EB5490A008FCAC0 /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
-		A414FD651EB5490A008FCAC0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A414FCA01EB547C9008FCAC0 /* Info.plist */; };
 		A414FD661EB5490A008FCAC0 /* ShoppingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */; };
 		A414FD671EB5490A008FCAC0 /* ContainerCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F225CFB1DBEFA5E009E4566 /* ContainerCollectionView.xib */; };
 		A414FD681EB5490A008FCAC0 /* brand2.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B72A2B1DC8342B004335E4 /* brand2.png */; };
@@ -468,7 +465,6 @@
 		A414FDA21EB5490A008FCAC0 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A414FDA31EB5490A008FCAC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A414FDA41EB5490A008FCAC0 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FDB01EB54A22008FCAC0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414FDAF1EB54A22008FCAC0 /* AppConfig.swift */; };
 		A414FDB51EB54A5D008FCAC0 /* ProfileSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9501E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift */; };
 		A414FDB61EB54A5D008FCAC0 /* WishlistCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */; };
 		A414FDB71EB54A5D008FCAC0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA82ED11E773F97002C495B /* PurchaseViewController.swift */; };
@@ -478,7 +474,6 @@
 		A414FDBB1EB54A5D008FCAC0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
 		A414FDBC1EB54A5D008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F1B1E636EA00076D962 /* SearchBrandsTableViewCell.swift */; };
 		A414FDBD1EB54A5D008FCAC0 /* ShoppingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C278CC41E718EB300C80E8D /* ShoppingBoxViewController.swift */; };
-		A414FDBE1EB54A5D008FCAC0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414FCA31EB548A9008FCAC0 /* AppConfig.swift */; };
 		A414FDBF1EB54A5D008FCAC0 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0D6621DB6B32E007C3113 /* TextFieldExtension.swift */; };
 		A414FDC01EB54A5D008FCAC0 /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A848911DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift */; };
 		A414FDC11EB54A5D008FCAC0 /* SearchHighlightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C459F231E6372F70076D962 /* SearchHighlightsTableViewCell.swift */; };
@@ -507,7 +502,6 @@
 		A414FDD81EB54A5D008FCAC0 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7E08A1DD4DBDD00F1DE52 /* ApplicationState.swift */; };
 		A414FDD91EB54A5D008FCAC0 /* BoxProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE045EE1EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift */; };
 		A414FDDA1EB54A5D008FCAC0 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457D72D1DC3F43F00443B63 /* BrandViewController.swift */; };
-		A414FDDB1EB54A5D008FCAC0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414FDAF1EB54A22008FCAC0 /* AppConfig.swift */; };
 		A414FDDC1EB54A5D008FCAC0 /* MiniProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F25031E6631750043A90B /* MiniProductCollectionViewCell.swift */; };
 		A414FDDD1EB54A5D008FCAC0 /* TermTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07774D1DBDAE0D003C124F /* TermTableViewCell.swift */; };
 		A414FDDE1EB54A5D008FCAC0 /* ShoppingResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF61E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift */; };
@@ -615,7 +609,6 @@
 		A414FE451EB54A5D008FCAC0 /* Pods_OhMyBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81C204F58CD89A19F6552BC /* Pods_OhMyBox.framework */; };
 		A414FE471EB54A5D008FCAC0 /* SearchHighlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C459F241E6372F70076D962 /* SearchHighlightsTableViewCell.xib */; };
 		A414FE481EB54A5D008FCAC0 /* BrandContactHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA82EBD1E771A9C002C495B /* BrandContactHeaderTableViewCell.xib */; };
-		A414FE491EB54A5D008FCAC0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A414FDAD1EB54975008FCAC0 /* Info.plist */; };
 		A414FE4A1EB54A5D008FCAC0 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */; };
 		A414FE4B1EB54A5D008FCAC0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D402E00E1DB68D2A007855D6 /* Login.storyboard */; };
 		A414FE4C1EB54A5D008FCAC0 /* SearchBrandsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C459F211E6372570076D962 /* SearchBrandsTableViewCell.xib */; };
@@ -658,7 +651,6 @@
 		A414FE711EB54A5D008FCAC0 /* ShoppingBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F70E80B1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib */; };
 		A414FE721EB54A5D008FCAC0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3B87E1E5E29210065A293 /* Search.storyboard */; };
 		A414FE731EB54A5D008FCAC0 /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
-		A414FE741EB54A5D008FCAC0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A414FCA01EB547C9008FCAC0 /* Info.plist */; };
 		A414FE751EB54A5D008FCAC0 /* ShoppingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B04AC1E731DB500F457BB /* ShoppingStatusTableViewCell.xib */; };
 		A414FE761EB54A5D008FCAC0 /* ContainerCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F225CFB1DBEFA5E009E4566 /* ContainerCollectionView.xib */; };
 		A414FE771EB54A5D008FCAC0 /* brand2.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B72A2B1DC8342B004335E4 /* brand2.png */; };
@@ -720,13 +712,15 @@
 		A414FEB11EB54A5D008FCAC0 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A414FEB21EB54A5D008FCAC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A414FEB31EB54A5D008FCAC0 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FEBF1EB54B84008FCAC0 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414FEBD1EB54B84008FCAC0 /* AppConfig.swift */; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
 		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
 		A4D81D141DEBCF01008B269A /* AuthenticationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */; };
 		A4F69A121EB552CC00155E32 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F69A111EB552CC00155E32 /* NotificationsManager.swift */; };
 		A4F69A131EB552CC00155E32 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F69A111EB552CC00155E32 /* NotificationsManager.swift */; };
 		A4F69A141EB552CC00155E32 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F69A111EB552CC00155E32 /* NotificationsManager.swift */; };
+		A4F69A2B1EB55D8F00155E32 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F69A281EB55D8F00155E32 /* AppConfig.swift */; };
+		A4F69A311EB55D9600155E32 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F69A2E1EB55D9600155E32 /* AppConfig.swift */; };
+		A4F69A371EB55D9E00155E32 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F69A341EB55D9E00155E32 /* AppConfig.swift */; };
 		A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89AFC1DA806C900949A35 /* AppDelegate.swift */; };
 		A4F89AFF1DA806C900949A35 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F89AFE1DA806C900949A35 /* TabBarController.swift */; };
 		A4F89B021DA806C900949A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F89B001DA806C900949A35 /* Main.storyboard */; };
@@ -1040,22 +1034,22 @@
 		5F7235B2B7B22B0D49DC51AB /* Pods-OhMyBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyBox/Pods-OhMyBox.release.xcconfig"; sourceTree = "<group>"; };
 		71DEF2D4B0C6B9D97577ED04 /* Pods-lab262.ohmybox.test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab262.ohmybox.test.release.xcconfig"; path = "Pods/Target Support Files/Pods-lab262.ohmybox.test/Pods-lab262.ohmybox.test.release.xcconfig"; sourceTree = "<group>"; };
 		9933FB468941947896B77F17 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A414FCA01EB547C9008FCAC0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A414FCA21EB54870008FCAC0 /* lab262.ohmybox.dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lab262.ohmybox.dev.entitlements; sourceTree = "<group>"; };
-		A414FCA31EB548A9008FCAC0 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.test.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A414FDAD1EB54975008FCAC0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A414FDAF1EB54A22008FCAC0 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		A414FDB11EB54A52008FCAC0 /* lab262.ohmybox.test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lab262.ohmybox.test.entitlements; sourceTree = "<group>"; };
-		A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.production.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A414FEBD1EB54B84008FCAC0 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		A414FEBE1EB54B84008FCAC0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A414FEC11EB54BA3008FCAC0 /* lab262.ohmybox.production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lab262.ohmybox.production.entitlements; sourceTree = "<group>"; };
+		A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.store.test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.store.test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.store.production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.store.production.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputScrollView.swift; sourceTree = "<group>"; };
 		A4422AD51DED004200A2593B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationContainerViewController.swift; sourceTree = "<group>"; };
 		A4F69A111EB552CC00155E32 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
-		A4F89AF91DA806C900949A35 /* lab262.ohmybox.dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F69A281EB55D8F00155E32 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		A4F69A291EB55D8F00155E32 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F69A2E1EB55D9600155E32 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		A4F69A2F1EB55D9600155E32 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F69A341EB55D9E00155E32 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		A4F69A351EB55D9E00155E32 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F69A391EB55DB800155E32 /* lab262.ohmybox.store.production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lab262.ohmybox.store.production.entitlements; sourceTree = "<group>"; };
+		A4F69A3A1EB55DCD00155E32 /* lab262.ohmybox.store.test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lab262.ohmybox.store.test.entitlements; sourceTree = "<group>"; };
+		A4F69A3B1EB55DD000155E32 /* lab262.ohmybox.store.dev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lab262.ohmybox.store.dev.entitlements; sourceTree = "<group>"; };
+		A4F89AF91DA806C900949A35 /* lab262.ohmybox.store.dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.store.dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F89AFC1DA806C900949A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4F89AFE1DA806C900949A35 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A4F89B011DA806C900949A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1818,36 +1812,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A414FC9F1EB5458F008FCAC0 /* lab262.ohmybox.dev */ = {
-			isa = PBXGroup;
-			children = (
-				A414FCA31EB548A9008FCAC0 /* AppConfig.swift */,
-				A414FCA21EB54870008FCAC0 /* lab262.ohmybox.dev.entitlements */,
-				A414FCA01EB547C9008FCAC0 /* Info.plist */,
-			);
-			path = lab262.ohmybox.dev;
-			sourceTree = "<group>";
-		};
-		A414FDAC1EB54960008FCAC0 /* lab262.ohmybox.test */ = {
-			isa = PBXGroup;
-			children = (
-				A414FDB11EB54A52008FCAC0 /* lab262.ohmybox.test.entitlements */,
-				A414FDAF1EB54A22008FCAC0 /* AppConfig.swift */,
-				A414FDAD1EB54975008FCAC0 /* Info.plist */,
-			);
-			path = lab262.ohmybox.test;
-			sourceTree = "<group>";
-		};
-		A414FEBC1EB54B84008FCAC0 /* lab262.ohmybox.production */ = {
-			isa = PBXGroup;
-			children = (
-				A414FEC11EB54BA3008FCAC0 /* lab262.ohmybox.production.entitlements */,
-				A414FEBD1EB54B84008FCAC0 /* AppConfig.swift */,
-				A414FEBE1EB54B84008FCAC0 /* Info.plist */,
-			);
-			path = lab262.ohmybox.production;
-			sourceTree = "<group>";
-		};
 		A4422AD41DED003B00A2593B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1865,12 +1829,42 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+		A4F69A271EB55D8F00155E32 /* lab262.ohmybox.store.dev */ = {
+			isa = PBXGroup;
+			children = (
+				A4F69A3B1EB55DD000155E32 /* lab262.ohmybox.store.dev.entitlements */,
+				A4F69A281EB55D8F00155E32 /* AppConfig.swift */,
+				A4F69A291EB55D8F00155E32 /* Info.plist */,
+			);
+			path = lab262.ohmybox.store.dev;
+			sourceTree = "<group>";
+		};
+		A4F69A2D1EB55D9600155E32 /* lab262.ohmybox.store.test */ = {
+			isa = PBXGroup;
+			children = (
+				A4F69A3A1EB55DCD00155E32 /* lab262.ohmybox.store.test.entitlements */,
+				A4F69A2E1EB55D9600155E32 /* AppConfig.swift */,
+				A4F69A2F1EB55D9600155E32 /* Info.plist */,
+			);
+			path = lab262.ohmybox.store.test;
+			sourceTree = "<group>";
+		};
+		A4F69A331EB55D9D00155E32 /* lab262.ohmybox.store.production */ = {
+			isa = PBXGroup;
+			children = (
+				A4F69A391EB55DB800155E32 /* lab262.ohmybox.store.production.entitlements */,
+				A4F69A341EB55D9E00155E32 /* AppConfig.swift */,
+				A4F69A351EB55D9E00155E32 /* Info.plist */,
+			);
+			path = lab262.ohmybox.store.production;
+			sourceTree = "<group>";
+		};
 		A4F89AF01DA806C900949A35 = {
 			isa = PBXGroup;
 			children = (
-				A414FEBC1EB54B84008FCAC0 /* lab262.ohmybox.production */,
-				A414FDAC1EB54960008FCAC0 /* lab262.ohmybox.test */,
-				A414FC9F1EB5458F008FCAC0 /* lab262.ohmybox.dev */,
+				A4F69A271EB55D8F00155E32 /* lab262.ohmybox.store.dev */,
+				A4F69A2D1EB55D9600155E32 /* lab262.ohmybox.store.test */,
+				A4F69A331EB55D9D00155E32 /* lab262.ohmybox.store.production */,
 				2F2C8E181DDD05F90002BB87 /* Frameworks */,
 				A4F89AFB1DA806C900949A35 /* OhMyBox */,
 				A4F89B101DA806C900949A35 /* OhMyBoxTests */,
@@ -1883,10 +1877,10 @@
 		A4F89AFA1DA806C900949A35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4F89AF91DA806C900949A35 /* lab262.ohmybox.dev.app */,
+				A4F89AF91DA806C900949A35 /* lab262.ohmybox.store.dev.app */,
 				A4F89B0D1DA806C900949A35 /* OhMyBoxTests.xctest */,
-				A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.test.app */,
-				A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.production.app */,
+				A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.store.test.app */,
+				A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.store.production.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2203,9 +2197,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A414FCA51EB5490A008FCAC0 /* lab262.ohmybox.test */ = {
+		A414FCA51EB5490A008FCAC0 /* lab262.ohmybox.store.test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A414FDA71EB5490A008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.test" */;
+			buildConfigurationList = A414FDA71EB5490A008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.store.test" */;
 			buildPhases = (
 				A414FCA61EB5490A008FCAC0 /* [CP] Check Pods Manifest.lock */,
 				A414FCA71EB5490A008FCAC0 /* Sources */,
@@ -2220,14 +2214,14 @@
 			);
 			dependencies = (
 			);
-			name = lab262.ohmybox.test;
+			name = lab262.ohmybox.store.test;
 			productName = OhMyBox;
-			productReference = A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.test.app */;
+			productReference = A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.store.test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A414FDB21EB54A5D008FCAC0 /* lab262.ohmybox.production */ = {
+		A414FDB21EB54A5D008FCAC0 /* lab262.ohmybox.store.production */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A414FEB61EB54A5D008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.production" */;
+			buildConfigurationList = A414FEB61EB54A5D008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.store.production" */;
 			buildPhases = (
 				A414FDB31EB54A5D008FCAC0 /* [CP] Check Pods Manifest.lock */,
 				A414FDB41EB54A5D008FCAC0 /* Sources */,
@@ -2242,14 +2236,14 @@
 			);
 			dependencies = (
 			);
-			name = lab262.ohmybox.production;
+			name = lab262.ohmybox.store.production;
 			productName = OhMyBox;
-			productReference = A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.production.app */;
+			productReference = A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.store.production.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A4F89AF81DA806C900949A35 /* lab262.ohmybox.dev */ = {
+		A4F89AF81DA806C900949A35 /* lab262.ohmybox.store.dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4F89B161DA806C900949A35 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.dev" */;
+			buildConfigurationList = A4F89B161DA806C900949A35 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.store.dev" */;
 			buildPhases = (
 				EE3691F4F13FFC7F28E80EC0 /* [CP] Check Pods Manifest.lock */,
 				A4F89AF51DA806C900949A35 /* Sources */,
@@ -2264,9 +2258,9 @@
 			);
 			dependencies = (
 			);
-			name = lab262.ohmybox.dev;
+			name = lab262.ohmybox.store.dev;
 			productName = OhMyBox;
-			productReference = A4F89AF91DA806C900949A35 /* lab262.ohmybox.dev.app */;
+			productReference = A4F89AF91DA806C900949A35 /* lab262.ohmybox.store.dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A4F89B0C1DA806C900949A35 /* OhMyBoxTests */ = {
@@ -2351,10 +2345,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4F89AF81DA806C900949A35 /* lab262.ohmybox.dev */,
+				A4F89AF81DA806C900949A35 /* lab262.ohmybox.store.dev */,
 				A4F89B0C1DA806C900949A35 /* OhMyBoxTests */,
-				A414FCA51EB5490A008FCAC0 /* lab262.ohmybox.test */,
-				A414FDB21EB54A5D008FCAC0 /* lab262.ohmybox.production */,
+				A414FCA51EB5490A008FCAC0 /* lab262.ohmybox.store.test */,
+				A414FDB21EB54A5D008FCAC0 /* lab262.ohmybox.store.production */,
 			);
 		};
 /* End PBXProject section */
@@ -2408,7 +2402,6 @@
 				A414FD621EB5490A008FCAC0 /* ShoppingBoxTableViewCell.xib in Resources */,
 				A414FD631EB5490A008FCAC0 /* Search.storyboard in Resources */,
 				A414FD641EB5490A008FCAC0 /* CollectionPickerView.xib in Resources */,
-				A414FD651EB5490A008FCAC0 /* Info.plist in Resources */,
 				A414FD661EB5490A008FCAC0 /* ShoppingStatusTableViewCell.xib in Resources */,
 				A414FD671EB5490A008FCAC0 /* ContainerCollectionView.xib in Resources */,
 				A414FD681EB5490A008FCAC0 /* brand2.png in Resources */,
@@ -2475,7 +2468,6 @@
 			files = (
 				A414FE471EB54A5D008FCAC0 /* SearchHighlightsTableViewCell.xib in Resources */,
 				A414FE481EB54A5D008FCAC0 /* BrandContactHeaderTableViewCell.xib in Resources */,
-				A414FE491EB54A5D008FCAC0 /* Info.plist in Resources */,
 				A414FE4A1EB54A5D008FCAC0 /* LogoTableViewCell.xib in Resources */,
 				A414FE4B1EB54A5D008FCAC0 /* Login.storyboard in Resources */,
 				A414FE4C1EB54A5D008FCAC0 /* SearchBrandsTableViewCell.xib in Resources */,
@@ -2518,7 +2510,6 @@
 				A414FE711EB54A5D008FCAC0 /* ShoppingBoxTableViewCell.xib in Resources */,
 				A414FE721EB54A5D008FCAC0 /* Search.storyboard in Resources */,
 				A414FE731EB54A5D008FCAC0 /* CollectionPickerView.xib in Resources */,
-				A414FE741EB54A5D008FCAC0 /* Info.plist in Resources */,
 				A414FE751EB54A5D008FCAC0 /* ShoppingStatusTableViewCell.xib in Resources */,
 				A414FE761EB54A5D008FCAC0 /* ContainerCollectionView.xib in Resources */,
 				A414FE771EB54A5D008FCAC0 /* brand2.png in Resources */,
@@ -2935,7 +2926,6 @@
 				A414FCAE1EB5490A008FCAC0 /* Colors.swift in Sources */,
 				A414FCAF1EB5490A008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */,
 				A414FCB01EB5490A008FCAC0 /* ShoppingBoxViewController.swift in Sources */,
-				A414FCB11EB5490A008FCAC0 /* AppConfig.swift in Sources */,
 				A414FCB21EB5490A008FCAC0 /* TextFieldExtension.swift in Sources */,
 				A414FCB31EB5490A008FCAC0 /* ScaledVisibleCellsCollectionView.swift in Sources */,
 				A414FCB41EB5490A008FCAC0 /* SearchHighlightsTableViewCell.swift in Sources */,
@@ -2964,8 +2954,8 @@
 				A414FCCB1EB5490A008FCAC0 /* ApplicationState.swift in Sources */,
 				A414FCCC1EB5490A008FCAC0 /* BoxProductCollectionViewCell.swift in Sources */,
 				A414FCCD1EB5490A008FCAC0 /* BrandViewController.swift in Sources */,
-				A414FDB01EB54A22008FCAC0 /* AppConfig.swift in Sources */,
 				A414FCCE1EB5490A008FCAC0 /* MiniProductCollectionViewCell.swift in Sources */,
+				A4F69A311EB55D9600155E32 /* AppConfig.swift in Sources */,
 				A414FCCF1EB5490A008FCAC0 /* TermTableViewCell.swift in Sources */,
 				A414FCD01EB5490A008FCAC0 /* ShoppingResultsTableViewCell.swift in Sources */,
 				A414FCD11EB5490A008FCAC0 /* ErrorMessage.swift in Sources */,
@@ -3082,7 +3072,6 @@
 				A414FDBB1EB54A5D008FCAC0 /* Colors.swift in Sources */,
 				A414FDBC1EB54A5D008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */,
 				A414FDBD1EB54A5D008FCAC0 /* ShoppingBoxViewController.swift in Sources */,
-				A414FDBE1EB54A5D008FCAC0 /* AppConfig.swift in Sources */,
 				A414FDBF1EB54A5D008FCAC0 /* TextFieldExtension.swift in Sources */,
 				A414FDC01EB54A5D008FCAC0 /* ScaledVisibleCellsCollectionView.swift in Sources */,
 				A414FDC11EB54A5D008FCAC0 /* SearchHighlightsTableViewCell.swift in Sources */,
@@ -3111,8 +3100,8 @@
 				A414FDD81EB54A5D008FCAC0 /* ApplicationState.swift in Sources */,
 				A414FDD91EB54A5D008FCAC0 /* BoxProductCollectionViewCell.swift in Sources */,
 				A414FDDA1EB54A5D008FCAC0 /* BrandViewController.swift in Sources */,
-				A414FDDB1EB54A5D008FCAC0 /* AppConfig.swift in Sources */,
 				A414FDDC1EB54A5D008FCAC0 /* MiniProductCollectionViewCell.swift in Sources */,
+				A4F69A371EB55D9E00155E32 /* AppConfig.swift in Sources */,
 				A414FDDD1EB54A5D008FCAC0 /* TermTableViewCell.swift in Sources */,
 				A414FDDE1EB54A5D008FCAC0 /* ShoppingResultsTableViewCell.swift in Sources */,
 				A414FDDF1EB54A5D008FCAC0 /* ErrorMessage.swift in Sources */,
@@ -3174,7 +3163,6 @@
 				A414FE171EB54A5D008FCAC0 /* ProfilePhotoTableViewCell.swift in Sources */,
 				A414FE181EB54A5D008FCAC0 /* ShoppingStatusTableViewCell.swift in Sources */,
 				A414FE191EB54A5D008FCAC0 /* ProfileLabelTableViewCell.swift in Sources */,
-				A414FEBF1EB54B84008FCAC0 /* AppConfig.swift in Sources */,
 				A414FE1A1EB54A5D008FCAC0 /* HighlightCollectionViewCell.swift in Sources */,
 				A414FE1B1EB54A5D008FCAC0 /* LoginViewController.swift in Sources */,
 				A414FE1C1EB54A5D008FCAC0 /* Constants.swift in Sources */,
@@ -3231,7 +3219,6 @@
 				A4422AD61DED004200A2593B /* Colors.swift in Sources */,
 				4C459F1C1E636EA00076D962 /* SearchBrandsTableViewCell.swift in Sources */,
 				4C278CC51E718EB300C80E8D /* ShoppingBoxViewController.swift in Sources */,
-				A414FCA41EB548A9008FCAC0 /* AppConfig.swift in Sources */,
 				D4C0D6671DB6B32E007C3113 /* TextFieldExtension.swift in Sources */,
 				D4A848921DE8942600E5401F /* ScaledVisibleCellsCollectionView.swift in Sources */,
 				4C459F251E6372F70076D962 /* SearchHighlightsTableViewCell.swift in Sources */,
@@ -3260,6 +3247,7 @@
 				D4E7E08B1DD4DBDD00F1DE52 /* ApplicationState.swift in Sources */,
 				4CE045F01EAF8E4D0022AFC6 /* BoxProductCollectionViewCell.swift in Sources */,
 				D457D72E1DC3F43F00443B63 /* BrandViewController.swift in Sources */,
+				A4F69A2B1EB55D8F00155E32 /* AppConfig.swift in Sources */,
 				4C2F25051E6631750043A90B /* MiniProductCollectionViewCell.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				4CE5DFF81E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift in Sources */,
@@ -3376,7 +3364,7 @@
 /* Begin PBXTargetDependency section */
 		A4F89B0F1DA806C900949A35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A4F89AF81DA806C900949A35 /* lab262.ohmybox.dev */;
+			target = A4F89AF81DA806C900949A35 /* lab262.ohmybox.store.dev */;
 			targetProxy = A4F89B0E1DA806C900949A35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -3407,7 +3395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.test/lab262.ohmybox.test.entitlements;
+				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.store.test/lab262.ohmybox.store.test.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 32;
@@ -3417,10 +3405,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = lab262.ohmybox.test/Info.plist;
+				INFOPLIST_FILE = lab262.ohmybox.store.test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.test;
+				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.store.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3435,7 +3423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.test/lab262.ohmybox.test.entitlements;
+				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.store.test/lab262.ohmybox.store.test.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 31;
@@ -3444,10 +3432,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = lab262.ohmybox.test/Info.plist;
+				INFOPLIST_FILE = lab262.ohmybox.store.test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.test;
+				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.store.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3462,7 +3450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.production/lab262.ohmybox.production.entitlements;
+				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.store.production/lab262.ohmybox.store.production.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 32;
@@ -3472,10 +3460,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = lab262.ohmybox.production/Info.plist;
+				INFOPLIST_FILE = lab262.ohmybox.store.production/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.production;
+				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.store.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3490,7 +3478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.production/lab262.ohmybox.production.entitlements;
+				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.store.production/lab262.ohmybox.store.production.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 31;
@@ -3499,10 +3487,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = lab262.ohmybox.production/Info.plist;
+				INFOPLIST_FILE = lab262.ohmybox.store.production/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.production;
+				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.store.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3613,7 +3601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.dev/lab262.ohmybox.dev.entitlements;
+				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.store.dev/lab262.ohmybox.store.dev.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 32;
@@ -3623,10 +3611,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = lab262.ohmybox.dev/Info.plist;
+				INFOPLIST_FILE = lab262.ohmybox.store.dev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.store.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3641,7 +3629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.dev/lab262.ohmybox.dev.entitlements;
+				CODE_SIGN_ENTITLEMENTS = lab262.ohmybox.store.dev/lab262.ohmybox.store.dev.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 31;
@@ -3650,10 +3638,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = lab262.ohmybox.dev/Info.plist;
+				INFOPLIST_FILE = lab262.ohmybox.store.dev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = lab262.ohmybox.store.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3695,7 +3683,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A414FDA71EB5490A008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.test" */ = {
+		A414FDA71EB5490A008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.store.test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A414FDA81EB5490A008FCAC0 /* Debug */,
@@ -3704,7 +3692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A414FEB61EB54A5D008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.production" */ = {
+		A414FEB61EB54A5D008FCAC0 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.store.production" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A414FEB71EB54A5D008FCAC0 /* Debug */,
@@ -3722,7 +3710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4F89B161DA806C900949A35 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.dev" */ = {
+		A4F89B161DA806C900949A35 /* Build configuration list for PBXNativeTarget "lab262.ohmybox.store.dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4F89B171DA806C900949A35 /* Debug */,
