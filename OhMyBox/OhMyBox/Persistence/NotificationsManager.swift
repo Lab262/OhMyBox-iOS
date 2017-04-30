@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import Parse
 
 //MARK: Remote NotificationsManager
 class NotificationsManager: NSObject {
@@ -76,19 +77,22 @@ extension NotificationsManager {
 extension AppDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    }
-    
-    func tokenRefreshNotification(_ notification: Notification) {
+        let installation = PFInstallation.current()
+        installation?.setDeviceTokenFrom(deviceToken)
+        installation?.saveInBackground() { (ok, error) in
+            print(ok)
+        }
+
     }
     
 }
 
 //MARK: IOS 9.0 delegates
 extension AppDelegate {
-
-    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-        UIApplication.shared.registerForRemoteNotifications()
-    }
+//    @available
+//    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+//        UIApplication.shared.registerForRemoteNotifications()
+//    }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print(error)
@@ -99,6 +103,7 @@ extension AppDelegate {
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         NotificationsManager.handleNotificationByApplicationState(application: application, userInfo: userInfo)
+        
         completionHandler(UIBackgroundFetchResult.newData)
     }
     
@@ -140,6 +145,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension NotificationsManager {
     
     static func handleNotificationByApplicationState(application: UIApplication,userInfo: [AnyHashable: Any]) {
+        PFPush.handle(userInfo)
         NotificationsManager.handleNotificationGeneric(userInfo: userInfo)
         if ( application.applicationState == .inactive || application.applicationState == .background  )
         {
