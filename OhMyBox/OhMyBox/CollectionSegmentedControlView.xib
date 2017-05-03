@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionSegmentedControlView" customModule="OhMyBox" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="If9-Ca-Cwa" id="ywf-3h-7wN"/>
+                <outlet property="leftArrowButton" destination="uMq-Su-RuV" id="IfG-T8-R89"/>
+                <outlet property="rightArrowButton" destination="6XF-fV-D3Q" id="xiQ-PM-lwv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Mhu-lt-O4q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="If9-Ca-Cwa">
+                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JyH-Qk-m50">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMq-Su-RuV">
+                    <rect key="frame" x="10" y="11" width="7" height="22"/>
+                    <state key="normal" image="collection_segment_control_arrow"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XF-fV-D3Q">
+                    <rect key="frame" x="358" y="11" width="7" height="22"/>
+                    <state key="normal" image="collection_segment_control_arrow"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uMq-Su-RuV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BgG-2i-N05"/>
+                <constraint firstItem="6XF-fV-D3Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BpK-on-Csz"/>
+                <constraint firstAttribute="trailing" secondItem="If9-Ca-Cwa" secondAttribute="trailing" constant="30" id="Nhr-EQ-i8J"/>
+                <constraint firstAttribute="trailing" secondItem="6XF-fV-D3Q" secondAttribute="trailing" constant="10" id="Wg7-b0-ZjY"/>
+                <constraint firstItem="If9-Ca-Cwa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZUD-ml-efu"/>
+                <constraint firstItem="uMq-Su-RuV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="qYh-xx-feM"/>
+                <constraint firstAttribute="bottom" secondItem="If9-Ca-Cwa" secondAttribute="bottom" id="shG-cZ-h8J"/>
+                <constraint firstItem="If9-Ca-Cwa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="tHZ-5g-wLS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="collection_segment_control_arrow" width="7" height="13"/>
+    </resources>
+</document>

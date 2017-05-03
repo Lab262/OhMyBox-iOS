@@ -22,8 +22,13 @@ class HomeViewController: UIViewController {
     var newsCollectionViewDelegate: BoxesCollectionViewDataSource!
     var salesCollectionViewDelegate: BoxesCollectionViewDataSource!
     
+    var presenter = HomePresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.view = self
+        presenter.loadBoxes()
         
         registerNibs()
         setUpNavigationBar()
@@ -79,7 +84,9 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let identifier = segue.identifier {
+        if let destination = segue.destination as? BoxDetailViewController {
+            
+            destination.presenter.box = presenter.selectedBox
         }
     }
     
@@ -117,14 +124,12 @@ extension HomeViewController: UITableViewDataSource {
         let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = [1, 2, 3]
+        dataSource.boxes = presenter.boxes
         dataSource.collectionSelectionDelegate = self
         salesCollectionViewDelegate = dataSource
         
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
-        
-        
         
         return cell
     }
@@ -134,7 +139,7 @@ extension HomeViewController: UITableViewDataSource {
         let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = [1, 2, 3]
+        dataSource.boxes = presenter.boxes
         dataSource.collectionSelectionDelegate = self
         highlightsCollectionViewDelegate = dataSource
         
@@ -149,7 +154,7 @@ extension HomeViewController: UITableViewDataSource {
         let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = [1, 2, 3]
+        dataSource.boxes = presenter.boxes
         dataSource.collectionSelectionDelegate = self
         newsCollectionViewDelegate = dataSource
         
@@ -260,6 +265,13 @@ extension HomeViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
         
+        if let dataSource = colletionViewDelegate as? BoxesCollectionViewDataSource {
+            
+            presenter.selectedBox = dataSource.boxes[indexPath.item]
+        } else {
+            
+            presenter.selectedBox = nil
+        }
         performSegue(withIdentifier: SegueIdentifiers.homeToBoxDetail, sender: self)
     }
 }
@@ -268,4 +280,8 @@ extension HomeViewController: CollectionViewSelectionDelegate {
 
 extension HomeViewController: HomeView {
     
+    func reloadData() {
+        
+        tableView.reloadData()
+    }
 }

@@ -15,29 +15,23 @@ protocol BoxDetailView {
 
 class BoxDetailPresenter: NSObject {
 
-    var box: AnyObject!
+    var box: Box!
     var boxOptionsMaxCount: [Int] = [1, 1, 1]
     var checkedProductsIndexes: [[Int]] = [[0], [0], [0]]
-    var categories = ["SAPATO", "ACESSÓRIO", "BIJUTERIA"]
     
     var selectedCategoryIndex: Int = 0 {
         
         didSet {
             
-            view.reloadData()
+            view?.reloadData()
         }
     }
     
-    var view: BoxDetailView
+    var view: BoxDetailView?
     
     var boxPlaceholderInfo: BoxDetailHeaderCollectionReusableView.Info {
         
-        return ("EU VOU DE VERÃO", "Box pensada com carinho para quem está indo curtir o verão com total estilo, cheia de opções pra você formar seu estilo!", 100, categories)
-    }
-    
-    init(view: BoxDetailView) {
-        
-        self.view = view
+        return (box.name!, box.boxDescription!, box.price!.doubleValue, box.productTypes!)
     }
     
     func checkedItem(at index: Int) {
@@ -61,6 +55,6 @@ class BoxDetailPresenter: NSObject {
             }
         }
         
-        view.reloadData()
+        view?.reloadData()
     }
 }

@@ -15,19 +15,19 @@ class BoxDetailViewController: UIViewController {
     
     weak var collectionHeader: BoxDetailHeaderCollectionReusableView!
     
-    var presenter: BoxDetailPresenter!
+    var presenter = BoxDetailPresenter()
     
     let collectionViewEdgeMargin: CGFloat = 8
     let collectionViewCellSpacing: CGFloat = 5
+    let collectionViewBottomMargin: CGFloat = 30
     
     override func viewDidLoad() {
         
-        presenter = BoxDetailPresenter(view: self)
+        presenter.view = self
         
         super.viewDidLoad()
         registerNibs()
         setUpCollectionViewLayout()
-        
     }
 
     func registerNibs() {
@@ -49,7 +49,7 @@ class BoxDetailViewController: UIViewController {
         let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
         flowLayout.minimumInteritemSpacing = collectionViewCellSpacing
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: collectionViewEdgeMargin, bottom: 0, right: collectionViewEdgeMargin)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: collectionViewEdgeMargin, bottom: collectionViewBottomMargin, right: collectionViewEdgeMargin)
     }
 
 }
@@ -98,7 +98,7 @@ extension BoxDetailViewController: UICollectionViewDataSource {
             collectionHeader = view
             view.info = presenter.boxPlaceholderInfo
             
-            view.collectionPickerView.collectionPickerHandlers = (0..<presenter.categories.count).map { index in
+            view.collectionSegmentedControlView.collectionSegmentedControlHandlers = (0..<presenter.box.productTypes!.count).map { index in
                 
                 return {
                     

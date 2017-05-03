@@ -20,11 +20,6 @@ class CollectionPickerView: UIView {
     var collectionPickerController = CollectionPickerController()
     
     var showsIndicator: Bool = true
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        self.nibInit()
-//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

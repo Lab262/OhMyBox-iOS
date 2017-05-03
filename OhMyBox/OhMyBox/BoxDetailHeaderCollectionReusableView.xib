@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -49,7 +49,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-FE-43H">
-                    <rect key="frame" x="16" y="119" width="104" height="24"/>
+                    <rect key="frame" x="16" y="119" width="103.5" height="24"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -62,12 +62,12 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 categorias." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-ek-1kE">
-                    <rect key="frame" x="102" y="192" width="81" height="20"/>
+                    <rect key="frame" x="101.5" y="192" width="80.5" height="20"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                     <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4c-aW-7ux" customClass="CollectionPickerView" customModule="OhMyBox" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4c-aW-7ux" customClass="CollectionSegmentedControlView" customModule="OhMyBox" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="234" width="375" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -78,13 +78,13 @@
                             <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                            <real key="value" value="0.19"/>
+                            <real key="value" value="0.10000000000000001"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                             <size key="value" width="0.0" height="0.0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                            <real key="value" value="3"/>
+                            <real key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -95,7 +95,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="essa box tem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMv-uY-4Bc">
-                    <rect key="frame" x="16" y="192" width="81" height="20"/>
+                    <rect key="frame" x="16" y="192" width="80.5" height="20"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                     <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -103,17 +103,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="J0t-ek-1kE" firstAttribute="top" secondItem="JMv-uY-4Bc" secondAttribute="top" id="2bN-6D-p8e"/>
                 <constraint firstItem="Uen-XO-hCZ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="5fP-LR-UlR"/>
                 <constraint firstAttribute="trailing" secondItem="BFN-bN-rb3" secondAttribute="trailing" constant="16" id="7lX-gl-dxx"/>
                 <constraint firstItem="9BT-FE-43H" firstAttribute="leading" secondItem="BFN-bN-rb3" secondAttribute="leading" id="87I-lJ-OnQ"/>
                 <constraint firstItem="x4c-aW-7ux" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="94W-d3-cZB"/>
                 <constraint firstItem="Bym-V7-QAe" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="Cd1-Sj-XvV"/>
                 <constraint firstItem="6an-g5-Q8V" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="JEZ-qC-GeC"/>
-                <constraint firstItem="x4c-aW-7ux" firstAttribute="top" secondItem="J0t-ek-1kE" secondAttribute="bottom" constant="22" id="NJe-YA-Zjc"/>
                 <constraint firstItem="JMv-uY-4Bc" firstAttribute="top" secondItem="6an-g5-Q8V" secondAttribute="bottom" constant="23" id="PHx-vI-oyh"/>
                 <constraint firstItem="J0t-ek-1kE" firstAttribute="leading" secondItem="JMv-uY-4Bc" secondAttribute="trailing" constant="5" id="Ud6-VE-3Ei"/>
                 <constraint firstItem="6an-g5-Q8V" firstAttribute="top" secondItem="9BT-FE-43H" secondAttribute="bottom" constant="25" id="WCW-na-RvX"/>
                 <constraint firstItem="BFN-bN-rb3" firstAttribute="leading" secondItem="Bym-V7-QAe" secondAttribute="leading" id="Wmf-Bn-3xM"/>
+                <constraint firstItem="x4c-aW-7ux" firstAttribute="top" secondItem="JMv-uY-4Bc" secondAttribute="bottom" constant="22" id="Xyx-Ja-BUb"/>
                 <constraint firstItem="Uen-XO-hCZ" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="-17" id="ZFe-dY-mHu"/>
                 <constraint firstItem="AV8-Za-0Ap" firstAttribute="top" secondItem="x4c-aW-7ux" secondAttribute="bottom" constant="21" id="cU7-al-sBd"/>
                 <constraint firstAttribute="trailing" secondItem="6an-g5-Q8V" secondAttribute="trailing" constant="21" id="cW4-d0-Dvt"/>
@@ -121,14 +122,13 @@
                 <constraint firstItem="AV8-Za-0Ap" firstAttribute="leading" secondItem="JMv-uY-4Bc" secondAttribute="leading" id="hPv-5t-KUv"/>
                 <constraint firstAttribute="trailing" secondItem="x4c-aW-7ux" secondAttribute="trailing" id="jsc-fe-s5D"/>
                 <constraint firstItem="BFN-bN-rb3" firstAttribute="top" secondItem="Bym-V7-QAe" secondAttribute="bottom" constant="10" id="oID-qB-SSJ"/>
-                <constraint firstItem="J0t-ek-1kE" firstAttribute="top" secondItem="6an-g5-Q8V" secondAttribute="bottom" constant="23" id="u2O-jU-YeK"/>
                 <constraint firstItem="Bym-V7-QAe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="11" id="ucq-gi-K9q"/>
                 <constraint firstItem="9BT-FE-43H" firstAttribute="top" secondItem="BFN-bN-rb3" secondAttribute="bottom" constant="10" id="y5t-Sc-5D2"/>
             </constraints>
             <connections>
                 <outlet property="categoriesCountLabel" destination="J0t-ek-1kE" id="dJn-LU-71w"/>
                 <outlet property="categoriesCountTitleLabel" destination="JMv-uY-4Bc" id="uAG-6N-tH5"/>
-                <outlet property="collectionPickerView" destination="x4c-aW-7ux" id="XnW-bb-RP5"/>
+                <outlet property="collectionSegmentedControlView" destination="x4c-aW-7ux" id="Z0F-PA-4Rp"/>
                 <outlet property="descriptionLabel" destination="BFN-bN-rb3" id="Bgh-7i-0b5"/>
                 <outlet property="nameLabel" destination="Bym-V7-QAe" id="gBb-5g-gPE"/>
                 <outlet property="optionCountLabel" destination="AV8-Za-0Ap" id="rq4-yU-SFL"/>

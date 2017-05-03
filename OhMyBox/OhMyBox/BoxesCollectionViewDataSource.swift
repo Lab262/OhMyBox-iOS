@@ -14,7 +14,7 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var collectionSelectionDelegate: CollectionViewSelectionDelegate?
     
-    var boxes: [Any] = []
+    var boxes: [Box] = []
     
     init(collectionView: UICollectionView) {
         
@@ -56,15 +56,17 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BoxCollectionViewCell.identifier, for: indexPath) as! BoxCollectionViewCell
         
-        cell.info = ("Eu vou de verão", "Bateu o frio, olha só essa box pronta pra te salvar com estilo!", 100, #imageLiteral(resourceName: "brand_placeholder_image"))
+        let box = boxes[indexPath.item]
+        
+        cell.info = (box.name!, box.boxDescription!, box.price!.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"))
         
         cell.layer.cornerRadius = 3
         
         cell.layer.masksToBounds = false
         cell.layer.backgroundColor = UIColor.white.cgColor
         cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOpacity = 0.13
-        cell.layer.shadowRadius = 2
+        cell.layer.shadowOpacity = 0.1
+        cell.layer.shadowRadius = 4
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         
         
