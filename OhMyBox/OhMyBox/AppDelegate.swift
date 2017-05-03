@@ -22,17 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               Fabric.with([Crashlytics.self])
         
         setUpBarsAppearance()
-        
-        let configuration = ParseClientConfiguration {
-            $0.applicationId = "ohmyboxapi"
-            $0.clientKey = ""
-            $0.server = "http://ohmyboxapi.herokuapp.com/parse"
-            
-        }
-        
-        Parse.initialize(with: configuration)
+
+        Parse.initialize(with: AppConfig.parse.baseClientConfig)
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+        
+        NotificationsManager.registerForNotifications()
         
         let initialViewController: UIViewController
         if (User.current != nil) {
