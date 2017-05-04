@@ -26,6 +26,9 @@ class BoxView: UIView {
     
     @IBOutlet var productImageViews: [UIImageView]!
     
+    var showsBoxButton = true
+    var showsLikeButton = true
+    
     var info: Info? {
         
         didSet {
@@ -44,6 +47,9 @@ class BoxView: UIView {
         }
         
         brandImageView.layer.cornerRadius = 3
+        
+        boxButton.isHidden = !showsBoxButton
+        likeButton.isHidden = !showsLikeButton
         
     }
     

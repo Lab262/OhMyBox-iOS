@@ -32,7 +32,7 @@ class ShoppingBoxViewController: UIViewController {
     }
     
     func registerNibs() {
-        tableView.registerNibFrom(ShoppingBoxTableViewCell.self)
+        tableView.registerNibFrom(BoxTableViewCell.self)
     }
     
     func setUpEmptyView() {
@@ -88,7 +88,7 @@ extension ShoppingBoxViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingBoxTableViewCell.identifier) as! ShoppingBoxTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: BoxTableViewCell.identifier) as! BoxTableViewCell
         
         return cell
     }
@@ -97,7 +97,7 @@ extension ShoppingBoxViewController: UITableViewDataSource {
 extension ShoppingBoxViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ShoppingBoxTableViewCell.cellHeight
+        return BoxTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

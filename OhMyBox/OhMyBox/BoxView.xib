@@ -209,8 +209,8 @@ pronta pra te salvar com estilo!</string>
                 <constraint firstItem="bF1-PV-tYx" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="81/345" id="SfG-eg-8to"/>
                 <constraint firstItem="zo7-hC-BsZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Ydp-Ra-fZr"/>
                 <constraint firstItem="gHF-el-t83" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="76/240" id="a4y-3x-0TU"/>
+                <constraint firstAttribute="bottom" secondItem="gHF-el-t83" secondAttribute="bottom" constant="12" id="ay4-QM-mxz"/>
                 <constraint firstItem="Ggj-Tk-3ga" firstAttribute="top" secondItem="bF1-PV-tYx" secondAttribute="bottom" constant="8" id="cGz-fe-p0F"/>
-                <constraint firstItem="bF1-PV-tYx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="43" id="hff-QI-ENH"/>
                 <constraint firstItem="Ggj-Tk-3ga" firstAttribute="leading" secondItem="bF1-PV-tYx" secondAttribute="leading" id="kXx-xl-oIC"/>
                 <constraint firstItem="3ct-ZC-6rv" firstAttribute="leading" secondItem="zo7-hC-BsZ" secondAttribute="trailing" constant="22" id="m1T-rz-0R6"/>
                 <constraint firstItem="3ct-ZC-6rv" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="20/345" id="qj0-VK-4HL"/>

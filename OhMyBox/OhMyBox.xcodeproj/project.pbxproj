@@ -182,6 +182,12 @@
 		4CC40F2C1EBB709400333245 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F2B1EBB709400333245 /* BoxView.xib */; };
 		4CC40F2D1EBB709400333245 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F2B1EBB709400333245 /* BoxView.xib */; };
 		4CC40F2E1EBB709400333245 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F2B1EBB709400333245 /* BoxView.xib */; };
+		4CC40F311EBB76C200333245 /* BoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */; };
+		4CC40F321EBB76C200333245 /* BoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */; };
+		4CC40F331EBB76C200333245 /* BoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */; };
+		4CC40F341EBB76C200333245 /* BoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */; };
+		4CC40F351EBB76C200333245 /* BoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */; };
+		4CC40F361EBB76C200333245 /* BoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */; };
 		4CD370C11EA65AC800B73F68 /* LogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */; };
 		4CD370C21EA65AC800B73F68 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */; };
 		4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */; };
@@ -1000,6 +1006,8 @@
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
 		4CC40F271EBB708D00333245 /* BoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		4CC40F2B1EBB709400333245 /* BoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxView.xib; sourceTree = "<group>"; };
+		4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxTableViewCell.swift; sourceTree = "<group>"; };
+		4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxTableViewCell.xib; sourceTree = "<group>"; };
 		4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoTableViewCell.swift; sourceTree = "<group>"; };
 		4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoTableViewCell.xib; sourceTree = "<group>"; };
 		4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -1307,6 +1315,8 @@
 				2F70E8331DC969EC000AB03B /* OrderTableViewCell.xib */,
 				2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */,
 				2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */,
+				4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */,
+				4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */,
 			);
 			name = Box;
 			sourceTree = "<group>";
@@ -2417,6 +2427,7 @@
 				A414FD501EB5490A008FCAC0 /* shoesImage.png in Resources */,
 				A414FD511EB5490A008FCAC0 /* HighlightCollectionViewCell.xib in Resources */,
 				A414FD521EB5490A008FCAC0 /* MeasuresUserTableViewCell.xib in Resources */,
+				4CC40F351EBB76C200333245 /* BoxTableViewCell.xib in Resources */,
 				A414FD531EB5490A008FCAC0 /* BrandContactSocialNetworkTableViewCell.xib in Resources */,
 				A414FD541EB5490A008FCAC0 /* ProductLabelTableViewCell.xib in Resources */,
 				A414FD551EB5490A008FCAC0 /* ProductOptionsTableViewCell.xib in Resources */,
@@ -2526,6 +2537,7 @@
 				A414FE5F1EB54A5D008FCAC0 /* shoesImage.png in Resources */,
 				A414FE601EB54A5D008FCAC0 /* HighlightCollectionViewCell.xib in Resources */,
 				A414FE611EB54A5D008FCAC0 /* MeasuresUserTableViewCell.xib in Resources */,
+				4CC40F361EBB76C200333245 /* BoxTableViewCell.xib in Resources */,
 				A414FE621EB54A5D008FCAC0 /* BrandContactSocialNetworkTableViewCell.xib in Resources */,
 				A414FE631EB54A5D008FCAC0 /* ProductLabelTableViewCell.xib in Resources */,
 				A414FE641EB54A5D008FCAC0 /* ProductOptionsTableViewCell.xib in Resources */,
@@ -2657,6 +2669,7 @@
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
 				4CE045F51EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib in Resources */,
 				4CC40F2C1EBB709400333245 /* BoxView.xib in Resources */,
+				4CC40F341EBB76C200333245 /* BoxTableViewCell.xib in Resources */,
 				2F2999A71DE54ECA00D52203 /* Poppins-Medium.ttf in Resources */,
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
 				4CE3B88C1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib in Resources */,
@@ -3085,6 +3098,7 @@
 				A414FD261EB5490A008FCAC0 /* BoxCollectionViewCell.swift in Sources */,
 				A414FD271EB5490A008FCAC0 /* RegisterFieldTableViewCell.swift in Sources */,
 				A414FD281EB5490A008FCAC0 /* BrandCollectionsTableViewCell.swift in Sources */,
+				4CC40F321EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
 				A414FD291EB5490A008FCAC0 /* Rating1ViewController.swift in Sources */,
 				A414FD2A1EB5490A008FCAC0 /* SearchHeaderTableViewCell.swift in Sources */,
 				A414FD2B1EB5490A008FCAC0 /* HomeTableViewHeaderView.swift in Sources */,
@@ -3232,6 +3246,7 @@
 				A414FE351EB54A5D008FCAC0 /* RegisterFieldTableViewCell.swift in Sources */,
 				A414FE361EB54A5D008FCAC0 /* BrandCollectionsTableViewCell.swift in Sources */,
 				A414FE371EB54A5D008FCAC0 /* Rating1ViewController.swift in Sources */,
+				4CC40F331EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
 				A414FE381EB54A5D008FCAC0 /* SearchHeaderTableViewCell.swift in Sources */,
 				A414FE391EB54A5D008FCAC0 /* HomeTableViewHeaderView.swift in Sources */,
 				A4F69A141EB552CC00155E32 /* NotificationsManager.swift in Sources */,
@@ -3341,6 +3356,7 @@
 				4CDBE9441E69A52A00715226 /* ProductBrandTableViewCell.swift in Sources */,
 				2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */,
 				4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */,
+				4CC40F311EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
 				2F07774B1DBD9B95003C124F /* SimpleTextTableViewCell.swift in Sources */,
 				4C433E981E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.swift in Sources */,
 				4C0B04B11E73249800F457BB /* ShoppingRequestFooterTableViewCell.swift in Sources */,
