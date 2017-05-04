@@ -61,6 +61,7 @@ extension CollectionSegmentedControlController: UICollectionViewDelegate {
         
         selectedIndexPath = indexPath
         delegate?.collectionSegmentedControl(self, handlerForOptionAt: selectedIndexPath.item)?()
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 
 }

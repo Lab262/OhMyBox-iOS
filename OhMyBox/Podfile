@@ -5,26 +5,26 @@ def common_pods
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     inhibit_all_warnings!
     use_frameworks!
-    
+
     pod 'Parse'
     pod 'ParseFacebookUtilsV4'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'BGTableViewRowActionWithImage'
     pod 'FalconFrameworkIOSSDK', :git => 'https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git'
-    
-    
+
+
 end
 
-target 'lab262.ohmybox.dev' do
+target 'lab262.ohmybox.store.dev' do
     common_pods
 end
 
-target 'lab262.ohmybox.test' do
+target 'lab262.ohmybox.store.test' do
     common_pods
 end
 
-target 'lab262.ohmybox.production' do
+target 'lab262.ohmybox.store.production' do
     common_pods
 end
 
