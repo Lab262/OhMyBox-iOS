@@ -58,7 +58,7 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         let box = boxes[indexPath.item]
         
-        cell.info = (box.name!, box.boxDescription!, box.price!.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"))
+        cell.info = (box.name!, box.boxDescription!, box.price!.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
         
         cell.layer.cornerRadius = 3
         

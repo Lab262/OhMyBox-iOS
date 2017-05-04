@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BoxCollectionViewCell" customModule="OhMyBox" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BoxCollectionViewCell" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="345" height="240"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -100,6 +100,88 @@ pronta pra te salvar com estilo!</string>
                         </constraints>
                         <state key="normal" image="box_button_gray"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zV-Zx-Ly0">
+                        <rect key="frame" x="12" y="152" width="345" height="76"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2z6-Ti-Xh5">
+                                <rect key="frame" x="0.0" y="0.0" width="322" height="76"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ufC-dG-9Mj">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ufC-dG-9Mj" secondAttribute="height" multiplier="1:1" id="eOm-Ki-8Rj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-N6-Rm3">
+                                        <rect key="frame" x="82" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="M1I-N6-Rm3" secondAttribute="height" multiplier="1:1" id="l7c-8r-sUB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v8t-5c-9GW">
+                                        <rect key="frame" x="164" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="v8t-5c-9GW" secondAttribute="height" multiplier="1:1" id="m8r-yX-zgp"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cz-ev-Uy4">
+                                        <rect key="frame" x="246" y="0.0" width="76" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0cz-ev-Uy4" secondAttribute="height" multiplier="1:1" id="udW-ys-l7s"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M1I-N6-Rm3" firstAttribute="width" secondItem="M1I-N6-Rm3" secondAttribute="height" multiplier="1:1" id="HrL-ad-46S"/>
+                                    <constraint firstItem="v8t-5c-9GW" firstAttribute="width" secondItem="v8t-5c-9GW" secondAttribute="height" multiplier="1:1" id="IEP-3o-hYZ"/>
+                                    <constraint firstItem="0cz-ev-Uy4" firstAttribute="width" secondItem="0cz-ev-Uy4" secondAttribute="height" multiplier="1:1" id="TVn-Yi-A5n"/>
+                                    <constraint firstItem="v8t-5c-9GW" firstAttribute="width" secondItem="v8t-5c-9GW" secondAttribute="height" multiplier="1:1" id="YMs-62-LgF"/>
+                                    <constraint firstItem="0cz-ev-Uy4" firstAttribute="width" secondItem="0cz-ev-Uy4" secondAttribute="height" multiplier="1:1" id="dGh-lp-Xzu"/>
+                                    <constraint firstItem="0cz-ev-Uy4" firstAttribute="width" secondItem="0cz-ev-Uy4" secondAttribute="height" multiplier="1:1" id="qzO-QT-FFP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2z6-Ti-Xh5" firstAttribute="top" secondItem="8zV-Zx-Ly0" secondAttribute="top" id="SR1-di-4br"/>
+                            <constraint firstItem="2z6-Ti-Xh5" firstAttribute="height" secondItem="8zV-Zx-Ly0" secondAttribute="height" id="f9Q-fr-xgV"/>
+                            <constraint firstItem="2z6-Ti-Xh5" firstAttribute="leading" secondItem="8zV-Zx-Ly0" secondAttribute="leading" id="k6Q-b3-hzg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,16 +189,20 @@ pronta pra te salvar com estilo!</string>
                 <constraint firstItem="Kew-7q-O2e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="0Rf-tM-yyT"/>
                 <constraint firstItem="Kew-7q-O2e" firstAttribute="top" secondItem="2kl-VD-Gmb" secondAttribute="bottom" constant="8" id="0sH-rm-U3W"/>
                 <constraint firstItem="D9V-dH-qS3" firstAttribute="leading" secondItem="sHb-4E-XOM" secondAttribute="trailing" constant="22" id="48s-Sn-VFZ"/>
+                <constraint firstItem="8zV-Zx-Ly0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Blw-DX-ZMw"/>
                 <constraint firstItem="sHb-4E-XOM" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="22/345" id="DJB-Bx-A5g"/>
+                <constraint firstItem="8zV-Zx-Ly0" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="76/240" id="Kxb-Bv-aKq"/>
                 <constraint firstItem="D9V-dH-qS3" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="20/345" id="LRY-3x-fAV"/>
                 <constraint firstItem="2kl-VD-Gmb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="43" id="SrS-fw-JhV"/>
                 <constraint firstAttribute="trailing" secondItem="D9V-dH-qS3" secondAttribute="trailing" constant="15" id="Wjd-4w-Ds2"/>
                 <constraint firstItem="D9V-dH-qS3" firstAttribute="centerY" secondItem="sHb-4E-XOM" secondAttribute="centerY" id="XfU-oV-L3G"/>
                 <constraint firstItem="sHb-4E-XOM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Zlk-KT-VdR"/>
                 <constraint firstItem="2kl-VD-Gmb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="ciR-jO-Por"/>
+                <constraint firstItem="8zV-Zx-Ly0" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="czw-08-Neh"/>
                 <constraint firstItem="2kl-VD-Gmb" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="81/345" id="ieh-y0-wWE"/>
                 <constraint firstItem="bza-YO-8gC" firstAttribute="leading" secondItem="2kl-VD-Gmb" secondAttribute="trailing" constant="19" id="lP7-ZK-re6"/>
                 <constraint firstItem="bza-YO-8gC" firstAttribute="top" secondItem="2kl-VD-Gmb" secondAttribute="top" constant="-3" id="liR-rK-elX"/>
+                <constraint firstItem="8zV-Zx-Ly0" firstAttribute="top" secondItem="Kew-7q-O2e" secondAttribute="bottom" id="yLh-TI-KsV"/>
             </constraints>
             <size key="customSize" width="345" height="241"/>
             <connections>
@@ -126,6 +212,10 @@ pronta pra te salvar com estilo!</string>
                 <outlet property="likeButton" destination="D9V-dH-qS3" id="Cwc-ST-Q3t"/>
                 <outlet property="priceLabel" destination="hMN-Fz-cYG" id="KFy-cp-xgN"/>
                 <outlet property="titleLabel" destination="QV0-i0-f24" id="I56-dd-wwL"/>
+                <outletCollection property="productImageViews" destination="ufC-dG-9Mj" collectionClass="NSMutableArray" id="uVX-1S-Mjc"/>
+                <outletCollection property="productImageViews" destination="M1I-N6-Rm3" collectionClass="NSMutableArray" id="b7N-X5-pm6"/>
+                <outletCollection property="productImageViews" destination="v8t-5c-9GW" collectionClass="NSMutableArray" id="GFn-Ar-5ca"/>
+                <outletCollection property="productImageViews" destination="0cz-ev-Uy4" collectionClass="NSMutableArray" id="xm9-o2-awx"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52"/>
         </collectionViewCell>

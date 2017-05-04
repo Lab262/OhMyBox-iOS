@@ -24,7 +24,7 @@ class BoxCollectionViewCell: UICollectionViewCell {
         return "BoxCollectionViewCell"
     }
     
-    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage)
+    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage, productImages: [UIImage])
     
 // MARK: Outlets
     
@@ -36,6 +36,8 @@ class BoxCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var brandImageView: UIImageView!
+    
+    @IBOutlet var productImageViews: [UIImageView]!
     
     var info: Info? {
         
@@ -59,6 +61,12 @@ class BoxCollectionViewCell: UICollectionViewCell {
         descriptionLabel.attributedText = info?.description.with(lineSpacing: -9)
         priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
         brandImageView.image = info?.brandImage
+        
+        for i in 0..<productImageViews.count {
+                
+            productImageViews[i].image = info?.productImages.object(at: i)
+        }
+        
     }
 
 }
