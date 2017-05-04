@@ -176,6 +176,12 @@
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
+		4CC40F281EBB708D00333245 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F271EBB708D00333245 /* BoxView.swift */; };
+		4CC40F291EBB708D00333245 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F271EBB708D00333245 /* BoxView.swift */; };
+		4CC40F2A1EBB708D00333245 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F271EBB708D00333245 /* BoxView.swift */; };
+		4CC40F2C1EBB709400333245 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F2B1EBB709400333245 /* BoxView.xib */; };
+		4CC40F2D1EBB709400333245 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F2B1EBB709400333245 /* BoxView.xib */; };
+		4CC40F2E1EBB709400333245 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC40F2B1EBB709400333245 /* BoxView.xib */; };
 		4CD370C11EA65AC800B73F68 /* LogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */; };
 		4CD370C21EA65AC800B73F68 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */; };
 		4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */; };
@@ -992,6 +998,8 @@
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
+		4CC40F271EBB708D00333245 /* BoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
+		4CC40F2B1EBB709400333245 /* BoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxView.xib; sourceTree = "<group>"; };
 		4CD370BF1EA65AC800B73F68 /* LogoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoTableViewCell.swift; sourceTree = "<group>"; };
 		4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoTableViewCell.xib; sourceTree = "<group>"; };
 		4CD370C31EA65C0800B73F68 /* RegisterFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -1282,7 +1290,7 @@
 		2F70E8051DC7C3C6000AB03B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4C6B40DC1E781DEF00622282 /* Purchase Sucessful */,
+				4C6B40DC1E781DEF00622282 /* Purchase Successful */,
 				2F70E8381DC987CB000AB03B /* Box */,
 				4CE5DFED1E71C74F0093CC0E /* Requests */,
 				2F70E8391DC987DE000AB03B /* Purchase */,
@@ -1435,6 +1443,8 @@
 			children = (
 				4C44490C1EA8F4B000B8715F /* CollectionTableViewCell.xib */,
 				4C4449101EA8F54100B8715F /* CollectionTableViewCell.swift */,
+				4CC40F271EBB708D00333245 /* BoxView.swift */,
+				4CC40F2B1EBB709400333245 /* BoxView.xib */,
 			);
 			name = "General XIBs";
 			sourceTree = "<group>";
@@ -1500,7 +1510,7 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		4C6B40DC1E781DEF00622282 /* Purchase Sucessful */ = {
+		4C6B40DC1E781DEF00622282 /* Purchase Successful */ = {
 			isa = PBXGroup;
 			children = (
 				4C6B40DD1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift */,
@@ -1510,7 +1520,7 @@
 				4C433E961E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.swift */,
 				4C433E971E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.xib */,
 			);
-			name = "Purchase Sucessful";
+			name = "Purchase Successful";
 			sourceTree = "<group>";
 		};
 		4C8AAF1B1E5F5DFC00258116 /* Headers */ = {
@@ -2380,6 +2390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC40F2D1EBB709400333245 /* BoxView.xib in Resources */,
 				A414FD391EB5490A008FCAC0 /* SearchHighlightsTableViewCell.xib in Resources */,
 				A414FD3A1EB5490A008FCAC0 /* BrandContactHeaderTableViewCell.xib in Resources */,
 				A414FD3B1EB5490A008FCAC0 /* LogoTableViewCell.xib in Resources */,
@@ -2488,6 +2499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC40F2E1EBB709400333245 /* BoxView.xib in Resources */,
 				A414FE471EB54A5D008FCAC0 /* SearchHighlightsTableViewCell.xib in Resources */,
 				A414FE481EB54A5D008FCAC0 /* BrandContactHeaderTableViewCell.xib in Resources */,
 				A414FE4A1EB54A5D008FCAC0 /* LogoTableViewCell.xib in Resources */,
@@ -2644,6 +2656,7 @@
 				2F225CFC1DBEFA5E009E4566 /* ContainerCollectionView.xib in Resources */,
 				D4B72A2C1DC8342B004335E4 /* brand2.png in Resources */,
 				4CE045F51EAF93340022AFC6 /* BoxDetailHeaderCollectionReusableView.xib in Resources */,
+				4CC40F2C1EBB709400333245 /* BoxView.xib in Resources */,
 				2F2999A71DE54ECA00D52203 /* Poppins-Medium.ttf in Resources */,
 				2F07774C1DBD9B95003C124F /* SimpleTextTableViewCell.xib in Resources */,
 				4CE3B88C1E5E2C8C0065A293 /* SearchHeaderTableViewCell.xib in Resources */,
@@ -3053,6 +3066,7 @@
 				A414FD141EB5490A008FCAC0 /* SegmentTableViewCell.swift in Sources */,
 				A414FD151EB5490A008FCAC0 /* ShoppingBoxContainerViewController.swift in Sources */,
 				A414FD161EB5490A008FCAC0 /* WishViewController.swift in Sources */,
+				4CC40F291EBB708D00333245 /* BoxView.swift in Sources */,
 				A414FD171EB5490A008FCAC0 /* String+Util.swift in Sources */,
 				A414FD181EB5490A008FCAC0 /* ShoppingRequestsHeaderTableViewCell.swift in Sources */,
 				A414FD191EB5490A008FCAC0 /* SearchSuggestionsViewController.swift in Sources */,
@@ -3199,6 +3213,7 @@
 				A414FE231EB54A5D008FCAC0 /* ShoppingBoxContainerViewController.swift in Sources */,
 				A414FE241EB54A5D008FCAC0 /* WishViewController.swift in Sources */,
 				A414FE251EB54A5D008FCAC0 /* String+Util.swift in Sources */,
+				4CC40F2A1EBB708D00333245 /* BoxView.swift in Sources */,
 				A414FE261EB54A5D008FCAC0 /* ShoppingRequestsHeaderTableViewCell.swift in Sources */,
 				A414FE271EB54A5D008FCAC0 /* SearchSuggestionsViewController.swift in Sources */,
 				A414FE281EB54A5D008FCAC0 /* IconNavigationBar.swift in Sources */,
@@ -3277,6 +3292,7 @@
 				4C2F25051E6631750043A90B /* MiniProductCollectionViewCell.swift in Sources */,
 				2F07774F1DBDAE0D003C124F /* TermTableViewCell.swift in Sources */,
 				4CE5DFF81E71EFDD0093CC0E /* ShoppingResultsTableViewCell.swift in Sources */,
+				4CC40F281EBB708D00333245 /* BoxView.swift in Sources */,
 				D4E7E0901DD4DFF700F1DE52 /* ErrorMessage.swift in Sources */,
 				4CE3B8841E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift in Sources */,
 				D4B72A2E1DC8374A004335E4 /* BrandDetailViewController.swift in Sources */,

@@ -24,48 +24,21 @@ class BoxCollectionViewCell: UICollectionViewCell {
         return "BoxCollectionViewCell"
     }
     
-    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage, productImages: [UIImage])
-    
 // MARK: Outlets
     
-    @IBOutlet weak var boxButton: UIButton!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var boxView: BoxView!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    
-    @IBOutlet weak var brandImageView: UIImageView!
-    
-    @IBOutlet var productImageViews: [UIImageView]!
-    
-    var info: Info? {
+    var info: BoxView.Info? {
         
         didSet {
             
-            updateInfo()
+            boxView.info = info
         }
     }
     
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        
-        brandImageView.layer.cornerRadius = 3
-        
-    }
-    
-    func updateInfo() {
-        
-        titleLabel.text = info?.title
-        descriptionLabel.attributedText = info?.description.with(lineSpacing: -9)
-        priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
-        brandImageView.image = info?.brandImage
-        
-        for i in 0..<productImageViews.count {
-                
-            productImageViews[i].image = info?.productImages.object(at: i)
-        }
         
     }
 
