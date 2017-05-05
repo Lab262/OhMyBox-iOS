@@ -24,13 +24,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="mEI-Qo-g2F" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7mO-DN-K3T"/>
                     <constraint firstItem="mEI-Qo-g2F" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="345/375" id="Kuh-dR-QlP"/>
                     <constraint firstItem="mEI-Qo-g2F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OBZ-3C-tHq"/>
                     <constraint firstItem="mEI-Qo-g2F" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="209/215" id="j8q-RA-1LW"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                        <real key="value" value="0.10000000000000001"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                        <size key="value" width="0.0" height="0.0"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                        <real key="value" value="3"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="boxView" destination="mEI-Qo-g2F" id="xEH-59-miU"/>
             </connections>

@@ -1,5 +1,5 @@
 //
-//  ShoppingBoxViewController.swift
+//  CartViewController.swift
 //  OhMyBox
 //
 //  Created by André Marques da Silva Rodrigues on 09/03/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoppingBoxViewController: UIViewController {
+class CartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buyButton: UIButton!
@@ -17,7 +17,8 @@ class ShoppingBoxViewController: UIViewController {
     let cellSpacing: CGFloat = 25.0
     let footerView = UIView()
     
-    var products: [Any] = [1]
+    var presenter = CartPresenter()
+    
     var isEmptyInfo: ShoppingBoxEmptyView.Info?
     
     var buyButtonHandler: UIButton.ButtonHandler?
@@ -67,15 +68,15 @@ class ShoppingBoxViewController: UIViewController {
 
 }
 
-extension ShoppingBoxViewController: UITableViewDataSource {
+extension CartViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         updateIsTableViewHidden()
-        return products.count
+        return presenter.boxes.count
     }
     
     func updateIsTableViewHidden() {
-        let count = products.count
+        let count = presenter.boxes.count
         
         let isTableViewHidden = count == 0
         tableView.isHidden = isTableViewHidden
@@ -90,11 +91,15 @@ extension ShoppingBoxViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxTableViewCell.identifier) as! BoxTableViewCell
         
+        let box = presenter.boxes[indexPath.item]
+        
+        cell.info = (box.name!, box.boxDescription!, box.price!.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        
         return cell
     }
 }
 
-extension ShoppingBoxViewController: UITableViewDelegate {
+extension CartViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return BoxTableViewCell.cellHeight

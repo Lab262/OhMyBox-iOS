@@ -32,7 +32,7 @@ class ShoppingBoxContainerViewController: UIViewController {
     @IBOutlet weak var shoppingBoxContainer: UIView!
     @IBOutlet weak var shoppingRequestsContainer: UIView!
     
-    var shoppingBoxViewController: ShoppingBoxViewController!
+    var shoppingBoxViewController: CartViewController!
     var shoppingRequestsViewController: ShoppingRequestsViewController!
     
     var startsInBox = true
@@ -59,8 +59,8 @@ class ShoppingBoxContainerViewController: UIViewController {
         let vcs = childViewControllers
         for vc in vcs {
             
-            if vc is ShoppingBoxViewController {
-                shoppingBoxViewController = vc as! ShoppingBoxViewController
+            if vc is CartViewController {
+                shoppingBoxViewController = vc as! CartViewController
                 shoppingBoxViewController.buyButtonHandler = { button in
                     self.performSegue(withIdentifier: SegueIdentifiers.shoppingBoxToPurchase, sender: self)
                 }

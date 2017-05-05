@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -33,7 +33,7 @@
         <!--Shopping Box Container View Controller-->
         <scene sceneID="6za-ii-dJ4">
             <objects>
-                <viewController id="Xam-Z7-ox1" customClass="ShoppingBoxContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xam-Z7-ox1" customClass="ShoppingBoxContainerViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Icp-yf-q1B"/>
                         <viewControllerLayoutGuide type="bottom" id="HrW-v2-eNW"/>
@@ -48,7 +48,7 @@
                                     <segue destination="4d9-6Q-XC3" kind="embed" id="1ns-SF-Hvy"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-HF-bUJ" customClass="ButtonSegmentedControl" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-HF-bUJ" customClass="ButtonSegmentedControl" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="54" y="35" width="267" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-52.5" y="13.732394366197184"/>
         </scene>
-        <!--Shopping Box View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="tUB-U0-yig">
             <objects>
-                <viewController id="4d9-6Q-XC3" customClass="ShoppingBoxViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4d9-6Q-XC3" customClass="CartViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f7a-g2-6hy"/>
                         <viewControllerLayoutGuide type="bottom" id="EMr-aR-AmH"/>
@@ -151,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-aM-Z0L" customClass="ShoppingBoxEmptyView" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-aM-Z0L" customClass="ShoppingBoxEmptyView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -207,7 +207,7 @@
         <!--Purchase View Controller-->
         <scene sceneID="8Tl-Df-Vn8">
             <objects>
-                <viewController id="TIn-S5-4yd" customClass="PurchaseViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TIn-S5-4yd" customClass="PurchaseViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UI2-03-Ol0"/>
                         <viewControllerLayoutGuide type="bottom" id="F0n-5z-IXM"/>
@@ -216,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpK-UJ-6qo" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpK-UJ-6qo" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -277,7 +277,7 @@
         <!--Purchase Successful View Controller-->
         <scene sceneID="YEa-Oj-AHT">
             <objects>
-                <viewController id="WnB-uH-sYk" customClass="PurchaseSuccessfulViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WnB-uH-sYk" customClass="PurchaseSuccessfulViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gvE-16-h0N"/>
                         <viewControllerLayoutGuide type="bottom" id="cQw-JL-1A3"/>
@@ -324,7 +324,7 @@
         <!--Shopping Requests View Controller-->
         <scene sceneID="YG9-OT-Wxd">
             <objects>
-                <viewController id="z1F-Qz-qAl" customClass="ShoppingRequestsViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z1F-Qz-qAl" customClass="ShoppingRequestsViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TRm-HF-NHK"/>
                         <viewControllerLayoutGuide type="bottom" id="EOq-Jm-vEx"/>
@@ -333,7 +333,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7De-oD-GxG" customClass="ShoppingBoxEmptyView" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7De-oD-GxG" customClass="ShoppingBoxEmptyView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
