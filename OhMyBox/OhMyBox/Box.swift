@@ -17,6 +17,18 @@ class Box: PFObject {
     
     var products: [AnyObject]?
     
+    
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        
+        if let object = object as? Box {
+            
+            return objectId != nil && object.objectId == self.objectId
+        } else {
+            
+            return super.isEqual(object)
+        }
+    }
 }
 
 extension Box: PFSubclassing {

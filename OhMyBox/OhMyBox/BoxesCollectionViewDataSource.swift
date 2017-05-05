@@ -16,6 +16,9 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var boxes: [Box] = []
     
+    var boxButtonHandler: ((IndexPath) -> ())?
+    var likeButtonHandler: ((IndexPath) -> ())?
+    
     init(collectionView: UICollectionView) {
         
         self.collectionView = collectionView
@@ -57,6 +60,16 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BoxCollectionViewCell.identifier, for: indexPath) as! BoxCollectionViewCell
         
         let box = boxes[indexPath.item]
+        
+        cell.boxView.boxButtonHandler = { _ in
+            
+            self.boxButtonHandler?(indexPath)
+        }
+        
+        cell.boxView.likeButtonHandler = { _ in
+            
+            self.likeButtonHandler?(indexPath)
+        }
         
         cell.info = (box.name!, box.boxDescription!, box.price!.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
         

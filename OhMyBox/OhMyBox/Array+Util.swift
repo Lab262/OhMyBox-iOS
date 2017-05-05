@@ -45,8 +45,8 @@ extension Array where Element : Equatable {
         
         if let index = self.index(of: element) {
             
-            self.remove(at: index)
-            return self[index]
+            let element = self.remove(at: index)
+            return element
         } else {
             
             return nil

@@ -18,9 +18,9 @@ class HomeViewController: UIViewController {
     var filtered:[String] = []
     var allProduct = [Product]()
     
-    var highlightsCollectionViewDelegate: BoxesCollectionViewDataSource!
-    var newsCollectionViewDelegate: BoxesCollectionViewDataSource!
-    var salesCollectionViewDelegate: BoxesCollectionViewDataSource!
+    var highlightsCollectionViewDelegate: BoxesCollectionViewDataSource?
+    var newsCollectionViewDelegate: BoxesCollectionViewDataSource?
+    var salesCollectionViewDelegate: BoxesCollectionViewDataSource?
     
     var presenter = HomePresenter()
     
@@ -104,14 +104,11 @@ extension HomeViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            let highlightsCell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-            cell = highlightsCell
+            cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &highlightsCollectionViewDelegate)
         case 1:
-            let newsCell = generateNewsCell(tableView, cellForRowAt: indexPath)
-            cell = newsCell
+            cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &newsCollectionViewDelegate)
         case 2:
-            let salesCell = generateSalesCell(tableView, cellForRowAt: indexPath)
-            cell = salesCell
+            cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &salesCollectionViewDelegate)
         default:
             cell = UITableViewCell()
         }
@@ -119,52 +116,28 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
-    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
+    func generateBoxesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, dataSourceReference: inout BoxesCollectionViewDataSource?) -> CollectionTableViewCell {
         
-        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
+        let cell = generateCollectionTableCell(tableView, cellForRowAt: indexPath)
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = presenter.boxes
         dataSource.collectionSelectionDelegate = self
-        salesCollectionViewDelegate = dataSource
+        dataSource.boxes = presenter.boxes
+        dataSourceReference = dataSource
         
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
+        
+        dataSource.boxButtonHandler = { indexPath in
+            
+            print(indexPath)
+            CartManager.shared.updateCart(withBox: dataSource.boxes[indexPath.item])
+        }
         
         return cell
     }
     
-    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
-        
-        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
-        
-        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = presenter.boxes
-        dataSource.collectionSelectionDelegate = self
-        highlightsCollectionViewDelegate = dataSource
-        
-        cell.collectionViewDataSource = dataSource
-        cell.collectionViewDelegate = dataSource
-        
-        return cell
-    }
-
-    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
-        
-        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
-        
-        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = presenter.boxes
-        dataSource.collectionSelectionDelegate = self
-        newsCollectionViewDelegate = dataSource
-        
-        cell.collectionViewDataSource = dataSource
-        cell.collectionViewDelegate = dataSource
-        
-        return cell
-    }
-    
-    func generateBoxesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
+    func generateCollectionTableCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         

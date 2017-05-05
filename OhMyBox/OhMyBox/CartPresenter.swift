@@ -17,14 +17,8 @@ class CartPresenter: NSObject {
 
     var view: CartView?
     
-    var boxes: [Box] = []
-    
-    func loadBoxes() {
+    var boxes: [Box] {
         
-        if let reflectedBoxes = UserDefaults.standard.array(forKey: UserDefaultsKeys.cartBoxes) as? [[String: Any]] {
-            
-            let boxes = reflectedBoxes.map { Box(reflection: $0) }.flatMap { $0 ?? nil }
-            self.boxes = boxes
-        }
+        return CartManager.shared.cartBoxes
     }
 }

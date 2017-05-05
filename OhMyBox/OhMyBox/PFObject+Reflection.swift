@@ -12,33 +12,21 @@ extension PFObject {
 
     typealias ReflectionType = [String: Any]
     
+    var reflectionKeys: [String] {
+        
+        return allKeys.flatMap { (self[$0] is PFRelation) ? nil : $0 }
+    }
+    
     var reflection: ReflectionType {
         
         var reflection: ReflectionType = [#keyPath(objectId): objectId ?? ""]
         
-        for key in allKeys {
+        for key in allKeys where !(self[key] is PFRelation) {
             
             reflection[key] = self[key]
         }
         
         return reflection
     }
-    
-    convenience init?(reflection: ReflectionType) {
-        
-        self.init()
-        
-        let reflectionKeySet = Set(reflection.keys)
-        let allKeySet = Set(allKeys)
-        
-        guard reflectionKeySet.isSubset(of: allKeySet) else {
-            
-            return nil
-        }
-        
-        for (key, value) in reflection {
-            
-            self[key] = value
-        }
-    }
+
 }

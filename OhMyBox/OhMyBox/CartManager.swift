@@ -10,11 +10,27 @@ import Parse
 
 class CartManager: NSObject {
 
+    static let shared: CartManager = {
+        return CartManager()
+    }()
+    
+    override private init() {
+        super.init()
+    }
+    
     let userDefaults = UserDefaults.standard
     
     var cartBoxes: [Box] {
         
-        return cartBoxReflections.flatMap { Box(reflection: $0) }
+        let cartBoxes: [Box] = cartBoxReflections.flatMap { (reflection) -> Box in
+            
+            let box = Box(className: Box.parseClassName(), dictionary: reflection)
+            box.objectId = reflection["objectId"] as? String
+            
+            return box
+        }
+
+        return cartBoxes
     }
     
     var cartBoxReflections: [PFObject.ReflectionType] {
@@ -42,6 +58,8 @@ class CartManager: NSObject {
         
         let cartBoxReflections = cartBoxes.map { $0.reflection }
         userDefaults.set(cartBoxReflections, forKey: UserDefaultsKeys.cartBoxes)
+        
+        userDefaults.synchronize()
     }
     
 }
