@@ -26,6 +26,9 @@ class BoxView: UIView {
     
     @IBOutlet var productImageViews: [UIImageView]!
     
+    var boxButtonHandler: UIButton.ButtonHandler?
+    var likeButtonHandler: UIButton.ButtonHandler?
+    
     var showsBoxButton = true
     var showsLikeButton = true
     
@@ -66,5 +69,41 @@ class BoxView: UIView {
         }
         
     }
+    
+    @IBAction func boxButtonAction(sender: UIButton) {
+        
+        boxButtonHandler?(sender)
+    }
+    
+    @IBAction func likeButtonAction(sender: UIButton) {
+        
+        likeButtonHandler?(sender)
+    }
 
+    func setBoxButtonSelected(_ selected: Bool) {
+        
+        let image: UIImage
+        if selected {
+            
+            image = #imageLiteral(resourceName: "box_button_selected")
+        } else {
+            
+            image = #imageLiteral(resourceName: "box_button_gray")
+        }
+        boxButton.setImage(image, for: .normal)
+    }
+    
+    func setLikeButtonSelected(_ selected: Bool) {
+        
+        let image: UIImage
+        if selected {
+            
+            image = #imageLiteral(resourceName: "like_button_selected")
+        } else {
+            
+            image = #imageLiteral(resourceName: "heart_button_gray")
+        }
+        likeButton.setImage(image, for: .normal)
+    }
+    
 }

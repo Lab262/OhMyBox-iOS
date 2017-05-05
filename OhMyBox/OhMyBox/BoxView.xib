@@ -54,8 +54,10 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="3ct-ZC-6rv" secondAttribute="height" multiplier="8:7" id="ONE-yt-5ix"/>
                     </constraints>
-                    <color key="tintColor" red="0.87843137250000003" green="0.23921568630000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="heartFull_button"/>
+                    <state key="normal" image="heart_button_gray"/>
+                    <connections>
+                        <action selector="likeButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="DmB-fe-jzm"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-PV-tYx">
                     <rect key="frame" x="12" y="43" width="81" height="81"/>
@@ -111,6 +113,9 @@ pronta pra te salvar com estilo!</string>
                         <constraint firstAttribute="width" secondItem="zo7-hC-BsZ" secondAttribute="height" multiplier="1:1" id="OaW-R4-KKQ"/>
                     </constraints>
                     <state key="normal" image="box_button_gray"/>
+                    <connections>
+                        <action selector="boxButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="WPa-Pq-aLl"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHF-el-t83">
                     <rect key="frame" x="12" y="152" width="345" height="76"/>
@@ -225,6 +230,6 @@ pronta pra te salvar com estilo!</string>
     </objects>
     <resources>
         <image name="box_button_gray" width="27" height="26"/>
-        <image name="heartFull_button" width="32" height="28"/>
+        <image name="heart_button_gray" width="25" height="22"/>
     </resources>
 </document>

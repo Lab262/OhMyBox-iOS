@@ -1482,8 +1482,8 @@
 			children = (
 				4C44490C1EA8F4B000B8715F /* CollectionTableViewCell.xib */,
 				4C4449101EA8F54100B8715F /* CollectionTableViewCell.swift */,
-				4CC40F271EBB708D00333245 /* BoxView.swift */,
 				4CC40F2B1EBB709400333245 /* BoxView.xib */,
+				4CC40F271EBB708D00333245 /* BoxView.swift */,
 			);
 			name = "General XIBs";
 			sourceTree = "<group>";
