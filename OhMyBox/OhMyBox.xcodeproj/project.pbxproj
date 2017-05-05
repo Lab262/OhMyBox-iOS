@@ -235,6 +235,7 @@
 		4CFAE1BB1EB1143800C58C0C /* BoxDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */; };
 		4CFAE1BE1EB11FD300C58C0C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */; };
 		4CFAE1C01EB1362400C58C0C /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BF1EB1362400C58C0C /* Array+Util.swift */; };
+		4CFDEE941EBD09B500D2B85A /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDEE931EBD09B500D2B85A /* CartManager.swift */; };
 		8DE637CDB8385598B8891D1B /* Pods_OhMyBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9152DA38497EE4C0DD9C4141 /* Pods_OhMyBoxTests.framework */; };
 		9F566423BEB02CAC2BC7C62D /* Pods_lab262_ohmybox_store_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB964D223D163E49CD9BE2C5 /* Pods_lab262_ohmybox_store_test.framework */; };
 		A414FCA81EB5490A008FCAC0 /* ProfileSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9501E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift */; };
@@ -1057,6 +1058,7 @@
 		4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxDetailPresenter.swift; sourceTree = "<group>"; };
 		4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		4CFAE1BF1EB1362400C58C0C /* Array+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
+		4CFDEE931EBD09B500D2B85A /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		9152DA38497EE4C0DD9C4141 /* Pods_OhMyBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A414FDAA1EB5490A008FCAC0 /* lab262.ohmybox.store.test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.store.test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A414FEB91EB54A5D008FCAC0 /* lab262.ohmybox.store.production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab262.ohmybox.store.production.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1851,6 +1853,7 @@
 			children = (
 				D402E0101DB69541007855D6 /* HomeViewController.swift */,
 				4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */,
+				4CFDEE931EBD09B500D2B85A /* CartManager.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -3406,6 +3409,7 @@
 				D4C0D6681DB6B32E007C3113 /* UIColorExtension.swift in Sources */,
 				D4C0D6661DB6B32E007C3113 /* UIViewExtension.swift in Sources */,
 				4CD370C11EA65AC800B73F68 /* LogoTableViewCell.swift in Sources */,
+				4CFDEE941EBD09B500D2B85A /* CartManager.swift in Sources */,
 				4CB263771EB2537300BB7883 /* Box.swift in Sources */,
 				4C4DB5791E68C0C2005D44C1 /* ColorCollectionViewCell.swift in Sources */,
 				4C016D0F1E797D1C0094C42E /* RatingContainerViewController.swift in Sources */,

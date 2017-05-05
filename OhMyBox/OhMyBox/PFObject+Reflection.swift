@@ -10,9 +10,11 @@ import Parse
 
 extension PFObject {
 
-    var reflection: [String: Any] {
+    typealias ReflectionType = [String: Any]
+    
+    var reflection: ReflectionType {
         
-        var reflection: [String: Any] = [#keyPath(objectId): objectId ?? ""]
+        var reflection: ReflectionType = [#keyPath(objectId): objectId ?? ""]
         
         for key in allKeys {
             
@@ -22,7 +24,7 @@ extension PFObject {
         return reflection
     }
     
-    convenience init?(reflection: [String: Any]) {
+    convenience init?(reflection: ReflectionType) {
         
         self.init()
         

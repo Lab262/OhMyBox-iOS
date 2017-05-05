@@ -72,6 +72,11 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         return cell
     }
+    
+    func addToCart(box: Box) {
+        
+        
+    }
 }
 
 extension BoxesCollectionViewDataSource: UICollectionViewDelegate {

@@ -30,6 +30,11 @@ enum RegisterError: Error {
     }
 }
 
+struct UserDefaultsKeys {
+    
+    static let cartBoxes = "cartBoxes"
+}
+
 // MARK: Segue Identifiers
 struct SegueIdentifiers {
     
