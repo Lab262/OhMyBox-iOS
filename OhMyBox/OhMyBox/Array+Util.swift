@@ -29,6 +29,18 @@ extension Array {
         return newArray
     }
     
+    func indexOfElement(where closure: ((Element) -> (Bool))) -> Int? {
+        
+        for (i, element) in self.enumerated() {
+            
+            if closure(element) {
+                return i
+            }
+        }
+        
+        return nil
+    }
+    
 }
 
 extension Array where Element : Equatable {

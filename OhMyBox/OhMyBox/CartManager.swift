@@ -10,6 +10,12 @@ import Parse
 
 class CartManager: NSObject {
 
+    struct UpdateUserInfoKeys {
+        
+        static let boxId = "boxId"
+        static let isInCart = "isInCart"
+    }
+    
     static let shared: CartManager = {
         return CartManager()
     }()
@@ -48,7 +54,10 @@ class CartManager: NSObject {
     func updateCart(withBox box: Box) {
         
         let cartBoxes: [Box]
-        if boxIsInCart(box) {
+        
+        let boxIsInCart = self.boxIsInCart(box)
+        
+        if boxIsInCart {
             
             cartBoxes = self.cartBoxes.by(removing: box)
         } else {
@@ -60,6 +69,9 @@ class CartManager: NSObject {
         userDefaults.set(cartBoxReflections, forKey: UserDefaultsKeys.cartBoxes)
         
         userDefaults.synchronize()
+        
+        let notificationUserInfo: [String: Any] = [UpdateUserInfoKeys.boxId: box.objectId!, UpdateUserInfoKeys.isInCart: !boxIsInCart]
+        NotificationCenter.default.post(name: Notifications.cartUpdated, object: notificationUserInfo)
     }
     
 }

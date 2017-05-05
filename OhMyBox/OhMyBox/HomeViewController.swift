@@ -130,7 +130,6 @@ extension HomeViewController: UITableViewDataSource {
         
         dataSource.boxButtonHandler = { indexPath in
             
-            print(indexPath)
             CartManager.shared.updateCart(withBox: dataSource.boxes[indexPath.item])
         }
         

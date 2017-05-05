@@ -39,7 +39,11 @@ class BoxCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        
     }
-
+    
+    override func prepareForReuse() {
+        boxView.setBoxButtonSelected(false)
+        boxView.setLikeButtonSelected(false)
+    }
+    
 }

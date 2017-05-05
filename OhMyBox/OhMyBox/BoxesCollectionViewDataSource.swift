@@ -27,6 +27,8 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         setUpCollectionView()
         registerNibs()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(cartUpdated(_:)), name: Notifications.cartUpdated, object: nil)
     }
     
     func setUpCollectionView() {
@@ -71,6 +73,9 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             self.likeButtonHandler?(indexPath)
         }
         
+        let isInCart = CartManager.shared.boxIsInCart(box)
+        cell.boxView.setBoxButtonSelected(isInCart)
+        
         cell.info = (box.name!, box.boxDescription!, box.price!.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
         
         cell.layer.cornerRadius = 3
@@ -88,7 +93,23 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func addToCart(box: Box) {
         
+    }
+    
+    func cartUpdated(_ notification: Notification) {
         
+        guard let userInfo = notification.object as? [String: Any] else { return }
+        
+        guard let boxId = userInfo[CartManager.UpdateUserInfoKeys.boxId] as? String else { return }
+        guard let isInCart = userInfo[CartManager.UpdateUserInfoKeys.isInCart] as? Bool else { return }
+        
+        let i = boxes.indexOfElement { $0.objectId ?? "" == boxId }
+        
+        if let i = i {
+            
+            guard let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? BoxCollectionViewCell else { return }
+            
+            cell.boxView.setBoxButtonSelected(isInCart)
+        }
     }
 }
 

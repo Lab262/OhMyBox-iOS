@@ -30,6 +30,7 @@ enum RegisterError: Error {
     }
 }
 
+// MARK: Keys for known objects put in UserDefaults
 struct UserDefaultsKeys {
     
     static let cartBoxes = "cartBoxes"
@@ -58,14 +59,17 @@ struct SegueIdentifiers {
     static let purchaseToPurchaseSuccessful = "purchaseToPurchaseSuccessful"
 }
 
-
+// MARK: Notification Names
 struct Notifications {
     
     static let selectHomeViewController = NSNotification.Name(rawValue: "selectHomeViewController")
     static let goToBoxViewController = NSNotification.Name(rawValue: "selectBoxViewController")
     static let selectBoxRequestsViewController = NSNotification.Name(rawValue: "selectBoxRequestsViewController")
+    
+    static let cartUpdated = NSNotification.Name(rawValue: "cartUpdated")
 }
 
+// MARK: Purchase Successful Tips @ PurchaseSuccessfulViewController
 struct PurchaseSuccessfulTips {
     
     static let poppinsLight = UIFont(name: "Poppins-Light", size: 15.0)!
