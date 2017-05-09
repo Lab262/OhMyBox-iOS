@@ -22,6 +22,7 @@ class RequestDetailViewController: UIViewController {
     func registerNibs() {
         
         tableView.registerNibFrom(BoxProductTableViewCell.self)
+        tableView.registerNibFrom(RequestResultsTableViewCell.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,11 +44,21 @@ extension RequestDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return generateProductCell(tableView, cellForRowAt: indexPath)
+        
+        let cell: UITableViewCell
+        if case 0...2 = indexPath.row {
+            
+            cell = generateProductCell(tableView, cellForRowAt: indexPath)
+        } else {
+            
+            cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+        }
+        
+        return cell
     }
 }
 
@@ -75,6 +86,15 @@ extension RequestDetailViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxProductTableViewCell.identifier) as! BoxProductTableViewCell
         
         cell.info = ("Produto", "Fashion Store", "36", UIColor.clear, #imageLiteral(resourceName: "product_placeholder"))
+        
+        return cell
+    }
+    
+    func generateResultsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: RequestResultsTableViewCell.identifier) as! RequestResultsTableViewCell
+        
+        cell.total = 100
         
         return cell
     }

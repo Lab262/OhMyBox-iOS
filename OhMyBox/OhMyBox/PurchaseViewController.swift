@@ -30,7 +30,7 @@ class PurchaseViewController: UIViewController {
         tableView.registerNibFrom(PurchaseHeaderTableViewCell.self)
         tableView.registerNibFrom(PurchaseInfoTableViewCell.self)
         tableView.registerNibFrom(ShoppingProductTableViewCell.self)
-        tableView.registerNibFrom(ShoppingResultsTableViewCell.self)
+        tableView.registerNibFrom(RequestResultsTableViewCell.self)
     }
     
     func setUpTableView() {
@@ -91,7 +91,7 @@ extension PurchaseViewController: UITableViewDelegate {
         case 0:
             switch indexPath.row {
             case 0..<products.count: height = ShoppingProductTableViewCell.cellHeight
-            case products.count: height = ShoppingResultsTableViewCell.cellHeight
+            case products.count: height = RequestResultsTableViewCell.cellHeight
             default: height = 0
             }
         case 1: height = PurchaseInfoTableViewCell.cellHeight
@@ -138,9 +138,9 @@ extension PurchaseViewController {
         return cell
     }
     
-    func generateResultsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingResultsTableViewCell {
+    func generateResultsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RequestResultsTableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingResultsTableViewCell.identifier) as! ShoppingResultsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RequestResultsTableViewCell.identifier) as! RequestResultsTableViewCell
         cell.setSeparatorHidden(true)
         
         return cell

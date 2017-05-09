@@ -42,8 +42,8 @@ class PrintView: UIView {
             color.setStroke()
             color.setFill()
             
-            path.fill()
-            path.stroke()
+            fillPath.fill()
+            fillPath.stroke()
         }
     }
 }

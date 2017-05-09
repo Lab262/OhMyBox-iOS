@@ -14,7 +14,6 @@ class ShoppingRequestsViewController: UIViewController {
     @IBOutlet weak var emptyView: ShoppingBoxEmptyView!
     
     var isEmptyInfo: ShoppingBoxEmptyView.Info?
-    var resultsInfo: ShoppingResultsTableViewCell.Info?
     
     let sectionMargin: CGFloat = 31.0
     let footerView = UIView()
