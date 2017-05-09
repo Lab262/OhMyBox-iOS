@@ -54,6 +54,9 @@ struct SegueIdentifiers {
     // From shopping box
     static let shoppingBoxToPurchase = "shoppingBoxToPurchase"
     static let shoppingRequestsToRating = "shoppingRequestsToRating"
+    static let shoppingRequestsToRequestDetail = "shoppingRequestsToRequestDetail"
+    
+    static let shoppingRequestDetailToRating = "shoppingRequestDetailToRating"
     
     // From purchase
     static let purchaseToPurchaseSuccessful = "purchaseToPurchaseSuccessful"

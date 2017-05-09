@@ -128,6 +128,14 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
         return footerView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if case 0...1 = indexPath.row {
+            
+            performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRequestDetail, sender: self)
+        }
+    }
+    
 }
 
 // MARK: Cells generation

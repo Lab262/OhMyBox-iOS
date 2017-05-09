@@ -92,6 +92,27 @@
 		4C3EA3C81EC234C7005C47B7 /* BoxRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */; };
 		4C3EA3C91EC234C7005C47B7 /* BoxRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */; };
 		4C3EA3CC1EC23B7D005C47B7 /* RequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3CB1EC23B7D005C47B7 /* RequestsPresenter.swift */; };
+		4C3EA3D21EC245D3005C47B7 /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3D11EC245D3005C47B7 /* RequestDetailViewController.swift */; };
+		4C3EA3D31EC245DB005C47B7 /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3D11EC245D3005C47B7 /* RequestDetailViewController.swift */; };
+		4C3EA3D41EC245DC005C47B7 /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3D11EC245D3005C47B7 /* RequestDetailViewController.swift */; };
+		4C3EA3D51EC245E5005C47B7 /* RequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3CB1EC23B7D005C47B7 /* RequestsPresenter.swift */; };
+		4C3EA3D61EC245E6005C47B7 /* RequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3CB1EC23B7D005C47B7 /* RequestsPresenter.swift */; };
+		4C3EA3D71EC245ED005C47B7 /* BoxRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */; };
+		4C3EA3D81EC245EE005C47B7 /* BoxRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */; };
+		4C3EA3D91EC245F4005C47B7 /* BoxRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */; };
+		4C3EA3DA1EC245F4005C47B7 /* BoxRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */; };
+		4C3EA3DF1EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3DD1EC246BE005C47B7 /* BoxProductTableViewCell.swift */; };
+		4C3EA3E01EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3DD1EC246BE005C47B7 /* BoxProductTableViewCell.swift */; };
+		4C3EA3E11EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3DD1EC246BE005C47B7 /* BoxProductTableViewCell.swift */; };
+		4C3EA3E21EC246BE005C47B7 /* BoxProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3DE1EC246BE005C47B7 /* BoxProductTableViewCell.xib */; };
+		4C3EA3E31EC246BE005C47B7 /* BoxProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3DE1EC246BE005C47B7 /* BoxProductTableViewCell.xib */; };
+		4C3EA3E41EC246BE005C47B7 /* BoxProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3DE1EC246BE005C47B7 /* BoxProductTableViewCell.xib */; };
+		4C3EA3E61EC2478E005C47B7 /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3E51EC2478E005C47B7 /* PrintView.swift */; };
+		4C3EA3E71EC2478E005C47B7 /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3E51EC2478E005C47B7 /* PrintView.swift */; };
+		4C3EA3E81EC2478E005C47B7 /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3E51EC2478E005C47B7 /* PrintView.swift */; };
+		4C3EA3EA1EC247A9005C47B7 /* PrintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3E91EC247A9005C47B7 /* PrintView.xib */; };
+		4C3EA3EB1EC247A9005C47B7 /* PrintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3E91EC247A9005C47B7 /* PrintView.xib */; };
+		4C3EA3EC1EC247A9005C47B7 /* PrintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3E91EC247A9005C47B7 /* PrintView.xib */; };
 		4C42C8DB1EBCB8C400F86655 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C8DA1EBCB8C400F86655 /* CartPresenter.swift */; };
 		4C42C8DD1EBCBAB400F86655 /* PFObject+Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C8DC1EBCBAB400F86655 /* PFObject+Reflection.swift */; };
 		4C433E941E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C433E921E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift */; };
@@ -926,6 +947,11 @@
 		4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxRequestTableViewCell.swift; sourceTree = "<group>"; };
 		4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxRequestTableViewCell.xib; sourceTree = "<group>"; };
 		4C3EA3CB1EC23B7D005C47B7 /* RequestsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsPresenter.swift; sourceTree = "<group>"; };
+		4C3EA3D11EC245D3005C47B7 /* RequestDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDetailViewController.swift; sourceTree = "<group>"; };
+		4C3EA3DD1EC246BE005C47B7 /* BoxProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxProductTableViewCell.swift; sourceTree = "<group>"; };
+		4C3EA3DE1EC246BE005C47B7 /* BoxProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxProductTableViewCell.xib; sourceTree = "<group>"; };
+		4C3EA3E51EC2478E005C47B7 /* PrintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
+		4C3EA3E91EC247A9005C47B7 /* PrintView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrintView.xib; sourceTree = "<group>"; };
 		4C42C8DA1EBCB8C400F86655 /* CartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		4C42C8DC1EBCBAB400F86655 /* PFObject+Reflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFObject+Reflection.swift"; sourceTree = "<group>"; };
 		4C433E921E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessfulHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -1271,6 +1297,8 @@
 		2F70E7FB1DC7B861000AB03B /* ShoppingBox */ = {
 			isa = PBXGroup;
 			children = (
+				4C3EA3D01EC245BD005C47B7 /* RequestDetail */,
+				4C3EA3CD1EC244F5005C47B7 /* Cart */,
 				4C3EA3C41EC23497005C47B7 /* Requests */,
 				2F70E7FE1DC7B8C2000AB03B /* Controller */,
 				2F70E7FD1DC7B8BB000AB03B /* View */,
@@ -1300,8 +1328,6 @@
 			isa = PBXGroup;
 			children = (
 				4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */,
-				4C42C8D81EBCB85C00F86655 /* Cart */,
-				4C42C8D91EBCB86300F86655 /* Requests */,
 				4C42C8D71EBCB84B00F86655 /* Purchase */,
 			);
 			name = Controller;
@@ -1327,8 +1353,6 @@
 				2F70E8331DC969EC000AB03B /* OrderTableViewCell.xib */,
 				2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */,
 				2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */,
-				4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */,
-				4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */,
 			);
 			name = Box;
 			sourceTree = "<group>";
@@ -1472,6 +1496,61 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		4C3EA3CD1EC244F5005C47B7 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				4C3EA3CE1EC24503005C47B7 /* Controller */,
+				4C3EA3CF1EC24529005C47B7 /* Cells */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		4C3EA3CE1EC24503005C47B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C278CC41E718EB300C80E8D /* CartViewController.swift */,
+				4C42C8DA1EBCB8C400F86655 /* CartPresenter.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C3EA3CF1EC24529005C47B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4CC40F2F1EBB76C200333245 /* BoxTableViewCell.swift */,
+				4CC40F301EBB76C200333245 /* BoxTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		4C3EA3D01EC245BD005C47B7 /* RequestDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4C3EA3DC1EC246A9005C47B7 /* Cells */,
+				4C3EA3DB1EC246A3005C47B7 /* Controller */,
+			);
+			name = RequestDetail;
+			sourceTree = "<group>";
+		};
+		4C3EA3DB1EC246A3005C47B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C3EA3D11EC245D3005C47B7 /* RequestDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4C3EA3DC1EC246A9005C47B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C3EA3DD1EC246BE005C47B7 /* BoxProductTableViewCell.swift */,
+				4C3EA3DE1EC246BE005C47B7 /* BoxProductTableViewCell.xib */,
+				4C3EA3E51EC2478E005C47B7 /* PrintView.swift */,
+				4C3EA3E91EC247A9005C47B7 /* PrintView.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		4C42C8D71EBCB84B00F86655 /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
@@ -1479,22 +1558,6 @@
 				4C6B40E11E78250E00622282 /* PurchaseSuccessfulViewController.swift */,
 			);
 			name = Purchase;
-			sourceTree = "<group>";
-		};
-		4C42C8D81EBCB85C00F86655 /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				4C278CC41E718EB300C80E8D /* CartViewController.swift */,
-				4C42C8DA1EBCB8C400F86655 /* CartPresenter.swift */,
-			);
-			name = Cart;
-			sourceTree = "<group>";
-		};
-		4C42C8D91EBCB86300F86655 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Requests;
 			sourceTree = "<group>";
 		};
 		4C4449091EA8F3C200B8715F /* Product */ = {
@@ -2475,6 +2538,7 @@
 				A414FD3E1EB5490A008FCAC0 /* fashion-person.png in Resources */,
 				A414FD3F1EB5490A008FCAC0 /* ButtonSegmentedControl.xib in Resources */,
 				A414FD401EB5490A008FCAC0 /* MiniProductCollectionViewCell.xib in Resources */,
+				4C3EA3D91EC245F4005C47B7 /* BoxRequestTableViewCell.xib in Resources */,
 				A414FD411EB5490A008FCAC0 /* ShoppingBoxEmptyView.xib in Resources */,
 				A414FD421EB5490A008FCAC0 /* Poppins-Bold.ttf in Resources */,
 				A414FD431EB5490A008FCAC0 /* Rating.storyboard in Resources */,
@@ -2506,6 +2570,7 @@
 				A414FD5C1EB5490A008FCAC0 /* defaultWomanImage.png in Resources */,
 				A414FD5D1EB5490A008FCAC0 /* StatusOrderTableViewCell.xib in Resources */,
 				A414FD5E1EB5490A008FCAC0 /* PurchaseSuccessfulTableViewCell.xib in Resources */,
+				4C3EA3E31EC246BE005C47B7 /* BoxProductTableViewCell.xib in Resources */,
 				A414FD5F1EB5490A008FCAC0 /* BrandsHeaderTableViewCell.xib in Resources */,
 				A414FD601EB5490A008FCAC0 /* BrandContactInfoTableViewCell.xib in Resources */,
 				A414FD611EB5490A008FCAC0 /* CollectionPickerViewCell.xib in Resources */,
@@ -2522,6 +2587,7 @@
 				A414FD6D1EB5490A008FCAC0 /* RequestsHeaderTableViewCell.xib in Resources */,
 				A414FD6E1EB5490A008FCAC0 /* Muli-Light.ttf in Resources */,
 				A414FD6F1EB5490A008FCAC0 /* Muli-Regular.ttf in Resources */,
+				4C3EA3EB1EC247A9005C47B7 /* PrintView.xib in Resources */,
 				A414FD701EB5490A008FCAC0 /* imagePromo.png in Resources */,
 				A414FD711EB5490A008FCAC0 /* Poppins-SemiBold.ttf in Resources */,
 				A414FD721EB5490A008FCAC0 /* OrderTableViewCell.xib in Resources */,
@@ -2585,6 +2651,7 @@
 				A414FE4D1EB54A5D008FCAC0 /* fashion-person.png in Resources */,
 				A414FE4E1EB54A5D008FCAC0 /* ButtonSegmentedControl.xib in Resources */,
 				A414FE4F1EB54A5D008FCAC0 /* MiniProductCollectionViewCell.xib in Resources */,
+				4C3EA3DA1EC245F4005C47B7 /* BoxRequestTableViewCell.xib in Resources */,
 				A414FE501EB54A5D008FCAC0 /* ShoppingBoxEmptyView.xib in Resources */,
 				A414FE511EB54A5D008FCAC0 /* Poppins-Bold.ttf in Resources */,
 				A414FE521EB54A5D008FCAC0 /* Rating.storyboard in Resources */,
@@ -2616,6 +2683,7 @@
 				A414FE6B1EB54A5D008FCAC0 /* defaultWomanImage.png in Resources */,
 				A414FE6C1EB54A5D008FCAC0 /* StatusOrderTableViewCell.xib in Resources */,
 				A414FE6D1EB54A5D008FCAC0 /* PurchaseSuccessfulTableViewCell.xib in Resources */,
+				4C3EA3E41EC246BE005C47B7 /* BoxProductTableViewCell.xib in Resources */,
 				A414FE6E1EB54A5D008FCAC0 /* BrandsHeaderTableViewCell.xib in Resources */,
 				A414FE6F1EB54A5D008FCAC0 /* BrandContactInfoTableViewCell.xib in Resources */,
 				A414FE701EB54A5D008FCAC0 /* CollectionPickerViewCell.xib in Resources */,
@@ -2632,6 +2700,7 @@
 				A414FE7C1EB54A5D008FCAC0 /* RequestsHeaderTableViewCell.xib in Resources */,
 				A414FE7D1EB54A5D008FCAC0 /* Muli-Light.ttf in Resources */,
 				A414FE7E1EB54A5D008FCAC0 /* Muli-Regular.ttf in Resources */,
+				4C3EA3EC1EC247A9005C47B7 /* PrintView.xib in Resources */,
 				A414FE7F1EB54A5D008FCAC0 /* imagePromo.png in Resources */,
 				A414FE801EB54A5D008FCAC0 /* Poppins-SemiBold.ttf in Resources */,
 				A414FE811EB54A5D008FCAC0 /* OrderTableViewCell.xib in Resources */,
@@ -2780,12 +2849,14 @@
 				4C2F24F11E6616ED0043A90B /* HomeTableViewHeaderView.xib in Resources */,
 				4CAEA9611E6F4E2400FC65BD /* ProfileCredentialsTableViewCell.xib in Resources */,
 				4C4DB5761E68C0C2005D44C1 /* ColorCollectionViewCell.xib in Resources */,
+				4C3EA3EA1EC247A9005C47B7 /* PrintView.xib in Resources */,
 				2F0777441DBD368E003C124F /* dressImage.png in Resources */,
 				2F4896F21DB7E9FE00EADFFE /* Axis Extrabold.otf in Resources */,
 				4CAEA9531E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.xib in Resources */,
 				4CE5DFF51E71E21E0093CC0E /* ShoppingProductTableViewCell.xib in Resources */,
 				4CA82ECF1E773E89002C495B /* PurchaseButtonHeaderTableViewCell.xib in Resources */,
 				4C2063D31EB3DC9400F01CF9 /* CollectionSegmentedControlViewCell.xib in Resources */,
+				4C3EA3E21EC246BE005C47B7 /* BoxProductTableViewCell.xib in Resources */,
 				D402DFF91DB68C7F007855D6 /* Home.storyboard in Resources */,
 				4CDBE9511E69F5CB00715226 /* BrandsTableViewCell.xib in Resources */,
 				4CD370C61EA65C0800B73F68 /* RegisterFieldTableViewCell.xib in Resources */,
@@ -3034,6 +3105,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3EA3E71EC2478E005C47B7 /* PrintView.swift in Sources */,
 				A414FCA81EB5490A008FCAC0 /* ProfileSegmentTableViewCell.swift in Sources */,
 				A414FCA91EB5490A008FCAC0 /* WishlistCountTableViewCell.swift in Sources */,
 				A414FCAA1EB5490A008FCAC0 /* PurchaseViewController.swift in Sources */,
@@ -3072,6 +3144,7 @@
 				A414FCCC1EB5490A008FCAC0 /* BoxProductCollectionViewCell.swift in Sources */,
 				A414FCCD1EB5490A008FCAC0 /* BrandViewController.swift in Sources */,
 				A414FCCE1EB5490A008FCAC0 /* MiniProductCollectionViewCell.swift in Sources */,
+				4C3EA3D51EC245E5005C47B7 /* RequestsPresenter.swift in Sources */,
 				A4F69A311EB55D9600155E32 /* AppConfig.swift in Sources */,
 				A414FCCF1EB5490A008FCAC0 /* TermTableViewCell.swift in Sources */,
 				A414FCD01EB5490A008FCAC0 /* ShoppingResultsTableViewCell.swift in Sources */,
@@ -3083,6 +3156,7 @@
 				A414FCD61EB5490A008FCAC0 /* ProfileViewController.swift in Sources */,
 				A414FCD71EB5490A008FCAC0 /* RegisterViewController.swift in Sources */,
 				A414FCD81EB5490A008FCAC0 /* UIView+Util.swift in Sources */,
+				4C3EA3D31EC245DB005C47B7 /* RequestDetailViewController.swift in Sources */,
 				A414FCD91EB5490A008FCAC0 /* PurchaseSuccessfulHeaderTableViewCell.swift in Sources */,
 				A414FCDA1EB5490A008FCAC0 /* ProfileCredentialsTableViewCell.swift in Sources */,
 				A414FCDB1EB5490A008FCAC0 /* ProductDetailTableViewCell.swift in Sources */,
@@ -3125,6 +3199,7 @@
 				A414FCFF1EB5490A008FCAC0 /* UITableViewCell+Utils.swift in Sources */,
 				A414FD001EB5490A008FCAC0 /* SimpleTextTableViewCell.swift in Sources */,
 				A414FD011EB5490A008FCAC0 /* PurchaseSuccessfulButtonTableViewCell.swift in Sources */,
+				4C3EA3D71EC245ED005C47B7 /* BoxRequestTableViewCell.swift in Sources */,
 				A414FD021EB5490A008FCAC0 /* RequestFooterTableViewCell.swift in Sources */,
 				A414FD031EB5490A008FCAC0 /* AuthenticationContainerViewController.swift in Sources */,
 				A414FD041EB5490A008FCAC0 /* Product.swift in Sources */,
@@ -3136,6 +3211,7 @@
 				A414FD0A1EB5490A008FCAC0 /* RequestStatusTableViewCell.swift in Sources */,
 				A414FD0B1EB5490A008FCAC0 /* ProfileLabelTableViewCell.swift in Sources */,
 				A414FD0C1EB5490A008FCAC0 /* HighlightCollectionViewCell.swift in Sources */,
+				4C3EA3E01EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */,
 				A414FD0D1EB5490A008FCAC0 /* LoginViewController.swift in Sources */,
 				A414FD0E1EB5490A008FCAC0 /* Constants.swift in Sources */,
 				A414FD0F1EB5490A008FCAC0 /* UIColorExtension.swift in Sources */,
@@ -3182,6 +3258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3EA3E81EC2478E005C47B7 /* PrintView.swift in Sources */,
 				A414FDB51EB54A5D008FCAC0 /* ProfileSegmentTableViewCell.swift in Sources */,
 				A414FDB61EB54A5D008FCAC0 /* WishlistCountTableViewCell.swift in Sources */,
 				A414FDB71EB54A5D008FCAC0 /* PurchaseViewController.swift in Sources */,
@@ -3220,6 +3297,7 @@
 				A414FDD91EB54A5D008FCAC0 /* BoxProductCollectionViewCell.swift in Sources */,
 				A414FDDA1EB54A5D008FCAC0 /* BrandViewController.swift in Sources */,
 				A414FDDC1EB54A5D008FCAC0 /* MiniProductCollectionViewCell.swift in Sources */,
+				4C3EA3D61EC245E6005C47B7 /* RequestsPresenter.swift in Sources */,
 				A4F69A371EB55D9E00155E32 /* AppConfig.swift in Sources */,
 				A414FDDD1EB54A5D008FCAC0 /* TermTableViewCell.swift in Sources */,
 				A414FDDE1EB54A5D008FCAC0 /* ShoppingResultsTableViewCell.swift in Sources */,
@@ -3231,6 +3309,7 @@
 				A414FDE41EB54A5D008FCAC0 /* ProfileViewController.swift in Sources */,
 				A414FDE51EB54A5D008FCAC0 /* RegisterViewController.swift in Sources */,
 				A414FDE61EB54A5D008FCAC0 /* UIView+Util.swift in Sources */,
+				4C3EA3D41EC245DC005C47B7 /* RequestDetailViewController.swift in Sources */,
 				A414FDE71EB54A5D008FCAC0 /* PurchaseSuccessfulHeaderTableViewCell.swift in Sources */,
 				A414FDE81EB54A5D008FCAC0 /* ProfileCredentialsTableViewCell.swift in Sources */,
 				A414FDE91EB54A5D008FCAC0 /* ProductDetailTableViewCell.swift in Sources */,
@@ -3273,6 +3352,7 @@
 				A414FE0E1EB54A5D008FCAC0 /* SimpleTextTableViewCell.swift in Sources */,
 				A414FE0F1EB54A5D008FCAC0 /* PurchaseSuccessfulButtonTableViewCell.swift in Sources */,
 				A414FE101EB54A5D008FCAC0 /* RequestFooterTableViewCell.swift in Sources */,
+				4C3EA3D81EC245EE005C47B7 /* BoxRequestTableViewCell.swift in Sources */,
 				A414FE111EB54A5D008FCAC0 /* AuthenticationContainerViewController.swift in Sources */,
 				A414FE121EB54A5D008FCAC0 /* Product.swift in Sources */,
 				A414FE131EB54A5D008FCAC0 /* ShoppingBoxTableViewCell.swift in Sources */,
@@ -3284,6 +3364,7 @@
 				A414FE191EB54A5D008FCAC0 /* ProfileLabelTableViewCell.swift in Sources */,
 				A414FE1A1EB54A5D008FCAC0 /* HighlightCollectionViewCell.swift in Sources */,
 				A414FE1B1EB54A5D008FCAC0 /* LoginViewController.swift in Sources */,
+				4C3EA3E11EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */,
 				A414FE1C1EB54A5D008FCAC0 /* Constants.swift in Sources */,
 				A414FE1D1EB54A5D008FCAC0 /* UIColorExtension.swift in Sources */,
 				A414FE1E1EB54A5D008FCAC0 /* UIViewExtension.swift in Sources */,
@@ -3331,6 +3412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CAEA9521E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift in Sources */,
+				4C3EA3E61EC2478E005C47B7 /* PrintView.swift in Sources */,
 				4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */,
 				4CA82ED31E773F97002C495B /* PurchaseViewController.swift in Sources */,
 				A4F69A121EB552CC00155E32 /* NotificationsManager.swift in Sources */,
@@ -3351,6 +3433,7 @@
 				4C4DB5751E68C0C2005D44C1 /* ProductOptionsTableViewCell.swift in Sources */,
 				D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */,
 				D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */,
+				4C3EA3DF1EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */,
 				D4C0D6651DB6B32E007C3113 /* UIView+Animations.swift in Sources */,
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
 				4CDBE9561E69FCE600715226 /* BrandsHeaderTableViewCell.swift in Sources */,
@@ -3469,6 +3552,7 @@
 				4C42C8DB1EBCB8C400F86655 /* CartPresenter.swift in Sources */,
 				4CE045EC1EAF8D980022AFC6 /* BoxDetailViewController.swift in Sources */,
 				4C4449071EA8EC9900B8715F /* BoxCollectionViewCell.swift in Sources */,
+				4C3EA3D21EC245D3005C47B7 /* RequestDetailViewController.swift in Sources */,
 				4CD370C51EA65C0800B73F68 /* RegisterFieldTableViewCell.swift in Sources */,
 				4CE3456C1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.swift in Sources */,
 				4C016D121E797F8D0094C42E /* Rating1ViewController.swift in Sources */,
