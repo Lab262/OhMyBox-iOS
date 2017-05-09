@@ -1,5 +1,5 @@
 //
-//  ShoppingRequestsHeaderTableViewCell.swift
+//  RequestsHeaderTableViewCell.swift
 //  OhMyBox
 //
 //  Created by André Marques da Silva Rodrigues on 09/03/17.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ShoppingRequestsHeaderTableViewCell: UITableViewCell {
+class RequestsHeaderTableViewCell: UITableViewCell {
 
     static var identifier: String {
-        return "shoppingRequestsHeaderTableViewCell"
+        return "requestsHeaderTableViewCell"
     }
     
     static var cellHeight: CGFloat {
@@ -19,7 +19,7 @@ class ShoppingRequestsHeaderTableViewCell: UITableViewCell {
     }
     
     static var nibName: String {
-        return "ShoppingRequestsHeaderTableViewCell"
+        return "RequestsHeaderTableViewCell"
     }
     
     @IBOutlet weak var titleLabel: UILabel!

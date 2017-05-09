@@ -22,7 +22,7 @@ class BoxRequestTableViewCell: UITableViewCell {
         return "BoxRequestTableViewCell"
     }
     
-    typealias Info = (title: String, price: Double, categoryCount: Int, productImages: [UIImage])
+    typealias Info = (title: String, categoryCount: Int, price: Double, productImages: [UIImage])
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -48,7 +48,7 @@ class BoxRequestTableViewCell: UITableViewCell {
     
     func updateInfo() {
         
-        titleLabel.text = info?.title
+        titleLabel.text = "BOX: \(info?.title ?? "")"
         priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
         categoryCountLabel.text = "\(info?.categoryCount ?? 0) categorias"
         

@@ -1,5 +1,5 @@
 //
-//  ShoppingStatusTableViewCell.swift
+//  RequestStatusTableViewCell.swift
 //  OhMyBox
 //
 //  Created by André Marques da Silva Rodrigues on 10/03/17.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ShoppingStatusTableViewCell: UITableViewCell {
+class RequestStatusTableViewCell: UITableViewCell {
 
     typealias Info = (date: Date, status: String) // Status should be enum value
     
     static var identifier: String {
-        return "shoppingStatusTableViewCell"
+        return "requestStatusTableViewCell"
     }
     
     static var cellHeight: CGFloat {
@@ -21,7 +21,7 @@ class ShoppingStatusTableViewCell: UITableViewCell {
     }
     
     static var nibName: String {
-        return "ShoppingStatusTableViewCell"
+        return "RequestStatusTableViewCell"
     }
     
     @IBOutlet weak var madeAtTitleLabel: UILabel!

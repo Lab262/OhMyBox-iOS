@@ -1,5 +1,5 @@
 //
-//  ShoppingRequestFooterTableViewCell.swift
+//  RequestFooterTableViewCell.swift
 //  OhMyBox
 //
 //  Created by André Marques da Silva Rodrigues on 10/03/17.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ShoppingRequestFooterTableViewCell: UITableViewCell {
+class RequestFooterTableViewCell: UITableViewCell {
 
     static var identifier: String {
-        return "shoppingRequestFooterTableViewCell"
+        return "requestFooterTableViewCell"
     }
     
     static var cellHeight: CGFloat {
@@ -19,7 +19,7 @@ class ShoppingRequestFooterTableViewCell: UITableViewCell {
     }
     
     static var nibName: String {
-        return "ShoppingRequestFooterTableViewCell"
+        return "RequestFooterTableViewCell"
     }
     
     @IBOutlet weak var button: UIButton!
