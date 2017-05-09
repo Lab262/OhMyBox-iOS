@@ -89,6 +89,8 @@
 		4C2F25021E66305A0043A90B /* MiniProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2F25001E66305A0043A90B /* MiniProductsTableViewCell.xib */; };
 		4C2F25051E6631750043A90B /* MiniProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F25031E6631750043A90B /* MiniProductCollectionViewCell.swift */; };
 		4C2F25061E6631750043A90B /* MiniProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2F25041E6631750043A90B /* MiniProductCollectionViewCell.xib */; };
+		4C3EA3C81EC234C7005C47B7 /* BoxRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */; };
+		4C3EA3C91EC234C7005C47B7 /* BoxRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */; };
 		4C42C8DB1EBCB8C400F86655 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C8DA1EBCB8C400F86655 /* CartPresenter.swift */; };
 		4C42C8DD1EBCBAB400F86655 /* PFObject+Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C8DC1EBCBAB400F86655 /* PFObject+Reflection.swift */; };
 		4C433E941E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C433E921E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift */; };
@@ -920,6 +922,8 @@
 		4C2F25001E66305A0043A90B /* MiniProductsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniProductsTableViewCell.xib; sourceTree = "<group>"; };
 		4C2F25031E6631750043A90B /* MiniProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C2F25041E6631750043A90B /* MiniProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxRequestTableViewCell.swift; sourceTree = "<group>"; };
+		4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxRequestTableViewCell.xib; sourceTree = "<group>"; };
 		4C42C8DA1EBCB8C400F86655 /* CartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		4C42C8DC1EBCBAB400F86655 /* PFObject+Reflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFObject+Reflection.swift"; sourceTree = "<group>"; };
 		4C433E921E78306E00FE354E /* PurchaseSuccessfulHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessfulHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -1265,6 +1269,7 @@
 		2F70E7FB1DC7B861000AB03B /* ShoppingBox */ = {
 			isa = PBXGroup;
 			children = (
+				4C3EA3C41EC23497005C47B7 /* Requests */,
 				2F70E7FE1DC7B8C2000AB03B /* Controller */,
 				2F70E7FD1DC7B8BB000AB03B /* View */,
 				2F70E7FC1DC7B8B6000AB03B /* Model */,
@@ -1430,6 +1435,23 @@
 				4C44490A1EA8F3C700B8715F /* Box */,
 			);
 			name = News;
+			sourceTree = "<group>";
+		};
+		4C3EA3C41EC23497005C47B7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4C3EA3C51EC234AC005C47B7 /* Cells */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		4C3EA3C51EC234AC005C47B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C3EA3C61EC234C7005C47B7 /* BoxRequestTableViewCell.swift */,
+				4C3EA3C71EC234C7005C47B7 /* BoxRequestTableViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		4C42C8D71EBCB84B00F86655 /* Purchase */ = {
@@ -2678,6 +2700,7 @@
 				4CE3456D1E6E4AD7005C51F2 /* BrandCollectionsTableViewCell.xib in Resources */,
 				D4C0D65A1DB6AA6C007C3113 /* shoesImage.png in Resources */,
 				4C2F24FD1E6623E00043A90B /* HighlightCollectionViewCell.xib in Resources */,
+				4C3EA3C91EC234C7005C47B7 /* BoxRequestTableViewCell.xib in Resources */,
 				2F0777481DBD8FBF003C124F /* MeasuresUserTableViewCell.xib in Resources */,
 				4CA82EC31E772195002C495B /* BrandContactSocialNetworkTableViewCell.xib in Resources */,
 				4C4DB5661E68BE8D005D44C1 /* ProductLabelTableViewCell.xib in Resources */,
@@ -3367,6 +3390,7 @@
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */,
 				4C45512D1E7C683800FC2415 /* Rating3ViewController.swift in Sources */,
+				4C3EA3C81EC234C7005C47B7 /* BoxRequestTableViewCell.swift in Sources */,
 				4C0B04B51E732B5400F457BB /* ShoppingPlusProductsTableViewCell.swift in Sources */,
 				2F225D071DBF05A0009E4566 /* Colour.swift in Sources */,
 				4C42C8DD1EBCBAB400F86655 /* PFObject+Reflection.swift in Sources */,

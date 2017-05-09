@@ -15,7 +15,7 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 173, height: 203) * UIView.widthScaleProportion()
+        return CGSize(width: 173, height: 203) * UIView.widthScaleProportion
     }
     
     static var nibName: String {

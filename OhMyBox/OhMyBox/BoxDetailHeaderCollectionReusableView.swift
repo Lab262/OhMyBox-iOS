@@ -22,7 +22,7 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
     
     static var viewSize: CGSize {
         
-        return CGSize(width: 375, height: 345) * UIView.widthScaleProportion()
+        return CGSize(width: 375, height: 345) * UIView.widthScaleProportion
     }
     
     static let categoriesCountTitle: String = "essa box tem"

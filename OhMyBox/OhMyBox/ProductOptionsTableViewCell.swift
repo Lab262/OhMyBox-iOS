@@ -147,9 +147,9 @@ extension ProductOptionsTableViewCell: UICollectionViewDelegateFlowLayout {
         
         switch collectionView {
         case colorsCollectionView:
-            size = ColorCollectionViewCell.cellSize * UIView.widthScaleProportion()
+            size = ColorCollectionViewCell.cellSize * UIView.widthScaleProportion
         case sizesCollectionView:
-            size = SizeCollectionViewCell.cellSize * UIView.widthScaleProportion()
+            size = SizeCollectionViewCell.cellSize * UIView.widthScaleProportion
         default:
             size = CGSize()
         }

@@ -35,6 +35,8 @@ extension UIColor {
     }
     
     static let darkPurple = UIColor.colorWithHexString("241932")
+    
+    static let mediumGray = UIColor.colorWithHexString("636363")
   
 }
 

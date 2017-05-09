@@ -15,7 +15,7 @@ class CollectionSegmentedControlViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 110, height: 45) * UIView.widthScaleProportion()
+        return CGSize(width: 110, height: 45) * UIView.widthScaleProportion
     }
     
     static var nibName: String {

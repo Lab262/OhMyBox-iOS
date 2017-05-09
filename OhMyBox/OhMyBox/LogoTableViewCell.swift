@@ -15,7 +15,7 @@ class LogoTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 151 * UIView.heightScaleProportion()
+        return 151 * UIView.widthScaleProportion
     }
     
     static var nibName: String {
