@@ -20,6 +20,8 @@
             <connections>
                 <outlet property="boxButton" destination="Blf-2Q-kqU" id="bp0-8Q-9Pj"/>
                 <outlet property="leftBarButton" destination="34E-pe-8Yc" id="X0G-lZ-CeP"/>
+                <outlet property="leftHitboxButton" destination="Sgn-Np-k91" id="nZ9-E2-ccu"/>
+                <outlet property="rightHitboxButton" destination="Y1J-kt-ZR7" id="SEj-lq-Ty9"/>
                 <outlet property="titleLabel" destination="zTA-DZ-yQ8" id="KUb-Pc-gvj"/>
                 <outlet property="view" destination="iN0-l3-epB" id="AeI-ye-a1z"/>
             </connections>
@@ -73,7 +75,6 @@
                         <constraint firstAttribute="width" constant="93" id="tJ0-h1-26v"/>
                     </constraints>
                     <connections>
-                        <action selector="actionGoCart:" destination="-1" eventType="touchUpInside" id="GvR-GK-0VD"/>
                         <action selector="leftAction:" destination="-1" eventType="touchUpInside" id="iLf-gz-gve"/>
                     </connections>
                 </button>

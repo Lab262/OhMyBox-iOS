@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
     func setUpNavigationBar() {
      
         navigationController?.navigationBar.isHidden = true
-        navigationBarView.leftBarButton.isHidden = true
+        navigationBarView.showsLeftBarButton = false
         navigationBarView.layoutIfNeeded()
     }
     

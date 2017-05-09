@@ -45,7 +45,7 @@ class BrandContactViewController: UIViewController {
         
         navigationBar.titleLabelText = "CONTATO \(brandName)"
         navigationBar.leftBarButton.setImage(#imageLiteral(resourceName: "back_bold"), for: .normal)
-        navigationBar.boxButton.isHidden = true
+        navigationBar.showsRightBarButton = false
     }
     
 }

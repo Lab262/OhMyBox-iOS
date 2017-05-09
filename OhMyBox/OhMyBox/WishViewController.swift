@@ -33,7 +33,7 @@ class WishViewController: UIViewController {
     
     func configureNavigationBar() {
         
-        self.navigationBarView.leftBarButton.isHidden = true
+        self.navigationBarView.showsLeftBarButton = false
         self.navigationBarView.layoutIfNeeded()
     }
     
