@@ -10,11 +10,9 @@ import UIKit
 
 class BrandDetailViewController: UIViewController {
     
+    
+    
 // Mark: - Outlets
-    
-    // A8 77 60
-    // 1A 13 0F
-    
     let gradientPlaceholderColors = [UIColor.colorWithHexString("A87760").withAlphaComponent(0.63), UIColor.colorWithHexString("1A130F")]
     
     @IBOutlet weak var tableView: UITableView!
@@ -61,6 +59,8 @@ class BrandDetailViewController: UIViewController {
     
     var tableViewOffset = CGPoint()
     
+    var presenter = BrandDetailPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSearchBar()
@@ -72,11 +72,23 @@ class BrandDetailViewController: UIViewController {
         blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: {})
         
         NotificationCenter.default.addObserver(self, selector: #selector(BrandDetailViewController.reloadBlurAnimation), name: .UIApplicationWillEnterForeground, object: nil)
+        
+        presenter.view = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         reloadBlurAnimation()
         UIApplication.shared.statusBarStyle = preferredStatusBarStyle
+        
+        updateInfo()
+    }
+    
+    func updateInfo() {
+        
+        brandNameTopLabel.text = presenter.brandInfo?.name
+        brandNameBottomLabel.text = presenter.brandInfo?.title
+        brandDescriptionLabel.text = presenter.brandInfo?.brandDescription
+        brandImageView.image = presenter.brandInfo?.brandImage
     }
     
     func reloadBlurAnimation() {
@@ -435,5 +447,9 @@ extension BrandDetailViewController: UISearchBarDelegate {
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
+    
+}
+
+extension BrandDetailViewController: BrandDetailView {
     
 }

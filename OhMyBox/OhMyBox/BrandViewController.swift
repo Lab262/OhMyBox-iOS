@@ -18,6 +18,8 @@ class BrandViewController: UIViewController {
     var followedBrandsCollectionViewDelegate: UICollectionViewDelegate!
     var recommendedBrandsCollectionViewDelegate: UICollectionViewDelegate!
     
+    var selectedBrand: Brand?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -47,6 +49,8 @@ class BrandViewController: UIViewController {
         
         if segue.identifier == SegueIdentifiers.brandsToBrandDetail {
             
+            guard let vc = segue.destination as? BrandDetailViewController else { return }
+            vc.presenter.brand = selectedBrand
         }
     }
     
@@ -54,6 +58,10 @@ class BrandViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         navigationBarView.showsLeftBarButton = false
     }
+}
+
+//MARK: Cells generation
+extension BrandViewController {
     
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
@@ -159,8 +167,10 @@ extension BrandViewController: UITableViewDelegate {
 extension BrandViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
+        
+        selectedBrand = presenter.brands[indexPath.item]
+        
         performSegue(withIdentifier: SegueIdentifiers.brandsToBrandDetail, sender: self)
-        // get selected brand
     }
 }
 

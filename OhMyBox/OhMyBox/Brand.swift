@@ -13,6 +13,22 @@ class Brand: PFObject {
     @NSManaged var name: String?
     @NSManaged var title: String?
     @NSManaged var brandDescription: String?
+    @NSManaged var photo: PFFile?
+    
+    var loadedPhoto: UIImage?
+    
+    func loadPhoto(completion: @escaping (Error?) -> ()) {
+        
+        photo?.getDataInBackground(block: { (data, error) in
+            
+            if let data = data {
+                
+                self.loadedPhoto = UIImage(data: data)
+            }
+            
+            completion(error)
+        })
+    }
     
 }
 
