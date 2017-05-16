@@ -10,7 +10,13 @@ import UIKit
 
 class BrandsTableViewCell: UITableViewCell {
 
-    var brands: [Any] = []
+    var brands: [Brand] = [] {
+        
+        didSet {
+            
+            collectionView.reloadData()
+        }
+    }
     
     static var identifier: String {
         return "brandsTableViewCell"
@@ -46,12 +52,6 @@ class BrandsTableViewCell: UITableViewCell {
         flowLayout.sectionInset = UIEdgeInsetsMake(0, margin, 0, margin)
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
 
 extension BrandsTableViewCell: UICollectionViewDataSource {
@@ -66,9 +66,10 @@ extension BrandsTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
         
-        //setup cell
+        let brand = brands[indexPath.item]
+        cell.info = (brand.name!, brand.title!, #imageLiteral(resourceName: "brand_placeholder_image"))
         
         return cell
     }
