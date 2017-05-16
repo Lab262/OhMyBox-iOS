@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -155,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -226,7 +226,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="MY BOX"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wam-j2-pfD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="wam-j2-pfD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -405,27 +405,42 @@
                                     <action selector="notifyArrivalButtonAction:" destination="LyW-kV-AHT" eventType="touchUpInside" id="NgT-GL-9Jz"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-Db-w81">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-Db-w81">
+                                <rect key="frame" x="0.0" y="64" width="375" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="LyW-kV-AHT" id="WLp-bl-MfH"/>
                                     <outlet property="delegate" destination="LyW-kV-AHT" id="UQ8-ec-DMq"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-eP-QWS" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="yUi-hf-bch"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Pedido"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kf7-X6-rhJ" firstAttribute="top" secondItem="vCe-jq-uiX" secondAttribute="bottom" id="0i1-Zb-VE0"/>
+                            <constraint firstAttribute="trailing" secondItem="3ed-eP-QWS" secondAttribute="trailing" id="3vQ-8J-XbH"/>
+                            <constraint firstItem="rm8-Db-w81" firstAttribute="top" secondItem="3ed-eP-QWS" secondAttribute="bottom" id="I5e-gf-cyP"/>
                             <constraint firstAttribute="trailing" secondItem="rm8-Db-w81" secondAttribute="trailing" id="P8X-hQ-i8X"/>
+                            <constraint firstItem="3ed-eP-QWS" firstAttribute="top" secondItem="DCy-F1-gWF" secondAttribute="top" id="QIx-Mq-qit"/>
+                            <constraint firstItem="3ed-eP-QWS" firstAttribute="leading" secondItem="DCy-F1-gWF" secondAttribute="leading" id="ZqC-lK-Z8B"/>
                             <constraint firstItem="vCe-jq-uiX" firstAttribute="top" secondItem="rm8-Db-w81" secondAttribute="bottom" id="dX9-LD-7Ks"/>
                             <constraint firstItem="vCe-jq-uiX" firstAttribute="leading" secondItem="DCy-F1-gWF" secondAttribute="leading" id="ffs-Rs-5YE"/>
                             <constraint firstAttribute="trailing" secondItem="vCe-jq-uiX" secondAttribute="trailing" id="k1o-mL-3so"/>
-                            <constraint firstItem="rm8-Db-w81" firstAttribute="top" secondItem="q5W-mv-Ozv" secondAttribute="bottom" id="ngq-GL-Jff"/>
                             <constraint firstItem="rm8-Db-w81" firstAttribute="leading" secondItem="DCy-F1-gWF" secondAttribute="leading" id="w5U-kd-1JZ"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="navigationBar" destination="3ed-eP-QWS" id="awE-nN-Xoc"/>
                         <outlet property="notifyArrivalButton" destination="vCe-jq-uiX" id="osa-zA-XFs"/>
                         <outlet property="tableView" destination="rm8-Db-w81" id="p59-sz-XHI"/>
                         <segue destination="rwh-zI-5A7" kind="presentation" identifier="shoppingRequestDetailToRating" id="x5V-7c-Pxt"/>
@@ -433,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ya6-JV-cdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="1045"/>
+            <point key="canvasLocation" x="1144.8" y="1044.8275862068967"/>
         </scene>
     </scenes>
     <resources>
@@ -441,6 +456,6 @@
         <image name="purchase_sucessful" width="296" height="182"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x5V-7c-Pxt"/>
+        <segue reference="UWY-jg-2X6"/>
     </inferredMetricsTieBreakers>
 </document>

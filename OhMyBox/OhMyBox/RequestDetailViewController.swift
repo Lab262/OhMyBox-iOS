@@ -13,16 +13,20 @@ class RequestDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var notifyArrivalButton: UIButton!
     
+    @IBOutlet weak var navigationBar: IconNavigationBar!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         registerNibs()
+        navigationBar.showsRightBarButton = false
     }
     
     func registerNibs() {
         
         tableView.registerNibFrom(BoxProductTableViewCell.self)
         tableView.registerNibFrom(RequestResultsTableViewCell.self)
+        tableView.registerNibFrom(BrandContactHeaderTableViewCell.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,13 +73,17 @@ extension RequestDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+        return BrandContactHeaderTableViewCell.cellHeight - 30
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: BrandContactHeaderTableViewCell.identifier) as! BrandContactHeaderTableViewCell
+        
+        header.info = ("EU VOU DE VERÃO BOX", "")
+        
+        return header
     }
-    
 }
 
 // Mark: Cells generation

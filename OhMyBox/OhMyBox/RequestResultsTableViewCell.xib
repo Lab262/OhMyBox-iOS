@@ -24,18 +24,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tudo isso por" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-RY-Ac6">
-                        <rect key="frame" x="16" y="43" width="112" height="27"/>
+                        <rect key="frame" x="16" y="43" width="111.5" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-PL-bwe">
-                        <rect key="frame" x="277" y="43" width="77" height="26.5"/>
+                        <rect key="frame" x="282" y="43" width="77" height="26.5"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.058823529409999999" green="0.039215686270000001" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30H-HX-loJ">
-                        <rect key="frame" x="132" y="43" width="140" height="26.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="---------------" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30H-HX-loJ">
+                        <rect key="frame" x="131.5" y="43" width="145.5" height="27"/>
                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                         <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="0.5" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -45,8 +45,9 @@
                     <constraint firstItem="dPE-RY-Ac6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6Zd-x3-FO8"/>
                     <constraint firstItem="30H-HX-loJ" firstAttribute="centerY" secondItem="dPE-RY-Ac6" secondAttribute="centerY" id="J5s-ey-eVs"/>
                     <constraint firstItem="KDO-PL-bwe" firstAttribute="top" secondItem="dPE-RY-Ac6" secondAttribute="top" id="Mb3-gn-hlt"/>
+                    <constraint firstAttribute="trailing" secondItem="KDO-PL-bwe" secondAttribute="trailing" constant="16" id="OAI-Iw-rLH"/>
                     <constraint firstItem="30H-HX-loJ" firstAttribute="leading" secondItem="dPE-RY-Ac6" secondAttribute="trailing" constant="4" id="ctS-uM-Cvy"/>
-                    <constraint firstItem="KDO-PL-bwe" firstAttribute="leading" secondItem="30H-HX-loJ" secondAttribute="trailing" constant="5" id="fZ4-aR-AW0"/>
+                    <constraint firstItem="KDO-PL-bwe" firstAttribute="leading" secondItem="30H-HX-loJ" secondAttribute="trailing" constant="5" id="eTu-Gv-LpS"/>
                     <constraint firstItem="dPE-RY-Ac6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="xLP-TS-siv"/>
                 </constraints>
             </tableViewCellContentView>

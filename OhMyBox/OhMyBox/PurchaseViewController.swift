@@ -29,7 +29,7 @@ class PurchaseViewController: UIViewController {
         tableView.registerNibFrom(PurchaseButtonHeaderTableViewCell.self)
         tableView.registerNibFrom(PurchaseHeaderTableViewCell.self)
         tableView.registerNibFrom(PurchaseInfoTableViewCell.self)
-        tableView.registerNibFrom(ShoppingProductTableViewCell.self)
+        tableView.registerNibFrom(BoxProductTableViewCell.self)
         tableView.registerNibFrom(RequestResultsTableViewCell.self)
     }
     
@@ -90,7 +90,7 @@ extension PurchaseViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0:
             switch indexPath.row {
-            case 0..<products.count: height = ShoppingProductTableViewCell.cellHeight
+            case 0..<products.count: height = BoxProductTableViewCell.cellHeight
             case products.count: height = RequestResultsTableViewCell.cellHeight
             default: height = 0
             }
@@ -131,9 +131,11 @@ extension PurchaseViewController: UITableViewDelegate {
 
 extension PurchaseViewController {
     
-    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingProductTableViewCell {
+    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingProductTableViewCell.identifier) as! ShoppingProductTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: BoxProductTableViewCell.identifier) as! BoxProductTableViewCell
+        
+        cell.info = ("Produto", "Fashion Store", "36", UIColor.clear, #imageLiteral(resourceName: "product_placeholder"))
         
         return cell
     }

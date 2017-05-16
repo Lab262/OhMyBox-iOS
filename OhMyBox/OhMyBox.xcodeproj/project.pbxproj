@@ -1297,10 +1297,11 @@
 		2F70E7FB1DC7B861000AB03B /* ShoppingBox */ = {
 			isa = PBXGroup;
 			children = (
+				4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */,
 				4C3EA3D01EC245BD005C47B7 /* RequestDetail */,
 				4C3EA3CD1EC244F5005C47B7 /* Cart */,
 				4C3EA3C41EC23497005C47B7 /* Requests */,
-				2F70E7FE1DC7B8C2000AB03B /* Controller */,
+				2F70E7FE1DC7B8C2000AB03B /* Purchase */,
 				2F70E7FD1DC7B8BB000AB03B /* View */,
 				2F70E7FC1DC7B8B6000AB03B /* Model */,
 			);
@@ -1324,13 +1325,13 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		2F70E7FE1DC7B8C2000AB03B /* Controller */ = {
+		2F70E7FE1DC7B8C2000AB03B /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
-				4C278CC61E71A18200C80E8D /* ShoppingBoxContainerViewController.swift */,
-				4C42C8D71EBCB84B00F86655 /* Purchase */,
+				4CA82ED11E773F97002C495B /* PurchaseViewController.swift */,
+				4C6B40E11E78250E00622282 /* PurchaseSuccessfulViewController.swift */,
 			);
-			name = Controller;
+			name = Purchase;
 			sourceTree = "<group>";
 		};
 		2F70E8051DC7C3C6000AB03B /* Cells */ = {
@@ -1551,15 +1552,6 @@
 				4CE5DFF71E71EFDD0093CC0E /* RequestResultsTableViewCell.xib */,
 			);
 			name = Cells;
-			sourceTree = "<group>";
-		};
-		4C42C8D71EBCB84B00F86655 /* Purchase */ = {
-			isa = PBXGroup;
-			children = (
-				4CA82ED11E773F97002C495B /* PurchaseViewController.swift */,
-				4C6B40E11E78250E00622282 /* PurchaseSuccessfulViewController.swift */,
-			);
-			name = Purchase;
 			sourceTree = "<group>";
 		};
 		4C4449091EA8F3C200B8715F /* Product */ = {

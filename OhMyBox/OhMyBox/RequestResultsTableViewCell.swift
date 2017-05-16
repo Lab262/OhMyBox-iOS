@@ -43,7 +43,7 @@ class RequestResultsTableViewCell: UITableViewCell {
         var totalTitle = "Tudo isso por"
         var totalSeparator = ""
         
-        let hifenCount = 18 - totalTitle.characters.count
+        let hifenCount = 50 - totalTitle.characters.count
         
         for _ in 0..<hifenCount {
             totalSeparator += "-"
