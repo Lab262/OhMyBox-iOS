@@ -53,19 +53,9 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func buyButtonAction(_ sender: UIButton!) {
+        
         buyButtonHandler?(sender)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension CartViewController: UITableViewDataSource {
@@ -111,5 +101,16 @@ extension CartViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return footerView
+    }
+}
+
+extension CartViewController: CartView {
+    
+    func reloadData() {
+        
+    }
+    
+    func purchaseRequestSaved(success: Bool, error: Error?) {
+        
     }
 }

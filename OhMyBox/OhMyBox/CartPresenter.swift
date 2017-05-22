@@ -6,7 +6,7 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 protocol CartView {
     

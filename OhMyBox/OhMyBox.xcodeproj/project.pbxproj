@@ -200,6 +200,12 @@
 		4CB255521EA68B1F00DCCA24 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB255511EA68B1F00DCCA24 /* RegisterPresenter.swift */; };
 		4CB263771EB2537300BB7883 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB263761EB2537300BB7883 /* Box.swift */; };
 		4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB29DE71E5B64FC007FA758 /* CGOperations.swift */; };
+		4CBC22CF1ED32CDF00D06937 /* PurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC22CE1ED32CDF00D06937 /* PurchaseRequest.swift */; };
+		4CBC22D01ED32CDF00D06937 /* PurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC22CE1ED32CDF00D06937 /* PurchaseRequest.swift */; };
+		4CBC22D11ED32CDF00D06937 /* PurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC22CE1ED32CDF00D06937 /* PurchaseRequest.swift */; };
+		4CBC22D31ED330C200D06937 /* PurchasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC22D21ED330C200D06937 /* PurchasePresenter.swift */; };
+		4CBC22D41ED330C200D06937 /* PurchasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC22D21ED330C200D06937 /* PurchasePresenter.swift */; };
+		4CBC22D51ED330C200D06937 /* PurchasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC22D21ED330C200D06937 /* PurchasePresenter.swift */; };
 		4CBD41D21E609FFC00A9337F /* CollectionPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */; };
 		4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */; };
 		4CC40F281EBB708D00333245 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC40F271EBB708D00333245 /* BoxView.swift */; };
@@ -1042,6 +1048,8 @@
 		4CB255511EA68B1F00DCCA24 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		4CB263761EB2537300BB7883 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		4CB29DE71E5B64FC007FA758 /* CGOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOperations.swift; sourceTree = "<group>"; };
+		4CBC22CE1ED32CDF00D06937 /* PurchaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseRequest.swift; sourceTree = "<group>"; };
+		4CBC22D21ED330C200D06937 /* PurchasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasePresenter.swift; sourceTree = "<group>"; };
 		4CBD41D11E609FFC00A9337F /* CollectionPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPickerView.xib; sourceTree = "<group>"; };
 		4CBD41D31E60A26C00A9337F /* CollectionPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
 		4CC40F271EBB708D00333245 /* BoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
@@ -1335,6 +1343,7 @@
 			isa = PBXGroup;
 			children = (
 				4CA82ED11E773F97002C495B /* PurchaseViewController.swift */,
+				4CBC22D21ED330C200D06937 /* PurchasePresenter.swift */,
 				4C6B40E11E78250E00622282 /* PurchaseSuccessfulViewController.swift */,
 			);
 			name = Purchase;
@@ -2378,6 +2387,7 @@
 				4CF2237D1E9D3B050050D91A /* Measures.swift */,
 				4CB263761EB2537300BB7883 /* Box.swift */,
 				4CEB6BE31ECAB4EA00F72828 /* Brand.swift */,
+				4CBC22CE1ED32CDF00D06937 /* PurchaseRequest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -3147,6 +3157,7 @@
 				A414FCBE1EB5490A008FCAC0 /* BrandsHeaderTableViewCell.swift in Sources */,
 				A414FCBF1EB5490A008FCAC0 /* CollectionPickerViewCell.swift in Sources */,
 				A414FCC01EB5490A008FCAC0 /* UserRequest.swift in Sources */,
+				4CBC22D01ED32CDF00D06937 /* PurchaseRequest.swift in Sources */,
 				A414FCC11EB5490A008FCAC0 /* ProfileMeasureTableViewCell.swift in Sources */,
 				A414FCC21EB5490A008FCAC0 /* BrandContactViewController.swift in Sources */,
 				A414FCC31EB5490A008FCAC0 /* BrandsTableViewCell.swift in Sources */,
@@ -3246,6 +3257,7 @@
 				A414FD1A1EB5490A008FCAC0 /* IconNavigationBar.swift in Sources */,
 				A414FD1B1EB5490A008FCAC0 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				A414FD1C1EB5490A008FCAC0 /* BrandCollectionViewCell.swift in Sources */,
+				4CBC22D41ED330C200D06937 /* PurchasePresenter.swift in Sources */,
 				A414FD1D1EB5490A008FCAC0 /* ShoppingRequestsViewController.swift in Sources */,
 				A414FD1E1EB5490A008FCAC0 /* BoxDetailHeaderCollectionReusableView.swift in Sources */,
 				A414FD1F1EB5490A008FCAC0 /* Rating2ViewController.swift in Sources */,
@@ -3300,6 +3312,7 @@
 				A414FDCB1EB54A5D008FCAC0 /* BrandsHeaderTableViewCell.swift in Sources */,
 				A414FDCC1EB54A5D008FCAC0 /* CollectionPickerViewCell.swift in Sources */,
 				A414FDCD1EB54A5D008FCAC0 /* UserRequest.swift in Sources */,
+				4CBC22D11ED32CDF00D06937 /* PurchaseRequest.swift in Sources */,
 				A414FDCE1EB54A5D008FCAC0 /* ProfileMeasureTableViewCell.swift in Sources */,
 				A414FDCF1EB54A5D008FCAC0 /* BrandContactViewController.swift in Sources */,
 				A414FDD01EB54A5D008FCAC0 /* BrandsTableViewCell.swift in Sources */,
@@ -3399,6 +3412,7 @@
 				A414FE291EB54A5D008FCAC0 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				A414FE2A1EB54A5D008FCAC0 /* BrandCollectionViewCell.swift in Sources */,
 				A414FE2B1EB54A5D008FCAC0 /* ShoppingRequestsViewController.swift in Sources */,
+				4CBC22D51ED330C200D06937 /* PurchasePresenter.swift in Sources */,
 				A414FE2C1EB54A5D008FCAC0 /* BoxDetailHeaderCollectionReusableView.swift in Sources */,
 				A414FE2D1EB54A5D008FCAC0 /* Rating2ViewController.swift in Sources */,
 				A414FE2E1EB54A5D008FCAC0 /* SearchContainerViewController.swift in Sources */,
@@ -3529,6 +3543,7 @@
 				2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */,
 				4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */,
 				4CC40F311EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
+				4CBC22D31ED330C200D06937 /* PurchasePresenter.swift in Sources */,
 				2F07774B1DBD9B95003C124F /* SimpleTextTableViewCell.swift in Sources */,
 				4C433E981E78356C00FE354E /* PurchaseSuccessfulButtonTableViewCell.swift in Sources */,
 				4C0B04B11E73249800F457BB /* RequestFooterTableViewCell.swift in Sources */,
@@ -3581,6 +3596,7 @@
 				4C5839F71E9D1BA10043B842 /* ProfilePresenter.swift in Sources */,
 				4CA82EC21E772195002C495B /* BrandContactSocialNetworkTableViewCell.swift in Sources */,
 				4CE345651E6E453D005C51F2 /* UIImageView+Blur.swift in Sources */,
+				4CBC22CF1ED32CDF00D06937 /* PurchaseRequest.swift in Sources */,
 				4CE3B8861E5E2BDA0065A293 /* String+CharacterSpacing.swift in Sources */,
 				2F4896F81DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift in Sources */,
 				D4E36E951DEE74080012431F /* ShowProductTableViewCell.swift in Sources */,

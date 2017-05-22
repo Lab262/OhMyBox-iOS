@@ -12,7 +12,9 @@ class PurchaseViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var products: [Any] = [1, 2, 3]
+    
+    var presenter = PurchasePresenter()
+    
     var purchaseInfo: [PurchaseInfoTableViewCell.Info] = [("Cartão", "****8492"), ("Aonde entregar", "Quadra Sqn 309 Asa Norte, Brasília - DF")]
     
     override func viewDidLoad() {
@@ -22,7 +24,8 @@ class PurchaseViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20.0, right: 0)
-        // Do any additional setup after loading the view.
+        
+        presenter.view = self
     }
     
     func registerNibs() {
@@ -38,9 +41,20 @@ class PurchaseViewController: UIViewController {
     }
     
     @IBAction func purchaseButtonAction(_ sender: UIButton) {
-        performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
+        
+        presenter.sendPurchaseRequest()
     }
     
+}
+
+extension PurchaseViewController: PurchaseView {
+    
+    func purchaseRequestSaved(success: Bool, error: Error?) {
+        
+        if success {
+            performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
+        }
+    }
 }
 
 extension PurchaseViewController: UITableViewDataSource {
@@ -54,7 +68,7 @@ extension PurchaseViewController: UITableViewDataSource {
         let numberOfRows: Int
         
         switch section {
-        case 0: numberOfRows = products.count + 1
+        case 0: numberOfRows = presenter.productsCount + 1
         case 1: numberOfRows = 2
         default: numberOfRows = 0
         }
@@ -69,8 +83,8 @@ extension PurchaseViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             switch indexPath.row {
-            case 0..<products.count: cell = generateProductCell(tableView, cellForRowAt: indexPath)
-            case products.count: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
+            case 0..<presenter.productsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
+            case presenter.productsCount: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
             default: cell = UITableViewCell()
             }
         case 1: cell = generatePurchaseInfoCell(tableView, cellForRowAt: indexPath)
@@ -90,8 +104,8 @@ extension PurchaseViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0:
             switch indexPath.row {
-            case 0..<products.count: height = BoxProductTableViewCell.cellHeight
-            case products.count: height = RequestResultsTableViewCell.cellHeight
+            case 0..<presenter.productsCount: height = BoxProductTableViewCell.cellHeight
+            case presenter.productsCount: height = RequestResultsTableViewCell.cellHeight
             default: height = 0
             }
         case 1: height = PurchaseInfoTableViewCell.cellHeight
