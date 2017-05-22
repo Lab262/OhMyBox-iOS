@@ -70,6 +70,7 @@ struct Notifications {
     static let selectBoxRequestsViewController = NSNotification.Name(rawValue: "selectBoxRequestsViewController")
     
     static let cartUpdated = NSNotification.Name(rawValue: "cartUpdated")
+    static let wishlistUpdated = NSNotification.Name(rawValue: "wishlistUpdated")
 }
 
 // MARK: Purchase Successful Tips @ PurchaseSuccessfulViewController

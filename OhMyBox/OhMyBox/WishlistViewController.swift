@@ -1,5 +1,5 @@
 //
-//  WishViewController.swift
+//  WishlistViewController.swift
 //  OhMyBox
 //
 //  Created by Felipe perius on 19/10/16.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class WishViewController: UIViewController {
+class WishlistViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     
-    var wishlistProducts: [Any] = [1, 2]
+    var presenter = WishlistPresenter()
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
@@ -46,19 +46,23 @@ class WishViewController: UIViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxTableViewCell.identifier, for: indexPath) as! BoxTableViewCell
         
+        let box = presenter.favoriteBoxes[indexPath.row - 1]
+        
+        cell.info = (box.name, box.boxDescription, box.price.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        
         return cell
     }
     
     func generateWishlistCountCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: WishlistCountTableViewCell.identifier, for: indexPath) as! WishlistCountTableViewCell
-        cell.wishlistCount = wishlistProducts.count
+        cell.wishlistCount = presenter.favoriteBoxes.count
         
         return cell
     }
  
 }
-extension WishViewController: UITableViewDataSource {
+extension WishlistViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -75,12 +79,12 @@ extension WishViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return wishlistProducts.count + 1
+        return presenter.favoriteBoxes.count + 1
     }
     
 }
 
-extension WishViewController: UITableViewDelegate {
+extension WishlistViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        let viewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Home", identifier: "detailProduct")

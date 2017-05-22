@@ -17,7 +17,6 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var boxes: [Box] = []
     
     var boxButtonHandler: ((IndexPath) -> ())?
-    var likeButtonHandler: ((IndexPath) -> ())?
     
     init(collectionView: UICollectionView) {
         
@@ -29,6 +28,7 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         registerNibs()
         
         NotificationCenter.default.addObserver(self, selector: #selector(cartUpdated(_:)), name: Notifications.cartUpdated, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(wishlistUpdated(_:)), name: Notifications.wishlistUpdated, object: nil)
     }
     
     func setUpCollectionView() {
@@ -70,11 +70,14 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         cell.boxView.likeButtonHandler = { _ in
             
-            self.likeButtonHandler?(indexPath)
+            self.likeButtonHandler(indexPath)
         }
         
         let isInCart = CartManager.shared.boxIsInCart(box)
         cell.boxView.setBoxButtonSelected(isInCart)
+        
+        let isInWishlist = WishlistManager.shared.boxIsInWishlist(box)
+        cell.boxView.setLikeButtonSelected(isInWishlist)
         
         cell.info = (box.name, box.boxDescription, box.price.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
         
@@ -110,6 +113,29 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             
             cell.boxView.setBoxButtonSelected(isInCart)
         }
+    }
+    
+    func wishlistUpdated(_ notification: Notification) {
+        
+        guard let userInfo = notification.object as? [String: Any] else { return }
+        
+        guard let boxId = userInfo[WishlistManager.UpdateUserInfoKeys.boxId] as? String else { return }
+        guard let isInWishlist = userInfo[WishlistManager.UpdateUserInfoKeys.isInWishlist] as? Bool else { return }
+        
+        let i = boxes.indexOfElement { $0.objectId ?? "" == boxId }
+        
+        if let i = i {
+            
+            guard let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? BoxCollectionViewCell else { return }
+            
+            cell.boxView.setLikeButtonSelected(isInWishlist)
+        }
+    }
+    
+    func likeButtonHandler(_ indexPath: IndexPath) {
+        
+        let box = boxes[indexPath.row]
+        WishlistManager.shared.updateWishlist(withBox: box)
     }
 }
 

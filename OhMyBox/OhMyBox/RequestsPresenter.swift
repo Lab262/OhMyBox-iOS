@@ -32,7 +32,7 @@ class RequestsPresenter: NSObject {
         
         guard let buyer = User.current else { return }
         
-        let query = PFQuery(className: PurchaseRequest.parseClassName()).whereKey("buyer", equalTo: buyer)
+        let query = PFQuery(className: PurchaseRequest.parseClassName()).whereKey("buyer", equalTo: buyer).includeKey("box")
         
         query.findObjectsInBackground { (objects, error) in
             
@@ -42,19 +42,7 @@ class RequestsPresenter: NSObject {
                 
             }) else { return }
             
-            
-            
-            self.purchaseRequests.removeAll(keepingCapacity: true)
-            for request in requests {
-                
-                request.box.fetchInBackground(block: { (object, error) in
-                    
-                    guard let box = object as? Box else { return }
-                    
-                    request.box = box
-                    self.purchaseRequests.append(request)
-                })
-            }
+            self.purchaseRequests = requests
         }
     }
 }
