@@ -31,7 +31,7 @@ class BoxDetailPresenter: NSObject {
     
     var boxPlaceholderInfo: BoxDetailHeaderCollectionReusableView.Info {
         
-        return (box.name!, box.boxDescription!, box.price!.doubleValue, box.productTypes!)
+        return (box.name, box.boxDescription, box.price.doubleValue, box.productTypes)
     }
     
     func checkedItem(at index: Int) {

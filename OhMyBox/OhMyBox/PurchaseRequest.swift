@@ -14,6 +14,10 @@ class PurchaseRequest: PFObject {
     @NSManaged var buyer: User
     @NSManaged var confirmed: Bool
     
+    override init() {
+        super.init()
+    }
+    
     init(box: Box, buyer: User, confirmed: Bool = false) {
         
         super.init()

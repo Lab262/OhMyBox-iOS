@@ -10,10 +10,10 @@ import Parse
 
 class Box: PFObject {
     
-    @NSManaged var productTypes: [String]?
-    @NSManaged var price: NSNumber?
-    @NSManaged var name: String?
-    @NSManaged var boxDescription: String?
+    @NSManaged var productTypes: [String]
+    @NSManaged var price: NSNumber
+    @NSManaged var name: String
+    @NSManaged var boxDescription: String
     
     var products: [AnyObject]?
     

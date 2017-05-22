@@ -98,7 +98,7 @@ extension BoxDetailViewController: UICollectionViewDataSource {
             collectionHeader = view
             view.info = presenter.boxPlaceholderInfo
             
-            view.collectionSegmentedControlView.collectionSegmentedControlHandlers = (0..<presenter.box.productTypes!.count).map { index in
+            view.collectionSegmentedControlView.collectionSegmentedControlHandlers = (0..<presenter.box.productTypes.count).map { index in
                 
                 return {
                     

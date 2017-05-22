@@ -29,6 +29,10 @@ class ShoppingRequestsViewController: UIViewController {
         
         footerView.backgroundColor = .clear
         footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
+        
+        presenter.view = self
+        
+        presenter.loadPurchaseRequests()
         // Do any additional setup after loading the view.
     }
 
@@ -54,6 +58,13 @@ class ShoppingRequestsViewController: UIViewController {
     }
 }
 
+extension ShoppingRequestsViewController: RequestsView {
+    
+    func reloadData() {
+        tableView.reloadData()
+    }
+}
+
 extension ShoppingRequestsViewController: UITableViewDataSource {
     
     func updateIsTableViewHidden(sectionCount: Int) {
@@ -65,7 +76,7 @@ extension ShoppingRequestsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        let count = presenter.requests.count
+        let count = presenter.purchaseRequests.count
         
         updateIsTableViewHidden(sectionCount: count)
         return count
@@ -154,7 +165,9 @@ extension ShoppingRequestsViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxRequestTableViewCell.identifier) as! BoxRequestTableViewCell
         
-        cell.info = ("Eu vou de verão", 3, 100, [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        let box = presenter.purchaseRequests[indexPath.section].box
+        
+        cell.info = (box.name, box.productTypes.count, box.price.doubleValue, [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
         
         return cell
     }
@@ -162,7 +175,11 @@ extension ShoppingRequestsViewController {
     func generateStatusCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RequestStatusTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RequestStatusTableViewCell.identifier) as! RequestStatusTableViewCell
         
-        cell.info = (Date(), "No estoque")
+        let request = presenter.purchaseRequests[indexPath.section]
+        
+        guard let date = request.createdAt else { return cell }
+        
+        cell.info = (date, "No estoque")
         
         return cell
     }
