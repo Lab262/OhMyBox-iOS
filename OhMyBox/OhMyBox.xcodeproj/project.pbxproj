@@ -274,6 +274,18 @@
 		4CE5DFF51E71E21E0093CC0E /* ShoppingProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */; };
 		4CE5DFF81E71EFDD0093CC0E /* RequestResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF61E71EFDD0093CC0E /* RequestResultsTableViewCell.swift */; };
 		4CE5DFF91E71EFDD0093CC0E /* RequestResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF71E71EFDD0093CC0E /* RequestResultsTableViewCell.xib */; };
+		4CE73A2E1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A2D1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift */; };
+		4CE73A2F1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A2D1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift */; };
+		4CE73A301ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A2D1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift */; };
+		4CE73A321ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A311ED4827C002DF331 /* PurchaseRatingFeedback.swift */; };
+		4CE73A331ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A311ED4827C002DF331 /* PurchaseRatingFeedback.swift */; };
+		4CE73A341ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A311ED4827C002DF331 /* PurchaseRatingFeedback.swift */; };
+		4CE73A361ED49443002DF331 /* PurchaseRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A351ED49443002DF331 /* PurchaseRating.swift */; };
+		4CE73A371ED49443002DF331 /* PurchaseRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A351ED49443002DF331 /* PurchaseRating.swift */; };
+		4CE73A381ED49443002DF331 /* PurchaseRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A351ED49443002DF331 /* PurchaseRating.swift */; };
+		4CE73A3A1ED49522002DF331 /* RatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A391ED49522002DF331 /* RatingPresenter.swift */; };
+		4CE73A3B1ED49522002DF331 /* RatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A391ED49522002DF331 /* RatingPresenter.swift */; };
+		4CE73A3C1ED49522002DF331 /* RatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE73A391ED49522002DF331 /* RatingPresenter.swift */; };
 		4CEB6BE41ECAB4EA00F72828 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB6BE31ECAB4EA00F72828 /* Brand.swift */; };
 		4CEB6BE71ECAB5D500F72828 /* BrandPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB6BE61ECAB5D500F72828 /* BrandPresenter.swift */; };
 		4CEB6BEA1ECABA6000F72828 /* BrandDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB6BE91ECABA6000F72828 /* BrandDetailPresenter.swift */; };
@@ -1113,6 +1125,10 @@
 		4CE5DFF31E71E21E0093CC0E /* ShoppingProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingProductTableViewCell.xib; sourceTree = "<group>"; };
 		4CE5DFF61E71EFDD0093CC0E /* RequestResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultsTableViewCell.swift; sourceTree = "<group>"; };
 		4CE5DFF71E71EFDD0093CC0E /* RequestResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestResultsTableViewCell.xib; sourceTree = "<group>"; };
+		4CE73A2D1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseRequestFeedbackManager.swift; sourceTree = "<group>"; };
+		4CE73A311ED4827C002DF331 /* PurchaseRatingFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseRatingFeedback.swift; sourceTree = "<group>"; };
+		4CE73A351ED49443002DF331 /* PurchaseRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseRating.swift; sourceTree = "<group>"; };
+		4CE73A391ED49522002DF331 /* RatingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingPresenter.swift; sourceTree = "<group>"; };
 		4CEB6BE31ECAB4EA00F72828 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		4CEB6BE61ECAB5D500F72828 /* BrandPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandPresenter.swift; sourceTree = "<group>"; };
 		4CEB6BE91ECABA6000F72828 /* BrandDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandDetailPresenter.swift; sourceTree = "<group>"; };
@@ -1423,6 +1439,7 @@
 				4C016D111E797F8D0094C42E /* Rating1ViewController.swift */,
 				4C45512A1E7C273A00FC2415 /* Rating2ViewController.swift */,
 				4C45512C1E7C683800FC2415 /* Rating3ViewController.swift */,
+				4CE73A391ED49522002DF331 /* RatingPresenter.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1451,6 +1468,7 @@
 			children = (
 				4CFDEE931EBD09B500D2B85A /* CartManager.swift */,
 				4C294B9E1ED3986F00DF83EF /* WishlistManager.swift */,
+				4CE73A2D1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -2415,6 +2433,8 @@
 				4CEB6BE31ECAB4EA00F72828 /* Brand.swift */,
 				4CBC22CE1ED32CDF00D06937 /* PurchaseRequest.swift */,
 				4C294B951ED3916600DF83EF /* Wishlist.swift */,
+				4CE73A311ED4827C002DF331 /* PurchaseRatingFeedback.swift */,
+				4CE73A351ED49443002DF331 /* PurchaseRating.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -3165,6 +3185,7 @@
 				A414FCAA1EB5490A008FCAC0 /* PurchaseViewController.swift in Sources */,
 				A414FCAB1EB5490A008FCAC0 /* ShoppingBoxEmptyView.swift in Sources */,
 				A414FCAC1EB5490A008FCAC0 /* CGOperations.swift in Sources */,
+				4CE73A331ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */,
 				A414FCAD1EB5490A008FCAC0 /* HighlightsTableViewCell.swift in Sources */,
 				A414FCAE1EB5490A008FCAC0 /* Colors.swift in Sources */,
 				A414FCAF1EB5490A008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */,
@@ -3189,6 +3210,7 @@
 				A414FCC11EB5490A008FCAC0 /* ProfileMeasureTableViewCell.swift in Sources */,
 				A414FCC21EB5490A008FCAC0 /* BrandContactViewController.swift in Sources */,
 				A414FCC31EB5490A008FCAC0 /* BrandsTableViewCell.swift in Sources */,
+				4CE73A371ED49443002DF331 /* PurchaseRating.swift in Sources */,
 				A414FCC41EB5490A008FCAC0 /* MiniProductsTableViewCell.swift in Sources */,
 				4C294B931ED390E500DF83EF /* WishlistPresenter.swift in Sources */,
 				A414FCC51EB5490A008FCAC0 /* Array+Util.swift in Sources */,
@@ -3242,6 +3264,7 @@
 				A414FCF11EB5490A008FCAC0 /* BrandContactLocationTableViewCell.swift in Sources */,
 				A414FCF21EB5490A008FCAC0 /* UIButton+Handler.swift in Sources */,
 				A414FCF31EB5490A008FCAC0 /* PurchaseButtonHeaderTableViewCell.swift in Sources */,
+				4CE73A2F1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift in Sources */,
 				A414FCF41EB5490A008FCAC0 /* UICollectionViewCell+Utils.swift in Sources */,
 				A4F69A131EB552CC00155E32 /* NotificationsManager.swift in Sources */,
 				A414FCF51EB5490A008FCAC0 /* LoginPresenter.swift in Sources */,
@@ -3290,6 +3313,7 @@
 				A414FD1C1EB5490A008FCAC0 /* BrandCollectionViewCell.swift in Sources */,
 				4CBC22D41ED330C200D06937 /* PurchasePresenter.swift in Sources */,
 				A414FD1D1EB5490A008FCAC0 /* ShoppingRequestsViewController.swift in Sources */,
+				4CE73A3B1ED49522002DF331 /* RatingPresenter.swift in Sources */,
 				A414FD1E1EB5490A008FCAC0 /* BoxDetailHeaderCollectionReusableView.swift in Sources */,
 				A414FD1F1EB5490A008FCAC0 /* Rating2ViewController.swift in Sources */,
 				A414FD201EB5490A008FCAC0 /* SearchContainerViewController.swift in Sources */,
@@ -3325,6 +3349,7 @@
 				A414FDB71EB54A5D008FCAC0 /* PurchaseViewController.swift in Sources */,
 				A414FDB81EB54A5D008FCAC0 /* ShoppingBoxEmptyView.swift in Sources */,
 				A414FDB91EB54A5D008FCAC0 /* CGOperations.swift in Sources */,
+				4CE73A341ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */,
 				A414FDBA1EB54A5D008FCAC0 /* HighlightsTableViewCell.swift in Sources */,
 				A414FDBB1EB54A5D008FCAC0 /* Colors.swift in Sources */,
 				A414FDBC1EB54A5D008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */,
@@ -3349,6 +3374,7 @@
 				A414FDCE1EB54A5D008FCAC0 /* ProfileMeasureTableViewCell.swift in Sources */,
 				A414FDCF1EB54A5D008FCAC0 /* BrandContactViewController.swift in Sources */,
 				A414FDD01EB54A5D008FCAC0 /* BrandsTableViewCell.swift in Sources */,
+				4CE73A381ED49443002DF331 /* PurchaseRating.swift in Sources */,
 				A414FDD11EB54A5D008FCAC0 /* MiniProductsTableViewCell.swift in Sources */,
 				4C294B941ED390E500DF83EF /* WishlistPresenter.swift in Sources */,
 				A414FDD21EB54A5D008FCAC0 /* Array+Util.swift in Sources */,
@@ -3402,6 +3428,7 @@
 				A414FDFF1EB54A5D008FCAC0 /* BrandContactLocationTableViewCell.swift in Sources */,
 				A414FE001EB54A5D008FCAC0 /* UIButton+Handler.swift in Sources */,
 				A414FE011EB54A5D008FCAC0 /* PurchaseButtonHeaderTableViewCell.swift in Sources */,
+				4CE73A301ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift in Sources */,
 				A414FE021EB54A5D008FCAC0 /* UICollectionViewCell+Utils.swift in Sources */,
 				A414FE031EB54A5D008FCAC0 /* LoginPresenter.swift in Sources */,
 				A414FE041EB54A5D008FCAC0 /* SearchBrandCollectionViewCell.swift in Sources */,
@@ -3450,6 +3477,7 @@
 				A414FE2B1EB54A5D008FCAC0 /* ShoppingRequestsViewController.swift in Sources */,
 				4CBC22D51ED330C200D06937 /* PurchasePresenter.swift in Sources */,
 				A414FE2C1EB54A5D008FCAC0 /* BoxDetailHeaderCollectionReusableView.swift in Sources */,
+				4CE73A3C1ED49522002DF331 /* RatingPresenter.swift in Sources */,
 				A414FE2D1EB54A5D008FCAC0 /* Rating2ViewController.swift in Sources */,
 				A414FE2E1EB54A5D008FCAC0 /* SearchContainerViewController.swift in Sources */,
 				A414FE2F1EB54A5D008FCAC0 /* BoxDetailPresenter.swift in Sources */,
@@ -3488,6 +3516,7 @@
 				4C294B9F1ED3986F00DF83EF /* WishlistManager.swift in Sources */,
 				4CB29DE81E5B64FC007FA758 /* CGOperations.swift in Sources */,
 				4C2F24F81E6623020043A90B /* HighlightsTableViewCell.swift in Sources */,
+				4CE73A2E1ED481E2002DF331 /* PurchaseRequestFeedbackManager.swift in Sources */,
 				A4422AD61DED004200A2593B /* Colors.swift in Sources */,
 				4C459F1C1E636EA00076D962 /* SearchBrandsTableViewCell.swift in Sources */,
 				4C278CC51E718EB300C80E8D /* CartViewController.swift in Sources */,
@@ -3501,6 +3530,7 @@
 				D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */,
 				4C4DB5751E68C0C2005D44C1 /* ProductOptionsTableViewCell.swift in Sources */,
 				D4C0D6691DB6B32E007C3113 /* ViewUtil.swift in Sources */,
+				4CE73A321ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */,
 				D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				4C3EA3DF1EC246BE005C47B7 /* BoxProductTableViewCell.swift in Sources */,
 				4CEB6BE71ECAB5D500F72828 /* BrandPresenter.swift in Sources */,
@@ -3510,6 +3540,7 @@
 				4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */,
 				D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */,
 				4C2063D71EB3E65A00F01CF9 /* CollectionSegmentedControlView.swift in Sources */,
+				4CE73A3A1ED49522002DF331 /* RatingPresenter.swift in Sources */,
 				4CAEA95C1E6F483D00FC65BD /* ProfileMeasureTableViewCell.swift in Sources */,
 				4CA82EB21E770985002C495B /* BrandContactViewController.swift in Sources */,
 				4CDBE9501E69F5CB00715226 /* BrandsTableViewCell.swift in Sources */,
@@ -3580,6 +3611,7 @@
 				4C8AAF2C1E5F845C00258116 /* CollectionPickerController.swift in Sources */,
 				A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */,
 				4CDBE9441E69A52A00715226 /* ProductBrandTableViewCell.swift in Sources */,
+				4CE73A361ED49443002DF331 /* PurchaseRating.swift in Sources */,
 				2F70E8341DC969EC000AB03B /* OrderTableViewCell.swift in Sources */,
 				4C2F24EB1E6602A00043A90B /* UITableViewCell+Utils.swift in Sources */,
 				4CC40F311EBB76C200333245 /* BoxTableViewCell.swift in Sources */,

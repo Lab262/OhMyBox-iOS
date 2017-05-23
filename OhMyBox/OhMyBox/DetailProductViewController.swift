@@ -143,7 +143,7 @@ class DetailProductViewController: UIViewController {
             )
             self.boxButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
         }
-        
+
     }
     
     

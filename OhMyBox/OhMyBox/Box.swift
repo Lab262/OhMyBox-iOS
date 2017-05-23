@@ -14,6 +14,7 @@ class Box: PFObject {
     @NSManaged var price: NSNumber
     @NSManaged var name: String
     @NSManaged var boxDescription: String
+    @NSManaged var brand: Brand
     
     var products: [AnyObject]?
     

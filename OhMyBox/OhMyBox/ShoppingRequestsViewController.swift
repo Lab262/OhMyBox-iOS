@@ -25,7 +25,6 @@ class ShoppingRequestsViewController: UIViewController {
         registerNibs()
         
         setUpEmptyView()
-        setUpTableView()
         
         footerView.backgroundColor = .clear
         footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
@@ -43,10 +42,6 @@ class ShoppingRequestsViewController: UIViewController {
         tableView.registerNibFrom(BoxRequestTableViewCell.self)
     }
     
-    func setUpTableView() {
-        
-    }
-    
     func setUpEmptyView() {
         isEmptyInfo = (#imageLiteral(resourceName: "empty_requests"), "Opa, você precisa fazer umas comprinhas", "Tem vários produtos que são a sua cara aqui na OH MY BOX, não se reprima!", nil)
         
@@ -54,6 +49,20 @@ class ShoppingRequestsViewController: UIViewController {
         emptyView.buttonHandler = { button in
             self.dismiss(animated: true, completion: nil)
             NotificationCenter.default.post(name: Notifications.selectHomeViewController, object: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == SegueIdentifiers.shoppingRequestsToRating {
+            
+            let vc = segue.destination as! RatingContainerViewController
+            
+            if let request = presenter.selectedRequest {
+                
+                vc.presenter.startRating(purchaseRequest: request)
+            }
+            
         }
     }
 }
@@ -187,7 +196,17 @@ extension ShoppingRequestsViewController {
     func generateFooterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RequestFooterTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RequestFooterTableViewCell.identifier) as! RequestFooterTableViewCell
         cell.buttonHandler = { button in
-            self.performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRating, sender: self)
+            
+            let request = self.presenter.purchaseRequests[indexPath.section]
+            self.presenter.selectedRequest = request
+            
+            request.box.brand.fetchInBackground(block: { (object, error) in
+                
+                guard let brand = object as? Brand else { return }
+                
+                request.box.brand = brand
+                self.performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRating, sender: self)
+            })
         }
         return cell
     }

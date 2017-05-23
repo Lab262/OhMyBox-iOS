@@ -21,12 +21,12 @@ class RequestsPresenter: NSObject {
         
         didSet {
             
-            purchaseRequests.sort { (a, b) -> Bool in
-                a.createdAt! > b.createdAt!
-            }
+            purchaseRequests.sort { $0.createdAt! > $1.createdAt! }
             view?.reloadData()
         }
     }
+    
+    var selectedRequest: PurchaseRequest?
     
     func loadPurchaseRequests() {
         

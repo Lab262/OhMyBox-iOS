@@ -34,6 +34,7 @@ enum RegisterError: Error {
 struct UserDefaultsKeys {
     
     static let cartBoxes = "cartBoxes"
+    static let purchaseRequestFeedbacks = "purchaseRequestFeedbacks"
 }
 
 // MARK: Segue Identifiers

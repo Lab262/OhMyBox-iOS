@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = initialViewController
         
         WishlistManager.shared.loadWishlist()
+        PurchaseRequestFeedbackManager.shared.loadFeedbackOptions()
         
         return true
     }

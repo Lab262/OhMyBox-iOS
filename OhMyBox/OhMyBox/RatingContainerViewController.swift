@@ -30,13 +30,13 @@ class RatingContainerViewController: UIViewController {
             return offset
         }
     }
+
+    var presenter = RatingPresenter()
     
     @IBOutlet weak var rating1LeadingConstraint: NSLayoutConstraint!
     @IBOutlet var ratingContainers: [UIView]!
     
     let rating2Info: Rating2ViewController.Info = (#imageLiteral(resourceName: "rating_logo"), "BOLADO URBAN")
-    
-    var rating: Int?
     
     weak var rating1ViewController: Rating1ViewController! {
         didSet {
@@ -48,14 +48,14 @@ class RatingContainerViewController: UIViewController {
     
     weak var rating2ViewController: Rating2ViewController! {
         didSet {
+            
             rating2ViewController.info = rating2Info
             rating2ViewController.rateHandler = { rating in
-                self.rating = rating
+                
+                self.presenter.setRating(rating)
                 self.setPresentedController(.rating3)
                 
-                if let rating = self.rating {
-                    self.rating3ViewController.info = (self.rating2Info.brandImage, rating)
-                }
+                self.rating3ViewController.info = (self.rating2Info.brandImage, rating)
             }
         }
     }
@@ -63,7 +63,13 @@ class RatingContainerViewController: UIViewController {
     weak var rating3ViewController: Rating3ViewController! {
         didSet {
             rating3ViewController.doneButtonHandler = { button in
-                self.dismiss(animated: true, completion: nil)
+                
+                let feedbackOptions = self.rating3ViewController.selectedButtonIndexes.map {
+                    
+                    PurchaseRequestFeedbackManager.shared.feedbackOptions[$0]
+                }
+                self.presenter.setFeedbackOptions(feedbackOptions)
+                self.presenter.sendRating()
             }
         }
     }
@@ -81,7 +87,8 @@ class RatingContainerViewController: UIViewController {
         }
         
         getChildViewControllersReferences()
-        // Do any additional setup after loading the view.
+        
+        presenter.view = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,20 +97,34 @@ class RatingContainerViewController: UIViewController {
     }
     
     func getChildViewControllersReferences() {
+        
         for vc in childViewControllers {
+        
             if vc is Rating1ViewController {
+            
                 rating1ViewController = vc as! Rating1ViewController
             } else if vc is Rating2ViewController {
+                
                 rating2ViewController = vc as! Rating2ViewController
             } else if vc is Rating3ViewController {
+               
                 rating3ViewController = vc as! Rating3ViewController
             }
         }
     }
     
     func setPresentedController(_ controller: RateControllers) {
+        
         rating1LeadingConstraint.constant = controller.presentedLeadingOffset
         switchAnimator.addAnimations(switchAnimation)
         switchAnimator.startAnimation()
+    }
+}
+
+extension RatingContainerViewController: RatingView {
+    
+    func dismiss() {
+
+        self.dismiss(animated: true, completion: nil)
     }
 }
