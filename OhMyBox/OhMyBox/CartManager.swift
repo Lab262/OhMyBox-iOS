@@ -31,6 +31,12 @@ class CartManager: NSObject {
         let cartBoxes: [Box] = cartBoxReflections.flatMap { (reflection) -> Box in
             
             let box = Box(className: Box.parseClassName(), dictionary: reflection)
+            
+            let brandReflection = reflection["brand"] as? [String: Any]
+            
+            box.brand = Brand(className: Brand.parseClassName(), dictionary: brandReflection)
+            box.brand.objectId = brandReflection?["objectId"] as? String
+            
             box.objectId = reflection["objectId"] as? String
             
             return box

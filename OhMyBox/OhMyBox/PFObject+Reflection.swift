@@ -23,7 +23,13 @@ extension PFObject {
         
         for key in allKeys where !(self[key] is PFRelation) {
             
-            reflection[key] = self[key]
+            if let pfobject = self[key] as? PFObject {
+                
+                reflection[key] = pfobject.reflection
+            } else {
+                
+                reflection[key] = self[key]
+            }
         }
         
         return reflection
