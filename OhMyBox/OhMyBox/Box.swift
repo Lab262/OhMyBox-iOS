@@ -16,9 +16,12 @@ class Box: PFObject {
     @NSManaged var boxDescription: String
     @NSManaged var brand: Brand
     
-    var products: [AnyObject]?
+    var products: [Product] = []
     
-    
+    var productsRelation: PFRelation<Product> {
+        
+        return self.relation(forKey: "products") as! PFRelation<Product>
+    }
     
     override func isEqual(_ object: Any?) -> Bool {
         
@@ -28,6 +31,26 @@ class Box: PFObject {
         } else {
             
             return super.isEqual(object)
+        }
+    }
+    
+    func queryProducts(completionHandler: (([Product]?) -> ())? = nil) {
+        
+        productsRelation.query().findObjectsInBackground { (products, error) in
+            
+            if let products = products {
+                
+                self.products = products
+                for product in self.products {
+                    
+                    do {
+                        try product.queryPhotosSync()
+                    } catch {
+                        
+                    }
+                }
+            }
+            completionHandler?(products)
         }
     }
 }

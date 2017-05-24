@@ -48,7 +48,7 @@ class WishlistViewController: UIViewController {
         
         let box = presenter.favoriteBoxes[indexPath.row - 1]
         
-        cell.info = (box.name, box.boxDescription, box.price.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        cell.info = (box.name, box.boxDescription, box.price.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), box.products.map { $0.photos.object(at: 0) })
         
         return cell
     }

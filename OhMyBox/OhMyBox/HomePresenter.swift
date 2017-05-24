@@ -32,9 +32,14 @@ class HomePresenter: NSObject {
             
             if let boxes = objects as? [Box] {
                 
-                self.boxes = boxes
-                self.view?.reloadData()
-                print("lodaded")
+                for box in boxes {
+                    
+                    box.queryProducts() { (_) in
+                        
+                        self.boxes.append(box)
+                        self.view?.reloadData()
+                    }
+                }
             } else {
                 
             }

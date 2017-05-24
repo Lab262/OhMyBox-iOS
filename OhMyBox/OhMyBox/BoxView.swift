@@ -6,11 +6,12 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
+import Parse
 import UIKit
 
 class BoxView: UIView {
 
-    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage, productImages: [UIImage])
+    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage, productImages: [PFFile?])
     
     @IBOutlet var view: UIView!
     
@@ -63,9 +64,14 @@ class BoxView: UIView {
         priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
         brandImageView.image = info?.brandImage
         
+        let productImagesCount = info?.productImages.count ?? 0
+        
+        categoryCountLabel.text = "\(productImagesCount) categoria" + (productImagesCount == 1 ? "" : "s")
+        
         for i in 0..<productImageViews.count {
             
-            productImageViews[i].image = info?.productImages.object(at: i)
+            guard let file = info?.productImages.object(at: i) as? PFFile else { continue }
+            productImageViews[i].loadPFFile(file)
         }
         
     }

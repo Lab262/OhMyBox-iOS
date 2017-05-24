@@ -79,7 +79,8 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         let isInWishlist = WishlistManager.shared.boxIsInWishlist(box)
         cell.boxView.setLikeButtonSelected(isInWishlist)
         
-        cell.info = (box.name, box.boxDescription, box.price.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        
+        cell.info = (box.name, box.boxDescription, box.price.doubleValue, #imageLiteral(resourceName: "brand_placeholder_image"), box.products.map { $0.photos.object(at: 0) })
         
         cell.layer.cornerRadius = 3
         
