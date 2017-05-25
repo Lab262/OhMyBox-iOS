@@ -94,7 +94,6 @@
                         <outlet property="navigationBarView" destination="rsw-05-hZM" id="5rD-C0-Wp5"/>
                         <outlet property="tableView" destination="OF2-9x-pJh" id="nag-aI-bQR"/>
                         <segue destination="AYZ-9D-ZUt" kind="show" identifier="goToBrandDetail" id="pHj-kN-S82"/>
-                        <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="BYE-Rs-ycl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXX-qs-1K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,7 +144,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yke-7u-LLO">
-                                        <rect key="frame" x="102.5" y="185" width="171" height="24"/>
+                                        <rect key="frame" x="103" y="185" width="171" height="24"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -263,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YY-tb-cA6">
-                                        <rect key="frame" x="115" y="29" width="145.5" height="20.5"/>
+                                        <rect key="frame" x="115.5" y="29.5" width="145.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -337,21 +336,12 @@
                         <outlet property="searchBarTopConstraint" destination="Wj4-GW-kET" id="KU9-R2-ccf"/>
                         <outlet property="tableView" destination="QzP-WY-RLA" id="jIB-Q7-OBb"/>
                         <segue destination="OXc-UR-xWl" kind="show" identifier="goToProductDetail" id="ODc-aA-aVd"/>
-                        <segue destination="Pq7-hS-a8H" kind="show" identifier="goProductsView" id="Qsl-tW-DYd"/>
                         <segue destination="oPY-7F-LaV" kind="show" identifier="brandDetailToContact" id="gef-Ym-O0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3N-RD-wqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.5999999999999" y="65.217391304347828"/>
-        </scene>
-        <!--RecommendedView-->
-        <scene sceneID="1n4-Zs-HGf">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="RecommendedView" storyboardName="Home" referencedIdentifier="RecommendedView" id="Pq7-hS-a8H" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6QU-n4-1HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="898" y="858"/>
         </scene>
         <!--Brand Contact View Controller-->
         <scene sceneID="zaF-Cg-rOg">
@@ -424,7 +414,4 @@
         <image name="ic_button_back" width="28" height="28"/>
         <image name="profile_dummy" width="34" height="26"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Qsl-tW-DYd"/>
-    </inferredMetricsTieBreakers>
 </document>

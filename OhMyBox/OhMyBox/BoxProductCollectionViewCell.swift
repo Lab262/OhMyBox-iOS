@@ -48,7 +48,7 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
         if let file = info?.imageFile {
             imageView.loadPFFile(file)
         }
-        nameLabel.text = info?.name
+        nameLabel.text = info?.name.capitalized
     }
     
     func setChecked(_ checked: Bool) {

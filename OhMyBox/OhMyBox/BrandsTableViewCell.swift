@@ -69,7 +69,7 @@ extension BrandsTableViewCell: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BrandCollectionViewCell.identifier, for: indexPath) as! BrandCollectionViewCell
         
         let brand = brands[indexPath.item]
-        cell.info = (brand.name!, brand.title!, #imageLiteral(resourceName: "brand_placeholder_image"))
+        cell.info = (brand.name, brand.title, brand.photo)
         
         return cell
     }

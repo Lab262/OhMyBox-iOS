@@ -10,8 +10,6 @@ import UIKit
 
 class BrandDetailViewController: UIViewController {
     
-    
-    
 // Mark: - Outlets
     let gradientPlaceholderColors = [UIColor.colorWithHexString("A87760").withAlphaComponent(0.63), UIColor.colorWithHexString("1A130F")]
     
@@ -88,7 +86,11 @@ class BrandDetailViewController: UIViewController {
         brandNameTopLabel.text = presenter.brandInfo?.name
         brandNameBottomLabel.text = presenter.brandInfo?.title
         brandDescriptionLabel.text = presenter.brandInfo?.brandDescription
-        brandImageView.image = presenter.brandInfo?.brandImage
+        
+        if let file = presenter.brandInfo?.brandImageFile {
+            
+            brandImageView.loadPFFile(file)
+        }
     }
     
     func reloadBlurAnimation() {

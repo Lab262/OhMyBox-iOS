@@ -26,7 +26,7 @@ class HomePresenter: NSObject {
     
     func loadBoxes() {
         
-        let query = PFQuery(className: Box.parseClassName())
+        let query = PFQuery(className: Box.parseClassName()).includeKey("brand")
         
         query.findObjectsInBackground { (objects, error) in
             

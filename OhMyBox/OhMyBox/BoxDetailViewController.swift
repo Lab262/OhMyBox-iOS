@@ -52,6 +52,16 @@ class BoxDetailViewController: UIViewController {
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: collectionViewEdgeMargin, bottom: collectionViewBottomMargin, right: collectionViewEdgeMargin)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == SegueIdentifiers.boxDetailToProductDetail {
+            
+            let vc = segue.destination as! ProductDetailViewController
+            
+            vc.presenter.product = presenter.selectedProduct
+        }
+    }
+    
 }
 
 extension BoxDetailViewController: UICollectionViewDataSource {
@@ -132,6 +142,11 @@ extension BoxDetailViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let product = presenter.selectedCategoryProducts[indexPath.item]
+        
+        presenter.selectedProduct = product
+        
+        performSegue(withIdentifier: SegueIdentifiers.boxDetailToProductDetail, sender: self)
     }
     
 }

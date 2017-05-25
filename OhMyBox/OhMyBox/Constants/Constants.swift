@@ -61,6 +61,9 @@ struct SegueIdentifiers {
     
     // From purchase
     static let purchaseToPurchaseSuccessful = "purchaseToPurchaseSuccessful"
+    
+    // From box detail
+    static let boxDetailToProductDetail = "boxDetailToProductDetail"
 }
 
 // MARK: Notification Names

@@ -11,7 +11,7 @@ import UIKit
 
 class BoxView: UIView {
 
-    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage, productImages: [PFFile?])
+    typealias Info = (title: String, description: String, price: Double, brandImageFile: PFFile, productImages: [PFFile?])
     
     @IBOutlet var view: UIView!
     
@@ -62,7 +62,11 @@ class BoxView: UIView {
         titleLabel.text = info?.title
         descriptionLabel.attributedText = info?.description.with(lineSpacing: -9)
         priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
-        brandImageView.image = info?.brandImage
+        
+        if let file = info?.brandImageFile {
+            
+            brandImageView.loadPFFile(file)
+        }
         
         let productImagesCount = info?.productImages.count ?? 0
         

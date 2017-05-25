@@ -1,5 +1,5 @@
 //
-//  DetailProductViewController.swift
+//  ProductDetailViewController.swift
 //  OhMyBox
 //
 //  Created by Felipe perius on 24/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailProductViewController: UIViewController {
+class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBarView: IconNavigationBar!
@@ -29,7 +29,8 @@ class DetailProductViewController: UIViewController {
     let navigationBarHeight: CGFloat = 64
     let bottomMargin: CGFloat = 40.0
     
-    var product = Product()
+    var presenter = ProductDetailPresenter()
+    
     var buttonIndexPath = IndexPath.init(row: 3, section: 0)
     var isSelect = true
     
@@ -42,6 +43,8 @@ class DetailProductViewController: UIViewController {
         setUpNavigationBar()
         setUpTableView()
         setUpBlurAnimator()
+        
+        productImageView.loadPFFile(presenter.product.photos[0])
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -57,7 +60,7 @@ class DetailProductViewController: UIViewController {
         productImageBlurView = productImageView.blurWithStyle(nil)
         blurAnimator = UIViewPropertyAnimator(duration: 2.0, curve: .linear, animations: {})
         
-        NotificationCenter.default.addObserver(self, selector: #selector(DetailProductViewController.reloadBlurAnimation), name: .UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ProductDetailViewController.reloadBlurAnimation), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +88,7 @@ class DetailProductViewController: UIViewController {
     }
     
     func setUpNavigationBar() {
+        productNavbarTitleLabel.text = presenter.product.name
         navigationBarView.titleLabel.text = ""
         navigationBarView.view.backgroundColor = navigationBarView.view.backgroundColor?.withAlphaComponent(0.0)
     }
@@ -98,55 +102,6 @@ class DetailProductViewController: UIViewController {
 //        self.boxButton.setImage(#imageLiteral(resourceName: "boxSelected_button"), for: .selected)
     }
     
-    
-    @IBAction func addToCart(_ sender: Any) {
-        self.changeBoxButtonState()
-    }
-    
-    @IBAction func setFavorite(_ sender: Any) {
-        self.changeFavoriteButtonState()
-        
-    }
-    
-    func changeFavoriteButtonState() {
-        if self.likeButton.isSelected {
-            self.likeButton.isSelected = false
-            
-            self.likeButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
-            )
-            self.likeButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
-            
-            
-        } else {
-            self.likeButton.isSelected = true
-            
-            self.likeButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
-            )
-            self.likeButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
-        }
-    }
-    
-    func changeBoxButtonState() {
-        
-        if self.boxButton.isSelected {
-            self.boxButton.isSelected = false
-            
-            self.boxButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
-            )
-            self.boxButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
-            
-            
-        } else {
-            self.boxButton.isSelected = true
-            
-            self.boxButton.bouncingAnimation(true, duration: 0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0, animationOptions: .curveEaseIn
-            )
-            self.boxButton.fadeIn(0.1, delay: 0.0, completion: {finished in}, finalAlpha: 1.0)
-        }
-
-    }
-    
-    
     func registerNibs() {
         tableView.registerNibFrom(ProductLabelTableViewCell.self)
         tableView.registerNibFrom(ProductOptionsTableViewCell.self)
@@ -157,8 +112,7 @@ class DetailProductViewController: UIViewController {
     func generateProductLabelCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductLabelTableViewCell.identifier) as! ProductLabelTableViewCell
         
-        cell.name = "Capa tropical"
-        cell.price = 40.0
+        cell.name = presenter.product.name
         
         return cell
     }
@@ -175,17 +129,17 @@ class DetailProductViewController: UIViewController {
     func generateProductDetailsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.identifier) as! ProductDetailTableViewCell
         
-        cell.productDescription = "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis."
-        cell.productDetails = "Blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá"
+        cell.productDescription = presenter.product.productDescription
+        cell.productDetails = presenter.product.productDetail
         
         let buttonsHandler: UIButton.ButtonHandler = { _ in
             
-            let contentOffset = tableView.contentOffset
+//            let contentOffset = tableView.contentOffset
             
             tableView.beginUpdates()
 //            tableView.setContentOffset(contentOffset, animated: false)
             tableView.endUpdates()
-            tableView.setContentOffset(contentOffset, animated: true)
+//            tableView.setContentOffset(contentOffset, animated: true)
         }
         
         cell.descriptionButtonHandler = buttonsHandler
@@ -197,8 +151,8 @@ class DetailProductViewController: UIViewController {
     func generateProductBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductBrandTableViewCell.identifier) as! ProductBrandTableViewCell
         
-        cell.brandNameTopLine = "STAY CLOSE"
-        cell.brandNameBottomLine = "Indie Store"
+        cell.brandNameTopLine = presenter.product.brand.name
+        cell.brandNameBottomLine = presenter.product.brand.title
         
         return cell
     }
@@ -213,7 +167,7 @@ class DetailProductViewController: UIViewController {
     
 }
 
-extension DetailProductViewController: UITableViewDataSource {
+extension ProductDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -235,7 +189,7 @@ extension DetailProductViewController: UITableViewDataSource {
     }
 }
 
-extension DetailProductViewController: UITableViewDelegate {
+extension ProductDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -254,7 +208,7 @@ extension DetailProductViewController: UITableViewDelegate {
     
 }
 
-extension DetailProductViewController: UIScrollViewDelegate {
+extension ProductDetailViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         

@@ -34,6 +34,8 @@ class BoxDetailPresenter: NSObject {
         })
     }
     
+    var selectedProduct: Product?
+    
     var view: BoxDetailView?
     
     var boxPlaceholderInfo: BoxDetailHeaderCollectionReusableView.Info {

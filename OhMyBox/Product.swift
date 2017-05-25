@@ -13,6 +13,8 @@ class Product: PFObject {
     @NSManaged var name: String
     @NSManaged var brand: Brand
     @NSManaged var productType: String
+    @NSManaged var productDescription: String
+    @NSManaged var productDetail: String
     
     var photos: [PFFile] = []
     
@@ -37,10 +39,7 @@ class Product: PFObject {
         
         let photoObjects = try photosRelation.query().findObjects()
         
-        let photos = photoObjects.map { $0.photo }
-        
-        self.photos = photos
-        
+        self.photos = photoObjects.map { $0.photo }
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class BrandCollectionViewCell: UICollectionViewCell {
     
@@ -22,7 +23,7 @@ class BrandCollectionViewCell: UICollectionViewCell {
         return "BrandCollectionViewCell"
     }
     
-    typealias Info = (brandName: String, brandDescription: String, brandImage: UIImage?)
+    typealias Info = (brandName: String, brandDescription: String, brandImageFile: PFFile)
     
     @IBOutlet weak var brandNameLabel: UILabel!
     @IBOutlet weak var brandDescriptionLabel: UILabel!
@@ -86,6 +87,10 @@ class BrandCollectionViewCell: UICollectionViewCell {
         
         brandNameLabel.text = info?.brandName
         brandDescriptionLabel.text = info?.brandDescription
-        brandImageView.image = info?.brandImage
+        
+        if let file = info?.brandImageFile {
+            
+            brandImageView.loadPFFile(file)
+        }
     }
 }
