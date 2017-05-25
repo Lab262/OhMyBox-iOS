@@ -27,6 +27,13 @@ class BoxDetailPresenter: NSObject {
         }
     }
     
+    var selectedCategoryProducts: [Product] {
+        
+        return box.products.filter({ (product) -> Bool in
+            return product.productType == self.box.productTypes[self.selectedCategoryIndex]
+        })
+    }
+    
     var view: BoxDetailView?
     
     var boxPlaceholderInfo: BoxDetailHeaderCollectionReusableView.Info {

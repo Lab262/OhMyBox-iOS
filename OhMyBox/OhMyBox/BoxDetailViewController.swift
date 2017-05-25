@@ -61,14 +61,16 @@ extension BoxDetailViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2 //placeholder
+        return presenter.selectedCategoryProducts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BoxProductCollectionViewCell.identifier, for: indexPath) as! BoxProductCollectionViewCell
         
-        cell.info = (#imageLiteral(resourceName: "product_placeholder"), "Capinha cool")
+        let product = presenter.selectedCategoryProducts[indexPath.item]
+        
+        cell.info = (product.photos[0], product.name)
         
         let selectedCategoryIndex = self.presenter.selectedCategoryIndex
         
