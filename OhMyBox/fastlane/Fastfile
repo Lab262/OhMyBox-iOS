@@ -9,6 +9,7 @@ app_description = "Seja independente, pense fora da caixa e construa um estilo Ã
 
 
   platform :ios do
+
     before_all do
       ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
       ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
