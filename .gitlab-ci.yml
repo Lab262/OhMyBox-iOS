@@ -1,18 +1,37 @@
 before_script:
-  - if ! gem list "fastlane" -i > /dev/null 2>&1; then echo "fastlane not installed. Installing..."; gem install fastlane; fi 
-  - if ! gem list "cocoapods" -i > /dev/null 2>&1; then echo "cocoapods not installed. Installing..."; gem install cocoapods; fi   
+  - export LANG=en_US.UTF-8
+  - export LANGUAGE=en_US:en
+  - export LC_ALL=en_US.UTF-8
+  - if ! gem list "fastlane" -i > /dev/null 2>&1; then echo "fastlane not installed. Installing..."; gem install fastlane; fi
+  - if ! gem list "cocoapods" -i > /dev/null 2>&1; then echo "cocoapods not installed. Installing..."; gem install cocoapods; fi
   - cd OhMyBox
+
 stages:
   - deploy
+
+deploy_alpha:
+  stage: deploy
+  script:
+    - fastlane alpha
+  only:
+    - dev
+  tags:
+    - ios10
+
 deploy_beta:
   stage: deploy
   script:
     - fastlane beta
   only:
-    - dev
+    - test
+  tags:
+    - ios10
+
 deploy_production:
   stage: deploy
   script:
     - fastlane release
   only:
     - master
+  tags:
+    - ios10

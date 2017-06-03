@@ -1,75 +1,78 @@
-# Customise this file, documentation can be found here:
-# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
-# can also be listed using the `fastlane actions` command
-
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.105.3"
+fastlane_version "2.35.1"
 
 default_platform :ios
 
-platform :ios do
-  before_all do
-    ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
+app_base_bundle = "lab262.ohmybox.store"
+app_description = "Seja independente, pense fora da caixa e construa um estilo único com OhMyBox."
 
+
+  platform :ios do
+    before_all do
+      ENV['DEVELOPER_DIR'] = '/Applications/Xcode.app/'
+      ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+      ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "hhdv-tiws-qlmu-dvzc"
+      cocoapods
+    end
+
+    desc "Submit a new Alpha Build to Apple TestFlight"
+    desc "This will also make sure the profile is up to date"
+    lane :alpha do
+      app_final_bundle = app_base_bundle + ".dev"
+      match(type: "appstore", app_identifier: app_final_bundle) # more information: https://codesigning.guide
+      gym(scheme: app_final_bundle, include_bitcode: false, clean: true)
+      changelog_from_git_commits # this will generate the changelog based on your last commits
+      testflight(username: "thiago.mb@icloud.com",
+      team_name:"Thiago Bernardes",
+      beta_app_description: app_description,
+      beta_app_feedback_email: "tmb0710@gmail.com",
+      skip_submission: false,
+      skip_waiting_for_build_processing: false,
+      distribute_external: true,
+      changelog: "Novidades e melhorias de performance.",
+      groups: "Internal",
+      wait_processing_interval:1200)
+
+      slack(message: 'Successfully distributed a new TestFlight ALPHA build')
+    end
+
+    desc "Submit a new Beta Build to Apple TestFlight"
+    desc "This will also make sure the profile is up to date"
+    lane :beta do
+      app_final_bundle = app_base_bundle + ".test"
+      match(type: "appstore", app_identifier: app_final_bundle) # more information: https://codesigning.guide
+      gym(scheme: app_final_bundle, include_bitcode: false, clean: true)
+      changelog_from_git_commits # this will generate the changelog based on your last commits
+      testflight(username: "thiago.mb@icloud.com",
+      team_name:"Thiago Bernardes",
+      beta_app_description: app_description,
+      beta_app_feedback_email: "tmb0710@gmail.com",
+      skip_submission: false,
+      skip_waiting_for_build_processing: false,
+      distribute_external: true,
+      changelog: "Novidades e melhorias de performance.",
+      groups: "Internal",
+      wait_processing_interval:1200)
+
+      slack(message: 'Successfully distributed a new TestFlight BETA build')
+    end
+
+    desc "Deploy a new version to the App Store"
+    lane :release do
+      app_final_bundle = app_base_bundle + ".production"
+      match(type: "appstore")
+      increment_version_number
+      gym(scheme: app_final_bundle, include_bitcode: false, clean: true)
+      deliver(username: "thiago.mb@icloud.com",team_name:"Thiago Bernardes",force: true,app_identifier:app_final_bundle)
+      slack(message: 'Successfully released a new App Store build')
+    end
+
+    after_all do |lane|
+
+    end
+
+    error do |lane, exception|
+
+    end
   end
-
-  desc "Runs all the tests"
-  lane :test do
-    scan(workspace:"OhMyBox.xcworkspace", scheme: "OhMyBox", devices: ["iPhone 6"], clean: true)
-  end
-
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    match(type: "appstore") # more information: https://codesigning.guide
-    increment_build_number
-    gym(scheme: "OhMyBox",include_bitcode: false, clean: true)
-    pilot(skip_waiting_for_build_processing: true, username: "thiago.mb@icloud.com",)
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
-  end
-  
-  desc "Deploy a new version to the App Store"
-  lane :release do
-    match(type: "appstore")
-    increment_version_number
-    # snapshot
-    gym(scheme: "OhMyBox",include_bitcode: false, clean: true)
-    deliver(force: true)
-    # frameit
-  end
-
-  # You can define as many lanes as you want
-
-  after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
-  end
-
-  error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
-  end
-end
-
-
-# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
-# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
-
-# fastlane reports which actions are used
-# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer
