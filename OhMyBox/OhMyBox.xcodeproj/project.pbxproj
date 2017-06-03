@@ -29,14 +29,6 @@
 		2F2999A81DE54ECA00D52203 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999A31DE54ECA00D52203 /* Poppins-Regular.ttf */; };
 		2F2999A91DE54ECA00D52203 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999A41DE54ECA00D52203 /* Poppins-SemiBold.ttf */; };
 		2F2999AB1DE56F7300D52203 /* wish_default_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2999AA1DE56F7300D52203 /* wish_default_image.png */; };
-		2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; };
-		2F2C8E101DDD02AE0002BB87 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2F2C8E111DDD02AE0002BB87 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; };
-		2F2C8E121DDD02AE0002BB87 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2F2C8E131DDD02AE0002BB87 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; };
-		2F2C8E141DDD02AE0002BB87 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; };
-		2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F2C8E201DDE310B0002BB87 /* imagePromo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2C8E1F1DDE310B0002BB87 /* imagePromo.png */; };
 		2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F33594E1DE38AE400540116 /* StatusOrderTableViewCell.swift */; };
 		2F3359511DE38AE400540116 /* StatusOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F33594F1DE38AE400540116 /* StatusOrderTableViewCell.xib */; };
@@ -442,10 +434,6 @@
 		A414FD2F1EB5490A008FCAC0 /* String+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8851E5E2BDA0065A293 /* String+CharacterSpacing.swift */; };
 		A414FD301EB5490A008FCAC0 /* PhotoProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */; };
 		A414FD311EB5490A008FCAC0 /* ShowProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */; };
-		A414FD331EB5490A008FCAC0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; };
-		A414FD341EB5490A008FCAC0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; };
-		A414FD351EB5490A008FCAC0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; };
-		A414FD361EB5490A008FCAC0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; };
 		A414FD391EB5490A008FCAC0 /* SearchHighlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C459F241E6372F70076D962 /* SearchHighlightsTableViewCell.xib */; };
 		A414FD3A1EB5490A008FCAC0 /* BrandContactHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA82EBD1E771A9C002C495B /* BrandContactHeaderTableViewCell.xib */; };
 		A414FD3B1EB5490A008FCAC0 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */; };
@@ -547,10 +535,6 @@
 		A414FD9C1EB5490A008FCAC0 /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */; };
 		A414FD9D1EB5490A008FCAC0 /* BrandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBE94B1E69F32B00715226 /* BrandCollectionViewCell.xib */; };
 		A414FD9E1EB5490A008FCAC0 /* RequestResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF71E71EFDD0093CC0E /* RequestResultsTableViewCell.xib */; };
-		A414FDA11EB5490A008FCAC0 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FDA21EB5490A008FCAC0 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FDA31EB5490A008FCAC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FDA41EB5490A008FCAC0 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A414FDB51EB54A5D008FCAC0 /* ProfileSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA9501E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift */; };
 		A414FDB61EB54A5D008FCAC0 /* WishlistCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAEA93B1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift */; };
 		A414FDB71EB54A5D008FCAC0 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA82ED11E773F97002C495B /* PurchaseViewController.swift */; };
@@ -688,10 +672,6 @@
 		A414FE3D1EB54A5D008FCAC0 /* String+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3B8851E5E2BDA0065A293 /* String+CharacterSpacing.swift */; };
 		A414FE3E1EB54A5D008FCAC0 /* PhotoProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4896F71DB80BDB00EADFFE /* PhotoProfileTableViewCell.swift */; };
 		A414FE3F1EB54A5D008FCAC0 /* ShowProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E36E931DEE74080012431F /* ShowProductTableViewCell.swift */; };
-		A414FE411EB54A5D008FCAC0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; };
-		A414FE421EB54A5D008FCAC0 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; };
-		A414FE431EB54A5D008FCAC0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; };
-		A414FE441EB54A5D008FCAC0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; };
 		A414FE471EB54A5D008FCAC0 /* SearchHighlightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C459F241E6372F70076D962 /* SearchHighlightsTableViewCell.xib */; };
 		A414FE481EB54A5D008FCAC0 /* BrandContactHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA82EBD1E771A9C002C495B /* BrandContactHeaderTableViewCell.xib */; };
 		A414FE4A1EB54A5D008FCAC0 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD370C01EA65AC800B73F68 /* LogoTableViewCell.xib */; };
@@ -793,10 +773,6 @@
 		A414FEAB1EB54A5D008FCAC0 /* ProfileTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CAEA9681E6F5B9D00FC65BD /* ProfileTableHeaderView.xib */; };
 		A414FEAC1EB54A5D008FCAC0 /* BrandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBE94B1E69F32B00715226 /* BrandCollectionViewCell.xib */; };
 		A414FEAD1EB54A5D008FCAC0 /* RequestResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5DFF71E71EFDD0093CC0E /* RequestResultsTableViewCell.xib */; };
-		A414FEB01EB54A5D008FCAC0 /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0E1DDD02AE0002BB87 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FEB11EB54A5D008FCAC0 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0B1DDD02AE0002BB87 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FEB21EB54A5D008FCAC0 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0C1DDD02AE0002BB87 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A414FEB31EB54A5D008FCAC0 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C8E0D1DDD02AE0002BB87 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4422AD31DECEF5500A2593B /* TextInputScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD21DECEF5500A2593B /* TextInputScrollView.swift */; };
 		A4422AD61DED004200A2593B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4422AD51DED004200A2593B /* Colors.swift */; };
 		A4D81D141DEBCF01008B269A /* AuthenticationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D81D131DEBCF01008B269A /* AuthenticationContainerViewController.swift */; };
@@ -855,51 +831,6 @@
 			remoteInfo = OhMyBox;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2F2C8E171DDD02AE0002BB87 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2F2C8E161DDD02AE0002BB87 /* FBSDKShareKit.framework in Embed Frameworks */,
-				2F2C8E101DDD02AE0002BB87 /* Bolts.framework in Embed Frameworks */,
-				2F2C8E121DDD02AE0002BB87 /* FBSDKCoreKit.framework in Embed Frameworks */,
-				2F2C8E141DDD02AE0002BB87 /* FBSDKLoginKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A414FDA01EB5490A008FCAC0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A414FDA11EB5490A008FCAC0 /* FBSDKShareKit.framework in Embed Frameworks */,
-				A414FDA21EB5490A008FCAC0 /* Bolts.framework in Embed Frameworks */,
-				A414FDA31EB5490A008FCAC0 /* FBSDKCoreKit.framework in Embed Frameworks */,
-				A414FDA41EB5490A008FCAC0 /* FBSDKLoginKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A414FEAF1EB54A5D008FCAC0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A414FEB01EB54A5D008FCAC0 /* FBSDKShareKit.framework in Embed Frameworks */,
-				A414FEB11EB54A5D008FCAC0 /* Bolts.framework in Embed Frameworks */,
-				A414FEB21EB54A5D008FCAC0 /* FBSDKCoreKit.framework in Embed Frameworks */,
-				A414FEB31EB54A5D008FCAC0 /* FBSDKLoginKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09D9C71CF9384ECC3FE12BB8 /* Pods-lab262.ohmybox.store.dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab262.ohmybox.store.dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lab262.ohmybox.store.dev/Pods-lab262.ohmybox.store.dev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1218,10 +1149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A414FD331EB5490A008FCAC0 /* FBSDKCoreKit.framework in Frameworks */,
-				A414FD341EB5490A008FCAC0 /* FBSDKShareKit.framework in Frameworks */,
-				A414FD351EB5490A008FCAC0 /* FBSDKLoginKit.framework in Frameworks */,
-				A414FD361EB5490A008FCAC0 /* Bolts.framework in Frameworks */,
 				9F566423BEB02CAC2BC7C62D /* Pods_lab262_ohmybox_store_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1230,10 +1157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A414FE411EB54A5D008FCAC0 /* FBSDKCoreKit.framework in Frameworks */,
-				A414FE421EB54A5D008FCAC0 /* FBSDKShareKit.framework in Frameworks */,
-				A414FE431EB54A5D008FCAC0 /* FBSDKLoginKit.framework in Frameworks */,
-				A414FE441EB54A5D008FCAC0 /* Bolts.framework in Frameworks */,
 				EC1CF18C17D934758CCD882E /* Pods_lab262_ohmybox_store_production.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1242,10 +1165,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F2C8E111DDD02AE0002BB87 /* FBSDKCoreKit.framework in Frameworks */,
-				2F2C8E151DDD02AE0002BB87 /* FBSDKShareKit.framework in Frameworks */,
-				2F2C8E131DDD02AE0002BB87 /* FBSDKLoginKit.framework in Frameworks */,
-				2F2C8E0F1DDD02AE0002BB87 /* Bolts.framework in Frameworks */,
 				FDB732E7771A5EAA76D98EEF /* Pods_lab262_ohmybox_store_dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2468,7 +2387,6 @@
 				A414FD321EB5490A008FCAC0 /* Frameworks */,
 				A414FD381EB5490A008FCAC0 /* Resources */,
 				A414FD9F1EB5490A008FCAC0 /* Fabric */,
-				A414FDA01EB5490A008FCAC0 /* Embed Frameworks */,
 				1212F349464D156AC1F01E47 /* [CP] Embed Pods Frameworks */,
 				0D0DFEF3F908FB6518D6DF9D /* [CP] Copy Pods Resources */,
 			);
@@ -2490,7 +2408,6 @@
 				A414FE401EB54A5D008FCAC0 /* Frameworks */,
 				A414FE461EB54A5D008FCAC0 /* Resources */,
 				A414FEAE1EB54A5D008FCAC0 /* Fabric */,
-				A414FEAF1EB54A5D008FCAC0 /* Embed Frameworks */,
 				FFB58BC7A4B3655BBF351F81 /* [CP] Embed Pods Frameworks */,
 				FF75A8362305796D63EC9BC9 /* [CP] Copy Pods Resources */,
 			);
@@ -2512,7 +2429,6 @@
 				A4F89AF61DA806C900949A35 /* Frameworks */,
 				A4F89AF71DA806C900949A35 /* Resources */,
 				A4B5CAAA1DA811FB003260BA /* Fabric */,
-				2F2C8E171DDD02AE0002BB87 /* Embed Frameworks */,
 				E87C73A551AF67827EF915CD /* [CP] Embed Pods Frameworks */,
 				1EC9CA560854B247ED8A6DA7 /* [CP] Copy Pods Resources */,
 			);
