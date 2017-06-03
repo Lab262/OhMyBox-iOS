@@ -6,39 +6,47 @@
 //  Copyright © 2016 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
-class Product: NSObject {
+class Product: PFObject {
     
-    var id: String?
-    var photo: String?
-    var photoImage: UIImage?
-    var price: String?
-    var descriptionProduc: String?
-    var detail: String?
+    @NSManaged var name: String
+    @NSManaged var brand: Brand
+    @NSManaged var productType: String
+    @NSManaged var productDescription: String
+    @NSManaged var productDetail: String
     
- 
+    var photos: [PFFile] = []
     
-    
-    required init(data: (Dictionary<String, AnyObject>)) {
-        super.init()
+    var photosRelation: PFRelation<PhotoObject> {
         
-      
-    }
- 
-    
-    override init() {
-        super.init()
+        return self.relation(forKey: "photos") as! PFRelation<PhotoObject>
     }
     
-    init (_id: String, _photo: String, _photoImage:UIImage, _price: String, _descriptionProduc: String, _detail: String) {
+    func queryPhotos(completionHandler: (([PFFile]) -> ())? = nil) {
         
-        self.id = _id
-        self.photo = _photo
-        self.photoImage = _photoImage
-        self.price = _price
-        self.descriptionProduc = _descriptionProduc
-        self.detail = _detail
+        photosRelation.query().findObjectsInBackground { (objects, error) in
+            
+            if let objects = objects {
+                
+                self.photos = objects.map { $0.photo }
+            }
+            completionHandler?(self.photos)
+        }
+    }
+    
+    func queryPhotosSync() throws {
         
+        let photoObjects = try photosRelation.query().findObjects()
+        
+        self.photos = photoObjects.map { $0.photo }
+    }
+}
+
+extension Product: PFSubclassing {
+    
+    public static func parseClassName() -> String {
+        
+        return "Product"
     }
 }

@@ -18,12 +18,17 @@ class HomeViewController: UIViewController {
     var filtered:[String] = []
     var allProduct = [Product]()
     
-    var highlightsCollectionViewDelegate: BoxesCollectionViewDataSource!
-    var newsCollectionViewDelegate: BoxesCollectionViewDataSource!
-    var salesCollectionViewDelegate: BoxesCollectionViewDataSource!
+    var highlightsCollectionViewDelegate: BoxesCollectionViewDataSource?
+    var newsCollectionViewDelegate: BoxesCollectionViewDataSource?
+    var salesCollectionViewDelegate: BoxesCollectionViewDataSource?
+    
+    var presenter = HomePresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.view = self
+        presenter.loadBoxes()
         
         registerNibs()
         setUpNavigationBar()
@@ -48,7 +53,7 @@ class HomeViewController: UIViewController {
     func setUpNavigationBar() {
      
         navigationController?.navigationBar.isHidden = true
-        navigationBarView.leftBarButton.isHidden = true
+        navigationBarView.showsLeftBarButton = false
         navigationBarView.layoutIfNeeded()
     }
     
@@ -79,7 +84,9 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let identifier = segue.identifier {
+        if let destination = segue.destination as? BoxDetailViewController {
+            
+            destination.presenter.box = presenter.selectedBox
         }
     }
     
@@ -97,14 +104,11 @@ extension HomeViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            let highlightsCell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-            cell = highlightsCell
+            cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &highlightsCollectionViewDelegate)
         case 1:
-            let newsCell = generateNewsCell(tableView, cellForRowAt: indexPath)
-            cell = newsCell
+            cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &newsCollectionViewDelegate)
         case 2:
-            let salesCell = generateSalesCell(tableView, cellForRowAt: indexPath)
-            cell = salesCell
+            cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &salesCollectionViewDelegate)
         default:
             cell = UITableViewCell()
         }
@@ -112,54 +116,27 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
-    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
+    func generateBoxesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, dataSourceReference: inout BoxesCollectionViewDataSource?) -> CollectionTableViewCell {
         
-        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
+        let cell = generateCollectionTableCell(tableView, cellForRowAt: indexPath)
         
         let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = [1, 2, 3]
         dataSource.collectionSelectionDelegate = self
-        salesCollectionViewDelegate = dataSource
+        dataSource.boxes = presenter.boxes
+        dataSourceReference = dataSource
         
         cell.collectionViewDataSource = dataSource
         cell.collectionViewDelegate = dataSource
         
-        
+        dataSource.boxButtonHandler = { indexPath in
+            
+            CartManager.shared.updateCart(withBox: dataSource.boxes[indexPath.item])
+        }
         
         return cell
     }
     
-    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
-        
-        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
-        
-        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = [1, 2, 3]
-        dataSource.collectionSelectionDelegate = self
-        highlightsCollectionViewDelegate = dataSource
-        
-        cell.collectionViewDataSource = dataSource
-        cell.collectionViewDelegate = dataSource
-        
-        return cell
-    }
-
-    func generateNewsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
-        
-        let cell = generateBoxesCell(tableView, cellForRowAt: indexPath)
-        
-        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
-        dataSource.boxes = [1, 2, 3]
-        dataSource.collectionSelectionDelegate = self
-        newsCollectionViewDelegate = dataSource
-        
-        cell.collectionViewDataSource = dataSource
-        cell.collectionViewDelegate = dataSource
-        
-        return cell
-    }
-    
-    func generateBoxesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
+    func generateCollectionTableCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         
@@ -260,6 +237,13 @@ extension HomeViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
         
+        if let dataSource = colletionViewDelegate as? BoxesCollectionViewDataSource {
+            
+            presenter.selectedBox = dataSource.boxes[indexPath.item]
+        } else {
+            
+            presenter.selectedBox = nil
+        }
         performSegue(withIdentifier: SegueIdentifiers.homeToBoxDetail, sender: self)
     }
 }
@@ -268,4 +252,8 @@ extension HomeViewController: CollectionViewSelectionDelegate {
 
 extension HomeViewController: HomeView {
     
+    func reloadData() {
+        
+        tableView.reloadData()
+    }
 }

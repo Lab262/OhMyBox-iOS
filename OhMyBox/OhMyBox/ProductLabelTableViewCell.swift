@@ -15,7 +15,7 @@ class ProductLabelTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 111.0
+        return 77
     }
     
     static var nibName: String {
@@ -23,7 +23,7 @@ class ProductLabelTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+//    @IBOutlet weak var priceLabel: UILabel!
     
     var name: String? {
         didSet {
@@ -31,16 +31,6 @@ class ProductLabelTableViewCell: UITableViewCell {
                 nameLabel.attributedText = name.with(characterSpacing: 1.88)
             } else {
                 nameLabel.attributedText = nil
-            }
-        }
-    }
-    
-    var price: Double? {
-        didSet {
-            if let price = price {
-                priceLabel.attributedText = String.stringFromPrice(price: price).with(characterSpacing: 1.88)
-            } else {
-                priceLabel.attributedText = nil
             }
         }
     }

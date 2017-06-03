@@ -21,16 +21,44 @@ extension Array {
         }
     }
     
+    func by(adding element: Element) -> [Element]  {
+        
+        var newArray = self
+        newArray.append(element)
+        
+        return newArray
+    }
+    
+    func indexOfElement(where closure: ((Element) -> (Bool))) -> Int? {
+        
+        for (i, element) in self.enumerated() {
+            
+            if closure(element) {
+                return i
+            }
+        }
+        
+        return nil
+    }
+    
 }
 
 extension Array where Element : Equatable {
+    
+    func by(removing element: Element) -> [Element] {
+        
+        var newArray = self
+        _ = newArray.remove(element)
+        
+        return newArray
+    }
     
     mutating func remove(_ element: Element) -> Element? {
         
         if let index = self.index(of: element) {
             
-            self.remove(at: index)
-            return self[index]
+            let element = self.remove(at: index)
+            return element
         } else {
             
             return nil

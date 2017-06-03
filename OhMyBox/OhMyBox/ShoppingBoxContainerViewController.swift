@@ -32,7 +32,7 @@ class ShoppingBoxContainerViewController: UIViewController {
     @IBOutlet weak var shoppingBoxContainer: UIView!
     @IBOutlet weak var shoppingRequestsContainer: UIView!
     
-    var shoppingBoxViewController: ShoppingBoxViewController!
+    var cartViewController: CartViewController!
     var shoppingRequestsViewController: ShoppingRequestsViewController!
     
     var startsInBox = true
@@ -59,9 +59,10 @@ class ShoppingBoxContainerViewController: UIViewController {
         let vcs = childViewControllers
         for vc in vcs {
             
-            if vc is ShoppingBoxViewController {
-                shoppingBoxViewController = vc as! ShoppingBoxViewController
-                shoppingBoxViewController.buyButtonHandler = { button in
+            if vc is CartViewController {
+                cartViewController = vc as! CartViewController
+                cartViewController.buyButtonHandler = { button in
+                    
                     self.performSegue(withIdentifier: SegueIdentifiers.shoppingBoxToPurchase, sender: self)
                 }
             } else if vc is ShoppingRequestsViewController {
@@ -96,6 +97,15 @@ class ShoppingBoxContainerViewController: UIViewController {
     
     @IBAction func closeButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == SegueIdentifiers.shoppingBoxToPurchase {
+            
+            let vc = segue.destination as! PurchaseViewController
+            vc.presenter.box = cartViewController.presenter.boxes.object(at: 0)
+        }
     }
     
 // Mark: - Notification Handlers

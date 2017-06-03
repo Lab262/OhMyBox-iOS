@@ -57,11 +57,11 @@ class ViewUtil: NSObject {
 
 extension UIView {
     
-    static func heightScaleProportion() -> CGFloat {
+    static var heightScaleProportion: CGFloat {
         return UIScreen.main.bounds.height / 667.0
     }
     
-    static func widthScaleProportion() -> CGFloat {
+    static var widthScaleProportion: CGFloat {
         return UIScreen.main.bounds.width / 375.0
     }
 }

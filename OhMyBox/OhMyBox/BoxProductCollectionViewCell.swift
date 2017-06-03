@@ -6,7 +6,7 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class BoxProductCollectionViewCell: UICollectionViewCell {
     
@@ -15,14 +15,14 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 173, height: 203) * UIView.widthScaleProportion()
+        return CGSize(width: 173, height: 203) * UIView.widthScaleProportion
     }
     
     static var nibName: String {
         return "BoxProductCollectionViewCell"
     }
     
-    typealias Info = (image: UIImage, name: String)
+    typealias Info = (imageFile: PFFile, name: String)
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -45,8 +45,10 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
 
     func updateInfo() {
         
-        imageView.image = info?.image
-        nameLabel.text = info?.name
+        if let file = info?.imageFile {
+            imageView.loadPFFile(file)
+        }
+        nameLabel.text = info?.name.capitalized
     }
     
     func setChecked(_ checked: Bool) {

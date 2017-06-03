@@ -6,19 +6,44 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 protocol HomeView {
     
+    func reloadData()
 }
 
 class HomePresenter: NSObject {
 
-    var view: HomeView
+    var boxes: [Box] = []
+    var selectedBox: Box?
+    var view: HomeView?
     
-    init(view: HomeView) {
+    override init() {
         
-        self.view = view
+        super.init()
+    }
+    
+    func loadBoxes() {
+        
+        let query = PFQuery(className: Box.parseClassName()).includeKey("brand")
+        
+        query.findObjectsInBackground { (objects, error) in
+            
+            if let boxes = objects as? [Box] {
+                
+                for box in boxes {
+                    
+                    box.queryProducts() { (_) in
+                        
+                        self.boxes.append(box)
+                        self.view?.reloadData()
+                    }
+                }
+            } else {
+                
+            }
+        }
     }
     
 }

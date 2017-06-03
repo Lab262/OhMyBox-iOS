@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class BrandCollectionViewCell: UICollectionViewCell {
     
@@ -22,10 +23,20 @@ class BrandCollectionViewCell: UICollectionViewCell {
         return "BrandCollectionViewCell"
     }
     
+    typealias Info = (brandName: String, brandDescription: String, brandImageFile: PFFile)
+    
     @IBOutlet weak var brandNameLabel: UILabel!
     @IBOutlet weak var brandDescriptionLabel: UILabel!
     @IBOutlet weak var brandImageView: UIImageView!
     @IBOutlet weak var followButton: UIButton!
+    
+    var info: Info? {
+        
+        didSet {
+            
+            updateInfo()
+        }
+    }
     
     var followAction: ((UIButton) -> ())?
     var following = false
@@ -42,7 +53,6 @@ class BrandCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     @IBAction func follow(_ sender: UIButton) {
@@ -73,4 +83,14 @@ class BrandCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    func updateInfo() {
+        
+        brandNameLabel.text = info?.brandName
+        brandDescriptionLabel.text = info?.brandDescription
+        
+        if let file = info?.brandImageFile {
+            
+            brandImageView.loadPFFile(file)
+        }
+    }
 }

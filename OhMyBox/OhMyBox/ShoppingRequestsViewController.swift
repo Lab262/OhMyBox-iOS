@@ -14,46 +14,36 @@ class ShoppingRequestsViewController: UIViewController {
     @IBOutlet weak var emptyView: ShoppingBoxEmptyView!
     
     var isEmptyInfo: ShoppingBoxEmptyView.Info?
-    var resultsInfo: ShoppingResultsTableViewCell.Info?
-    
-    var requestBrands: [Int] = []
-    var requests: [Int: [Any]] = [:] { // Brand: Products
-        didSet {
-            requestBrands = requests.keys.sorted()
-        }
-    }
     
     let sectionMargin: CGFloat = 31.0
     let footerView = UIView()
     
+    var presenter = RequestsPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
+        
         setUpEmptyView()
-        setUpTableView()
-        requests = [1: [1, 2, 3, 4], 2: [1], 3: [3, 5]]
+        
         footerView.backgroundColor = .clear
         footerView.frame.size = CGSize(width: view.frame.width, height: sectionMargin)
+        
+        presenter.view = self
+        
+        presenter.loadPurchaseRequests()
         // Do any additional setup after loading the view.
     }
 
     func registerNibs() {
-        tableView.registerNibFrom(ShoppingProductTableViewCell.self)
-        tableView.registerNibFrom(ShoppingRequestsHeaderTableViewCell.self)
-        tableView.registerNibFrom(ShoppingResultsTableViewCell.self)
-        tableView.registerNibFrom(ShoppingStatusTableViewCell.self)
-        tableView.registerNibFrom(ShoppingRequestFooterTableViewCell.self)
-        tableView.registerNibFrom(ShoppingPlusProductsTableViewCell.self)
-    }
-    
-    func setUpTableView() {
-        
+        tableView.registerNibFrom(RequestsHeaderTableViewCell.self)
+        tableView.registerNibFrom(RequestStatusTableViewCell.self)
+        tableView.registerNibFrom(RequestFooterTableViewCell.self)
+        tableView.registerNibFrom(BoxRequestTableViewCell.self)
     }
     
     func setUpEmptyView() {
-        isEmptyInfo = (#imageLiteral(resourceName: "empty_requests"), "Opa, você precisa fazer umas comprinhas", "Tem vários produtos que são a sua cara aqui na OH MY BOX, não se reprima!", { button in
-            self.showAllProducts()
-        })
+        isEmptyInfo = (#imageLiteral(resourceName: "empty_requests"), "Opa, você precisa fazer umas comprinhas", "Tem vários produtos que são a sua cara aqui na OH MY BOX, não se reprima!", nil)
         
         emptyView.info = isEmptyInfo
         emptyView.buttonHandler = { button in
@@ -62,78 +52,59 @@ class ShoppingRequestsViewController: UIViewController {
         }
     }
     
-    func showAllProducts() {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == SegueIdentifiers.shoppingRequestsToRating {
+            
+            let vc = segue.destination as! RatingContainerViewController
+            
+            if let request = presenter.selectedRequest {
+                
+                vc.presenter.startRating(purchaseRequest: request)
+            }
+            
+        }
     }
+}
+
+extension ShoppingRequestsViewController: RequestsView {
     
-    func productCellsCount(in section: Int) -> Int {
-        let brand = requestBrands[section]
-        let brandRequests = requests[brand]!
-        
-        let count = min(2, brandRequests.count)
-        
-        return count
-    }
-    
-    func extraProductCount(for brandIndex: Int) -> Int {
-        let brand = requestBrands[brandIndex]
-        let brandRequests = requests[brand]!
-        
-        let count = max(0, brandRequests.count - 2)
-        
-        return count
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 
 extension ShoppingRequestsViewController: UITableViewDataSource {
     
-    func updateIsTableViewHidden() {
-        let count = requestBrands.count
+    func updateIsTableViewHidden(sectionCount: Int) {
         
-        let isTableViewHidden = count == 0
+        let isTableViewHidden = sectionCount == 0
         tableView.isHidden = isTableViewHidden
         emptyView.isHidden = !isTableViewHidden
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        updateIsTableViewHidden()
-        return requestBrands.count
+        
+        let count = presenter.purchaseRequests.count
+        
+        updateIsTableViewHidden(sectionCount: count)
+        return count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let brand = requestBrands[section]
-        let brandRequests = requests[brand]!
-        
-        let footerCellsCount = 3
-        
-        return min(brandRequests.count, 3) + footerCellsCount
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell: UITableViewCell
         
-        let count = extraProductCount(for: indexPath.section)
-        let cellsCount = productCellsCount(in: indexPath.section)
-        
-        if count > 0 {
-            switch indexPath.row {
-            case 0..<cellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
-            case cellsCount: cell = generateExtraProductsCountCell(tableView, cellForRowAt: indexPath)
-            case cellsCount + 1: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
-            case cellsCount + 2: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
-            case cellsCount + 3: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
-            default: cell = UITableViewCell()
-            }
-        } else {
-            switch indexPath.row {
-            case 0..<cellsCount: cell = generateProductCell(tableView, cellForRowAt: indexPath)
-            case cellsCount: cell = generateResultsCell(tableView, cellForRowAt: indexPath)
-            case cellsCount + 1: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
-            case cellsCount + 2: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
-            default: cell = UITableViewCell()
-            }
+        switch indexPath.row {
+        case 0: cell = generateBoxCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateStatusCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateFooterCell(tableView, cellForRowAt: indexPath)
+        default: cell = UITableViewCell()
         }
         
         return cell
@@ -146,34 +117,18 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
         
         let height: CGFloat
         
-        let count = extraProductCount(for: indexPath.section)
-        let cellsCount = productCellsCount(in: indexPath.section)
-        
-        if count > 0 {
-            switch indexPath.row {
-            case 0..<cellsCount: height = ShoppingProductTableViewCell.cellHeight
-            case cellsCount: height = ShoppingPlusProductsTableViewCell.cellHeight
-            case cellsCount + 1: height = ShoppingResultsTableViewCell.cellHeight
-            case cellsCount + 2: height = ShoppingStatusTableViewCell.cellHeight
-            case cellsCount + 3: height = ShoppingRequestFooterTableViewCell.cellHeight
-            default: height = 0
-            }
-        } else {
-            switch indexPath.row {
-            case 0..<cellsCount: height = ShoppingProductTableViewCell.cellHeight
-            case cellsCount: height = ShoppingResultsTableViewCell.cellHeight
-            case cellsCount + 1: height = ShoppingStatusTableViewCell.cellHeight
-            case cellsCount + 2: height = ShoppingRequestFooterTableViewCell.cellHeight
-            default: height = 0
-            }
+        switch indexPath.row {
+        case 0: height = BoxRequestTableViewCell.cellHeight
+        case 1: height = RequestStatusTableViewCell.cellHeight
+        case 2: height = RequestFooterTableViewCell.cellHeight
+        default: height = 0
         }
-        
         
         return height
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return ShoppingRequestsHeaderTableViewCell.cellHeight
+        return RequestsHeaderTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -192,13 +147,22 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
         return footerView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if case 0...1 = indexPath.row {
+            
+            performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRequestDetail, sender: self)
+        }
+    }
+    
 }
 
-extension ShoppingRequestsViewController { // Cells generation
+// MARK: Cells generation
+extension ShoppingRequestsViewController {
     
-    func generateRequestHeader(_ tableView: UITableView, viewForHeaderInSection section: Int) -> ShoppingRequestsHeaderTableViewCell {
+    func generateRequestHeader(_ tableView: UITableView, viewForHeaderInSection section: Int) -> RequestsHeaderTableViewCell {
         
-        let header = tableView.dequeueReusableCell(withIdentifier: ShoppingRequestsHeaderTableViewCell.identifier) as! ShoppingRequestsHeaderTableViewCell
+        let header = tableView.dequeueReusableCell(withIdentifier: RequestsHeaderTableViewCell.identifier) as! RequestsHeaderTableViewCell
         
         header.index = section + 1
         
@@ -206,44 +170,44 @@ extension ShoppingRequestsViewController { // Cells generation
         
     }
     
-    func generateProductCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingProductTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingProductTableViewCell.identifier) as! ShoppingProductTableViewCell
+    func generateBoxCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        cell.info = (#imageLiteral(resourceName: "product_placeholder"), "SAIA COLLECTION", "fashion store", 1, 50)
+        let cell = tableView.dequeueReusableCell(withIdentifier: BoxRequestTableViewCell.identifier) as! BoxRequestTableViewCell
         
-        return cell
-    }
-    
-    func generateResultsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingResultsTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingResultsTableViewCell.identifier) as! ShoppingResultsTableViewCell
+        let box = presenter.purchaseRequests[indexPath.section].box
         
-        cell.info = (0, 100)
+        cell.info = (box.name, box.productTypes.count, box.price.doubleValue, [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
         
         return cell
     }
     
-    func generateStatusCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingStatusTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingStatusTableViewCell.identifier) as! ShoppingStatusTableViewCell
+    func generateStatusCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RequestStatusTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: RequestStatusTableViewCell.identifier) as! RequestStatusTableViewCell
         
-        cell.info = (Date(), "No estoque")
+        let request = presenter.purchaseRequests[indexPath.section]
+        
+        guard let date = request.createdAt else { return cell }
+        
+        cell.info = (date, "No estoque")
         
         return cell
     }
     
-    func generateFooterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingRequestFooterTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingRequestFooterTableViewCell.identifier) as! ShoppingRequestFooterTableViewCell
+    func generateFooterCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RequestFooterTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: RequestFooterTableViewCell.identifier) as! RequestFooterTableViewCell
         cell.buttonHandler = { button in
-            self.performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRating, sender: self)
+            
+            let request = self.presenter.purchaseRequests[indexPath.section]
+            self.presenter.selectedRequest = request
+            
+            request.box.brand.fetchInBackground(block: { (object, error) in
+                
+                guard let brand = object as? Brand else { return }
+                
+                request.box.brand = brand
+                self.performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRating, sender: self)
+            })
         }
-        return cell
-    }
-    
-    func generateExtraProductsCountCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ShoppingPlusProductsTableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: ShoppingPlusProductsTableViewCell.identifier) as! ShoppingPlusProductsTableViewCell
-        
-        let count = extraProductCount(for: indexPath.section)
-        cell.extraProductCount = count
-        
         return cell
     }
 }

@@ -12,12 +12,27 @@ import UIKit
 class IconNavigationBar: UIView {
 
     @IBOutlet var view: UIView!
-    @IBOutlet weak var boxButton: UIButton!
-//    @IBOutlet weak var searchButton: UIButton!
+    
     @IBOutlet weak var titleLabel: UILabel!
- //   @IBOutlet weak var leftButtonIconImage: UIImageView!
+    
+    @IBOutlet weak var boxButton: UIButton!
+    @IBOutlet weak var rightHitboxButton: UIButton!
+    
     @IBOutlet weak var leftBarButton: UIButton!
+    @IBOutlet weak var leftHitboxButton: UIButton!
    
+    var showsLeftBarButton: Bool = true {
+        didSet {
+            updateLeftButtonsHidden()
+        }
+    }
+    
+    var showsRightBarButton: Bool = true {
+        didSet {
+            updateRightButtonsHidden()
+        }
+    }
+    
     @IBAction func leftAction(_ sender: Any) {
         if let navController = UIApplication.topViewController()?.navigationController {
             navController.popViewController(animated: true)
@@ -42,43 +57,30 @@ class IconNavigationBar: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.nibInit()
-    }
-    
-    func nibInit() {
+        
         Bundle.main.loadNibNamed("IconNavigationBar", owner: self, options: nil)
         self.addSubview(view)
         view.frame = self.bounds
     }
-//    
-//    @IBInspectable var leftButtonIcon: UIImage? {
-//        set {
-//            self.leftButtonIconImage.image = newValue
-//        }
-//        get {
-//            return self.leftButtonIconImage.image
-//        }
-//    }
     
-//    @IBInspectable var titleIconImage: UIImage? {
-//        set {
-//            self.titleIconImage.image = newValue
-//        }
-//        get {
-//            return self.titleIcon.image
-//        }
-//    }
-//    
-//    @IBInspectable var rightBarIconImage: UIImage? {
-//        set {
-//            self.rightIcon.image = newValue
-//        }
-//        get {
-//            return self.rightIcon.image
-//        }
-//    }
-//
-//    
+    func updateButtonsHidden() {
+        
+        updateLeftButtonsHidden()
+        updateRightButtonsHidden()
+    }
+    
+    func updateLeftButtonsHidden() {
+     
+        leftBarButton.isHidden = !showsLeftBarButton
+        leftHitboxButton.isHidden = !showsLeftBarButton
+    }
+    
+    func updateRightButtonsHidden() {
+        
+        boxButton.isHidden = !showsRightBarButton
+        rightHitboxButton.isHidden = !showsRightBarButton
+    }
+    
     @IBInspectable var titleLabelText: String? {
         set {
             self.titleLabel.text = newValue

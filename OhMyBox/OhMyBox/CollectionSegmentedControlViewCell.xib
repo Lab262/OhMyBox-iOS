@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionSegmentedControlViewCell" customModule="OhMyBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="45"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="45"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuQ-tO-du9">
+                        <rect key="frame" x="25.5" y="7.5" width="74.5" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAPATO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cju-cN-jX6">
+                        <rect key="frame" x="35" y="11" width="54.5" height="23"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NuQ-tO-du9" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="30/45" id="B4t-nq-lJr"/>
+                <constraint firstItem="cju-cN-jX6" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Xb3-vb-MHB"/>
+                <constraint firstItem="NuQ-tO-du9" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="crD-hf-qco"/>
+                <constraint firstItem="cju-cN-jX6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="eI6-yG-fgb"/>
+                <constraint firstItem="NuQ-tO-du9" firstAttribute="width" secondItem="cju-cN-jX6" secondAttribute="width" constant="20" id="fck-Cj-iDQ"/>
+                <constraint firstItem="NuQ-tO-du9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tQD-YG-Eop"/>
+            </constraints>
+            <connections>
+                <outlet property="titleBackgroundView" destination="NuQ-tO-du9" id="ikP-bL-PVt"/>
+                <outlet property="titleLabel" destination="cju-cN-jX6" id="Eej-bJ-9r9"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

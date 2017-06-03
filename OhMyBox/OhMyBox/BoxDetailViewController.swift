@@ -15,19 +15,19 @@ class BoxDetailViewController: UIViewController {
     
     weak var collectionHeader: BoxDetailHeaderCollectionReusableView!
     
-    var presenter: BoxDetailPresenter!
+    var presenter = BoxDetailPresenter()
     
     let collectionViewEdgeMargin: CGFloat = 8
     let collectionViewCellSpacing: CGFloat = 5
+    let collectionViewBottomMargin: CGFloat = 30
     
     override func viewDidLoad() {
         
-        presenter = BoxDetailPresenter(view: self)
+        presenter.view = self
         
         super.viewDidLoad()
         registerNibs()
         setUpCollectionViewLayout()
-        
     }
 
     func registerNibs() {
@@ -49,9 +49,19 @@ class BoxDetailViewController: UIViewController {
         let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
         flowLayout.minimumInteritemSpacing = collectionViewCellSpacing
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: collectionViewEdgeMargin, bottom: 0, right: collectionViewEdgeMargin)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: collectionViewEdgeMargin, bottom: collectionViewBottomMargin, right: collectionViewEdgeMargin)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == SegueIdentifiers.boxDetailToProductDetail {
+            
+            let vc = segue.destination as! ProductDetailViewController
+            
+            vc.presenter.product = presenter.selectedProduct
+        }
+    }
+    
 }
 
 extension BoxDetailViewController: UICollectionViewDataSource {
@@ -61,14 +71,16 @@ extension BoxDetailViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2 //placeholder
+        return presenter.selectedCategoryProducts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BoxProductCollectionViewCell.identifier, for: indexPath) as! BoxProductCollectionViewCell
         
-        cell.info = (#imageLiteral(resourceName: "product_placeholder"), "Capinha cool")
+        let product = presenter.selectedCategoryProducts[indexPath.item]
+        
+        cell.info = (product.photos[0], product.name)
         
         let selectedCategoryIndex = self.presenter.selectedCategoryIndex
         
@@ -98,7 +110,7 @@ extension BoxDetailViewController: UICollectionViewDataSource {
             collectionHeader = view
             view.info = presenter.boxPlaceholderInfo
             
-            view.collectionPickerView.collectionPickerHandlers = (0..<presenter.categories.count).map { index in
+            view.collectionSegmentedControlView.collectionSegmentedControlHandlers = (0..<presenter.box.productTypes.count).map { index in
                 
                 return {
                     
@@ -130,6 +142,11 @@ extension BoxDetailViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let product = presenter.selectedCategoryProducts[indexPath.item]
+        
+        presenter.selectedProduct = product
+        
+        performSegue(withIdentifier: SegueIdentifiers.boxDetailToProductDetail, sender: self)
     }
     
 }

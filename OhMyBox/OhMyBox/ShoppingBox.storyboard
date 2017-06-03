@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,7 +33,7 @@
         <!--Shopping Box Container View Controller-->
         <scene sceneID="6za-ii-dJ4">
             <objects>
-                <viewController id="Xam-Z7-ox1" customClass="ShoppingBoxContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xam-Z7-ox1" customClass="ShoppingBoxContainerViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Icp-yf-q1B"/>
                         <viewControllerLayoutGuide type="bottom" id="HrW-v2-eNW"/>
@@ -48,7 +48,7 @@
                                     <segue destination="4d9-6Q-XC3" kind="embed" id="1ns-SF-Hvy"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-HF-bUJ" customClass="ButtonSegmentedControl" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-HF-bUJ" customClass="ButtonSegmentedControl" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="54" y="35" width="267" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-52.5" y="13.732394366197184"/>
         </scene>
-        <!--Shopping Box View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="tUB-U0-yig">
             <objects>
-                <viewController id="4d9-6Q-XC3" customClass="ShoppingBoxViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4d9-6Q-XC3" customClass="CartViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f7a-g2-6hy"/>
                         <viewControllerLayoutGuide type="bottom" id="EMr-aR-AmH"/>
@@ -151,11 +151,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-aM-Z0L" customClass="ShoppingBoxEmptyView" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-aM-Z0L" customClass="ShoppingBoxEmptyView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-Ry-tNN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -207,7 +207,7 @@
         <!--Purchase View Controller-->
         <scene sceneID="8Tl-Df-Vn8">
             <objects>
-                <viewController id="TIn-S5-4yd" customClass="PurchaseViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TIn-S5-4yd" customClass="PurchaseViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UI2-03-Ol0"/>
                         <viewControllerLayoutGuide type="bottom" id="F0n-5z-IXM"/>
@@ -216,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpK-UJ-6qo" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpK-UJ-6qo" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -226,7 +226,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="MY BOX"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wam-j2-pfD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="wam-j2-pfD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -277,7 +277,7 @@
         <!--Purchase Successful View Controller-->
         <scene sceneID="YEa-Oj-AHT">
             <objects>
-                <viewController id="WnB-uH-sYk" customClass="PurchaseSuccessfulViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WnB-uH-sYk" customClass="PurchaseSuccessfulViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gvE-16-h0N"/>
                         <viewControllerLayoutGuide type="bottom" id="cQw-JL-1A3"/>
@@ -324,7 +324,7 @@
         <!--Shopping Requests View Controller-->
         <scene sceneID="YG9-OT-Wxd">
             <objects>
-                <viewController id="z1F-Qz-qAl" customClass="ShoppingRequestsViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z1F-Qz-qAl" customClass="ShoppingRequestsViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TRm-HF-NHK"/>
                         <viewControllerLayoutGuide type="bottom" id="EOq-Jm-vEx"/>
@@ -333,11 +333,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7De-oD-GxG" customClass="ShoppingBoxEmptyView" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7De-oD-GxG" customClass="ShoppingBoxEmptyView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-uJ-3sf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-uJ-3sf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -362,6 +362,7 @@
                         <outlet property="emptyView" destination="7De-oD-GxG" id="9Py-37-Q3h"/>
                         <outlet property="tableView" destination="Hms-uJ-3sf" id="KdW-v0-zZe"/>
                         <segue destination="rwh-zI-5A7" kind="presentation" identifier="shoppingRequestsToRating" id="UWY-jg-2X6"/>
+                        <segue destination="LyW-kV-AHT" kind="show" identifier="shoppingRequestsToRequestDetail" id="WlB-rd-WrM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-9T-TG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -374,11 +375,87 @@
                 <viewControllerPlaceholder storyboardName="Rating" id="rwh-zI-5A7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxD-GI-xfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="729"/>
+            <point key="canvasLocation" x="1779" y="667"/>
+        </scene>
+        <!--Request Detail View Controller-->
+        <scene sceneID="qKA-ES-u3n">
+            <objects>
+                <viewController id="LyW-kV-AHT" customClass="RequestDetailViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q5W-mv-Ozv"/>
+                        <viewControllerLayoutGuide type="bottom" id="kf7-X6-rhJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DCy-F1-gWF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCe-jq-uiX">
+                                <rect key="frame" x="0.0" y="533" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.098039215690000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Qlo-dU-LDM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
+                                <state key="normal" title="Avisar que chegou">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="pti-H5-t55"/>
+                                    <action selector="buyButtonAction:" destination="4d9-6Q-XC3" eventType="touchUpInside" id="g5S-e1-1Jj"/>
+                                    <action selector="notifyArrivalButtonAction:" destination="LyW-kV-AHT" eventType="touchUpInside" id="NgT-GL-9Jz"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-Db-w81">
+                                <rect key="frame" x="0.0" y="64" width="375" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LyW-kV-AHT" id="WLp-bl-MfH"/>
+                                    <outlet property="delegate" destination="LyW-kV-AHT" id="UQ8-ec-DMq"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-eP-QWS" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="yUi-hf-bch"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="Pedido"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kf7-X6-rhJ" firstAttribute="top" secondItem="vCe-jq-uiX" secondAttribute="bottom" id="0i1-Zb-VE0"/>
+                            <constraint firstAttribute="trailing" secondItem="3ed-eP-QWS" secondAttribute="trailing" id="3vQ-8J-XbH"/>
+                            <constraint firstItem="rm8-Db-w81" firstAttribute="top" secondItem="3ed-eP-QWS" secondAttribute="bottom" id="I5e-gf-cyP"/>
+                            <constraint firstAttribute="trailing" secondItem="rm8-Db-w81" secondAttribute="trailing" id="P8X-hQ-i8X"/>
+                            <constraint firstItem="3ed-eP-QWS" firstAttribute="top" secondItem="DCy-F1-gWF" secondAttribute="top" id="QIx-Mq-qit"/>
+                            <constraint firstItem="3ed-eP-QWS" firstAttribute="leading" secondItem="DCy-F1-gWF" secondAttribute="leading" id="ZqC-lK-Z8B"/>
+                            <constraint firstItem="vCe-jq-uiX" firstAttribute="top" secondItem="rm8-Db-w81" secondAttribute="bottom" id="dX9-LD-7Ks"/>
+                            <constraint firstItem="vCe-jq-uiX" firstAttribute="leading" secondItem="DCy-F1-gWF" secondAttribute="leading" id="ffs-Rs-5YE"/>
+                            <constraint firstAttribute="trailing" secondItem="vCe-jq-uiX" secondAttribute="trailing" id="k1o-mL-3so"/>
+                            <constraint firstItem="rm8-Db-w81" firstAttribute="leading" secondItem="DCy-F1-gWF" secondAttribute="leading" id="w5U-kd-1JZ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="3ed-eP-QWS" id="awE-nN-Xoc"/>
+                        <outlet property="notifyArrivalButton" destination="vCe-jq-uiX" id="osa-zA-XFs"/>
+                        <outlet property="tableView" destination="rm8-Db-w81" id="p59-sz-XHI"/>
+                        <segue destination="rwh-zI-5A7" kind="presentation" identifier="shoppingRequestDetailToRating" id="x5V-7c-Pxt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ya6-JV-cdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144.8" y="1044.8275862068967"/>
         </scene>
     </scenes>
     <resources>
         <image name="close_Button" width="19" height="16"/>
         <image name="purchase_sucessful" width="296" height="182"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UWY-jg-2X6"/>
+    </inferredMetricsTieBreakers>
 </document>

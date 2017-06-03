@@ -64,10 +64,8 @@ class ShowProductTableViewCell: UITableViewCell {
     func initializeStatesButtons() {
         
         self.likeButton.setImage(#imageLiteral(resourceName: "heartEmpty_button"), for: .normal)
-        self.likeButton.setImage(#imageLiteral(resourceName: "heartFull_button"), for: .selected)
         
         self.boxButton.setImage(#imageLiteral(resourceName: "box_button"), for: .normal)
-        self.boxButton.setImage(#imageLiteral(resourceName: "boxSelected_button"), for: .selected)
     }
     
     @IBAction func setFavorite(_ sender: AnyObject) {

@@ -17,48 +17,33 @@ class BoxCollectionViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 345, height: 240) * UIView.widthScaleProportion()
+        return CGSize(width: 345, height: 240) * UIView.widthScaleProportion
     }
     
     static var nibName: String {
         return "BoxCollectionViewCell"
     }
     
-    typealias Info = (title: String, description: String, price: Double, brandImage: UIImage)
-    
 // MARK: Outlets
     
-    @IBOutlet weak var boxButton: UIButton!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var boxView: BoxView!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    
-    @IBOutlet weak var brandImageView: UIImageView!
-    
-    var info: Info? {
+    var info: BoxView.Info? {
         
         didSet {
             
-            updateInfo()
+            boxView.info = info
         }
     }
     
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        
-        brandImageView.layer.cornerRadius = 3
-        
     }
     
-    func updateInfo() {
-        
-        titleLabel.text = info?.title
-        descriptionLabel.attributedText = info?.description.with(lineSpacing: -9)
-        priceLabel.text = String.stringFromPrice(price: info?.price ?? 0)
-        brandImageView.image = info?.brandImage
+    override func prepareForReuse() {
+        boxView.setBoxButtonSelected(false)
+        boxView.setLikeButtonSelected(false)
     }
-
+    
 }

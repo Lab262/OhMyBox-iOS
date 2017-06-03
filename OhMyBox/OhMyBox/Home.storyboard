@@ -12,15 +12,12 @@
         <array key="Axis Extrabold.otf">
             <string>AXIS-ExtraBold</string>
         </array>
-        <array key="Muli-Light.ttf">
-            <string>Muli-Light</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Oh My Box-->
         <scene sceneID="te8-Cd-gZw">
             <objects>
-                <viewController title="Oh My Box" automaticallyAdjustsScrollViewInsets="NO" id="vVD-EG-X6A" customClass="HomeViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Oh My Box" automaticallyAdjustsScrollViewInsets="NO" id="vVD-EG-X6A" customClass="HomeViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tNZ-88-fIG"/>
                         <viewControllerLayoutGuide type="bottom" id="jJ7-lB-svP"/>
@@ -29,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHU-9a-IgH" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHU-9a-IgH" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="inG-An-nUn">
@@ -80,10 +77,8 @@
                     <connections>
                         <outlet property="navigationBarView" destination="JHU-9a-IgH" id="Coy-jT-ynK"/>
                         <outlet property="tableView" destination="f19-Lu-Hmh" id="7wN-sj-EPx"/>
-                        <segue destination="erU-ar-DLf" kind="show" identifier="goRecommended" id="XgR-lH-71A"/>
                         <segue destination="MiG-iR-diQ" kind="show" identifier="goToProductDetail" id="VzE-k7-m1U"/>
                         <segue destination="YUY-LX-DDs" kind="presentation" identifier="goCart" id="EMM-rn-Hci"/>
-                        <segue destination="erU-ar-DLf" kind="show" identifier="goPromotion" id="Eew-iy-pSl"/>
                         <segue destination="0ce-GX-ZYA" kind="show" identifier="goToBoxDetail" id="H6l-QT-pvV"/>
                     </connections>
                 </viewController>
@@ -91,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1716" y="-598.2008995502249"/>
         </scene>
-        <!--Detail Product View Controller-->
+        <!--Product Detail View Controller-->
         <scene sceneID="A6M-GZ-xLo">
             <objects>
-                <viewController storyboardIdentifier="detailProduct" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="DetailProductViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailProduct" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MiG-iR-diQ" customClass="ProductDetailViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SoA-AK-pD0"/>
                         <viewControllerLayoutGuide type="bottom" id="oRT-An-T9b"/>
@@ -117,11 +112,11 @@
                                     <outlet property="delegate" destination="MiG-iR-diQ" id="FmT-1w-MGk"/>
                                 </connections>
                             </tableView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-MR-9nk" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-MR-9nk" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAPA TROPICAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-UY-A4b">
-                                        <rect key="frame" x="110" y="27" width="154.5" height="24"/>
+                                        <rect key="frame" x="101.5" y="27" width="171.5" height="24"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -265,7 +260,7 @@
         <!--Box Detail View Controller-->
         <scene sceneID="2Ey-J6-tfE">
             <objects>
-                <viewController id="0ce-GX-ZYA" customClass="BoxDetailViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0ce-GX-ZYA" customClass="BoxDetailViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AEB-Sg-9VP"/>
                         <viewControllerLayoutGuide type="bottom" id="jvA-uR-gu7"/>
@@ -274,7 +269,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIq-tt-ugi" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIq-tt-ugi" customClass="IconNavigationBar" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-b9-pzf">
@@ -327,11 +322,12 @@
                     <connections>
                         <outlet property="collectionView" destination="bk3-pr-69b" id="xOL-MJ-Djn"/>
                         <outlet property="navigationBar" destination="FIq-tt-ugi" id="cNU-vb-xCN"/>
+                        <segue destination="MiG-iR-diQ" kind="show" identifier="boxDetailToProductDetail" id="G8Q-9X-kfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xV5-yZ-nkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4138" y="-796"/>
+            <point key="canvasLocation" x="3060" y="-1024"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="iXg-BB-Gle">
@@ -349,107 +345,6 @@
             </objects>
             <point key="canvasLocation" x="2326" y="-1260"/>
         </scene>
-        <!--Recommended View Controller-->
-        <scene sceneID="88A-Kb-TVN">
-            <objects>
-                <viewController storyboardIdentifier="RecommendedView" id="erU-ar-DLf" customClass="RecommendedViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y8j-Ju-caw"/>
-                        <viewControllerLayoutGuide type="bottom" id="8mk-mP-kSC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6sZ-Zz-E89">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zmc-b7-wbT" customClass="IconNavigationBar" customModule="OhMyBox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="bDu-9N-vGl"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftButtonIconImage" value="ic_button_back"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabelText" value="RECOMENDADOS"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-8n-96d">
-                                <rect key="frame" x="0.0" y="64" width="375" height="687"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerRecommendedCell" rowHeight="44" id="hYg-GW-YOZ" customClass="HeaderRecommendedTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hYg-GW-YOZ" id="Qkw-jH-Ghm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w04-q7-A5k">
-                                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="0G0-aH-JOB"/>
-                                                    </constraints>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-j8-fS4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="dfW-P7-bWe"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verão de saias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWu-Pl-Yn6">
-                                                    <rect key="frame" x="106.5" y="7.5" width="163" height="29.5"/>
-                                                    <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="i1K-j8-fS4" firstAttribute="leading" secondItem="Qkw-jH-Ghm" secondAttribute="leading" id="59K-l2-ASU"/>
-                                                <constraint firstItem="lWu-Pl-Yn6" firstAttribute="centerX" secondItem="Qkw-jH-Ghm" secondAttribute="centerX" id="B83-SR-cgk"/>
-                                                <constraint firstAttribute="trailing" secondItem="w04-q7-A5k" secondAttribute="trailing" id="RV2-vl-TjQ"/>
-                                                <constraint firstItem="w04-q7-A5k" firstAttribute="leading" secondItem="Qkw-jH-Ghm" secondAttribute="leading" id="V9T-QU-kcQ"/>
-                                                <constraint firstItem="lWu-Pl-Yn6" firstAttribute="centerY" secondItem="Qkw-jH-Ghm" secondAttribute="centerY" id="Zpq-AU-a7f"/>
-                                                <constraint firstAttribute="trailing" secondItem="i1K-j8-fS4" secondAttribute="trailing" id="tPd-Zq-mmr"/>
-                                                <constraint firstItem="i1K-j8-fS4" firstAttribute="top" secondItem="Qkw-jH-Ghm" secondAttribute="top" id="tuZ-we-svK"/>
-                                                <constraint firstAttribute="bottom" secondItem="w04-q7-A5k" secondAttribute="bottom" id="wCJ-rD-rYo"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="headerTitleLabel" destination="lWu-Pl-Yn6" id="8Vx-OW-H4Y"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="erU-ar-DLf" id="deJ-qC-Fey"/>
-                                    <outlet property="delegate" destination="erU-ar-DLf" id="g2a-d2-AQ1"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="p8S-8n-96d" firstAttribute="centerX" secondItem="6sZ-Zz-E89" secondAttribute="centerX" id="LOp-Pe-Ayq"/>
-                            <constraint firstAttribute="trailing" secondItem="Zmc-b7-wbT" secondAttribute="trailing" id="R4l-JJ-yD4"/>
-                            <constraint firstItem="p8S-8n-96d" firstAttribute="top" secondItem="Zmc-b7-wbT" secondAttribute="bottom" id="W1h-Vz-epY"/>
-                            <constraint firstItem="p8S-8n-96d" firstAttribute="leading" secondItem="6sZ-Zz-E89" secondAttribute="leading" id="cj5-4m-TpQ"/>
-                            <constraint firstItem="Zmc-b7-wbT" firstAttribute="top" secondItem="6sZ-Zz-E89" secondAttribute="top" id="hGe-JB-TGz"/>
-                            <constraint firstItem="Zmc-b7-wbT" firstAttribute="leading" secondItem="6sZ-Zz-E89" secondAttribute="leading" id="wcj-RD-0W6"/>
-                            <constraint firstItem="p8S-8n-96d" firstAttribute="bottom" secondItem="8mk-mP-kSC" secondAttribute="top" id="yH8-SX-Hcx"/>
-                        </constraints>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="800"/>
-                    <connections>
-                        <outlet property="navigationBarView" destination="Zmc-b7-wbT" id="8p7-iP-BER"/>
-                        <outlet property="tableView" destination="p8S-8n-96d" id="8IJ-ve-mgZ"/>
-                        <segue destination="MiG-iR-diQ" kind="show" identifier="goProductDetail" id="h0O-tD-HkS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F2I-w8-ypW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2998" y="-1249"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oNb-HY-LHx">
             <objects>
@@ -459,7 +354,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -483,8 +378,7 @@
         <image name="profile_dummy" width="13" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XgR-lH-71A"/>
-        <segue reference="VzE-k7-m1U"/>
+        <segue reference="G8Q-9X-kfW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.14117647059999999" green="0.094117647060000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

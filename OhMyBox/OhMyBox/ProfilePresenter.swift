@@ -51,6 +51,7 @@ class ProfilePresenter: NSObject {
         if let user = currentUser {
             
             view.startLoadingPhoto()
+            
             user.photo?.getDataInBackground() { (data, error) in
                 
                 if let data = data {

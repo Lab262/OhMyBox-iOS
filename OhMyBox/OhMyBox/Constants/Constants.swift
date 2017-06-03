@@ -30,6 +30,13 @@ enum RegisterError: Error {
     }
 }
 
+// MARK: Keys for known objects put in UserDefaults
+struct UserDefaultsKeys {
+    
+    static let cartBoxes = "cartBoxes"
+    static let purchaseRequestFeedbacks = "purchaseRequestFeedbacks"
+}
+
 // MARK: Segue Identifiers
 struct SegueIdentifiers {
     
@@ -48,19 +55,29 @@ struct SegueIdentifiers {
     // From shopping box
     static let shoppingBoxToPurchase = "shoppingBoxToPurchase"
     static let shoppingRequestsToRating = "shoppingRequestsToRating"
+    static let shoppingRequestsToRequestDetail = "shoppingRequestsToRequestDetail"
+    
+    static let shoppingRequestDetailToRating = "shoppingRequestDetailToRating"
     
     // From purchase
     static let purchaseToPurchaseSuccessful = "purchaseToPurchaseSuccessful"
+    
+    // From box detail
+    static let boxDetailToProductDetail = "boxDetailToProductDetail"
 }
 
-
+// MARK: Notification Names
 struct Notifications {
     
     static let selectHomeViewController = NSNotification.Name(rawValue: "selectHomeViewController")
     static let goToBoxViewController = NSNotification.Name(rawValue: "selectBoxViewController")
     static let selectBoxRequestsViewController = NSNotification.Name(rawValue: "selectBoxRequestsViewController")
+    
+    static let cartUpdated = NSNotification.Name(rawValue: "cartUpdated")
+    static let wishlistUpdated = NSNotification.Name(rawValue: "wishlistUpdated")
 }
 
+// MARK: Purchase Successful Tips @ PurchaseSuccessfulViewController
 struct PurchaseSuccessfulTips {
     
     static let poppinsLight = UIFont(name: "Poppins-Light", size: 15.0)!

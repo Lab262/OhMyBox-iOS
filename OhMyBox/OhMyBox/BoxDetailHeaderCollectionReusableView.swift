@@ -22,7 +22,7 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
     
     static var viewSize: CGSize {
         
-        return CGSize(width: 375, height: 345) * UIView.heightScaleProportion()
+        return CGSize(width: 375, height: 345) * UIView.widthScaleProportion
     }
     
     static let categoriesCountTitle: String = "essa box tem"
@@ -36,7 +36,7 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var separatorView: UIView!
 
-    @IBOutlet weak var collectionPickerView: CollectionPickerView!
+    @IBOutlet weak var collectionSegmentedControlView: CollectionSegmentedControlView!
     
     @IBOutlet weak var categoriesCountTitleLabel: UILabel!
     @IBOutlet weak var categoriesCountLabel: UILabel!
@@ -50,13 +50,19 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
         }
     }
     
+    var productOptionsCount: Int = 0 {
+        
+        didSet {
+            
+            optionCountLabel.text = "Escolha \(productOptionsCount) opç" + (productOptionsCount == 1 ? "ão" : "ões")
+        }
+    }
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
         
         categoriesCountLabel.attributedText = BoxDetailHeaderCollectionReusableView.categoriesCountTitle.with(characterSpacing: 1.12, color: UIColor.darkPurple)
-        
-        collectionPickerView.showsIndicator = false
     }
     
     func updateInfo() {
@@ -69,13 +75,8 @@ class BoxDetailHeaderCollectionReusableView: UICollectionReusableView {
         
         categoriesCountLabel.attributedText = "\(info?.categories.count ?? 0) categorias".with(characterSpacing: 1.12, color: UIColor.darkPurple)
         
-        collectionPickerView.collectionPickerOptions = info?.categories ?? []
+        collectionSegmentedControlView.collectionSegmentedControlOptions = info?.categories ?? []
         
-    }
-    
-    override func prepareForReuse() {
-        
-        collectionPickerView.optionIndicatorImageView.isHidden = true
     }
     
 }

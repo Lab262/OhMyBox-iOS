@@ -18,9 +18,15 @@ class Rating3ViewController: UIViewController {
         static let doneButtonTitle = "PRONTO, TERMINEI"
         static let goodFeedbackString = "DO QUE VOCÊ MAIS GOSTOU?"
         static let badFeedbackString = "O QUE ACONTECEU?"
+    }
+    
+    struct ButtonColors {
         
-        static let goodFeedbackOptions = ["Responde rápido", "Amei o produto", "Chegou no prazo", "Muito atenciosos"]
-        static let badFeedbackOptions = ["Demorou muito", "Veio estragado", "Não responderam", "Pedido errado"]
+        static let backgroundSelected = UIColor.darkPurple
+        static let backgroundUnselected = UIColor.white
+        
+        static let textSelected = UIColor.white
+        static let textUnselected = UIColor.darkPurple
     }
     
     @IBOutlet weak var imageView: UIImageView!
@@ -38,6 +44,15 @@ class Rating3ViewController: UIViewController {
             updateInfo()
         }
     }
+    
+    var selectedButtonIndexes: [Int] = [] {
+        
+        didSet {
+            
+            selectedButtonIndexes.sort()
+        }
+    }
+    
     var doneButtonHandler: UIButton.ButtonHandler?
     
     fileprivate var ratingString: String? {
@@ -104,7 +119,9 @@ class Rating3ViewController: UIViewController {
     
     func updateFeedbackButtons(rating: Int) {
         
-        let feedbackOptions = rating >= 3 ? OutletStrings.goodFeedbackOptions : OutletStrings.badFeedbackOptions
+        let opr = PurchaseRequestFeedbackManager.shared.feedbackOptionsPerRating
+        
+        let feedbackOptions = rating >= 3 ? opr[3]! : opr[2]!
         
         for enumeration in feedbackButtons.enumerated() {
             
@@ -119,6 +136,36 @@ class Rating3ViewController: UIViewController {
     
     @IBAction func feedbackButtonAction(_ sender: UIButton) {
         
-//        let index = feedbackButtons.index(of: sender)
+        let index = feedbackButtons.index(of: sender)!
+        
+        if selectedButtonIndexes.contains(index) {
+            
+            _ = selectedButtonIndexes.remove(index)
+            changeButton(sender, toSelected: false)
+        } else {
+            
+            selectedButtonIndexes.append(index)
+            changeButton(sender, toSelected: true)
+        }
+    }
+    
+    // TODO: generalize the dual-state button
+    func changeButton(_ button: UIButton, toSelected selected: Bool) {
+        
+        let textColor: UIColor
+        let backgroundColor: UIColor
+        
+        if selected {
+            
+            textColor = ButtonColors.textSelected
+            backgroundColor = ButtonColors.backgroundSelected
+        } else {
+            
+            textColor = ButtonColors.textUnselected
+            backgroundColor = ButtonColors.backgroundUnselected
+        }
+        
+        button.setTitleColor(textColor, for: .normal)
+        button.backgroundColor = backgroundColor
     }
 }

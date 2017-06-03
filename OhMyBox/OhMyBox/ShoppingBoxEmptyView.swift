@@ -10,7 +10,7 @@ import UIKit
 
 class ShoppingBoxEmptyView: UIView {
     
-    typealias Info = (image: UIImage, title: String, text: String, buttonHandler: UIButton.ButtonHandler)
+    typealias Info = (image: UIImage, title: String, text: String, buttonHandler: UIButton.ButtonHandler?)
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

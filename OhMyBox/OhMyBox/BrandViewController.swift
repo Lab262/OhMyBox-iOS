@@ -13,18 +13,22 @@ class BrandViewController: UIViewController {
     @IBOutlet weak var navigationBarView: IconNavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var allBrands: [Any] = [1, 2, 3]
-    var followedBrands: [Any] = [1, 2, 3]
-    var recommendedBrands: [Any] = [1, 2, 3]
+    var presenter = BrandPresenter()
     
     var followedBrandsCollectionViewDelegate: UICollectionViewDelegate!
     var recommendedBrandsCollectionViewDelegate: UICollectionViewDelegate!
+    
+    var selectedBrand: Brand?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpTableView()
         registerNibs()
+        
+        presenter.view = self
+        
+        presenter.loadBrands()
     }
     
     func setUpTableView() {
@@ -45,18 +49,24 @@ class BrandViewController: UIViewController {
         
         if segue.identifier == SegueIdentifiers.brandsToBrandDetail {
             
+            guard let vc = segue.destination as? BrandDetailViewController else { return }
+            vc.presenter.brand = selectedBrand
         }
     }
     
     func setUpNavigationBar() {
         navigationController?.navigationBar.isHidden = true
-        navigationBarView.leftBarButton.isHidden = true
+        navigationBarView.showsLeftBarButton = false
     }
+}
+
+//MARK: Cells generation
+extension BrandViewController {
     
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        cell.brands = followedBrands
+        cell.brands = presenter.brands
         followedBrandsCollectionViewDelegate = cell
         cell.selectionDelegate = self
         
@@ -66,7 +76,7 @@ class BrandViewController: UIViewController {
     func generateRecommendedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        cell.brands = recommendedBrands
+        cell.brands = presenter.brands
         recommendedBrandsCollectionViewDelegate = cell
         cell.selectionDelegate = self
         
@@ -102,7 +112,7 @@ extension BrandViewController: UITableViewDataSource {
         
         switch section {
         case 0, 1: number = 1
-        case 2: number = allBrands.count
+        case 2: number = 0
         default: number = 0
         }
         
@@ -157,7 +167,17 @@ extension BrandViewController: UITableViewDelegate {
 extension BrandViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
+        
+        selectedBrand = presenter.brands[indexPath.item]
+        
         performSegue(withIdentifier: SegueIdentifiers.brandsToBrandDetail, sender: self)
-        // get selected brand
+    }
+}
+
+extension BrandViewController: BrandView {
+    
+    func reloadData() {
+        
+        tableView.reloadData()
     }
 }
