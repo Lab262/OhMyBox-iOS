@@ -28,6 +28,8 @@ class BrandPresenter: NSObject {
     func loadBrands() {
         
         let query = PFQuery(className: Brand.parseClassName())
+        //query.limit = 10
+        //query.whereKey(objectId, notContainedIn: brands.map { $0.objectId })
         query.findObjectsInBackground { (objects, error) in
             
             guard let brands = objects as? [Brand] else { return }
