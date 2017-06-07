@@ -454,4 +454,7 @@ extension BrandDetailViewController: UISearchBarDelegate {
 
 extension BrandDetailViewController: BrandDetailView {
     
+    func reloadData() {
+        
+    }
 }

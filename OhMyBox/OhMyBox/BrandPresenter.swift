@@ -34,13 +34,13 @@ class BrandPresenter: NSObject {
             
             guard let brands = objects as? [Brand] else { return }
             
-            brands.forEach {
-                
-                $0.loadPhoto(completion: { (error) in
-                    
-                    self.view?.reloadData()
-                })
-            }
+//            brands.forEach {
+//                
+//                $0.loadPhoto(completion: { (error) in
+//                    
+//                    self.view?.reloadData()
+//                })
+//            }
             
             self.brands = brands
         }

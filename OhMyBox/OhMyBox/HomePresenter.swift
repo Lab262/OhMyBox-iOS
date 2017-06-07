@@ -27,7 +27,8 @@ class HomePresenter: NSObject {
     func loadBoxes() {
         
         let query = PFQuery(className: Box.parseClassName()).includeKey("brand")
-        query.cachePolicy = .cacheThenNetwork
+        
+        boxes.removeAll(keepingCapacity: true)
         query.findObjectsInBackground { (objects, error) in
             
             if let boxes = objects as? [Box] {
