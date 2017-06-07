@@ -20,7 +20,7 @@ class BrandDetailPresenter: NSObject {
 
     weak var view: BrandDetailView?
     var brand: Brand?
-    var products: [Product] = [] {
+    var boxes: [Box] = [] {
         
         didSet {
             view?.reloadData()
@@ -34,17 +34,21 @@ class BrandDetailPresenter: NSObject {
         return (b.name, b.title, b.brandDescription, b.photo)
     }
     
-    func loadProducts() {
+    func loadBoxes() {
+
+        let boxes = BoxRequester.shared.boxes.filter { $0.brand.objectId == self.brand?.objectId }
         
-        let query = PFQuery(className: Product.parseClassName()).whereKey("brand", equalTo: brand)
+        self.boxes = boxes
         
-        query.findObjectsInBackground { (objects, error) in
-            
-            if let objects = objects as? [Product] {
-                
-                self.products = objects
-            }
-        }
+//        let query = PFQuery(className: Box.parseClassName()).whereKey("brand", equalTo: brand)
+//        
+//        query.findObjectsInBackground { (objects, error) in
+//            
+//            if let objects = objects as? [Box] {
+//                
+//                self.boxes = objects
+//            }
+//        }
     }
     
     func updateIsFollowing(_ isFollowing: Bool) {
