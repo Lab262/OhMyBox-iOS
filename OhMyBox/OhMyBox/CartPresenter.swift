@@ -8,14 +8,14 @@
 
 import Parse
 
-protocol CartView {
+protocol CartView: class {
     
     func reloadData()
 }
 
 class CartPresenter: NSObject {
 
-    var view: CartView?
+    weak var view: CartView?
     
     var boxes: [Box] {
         

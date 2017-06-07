@@ -9,14 +9,14 @@
 import UIKit
 import Parse
 
-protocol BrandView {
+protocol BrandView: class {
     
     func reloadData()
 }
 
 class BrandPresenter: NSObject {
 
-    var view: BrandView?
+    weak var view: BrandView?
     var brands: [Brand] = [] {
         
         didSet {

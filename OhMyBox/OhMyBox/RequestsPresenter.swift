@@ -8,14 +8,14 @@
 
 import Parse
 
-protocol RequestsView {
+protocol RequestsView: class {
     
     func reloadData()
 }
 
 class RequestsPresenter: NSObject {
 
-    var view: RequestsView?
+    weak var view: RequestsView?
     
     var purchaseRequests: [PurchaseRequest] = [] {
         

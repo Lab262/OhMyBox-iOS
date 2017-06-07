@@ -8,7 +8,7 @@
 
 import Parse
 
-protocol HomeView {
+protocol HomeView: class {
     
     func reloadData()
 }
@@ -17,7 +17,7 @@ class HomePresenter: NSObject {
 
     var boxes: [Box] = []
     var selectedBox: Box?
-    var view: HomeView?
+    weak var view: HomeView?
     
     override init() {
         

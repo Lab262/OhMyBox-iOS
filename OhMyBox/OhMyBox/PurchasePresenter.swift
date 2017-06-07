@@ -8,14 +8,14 @@
 
 import Parse
 
-protocol PurchaseView {
+protocol PurchaseView: class {
     
     func purchaseRequestSaved(success: Bool, error: Error?)
 }
 
 class PurchasePresenter: NSObject {
 
-    var view: PurchaseView?
+    weak var view: PurchaseView?
     var box: Box? {
         didSet {
             print("didset box")

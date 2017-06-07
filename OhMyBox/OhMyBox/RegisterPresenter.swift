@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol RegisterView {
+protocol RegisterView: class {
     
     var textFields: [Int: UITextField] {get}
     
