@@ -22,6 +22,7 @@ extension UIImageView {
                 self.image = image
             }
             
+            self.removeLoadingFeedback()
             completion?(data)
         } else {
             

@@ -176,7 +176,10 @@ extension ShoppingRequestsViewController {
         
         let box = presenter.purchaseRequests[indexPath.section].box
         
-        cell.info = (box.name, box.productTypes.count, box.price.doubleValue, [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        let productTypesCount = box.productTypes.count
+        let photos = box.products.map { $0.photos[0] }
+        
+        cell.info = (box.name, productTypesCount, box.price.doubleValue, photos)
         
         return cell
     }

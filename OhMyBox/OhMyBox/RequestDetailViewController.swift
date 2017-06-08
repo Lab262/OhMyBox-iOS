@@ -93,8 +93,6 @@ extension RequestDetailViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxProductTableViewCell.identifier) as! BoxProductTableViewCell
         
-        cell.info = ("Produto", "Fashion Store", "36", UIColor.clear, #imageLiteral(resourceName: "product_placeholder"))
-        
         return cell
     }
     
