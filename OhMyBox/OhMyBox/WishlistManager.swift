@@ -25,12 +25,7 @@ class WishlistManager: NSObject {
         return WishlistManager()
     }()
     
-    var favoriteBoxes: [Box] = [] {
-        
-        didSet {
-            print(favoriteBoxes)
-        }
-    }
+    var favoriteBoxes: [Box] = []
     
     func boxIsInWishlist(_ box: Box) -> Bool {
         
@@ -58,9 +53,6 @@ class WishlistManager: NSObject {
                     }
                     try! box.brand.fetch()
                 }
-                
-                print("loaded")
-                
             }
         }
     }

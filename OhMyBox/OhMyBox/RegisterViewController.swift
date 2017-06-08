@@ -237,6 +237,7 @@ extension RegisterViewController {
             
         case 1, 2:
             cell.iconImageView.image = #imageLiteral(resourceName: "iconUser_image")
+            cell.textField.autocapitalizationType = .words
         case 3:
             cell.iconImageView.image = #imageLiteral(resourceName: "iconEmail_image")
             cell.textField.keyboardType = .emailAddress
@@ -247,6 +248,7 @@ extension RegisterViewController {
         }
         
         cell.textField.placeholder = registerFieldPlaceholder(for: indexPath.row)
+        cell.textField.placeHolderColor = .white
         
         cell.textField.tag = indexPath.row
         cell.textField.delegate = self

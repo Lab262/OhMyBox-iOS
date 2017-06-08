@@ -27,8 +27,7 @@ class RegisterFieldTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        textField.placeHolderColor = .white
+
         textField.autocorrectionType = .no
     }
 

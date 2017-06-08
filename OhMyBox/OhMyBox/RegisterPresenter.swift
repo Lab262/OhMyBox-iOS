@@ -43,11 +43,11 @@ class RegisterPresenter: NSObject {
     
     func verifiedInformations() throws -> (firstName: String, lastName: String, email: String, password: String) {
         
-        let firstName = view.textFields[1].text!
-        let lastName = view.textFields[2].text!
-        let email = view.textFields[3].text!
-        let password = view.textFields[4].text!
-        let passwordConfirmation = view.textFields[5].text!
+        let firstName = view.textFields[0].text!
+        let lastName = view.textFields[1].text!
+        let email = view.textFields[2].text!
+        let password = view.textFields[3].text!
+        let passwordConfirmation = view.textFields[4].text!
         
         guard firstName.length > 0 && lastName.length > 0 else {
             
