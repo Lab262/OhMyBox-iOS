@@ -55,14 +55,19 @@ class ShoppingRequestsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == SegueIdentifiers.shoppingRequestsToRating {
-            
             let vc = segue.destination as! RatingContainerViewController
-            
+    
             if let request = presenter.selectedRequest {
-                
                 vc.presenter.startRating(purchaseRequest: request)
             }
+        }
+        
+        if segue.identifier == SegueIdentifiers.shoppingRequestsToRequestDetail {
+            let vc = segue.destination as! RequestDetailViewController
             
+            if let indexPath = tableView.indexPathForSelectedRow {
+                vc.presenter.request = presenter.purchaseRequests[indexPath.section]
+            }
         }
     }
 }
@@ -150,7 +155,6 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if case 0...1 = indexPath.row {
-            
             performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRequestDetail, sender: self)
         }
     }

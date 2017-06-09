@@ -24,8 +24,6 @@ class TabBarController: UITabBarController {
     func selectHomeViewController(_ notification: Notification) {
         selectViewController(at: 0)
         _ = viewControllers?[0].navigationController?.popToRootViewController(animated: false)
-        
-        
     }
 
 }

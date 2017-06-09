@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-9T-TG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="736"/>
+            <point key="canvasLocation" x="-23" y="929"/>
         </scene>
         <!--Rating-->
         <scene sceneID="SIa-80-LPT">
@@ -448,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ya6-JV-cdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.8" y="1044.8275862068967"/>
+            <point key="canvasLocation" x="1156" y="1234"/>
         </scene>
     </scenes>
     <resources>
