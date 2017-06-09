@@ -60,6 +60,14 @@ class WishlistViewController: UIViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? BoxDetailViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                vc.presenter.box = presenter.favoriteBoxes[indexPath.row-1]
+            }
+        }
+    }
  
 }
 extension WishlistViewController: UITableViewDataSource {
@@ -87,9 +95,12 @@ extension WishlistViewController: UITableViewDataSource {
 extension WishlistViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       let viewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Home", identifier: "detailProduct")
         
-         self.navigationController?.pushViewController(viewController!, animated: true)
+        self.performSegue(withIdentifier: SegueIdentifiers.wishListToBoxDetail, sender: self)
+        
+//       let viewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Home", identifier: "detailProduct")
+//        
+//         self.navigationController?.pushViewController(viewController!, animated: true)
     }
     
     

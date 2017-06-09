@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcB-Vf-F5f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
         <scene sceneID="Yv7-Jd-KjK">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcB-Vf-F5f" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="baP-CT-g25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="baP-CT-g25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -95,7 +95,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT0-wS-hx4">
-                                <rect key="frame" x="340" y="41" width="19" height="22"/>
+                                <rect key="frame" x="339.5" y="41" width="19" height="22"/>
                                 <state key="normal" image="close_Button"/>
                                 <connections>
                                     <action selector="closeButton:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="RMk-Z0-eLe"/>
@@ -287,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase_sucessful" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-rf-YpV">
-                                <rect key="frame" x="40" y="37" width="296" height="182"/>
+                                <rect key="frame" x="39.5" y="37" width="296" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="3eW-ss-zF2"/>
                                     <constraint firstAttribute="height" constant="182" id="SCk-3j-FTu"/>

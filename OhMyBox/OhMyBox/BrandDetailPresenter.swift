@@ -19,6 +19,7 @@ protocol BrandDetailView: class {
 class BrandDetailPresenter: NSObject {
 
     weak var view: BrandDetailView?
+    var selectedBox: Box?
     var brand: Brand?
     var boxes: [Box] = [] {
         

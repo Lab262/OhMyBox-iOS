@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ixR-Ni-Gjy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ixR-Ni-Gjy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -105,7 +105,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MMt-p2-aM4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="MiG-iR-diQ" id="8vE-Dw-Gtl"/>
@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAPA TROPICAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-UY-A4b">
-                                        <rect key="frame" x="101.5" y="27" width="171.5" height="24"/>
+                                        <rect key="frame" x="110" y="27" width="154.5" height="24"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -132,7 +132,7 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="rightBarIconImage" value="profile_dummy"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLe-vn-urf">
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLe-vn-urf">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b85-Q3-SU8">
@@ -151,7 +151,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-Rq-ttS">
-                                                <rect key="frame" x="31" y="12" width="29" height="26"/>
+                                                <rect key="frame" x="30.5" y="12" width="29" height="26"/>
                                                 <state key="normal" image="heartEmpty_button"/>
                                                 <connections>
                                                     <action selector="setFavorite:" destination="MiG-iR-diQ" eventType="touchUpInside" id="jFY-sK-MKb"/>
@@ -176,7 +176,7 @@
                                         <rect key="frame" x="286" y="0.0" width="89" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5O-Ra-UGP">
-                                                <rect key="frame" x="31" y="11" width="28" height="28"/>
+                                                <rect key="frame" x="30.5" y="11" width="28" height="28"/>
                                                 <state key="normal" image="box_button"/>
                                                 <connections>
                                                     <action selector="addToCart:" destination="MiG-iR-diQ" eventType="touchUpInside" id="Efq-7U-wAH"/>
@@ -220,7 +220,7 @@
                             <constraint firstItem="v9O-NA-5E0" firstAttribute="top" secondItem="gZZ-hH-Rt7" secondAttribute="top" id="7nl-Wh-cg2"/>
                             <constraint firstItem="v9O-NA-5E0" firstAttribute="leading" secondItem="gZZ-hH-Rt7" secondAttribute="leading" id="9AN-aG-sSl"/>
                             <constraint firstItem="MMt-p2-aM4" firstAttribute="top" secondItem="gZZ-hH-Rt7" secondAttribute="top" constant="64" id="Agl-97-ruc"/>
-                            <constraint firstItem="SLe-vn-urf" firstAttribute="top" secondItem="MMt-p2-aM4" secondAttribute="bottom" id="FLV-kD-QUH"/>
+                            <constraint firstItem="oRT-An-T9b" firstAttribute="top" secondItem="MMt-p2-aM4" secondAttribute="bottom" id="Cf7-c0-uZ2"/>
                             <constraint firstAttribute="trailing" secondItem="v9O-NA-5E0" secondAttribute="trailing" id="GTL-fN-kvc"/>
                             <constraint firstItem="bYV-MR-9nk" firstAttribute="top" secondItem="gZZ-hH-Rt7" secondAttribute="top" id="Y5s-lc-wri"/>
                             <constraint firstItem="SLe-vn-urf" firstAttribute="leading" secondItem="gZZ-hH-Rt7" secondAttribute="leading" id="afh-b1-1MO"/>
@@ -255,12 +255,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-w8-DRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3061.5" y="-216.5"/>
+            <point key="canvasLocation" x="3060" y="-217.24137931034485"/>
         </scene>
         <!--Box Detail View Controller-->
         <scene sceneID="2Ey-J6-tfE">
             <objects>
-                <viewController id="0ce-GX-ZYA" customClass="BoxDetailViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="boxDetail" id="0ce-GX-ZYA" customClass="BoxDetailViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AEB-Sg-9VP"/>
                         <viewControllerLayoutGuide type="bottom" id="jvA-uR-gu7"/>
@@ -335,7 +335,7 @@
                 <viewControllerPlaceholder storyboardName="ShoppingBox" id="ibz-ad-nfE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VE-X2-oD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4502" y="30"/>
+            <point key="canvasLocation" x="4411" y="-218"/>
         </scene>
         <!--ShoppingBox-->
         <scene sceneID="yXG-IB-EN4">
@@ -354,7 +354,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

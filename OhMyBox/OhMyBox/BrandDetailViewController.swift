@@ -157,6 +157,11 @@ class BrandDetailViewController: UIViewController {
             vc.locationInfo = ("ONDE ESTÁ", "RUA 13 Norte Lt. 1/3 Loja 168  Vitrinni Shopping Águas Claras, DF 71909-720")
             vc.socialNetworkInfos = [(#imageLiteral(resourceName: "instagram_icon"), "@boladourban"), (#imageLiteral(resourceName: "facebook_icon"), "/boladourban"), (#imageLiteral(resourceName: "twitter_icon"), "@boladourban"), (#imageLiteral(resourceName: "youtube_icon"), "/boladourban")]
         }
+        
+        if segue.identifier == SegueIdentifiers.brandDetailToBoxDetail {
+            let vc = segue.destination as! BoxDetailViewController
+            vc.presenter.box = presenter.selectedBox
+        }
     }
     
     @IBAction func contactButtonAction(_ sender: UIButton) {
@@ -373,7 +378,6 @@ extension BrandDetailViewController: UIScrollViewDelegate {
     
     func updateStackButtonsZPosition(_ yOffset: CGFloat) {
         if yOffset <= 0 {
-            
             view.bringSubview(toFront: buttonsStackView)
         } else {
             view.sendSubview(toBack: buttonsStackView)
@@ -404,15 +408,13 @@ extension BrandDetailViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
         
-//        if colletionViewDelegate === highlightsCollectionViewDelegate {
-//            
-//            performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
-//        } else if colletionViewDelegate === collectionsCollectionViewDelegate {
-//            
-//            
-//        } else if colletionViewDelegate === salesCollectionViewDelegate {
-//            performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
-//        }
+        
+        if let dataSource = colletionViewDelegate as? BoxesCollectionViewDataSource {
+            presenter.selectedBox = dataSource.boxes[indexPath.item]
+        } else {
+            presenter.selectedBox = nil
+        }
+        performSegue(withIdentifier: SegueIdentifiers.brandDetailToBoxDetail, sender: self)
     }
 }
 

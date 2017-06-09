@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="74n-xE-GDc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="74n-xE-GDc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +31,7 @@
         <!--Rating1 View Controller-->
         <scene sceneID="i7k-1p-bSa">
             <objects>
-                <viewController id="PdY-Hv-6Dg" customClass="Rating1ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PdY-Hv-6Dg" customClass="Rating1ViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hK1-At-pUf"/>
                         <viewControllerLayoutGuide type="bottom" id="GiB-mj-CvE"/>
@@ -54,11 +54,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Tt-SvH">
-                                <rect key="frame" x="18" y="360" width="227" height="40"/>
+                                <rect key="frame" x="18" y="360" width="227" height="29.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="E aí, como foi? Queremos saber tudo, e com detalhes!">
                                         <attributes>
-                                            <font key="NSFont" size="16" name="Poppins-Light"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.76000000000000001" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnZ-iA-dre">
-                                <rect key="frame" x="18" y="440" width="267" height="52"/>
+                                <rect key="frame" x="18" y="429.5" width="267" height="52"/>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="FLv-c8-FTP"/>
@@ -126,7 +126,7 @@
         <!--Rating Container View Controller-->
         <scene sceneID="yff-FC-q5w">
             <objects>
-                <viewController id="74n-xE-GDc" customClass="RatingContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="74n-xE-GDc" customClass="RatingContainerViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a9D-oV-Xna"/>
                         <viewControllerLayoutGuide type="bottom" id="OEz-WJ-mYO"/>
@@ -189,7 +189,11 @@
         <!--Rating2 View Controller-->
         <scene sceneID="xu1-ik-NE8">
             <objects>
-                <viewController id="vXp-sp-Ygc" customClass="Rating2ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXp-sp-Ygc" customClass="Rating2ViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CPE-B3-YdQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EPD-v2-Oxa"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bDb-61-jUI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +256,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUA OPINIÃO É IMPORTANTE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fug-oB-mbz">
-                                <rect key="frame" x="94" y="275" width="188.5" height="23"/>
+                                <rect key="frame" x="93.5" y="275" width="188.5" height="23"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -340,7 +344,11 @@
         <!--Rating3 View Controller-->
         <scene sceneID="3RX-DY-lY2">
             <objects>
-                <viewController id="rpW-wO-NWV" customClass="Rating3ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rpW-wO-NWV" customClass="Rating3ViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AOn-Ro-niG"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Gv-eG-anf"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OJk-Qt-lMA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,7 +400,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVALIADO EM X ESTRELAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-TV-2BE">
-                                <rect key="frame" x="102" y="219" width="172" height="23"/>
+                                <rect key="frame" x="102.5" y="219" width="172" height="23"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -435,7 +443,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO QUE VOCÊ MAIS GOSTOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8he-xE-G8r">
-                                <rect key="frame" x="73.5" y="361" width="229.5" height="25"/>
+                                <rect key="frame" x="74" y="361" width="229.5" height="25"/>
                                 <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
