@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fnk-Q2-tB1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fnk-Q2-tB1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXx-4C-9Ig">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EXx-4C-9Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -144,24 +144,24 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yke-7u-LLO">
-                                        <rect key="frame" x="103" y="185" width="171" height="24"/>
+                                        <rect key="frame" x="102.5" y="185" width="171" height="24"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="handmade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-C0-IZm">
-                                        <rect key="frame" x="143.5" y="205" width="89.5" height="26.5"/>
+                                        <rect key="frame" x="142.5" y="205" width="89.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-67-7JF">
-                                        <rect key="frame" x="20" y="239.5" width="335" height="37"/>
+                                        <rect key="frame" x="20" y="239.5" width="335" height="27"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend dolor sic amet">
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="14" name="Poppins-Light"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.80000000000000004" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -169,7 +169,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egp-wt-NvF">
-                                        <rect key="frame" x="122" y="288.5" width="130" height="32"/>
+                                        <rect key="frame" x="122" y="278.5" width="130" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="egp-wt-NvF" secondAttribute="height" multiplier="130:32" id="PRR-vT-rzv"/>
                                             <constraint firstAttribute="width" constant="130" id="cnj-qu-aTX"/>
@@ -262,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARITA CROCHÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YY-tb-cA6">
-                                        <rect key="frame" x="115.5" y="29.5" width="145.5" height="20.5"/>
+                                        <rect key="frame" x="115" y="29" width="145.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -337,11 +337,20 @@
                         <outlet property="tableView" destination="QzP-WY-RLA" id="jIB-Q7-OBb"/>
                         <segue destination="OXc-UR-xWl" kind="show" identifier="goToProductDetail" id="ODc-aA-aVd"/>
                         <segue destination="oPY-7F-LaV" kind="show" identifier="brandDetailToContact" id="gef-Ym-O0M"/>
+                        <segue destination="Z6c-bz-xr4" kind="show" identifier="goToBoxDetail" id="Wk9-5E-wS3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3N-RD-wqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.5999999999999" y="65.217391304347828"/>
+        </scene>
+        <!--boxDetail-->
+        <scene sceneID="C8k-J5-S9f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="boxDetail" id="Z6c-bz-xr4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lK0-dX-y69" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="573"/>
         </scene>
         <!--Brand Contact View Controller-->
         <scene sceneID="zaF-Cg-rOg">

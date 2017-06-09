@@ -9,7 +9,7 @@
 import Parse
 import ParseFacebookUtilsV4
 
-protocol LoginView {
+protocol LoginView: class {
     
     func didFinishLogin(_ success: Bool, error: Error?)
 }

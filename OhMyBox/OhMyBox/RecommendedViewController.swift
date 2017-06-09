@@ -27,11 +27,13 @@ class RecommendedViewController: UIViewController {
         self.configureNavigationBar()
     }
     
-    func registerNib(){
+    func registerNib() {
         self.tableView.register(UINib(nibName: "ShowProductTableViewCell", bundle: nil), forCellReuseIdentifier: ShowProductTableViewCell.identifier)
     }
     
+    
     func configureNavigationBar() {
+        
     }
     
     
@@ -40,7 +42,6 @@ class RecommendedViewController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ShowProductTableViewCell.identifier, for: indexPath) as! ShowProductTableViewCell
         
         cell.productImage.image = #imageLiteral(resourceName: "defaultWoman")
-        
         
         return cell
     }

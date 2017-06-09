@@ -45,6 +45,11 @@ extension Array {
 
 extension Array where Element : Equatable {
     
+    func `where`(lambda: ((Element) -> (Bool))) -> Element? {
+        
+        return self.filter(lambda).first
+    }
+    
     func by(removing element: Element) -> [Element] {
         
         var newArray = self

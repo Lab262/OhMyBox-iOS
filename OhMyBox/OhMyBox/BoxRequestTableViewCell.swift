@@ -6,7 +6,7 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class BoxRequestTableViewCell: UITableViewCell {
 
@@ -22,7 +22,7 @@ class BoxRequestTableViewCell: UITableViewCell {
         return "BoxRequestTableViewCell"
     }
     
-    typealias Info = (title: String, categoryCount: Int, price: Double, productImages: [UIImage])
+    typealias Info = (title: String, categoryCount: Int, price: Double, productImages: [PFFile])
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -54,7 +54,8 @@ class BoxRequestTableViewCell: UITableViewCell {
         
         for i in 0..<productImageViews.count {
             
-            productImageViews[i].image = info?.productImages.object(at: i)
+            guard let file = info?.productImages.object(at: i) else { continue }
+            productImageViews[i].loadPFFile(file)
         }
     }
     

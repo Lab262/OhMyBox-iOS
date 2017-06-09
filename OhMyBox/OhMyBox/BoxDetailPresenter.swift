@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BoxDetailView {
+protocol BoxDetailView: class {
     
     func reloadData()
 }
@@ -36,7 +36,7 @@ class BoxDetailPresenter: NSObject {
     
     var selectedProduct: Product?
     
-    var view: BoxDetailView?
+    weak var view: BoxDetailView?
     
     var boxPlaceholderInfo: BoxDetailHeaderCollectionReusableView.Info {
         

@@ -12,18 +12,17 @@ class RequestDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var notifyArrivalButton: UIButton!
-    
     @IBOutlet weak var navigationBar: IconNavigationBar!
     
+    var presenter = RequestDetailPresenter()
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         registerNibs()
         navigationBar.showsRightBarButton = false
     }
     
     func registerNibs() {
-        
         tableView.registerNibFrom(BoxProductTableViewCell.self)
         tableView.registerNibFrom(RequestResultsTableViewCell.self)
         tableView.registerNibFrom(BrandContactHeaderTableViewCell.self)
@@ -48,20 +47,18 @@ extension RequestDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.presenter.request!.box.products.count+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: UITableViewCell
-        if case 0...2 = indexPath.row {
-            
+        
+        if indexPath.row < self.presenter.request!.box.products.count {
             cell = generateProductCell(tableView, cellForRowAt: indexPath)
         } else {
-            
             cell = generateResultsCell(tableView, cellForRowAt: indexPath)
         }
-        
         return cell
     }
 }
@@ -93,7 +90,10 @@ extension RequestDetailViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxProductTableViewCell.identifier) as! BoxProductTableViewCell
         
-        cell.info = ("Produto", "Fashion Store", "36", UIColor.clear, #imageLiteral(resourceName: "product_placeholder"))
+        
+        let product = presenter.request?.box.products[indexPath.row]
+        
+        cell.info = (product!.name, product!.brand.name, "2", UIColor.red, product!.photos.first)
         
         return cell
     }
@@ -102,7 +102,7 @@ extension RequestDetailViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: RequestResultsTableViewCell.identifier) as! RequestResultsTableViewCell
         
-        cell.total = 100
+        cell.total = Double(presenter.request!.box.price)
         
         return cell
     }

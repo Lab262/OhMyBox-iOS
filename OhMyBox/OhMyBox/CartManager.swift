@@ -28,26 +28,18 @@ class CartManager: NSObject {
     
     var cartBoxes: [Box] {
         
-        let cartBoxes: [Box] = cartBoxReflections.flatMap { (reflection) -> Box in
-            
-            let box = Box(className: Box.parseClassName(), dictionary: reflection)
-            
-            let brandReflection = reflection["brand"] as? [String: Any]
-            
-            box.brand = Brand(className: Brand.parseClassName(), dictionary: brandReflection)
-            box.brand.objectId = brandReflection?["objectId"] as? String
-            
-            box.objectId = reflection["objectId"] as? String
-            
-            return box
+        let cartBoxes: [Box] = cartBoxObjectIds.flatMap { (boxId) in
+            BoxRequester.shared.boxes.where(lambda: { (box) -> (Bool) in
+                return box.objectId == boxId
+            })
         }
 
         return cartBoxes
     }
     
-    var cartBoxReflections: [PFObject.ReflectionType] {
+    var cartBoxObjectIds: [String] {
         
-        let reflections = userDefaults.array(forKey: UserDefaultsKeys.cartBoxes) as? [PFObject.ReflectionType]
+        let reflections = userDefaults.array(forKey: UserDefaultsKeys.cartBoxes) as? [String]
         
         return reflections ?? []
     }
@@ -58,6 +50,8 @@ class CartManager: NSObject {
     }
     
     func updateCart(withBox box: Box) {
+        
+        guard let boxId = box.objectId else { return }
         
         let cartBoxes: [Box]
         
@@ -71,12 +65,12 @@ class CartManager: NSObject {
             cartBoxes = self.cartBoxes.by(adding: box)
         }
         
-        let cartBoxReflections = cartBoxes.map { $0.reflection }
-        userDefaults.set(cartBoxReflections, forKey: UserDefaultsKeys.cartBoxes)
+        let cartBoxObjectIds = cartBoxes.map { $0.objectId ?? "" }
+        userDefaults.set(cartBoxObjectIds, forKey: UserDefaultsKeys.cartBoxes)
         
         userDefaults.synchronize()
         
-        let notificationUserInfo: [String: Any] = [UpdateUserInfoKeys.boxId: box.objectId!, UpdateUserInfoKeys.isInCart: !boxIsInCart]
+        let notificationUserInfo: [String: Any] = [UpdateUserInfoKeys.boxId: boxId, UpdateUserInfoKeys.isInCart: !boxIsInCart]
         NotificationCenter.default.post(name: Notifications.cartUpdated, object: notificationUserInfo)
     }
     

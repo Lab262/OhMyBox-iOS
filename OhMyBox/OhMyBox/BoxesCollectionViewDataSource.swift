@@ -69,7 +69,6 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         }
         
         cell.boxView.likeButtonHandler = { _ in
-            
             self.likeButtonHandler(indexPath)
         }
         

@@ -8,16 +8,20 @@
 
 import Parse
 
-protocol HomeView {
+protocol HomeView: class {
     
     func reloadData()
 }
 
 class HomePresenter: NSObject {
 
-    var boxes: [Box] = []
+    var boxes: [Box] = [] {
+        didSet {
+            view?.reloadData()
+        }
+    }
     var selectedBox: Box?
-    var view: HomeView?
+    weak var view: HomeView?
     
     override init() {
         
@@ -26,24 +30,33 @@ class HomePresenter: NSObject {
     
     func loadBoxes() {
         
-        let query = PFQuery(className: Box.parseClassName()).includeKey("brand")
-        
-        query.findObjectsInBackground { (objects, error) in
+        BoxRequester.shared.queryBoxes { (boxes, error) in
             
-            if let boxes = objects as? [Box] {
+            if let boxes = boxes {
                 
-                for box in boxes {
-                    
-                    box.queryProducts() { (_) in
-                        
-                        self.boxes.append(box)
-                        self.view?.reloadData()
-                    }
-                }
-            } else {
-                
+                self.boxes = boxes
             }
         }
+        
+//        let query = PFQuery(className: Box.parseClassName()).includeKey("brand")
+//        
+//        boxes.removeAll(keepingCapacity: true)
+//        query.findObjectsInBackground { (objects, error) in
+//            
+//            if let boxes = objects as? [Box] {
+//                
+//                for box in boxes {
+//                    
+//                    box.queryProducts() { (_) in
+//                        
+//                        self.boxes.append(box)
+//                        self.view?.reloadData()
+//                    }
+//                }
+//            } else {
+//                
+//            }
+//        }
     }
     
 }

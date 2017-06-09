@@ -8,14 +8,14 @@
 
 import Parse
 
-protocol RequestsView {
+protocol RequestsView: class {
     
     func reloadData()
 }
 
 class RequestsPresenter: NSObject {
 
-    var view: RequestsView?
+    weak var view: RequestsView?
     
     var purchaseRequests: [PurchaseRequest] = [] {
         
@@ -26,23 +26,56 @@ class RequestsPresenter: NSObject {
         }
     }
     
+    func selectedProduct(for category: String) -> Product? {
+        
+        let products = selectedRequest?.box.products.filter {
+            $0.productType == category
+        }
+        
+        return products?.object(at: 0)
+    }
+    
     var selectedRequest: PurchaseRequest?
     
     func loadPurchaseRequests() {
         
         guard let buyer = User.current else { return }
         
-        let query = PFQuery(className: PurchaseRequest.parseClassName()).whereKey("buyer", equalTo: buyer).includeKey("box")
+        let query = PFQuery(className: PurchaseRequest.parseClassName()).whereKey("buyer", equalTo: buyer)
         
         query.findObjectsInBackground { (objects, error) in
             
-            guard let requests = (objects as? [PurchaseRequest])?.sorted(by: { (a, b) -> Bool in
-                
-                a.createdAt! > b.createdAt!
-                
-            }) else { return }
+            guard let requests = objects as? [PurchaseRequest] else { return }
             
-            self.purchaseRequests = requests
+            var requestsToRemove: [PurchaseRequest] = []
+            requests.forEach { request in
+                
+                let requestBoxes = BoxRequester.shared.boxes.filter {
+                    
+                    return $0.objectId == request.box.objectId
+                }
+                
+                if let box = requestBoxes.object(at: 0) {
+                    
+                    request.box = box
+                } else {
+                    
+                    do {
+                        try request.box.fetch()
+                    } catch {
+                        
+                        requestsToRemove.append(request)
+                    }
+                }
+            }
+            
+            self.purchaseRequests = requests.filter { request in
+                
+                return !requestsToRemove.contains {
+                    
+                    $0.objectId == request.objectId
+                }
+            }
         }
     }
 }

@@ -149,7 +149,13 @@ extension PurchaseViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxProductTableViewCell.identifier) as! BoxProductTableViewCell
         
-        cell.info = ("Produto", "Fashion Store", "36", UIColor.clear, #imageLiteral(resourceName: "product_placeholder"))
+        guard let box = presenter.box else { return cell }
+        
+        let category = box.productTypes[indexPath.row]
+        if let product = presenter.selectedProduct(for: category) {
+            
+            cell.info = (product.name, box.brand.name, "", UIColor.clear, product.photos.object(at: 0))
+        }
         
         return cell
     }

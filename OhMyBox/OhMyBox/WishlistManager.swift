@@ -38,13 +38,21 @@ class WishlistManager: NSObject {
         
         let query = PFQuery(className: Wishlist.parseClassName()).whereKey("user", equalTo: user).includeKey("box")
         
+//        query.cachePolicy = .cacheThenNetwork
         query.findObjectsInBackground { (objects, error) in
             
             if let objects = objects as? [Wishlist] {
                 
-                self.favoriteBoxes = objects.map { $0.box }
-                print("loaded")
+                let boxes = objects.map { $0.box }
                 
+                for box in boxes {
+                    
+                    box.queryProducts() { (_) in
+                        
+                        self.favoriteBoxes.append(box)
+                    }
+                    try! box.brand.fetch()
+                }
             }
         }
     }

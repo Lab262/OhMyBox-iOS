@@ -44,7 +44,7 @@ class WishlistCountTableViewCell: UITableViewCell {
 
     func setWishlistCountTitle(_ productsCount: Int) {
         if let wishlistCountLabel = wishlistCountLabel {
-            wishlistCountLabel.attributedText = ("\(productsCount) produtos na Wishlist").with(characterSpacing: 2.04)
+            wishlistCountLabel.attributedText = ("\(productsCount) boxes na Wishlist").with(characterSpacing: 2.04)
         }
     }
 }

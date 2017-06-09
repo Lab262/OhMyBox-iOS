@@ -11,7 +11,6 @@ import Parse
 class User: PFUser {
     
     enum UserType: String {
-        
         case buyer
         case seller
     }
@@ -20,9 +19,14 @@ class User: PFUser {
     @NSManaged var lastName: String?
     @NSManaged var userType: String?
     @NSManaged var photo: PFFile?
+    @NSManaged var cpf: String?
+    @NSManaged var phone: String?
+    
+    var adresses: PFRelation<Address> {
+        return self.relation(forKey: "adresses") as! PFRelation<Address>
+    }
     
     static var current: User? {
-        
         return PFUser.current() as? User
     }
     

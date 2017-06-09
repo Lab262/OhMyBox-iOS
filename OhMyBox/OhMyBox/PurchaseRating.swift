@@ -16,7 +16,6 @@ class PurchaseRating: PFObject {
     @NSManaged var brand: Brand
     
     var feedbackOptions: PFRelation<PurchaseRatingFeedback> {
-        
         return self.relation(forKey: feedbackOptionsRelationKey) as! PFRelation<PurchaseRatingFeedback>
     }
     

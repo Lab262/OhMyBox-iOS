@@ -24,29 +24,23 @@ class Product: PFObject {
     }
     
     func queryPhotos(completionHandler: (([PFFile]) -> ())? = nil) {
-        
         photosRelation.query().findObjectsInBackground { (objects, error) in
-            
             if let objects = objects {
-                
                 self.photos = objects.map { $0.photo }
             }
+            
             completionHandler?(self.photos)
         }
     }
     
     func queryPhotosSync() throws {
-        
         let photoObjects = try photosRelation.query().findObjects()
-        
         self.photos = photoObjects.map { $0.photo }
     }
 }
 
 extension Product: PFSubclassing {
-    
     public static func parseClassName() -> String {
-        
         return "Product"
     }
 }

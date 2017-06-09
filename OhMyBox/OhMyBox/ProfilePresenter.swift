@@ -8,7 +8,7 @@
 
 import Parse
 
-protocol ProfileView {
+protocol ProfileView: class {
     
     func startLoadingPhoto()
     func finishLoadingPhoto()

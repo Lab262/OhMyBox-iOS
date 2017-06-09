@@ -11,17 +11,35 @@ import UIKit
 
 extension UIImageView {
     
-    func loadPFFile(_ file: PFFile) {
+    func loadPFFile(_ file: PFFile, completion: ((Data?) -> ())? = nil) {
         
         self.addLoadingFeedback()
-        file.getDataInBackground { (data, error) in
+        
+        if let data = file.loadedData {
             
-            guard data != nil else { return }
-            if let image = UIImage(data: data!) {
-                
+            if let image = UIImage(data: data) {
+             
                 self.image = image
             }
+            
             self.removeLoadingFeedback()
+            completion?(data)
+        } else {
+            
+            file.getDataInBackground { (data, error) in
+                
+                if let data = data {
+                    
+                    if let image = UIImage(data: data) {
+                        
+                        self.image = image
+                    }
+                }
+                
+                file.loadedData = data
+                completion?(data)
+                self.removeLoadingFeedback()
+            }
         }
     }
 }

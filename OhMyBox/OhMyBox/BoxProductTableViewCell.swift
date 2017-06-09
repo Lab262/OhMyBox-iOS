@@ -6,7 +6,7 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class BoxProductTableViewCell: UITableViewCell {
 
@@ -22,7 +22,7 @@ class BoxProductTableViewCell: UITableViewCell {
         return "BoxProductTableViewCell"
     }
     
-    typealias Info = (name: String, brandName: String, size: String, printColor: UIColor, productImage: UIImage?)
+    typealias Info = (name: String, brandName: String, size: String, printColor: UIColor, productImageFile: PFFile?)
     
     @IBOutlet weak var borderView: UIView!
     
@@ -67,7 +67,9 @@ class BoxProductTableViewCell: UITableViewCell {
         sizeLabel.text = info?.size
         printView.color = info?.printColor ?? UIColor.clear
         
-        photoImageView.image = info?.productImage
+        if let file = info?.productImageFile {
+            photoImageView.loadPFFile(file)
+        }
     }
     
 }

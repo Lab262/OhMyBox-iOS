@@ -54,6 +54,25 @@ class Box: PFObject {
             completionHandler?(products)
         }
     }
+    
+    func queryProductsSync() {
+        
+        do {
+            
+            self.products = try productsRelation.query().findObjects()
+            for product in self.products {
+                
+                product.brand = self.brand
+                do {
+                    try product.queryPhotosSync()
+                } catch {
+                    
+                }
+            }
+        } catch {
+            
+        }
+    }
 }
 
 extension Box: PFSubclassing {

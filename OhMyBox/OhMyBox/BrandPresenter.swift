@@ -9,14 +9,14 @@
 import UIKit
 import Parse
 
-protocol BrandView {
+protocol BrandView: class {
     
     func reloadData()
 }
 
 class BrandPresenter: NSObject {
 
-    var view: BrandView?
+    weak var view: BrandView?
     var brands: [Brand] = [] {
         
         didSet {
@@ -28,17 +28,19 @@ class BrandPresenter: NSObject {
     func loadBrands() {
         
         let query = PFQuery(className: Brand.parseClassName())
+        //query.limit = 10
+        //query.whereKey(objectId, notContainedIn: brands.map { $0.objectId })
         query.findObjectsInBackground { (objects, error) in
             
             guard let brands = objects as? [Brand] else { return }
             
-            brands.forEach {
-                
-                $0.loadPhoto(completion: { (error) in
-                    
-                    self.view?.reloadData()
-                })
-            }
+//            brands.forEach {
+//                
+//                $0.loadPhoto(completion: { (error) in
+//                    
+//                    self.view?.reloadData()
+//                })
+//            }
             
             self.brands = brands
         }

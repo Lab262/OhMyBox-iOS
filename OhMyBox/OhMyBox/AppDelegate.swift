@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               Fabric.with([Crashlytics.self])
         
         setUpBarsAppearance()
-
+        
         Parse.initialize(with: AppConfig.parse.baseClientConfig)
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
