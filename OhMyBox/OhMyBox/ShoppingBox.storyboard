@@ -591,7 +591,7 @@ entenda o porquê.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ya6-JV-cdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="1449"/>
+            <point key="canvasLocation" x="1156" y="1234"/>
         </scene>
         <!--Create Account Second Step View Controller-->
         <scene sceneID="uhl-vO-0yU">

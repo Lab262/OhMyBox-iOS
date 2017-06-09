@@ -11,7 +11,6 @@ import UIKit
 class SectionSwtichProductTableViewCell: UITableViewCell {
     
    
-    
     @IBOutlet weak var descriptionProductButton: UIButton!
     @IBOutlet weak var detailProductButton: UIButton!
     
