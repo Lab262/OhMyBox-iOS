@@ -81,7 +81,7 @@ extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BoxTableViewCell.identifier) as! BoxTableViewCell
         
-        let box = presenter.boxes[indexPath.item]
+        let box = presenter.boxes[indexPath.section]
         
         cell.info = (box.name, box.boxDescription, box.price.doubleValue, box.brand.photo, box.products.map { $0.photos.object(at: 0) })
         

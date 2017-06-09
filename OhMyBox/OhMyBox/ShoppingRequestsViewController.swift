@@ -55,14 +55,19 @@ class ShoppingRequestsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == SegueIdentifiers.shoppingRequestsToRating {
-            
             let vc = segue.destination as! RatingContainerViewController
-            
+    
             if let request = presenter.selectedRequest {
-                
                 vc.presenter.startRating(purchaseRequest: request)
             }
+        }
+        
+        if segue.identifier == SegueIdentifiers.shoppingRequestsToRequestDetail {
+            let vc = segue.destination as! RequestDetailViewController
             
+            if let indexPath = tableView.indexPathForSelectedRow {
+                vc.presenter.request = presenter.purchaseRequests[indexPath.section]
+            }
         }
     }
 }
@@ -150,7 +155,6 @@ extension ShoppingRequestsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if case 0...1 = indexPath.row {
-            
             performSegue(withIdentifier: SegueIdentifiers.shoppingRequestsToRequestDetail, sender: self)
         }
     }
@@ -176,7 +180,10 @@ extension ShoppingRequestsViewController {
         
         let box = presenter.purchaseRequests[indexPath.section].box
         
-        cell.info = (box.name, box.productTypes.count, box.price.doubleValue, [#imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder"), #imageLiteral(resourceName: "product_placeholder")])
+        let productTypesCount = box.productTypes.count
+        let photos = box.products.map { $0.photos[0] }
+        
+        cell.info = (box.name, productTypesCount, box.price.doubleValue, photos)
         
         return cell
     }

@@ -99,7 +99,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT0-wS-hx4">
-                                <rect key="frame" x="340" y="41" width="19" height="22"/>
+                                <rect key="frame" x="339.5" y="41" width="19" height="22"/>
                                 <state key="normal" image="close_Button"/>
                                 <connections>
                                     <action selector="closeButton:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="RMk-Z0-eLe"/>
@@ -291,7 +291,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase_sucessful" translatesAutoresizingMaskIntoConstraints="NO" id="Tu3-rf-YpV">
-                                <rect key="frame" x="40" y="37" width="296" height="182"/>
+                                <rect key="frame" x="39.5" y="37" width="296" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="3eW-ss-zF2"/>
                                     <constraint firstAttribute="height" constant="182" id="SCk-3j-FTu"/>
@@ -371,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-9T-TG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="736"/>
+            <point key="canvasLocation" x="-23" y="929"/>
         </scene>
         <!--Create Account Container View Controller-->
         <scene sceneID="ybp-z8-gjD">

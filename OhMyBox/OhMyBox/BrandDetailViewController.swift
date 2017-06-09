@@ -41,19 +41,14 @@ class BrandDetailViewController: UIViewController {
     weak var brandHeaderBlurView: UIVisualEffectView?
     var blurAnimator: UIViewPropertyAnimator?
     
-    weak var highlightsCollectionViewDelegate: UICollectionViewDelegate!
-    weak var collectionsCollectionViewDelegate: UICollectionViewDelegate!
-    weak var salesCollectionViewDelegate: UICollectionViewDelegate!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchBarTopConstraint: NSLayoutConstraint!
     
+    var highlightsCollectionViewDelegate: BoxesCollectionViewDataSource?
+    var newsCollectionViewDelegate: BoxesCollectionViewDataSource?
+    
     let brandHeaderHeight: CGFloat = 382.0
     let tableViewTopMargin: CGFloat = 64
-    
-    var highlights: [Any] = [1, 2, 3]
-    var sales: [Any] = [1, 2, 3]
-    var brandCollections: [Any] = [1, 2, 3]
     
     var tableViewOffset = CGPoint()
     
@@ -72,6 +67,8 @@ class BrandDetailViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(BrandDetailViewController.reloadBlurAnimation), name: .UIApplicationWillEnterForeground, object: nil)
         
         presenter.view = self
+        
+        presenter.loadBoxes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,10 +107,8 @@ class BrandDetailViewController: UIViewController {
     }
     
     func registerNibs() {
-        tableView.registerNibFrom(MiniProductsTableViewCell.self)
-        tableView.registerNibFrom(BrandCollectionsTableViewCell.self)
         tableView.registerNibFrom(HomeTableViewHeaderView.self)
-        tableView.registerNibFrom(BrandShowAllProductsTableViewCell.self)
+        tableView.registerNibFrom(CollectionTableViewCell.self)
     }
     
     func setUpSearchBar() {
@@ -162,6 +157,11 @@ class BrandDetailViewController: UIViewController {
             vc.locationInfo = ("ONDE ESTÁ", "RUA 13 Norte Lt. 1/3 Loja 168  Vitrinni Shopping Águas Claras, DF 71909-720")
             vc.socialNetworkInfos = [(#imageLiteral(resourceName: "instagram_icon"), "@boladourban"), (#imageLiteral(resourceName: "facebook_icon"), "/boladourban"), (#imageLiteral(resourceName: "twitter_icon"), "@boladourban"), (#imageLiteral(resourceName: "youtube_icon"), "/boladourban")]
         }
+        
+        if segue.identifier == SegueIdentifiers.brandDetailToBoxDetail {
+            let vc = segue.destination as! BoxDetailViewController
+            vc.presenter.box = presenter.selectedBox
+        }
     }
     
     @IBAction func contactButtonAction(_ sender: UIButton) {
@@ -176,10 +176,8 @@ extension BrandDetailViewController: UITableViewDataSource {
         let cell: UITableViewCell
         
         switch indexPath.section {
-        case 0: cell = generateHighlightsCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateCollectionsCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateSalesCell(tableView, cellForRowAt: indexPath)
-        case 3: cell = generateShowAllCell(tableView, cellForRowAt: indexPath)
+        case 0: cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &newsCollectionViewDelegate)
+        case 1: cell = generateBoxesCell(tableView, cellForRowAt: indexPath, dataSourceReference: &highlightsCollectionViewDelegate)
         default: cell = UITableViewCell()
         }
         
@@ -209,7 +207,6 @@ extension BrandDetailViewController: UITableViewDataSource {
         case 1:
             headerTitle = "Coleções"
             header.showAllButton.isHidden = true
-        case 2: headerTitle = "Promoção"
         default: headerTitle = ""
         }
         
@@ -226,7 +223,7 @@ extension BrandDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 4
+        return 2
     }
 }
 
@@ -274,48 +271,38 @@ extension BrandDetailViewController: UITableViewDelegate {
 
 // MARK: - Generate Cells
 
-extension BrandDetailViewController /* generate cells */ {
+extension BrandDetailViewController {
     
     func generateHeader(_ tableView: UITableView, viewForHeaderInSection section: Int) -> HomeTableViewHeaderView {
         let header = tableView.dequeueReusableCell(withIdentifier: HomeTableViewHeaderView.identifier) as! HomeTableViewHeaderView
         
         return header
     }
-    
-    func generateHighlightsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier) as! MiniProductsTableViewCell
+    func generateBoxesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, dataSourceReference: inout BoxesCollectionViewDataSource?) -> CollectionTableViewCell {
         
-        cell.products = highlights
-        cell.selectionDelegate = self
-        highlightsCollectionViewDelegate = cell
+        let cell = generateCollectionTableCell(tableView, cellForRowAt: indexPath)
         
-        return cell
-    }
-    
-    func generateCollectionsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BrandCollectionsTableViewCell.identifier) as! BrandCollectionsTableViewCell
+        let dataSource = BoxesCollectionViewDataSource(collectionView: cell.collectionView)
+        dataSource.collectionSelectionDelegate = self
+        dataSource.boxes = presenter.boxes
+        dataSourceReference = dataSource
         
-        cell.collections = brandCollections
-        cell.selectionDelegate = self
-        collectionsCollectionViewDelegate = cell
+        cell.collectionViewDataSource = dataSource
+        cell.collectionViewDelegate = dataSource
         
-        return cell
-    }
-    
-    func generateSalesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> MiniProductsTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MiniProductsTableViewCell.identifier) as! MiniProductsTableViewCell
-        
-        cell.products = sales
-        cell.selectionDelegate = self
-        salesCollectionViewDelegate = cell
+        dataSource.boxButtonHandler = { indexPath in
+            
+            CartManager.shared.updateCart(withBox: dataSource.boxes[indexPath.item])
+        }
         
         return cell
     }
     
-    func generateShowAllCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandShowAllProductsTableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BrandShowAllProductsTableViewCell.identifier) as! BrandShowAllProductsTableViewCell
+    func generateCollectionTableCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CollectionTableViewCell {
         
-        cell.productsCount = 120
+        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
+        
+        cell.layer.masksToBounds = false
         
         return cell
     }
@@ -391,7 +378,6 @@ extension BrandDetailViewController: UIScrollViewDelegate {
     
     func updateStackButtonsZPosition(_ yOffset: CGFloat) {
         if yOffset <= 0 {
-            
             view.bringSubview(toFront: buttonsStackView)
         } else {
             view.sendSubview(toBack: buttonsStackView)
@@ -422,15 +408,13 @@ extension BrandDetailViewController: CollectionViewSelectionDelegate {
     
     func collectionViewDelegate(_ colletionViewDelegate: UICollectionViewDelegate, didSelectItemAt indexPath: IndexPath) {
         
-        if colletionViewDelegate === highlightsCollectionViewDelegate {
-            
-            performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
-        } else if colletionViewDelegate === collectionsCollectionViewDelegate {
-            
-            
-        } else if colletionViewDelegate === salesCollectionViewDelegate {
-            performSegue(withIdentifier: SegueIdentifiers.brandDetailToProductDetail, sender: self)
+        
+        if let dataSource = colletionViewDelegate as? BoxesCollectionViewDataSource {
+            presenter.selectedBox = dataSource.boxes[indexPath.item]
+        } else {
+            presenter.selectedBox = nil
         }
+        performSegue(withIdentifier: SegueIdentifiers.brandDetailToBoxDetail, sender: self)
     }
 }
 
@@ -454,4 +438,7 @@ extension BrandDetailViewController: UISearchBarDelegate {
 
 extension BrandDetailViewController: BrandDetailView {
     
+    func reloadData() {
+        
+    }
 }

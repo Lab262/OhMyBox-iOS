@@ -8,21 +8,29 @@
 
 import Parse
 
-protocol PurchaseView {
+protocol PurchaseView: class {
     
     func purchaseRequestSaved(success: Bool, error: Error?)
 }
 
 class PurchasePresenter: NSObject {
 
-    var view: PurchaseView?
-    var box: Box? {
-        didSet {
-            print("didset box")
-        }
+    weak var view: PurchaseView?
+    
+    var box: Box?
+    var productsCount: Int {
+        
+        return box?.productTypes.count ?? 0
     }
     
-    var productsCount = 3
+    func selectedProduct(for category: String) -> Product? {
+        
+        let products = box?.products.filter {
+            $0.productType == category
+        }
+        
+        return products?.object(at: 0)
+    }
     
     func sendPurchaseRequest() {
         

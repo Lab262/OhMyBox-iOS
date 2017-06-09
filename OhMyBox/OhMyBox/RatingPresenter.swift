@@ -8,14 +8,14 @@
 
 import Parse
 
-protocol RatingView {
+protocol RatingView: class {
     
     func dismiss()
 }
 
 class RatingPresenter: NSObject {
 
-    var view: RatingView?
+    weak var view: RatingView?
     var purchaseRating: PurchaseRating?
     
     func startRating(purchaseRequest: PurchaseRequest) {

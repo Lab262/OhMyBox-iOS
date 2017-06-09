@@ -15,7 +15,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonSquare: UIView!
 
-    var textFields: [Int: UITextField] = [:]
+    var textFields: [UITextField] = [] {
+        didSet {
+            textFields = textFields.sorted {
+                
+                return $0.tag < $1.tag
+            }
+        }
+    }
     
 // MARK: - Properties
     
@@ -29,7 +36,25 @@ class RegisterViewController: UIViewController {
         
         presenter = RegisterPresenter(view: self)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidAppear(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidDisappear(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         registerNibs()
+    }
+    
+    func keyboardDidAppear(_ notification: Notification) {
+        
+        let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
+        
+        tableView.contentInset.bottom = keyboardSize.height
+    }
+    
+    func keyboardDidDisappear(_ notification: Notification) {
+        
+        let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
+        
+        tableView.contentInset.bottom = 0
     }
     
     func registerNibs() {
@@ -212,6 +237,7 @@ extension RegisterViewController {
             
         case 1, 2:
             cell.iconImageView.image = #imageLiteral(resourceName: "iconUser_image")
+            cell.textField.autocapitalizationType = .words
         case 3:
             cell.iconImageView.image = #imageLiteral(resourceName: "iconEmail_image")
             cell.textField.keyboardType = .emailAddress
@@ -222,8 +248,14 @@ extension RegisterViewController {
         }
         
         cell.textField.placeholder = registerFieldPlaceholder(for: indexPath.row)
+        cell.textField.placeHolderColor = .white
         
-        textFields[indexPath.row] = cell.textField
+        cell.textField.tag = indexPath.row
+        cell.textField.delegate = self
+        cell.textField.returnKeyType = indexPath.row == 5 ? .done : .next
+        
+        textFields.append(cell.textField)
+        
         
         return cell
     }
@@ -276,4 +308,29 @@ extension RegisterViewController: RegisterView {
     }
 }
 
+extension RegisterViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        guard let index = textFields.index(of: textField) else { return true }
+        if let next = textFields.object(at: index + 1) {
+            
+            next.becomeFirstResponder()
+        } else {
+            
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        guard let index = textFields.index(of: textField) else { return }
+        
+        let indexPath = IndexPath(row: index + 1, section: 0)
+        
+        tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+}
 

@@ -57,12 +57,12 @@ struct SegueIdentifiers {
     static let brandDetailToProductDetail = "goToProductDetail"
     static let brandDetailToCollecions = "goToCollections"
     static let brandDetailToContact = "brandDetailToContact"
+    static let brandDetailToBoxDetail = "goToBoxDetail"
     
     // From shopping box
     static let shoppingBoxToPurchase = "shoppingBoxToPurchase"
     static let shoppingRequestsToRating = "shoppingRequestsToRating"
     static let shoppingRequestsToRequestDetail = "shoppingRequestsToRequestDetail"
-    
     static let shoppingRequestDetailToRating = "shoppingRequestDetailToRating"
     
     // From purchase
@@ -70,6 +70,9 @@ struct SegueIdentifiers {
     
     // From box detail
     static let boxDetailToProductDetail = "boxDetailToProductDetail"
+    
+    // From wishlist
+    static let wishListToBoxDetail = "goToBoxDetail"
 }
 
 // MARK: Notification Names
