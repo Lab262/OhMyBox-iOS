@@ -21,10 +21,10 @@ class WishlistViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.registerNibs()
         self.configureNavigationBar()
-       
     }
     
     override func viewDidAppear(_ animated: Bool) {
