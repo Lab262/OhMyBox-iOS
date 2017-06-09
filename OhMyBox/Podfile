@@ -7,6 +7,9 @@ def common_pods
     use_frameworks!
 
     pod 'Parse'
+    pod 'MoipEncryptSDK', '~> 1.0'
+    pod 'AKMaskField'
+    pod 'SnapKit', '~> 3.2.0'
     pod 'ParseFacebookUtilsV4'
     pod 'Fabric'
     pod 'Crashlytics'

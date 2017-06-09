@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="74n-xE-GDc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="74n-xE-GDc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +31,7 @@
         <!--Rating1 View Controller-->
         <scene sceneID="i7k-1p-bSa">
             <objects>
-                <viewController id="PdY-Hv-6Dg" customClass="Rating1ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PdY-Hv-6Dg" customClass="Rating1ViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hK1-At-pUf"/>
                         <viewControllerLayoutGuide type="bottom" id="GiB-mj-CvE"/>
@@ -48,17 +48,17 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUHU, VOCÊ FINALIZOU SUA COMPRA!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJb-wP-s4y">
-                                <rect key="frame" x="18" y="298" width="257" height="48"/>
+                                <rect key="frame" x="18" y="298" width="257" height="47"/>
                                 <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-Tt-SvH">
-                                <rect key="frame" x="18" y="360" width="227" height="40"/>
+                                <rect key="frame" x="18" y="359" width="227" height="29.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="E aí, como foi? Queremos saber tudo, e com detalhes!">
                                         <attributes>
-                                            <font key="NSFont" size="16" name="Poppins-Light"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.76000000000000001" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnZ-iA-dre">
-                                <rect key="frame" x="18" y="440" width="267" height="52"/>
+                                <rect key="frame" x="18" y="428.5" width="267" height="52"/>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="FLv-c8-FTP"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.46999999999999997" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-cI-rET">
-                                <rect key="frame" x="304" y="626" width="50" height="40"/>
+                                <rect key="frame" x="298" y="634" width="56" height="32"/>
                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="PULAR">
                                     <color key="titleColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,7 +126,7 @@
         <!--Rating Container View Controller-->
         <scene sceneID="yff-FC-q5w">
             <objects>
-                <viewController id="74n-xE-GDc" customClass="RatingContainerViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="74n-xE-GDc" customClass="RatingContainerViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a9D-oV-Xna"/>
                         <viewControllerLayoutGuide type="bottom" id="OEz-WJ-mYO"/>
@@ -189,7 +189,11 @@
         <!--Rating2 View Controller-->
         <scene sceneID="xu1-ik-NE8">
             <objects>
-                <viewController id="vXp-sp-Ygc" customClass="Rating2ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXp-sp-Ygc" customClass="Rating2ViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YEw-jF-fs6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tuy-5B-H3B"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bDb-61-jUI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,16 +231,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-bT-X4f">
-                                <rect key="frame" x="103" y="206" width="170.5" height="48"/>
+                                <rect key="frame" x="126" y="206" width="124.5" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avalie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjT-ii-XR8">
-                                        <rect key="frame" x="46" y="0.0" width="78.5" height="24"/>
+                                        <rect key="frame" x="36" y="0.0" width="53" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bolado Urban" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srv-7Z-AlS">
-                                        <rect key="frame" x="0.0" y="24" width="170.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="23.5" width="124.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -244,7 +248,7 @@
                                 </subviews>
                             </stackView>
                             <view alpha="0.52000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RP6-kM-Gnp">
-                                <rect key="frame" x="78.5" y="260" width="218" height="3"/>
+                                <rect key="frame" x="78.5" y="259" width="218" height="3"/>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.23921568627450979" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="218" id="Ru5-V5-aEL"/>
@@ -252,13 +256,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUA OPINIÃO É IMPORTANTE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fug-oB-mbz">
-                                <rect key="frame" x="94" y="275" width="188.5" height="23"/>
+                                <rect key="frame" x="92" y="274" width="193" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.45882352941176469" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="suZ-j9-n4O">
-                                <rect key="frame" x="8.5" y="393" width="359" height="57.5"/>
+                                <rect key="frame" x="8.5" y="385.5" width="359" height="57.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUl-b8-7eW">
                                         <rect key="frame" x="0.0" y="0.0" width="61.5" height="57.5"/>
@@ -340,7 +344,11 @@
         <!--Rating3 View Controller-->
         <scene sceneID="3RX-DY-lY2">
             <objects>
-                <viewController id="rpW-wO-NWV" customClass="Rating3ViewController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rpW-wO-NWV" customClass="Rating3ViewController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1UV-dq-HeZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HcO-rT-Yhu"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OJk-Qt-lMA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,13 +386,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUITO OBRIGADO!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-9w-Xqz">
-                                <rect key="frame" x="91" y="168" width="193" height="24"/>
+                                <rect key="frame" x="97.5" y="168" width="180" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.51999998092651367" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn6-qD-LPC">
-                                <rect key="frame" x="79" y="204" width="218" height="3"/>
+                                <rect key="frame" x="79" y="203.5" width="218" height="3"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.23921568630000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="sk4-am-OYq"/>
@@ -392,13 +400,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVALIADO EM X ESTRELAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-TV-2BE">
-                                <rect key="frame" x="102" y="219" width="172" height="23"/>
+                                <rect key="frame" x="99.5" y="218.5" width="177.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OhX-pH-9h1">
-                                <rect key="frame" x="63" y="263" width="250" height="32"/>
+                                <rect key="frame" x="63" y="256" width="250" height="32"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="rating_star" translatesAutoresizingMaskIntoConstraints="NO" id="Uta-01-h9d">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="32"/>
@@ -435,13 +443,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO QUE VOCÊ MAIS GOSTOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8he-xE-G8r">
-                                <rect key="frame" x="73.5" y="361" width="229.5" height="25"/>
+                                <rect key="frame" x="79" y="354" width="219" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-uD-Jgi">
-                                <rect key="frame" x="27" y="428" width="323" height="33"/>
+                                <rect key="frame" x="26" y="413.5" width="323" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-cA-sgS">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="33"/>
@@ -509,7 +517,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="pm3-zO-1Vf">
-                                <rect key="frame" x="27" y="486" width="323" height="33"/>
+                                <rect key="frame" x="26" y="471.5" width="323" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-6S-Hgm">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="33"/>

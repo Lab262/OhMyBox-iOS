@@ -37,6 +37,12 @@ struct UserDefaultsKeys {
     static let purchaseRequestFeedbacks = "purchaseRequestFeedbacks"
 }
 
+// MARK: My public key of Moip
+
+struct MoipKey {
+    static let publicKey = ""
+}
+
 // MARK: Segue Identifiers
 struct SegueIdentifiers {
     
@@ -76,6 +82,7 @@ struct Notifications {
     static let cartUpdated = NSNotification.Name(rawValue: "cartUpdated")
     static let wishlistUpdated = NSNotification.Name(rawValue: "wishlistUpdated")
 }
+
 
 // MARK: Purchase Successful Tips @ PurchaseSuccessfulViewController
 struct PurchaseSuccessfulTips {

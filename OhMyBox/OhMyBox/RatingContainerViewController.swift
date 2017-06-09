@@ -88,7 +88,7 @@ class RatingContainerViewController: UIViewController {
         
         getChildViewControllersReferences()
         
-        presenter.view = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,7 +114,6 @@ class RatingContainerViewController: UIViewController {
     }
     
     func setPresentedController(_ controller: RateControllers) {
-        
         rating1LeadingConstraint.constant = controller.presentedLeadingOffset
         switchAnimator.addAnimations(switchAnimation)
         switchAnimator.startAnimation()

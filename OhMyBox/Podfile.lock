@@ -1,4 +1,5 @@
 PODS:
+  - AKMaskField (2.0.3)
   - Alamofire (4.0.0)
   - BGTableViewRowActionWithImage (0.3.6)
   - Bolts (1.8.4):
@@ -16,6 +17,7 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.20.2):
     - FBSDKCoreKit
+  - MoipEncryptSDK (1.0.2)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
   - ParseFacebookUtilsV4 (1.11.1):
@@ -24,14 +26,18 @@ PODS:
     - FBSDKLoginKit (~> 4.10)
     - FBSDKTVOSKit (~> 4.10)
     - Parse (~> 1.12)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
+  - AKMaskField
   - BGTableViewRowActionWithImage
   - Crashlytics
   - Fabric
   - FalconFrameworkIOSSDK (from `https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git`)
+  - MoipEncryptSDK (~> 1.0)
   - Parse
   - ParseFacebookUtilsV4
+  - SnapKit (~> 3.2.0)
 
 EXTERNAL SOURCES:
   FalconFrameworkIOSSDK:
@@ -43,6 +49,7 @@ CHECKOUT OPTIONS:
     :git: https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git
 
 SPEC CHECKSUMS:
+  AKMaskField: b6d147524813e62cd3f15475fa2200ce7a3d2620
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   BGTableViewRowActionWithImage: 3517276bcee26e559465bcca13151afc33ab6d2a
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -51,9 +58,11 @@ SPEC CHECKSUMS:
   FalconFrameworkIOSSDK: 0815254993050a347e672c4a802b18add094fb43
   FBSDKCoreKit: 82eac696eb6157da5f4266c3a241f00e9bd72471
   FBSDKLoginKit: 2211bede07c83391349eacc1fd86cf6d9289ce38
+  MoipEncryptSDK: 9fa62578715cde80c577a5fd1a88a979807d6d2d
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 9b3927593a55a8e4f8daf4fd464d180fb9eb15f7
+PODFILE CHECKSUM: 252d3d5b5e6aa40d54912c51df03d81945c21d19
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

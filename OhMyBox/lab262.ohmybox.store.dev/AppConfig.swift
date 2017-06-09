@@ -18,5 +18,4 @@ class AppConfig: NSObject {
             $0.server = "http://api-ohmybox-dev.herokuapp.com/parse"
         }
     }
-    
 }
