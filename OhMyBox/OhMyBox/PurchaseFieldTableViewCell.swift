@@ -65,8 +65,13 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     
     fileprivate func setupTextField() {
         textField = UITextField()
+        textField?.delegate = self
         textField?.keyboardType = presenter.fieldCellData!.keyboardType!
-        //textField?.tag = presenter.fieldCellData!.typeField!.rawValue
+        
+        if let _ = presenter.fieldCellData?.firstStepField {
+            textField?.tag = presenter.fieldCellData!.firstStepField!.rawValue
+        }
+        
         
         if let text = presenter.fieldCellData?.text {
             self.textField!.text = text
@@ -77,6 +82,11 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     
     fileprivate func setupMaskField(){
         maskField = AKMaskField()
+        
+        
+        if let _ = presenter.fieldCellData?.firstStepField {
+            maskField?.tag = presenter.fieldCellData!.firstStepField!.rawValue
+        }
         maskField?.setMask(presenter.fieldCellData!.fieldMask!.rawValue, withMaskTemplate: "")
         maskField?.keyboardType = presenter.fieldCellData!.keyboardType!
         
@@ -84,6 +94,8 @@ class PurchaseFieldTableViewCell: UITableViewCell {
             self.maskField!.text = text
         }
     
+        maskField?.maskDelegate = self
+        
         self.contentView.addSubview(maskField!)
     }
     
@@ -166,14 +178,16 @@ extension PurchaseFieldTableViewCell:UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.text == "" {
-            self.textField!.text = presenter.fieldCellData?.dataFields?.first
-        } else {
-            if let textData = presenter.fieldCellData?.text {
-                for (index, text) in presenter.fieldCellData!.dataFields!.enumerated() {
-                    if textData == text {
-                        self.pickerView?.selectRow(index, inComponent: 0, animated: true)
-                        self.textField!.text = text
+        if let _ = presenter.fieldCellData?.dataFields {
+            if textField.text == "" {
+                self.textField!.text = presenter.fieldCellData?.dataFields?.first
+            } else {
+                if let textData = presenter.fieldCellData?.text {
+                    for (index, text) in presenter.fieldCellData!.dataFields!.enumerated() {
+                        if textData == text {
+                            self.pickerView?.selectRow(index, inComponent: 0, animated: true)
+                            self.textField!.text = text
+                        }
                     }
                 }
             }

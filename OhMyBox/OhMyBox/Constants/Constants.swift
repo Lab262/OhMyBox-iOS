@@ -43,6 +43,21 @@ struct MoipKey {
     static let publicKey = ""
 }
 
+struct UserPurchaseInformations {
+    static let name = "name"
+    static let cpf = "cpf"
+    static let email = "email"
+    static let birthdate = "birthdate"
+    static let phone = "phone"
+    static let addressDescription = "addressDescription"
+    static let addressComplement = "addressComplement"
+    static let addressNeighborhood = "addressNeighborhood"
+    static let cep = "cep"
+    static let city = "city"
+    static let state = "state"
+}
+
+
 // MARK: Segue Identifiers
 struct SegueIdentifiers {
     

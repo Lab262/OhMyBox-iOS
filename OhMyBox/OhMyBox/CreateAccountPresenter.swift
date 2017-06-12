@@ -24,6 +24,8 @@ class CreateAccountPresenter: NSObject {
     private var dictionarySecondStepFields = Dictionary<SecondStepField, AnyObject>()
     private var dictionaryThirdStepFields = Dictionary<ThirdStepField, AnyObject>()
     
+    private var dictionaryUserPurchaseInformations = Dictionary<String, String>()
+    
     var delegate: CreateAccountDelegate?
     //var accountToCreated = Ac
     
@@ -32,14 +34,17 @@ class CreateAccountPresenter: NSObject {
     }
     
     func setupFirstStepFieldsData() {
+        let nameField = FieldCellData(titleField: "Nome Completo", keyboardType: .default, dataFields: nil, firstStepTypeField: .name)
         
-//        let nameField = FieldCellData(titleField: "Nome completo", keyboardType: .default, typeField: TypeField.name)
-//        let emailField = FieldCellData(titleField: "Email", keyboardType: .emailAddress, typeField: .email)
-//        let birthdateField = FieldCellData(titleField: "Data de Nascimento", keyboardType: .default, typeField: .birthDate)
-//        let cpfField = FieldCellData(titleField: "CPF", keyboardType: .numberPad, fieldMask: .cpf, typeField: .cpf)
-//        let phoneField = FieldCellData(titleField: "Telefone", keyboardType: .numberPad, fieldMask: .phone, typeField: .phone)
-//        
-//        fieldsData = [nameField, emailField, birthdateField, cpfField, phoneField]
+        let emailField = FieldCellData(titleField: "Email", keyboardType: .emailAddress, dataFields: nil, firstStepTypeField: .email)
+        
+        let birthdateField = FieldCellData(titleField: "Data de Nascimento", keyboardType: .default, dataFields: nil, firstStepTypeField: .birthDate)
+        
+        let cpfField = FieldCellData(titleField: "CPF", keyboardType: .numberPad, fieldMask: .cpf, text: nil, firstStepTypeField: .cpf)
+        
+        let phoneField = FieldCellData(titleField: "Telefone", keyboardType: .numberPad, fieldMask: .phone, text: nil, firstStepTypeField: .phone)
+        
+        fieldsData = [nameField, emailField, birthdateField, cpfField, phoneField]
     }
     
     func setupSecondStepFieldsData() {
@@ -66,35 +71,90 @@ class CreateAccountPresenter: NSObject {
 //        fieldsData = [cardNumberField, cvvField, maturityField, cardNameField]
     }
     
-    func saveTextInDictionary(textField:UITextField){
-       // dictionaryFields[TypeField(rawValue: textField.tag)!] = textField as AnyObject
+    func saveTextInDictionary(step: Int, textField:UITextField){
+        switch step {
+        case 1: dictionaryFirstStepFields[FirstStepField(rawValue: textField.tag)!] = textField as AnyObject
+        case 2: dictionarySecondStepFields[SecondStepField(rawValue: textField.tag)!] = textField as AnyObject
+        case 3: dictionaryThirdStepFields[ThirdStepField(rawValue: textField.tag)!] = textField as AnyObject
+        default:break
+        }
+        
+        saveTextInFieldData(step: step, textField: textField)
     }
     
-    private func getFieldsDataAndValidate() -> Bool{
-//        for (index, fieldCell) in self.fieldsData.enumerated() {
-//            if let field = dictionaryFields[TypeField(rawValue: index)!] {
-//                if let fieldValue = field as? UITextField {
-//                    if self.checkFieldIsEmpty(field: fieldValue) {
-//                        self.errorAlertByFieldData(fieldData: fieldCell)
-//                        return false
-//                    }
-//                }
-//                if let fieldValue = dictionaryFields[TypeField(rawValue: index)!] as? AKMaskField {
-//                    if self.checkMaskFieldIsEmpty(field: fieldValue) {
-//                        self.errorAlertByFieldData(fieldData: fieldCell)
-//                        return false
-//                    }
-//                }
-//                
-//               // self.saveFieldValue(typeField: TypeField(rawValue: index)!, textField: field as? UITextField, maskField: field as? AKMaskField)
-//                
-//            } else {
-//                self.errorAlertByFieldData(fieldData: fieldCell)
-//                return false
-//            }
-//        }
+    func saveTextInFieldData(step: Int, textField: UITextField) {
+        switch step {
+        case 1:
+            for f in fieldsData where f.firstStepField == FirstStepField(rawValue: textField.tag) {
+                f.text = textField.text
+            }
+        case 2: dictionarySecondStepFields[SecondStepField(rawValue: textField.tag)!] = textField as AnyObject
+        case 3: dictionaryThirdStepFields[ThirdStepField(rawValue: textField.tag)!] = textField as AnyObject
+        default:break
+        }
+        
+    }
+    
+    
+    private func getFieldsOfFirstStepAndValidate() -> Bool {
+        for (index, fieldCell) in self.fieldsData.enumerated() {
+            if let field = dictionaryFirstStepFields[FirstStepField(rawValue: index)!] {
+                if let fieldValue = field as? UITextField {
+                    if self.checkFieldIsEmpty(field: fieldValue) {
+                        self.errorAlertByFieldData(fieldData: fieldCell)
+                        return false
+                    }
+                }
+                if let fieldValue = dictionaryFirstStepFields[FirstStepField(rawValue: index)!] as? AKMaskField {
+                    if self.checkMaskFieldIsEmpty(field: fieldValue) {
+                        self.errorAlertByFieldData(fieldData: fieldCell)
+                        return false
+                    }
+                }
+                self.saveFirstStepValue(typeField: FirstStepField(rawValue:index)!, textField: field as? UITextField, maskField: field as? AKMaskField)
+            } else {
+                self.errorAlertByFieldData(fieldData: fieldCell)
+                return false
+            }
+        }
         
         return true
+    }
+    
+    private func getFieldsOfSecondStepAndValidate() -> Bool {
+        for (index, fieldCell) in self.fieldsData.enumerated() {
+            if let field = dictionarySecondStepFields[SecondStepField(rawValue: index)!] {
+                if let fieldValue = field as? UITextField {
+                    if self.checkFieldIsEmpty(field: fieldValue) {
+                        self.errorAlertByFieldData(fieldData: fieldCell)
+                        return false
+                    }
+                }
+                if let fieldValue = dictionaryFirstStepFields[FirstStepField(rawValue: index)!] as? AKMaskField {
+                    if self.checkMaskFieldIsEmpty(field: fieldValue) {
+                        self.errorAlertByFieldData(fieldData: fieldCell)
+                        return false
+                    }
+                }
+                self.saveSecondStepValue(typeField: SecondStepField(rawValue:index)!, textField: field as? UITextField, maskField: field as? AKMaskField)
+            } else {
+                self.errorAlertByFieldData(fieldData: fieldCell)
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    func getFieldsDataAndValidate(step: Int) -> Bool{
+        
+        if step == 1 {
+            return getFieldsOfFirstStepAndValidate()
+        } else if step == 2 {
+            return getFieldsOfSecondStepAndValidate()
+        } else {
+            return false
+        }
     }
     
     
@@ -133,39 +193,53 @@ class CreateAccountPresenter: NSObject {
     //}
     
     
-    func errorAlertByFieldData(fieldData: FieldCellData) {
+    private func errorAlertByFieldData(fieldData: FieldCellData) {
         let msgError = "Campo " + fieldData.titleField.lowercased() + " inválido."
         
         self.delegate?.showMessage(title: "Atenção", msg: msgError)
     }
     
-    func checkFieldIsEmpty(field: UITextField) -> Bool {
+    private func checkFieldIsEmpty(field: UITextField) -> Bool {
         if field.text == "" {
             return true
         }
         return false
     }
     
-//    func saveFieldValue(typeField: TypeField, textField: UITextField?, maskField: AKMaskField?){
-//        
-//        let field = textField ?? maskField
-//        
-//        switch typeField {
-//            
-//        case .addressName: self.addressToCreate?.title = field?.text
-//        case .addressDescription: self.addressToCreate?.addressDescription = field?.text
-//        case .addressNumber: break
-//        case .addressState: self.addressToCreate?.city?.state?.name = field?.text
-//        case .addressCity: self.addressToCreate?.city?.name = field?.text
-//        case .addressReference: self.addressToCreate?.reference = field?.text
-//        case .addressNeighbourhood: self.addressToCreate?.neighbourhood = field?.text
-//        case .addressCep: self.addressToCreate?.cep = field?.text
-//            
-//        }
-//    }
+    private func saveFirstStepValue(typeField: FirstStepField, textField: UITextField?, maskField: AKMaskField?) {
+        
+        let field = textField ?? maskField
+        
+        switch typeField {
+            
+        case .name: dictionaryUserPurchaseInformations[UserPurchaseInformations.name] = field?.text
+        case .email: dictionaryUserPurchaseInformations[UserPurchaseInformations.email] = field?.text
+        case .birthDate: dictionaryUserPurchaseInformations[UserPurchaseInformations.birthdate] = field?.text
+        case .phone: dictionaryUserPurchaseInformations[UserPurchaseInformations.phone] = field?.text
+            
+        default: break
+            
+        }
+    }
     
+    private func saveSecondStepValue(typeField: SecondStepField, textField: UITextField?, maskField: AKMaskField?) {
+      
+        let field = textField ?? maskField
+        
+        switch typeField {
+            
+        case .addressDescription: dictionaryUserPurchaseInformations[UserPurchaseInformations.addressDescription] = field?.text
+        case .addressComplement: dictionaryUserPurchaseInformations[UserPurchaseInformations.addressComplement] = field?.text
+        case .addressCep: dictionaryUserPurchaseInformations[UserPurchaseInformations.cep] = field?.text
+        case .addressCity: dictionaryUserPurchaseInformations[UserPurchaseInformations.city] = field?.text
+        case .addressState: dictionaryUserPurchaseInformations[UserPurchaseInformations.state] = field?.text
+            
+        default: break
+            
+        }
+    }
     
-    func checkMaskFieldIsEmpty(field: AKMaskField) -> Bool {
+    private func checkMaskFieldIsEmpty(field: AKMaskField) -> Bool {
         switch field.maskStatus{
         case .clear, .incomplete:
             return true

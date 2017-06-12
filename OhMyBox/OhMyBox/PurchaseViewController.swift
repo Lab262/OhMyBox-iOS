@@ -42,7 +42,7 @@ class PurchaseViewController: UIViewController {
     
     @IBAction func purchaseButtonAction(_ sender: UIButton) {
         
-        presenter.sendPurchaseRequest()
+        //presenter.sendPurchaseRequest()
     }
     
 }
