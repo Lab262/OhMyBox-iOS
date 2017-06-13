@@ -39,11 +39,13 @@ class CreateAccountThirdStepViewController: UIViewController {
     }
     
     func setupTableViewInsets() {
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, doneButton.frame.height+40, 0)
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, doneButton.frame.height+70, 0)
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        
+        if presenter.getFieldsDataAndValidate(step: 3) {
+            print ("SUCCESS MANIN")
+        }
     }
     
     
@@ -55,6 +57,8 @@ extension CreateAccountThirdStepViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseFieldTableViewCell.identifier, for: indexPath) as! PurchaseFieldTableViewCell
         
+        
+        cell.delegate = self
         cell.presenter.fieldCellData = presenter.fieldsData[indexPath.row]
         
         return cell
@@ -90,14 +94,15 @@ extension CreateAccountThirdStepViewController: FormFieldCellDelegate {
     }
     
     func formFieldCellEndEditing(_ textField: UITextField?, _ maskField: AKMaskField?) {
+        
         let field = textField ?? maskField
-        //   self.saveTextInDictionary(textField: field!)
+        presenter.saveTextInDictionary(step: 3, textField: field!)
     }
     
 }
 
 extension CreateAccountThirdStepViewController: CreateAccountDelegate {
     func showMessage(title: String, msg: String) {
-        
+        self.present(ViewUtil.alertController(withTitle: title, message: msg), animated: true, completion: nil)
     }
 }

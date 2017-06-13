@@ -46,7 +46,6 @@ class CreateAccountFirstStepViewController: UIViewController {
         if presenter.getFieldsDataAndValidate(step: 1) {
             nextButtonHandler?(sender as! UIButton)
         }
-        
     }
     
 }
@@ -94,9 +93,7 @@ extension CreateAccountFirstStepViewController: FormFieldCellDelegate {
     
     func formFieldCellEndEditing(_ textField: UITextField?, _ maskField: AKMaskField?) {
         
-        
         let field = textField ?? maskField
-        
         presenter.saveTextInDictionary(step: 1, textField: field!)
     }
     

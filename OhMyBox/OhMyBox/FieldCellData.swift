@@ -11,9 +11,9 @@ import UIKit
 enum FirstStepField: Int {
     case name = 0
     case email = 1
-    case birthDate = 2
-    case cpf = 3
-    case phone = 4
+    case cpf = 2
+    case phone = 3
+    case birthDate = 4
 }
 
 enum SecondStepField: Int {
@@ -30,16 +30,15 @@ enum ThirdStepField: Int {
     case cardFlag = 0
     case cardName = 1
     case cardNumber = 2
-    case cardValidity = 3
-    case cardCvv = 4
-    case cardMaturity = 5
+    case cardCvv = 3
+    case cardValidity = 4
 }
 
 enum MaskField: String {
     case cpf = "{ddd}.{ddd}.{ddd}.{dd}"
     case phone = "({dd}){ddddd}-{dddd}"
     case card = "{dddd}-{dddd}-{dddd}-{dddd}"
-    case validity = "{dd}/{dd}"
+    case validity = "{dd}/{dddd}"
     case cvv = "{ddd}"
     case cep = "{ddddd}-{ddd}"
 }
@@ -102,5 +101,22 @@ class FieldCellData: NSObject {
         self.isSecureText = isSecureText
         self.text = text
         self.secondStepField = secondStepTypeField
+    }
+    
+    init (titleField: String,keyboardType: UIKeyboardType?, fieldMask: MaskField? = nil, text: String? = nil, thirdStepTypeField: ThirdStepField?) {
+        self.titleField = titleField
+        self.keyboardType = keyboardType
+        self.fieldMask = fieldMask
+        self.text = text
+        self.thirdStepField = thirdStepTypeField
+    }
+    
+    init (titleField: String, keyboardType: UIKeyboardType?, isSecureText: Bool? = false, dataFields: [String]?, text: String? = nil, thirdStepTypeField: ThirdStepField?) {
+        self.titleField = titleField
+        self.keyboardType = keyboardType
+        self.dataFields = dataFields
+        self.isSecureText = isSecureText
+        self.text = text
+        self.thirdStepField = thirdStepTypeField
     }
 }

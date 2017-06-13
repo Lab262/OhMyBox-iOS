@@ -72,6 +72,14 @@ class PurchaseFieldTableViewCell: UITableViewCell {
             textField?.tag = presenter.fieldCellData!.firstStepField!.rawValue
         }
         
+        if let _ = presenter.fieldCellData?.secondStepField {
+            textField?.tag = presenter.fieldCellData!.secondStepField!.rawValue
+        }
+        
+        if let _ = presenter.fieldCellData?.thirdStepField {
+            textField?.tag = presenter.fieldCellData!.thirdStepField!.rawValue
+        }
+        
         
         if let text = presenter.fieldCellData?.text {
             self.textField!.text = text
@@ -87,12 +95,23 @@ class PurchaseFieldTableViewCell: UITableViewCell {
         if let _ = presenter.fieldCellData?.firstStepField {
             maskField?.tag = presenter.fieldCellData!.firstStepField!.rawValue
         }
+        
+        if let _ = presenter.fieldCellData?.secondStepField {
+            maskField?.tag = presenter.fieldCellData!.secondStepField!.rawValue
+        }
+        
+        if let _ = presenter.fieldCellData?.thirdStepField {
+            maskField?.tag = presenter.fieldCellData!.thirdStepField!.rawValue
+        }
+        
         maskField?.setMask(presenter.fieldCellData!.fieldMask!.rawValue, withMaskTemplate: "")
         maskField?.keyboardType = presenter.fieldCellData!.keyboardType!
         
         if let text = presenter.fieldCellData?.text {
             self.maskField!.text = text
         }
+        
+        
     
         maskField?.maskDelegate = self
         

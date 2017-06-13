@@ -55,7 +55,13 @@ struct UserPurchaseInformations {
     static let cep = "cep"
     static let city = "city"
     static let state = "state"
+    static let cardFlag = "cardFlag"
+    static let cardName = "cardName"
+    static let cardNumber = "cardNumber"
+    static let cardValidity = "cardValidity"
+    static let cardCvv = "cardCvv"
 }
+
 
 
 // MARK: Segue Identifiers

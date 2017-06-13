@@ -39,9 +39,4 @@ class PurchaseFieldPresenter: NSObject {
         }
         self.delegate?.setupTextFieldType(fieldType: .field)
     }
-    
-    
-    
-    
-
 }

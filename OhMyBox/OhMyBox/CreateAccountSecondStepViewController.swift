@@ -44,7 +44,9 @@ class CreateAccountSecondStepViewController: UIViewController {
     }
     
     @IBAction func nextView(_ sender: Any) {
-        nextButtonHandler?(sender as! UIButton)
+        if presenter.getFieldsDataAndValidate(step: 2) {
+            nextButtonHandler?(sender as! UIButton)
+        }
     }
     
 }
@@ -55,6 +57,7 @@ extension CreateAccountSecondStepViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseFieldTableViewCell.identifier, for: indexPath) as! PurchaseFieldTableViewCell
         
+        cell.delegate = self
         cell.presenter.fieldCellData = presenter.fieldsData[indexPath.row]
         
         return cell
@@ -90,14 +93,14 @@ extension CreateAccountSecondStepViewController: FormFieldCellDelegate {
     }
     
     func formFieldCellEndEditing(_ textField: UITextField?, _ maskField: AKMaskField?) {
+       
         let field = textField ?? maskField
-        //   self.saveTextInDictionary(textField: field!)
+        presenter.saveTextInDictionary(step: 2, textField: field!)
     }
-    
 }
 
 extension CreateAccountSecondStepViewController: CreateAccountDelegate {
     func showMessage(title: String, msg: String) {
-        
+        self.present(ViewUtil.alertController(withTitle: title, message: msg), animated: true, completion: nil)
     }
 }
