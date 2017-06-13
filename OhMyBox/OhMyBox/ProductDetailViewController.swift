@@ -131,19 +131,20 @@ class ProductDetailViewController: UIViewController {
         
         cell.productDescription = presenter.product.productDescription
         cell.productDetails = presenter.product.productDetail
-        
+//        
         let buttonsHandler: UIButton.ButtonHandler = { _ in
             
 //            let contentOffset = tableView.contentOffset
-            
+            cell.isDescriptionButtonHighlighted = cell.buttonSegmentedControl.leftButtonHighlighted
             tableView.beginUpdates()
 //            tableView.setContentOffset(contentOffset, animated: false)
             tableView.endUpdates()
 //            tableView.setContentOffset(contentOffset, animated: true)
         }
-        
+
         cell.descriptionButtonHandler = buttonsHandler
         cell.detailsButtonHandler = buttonsHandler
+        
         
         return cell
     }

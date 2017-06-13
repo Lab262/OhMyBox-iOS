@@ -15,7 +15,7 @@ class ProductOptionsTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 230.0
+        return 180 * UIView.widthScaleProportion
     }
     
     static var nibName: String {

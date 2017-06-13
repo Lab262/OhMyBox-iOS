@@ -15,7 +15,7 @@ class ProductLabelTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 77
+        return 77 * UIView.widthScaleProportion
     }
     
     static var nibName: String {

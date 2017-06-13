@@ -15,7 +15,7 @@ class SizeCollectionViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 45.0, height: 33.0)
+        return CGSize(width: 50.0, height: 38.0) * UIView.widthScaleProportion
     }
     
     static var nibName: String {

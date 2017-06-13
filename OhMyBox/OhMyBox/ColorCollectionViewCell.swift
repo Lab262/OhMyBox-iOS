@@ -15,7 +15,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 33.0, height: 33.0)
+        return CGSize(width: 33.0, height: 33.0) * UIView.widthScaleProportion
     }
 
     static var nibName: String {
@@ -33,7 +33,8 @@ class ColorCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        colorView.cornerRadius = colorView.frame.height/2
+//        colorView.layer.cornerRadius = colorView.frame.height/2
+//        colorView.layer.masksToBounds = true
         // Initialization code
     }
     
@@ -44,5 +45,12 @@ class ColorCollectionViewCell: UICollectionViewCell {
     override func changeToUnselectedStyle() {
         selectedView.isHidden = true
     }
-
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        layoutIfNeeded()
+        colorView.layer.cornerRadius = colorView.frame.height/2
+        colorView.layer.masksToBounds = true
+    }
 }

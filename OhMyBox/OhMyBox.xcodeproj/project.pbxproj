@@ -313,6 +313,9 @@
 		4CEC322C1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */; };
 		4CEC322D1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */; };
 		4CEC322E1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */; };
+		4CEC32311EF0267D00FCF102 /* ProportionalSpacingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC32301EF0267D00FCF102 /* ProportionalSpacingStackView.swift */; };
+		4CEC32321EF0267D00FCF102 /* ProportionalSpacingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC32301EF0267D00FCF102 /* ProportionalSpacingStackView.swift */; };
+		4CEC32331EF0267D00FCF102 /* ProportionalSpacingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC32301EF0267D00FCF102 /* ProportionalSpacingStackView.swift */; };
 		4CF2237E1E9D3B050050D91A /* Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2237D1E9D3B050050D91A /* Measures.swift */; };
 		4CFAE1BB1EB1143800C58C0C /* BoxDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */; };
 		4CFAE1BE1EB11FD300C58C0C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */; };
@@ -1203,6 +1206,7 @@
 		4CEB6BE91ECABA6000F72828 /* BrandDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandDetailPresenter.swift; sourceTree = "<group>"; };
 		4CEC32261EF01DD100FCF102 /* AutosizableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosizableLabel.swift; sourceTree = "<group>"; };
 		4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProportionalOffsetConstraint.swift; sourceTree = "<group>"; };
+		4CEC32301EF0267D00FCF102 /* ProportionalSpacingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProportionalSpacingStackView.swift; sourceTree = "<group>"; };
 		4CF2237D1E9D3B050050D91A /* Measures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measures.swift; sourceTree = "<group>"; };
 		4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxDetailPresenter.swift; sourceTree = "<group>"; };
 		4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -2113,6 +2117,14 @@
 			name = ProportionalOffsetConstraint;
 			sourceTree = "<group>";
 		};
+		4CEC322F1EF0266500FCF102 /* ProportionalSpacingStackView */ = {
+			isa = PBXGroup;
+			children = (
+				4CEC32301EF0267D00FCF102 /* ProportionalSpacingStackView.swift */,
+			);
+			name = ProportionalSpacingStackView;
+			sourceTree = "<group>";
+		};
 		4CFAE1B91EB1142200C58C0C /* Box Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -2233,6 +2245,7 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				4CEC322F1EF0266500FCF102 /* ProportionalSpacingStackView */,
 				4CEC322A1EF0204E00FCF102 /* ProportionalOffsetConstraint */,
 				4CEC32251EF01DBD00FCF102 /* AutosizableLabel */,
 				D4637A3D1EEB0BBC00F92FD1 /* RequestDetailPresenter.swift */,
@@ -3377,6 +3390,7 @@
 				A414FCBA1EB5490A008FCAC0 /* ViewUtil.swift in Sources */,
 				A414FCBB1EB5490A008FCAC0 /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				A414FCBC1EB5490A008FCAC0 /* UIView+Animations.swift in Sources */,
+				4CEC32321EF0267D00FCF102 /* ProportionalSpacingStackView.swift in Sources */,
 				4C294B9B1ED3916F00DF83EF /* Box.swift in Sources */,
 				A414FCBD1EB5490A008FCAC0 /* RecommendedViewController.swift in Sources */,
 				A414FCBE1EB5490A008FCAC0 /* BrandsHeaderTableViewCell.swift in Sources */,
@@ -3561,6 +3575,7 @@
 				A414FDC71EB54A5D008FCAC0 /* ViewUtil.swift in Sources */,
 				A414FDC81EB54A5D008FCAC0 /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				A414FDC91EB54A5D008FCAC0 /* UIView+Animations.swift in Sources */,
+				4CEC32331EF0267D00FCF102 /* ProportionalSpacingStackView.swift in Sources */,
 				4C294B9C1ED3917000DF83EF /* Box.swift in Sources */,
 				A414FDCA1EB54A5D008FCAC0 /* RecommendedViewController.swift in Sources */,
 				A414FDCB1EB54A5D008FCAC0 /* BrandsHeaderTableViewCell.swift in Sources */,
@@ -3741,6 +3756,7 @@
 				A4F89AFF1DA806C900949A35 /* TabBarController.swift in Sources */,
 				4CEC32271EF01DD100FCF102 /* AutosizableLabel.swift in Sources */,
 				4CADF6321ED7364C0016F670 /* ProductDetailPresenter.swift in Sources */,
+				4CEC32311EF0267D00FCF102 /* ProportionalSpacingStackView.swift in Sources */,
 				4CE345681E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift in Sources */,
 				D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */,
 				4C4DB5751E68C0C2005D44C1 /* ProductOptionsTableViewCell.swift in Sources */,

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,19 +17,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProductOptionsTableViewCell" customModule="OhMyBox" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="ProductOptionsTableViewCell" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-Qe-HEK">
                         <rect key="frame" x="0.0" y="50" width="375" height="33"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="33" id="MCS-Ja-hte"/>
-                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="6D6-QZ-fPz">
                             <size key="itemSize" width="0.0" height="0.0"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -50,9 +48,6 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Qa5-P0-AOR">
                         <rect key="frame" x="0.0" y="115.5" width="375" height="33"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="33" id="ETJ-fE-sGo"/>
-                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="yDe-cl-Uu3">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,7 +59,7 @@
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="EBW-Ws-mNs"/>
                         </connections>
                     </collectionView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione estampa e tamanho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH6-N9-qwQ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione estampa e tamanho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH6-N9-qwQ" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                         <rect key="frame" x="18" y="0.0" width="220" height="23"/>
                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                         <color key="textColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,20 +70,25 @@
                     <constraint firstItem="MH6-N9-qwQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="9hv-U1-Exf"/>
                     <constraint firstItem="xS5-Qe-HEK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FbY-kU-s7m"/>
                     <constraint firstAttribute="trailing" secondItem="xS5-Qe-HEK" secondAttribute="trailing" id="Khr-CA-v1w"/>
-                    <constraint firstItem="xS5-Qe-HEK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="Yqb-Ho-qfq"/>
-                    <constraint firstItem="Qa5-P0-AOR" firstAttribute="top" secondItem="D9Y-YG-hil" secondAttribute="bottom" constant="16" id="ak1-pf-16h"/>
+                    <constraint firstItem="xS5-Qe-HEK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="Yqb-Ho-qfq" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
+                    <constraint firstItem="Qa5-P0-AOR" firstAttribute="top" secondItem="D9Y-YG-hil" secondAttribute="bottom" constant="16" id="ak1-pf-16h" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                     <constraint firstItem="MH6-N9-qwQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eLG-cH-qdq"/>
                     <constraint firstAttribute="trailing" secondItem="D9Y-YG-hil" secondAttribute="trailing" constant="18" id="g0k-Pe-SLS"/>
                     <constraint firstItem="Qa5-P0-AOR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="n8k-ks-Cmu"/>
-                    <constraint firstItem="D9Y-YG-hil" firstAttribute="top" secondItem="xS5-Qe-HEK" secondAttribute="bottom" constant="16" id="obw-kH-v4R"/>
+                    <constraint firstItem="D9Y-YG-hil" firstAttribute="top" secondItem="xS5-Qe-HEK" secondAttribute="bottom" constant="16" id="obw-kH-v4R" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                     <constraint firstItem="D9Y-YG-hil" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="qCf-8S-H4N"/>
                     <constraint firstAttribute="trailing" secondItem="Qa5-P0-AOR" secondAttribute="trailing" id="xIU-9M-AQC"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="Qa5-P0-AOR" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="33/180" id="GGc-U6-bP0"/>
+                <constraint firstItem="xS5-Qe-HEK" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="33/180" id="s7S-Hl-KIE"/>
+            </constraints>
             <connections>
                 <outlet property="colorsCollectionView" destination="xS5-Qe-HEK" id="qeE-e7-pID"/>
                 <outlet property="sizesCollectionView" destination="Qa5-P0-AOR" id="jsH-h9-xCX"/>
             </connections>
+            <point key="canvasLocation" x="33.5" y="29"/>
         </tableViewCell>
     </objects>
 </document>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonSegmentedControl" customModule="OhMyBox" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonSegmentedControl" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
             <connections>
                 <outlet property="leftButton" destination="OFH-4m-TTG" id="Noq-rq-ckw"/>
                 <outlet property="rightButton" destination="9NE-Ed-q6b" id="SCf-oo-GAm"/>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-C2-h7d">
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-C2-h7d" customClass="ProportionalSpacingStackView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFH-4m-TTG">
@@ -57,11 +57,16 @@
                         </button>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="9NE-Ed-q6b" secondAttribute="bottom" id="Chc-jB-zH7"/>
+                        <constraint firstItem="OFH-4m-TTG" firstAttribute="top" secondItem="Ol9-C2-h7d" secondAttribute="top" id="ckB-pt-Kfk"/>
+                        <constraint firstItem="OFH-4m-TTG" firstAttribute="leading" secondItem="Ol9-C2-h7d" secondAttribute="leading" id="e9W-XK-ZFc"/>
                         <constraint firstItem="9NE-Ed-q6b" firstAttribute="width" secondItem="OFH-4m-TTG" secondAttribute="width" id="f6I-yU-OtY"/>
+                        <constraint firstItem="9NE-Ed-q6b" firstAttribute="top" secondItem="Ol9-C2-h7d" secondAttribute="top" id="gZV-d4-LRF"/>
+                        <constraint firstAttribute="bottom" secondItem="OFH-4m-TTG" secondAttribute="bottom" id="hb7-8r-jd3"/>
                     </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Ol9-C2-h7d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8j6-JF-G08"/>
                 <constraint firstAttribute="trailing" secondItem="Ol9-C2-h7d" secondAttribute="trailing" id="F5j-wg-z5U"/>
