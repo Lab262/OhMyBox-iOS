@@ -45,4 +45,11 @@ class BrandPresenter: NSObject {
             self.brands = brands
         }
     }
+    
+    func brandCellInfo(for indexPath: IndexPath) -> BrandTableViewCell.Info? {
+        
+        guard let brand = brands.object(at: indexPath.row) else { return nil }
+        
+        return (brand.name, brand.title, brand.photo)
+    }
 }

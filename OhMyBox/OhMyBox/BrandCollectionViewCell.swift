@@ -16,7 +16,7 @@ class BrandCollectionViewCell: UICollectionViewCell {
     }
     
     static var cellSize: CGSize {
-        return CGSize(width: 270, height: 274)
+        return CGSize(width: 270, height: 274) * UIView.widthScaleProportion
     }
     
     static var nibName: String {

@@ -6,16 +6,18 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class BrandTableViewCell: UITableViewCell {
 
+    typealias Info = (name: String, title: String, imageFile: PFFile?)
+    
     static var identifier: String {
         return "brandTableViewCell"
     }
     
     static var cellHeight: CGFloat {
-        return 375
+        return 375 * UIView.widthScaleProportion
     }
     
     static var nibName: String {
@@ -26,6 +28,13 @@ class BrandTableViewCell: UITableViewCell {
     @IBOutlet weak var brandDescriptionLabel: UILabel!
     @IBOutlet weak var brandImageView: UIImageView!
     @IBOutlet weak var followButton: UIButton!
+    
+    var info: Info? {
+        didSet {
+            
+            updateInfo()
+        }
+    }
     
     var followAction: ((UIButton) -> ())?
     var following = false
@@ -76,6 +85,16 @@ class BrandTableViewCell: UITableViewCell {
                 self.followButton.setTitleColor(self.followButtonNormalTitleColor, for: .normal)
             }
             followButton.setTitle(followButtonNormalTitle, for: .normal)
+        }
+    }
+    
+    func updateInfo() {
+        
+        brandNameLabel.text = info?.name
+        brandDescriptionLabel.text = info?.title
+        
+        if let file = info?.imageFile {
+            brandImageView.loadPFFile(file)
         }
     }
 }

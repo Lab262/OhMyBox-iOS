@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I7j-22-wTo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I7j-22-wTo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="OYz-C2-3qN">
             <objects>
-                <tabBarController id="I7j-22-wTo" customClass="TabBarController" customModule="OhMyBox" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="I7j-22-wTo" customClass="TabBarController" customModule="lab262_ohmybox_store_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Les-cr-vCI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,7 +22,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="fHp-bi-ybs" kind="relationship" relationship="viewControllers" id="56O-xD-byL"/>
-                        <segue destination="KqT-Au-at8" kind="relationship" relationship="viewControllers" id="kVX-gc-wza"/>
                         <segue destination="VWB-gA-slg" kind="relationship" relationship="viewControllers" id="hVQ-bg-tBO"/>
                         <segue destination="MWe-cn-Agk" kind="relationship" relationship="viewControllers" id="1BV-6s-fUA"/>
                         <segue destination="EmJ-0V-lJs" kind="relationship" relationship="viewControllers" id="lSW-ls-K8j"/>
@@ -55,10 +54,10 @@
         <!--Search-->
         <scene sceneID="Hym-0X-uDb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="syX-wi-DKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Search" id="KqT-Au-at8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="BpO-dW-3lZ"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="syX-wi-DKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1150" y="329"/>
         </scene>

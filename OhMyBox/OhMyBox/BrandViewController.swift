@@ -86,6 +86,8 @@ extension BrandViewController {
     func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandTableViewCell.identifier) as! BrandTableViewCell
         
+        cell.info = presenter.brandCellInfo(for: indexPath)
+        
         return cell
     }
 
@@ -98,8 +100,7 @@ extension BrandViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0: cell = generateFollowedBrandsCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateRecommendedBrandsCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateBrandCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateBrandCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -111,8 +112,8 @@ extension BrandViewController: UITableViewDataSource {
         let number: Int
         
         switch section {
-        case 0, 1: number = 1
-        case 2: number = 0
+        case 0: number = 1
+        case 1: number = presenter.brands.count
         default: number = 0
         }
         
@@ -120,11 +121,18 @@ extension BrandViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 }
 
 extension BrandViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedBrand = presenter.brands[indexPath.item]
+        
+        performSegue(withIdentifier: SegueIdentifiers.brandsToBrandDetail, sender: self)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -151,9 +159,6 @@ extension BrandViewController: UITableViewDelegate {
             header.topLineLabel.text = "MARCAS"
             header.bottomLineLabel.text = "QUE SIGO"
         case 1:
-            header.topLineLabel.text = "RECOMENDADOS"
-            header.bottomLineLabel.text = ""
-        case 2:
             header.topLineLabel.text = "TODAS AS MARCAS"
             header.bottomLineLabel.text = ""
             header.showAllButton.isHidden = true

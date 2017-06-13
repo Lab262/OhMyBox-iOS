@@ -15,7 +15,7 @@ class BrandCollectionsTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 283
+        return 283 * UIView.widthScaleProportion
     }
     
     static var nibName: String {
