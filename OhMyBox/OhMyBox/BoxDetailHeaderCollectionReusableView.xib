@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,11 +26,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="BoxDetailHeaderCollectionReusableView" customModule="OhMyBox" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="BoxDetailHeaderCollectionReusableView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="345"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EU VOU DE VERÃO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bym-V7-QAe">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EU VOU DE VERÃO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bym-V7-QAe" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="16" y="11" width="190" height="24"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                     <nil key="textColor"/>
@@ -42,13 +43,13 @@
                         <constraint firstAttribute="width" constant="108" id="cg9-qk-8K1"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box pensada com carinho para quem está indo curtir o verão com total estilo, cheia de opções pra você formar seu estilo!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFN-bN-rb3">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box pensada com carinho para quem está indo curtir o verão com total estilo, cheia de opções pra você formar seu estilo!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFN-bN-rb3" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="16" y="45" width="343" height="64"/>
                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                     <color key="textColor" red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-FE-43H">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-FE-43H" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="16" y="119" width="103.5" height="24"/>
                     <fontDescription key="fontDescription" name="AXIS-ExtraBold" family="AXIS" pointSize="20"/>
                     <nil key="textColor"/>
@@ -61,18 +62,15 @@
                         <constraint firstAttribute="height" constant="1" id="KD4-Uc-zcJ"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 categorias." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-ek-1kE">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 categorias." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-ek-1kE" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="101.5" y="192" width="80.5" height="20"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                     <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4c-aW-7ux" customClass="CollectionSegmentedControlView" customModule="OhMyBox" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4c-aW-7ux" customClass="CollectionSegmentedControlView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="234" width="375" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="aqu-YD-wQr"/>
-                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                             <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,7 +86,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha 1 opção" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-Za-0Ap">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha 1 opção" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV8-Za-0Ap" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
                     <rect key="frame" x="16" y="300" width="97" height="20"/>
                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                     <color key="textColor" red="0.56078431370000004" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,23 +105,24 @@
                 <constraint firstItem="Uen-XO-hCZ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="5fP-LR-UlR"/>
                 <constraint firstAttribute="trailing" secondItem="BFN-bN-rb3" secondAttribute="trailing" constant="16" id="7lX-gl-dxx"/>
                 <constraint firstItem="9BT-FE-43H" firstAttribute="leading" secondItem="BFN-bN-rb3" secondAttribute="leading" id="87I-lJ-OnQ"/>
+                <constraint firstItem="x4c-aW-7ux" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="45/345" id="8IG-Cd-XEf"/>
                 <constraint firstItem="x4c-aW-7ux" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="94W-d3-cZB"/>
                 <constraint firstItem="Bym-V7-QAe" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="Cd1-Sj-XvV"/>
                 <constraint firstItem="6an-g5-Q8V" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="JEZ-qC-GeC"/>
-                <constraint firstItem="JMv-uY-4Bc" firstAttribute="top" secondItem="6an-g5-Q8V" secondAttribute="bottom" constant="23" id="PHx-vI-oyh"/>
+                <constraint firstItem="JMv-uY-4Bc" firstAttribute="top" secondItem="6an-g5-Q8V" secondAttribute="bottom" constant="23" id="PHx-vI-oyh" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                 <constraint firstItem="J0t-ek-1kE" firstAttribute="leading" secondItem="JMv-uY-4Bc" secondAttribute="trailing" constant="5" id="Ud6-VE-3Ei"/>
-                <constraint firstItem="6an-g5-Q8V" firstAttribute="top" secondItem="9BT-FE-43H" secondAttribute="bottom" constant="25" id="WCW-na-RvX"/>
+                <constraint firstItem="6an-g5-Q8V" firstAttribute="top" secondItem="9BT-FE-43H" secondAttribute="bottom" constant="25" id="WCW-na-RvX" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                 <constraint firstItem="BFN-bN-rb3" firstAttribute="leading" secondItem="Bym-V7-QAe" secondAttribute="leading" id="Wmf-Bn-3xM"/>
-                <constraint firstItem="x4c-aW-7ux" firstAttribute="top" secondItem="JMv-uY-4Bc" secondAttribute="bottom" constant="22" id="Xyx-Ja-BUb"/>
+                <constraint firstItem="x4c-aW-7ux" firstAttribute="top" secondItem="JMv-uY-4Bc" secondAttribute="bottom" constant="22" id="Xyx-Ja-BUb" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                 <constraint firstItem="Uen-XO-hCZ" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="-17" id="ZFe-dY-mHu"/>
-                <constraint firstItem="AV8-Za-0Ap" firstAttribute="top" secondItem="x4c-aW-7ux" secondAttribute="bottom" constant="21" id="cU7-al-sBd"/>
+                <constraint firstItem="AV8-Za-0Ap" firstAttribute="top" secondItem="x4c-aW-7ux" secondAttribute="bottom" constant="21" id="cU7-al-sBd" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                 <constraint firstAttribute="trailing" secondItem="6an-g5-Q8V" secondAttribute="trailing" constant="21" id="cW4-d0-Dvt"/>
                 <constraint firstItem="JMv-uY-4Bc" firstAttribute="leading" secondItem="9BT-FE-43H" secondAttribute="leading" id="db3-iI-Eb2"/>
                 <constraint firstItem="AV8-Za-0Ap" firstAttribute="leading" secondItem="JMv-uY-4Bc" secondAttribute="leading" id="hPv-5t-KUv"/>
                 <constraint firstAttribute="trailing" secondItem="x4c-aW-7ux" secondAttribute="trailing" id="jsc-fe-s5D"/>
-                <constraint firstItem="BFN-bN-rb3" firstAttribute="top" secondItem="Bym-V7-QAe" secondAttribute="bottom" constant="10" id="oID-qB-SSJ"/>
-                <constraint firstItem="Bym-V7-QAe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="11" id="ucq-gi-K9q"/>
-                <constraint firstItem="9BT-FE-43H" firstAttribute="top" secondItem="BFN-bN-rb3" secondAttribute="bottom" constant="10" id="y5t-Sc-5D2"/>
+                <constraint firstItem="BFN-bN-rb3" firstAttribute="top" secondItem="Bym-V7-QAe" secondAttribute="bottom" constant="10" id="oID-qB-SSJ" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
+                <constraint firstItem="Bym-V7-QAe" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="11" id="ucq-gi-K9q" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
+                <constraint firstItem="9BT-FE-43H" firstAttribute="top" secondItem="BFN-bN-rb3" secondAttribute="bottom" constant="10" id="y5t-Sc-5D2" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
             </constraints>
             <connections>
                 <outlet property="categoriesCountLabel" destination="J0t-ek-1kE" id="dJn-LU-71w"/>

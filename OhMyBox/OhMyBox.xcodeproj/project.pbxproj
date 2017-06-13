@@ -307,6 +307,12 @@
 		4CEB6BE41ECAB4EA00F72828 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB6BE31ECAB4EA00F72828 /* Brand.swift */; };
 		4CEB6BE71ECAB5D500F72828 /* BrandPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB6BE61ECAB5D500F72828 /* BrandPresenter.swift */; };
 		4CEB6BEA1ECABA6000F72828 /* BrandDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB6BE91ECABA6000F72828 /* BrandDetailPresenter.swift */; };
+		4CEC32271EF01DD100FCF102 /* AutosizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC32261EF01DD100FCF102 /* AutosizableLabel.swift */; };
+		4CEC32281EF01DD100FCF102 /* AutosizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC32261EF01DD100FCF102 /* AutosizableLabel.swift */; };
+		4CEC32291EF01DD100FCF102 /* AutosizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC32261EF01DD100FCF102 /* AutosizableLabel.swift */; };
+		4CEC322C1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */; };
+		4CEC322D1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */; };
+		4CEC322E1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */; };
 		4CF2237E1E9D3B050050D91A /* Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2237D1E9D3B050050D91A /* Measures.swift */; };
 		4CFAE1BB1EB1143800C58C0C /* BoxDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */; };
 		4CFAE1BE1EB11FD300C58C0C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */; };
@@ -1195,6 +1201,8 @@
 		4CEB6BE31ECAB4EA00F72828 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		4CEB6BE61ECAB5D500F72828 /* BrandPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandPresenter.swift; sourceTree = "<group>"; };
 		4CEB6BE91ECABA6000F72828 /* BrandDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandDetailPresenter.swift; sourceTree = "<group>"; };
+		4CEC32261EF01DD100FCF102 /* AutosizableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosizableLabel.swift; sourceTree = "<group>"; };
+		4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProportionalOffsetConstraint.swift; sourceTree = "<group>"; };
 		4CF2237D1E9D3B050050D91A /* Measures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measures.swift; sourceTree = "<group>"; };
 		4CFAE1BA1EB1143800C58C0C /* BoxDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxDetailPresenter.swift; sourceTree = "<group>"; };
 		4CFAE1BD1EB11FD300C58C0C /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -2089,6 +2097,22 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		4CEC32251EF01DBD00FCF102 /* AutosizableLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4CEC32261EF01DD100FCF102 /* AutosizableLabel.swift */,
+			);
+			name = AutosizableLabel;
+			sourceTree = "<group>";
+		};
+		4CEC322A1EF0204E00FCF102 /* ProportionalOffsetConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				4CEC322B1EF0206000FCF102 /* ProportionalOffsetConstraint.swift */,
+			);
+			name = ProportionalOffsetConstraint;
+			sourceTree = "<group>";
+		};
 		4CFAE1B91EB1142200C58C0C /* Box Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -2209,6 +2233,8 @@
 		A4F89AFB1DA806C900949A35 /* OhMyBox */ = {
 			isa = PBXGroup;
 			children = (
+				4CEC322A1EF0204E00FCF102 /* ProportionalOffsetConstraint */,
+				4CEC32251EF01DBD00FCF102 /* AutosizableLabel */,
 				D4637A3D1EEB0BBC00F92FD1 /* RequestDetailPresenter.swift */,
 				D4637A3E1EEB0BBC00F92FD1 /* SectionSwtichProductTableViewCell.swift */,
 				D44FC7B91EE32CC10055382F /* Purchase */,
@@ -3123,7 +3149,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1212F349464D156AC1F01E47 /* [CP] Embed Pods Frameworks */ = {
@@ -3168,7 +3194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5E77B850F65E703FE1D9F22F /* [CP] Embed Pods Frameworks */ = {
@@ -3198,7 +3224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A414FD9F1EB5490A008FCAC0 /* Fabric */ = {
@@ -3255,7 +3281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E87C73A551AF67827EF915CD /* [CP] Embed Pods Frameworks */ = {
@@ -3425,6 +3451,7 @@
 				A4F69A131EB552CC00155E32 /* NotificationsManager.swift in Sources */,
 				A414FCF51EB5490A008FCAC0 /* LoginPresenter.swift in Sources */,
 				A414FCF61EB5490A008FCAC0 /* SearchBrandCollectionViewCell.swift in Sources */,
+				4CEC32281EF01DD100FCF102 /* AutosizableLabel.swift in Sources */,
 				A414FCF71EB5490A008FCAC0 /* PurchaseInfoTableViewCell.swift in Sources */,
 				A414FCF81EB5490A008FCAC0 /* BrandTableViewCell.swift in Sources */,
 				A414FCF91EB5490A008FCAC0 /* HomePresenter.swift in Sources */,
@@ -3466,6 +3493,7 @@
 				A414FD171EB5490A008FCAC0 /* String+Util.swift in Sources */,
 				A414FD181EB5490A008FCAC0 /* RequestsHeaderTableViewCell.swift in Sources */,
 				A414FD191EB5490A008FCAC0 /* SearchSuggestionsViewController.swift in Sources */,
+				4CEC322D1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */,
 				A414FD1A1EB5490A008FCAC0 /* IconNavigationBar.swift in Sources */,
 				A414FD1B1EB5490A008FCAC0 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				A414FD1C1EB5490A008FCAC0 /* BrandCollectionViewCell.swift in Sources */,
@@ -3607,6 +3635,7 @@
 				A414FE031EB54A5D008FCAC0 /* LoginPresenter.swift in Sources */,
 				A414FE041EB54A5D008FCAC0 /* SearchBrandCollectionViewCell.swift in Sources */,
 				A414FE051EB54A5D008FCAC0 /* PurchaseInfoTableViewCell.swift in Sources */,
+				4CEC32291EF01DD100FCF102 /* AutosizableLabel.swift in Sources */,
 				A414FE061EB54A5D008FCAC0 /* BrandTableViewCell.swift in Sources */,
 				A414FE071EB54A5D008FCAC0 /* HomePresenter.swift in Sources */,
 				A414FE081EB54A5D008FCAC0 /* ProductDetailViewController.swift in Sources */,
@@ -3648,6 +3677,7 @@
 				A414FE261EB54A5D008FCAC0 /* RequestsHeaderTableViewCell.swift in Sources */,
 				A414FE271EB54A5D008FCAC0 /* SearchSuggestionsViewController.swift in Sources */,
 				A414FE281EB54A5D008FCAC0 /* IconNavigationBar.swift in Sources */,
+				4CEC322E1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */,
 				A414FE291EB54A5D008FCAC0 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
 				A414FE2A1EB54A5D008FCAC0 /* BrandCollectionViewCell.swift in Sources */,
 				A414FE2B1EB54A5D008FCAC0 /* ShoppingRequestsViewController.swift in Sources */,
@@ -3709,6 +3739,7 @@
 				4C2063D21EB3DC9400F01CF9 /* CollectionSegmentedControlViewCell.swift in Sources */,
 				2F0777471DBD8FBF003C124F /* MeasuresUserTableViewCell.swift in Sources */,
 				A4F89AFF1DA806C900949A35 /* TabBarController.swift in Sources */,
+				4CEC32271EF01DD100FCF102 /* AutosizableLabel.swift in Sources */,
 				4CADF6321ED7364C0016F670 /* ProductDetailPresenter.swift in Sources */,
 				4CE345681E6E4A21005C51F2 /* BrandCollectionCollectionViewCell.swift in Sources */,
 				D4E7E08E1DD4DEAD00F1DE52 /* User.swift in Sources */,
@@ -3750,6 +3781,7 @@
 				D4E7E0901DD4DFF700F1DE52 /* ErrorMessage.swift in Sources */,
 				4CE3B8841E5E2BAB0065A293 /* ArrowIndicatorTableViewCell.swift in Sources */,
 				D4B72A2E1DC8374A004335E4 /* BrandDetailViewController.swift in Sources */,
+				4CEC322C1EF0206000FCF102 /* ProportionalOffsetConstraint.swift in Sources */,
 				2F225D041DBF04F2009E4566 /* UIColor+Util.swift in Sources */,
 				2F225CFE1DBEFC36009E4566 /* ContainerCollectionView.swift in Sources */,
 				4C8BA53B1ED5CC0400372E01 /* PhotoObject.swift in Sources */,
