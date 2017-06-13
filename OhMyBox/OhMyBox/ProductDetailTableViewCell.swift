@@ -104,7 +104,11 @@ class ProductDetailTableViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
+
         super.layoutSubviews()
+        
+        buttonSegmentedControl.leftButtonHandler = descriptionButtonHandler
+        buttonSegmentedControl.rightButtonHandler = detailsButtonHandler
     }
     
 }

@@ -68,6 +68,7 @@ class BrandDetailViewController: UIViewController {
         
         presenter.view = self
         
+        productNavbarTitleLabel.text = presenter.brand?.name
         presenter.loadBoxes()
     }
     

@@ -30,10 +30,10 @@
                             <constraint firstAttribute="height" constant="35" id="jN6-bF-HoR"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="leftButtonHighlightedTitle" value="Meus dados"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="rightButtonHighlightedTitle" value="Sobre a Box"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="leftButtonNormalTitle" value="Meus dados"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="rightButtonNormalTitle" value="Sobre a Box"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="leftButtonHighlightedTitle" value="Descrição"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="rightButtonHighlightedTitle" value="Detalhe"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="leftButtonNormalTitle" value="Descrição"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="rightButtonNormalTitle" value="Detalhe"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFp-X2-niP">
