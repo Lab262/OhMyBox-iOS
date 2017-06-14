@@ -37,6 +37,14 @@ class PurchaseFieldPresenter: NSObject {
             self.delegate?.setupTextFieldType(fieldType: .picker)
             return
         }
+        
+        if let firstStep = self.fieldCellData?.firstStepField {
+            if firstStep == .birthDate {
+                self.delegate?.setupTextFieldType(fieldType: .datePicker)
+                return
+            }
+        }
+        
         self.delegate?.setupTextFieldType(fieldType: .field)
     }
 }

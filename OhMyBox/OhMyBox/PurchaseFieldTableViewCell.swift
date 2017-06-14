@@ -14,6 +14,7 @@ enum TextFieldType {
     case mask
     case field
     case picker
+    case datePicker
 }
 
 protocol FormFieldCellDelegate {
@@ -40,6 +41,8 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     var textField: UITextField?
     var maskField: AKMaskField?
     var pickerView: UIPickerView?
+    var datePicker: UIDatePicker?
+    var dateFormatter = DateFormatter()
     var delegate: FormFieldCellDelegate?
     var presenter: PurchaseFieldPresenter = PurchaseFieldPresenter()
     var bottomView: UIView?
@@ -80,7 +83,6 @@ class PurchaseFieldTableViewCell: UITableViewCell {
             textField?.tag = presenter.fieldCellData!.thirdStepField!.rawValue
         }
         
-        
         if let text = presenter.fieldCellData?.text {
             self.textField!.text = text
         }
@@ -90,7 +92,6 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     
     fileprivate func setupMaskField(){
         maskField = AKMaskField()
-        
         
         if let _ = presenter.fieldCellData?.firstStepField {
             maskField?.tag = presenter.fieldCellData!.firstStepField!.rawValue
@@ -110,11 +111,8 @@ class PurchaseFieldTableViewCell: UITableViewCell {
         if let text = presenter.fieldCellData?.text {
             self.maskField!.text = text
         }
-        
-        
-    
+
         maskField?.maskDelegate = self
-        
         self.contentView.addSubview(maskField!)
     }
     
@@ -126,6 +124,23 @@ class PurchaseFieldTableViewCell: UITableViewCell {
         textField!.delegate = self
     }
     
+    fileprivate func setupDatePicker() {
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        textField?.inputView = datePicker
+        datePicker?.maximumDate = Date()
+        datePicker?.addTarget(self, action: #selector(self.datePickerValueChanged), for: .valueChanged)
+    }
+    
+    func datePickerValueChanged(_ sender:UIDatePicker) {
+        textField?.text =  dateFormatter.string(from: sender.date)
+    }
+    
+    fileprivate func initializeDateFormatter() {
+        self.dateFormatter.dateStyle = .short
+        self.dateFormatter.timeStyle = .none
+    }
+
     fileprivate func setupConstraintField(fieldType: TextFieldType) {
         let field = fieldType == .mask ? maskField : textField
         field?.snp.makeConstraints({ (make) in
@@ -243,6 +258,11 @@ extension PurchaseFieldTableViewCell: PurchaseFieldDelegate {
         case .picker:
             setupTextField()
             setupPicker()
+            setupToolbarAccessory()
+        case .datePicker:
+            setupTextField()
+            initializeDateFormatter()
+            setupDatePicker()
             setupToolbarAccessory()
         }
         setupViewBottomLine(fieldType: fieldType)

@@ -41,11 +41,12 @@ class CreateAccountPresenter: NSObject {
         
         let birthdateField = FieldCellData(titleField: "Data de Nascimento", keyboardType: .default, dataFields: nil, firstStepTypeField: .birthDate)
         
+        
         let cpfField = FieldCellData(titleField: "CPF", keyboardType: .numberPad, fieldMask: .cpf, text: nil, firstStepTypeField: .cpf)
         
         let phoneField = FieldCellData(titleField: "Telefone", keyboardType: .numberPad, fieldMask: .phone, text: nil, firstStepTypeField: .phone)
         
-        fieldsData = [nameField, emailField, cpfField, phoneField]
+        fieldsData = [nameField, birthdateField, emailField, cpfField, phoneField]
     }
     
     func setupSecondStepFieldsData() {
