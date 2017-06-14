@@ -230,6 +230,11 @@
                             <constraint firstAttribute="trailing" secondItem="SLe-vn-urf" secondAttribute="trailing" id="wVm-UT-NcD"/>
                             <constraint firstAttribute="bottom" secondItem="SLe-vn-urf" secondAttribute="bottom" id="zEb-0K-IFn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SLe-vn-urf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="icl-h0-e6J">
@@ -354,7 +359,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OjM-dt-MKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OjM-dt-MKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
