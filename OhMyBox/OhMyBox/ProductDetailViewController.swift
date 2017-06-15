@@ -44,6 +44,7 @@ class ProductDetailViewController: UIViewController {
         setUpTableView()
         setUpBlurAnimator()
         
+        presenter.view = self
         productImageView.loadPFFile(presenter.product.photos[0])
     }
     
@@ -134,12 +135,9 @@ class ProductDetailViewController: UIViewController {
 //
         let buttonsHandler: UIButton.ButtonHandler = { _ in
             
-//            let contentOffset = tableView.contentOffset
             cell.isDescriptionButtonHighlighted = cell.buttonSegmentedControl.leftButtonHighlighted
             tableView.beginUpdates()
-//            tableView.setContentOffset(contentOffset, animated: false)
             tableView.endUpdates()
-//            tableView.setContentOffset(contentOffset, animated: true)
         }
 
         cell.descriptionButtonHandler = buttonsHandler
@@ -154,6 +152,13 @@ class ProductDetailViewController: UIViewController {
         
         cell.brandNameTopLine = presenter.product.brand.name
         cell.brandNameBottomLine = presenter.product.brand.title
+        
+        cell.changeFollowButtonToHighlightedStyle(presenter.productBrandIsFollowed)
+        
+        cell.followButtonHandler = { button in
+        
+            self.presenter.updateFollowProductBrand()
+        }
         
         return cell
     }
@@ -266,5 +271,13 @@ extension ProductDetailViewController: UIScrollViewDelegate {
         
         let defaultYPosition: CGFloat = 341
         navbarTitleLabelCenterYConstraint.constant = max(defaultYPosition - yOffset, 7)
+    }
+}
+
+extension ProductDetailViewController: ProductDetailView {
+    
+    func reloadData() {
+        
+        tableView.reloadData()
     }
 }

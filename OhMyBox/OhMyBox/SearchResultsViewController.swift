@@ -72,7 +72,7 @@ class SearchResultsViewController: UIViewController {
     }
     
     func registerNibs() {
-        tableView.register(UINib(nibName: "ShowProductTableViewCell", bundle: nil), forCellReuseIdentifier: ShowProductTableViewCell.identifier)
+//        tableView.register(UINib(nibName: "ShowProductTableViewCell", bundle: nil), forCellReuseIdentifier: ShowProductTableViewCell.identifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,20 +105,20 @@ extension SearchResultsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let product = products[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShowProductTableViewCell.identifier) as! ShowProductTableViewCell
-        // align model with cell fields
-        //placeholder
-        cell.brandName = "Por fashion store"
-        cell.productName = "Óculos Cool"
-        cell.price = 50.0
-        
-        return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: ShowProductTableViewCell.identifier) as! ShowProductTableViewCell
+//        // align model with cell fields
+//        //placeholder
+//        cell.brandName = "Por fashion store"
+//        cell.productName = "Óculos Cool"
+//        cell.price = 50.0
+//        
+        return UITableViewCell()
     }
 }
 
 extension SearchResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ShowProductTableViewCell.cellHeight
+        return 44.0
     }
 }
