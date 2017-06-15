@@ -28,19 +28,9 @@ class BrandPresenter: NSObject {
     func loadBrands() {
         
         let query = PFQuery(className: Brand.parseClassName())
-        //query.limit = 10
-        //query.whereKey(objectId, notContainedIn: brands.map { $0.objectId })
         query.findObjectsInBackground { (objects, error) in
             
             guard let brands = objects as? [Brand] else { return }
-            
-//            brands.forEach {
-//                
-//                $0.loadPhoto(completion: { (error) in
-//                    
-//                    self.view?.reloadData()
-//                })
-//            }
             
             self.brands = brands
         }
@@ -51,5 +41,19 @@ class BrandPresenter: NSObject {
         guard let brand = brands.object(at: indexPath.row) else { return nil }
         
         return (brand.name, brand.title, brand.photo)
+    }
+    
+    func isBrandFollowed(at indexPath: IndexPath) -> Bool {
+        
+        guard let brand = brands.object(at: indexPath.row) else { return false }
+        
+        return FollowManager.shared.brandIsFollowed(brand)
+    }
+    
+    func followButtonHandler(at indexPath: IndexPath) {
+        
+        guard let brand = brands.object(at: indexPath.row) else { return }
+        
+        FollowManager.shared.updateFollows(withBrand: brand)
     }
 }

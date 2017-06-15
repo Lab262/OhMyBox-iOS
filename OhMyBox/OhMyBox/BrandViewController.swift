@@ -29,6 +29,8 @@ class BrandViewController: UIViewController {
         presenter.view = self
         
         presenter.loadBrands()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(followsUpdated), name: Notifications.followsUpdated, object: nil)
     }
     
     func setUpTableView() {
@@ -88,9 +90,29 @@ extension BrandViewController {
         
         cell.info = presenter.brandCellInfo(for: indexPath)
         
+        let isBrandFollowed = presenter.isBrandFollowed(at: indexPath)
+        cell.changeFollowButtonToHighlightedStyle(isBrandFollowed)
+        
+        cell.followHandler = { following in
+            
+            self.presenter.followButtonHandler(at: indexPath)
+        }
+        
         return cell
     }
 
+    func followsUpdated() {
+        
+        for (i, brand) in presenter.brands.enumerated() {
+            
+            guard let cell = tableView.cellForRow(at: IndexPath(row: i, section: 1)) as? BrandTableViewCell else { continue }
+            
+            let isFollowed = FollowManager.shared.brandIsFollowed(brand)
+            
+            cell.changeFollowButtonToHighlightedStyle(isFollowed)
+        }
+    }
+    
 }
 
 extension BrandViewController: UITableViewDataSource {

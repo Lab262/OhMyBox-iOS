@@ -36,8 +36,7 @@ class BrandTableViewCell: UITableViewCell {
         }
     }
     
-    var followAction: ((UIButton) -> ())?
-    var following = false
+    var followHandler: UIButton.ButtonHandler?
     
     let followButtonHighlightedTitle = "Seguindo"
     let followButtonHighlightedBackgroundColor = UIColor.colorWithHexString("29143C")
@@ -61,10 +60,8 @@ class BrandTableViewCell: UITableViewCell {
     }
     
     @IBAction func follow(_ sender: UIButton) {
-        followAction?(sender)
         
-        following = !following
-        changeFollowButtonToHighlightedStyle(following)
+        followHandler?(sender)
     }
     
     func changeFollowButtonToHighlightedStyle(_ highlighted: Bool) {
