@@ -18,11 +18,12 @@ enum FirstStepField: Int {
 
 enum SecondStepField: Int {
     case addressDescription = 0
-    case addressComplement = 1
-    case addressNeighborhood = 2
-    case addressCep = 3
-    case addressCity = 4
-    case addressState = 5
+    case addressNumber = 1
+    case addressComplement = 2
+    case addressNeighborhood = 3
+    case addressCep = 4
+    case addressCity = 5
+    case addressState = 6
 }
 
 
@@ -32,6 +33,10 @@ enum ThirdStepField: Int {
     case cardNumber = 2
     case cardCvv = 3
     case cardValidity = 4
+    case cardHolderFullName = 5
+    case cardHolderBirthdate = 6
+    case cardHolderCpf = 7
+    case cardHolderPhone = 8
 }
 
 enum MaskField: String {

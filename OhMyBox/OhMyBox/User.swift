@@ -21,7 +21,7 @@ class User: PFUser {
     @NSManaged var photo: PFFile?
     @NSManaged var cpf: String?
     @NSManaged var phone: String?
-    @NSManaged var moipIds: [String]?
+    @NSManaged var moipId: String?
     
     var adresses: PFRelation<Address> {
         return self.relation(forKey: "adresses") as! PFRelation<Address>

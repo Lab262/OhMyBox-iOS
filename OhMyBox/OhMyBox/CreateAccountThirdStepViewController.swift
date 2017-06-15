@@ -44,11 +44,9 @@ class CreateAccountThirdStepViewController: UIViewController {
     
     @IBAction func doneAction(_ sender: Any) {
         if presenter.getFieldsDataAndValidate(step: 3) {
-            print ("SUCCESS MANIN")
+            presenter.createAccountWithOrder()
         }
     }
-    
-    
 }
 
 extension CreateAccountThirdStepViewController : UITableViewDataSource {

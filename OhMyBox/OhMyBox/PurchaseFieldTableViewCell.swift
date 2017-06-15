@@ -137,8 +137,7 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     }
     
     fileprivate func initializeDateFormatter() {
-        self.dateFormatter.dateStyle = .short
-        self.dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "dd/MM/yyyy"
     }
 
     fileprivate func setupConstraintField(fieldType: TextFieldType) {

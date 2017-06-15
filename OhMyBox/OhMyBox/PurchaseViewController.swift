@@ -41,10 +41,14 @@ class PurchaseViewController: UIViewController {
     }
     
     @IBAction func purchaseButtonAction(_ sender: UIButton) {
-        
-        //presenter.sendPurchaseRequest()
+        presenter.sendPurchaseRequest()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SelectCardViewController {
+            destination.presenter.purchaseRequest = presenter.purchaseRequest
+        }
+    }
 }
 
 extension PurchaseViewController: PurchaseView {
@@ -52,7 +56,8 @@ extension PurchaseViewController: PurchaseView {
     func purchaseRequestSaved(success: Bool, error: Error?) {
         
         if success {
-            performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
+            performSegue(withIdentifier: SegueIdentifiers.shoppingBoxToSelectCard, sender: self)
+           // performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
         }
     }
 }

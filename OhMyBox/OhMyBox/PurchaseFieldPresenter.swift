@@ -45,6 +45,13 @@ class PurchaseFieldPresenter: NSObject {
             }
         }
         
+        if let thirdStep = self.fieldCellData?.thirdStepField {
+            if thirdStep == .cardHolderBirthdate {
+                self.delegate?.setupTextFieldType(fieldType: .datePicker)
+                return
+            }
+        }
+        
         self.delegate?.setupTextFieldType(fieldType: .field)
     }
 }

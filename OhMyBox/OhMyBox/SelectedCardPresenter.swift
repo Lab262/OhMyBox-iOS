@@ -13,29 +13,18 @@ class SelectedCardPresenter: NSObject {
     
     var user = User.current()
     var userMoip: [UserMoip]?
-    
+    var purchaseRequest: PurchaseRequest?
     
     func getUserById() {
-        
-        SelectCardRequest.getUserById(ids: ["CUS-RY4E1PVW7S4S"], completionHandler: { (success, msg, userMoip) in
-            if success {
-                
-            } else {
-                
-            }
-        })
-        
-//        if let moipIds = user?.moipIds {
-//            if moipIds.count > 0 {
-//                SelectCardRequest.getUserById(ids: moipIds, completionHandler: { (success, msg, userMoip) in
-//                    if success {
-//                        
-//                    } else {
-//                        
-//                    }
-//                })
-//            }
-//        }
+        if let id = user?.moipId {
+            SelectCardRequest.getUserById(id: id, completionHandler: { (success, msg, userMoip) in
+                if success {
+                    
+                } else {
+                    
+                }
+            })
+        }
     }
     
 }

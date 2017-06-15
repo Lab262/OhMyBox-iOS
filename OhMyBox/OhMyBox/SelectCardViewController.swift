@@ -27,6 +27,17 @@ class SelectCardViewController: UIViewController {
         tableView.registerNibFrom(CardInformationTableViewCell.self)
     }
     
+    @IBAction func createAccountAction(_ sender: Any) {
+        self.performSegue(withIdentifier: SegueIdentifiers.selectCardToCreateAccount, sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CreateAccountFirstStepViewController {
+            destination.presenter.purchaseRequest = presenter.purchaseRequest
+        }
+    }
+    
     func generateCreateAccountButtonCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath)

@@ -27,6 +27,7 @@ class CreateAccountPresenter: NSObject {
     private var dictionaryUserPurchaseInformations = Dictionary<String, String>()
     
     var delegate: CreateAccountDelegate?
+    var purchaseRequest: PurchaseRequest?
     private var creditCard: MPKCreditCard!
     
     func setViewDelegate(delegate: CreateAccountDelegate) {
@@ -41,7 +42,6 @@ class CreateAccountPresenter: NSObject {
         
         let birthdateField = FieldCellData(titleField: "Data de Nascimento", keyboardType: .default, dataFields: nil, firstStepTypeField: .birthDate)
         
-        
         let cpfField = FieldCellData(titleField: "CPF", keyboardType: .numberPad, fieldMask: .cpf, text: nil, firstStepTypeField: .cpf)
         
         let phoneField = FieldCellData(titleField: "Telefone", keyboardType: .numberPad, fieldMask: .phone, text: nil, firstStepTypeField: .phone)
@@ -51,6 +51,8 @@ class CreateAccountPresenter: NSObject {
     
     func setupSecondStepFieldsData() {
         let addressDescriptionField = FieldCellData(titleField: "Endereço", keyboardType: .default, dataFields: nil, secondStepTypeField: .addressDescription)
+        
+        let addressNumberField = FieldCellData(titleField: "Número", keyboardType: .numberPad, dataFields: nil, secondStepTypeField: .addressDescription)
         
         let complementField = FieldCellData(titleField: "Complemento", keyboardType: .default, dataFields: nil, secondStepTypeField: .addressComplement)
         
@@ -62,7 +64,7 @@ class CreateAccountPresenter: NSObject {
         
         let stateField = FieldCellData(titleField: "Estado", keyboardType: .default, dataFields: ["DF", "SP", "RJ"], secondStepTypeField: .addressState)
         
-        fieldsData = [addressDescriptionField, complementField, neighborhoodField, cepField, cityField, stateField]
+        fieldsData = [addressDescriptionField, addressNumberField, complementField, neighborhoodField, cepField, cityField, stateField]
     }
     
     private func getFlags() -> [String] {
@@ -72,6 +74,14 @@ class CreateAccountPresenter: NSObject {
             paymentMethods.append(method.rawValue)
         }
         return paymentMethods
+    }
+    
+    func createAccountWithOrder() {
+        CreateAccountRequest.buyBox(userInformations: dictionaryUserPurchaseInformations, purchaseRequest: purchaseRequest!, card: creditCard) { (success, msg) in
+            if success {
+                
+            }
+        }
     }
     
     func setupThirdStepFieldsData() {
@@ -88,7 +98,16 @@ class CreateAccountPresenter: NSObject {
         
         let validityField = FieldCellData(titleField: "Validade", keyboardType: .numberPad, fieldMask: .validity, thirdStepTypeField: .cardValidity)
         
-        fieldsData = [cardFlagField, cardNameField, cardNumberField, cvvField, validityField]
+        let holderNameField = FieldCellData(titleField: "Nome do dono do cartão", keyboardType: .default,  thirdStepTypeField: .cardHolderFullName)
+        
+        let holderBirthdateField = FieldCellData(titleField: "Data de nascimento do dono do cartão", keyboardType: .default,  thirdStepTypeField: .cardHolderBirthdate)
+        
+        let holderCpfField = FieldCellData(titleField: "CPF do dono do cartão", keyboardType: .numberPad, fieldMask: .cpf, thirdStepTypeField: .cardHolderCpf)
+        
+        let holderPhoneField = FieldCellData(titleField: "Telefone do dono do cartão", keyboardType: .numberPad, fieldMask: .cpf, thirdStepTypeField: .cardHolderCpf)
+    
+        
+        fieldsData = [cardFlagField, cardNameField, cardNumberField, cvvField, validityField, holderNameField, holderBirthdateField, holderCpfField, holderPhoneField]
     }
     
     func initializeCreditCard() {
@@ -218,14 +237,13 @@ class CreateAccountPresenter: NSObject {
         
         switch typeField {
         case .cardNumber:
-            creditCard.number = field!.text
+            creditCard.number = field!.text?.replacingOccurrences(of: "-", with: "", options: .literal, range:nil)
             return creditCard.isNumberValid()
         case .cardCvv:
-            creditCard.cvc =
-                field!.text
+            creditCard.cvc = field!.text
             return creditCard.isSecurityCodeValid()
         case .cardValidity:
-            let validity = field!.text
+            let validity = field!.text?.replacingOccurrences(of: "-", with: "", options: .literal, range:nil)
             creditCard.expirationMonth = String(validity!.characters.prefix(2))
             creditCard.expirationYear = String(validity!.characters.suffix(4))
             
@@ -265,10 +283,8 @@ class CreateAccountPresenter: NSObject {
         case .name: dictionaryUserPurchaseInformations[UserPurchaseInformations.name] = field?.text
         case .email: dictionaryUserPurchaseInformations[UserPurchaseInformations.email] = field?.text
         case .birthDate: dictionaryUserPurchaseInformations[UserPurchaseInformations.birthdate] = field?.text
-        case .phone: dictionaryUserPurchaseInformations[UserPurchaseInformations.phone] = field?.text
-            
-        default: break
-            
+        case .cpf: dictionaryUserPurchaseInformations[UserPurchaseInformations.cpf] = field?.text?.replacingOccurrences(of: "[|.-]", with: "", options: .literal, range:nil)
+        case .phone: dictionaryUserPurchaseInformations[UserPurchaseInformations.phone] = field?.text?.replacingOccurrences(of: "[ |()-]", with: "", options: [.regularExpression])
         }
     }
     
@@ -278,8 +294,9 @@ class CreateAccountPresenter: NSObject {
         
         switch typeField {
         case .addressDescription: dictionaryUserPurchaseInformations[UserPurchaseInformations.addressDescription] = field?.text
+        case .addressNumber: dictionaryUserPurchaseInformations[UserPurchaseInformations.addressNumber] = field?.text
         case .addressComplement: dictionaryUserPurchaseInformations[UserPurchaseInformations.addressComplement] = field?.text
-        case .addressCep: dictionaryUserPurchaseInformations[UserPurchaseInformations.cep] = field?.text
+        case .addressCep: dictionaryUserPurchaseInformations[UserPurchaseInformations.cep] = field?.text?.replacingOccurrences(of: "-", with: "", options: .literal, range:nil)
         case .addressCity: dictionaryUserPurchaseInformations[UserPurchaseInformations.city] = field?.text
         case .addressState: dictionaryUserPurchaseInformations[UserPurchaseInformations.state] = field?.text
         default: break
@@ -297,7 +314,12 @@ class CreateAccountPresenter: NSObject {
         case .cardNumber: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardNumber] = field?.text
         case .cardCvv: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardCvv] = field?.text
         case .cardValidity: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardValidity] = field?.text
+        case .cardHolderFullName: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardHolderFullName] = field?.text
+        case .cardHolderBirthdate: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardHolderBirthdate] = field?.text
+        case .cardHolderCpf: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardHolderCpf] = field?.text?.replacingOccurrences(of: "[|.-]", with: "", options: .literal, range:nil)
+        case .cardHolderPhone: dictionaryUserPurchaseInformations[UserPurchaseInformations.cardHolderPhone] = field?.text
         }
+        
     }
     
     private func checkMaskFieldIsEmpty(field: AKMaskField) -> Bool {

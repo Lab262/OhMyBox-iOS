@@ -252,7 +252,6 @@
                                     <action selector="buyAction:" destination="Xam-Z7-ox1" eventType="touchUpInside" id="tu3-J6-RKm"/>
                                     <action selector="buyButtonAction:" destination="4d9-6Q-XC3" eventType="touchUpInside" id="la7-p3-4LW"/>
                                     <action selector="purchaseButtonAction:" destination="TIn-S5-4yd" eventType="touchUpInside" id="OYi-Dq-NGE"/>
-                                    <segue destination="uUv-dE-4oh" kind="show" id="oVE-1X-NJK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -273,6 +272,7 @@
                     <connections>
                         <outlet property="tableView" destination="wam-j2-pfD" id="FHa-28-sJd"/>
                         <segue destination="WnB-uH-sYk" kind="show" identifier="purchaseToPurchaseSuccessful" id="bpP-8I-gvx"/>
+                        <segue destination="uUv-dE-4oh" kind="show" identifier="goToSelectCard" id="Azv-i2-L2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMI-I4-Ybq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,7 +489,7 @@ entenda o porquê.</string>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Cadastrar"/>
                                                     <connections>
-                                                        <segue destination="aph-GT-ggc" kind="show" id="poF-EH-klM"/>
+                                                        <action selector="createAccountAction:" destination="uUv-dE-4oh" eventType="touchUpInside" id="kXy-fF-2jg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -506,11 +506,12 @@ entenda o porquê.</string>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="KfT-X4-L8a" id="gok-8B-LYO"/>
+                        <segue destination="aph-GT-ggc" kind="show" identifier="goToCreateAccount" id="nhM-ux-zqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oen-hh-BFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="447.52623688155927"/>
+            <point key="canvasLocation" x="1903" y="448"/>
         </scene>
         <!--Create Account First Step View Controller-->
         <scene sceneID="ISm-n6-5mf">

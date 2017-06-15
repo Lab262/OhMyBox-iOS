@@ -50,6 +50,7 @@ struct UserPurchaseInformations {
     static let birthdate = "birthdate"
     static let phone = "phone"
     static let addressDescription = "addressDescription"
+    static let addressNumber = "addressNumber"
     static let addressComplement = "addressComplement"
     static let addressNeighborhood = "addressNeighborhood"
     static let cep = "cep"
@@ -60,10 +61,16 @@ struct UserPurchaseInformations {
     static let cardNumber = "cardNumber"
     static let cardValidity = "cardValidity"
     static let cardCvv = "cardCvv"
+    static let cardHolderFullName = "cardHolderFullName"
+    static let cardHolderBirthdate = "cardHolderBirthdate"
+    static let cardHolderCpf = "cardHolderCpf"
+    static let cardHolderPhone = "cardHolderPhone"
 }
 
+
 struct CloudFunctions {
-    static let  getUserById = "getUserById"
+    static let getUserById = "getUserById"
+    static let buyItem = "buyItem"
 }
 
 struct UserKeys {
@@ -103,6 +110,35 @@ struct ShippingAddressKeys {
     static let country = "country"
 }
 
+struct OrderKeys {
+    static let ownId = "ownId"
+    static let items = "items"
+}
+
+struct ItemKeys {
+    static let product = "product"
+    static let quantity = "quantity"
+    static let detail = "detail"
+    static let price = "price"
+}
+
+struct CreditCardKeys {
+    static let expirationMonth = "expirationMonth"
+    static let expirationYear = "expirationYear"
+    static let number = "number"
+    static let cvc = "cvc"
+    static let holder = "holder"
+}
+
+struct HolderKeys {
+    static let fullname = "fullname"
+    static let birthdate = "birthdate"
+    static let cpf = "cpf"
+    static let phone = "phone"
+    static let taxDocument = "taxDocument"
+}
+
+
 // MARK: Segue Identifiers
 struct SegueIdentifiers {
     
@@ -124,6 +160,9 @@ struct SegueIdentifiers {
     static let shoppingRequestsToRating = "shoppingRequestsToRating"
     static let shoppingRequestsToRequestDetail = "shoppingRequestsToRequestDetail"
     static let shoppingRequestDetailToRating = "shoppingRequestDetailToRating"
+    static let shoppingBoxToSelectCard = "goToSelectCard"
+    
+    static let selectCardToCreateAccount = "goToCreateAccount"
     
     // From purchase
     static let purchaseToPurchaseSuccessful = "purchaseToPurchaseSuccessful"

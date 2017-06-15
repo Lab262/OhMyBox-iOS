@@ -19,9 +19,10 @@ class PurchasePresenter: NSObject {
     
     var box: Box?
     var productsCount: Int {
-        
         return box?.productTypes.count ?? 0
     }
+    
+    var purchaseRequest = PurchaseRequest()
     
     func selectedProduct(for category: String) -> Product? {
         
@@ -41,6 +42,7 @@ class PurchasePresenter: NSObject {
         request.saveInBackground(block: { (success, error) in
             
             print("REQ SAVED?: ", success)
+            self.purchaseRequest = request
             self.view?.purchaseRequestSaved(success: success, error: error)
         })
     }

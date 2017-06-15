@@ -809,6 +809,12 @@
 		D43792E81EF1FE50001812B5 /* TaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792E71EF1FE50001812B5 /* TaxDocument.swift */; };
 		D43792E91EF1FE50001812B5 /* TaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792E71EF1FE50001812B5 /* TaxDocument.swift */; };
 		D43792EA1EF1FE50001812B5 /* TaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792E71EF1FE50001812B5 /* TaxDocument.swift */; };
+		D43792EC1EF20678001812B5 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792EB1EF20678001812B5 /* CreateAccountRequest.swift */; };
+		D43792ED1EF20678001812B5 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792EB1EF20678001812B5 /* CreateAccountRequest.swift */; };
+		D43792EE1EF20678001812B5 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792EB1EF20678001812B5 /* CreateAccountRequest.swift */; };
+		D43792F01EF2FCA6001812B5 /* Holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792EF1EF2FCA6001812B5 /* Holder.swift */; };
+		D43792F11EF2FCA6001812B5 /* Holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792EF1EF2FCA6001812B5 /* Holder.swift */; };
+		D43792F21EF2FCA6001812B5 /* Holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792EF1EF2FCA6001812B5 /* Holder.swift */; };
 		D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */; };
 		D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44066481DEE125E0053927B /* IconNavigationBar.xib */; };
 		D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44066491DEE125E0053927B /* IconNavigationBar.swift */; };
@@ -1194,6 +1200,8 @@
 		D402E0101DB69541007855D6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D408A02A1EE613BC00EADEC3 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		D43792E71EF1FE50001812B5 /* TaxDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxDocument.swift; sourceTree = "<group>"; };
+		D43792EB1EF20678001812B5 /* CreateAccountRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
+		D43792EF1EF2FCA6001812B5 /* Holder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Holder.swift; sourceTree = "<group>"; };
 		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D44066481DEE125E0053927B /* IconNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconNavigationBar.xib; sourceTree = "<group>"; };
 		D44066491DEE125E0053927B /* IconNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconNavigationBar.swift; sourceTree = "<group>"; };
@@ -2386,6 +2394,7 @@
 				D44DECBD1EF186B3008B0D24 /* Phone.swift */,
 				D44DECC11EF186E2008B0D24 /* ShippingAddress.swift */,
 				D43792E71EF1FE50001812B5 /* TaxDocument.swift */,
+				D43792EF1EF2FCA6001812B5 /* Holder.swift */,
 			);
 			name = Moip;
 			sourceTree = "<group>";
@@ -2394,6 +2403,7 @@
 			isa = PBXGroup;
 			children = (
 				D44DECC61EF18824008B0D24 /* SelectCardRequest.swift */,
+				D43792EB1EF20678001812B5 /* CreateAccountRequest.swift */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -3379,6 +3389,7 @@
 				A414FCD21EB5490A008FCAC0 /* ArrowIndicatorTableViewCell.swift in Sources */,
 				A414FCD31EB5490A008FCAC0 /* BrandDetailViewController.swift in Sources */,
 				A414FCD41EB5490A008FCAC0 /* UIColor+Util.swift in Sources */,
+				D43792F11EF2FCA6001812B5 /* Holder.swift in Sources */,
 				A414FCD51EB5490A008FCAC0 /* ContainerCollectionView.swift in Sources */,
 				A414FCD61EB5490A008FCAC0 /* ProfileViewController.swift in Sources */,
 				A414FCD71EB5490A008FCAC0 /* RegisterViewController.swift in Sources */,
@@ -3488,6 +3499,7 @@
 				D4637A411EEB0BC200F92FD1 /* RequestDetailPresenter.swift in Sources */,
 				A414FD281EB5490A008FCAC0 /* BrandCollectionsTableViewCell.swift in Sources */,
 				4CC40F321EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
+				D43792ED1EF20678001812B5 /* CreateAccountRequest.swift in Sources */,
 				D44FC7C31EE33E7D0055382F /* PurchaseFieldTableViewCell.swift in Sources */,
 				A414FD291EB5490A008FCAC0 /* Rating1ViewController.swift in Sources */,
 				A414FD2A1EB5490A008FCAC0 /* SearchHeaderTableViewCell.swift in Sources */,
@@ -3570,6 +3582,7 @@
 				A414FDE01EB54A5D008FCAC0 /* ArrowIndicatorTableViewCell.swift in Sources */,
 				A414FDE11EB54A5D008FCAC0 /* BrandDetailViewController.swift in Sources */,
 				A414FDE21EB54A5D008FCAC0 /* UIColor+Util.swift in Sources */,
+				D43792F21EF2FCA6001812B5 /* Holder.swift in Sources */,
 				A414FDE31EB54A5D008FCAC0 /* ContainerCollectionView.swift in Sources */,
 				A414FDE41EB54A5D008FCAC0 /* ProfileViewController.swift in Sources */,
 				A414FDE51EB54A5D008FCAC0 /* RegisterViewController.swift in Sources */,
@@ -3679,6 +3692,7 @@
 				D4637A421EEB0BC200F92FD1 /* RequestDetailPresenter.swift in Sources */,
 				A414FE371EB54A5D008FCAC0 /* Rating1ViewController.swift in Sources */,
 				4CC40F331EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
+				D43792EE1EF20678001812B5 /* CreateAccountRequest.swift in Sources */,
 				D44FC7C41EE33E7D0055382F /* PurchaseFieldTableViewCell.swift in Sources */,
 				A414FE381EB54A5D008FCAC0 /* SearchHeaderTableViewCell.swift in Sources */,
 				A414FE391EB54A5D008FCAC0 /* HomeTableViewHeaderView.swift in Sources */,
@@ -3731,6 +3745,7 @@
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
 				4CDBE9561E69FCE600715226 /* BrandsHeaderTableViewCell.swift in Sources */,
 				D44DECC21EF186E2008B0D24 /* ShippingAddress.swift in Sources */,
+				D43792EC1EF20678001812B5 /* CreateAccountRequest.swift in Sources */,
 				4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */,
 				D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */,
 				D408A02B1EE613BC00EADEC3 /* Address.swift in Sources */,
@@ -3782,6 +3797,7 @@
 				D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */,
 				4CA82EC61E773B4C002C495B /* PurchaseHeaderTableViewCell.swift in Sources */,
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
+				D43792F01EF2FCA6001812B5 /* Holder.swift in Sources */,
 				4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */,
 				4CA82EBE1E771A9C002C495B /* BrandContactHeaderTableViewCell.swift in Sources */,
 				D43792E81EF1FE50001812B5 /* TaxDocument.swift in Sources */,

@@ -12,13 +12,13 @@ import ObjectMapper
 
 class SelectCardRequest: NSObject {
     
-    static func getUserById(ids: [String], completionHandler: @escaping (_ success: Bool, _ msg: String, _ usersMoip: [UserMoip]?) -> Void) {
+    static func getUserById(id: String, completionHandler: @escaping (_ success: Bool, _ msg: String, _ usersMoip: [UserMoip]?) -> Void) {
         
         var usersMoip = [UserMoip]()
-        var params = [String: Any]()
-        params[UserKeys.userMoipId] = ids[0]
+        var params = [String: String]()
+        params[UserKeys.userMoipId] = id
         
-        PFCloud.callFunction(inBackground: CloudFunctions.getUserById, withParameters: params) { (objects, error) in
+        PFCloud.callFunction(inBackground: CloudFunctions.buyItem, withParameters: params) { (objects, error) in
             if let _ = error {
                 completionHandler(false, error!.localizedDescription, nil)
             } else {
@@ -34,5 +34,4 @@ class SelectCardRequest: NSObject {
         }
     }
     
-    //static func
 }
