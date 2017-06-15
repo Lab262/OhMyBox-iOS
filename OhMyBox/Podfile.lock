@@ -18,6 +18,7 @@ PODS:
   - FBSDKLoginKit (4.20.2):
     - FBSDKCoreKit
   - MoipEncryptSDK (1.0.2)
+  - ObjectMapper (2.2.7)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
   - ParseFacebookUtilsV4 (1.11.1):
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - Fabric
   - FalconFrameworkIOSSDK (from `https://gitlab.com/LAB262/FalconFrameworkIOSSDK.git`)
   - MoipEncryptSDK (~> 1.0)
+  - ObjectMapper (~> 2.2)
   - Parse
   - ParseFacebookUtilsV4
   - SnapKit (~> 3.2.0)
@@ -59,10 +61,11 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 82eac696eb6157da5f4266c3a241f00e9bd72471
   FBSDKLoginKit: 2211bede07c83391349eacc1fd86cf6d9289ce38
   MoipEncryptSDK: 9fa62578715cde80c577a5fd1a88a979807d6d2d
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 252d3d5b5e6aa40d54912c51df03d81945c21d19
+PODFILE CHECKSUM: db40af73480081032eb262fd66b8cba1e919220a
 
 COCOAPODS: 1.2.1

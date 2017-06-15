@@ -806,11 +806,41 @@
 		D408A02B1EE613BC00EADEC3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408A02A1EE613BC00EADEC3 /* Address.swift */; };
 		D408A02C1EE613BC00EADEC3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408A02A1EE613BC00EADEC3 /* Address.swift */; };
 		D408A02D1EE613BC00EADEC3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408A02A1EE613BC00EADEC3 /* Address.swift */; };
+		D43792E81EF1FE50001812B5 /* TaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792E71EF1FE50001812B5 /* TaxDocument.swift */; };
+		D43792E91EF1FE50001812B5 /* TaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792E71EF1FE50001812B5 /* TaxDocument.swift */; };
+		D43792EA1EF1FE50001812B5 /* TaxDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43792E71EF1FE50001812B5 /* TaxDocument.swift */; };
 		D437F6841DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */; };
 		D440664A1DEE125E0053927B /* IconNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44066481DEE125E0053927B /* IconNavigationBar.xib */; };
 		D440664B1DEE125E0053927B /* IconNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44066491DEE125E0053927B /* IconNavigationBar.swift */; };
 		D440664D1DEE3DD70053927B /* UIApplication+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */; };
 		D44457F31DC7C2B200F488FE /* jaguar_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D44457F21DC7C2B200F488FE /* jaguar_brand.png */; };
+		D44DECA11EF172A7008B0D24 /* SelectCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECA01EF172A7008B0D24 /* SelectCardViewController.swift */; };
+		D44DECA21EF172A7008B0D24 /* SelectCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECA01EF172A7008B0D24 /* SelectCardViewController.swift */; };
+		D44DECA31EF172A7008B0D24 /* SelectCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECA01EF172A7008B0D24 /* SelectCardViewController.swift */; };
+		D44DECAA1EF18148008B0D24 /* CardInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECA81EF18148008B0D24 /* CardInformationTableViewCell.swift */; };
+		D44DECAB1EF18148008B0D24 /* CardInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECA81EF18148008B0D24 /* CardInformationTableViewCell.swift */; };
+		D44DECAC1EF18148008B0D24 /* CardInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECA81EF18148008B0D24 /* CardInformationTableViewCell.swift */; };
+		D44DECAD1EF18148008B0D24 /* CardInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44DECA91EF18148008B0D24 /* CardInformationTableViewCell.xib */; };
+		D44DECAE1EF18148008B0D24 /* CardInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44DECA91EF18148008B0D24 /* CardInformationTableViewCell.xib */; };
+		D44DECAF1EF18148008B0D24 /* CardInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44DECA91EF18148008B0D24 /* CardInformationTableViewCell.xib */; };
+		D44DECB11EF18377008B0D24 /* SelectedCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB01EF18377008B0D24 /* SelectedCardPresenter.swift */; };
+		D44DECB21EF18377008B0D24 /* SelectedCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB01EF18377008B0D24 /* SelectedCardPresenter.swift */; };
+		D44DECB31EF18377008B0D24 /* SelectedCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB01EF18377008B0D24 /* SelectedCardPresenter.swift */; };
+		D44DECB51EF183AD008B0D24 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB41EF183AD008B0D24 /* Card.swift */; };
+		D44DECB61EF183AD008B0D24 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB41EF183AD008B0D24 /* Card.swift */; };
+		D44DECB71EF183AD008B0D24 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB41EF183AD008B0D24 /* Card.swift */; };
+		D44DECB91EF185F0008B0D24 /* UserMoip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB81EF185F0008B0D24 /* UserMoip.swift */; };
+		D44DECBA1EF185F0008B0D24 /* UserMoip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB81EF185F0008B0D24 /* UserMoip.swift */; };
+		D44DECBB1EF185F0008B0D24 /* UserMoip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECB81EF185F0008B0D24 /* UserMoip.swift */; };
+		D44DECBE1EF186B3008B0D24 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECBD1EF186B3008B0D24 /* Phone.swift */; };
+		D44DECBF1EF186B3008B0D24 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECBD1EF186B3008B0D24 /* Phone.swift */; };
+		D44DECC01EF186B3008B0D24 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECBD1EF186B3008B0D24 /* Phone.swift */; };
+		D44DECC21EF186E2008B0D24 /* ShippingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECC11EF186E2008B0D24 /* ShippingAddress.swift */; };
+		D44DECC31EF186E2008B0D24 /* ShippingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECC11EF186E2008B0D24 /* ShippingAddress.swift */; };
+		D44DECC41EF186E2008B0D24 /* ShippingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECC11EF186E2008B0D24 /* ShippingAddress.swift */; };
+		D44DECC71EF18824008B0D24 /* SelectCardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECC61EF18824008B0D24 /* SelectCardRequest.swift */; };
+		D44DECC81EF18824008B0D24 /* SelectCardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECC61EF18824008B0D24 /* SelectCardRequest.swift */; };
+		D44DECC91EF18824008B0D24 /* SelectCardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DECC61EF18824008B0D24 /* SelectCardRequest.swift */; };
 		D44FC7BB1EE32CE10055382F /* CreateAccountFirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FC7BA1EE32CE10055382F /* CreateAccountFirstStepViewController.swift */; };
 		D44FC7BC1EE32CE10055382F /* CreateAccountFirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FC7BA1EE32CE10055382F /* CreateAccountFirstStepViewController.swift */; };
 		D44FC7BD1EE32CE10055382F /* CreateAccountFirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FC7BA1EE32CE10055382F /* CreateAccountFirstStepViewController.swift */; };
@@ -1163,11 +1193,21 @@
 		D402E00E1DB68D2A007855D6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D402E0101DB69541007855D6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D408A02A1EE613BC00EADEC3 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		D43792E71EF1FE50001812B5 /* TaxDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxDocument.swift; sourceTree = "<group>"; };
 		D437F6831DE67B420016E89E /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D44066481DEE125E0053927B /* IconNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconNavigationBar.xib; sourceTree = "<group>"; };
 		D44066491DEE125E0053927B /* IconNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconNavigationBar.swift; sourceTree = "<group>"; };
 		D440664C1DEE3DD70053927B /* UIApplication+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Navigation.swift"; sourceTree = "<group>"; };
 		D44457F21DC7C2B200F488FE /* jaguar_brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaguar_brand.png; sourceTree = "<group>"; };
+		D44DECA01EF172A7008B0D24 /* SelectCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCardViewController.swift; sourceTree = "<group>"; };
+		D44DECA81EF18148008B0D24 /* CardInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInformationTableViewCell.swift; sourceTree = "<group>"; };
+		D44DECA91EF18148008B0D24 /* CardInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardInformationTableViewCell.xib; sourceTree = "<group>"; };
+		D44DECB01EF18377008B0D24 /* SelectedCardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCardPresenter.swift; sourceTree = "<group>"; };
+		D44DECB41EF183AD008B0D24 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D44DECB81EF185F0008B0D24 /* UserMoip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMoip.swift; sourceTree = "<group>"; };
+		D44DECBD1EF186B3008B0D24 /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
+		D44DECC11EF186E2008B0D24 /* ShippingAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingAddress.swift; sourceTree = "<group>"; };
+		D44DECC61EF18824008B0D24 /* SelectCardRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCardRequest.swift; sourceTree = "<group>"; };
 		D44FC7BA1EE32CE10055382F /* CreateAccountFirstStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountFirstStepViewController.swift; sourceTree = "<group>"; };
 		D44FC7C01EE33E7D0055382F /* PurchaseFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseFieldTableViewCell.swift; sourceTree = "<group>"; };
 		D44FC7C11EE33E7D0055382F /* PurchaseFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseFieldTableViewCell.xib; sourceTree = "<group>"; };
@@ -2338,9 +2378,30 @@
 			name = NavigationBar;
 			sourceTree = "<group>";
 		};
+		D44DECBC1EF18689008B0D24 /* Moip */ = {
+			isa = PBXGroup;
+			children = (
+				D44DECB41EF183AD008B0D24 /* Card.swift */,
+				D44DECB81EF185F0008B0D24 /* UserMoip.swift */,
+				D44DECBD1EF186B3008B0D24 /* Phone.swift */,
+				D44DECC11EF186E2008B0D24 /* ShippingAddress.swift */,
+				D43792E71EF1FE50001812B5 /* TaxDocument.swift */,
+			);
+			name = Moip;
+			sourceTree = "<group>";
+		};
+		D44DECC51EF18801008B0D24 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D44DECC61EF18824008B0D24 /* SelectCardRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		D44FC7B91EE32CC10055382F /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				D44DECC51EF18801008B0D24 /* Request */,
 				D44FC7CD1EE344EB0055382F /* Model */,
 				D44FC7C81EE340100055382F /* Presenter */,
 				D44FC7BF1EE32EA40055382F /* View */,
@@ -2356,6 +2417,7 @@
 				D4883C3A1EE8DB1F00768B7D /* CreateAccountSecondStepViewController.swift */,
 				D4637A341EE8F65C00F92FD1 /* CreateAccountThirdStepViewController.swift */,
 				D4883C3E1EE8DC5F00768B7D /* CreateAccountContainerViewController.swift */,
+				D44DECA01EF172A7008B0D24 /* SelectCardViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -2365,6 +2427,8 @@
 			children = (
 				D44FC7C01EE33E7D0055382F /* PurchaseFieldTableViewCell.swift */,
 				D44FC7C11EE33E7D0055382F /* PurchaseFieldTableViewCell.xib */,
+				D44DECA81EF18148008B0D24 /* CardInformationTableViewCell.swift */,
+				D44DECA91EF18148008B0D24 /* CardInformationTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2374,6 +2438,7 @@
 			children = (
 				D44FC7C91EE3405B0055382F /* CreateAccountPresenter.swift */,
 				D44FC7DA1EE5EE3C0055382F /* PurchaseFieldPresenter.swift */,
+				D44DECB01EF18377008B0D24 /* SelectedCardPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -2480,6 +2545,7 @@
 		D4E7E08C1DD4DE0200F1DE52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D44DECBC1EF18689008B0D24 /* Moip */,
 				2F9B19B21DF883FF000C2553 /* Product.swift */,
 				D4E7E08D1DD4DEAD00F1DE52 /* User.swift */,
 				4CF2237D1E9D3B050050D91A /* Measures.swift */,
@@ -2690,6 +2756,7 @@
 				A414FD4C1EB5490A008FCAC0 /* productDefaultimage.png in Resources */,
 				A414FD4D1EB5490A008FCAC0 /* coatProduct.png in Resources */,
 				A414FD4E1EB5490A008FCAC0 /* ProfilePurchaseInfoTableViewCell.xib in Resources */,
+				D44DECAE1EF18148008B0D24 /* CardInformationTableViewCell.xib in Resources */,
 				A414FD4F1EB5490A008FCAC0 /* BrandCollectionsTableViewCell.xib in Resources */,
 				A414FD501EB5490A008FCAC0 /* shoesImage.png in Resources */,
 				A414FD511EB5490A008FCAC0 /* HighlightCollectionViewCell.xib in Resources */,
@@ -2804,6 +2871,7 @@
 				A414FE5B1EB54A5D008FCAC0 /* productDefaultimage.png in Resources */,
 				A414FE5C1EB54A5D008FCAC0 /* coatProduct.png in Resources */,
 				A414FE5D1EB54A5D008FCAC0 /* ProfilePurchaseInfoTableViewCell.xib in Resources */,
+				D44DECAF1EF18148008B0D24 /* CardInformationTableViewCell.xib in Resources */,
 				A414FE5E1EB54A5D008FCAC0 /* BrandCollectionsTableViewCell.xib in Resources */,
 				A414FE5F1EB54A5D008FCAC0 /* shoesImage.png in Resources */,
 				A414FE601EB54A5D008FCAC0 /* HighlightCollectionViewCell.xib in Resources */,
@@ -2936,6 +3004,7 @@
 				4CDBE9571E69FCE600715226 /* BrandsHeaderTableViewCell.xib in Resources */,
 				D44FC7C51EE33E7D0055382F /* PurchaseFieldTableViewCell.xib in Resources */,
 				4CA82EB71E770B23002C495B /* BrandContactInfoTableViewCell.xib in Resources */,
+				D44DECAD1EF18148008B0D24 /* CardInformationTableViewCell.xib in Resources */,
 				4C8AAF2A1E5F845C00258116 /* CollectionPickerViewCell.xib in Resources */,
 				2F70E80D1DC7C502000AB03B /* ShoppingBoxTableViewCell.xib in Resources */,
 				4CE3B87F1E5E29210065A293 /* Search.storyboard in Resources */,
@@ -3256,6 +3325,8 @@
 				4CE73A331ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */,
 				A414FCAD1EB5490A008FCAC0 /* HighlightsTableViewCell.swift in Sources */,
 				A414FCAE1EB5490A008FCAC0 /* Colors.swift in Sources */,
+				D44DECB21EF18377008B0D24 /* SelectedCardPresenter.swift in Sources */,
+				D44DECC31EF186E2008B0D24 /* ShippingAddress.swift in Sources */,
 				A414FCAF1EB5490A008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */,
 				A414FCB01EB5490A008FCAC0 /* CartViewController.swift in Sources */,
 				A414FCB21EB5490A008FCAC0 /* TextFieldExtension.swift in Sources */,
@@ -3274,6 +3345,7 @@
 				4C294B9B1ED3916F00DF83EF /* Box.swift in Sources */,
 				A414FCBD1EB5490A008FCAC0 /* RecommendedViewController.swift in Sources */,
 				A414FCBE1EB5490A008FCAC0 /* BrandsHeaderTableViewCell.swift in Sources */,
+				D44DECAB1EF18148008B0D24 /* CardInformationTableViewCell.swift in Sources */,
 				A414FCBF1EB5490A008FCAC0 /* CollectionPickerViewCell.swift in Sources */,
 				A414FCC01EB5490A008FCAC0 /* UserRequest.swift in Sources */,
 				4CBC22D01ED32CDF00D06937 /* PurchaseRequest.swift in Sources */,
@@ -3318,6 +3390,7 @@
 				A414FCDC1EB5490A008FCAC0 /* PurchaseSuccessfulViewController.swift in Sources */,
 				A414FCDD1EB5490A008FCAC0 /* ProfileTableHeaderView.swift in Sources */,
 				A414FCDE1EB5490A008FCAC0 /* SearchSuggestionTableViewCell.swift in Sources */,
+				D44DECC81EF18824008B0D24 /* SelectCardRequest.swift in Sources */,
 				A414FCDF1EB5490A008FCAC0 /* ProductLabelTableViewCell.swift in Sources */,
 				A414FCE01EB5490A008FCAC0 /* ProfilePurchaseInfoTableViewCell.swift in Sources */,
 				A414FCE11EB5490A008FCAC0 /* Defaults.swift in Sources */,
@@ -3351,6 +3424,7 @@
 				A414FCFA1EB5490A008FCAC0 /* ProductDetailViewController.swift in Sources */,
 				A414FCFB1EB5490A008FCAC0 /* CollectionPickerController.swift in Sources */,
 				D44FC7E01EE5F6430055382F /* TextInputTableView.swift in Sources */,
+				D44DECB61EF183AD008B0D24 /* Card.swift in Sources */,
 				A414FCFC1EB5490A008FCAC0 /* TextInputScrollView.swift in Sources */,
 				A414FCFD1EB5490A008FCAC0 /* ProductBrandTableViewCell.swift in Sources */,
 				4C294BA01ED3986F00DF83EF /* WishlistManager.swift in Sources */,
@@ -3376,6 +3450,7 @@
 				A414FD0E1EB5490A008FCAC0 /* Constants.swift in Sources */,
 				A414FD0F1EB5490A008FCAC0 /* UIColorExtension.swift in Sources */,
 				A414FD101EB5490A008FCAC0 /* UIViewExtension.swift in Sources */,
+				D43792E91EF1FE50001812B5 /* TaxDocument.swift in Sources */,
 				A414FD111EB5490A008FCAC0 /* LogoTableViewCell.swift in Sources */,
 				A414FD121EB5490A008FCAC0 /* ColorCollectionViewCell.swift in Sources */,
 				A414FD131EB5490A008FCAC0 /* RatingContainerViewController.swift in Sources */,
@@ -3384,6 +3459,7 @@
 				A414FD161EB5490A008FCAC0 /* WishlistViewController.swift in Sources */,
 				4CC40F291EBB708D00333245 /* BoxView.swift in Sources */,
 				A414FD171EB5490A008FCAC0 /* String+Util.swift in Sources */,
+				D44DECBF1EF186B3008B0D24 /* Phone.swift in Sources */,
 				A414FD181EB5490A008FCAC0 /* RequestsHeaderTableViewCell.swift in Sources */,
 				A414FD191EB5490A008FCAC0 /* SearchSuggestionsViewController.swift in Sources */,
 				A414FD1A1EB5490A008FCAC0 /* IconNavigationBar.swift in Sources */,
@@ -3395,6 +3471,7 @@
 				4C61B3271ED88A3D006826AF /* RequestManager.swift in Sources */,
 				4CE73A3B1ED49522002DF331 /* RatingPresenter.swift in Sources */,
 				A414FD1E1EB5490A008FCAC0 /* BoxDetailHeaderCollectionReusableView.swift in Sources */,
+				D44DECBA1EF185F0008B0D24 /* UserMoip.swift in Sources */,
 				A414FD1F1EB5490A008FCAC0 /* Rating2ViewController.swift in Sources */,
 				A414FD201EB5490A008FCAC0 /* SearchContainerViewController.swift in Sources */,
 				4CAA38B01EE875B40038093C /* BoxRequester.swift in Sources */,
@@ -3407,6 +3484,7 @@
 				4C294B971ED3916600DF83EF /* Wishlist.swift in Sources */,
 				A414FD261EB5490A008FCAC0 /* BoxCollectionViewCell.swift in Sources */,
 				A414FD271EB5490A008FCAC0 /* RegisterFieldTableViewCell.swift in Sources */,
+				D44DECA21EF172A7008B0D24 /* SelectCardViewController.swift in Sources */,
 				D4637A411EEB0BC200F92FD1 /* RequestDetailPresenter.swift in Sources */,
 				A414FD281EB5490A008FCAC0 /* BrandCollectionsTableViewCell.swift in Sources */,
 				4CC40F321EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
@@ -3438,6 +3516,8 @@
 				4CE73A341ED4827C002DF331 /* PurchaseRatingFeedback.swift in Sources */,
 				A414FDBA1EB54A5D008FCAC0 /* HighlightsTableViewCell.swift in Sources */,
 				A414FDBB1EB54A5D008FCAC0 /* Colors.swift in Sources */,
+				D44DECB31EF18377008B0D24 /* SelectedCardPresenter.swift in Sources */,
+				D44DECC41EF186E2008B0D24 /* ShippingAddress.swift in Sources */,
 				A414FDBC1EB54A5D008FCAC0 /* SearchBrandsTableViewCell.swift in Sources */,
 				A414FDBD1EB54A5D008FCAC0 /* CartViewController.swift in Sources */,
 				A414FDBF1EB54A5D008FCAC0 /* TextFieldExtension.swift in Sources */,
@@ -3456,6 +3536,7 @@
 				4C294B9C1ED3917000DF83EF /* Box.swift in Sources */,
 				A414FDCA1EB54A5D008FCAC0 /* RecommendedViewController.swift in Sources */,
 				A414FDCB1EB54A5D008FCAC0 /* BrandsHeaderTableViewCell.swift in Sources */,
+				D44DECAC1EF18148008B0D24 /* CardInformationTableViewCell.swift in Sources */,
 				A414FDCC1EB54A5D008FCAC0 /* CollectionPickerViewCell.swift in Sources */,
 				A414FDCD1EB54A5D008FCAC0 /* UserRequest.swift in Sources */,
 				4CBC22D11ED32CDF00D06937 /* PurchaseRequest.swift in Sources */,
@@ -3500,6 +3581,7 @@
 				A414FDEA1EB54A5D008FCAC0 /* PurchaseSuccessfulViewController.swift in Sources */,
 				A414FDEB1EB54A5D008FCAC0 /* ProfileTableHeaderView.swift in Sources */,
 				A414FDEC1EB54A5D008FCAC0 /* SearchSuggestionTableViewCell.swift in Sources */,
+				D44DECC91EF18824008B0D24 /* SelectCardRequest.swift in Sources */,
 				A414FDED1EB54A5D008FCAC0 /* ProductLabelTableViewCell.swift in Sources */,
 				A414FDEE1EB54A5D008FCAC0 /* ProfilePurchaseInfoTableViewCell.swift in Sources */,
 				A414FDEF1EB54A5D008FCAC0 /* Defaults.swift in Sources */,
@@ -3533,6 +3615,7 @@
 				A414FE091EB54A5D008FCAC0 /* CollectionPickerController.swift in Sources */,
 				A414FE0A1EB54A5D008FCAC0 /* TextInputScrollView.swift in Sources */,
 				D44FC7E11EE5F6430055382F /* TextInputTableView.swift in Sources */,
+				D44DECB71EF183AD008B0D24 /* Card.swift in Sources */,
 				A414FE0B1EB54A5D008FCAC0 /* ProductBrandTableViewCell.swift in Sources */,
 				A414FE0C1EB54A5D008FCAC0 /* OrderTableViewCell.swift in Sources */,
 				4C294BA11ED3986F00DF83EF /* WishlistManager.swift in Sources */,
@@ -3558,6 +3641,7 @@
 				A414FE1D1EB54A5D008FCAC0 /* UIColorExtension.swift in Sources */,
 				A414FE1E1EB54A5D008FCAC0 /* UIViewExtension.swift in Sources */,
 				A414FE1F1EB54A5D008FCAC0 /* LogoTableViewCell.swift in Sources */,
+				D43792EA1EF1FE50001812B5 /* TaxDocument.swift in Sources */,
 				A414FE201EB54A5D008FCAC0 /* ColorCollectionViewCell.swift in Sources */,
 				A414FE211EB54A5D008FCAC0 /* RatingContainerViewController.swift in Sources */,
 				A414FE221EB54A5D008FCAC0 /* SegmentTableViewCell.swift in Sources */,
@@ -3566,6 +3650,7 @@
 				A414FE251EB54A5D008FCAC0 /* String+Util.swift in Sources */,
 				4CC40F2A1EBB708D00333245 /* BoxView.swift in Sources */,
 				A414FE261EB54A5D008FCAC0 /* RequestsHeaderTableViewCell.swift in Sources */,
+				D44DECC01EF186B3008B0D24 /* Phone.swift in Sources */,
 				A414FE271EB54A5D008FCAC0 /* SearchSuggestionsViewController.swift in Sources */,
 				A414FE281EB54A5D008FCAC0 /* IconNavigationBar.swift in Sources */,
 				A414FE291EB54A5D008FCAC0 /* SearchSuggestionsHeaderTableViewCell.swift in Sources */,
@@ -3577,6 +3662,7 @@
 				4C61B3281ED88A3D006826AF /* RequestManager.swift in Sources */,
 				4CE73A3C1ED49522002DF331 /* RatingPresenter.swift in Sources */,
 				A414FE2D1EB54A5D008FCAC0 /* Rating2ViewController.swift in Sources */,
+				D44DECBB1EF185F0008B0D24 /* UserMoip.swift in Sources */,
 				A414FE2E1EB54A5D008FCAC0 /* SearchContainerViewController.swift in Sources */,
 				A414FE2F1EB54A5D008FCAC0 /* BoxDetailPresenter.swift in Sources */,
 				4CAA38B11EE875B40038093C /* BoxRequester.swift in Sources */,
@@ -3589,6 +3675,7 @@
 				4C294B981ED3916600DF83EF /* Wishlist.swift in Sources */,
 				A414FE351EB54A5D008FCAC0 /* RegisterFieldTableViewCell.swift in Sources */,
 				A414FE361EB54A5D008FCAC0 /* BrandCollectionsTableViewCell.swift in Sources */,
+				D44DECA31EF172A7008B0D24 /* SelectCardViewController.swift in Sources */,
 				D4637A421EEB0BC200F92FD1 /* RequestDetailPresenter.swift in Sources */,
 				A414FE371EB54A5D008FCAC0 /* Rating1ViewController.swift in Sources */,
 				4CC40F331EBB76C200333245 /* BoxTableViewCell.swift in Sources */,
@@ -3613,6 +3700,7 @@
 				4CAEA9521E6F1EBA00FC65BD /* ProfileSegmentTableViewCell.swift in Sources */,
 				4C3EA3E61EC2478E005C47B7 /* PrintView.swift in Sources */,
 				4CAEA93D1E6EF77C00FC65BD /* WishlistCountTableViewCell.swift in Sources */,
+				D44DECBE1EF186B3008B0D24 /* Phone.swift in Sources */,
 				4CA82ED31E773F97002C495B /* PurchaseViewController.swift in Sources */,
 				A4F69A121EB552CC00155E32 /* NotificationsManager.swift in Sources */,
 				4CE5DFE71E71B8700093CC0E /* ShoppingBoxEmptyView.swift in Sources */,
@@ -3642,6 +3730,7 @@
 				D4883C3B1EE8DB1F00768B7D /* CreateAccountSecondStepViewController.swift in Sources */,
 				2F0777401DBD1BED003C124F /* RecommendedViewController.swift in Sources */,
 				4CDBE9561E69FCE600715226 /* BrandsHeaderTableViewCell.swift in Sources */,
+				D44DECC21EF186E2008B0D24 /* ShippingAddress.swift in Sources */,
 				4C8AAF2B1E5F845C00258116 /* CollectionPickerViewCell.swift in Sources */,
 				D4E7E0881DD4DB4600F1DE52 /* UserRequest.swift in Sources */,
 				D408A02B1EE613BC00EADEC3 /* Address.swift in Sources */,
@@ -3651,8 +3740,10 @@
 				4CA82EB21E770985002C495B /* BrandContactViewController.swift in Sources */,
 				4CDBE9501E69F5CB00715226 /* BrandsTableViewCell.swift in Sources */,
 				4C2F25011E66305A0043A90B /* MiniProductsTableViewCell.swift in Sources */,
+				D44DECA11EF172A7008B0D24 /* SelectCardViewController.swift in Sources */,
 				4CFAE1C01EB1362400C58C0C /* Array+Util.swift in Sources */,
 				4C6B40DF1E781E0800622282 /* PurchaseSuccessfulTableViewCell.swift in Sources */,
+				D44DECAA1EF18148008B0D24 /* CardInformationTableViewCell.swift in Sources */,
 				4CB255521EA68B1F00DCCA24 /* RegisterPresenter.swift in Sources */,
 				2F5EEE8D1DD25EA8006D1FD9 /* UIView+IBInspector.swift in Sources */,
 				4C4449131EA8F5EE00B8715F /* BoxesCollectionViewDataSource.swift in Sources */,
@@ -3693,6 +3784,7 @@
 				2F8460631DBA79AB002D25FE /* DataUserTextFieldTableViewCell.swift in Sources */,
 				4CBD41D41E60A26D00A9337F /* CollectionPickerView.swift in Sources */,
 				4CA82EBE1E771A9C002C495B /* BrandContactHeaderTableViewCell.swift in Sources */,
+				D43792E81EF1FE50001812B5 /* TaxDocument.swift in Sources */,
 				A4F89AFD1DA806C900949A35 /* AppDelegate.swift in Sources */,
 				2F3359501DE38AE400540116 /* StatusOrderTableViewCell.swift in Sources */,
 				4C45512D1E7C683800FC2415 /* Rating3ViewController.swift in Sources */,
@@ -3706,6 +3798,7 @@
 				4CA82EB61E770B23002C495B /* BrandContactInfoTableViewCell.swift in Sources */,
 				4C8AAF251E5F83BF00258116 /* SearchResultsViewController.swift in Sources */,
 				4CA82EBA1E770D86002C495B /* BrandContactLocationTableViewCell.swift in Sources */,
+				D44DECC71EF18824008B0D24 /* SelectCardRequest.swift in Sources */,
 				4CAEA93A1E6EEF6000FC65BD /* UIButton+Handler.swift in Sources */,
 				4CA82ECE1E773E89002C495B /* PurchaseButtonHeaderTableViewCell.swift in Sources */,
 				4C2F24ED1E6602C20043A90B /* UICollectionViewCell+Utils.swift in Sources */,
@@ -3749,6 +3842,7 @@
 				4CFDEE941EBD09B500D2B85A /* CartManager.swift in Sources */,
 				4CB263771EB2537300BB7883 /* Box.swift in Sources */,
 				4C61B3261ED88A3D006826AF /* RequestManager.swift in Sources */,
+				D44DECB51EF183AD008B0D24 /* Card.swift in Sources */,
 				4C4DB5791E68C0C2005D44C1 /* ColorCollectionViewCell.swift in Sources */,
 				4C016D0F1E797D1C0094C42E /* RatingContainerViewController.swift in Sources */,
 				D4883C3F1EE8DC5F00768B7D /* CreateAccountContainerViewController.swift in Sources */,
@@ -3771,9 +3865,11 @@
 				4CE3B8901E5E30A80065A293 /* SearchContainerViewController.swift in Sources */,
 				4CFAE1BB1EB1143800C58C0C /* BoxDetailPresenter.swift in Sources */,
 				4CAEA94C1E6F181500FC65BD /* ButtonSegmentedControl.swift in Sources */,
+				D44DECB91EF185F0008B0D24 /* UserMoip.swift in Sources */,
 				4C4DB5781E68C0C2005D44C1 /* SizeCollectionViewCell.swift in Sources */,
 				4C8AAF231E5F731E00258116 /* TableViewSelectionDelegate.swift in Sources */,
 				4C42C8DB1EBCB8C400F86655 /* CartPresenter.swift in Sources */,
+				D44DECB11EF18377008B0D24 /* SelectedCardPresenter.swift in Sources */,
 				4CAA38AF1EE875B40038093C /* BoxRequester.swift in Sources */,
 				4CE045EC1EAF8D980022AFC6 /* BoxDetailViewController.swift in Sources */,
 				4C4449071EA8EC9900B8715F /* BoxCollectionViewCell.swift in Sources */,

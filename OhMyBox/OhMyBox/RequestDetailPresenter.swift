@@ -12,5 +12,6 @@ import UIKit
 class RequestDetailPresenter: NSObject {
     
     var request: PurchaseRequest?
+    
 
 }

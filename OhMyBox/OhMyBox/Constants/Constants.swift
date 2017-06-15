@@ -62,7 +62,46 @@ struct UserPurchaseInformations {
     static let cardCvv = "cardCvv"
 }
 
+struct CloudFunctions {
+    static let  getUserById = "getUserById"
+}
 
+struct UserKeys {
+    static let userMoipId = "userMoipId"
+}
+
+struct UserMoipKeys {
+    static let id = "id"
+    static let ownId = "ownId"
+    static let fullName = "fullname"
+    static let birthDate = "birthDate"
+    static let email = "email"
+    static let phone = "phone"
+    static let taxDocument = "taxDocument"
+    static let shippingAddress = "shippingAddress"
+}
+
+struct PhoneKeys {
+    static let countryCode = "countryCode"
+    static let areaCode = "areaCode"
+    static let number = "number"
+}
+
+struct TaxDocumentKeys {
+    static let type = "type"
+    static let number = "number"
+}
+
+struct ShippingAddressKeys {
+    static let zipCode = "zipCode"
+    static let street = "street"
+    static let streetNumber = "streetNumber"
+    static let complement = "complement"
+    static let city = "city"
+    static let district = "district"
+    static let state = "state"
+    static let country = "country"
+}
 
 // MARK: Segue Identifiers
 struct SegueIdentifiers {
