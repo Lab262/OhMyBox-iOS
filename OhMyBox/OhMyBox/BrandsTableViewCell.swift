@@ -33,6 +33,8 @@ class BrandsTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     var selectionDelegate: CollectionViewSelectionDelegate?
     
+    var followButtonHandler: ((IndexPath) -> ())?
+    
     let margin: CGFloat = 20.0
     let itemSpacing: CGFloat = 11.0
     
@@ -71,7 +73,19 @@ extension BrandsTableViewCell: UICollectionViewDataSource {
         let brand = brands[indexPath.item]
         cell.info = (brand.name, brand.title, brand.photo)
         
+        cell.followHandler = { _ in
+            
+            self.followButtonHandler?(indexPath)
+        }
+        
+        cell.changeFollowButtonToHighlightedStyle(brandIsFollowed(brand: brand))
+        
         return cell
+    }
+    
+    func brandIsFollowed(brand: Brand) -> Bool {
+        
+        return FollowManager.shared.brandIsFollowed(brand)
     }
 }
 

@@ -25,6 +25,23 @@ class BrandPresenter: NSObject {
         }
     }
     
+    var followedBrands: [Brand] {
+        
+        return FollowManager.shared.followedBrandsIds.flatMap { id in
+            
+            return brands.where {
+                $0.objectId == id
+            }
+        }
+    }
+    
+    override init() {
+        
+        super.init()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(followsUpdated), name: Notifications.followsUpdated, object: nil)
+    }
+    
     func loadBrands() {
         
         let query = PFQuery(className: Brand.parseClassName())
@@ -55,5 +72,17 @@ class BrandPresenter: NSObject {
         guard let brand = brands.object(at: indexPath.row) else { return }
         
         FollowManager.shared.updateFollows(withBrand: brand)
+    }
+    
+    func followButtonHandlerForFollowedBrand(at indexPath: IndexPath) {
+        
+        guard let brand = followedBrands.object(at: indexPath.item) else { return }
+        
+        FollowManager.shared.updateFollows(withBrand: brand)
+    }
+    
+    func followsUpdated() {
+        
+        view?.reloadData()
     }
 }
