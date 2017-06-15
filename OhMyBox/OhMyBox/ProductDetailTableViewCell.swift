@@ -40,9 +40,10 @@ class ProductDetailTableViewCell: UITableViewCell {
     
     var productDescription: String? {
         didSet {
-            if isDescriptionButtonHighlighted {
-                updateDescriptionLabelText()
-            }
+//            if isDescriptionButtonHighlighted {
+//                updateDescriptionLabelText()
+            descriptionLabel.attributedText = attributedDescription
+//            }
         }
     }
     var productDetails: String? {
@@ -54,19 +55,11 @@ class ProductDetailTableViewCell: UITableViewCell {
     }
     
     var attributedDescription: NSAttributedString? {
-        if let description = productDescription {
-            return description.with(characterSpacing: 1.22)
-        } else {
-            return nil
-        }
+        return productDescription?.with(characterSpacing: 1.22)
     }
     
     var attributedDetails: NSAttributedString? {
-        if let details = productDetails {
-            return details.with(characterSpacing: 1.22)
-        } else {
-            return nil
-        }
+        return productDetails?.with(characterSpacing: 1.22)
     }
     
     let buttonHighlightedTitleColor = UIColor.white

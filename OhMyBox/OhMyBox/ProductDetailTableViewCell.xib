@@ -37,7 +37,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFp-X2-niP">
-                        <rect key="frame" x="10" y="62" width="383" height="150.5"/>
+                        <rect key="frame" x="20" y="20" width="363" height="192.5"/>
                         <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</string>
                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                         <nil key="textColor"/>
@@ -48,11 +48,17 @@
                     <constraint firstAttribute="trailing" secondItem="eRn-BG-455" secondAttribute="trailing" constant="20" id="8GS-IO-92w"/>
                     <constraint firstItem="eRn-BG-455" firstAttribute="leading" secondItem="lNx-QX-lQT" secondAttribute="leading" constant="20" id="Ene-lk-VYR"/>
                     <constraint firstItem="BFp-X2-niP" firstAttribute="top" secondItem="eRn-BG-455" secondAttribute="bottom" constant="27" id="Jyc-Qa-DQj"/>
-                    <constraint firstAttribute="trailing" secondItem="BFp-X2-niP" secondAttribute="trailing" constant="10" id="MaD-ZN-VfK"/>
-                    <constraint firstItem="BFp-X2-niP" firstAttribute="leading" secondItem="lNx-QX-lQT" secondAttribute="leading" constant="10" id="Ooi-AE-cff"/>
+                    <constraint firstAttribute="trailing" secondItem="BFp-X2-niP" secondAttribute="trailing" constant="20" id="MaD-ZN-VfK"/>
+                    <constraint firstItem="BFp-X2-niP" firstAttribute="leading" secondItem="lNx-QX-lQT" secondAttribute="leading" constant="20" id="Ooi-AE-cff"/>
                     <constraint firstAttribute="bottom" secondItem="BFp-X2-niP" secondAttribute="bottom" constant="20" id="YKe-4D-c11"/>
                     <constraint firstItem="eRn-BG-455" firstAttribute="top" secondItem="lNx-QX-lQT" secondAttribute="top" id="iQe-LX-avB"/>
+                    <constraint firstItem="BFp-X2-niP" firstAttribute="top" secondItem="lNx-QX-lQT" secondAttribute="top" constant="20" id="mKQ-W3-qW9"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="eRn-BG-455"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="buttonSegmentedControl" destination="eRn-BG-455" id="Tne-HQ-dzb"/>

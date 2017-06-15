@@ -130,8 +130,8 @@ class ProductDetailViewController: UIViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductDetailTableViewCell.identifier) as! ProductDetailTableViewCell
         
         cell.productDescription = presenter.product.productDescription
-        cell.productDetails = presenter.product.productDetail
-//        
+//        cell.productDetails = presenter.product.productDetail
+//
         let buttonsHandler: UIButton.ButtonHandler = { _ in
             
 //            let contentOffset = tableView.contentOffset
