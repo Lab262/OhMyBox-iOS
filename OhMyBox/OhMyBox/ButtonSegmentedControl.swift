@@ -68,9 +68,16 @@ class ButtonSegmentedControl: UIView {
         _ = Bundle.main.loadNibNamed("ButtonSegmentedControl", owner: self, options: nil)
         addSubview(view)
         view.frame = self.bounds
-        leftButtonAction(sender: leftButton)
         
+        leftButtonAction(sender: leftButton)
+        updateFonts()
         updateLayout()
+    }
+    
+    func updateFonts() {
+        
+        leftButton?.titleLabel?.font = leftButtonFont
+        rightButton?.titleLabel?.font = rightButtonFont
     }
     
     func updateLayout() {

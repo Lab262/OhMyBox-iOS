@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingBoxEmptyView" customModule="OhMyBox" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingBoxEmptyView" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="e6J-V7-Aih" id="HcD-Ww-MmK"/>
                 <outlet property="imageView" destination="1xy-oQ-Pbl" id="AXH-L3-8Mo"/>
@@ -29,11 +30,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_box" translatesAutoresizingMaskIntoConstraints="NO" id="1xy-oQ-Pbl">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_box" translatesAutoresizingMaskIntoConstraints="NO" id="1xy-oQ-Pbl">
                     <rect key="frame" x="67" y="55" width="240" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1xy-oQ-Pbl" secondAttribute="height" multiplier="8:5" id="TNZ-9q-sLj"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6J-V7-Aih">
-                    <rect key="frame" x="105.5" y="399" width="163" height="39"/>
+                    <rect key="frame" x="106" y="399" width="163" height="39"/>
                     <color key="backgroundColor" red="0.14117647058823529" green="0.098039215686274508" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                     <state key="normal" title="Quero ver tudo">
@@ -48,10 +52,10 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="6Tz-gf-vTB"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-vc-FS7">
-                    <rect key="frame" x="30.5" y="314" width="313" height="85"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wze-vc-FS7" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
+                    <rect key="frame" x="19.5" y="329.5" width="335.5" height="69.5"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="85" id="xzt-cu-D8Z"/>
+                        <constraint firstAttribute="width" secondItem="Wze-vc-FS7" secondAttribute="height" multiplier="313:65" id="Sgy-Jo-TPO"/>
                     </constraints>
                     <attributedString key="attributedText">
                         <fragment>
@@ -67,11 +71,8 @@ reprima!</string>
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEv-N1-UG4">
-                    <rect key="frame" x="31" y="262" width="313" height="52"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="313" id="TzE-VY-aVR"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEv-N1-UG4" customClass="AutosizableLabel" customModule="lab262_ohmybox_store_dev" customModuleProvider="target">
+                    <rect key="frame" x="20" y="277.5" width="335" height="52"/>
                     <attributedString key="attributedText">
                         <fragment>
                             <string key="content">Opa, você precisa
@@ -80,46 +81,7 @@ fazer umas comprinhas</string>
                                 <color key="NSColor" red="0.83528999999999998" green="0.80784" blue="0.86275000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <font key="NSFont" size="20" name="AXIS-ExtraBold"/>
                                 <real key="NSKern" value="1.05"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                    <tabStops>
-                                        <textTab alignment="left" location="28">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="56">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="84">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="112">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="140">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="168">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="196">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="224">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="252">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="280">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="308">
-                                            <options/>
-                                        </textTab>
-                                        <textTab alignment="left" location="336">
-                                            <options/>
-                                        </textTab>
-                                    </tabStops>
-                                </paragraphStyle>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                             </attributes>
                         </fragment>
                     </attributedString>
@@ -128,16 +90,18 @@ fazer umas comprinhas</string>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1xy-oQ-Pbl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="3Z2-Wg-Ybp"/>
+                <constraint firstItem="1xy-oQ-Pbl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="3Z2-Wg-Ybp" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
                 <constraint firstItem="e6J-V7-Aih" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="163/375" id="3yn-aA-SLK"/>
                 <constraint firstItem="e6J-V7-Aih" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="97a-Kb-eNY"/>
                 <constraint firstItem="1xy-oQ-Pbl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BIs-Yo-rUk"/>
                 <constraint firstItem="e6J-V7-Aih" firstAttribute="top" secondItem="Wze-vc-FS7" secondAttribute="bottom" id="L1e-zX-64l"/>
-                <constraint firstItem="Wze-vc-FS7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="313/375" id="WRf-Cw-STi"/>
+                <constraint firstItem="dEv-N1-UG4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Pha-md-Fsj"/>
                 <constraint firstItem="Wze-vc-FS7" firstAttribute="top" secondItem="dEv-N1-UG4" secondAttribute="bottom" id="dC8-5p-l3Y"/>
-                <constraint firstItem="Wze-vc-FS7" firstAttribute="centerX" secondItem="e6J-V7-Aih" secondAttribute="centerX" id="v5v-Bm-tAX"/>
-                <constraint firstAttribute="bottom" secondItem="e6J-V7-Aih" secondAttribute="bottom" constant="139" id="wZb-Wl-A5Y"/>
-                <constraint firstItem="dEv-N1-UG4" firstAttribute="centerX" secondItem="Wze-vc-FS7" secondAttribute="centerX" id="zKs-CW-dcM"/>
+                <constraint firstItem="Wze-vc-FS7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="os2-EF-JFP"/>
+                <constraint firstAttribute="trailing" secondItem="dEv-N1-UG4" secondAttribute="trailing" constant="20" id="pN6-Mq-Icr"/>
+                <constraint firstAttribute="trailing" secondItem="Wze-vc-FS7" secondAttribute="trailing" constant="20" id="qkb-Rz-BKt"/>
+                <constraint firstAttribute="bottom" secondItem="e6J-V7-Aih" secondAttribute="bottom" constant="139" id="wZb-Wl-A5Y" customClass="ProportionalOffsetConstraint" customModule="lab262_ohmybox_store_dev" customModuleProvider="target"/>
+                <constraint firstItem="1xy-oQ-Pbl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="240/375" id="zpM-92-Kmp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>

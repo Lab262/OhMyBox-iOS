@@ -15,7 +15,7 @@ class BrandShowAllProductsTableViewCell: UITableViewCell {
     }
     
     static var cellHeight: CGFloat {
-        return 44.0
+        return 44.0 * UIView.widthScaleProportion
     }
     
     static var nibName: String {

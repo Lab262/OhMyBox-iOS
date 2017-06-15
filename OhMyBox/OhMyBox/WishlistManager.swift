@@ -25,11 +25,19 @@ class WishlistManager: NSObject {
         return WishlistManager()
     }()
     
-    var favoriteBoxes: [Box] = []
+    override private init() {
+        
+        super.init()
+    }
+    
+    var favoriteBoxesIds: [String] = []
     
     func boxIsInWishlist(_ box: Box) -> Bool {
         
-        return favoriteBoxes.contains(box)
+        return favoriteBoxesIds.contains {
+            
+            box.objectId == $0
+        }
     }
     
     func loadWishlist() {
@@ -38,21 +46,13 @@ class WishlistManager: NSObject {
         
         let query = PFQuery(className: Wishlist.parseClassName()).whereKey("user", equalTo: user).includeKey("box")
         
-//        query.cachePolicy = .cacheThenNetwork
         query.findObjectsInBackground { (objects, error) in
+            
+            self.favoriteBoxesIds.removeAll(keepingCapacity: true)
             
             if let objects = objects as? [Wishlist] {
                 
-                let boxes = objects.map { $0.box }
-                
-                for box in boxes {
-                    
-                    box.queryProducts() { (_) in
-                        
-                        self.favoriteBoxes.append(box)
-                    }
-                    try! box.brand.fetch()
-                }
+                self.favoriteBoxesIds = objects.flatMap { $0.box.objectId }
             }
         }
     }
@@ -66,7 +66,8 @@ class WishlistManager: NSObject {
             
             if success {
                 
-                self.favoriteBoxes.append(box)
+                guard let boxId = box.objectId else { return }
+                self.favoriteBoxesIds.append(boxId)
             }
             completionHandler?(success, error)
         }
@@ -91,7 +92,9 @@ class WishlistManager: NSObject {
             wish.deleteInBackground { (success, error) in
                 
                 if success {
-                    _ = self.favoriteBoxes.remove(box)
+                    
+                    guard let boxId = box.objectId else { return }
+                    _ = self.favoriteBoxesIds.remove(boxId)
                 }
                 completionHandler?(success, error)
             }
@@ -100,18 +103,12 @@ class WishlistManager: NSObject {
     
     func updateWishlist(withBox box: Box) {
         
-        let boxIsInWishlist = favoriteBoxes.contains(box)
+        guard let boxId = box.objectId else { return }
+        let boxIsInWishlist = favoriteBoxesIds.contains(boxId)
         
         let handler: PFBooleanResultBlock = { (success, error) in
             
-            // t+t = f >> t!=t = f
-            // f+t = t >> f!=t = t
-            // f+f = f >> f!=f = f
-            // t+f = t >> t!=f = t
-            let isInWishlist = boxIsInWishlist != success
-            
-            let notificationUserInfo: [String: Any] = [WishlistManager.UpdateUserInfoKeys.boxId: box.objectId!, WishlistManager.UpdateUserInfoKeys.isInWishlist: isInWishlist]
-            NotificationCenter.default.post(name: Notifications.wishlistUpdated, object: notificationUserInfo)
+            NotificationCenter.default.post(name: Notifications.wishlistUpdated, object: nil)
         }
         
         if boxIsInWishlist {

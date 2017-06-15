@@ -30,6 +30,12 @@ enum RegisterError: Error {
     }
 }
 
+struct Fonts {
+    
+    static let poppinsLight = UIFont(name: "Poppins-Light", size: 15.0)!
+    static let poppinsMedium = UIFont(name: "Poppins-Medium", size: 15.0)!
+}
+
 // MARK: Keys for known objects put in UserDefaults
 struct UserDefaultsKeys {
     
@@ -183,14 +189,14 @@ struct Notifications {
     
     static let cartUpdated = NSNotification.Name(rawValue: "cartUpdated")
     static let wishlistUpdated = NSNotification.Name(rawValue: "wishlistUpdated")
+    static let followsUpdated = NSNotification.Name(rawValue: "followsUpdated")
+    static let boxesLoaded = NSNotification.Name(rawValue: "boxesLoaded")
 }
 
 
 // MARK: Purchase Successful Tips @ PurchaseSuccessfulViewController
 struct PurchaseSuccessfulTips {
     
-    static let poppinsLight = UIFont(name: "Poppins-Light", size: 15.0)!
-    static let poppinsMedium = UIFont(name: "Poppins-Medium", size: 15.0)!
     static let characterSpacing: CGFloat = 1.31
     
     private static var tip0: NSAttributedString {
@@ -200,8 +206,8 @@ struct PurchaseSuccessfulTips {
         let lightRange = NSRange(location: 0, length: tip.length)
         let mediumRange = NSRange(location: 10, length: 9)
         
-        tip.addAttribute(NSFontAttributeName, value: PurchaseSuccessfulTips.poppinsLight, range: lightRange)
-        tip.addAttribute(NSFontAttributeName, value: PurchaseSuccessfulTips.poppinsMedium, range: mediumRange)
+        tip.addAttribute(NSFontAttributeName, value: Fonts.poppinsLight, range: lightRange)
+        tip.addAttribute(NSFontAttributeName, value: Fonts.poppinsMedium, range: mediumRange)
         tip.addAttribute(NSKernAttributeName, value: PurchaseSuccessfulTips.characterSpacing, range: lightRange)
         
         
@@ -215,9 +221,9 @@ struct PurchaseSuccessfulTips {
         let lightRange = NSRange(location: 0, length: tip.length)
         let mediumRanges = [NSRange(location: 60, length: 5), NSRange(location: 75, length: 9)]
         
-        tip.addAttribute(NSFontAttributeName, value: PurchaseSuccessfulTips.poppinsLight, range: lightRange)
+        tip.addAttribute(NSFontAttributeName, value: Fonts.poppinsLight, range: lightRange)
         for range in mediumRanges {
-            tip.addAttribute(NSFontAttributeName, value: PurchaseSuccessfulTips.poppinsMedium, range: range)
+            tip.addAttribute(NSFontAttributeName, value: Fonts.poppinsMedium, range: range)
         }
         tip.addAttribute(NSKernAttributeName, value: PurchaseSuccessfulTips.characterSpacing, range: lightRange)
         
@@ -231,8 +237,8 @@ struct PurchaseSuccessfulTips {
         let lightRange = NSRange(location: 0, length: tip.length)
         let mediumRange = NSRange(location: 54, length: 19)
         
-        tip.addAttribute(NSFontAttributeName, value: PurchaseSuccessfulTips.poppinsLight, range: lightRange)
-        tip.addAttribute(NSFontAttributeName, value: PurchaseSuccessfulTips.poppinsMedium, range: mediumRange)
+        tip.addAttribute(NSFontAttributeName, value: Fonts.poppinsLight, range: lightRange)
+        tip.addAttribute(NSFontAttributeName, value: Fonts.poppinsMedium, range: mediumRange)
         tip.addAttribute(NSKernAttributeName, value: PurchaseSuccessfulTips.characterSpacing, range: lightRange)
         
         return NSAttributedString(attributedString: tip)

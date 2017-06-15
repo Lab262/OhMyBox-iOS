@@ -22,16 +22,22 @@ class ProductDetailTableViewCell: UITableViewCell {
         return "ProductDetailTableViewCell"
     }
     
-    @IBOutlet weak var descriptionButton: UIButton!
-    @IBOutlet weak var detailsButton: UIButton!
+    
+    weak var descriptionButton: UIButton!
+    weak var detailsButton: UIButton!
+    @IBOutlet weak var buttonSegmentedControl: ButtonSegmentedControl!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
     
     var descriptionButtonHandler: UIButton.ButtonHandler?
     var detailsButtonHandler: UIButton.ButtonHandler?
     
-    var isDescriptionButtonHighlighted = false
+    var isDescriptionButtonHighlighted = false {
+        
+        didSet {
+            updateDescriptionLabelText()
+        }
+    }
+    
     var productDescription: String? {
         didSet {
             if isDescriptionButtonHighlighted {
@@ -73,51 +79,20 @@ class ProductDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setDescriptionButtonHighlighted()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    @IBAction func descriptionAction(_ sender: Any) {
-        setDescriptionButtonHighlighted()
-    }
-    
-    @IBAction func detailsAction(_ sender: Any) {
-        setDetailsButtonHighlighted()
-    }
-    
-    func setButtonHighlighted(_ button: UIButton) {
-        button.setTitleColor(buttonHighlightedTitleColor, for: .normal)
-        button.backgroundColor = buttonHighlightedBackgroundColor
-        button.borderColor = buttonHighlightedBorderColor
-    }
-    
-    func setButtonUnhighlighted(_ button: UIButton) {
-        button.setTitleColor(buttonNormalTitleColor, for: .normal)
-        button.backgroundColor = buttonNormalBackgroundColor
-        button.borderColor = buttonNormalBorderColor
-    }
-    
-    func setDescriptionButtonHighlighted() {
-        setButtonHighlighted(descriptionButton)
-        setButtonUnhighlighted(detailsButton)
         
-        isDescriptionButtonHighlighted = true
-        updateDescriptionLabelText()
-        descriptionButtonHandler?(descriptionButton)
-    }
-    
-    func setDetailsButtonHighlighted() {
-        setButtonHighlighted(detailsButton)
-        setButtonUnhighlighted(descriptionButton)
+        buttonSegmentedControl.buttonHighlightedTitleColor = buttonHighlightedTitleColor
+        buttonSegmentedControl.buttonHighlightedBackgroundColor = buttonHighlightedBackgroundColor
+        buttonSegmentedControl.buttonHighlightedBorderColor = buttonHighlightedBorderColor
         
-        isDescriptionButtonHighlighted = false
-        updateDescriptionLabelText()
-        detailsButtonHandler?(detailsButton)
+        buttonSegmentedControl.buttonNormalTitleColor = buttonNormalTitleColor
+        buttonSegmentedControl.buttonNormalBorderColor = buttonNormalBorderColor
+        buttonSegmentedControl.buttonNormalBackgroundColor = buttonNormalBackgroundColor
+        
+        buttonSegmentedControl.leftButtonHandler = descriptionButtonHandler
+        buttonSegmentedControl.rightButtonHandler = detailsButtonHandler
+        
+        buttonSegmentedControl.leftButtonFont = Fonts.poppinsMedium
+        buttonSegmentedControl.rightButtonFont = Fonts.poppinsMedium
     }
     
     func updateDescriptionLabelText() {
@@ -127,4 +102,13 @@ class ProductDetailTableViewCell: UITableViewCell {
             descriptionLabel.attributedText = attributedDetails
         }
     }
+    
+    override func layoutSubviews() {
+
+        super.layoutSubviews()
+        
+        buttonSegmentedControl.leftButtonHandler = descriptionButtonHandler
+        buttonSegmentedControl.rightButtonHandler = detailsButtonHandler
+    }
+    
 }

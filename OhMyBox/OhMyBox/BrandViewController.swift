@@ -20,6 +20,16 @@ class BrandViewController: UIViewController {
     
     var selectedBrand: Brand?
     
+    var hasFollowedBrands: Bool {
+        
+        return presenter.followedBrands.count != 0
+    }
+    
+    var allBrandsSection: Int {
+        
+        return hasFollowedBrands ? 1 : 0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -29,6 +39,8 @@ class BrandViewController: UIViewController {
         presenter.view = self
         
         presenter.loadBrands()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(followsUpdated), name: Notifications.followsUpdated, object: nil)
     }
     
     func setUpTableView() {
@@ -66,9 +78,14 @@ extension BrandViewController {
     func generateFollowedBrandsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandsTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandsTableViewCell.identifier) as! BrandsTableViewCell
         
-        cell.brands = presenter.brands
+        cell.brands = presenter.followedBrands
         followedBrandsCollectionViewDelegate = cell
         cell.selectionDelegate = self
+        
+        cell.followButtonHandler = {
+            
+            self.presenter.followButtonHandlerForFollowedBrand(at: $0)
+        }
         
         return cell
     }
@@ -86,9 +103,31 @@ extension BrandViewController {
     func generateBrandCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> BrandTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BrandTableViewCell.identifier) as! BrandTableViewCell
         
+        cell.info = presenter.brandCellInfo(for: indexPath)
+        
+        let isBrandFollowed = presenter.isBrandFollowed(at: indexPath)
+        cell.changeFollowButtonToHighlightedStyle(isBrandFollowed)
+        
+        cell.followHandler = { following in
+            
+            self.presenter.followButtonHandler(at: indexPath)
+        }
+        
         return cell
     }
 
+    func followsUpdated() {
+        
+//        for (i, brand) in presenter.brands.enumerated() {
+//            
+//            guard let cell = tableView.cellForRow(at: IndexPath(row: i, section: 1)) as? BrandTableViewCell else { continue }
+//            
+//            let isFollowed = FollowManager.shared.brandIsFollowed(brand)
+//            
+//            cell.changeFollowButtonToHighlightedStyle(isFollowed)
+//        }
+    }
+    
 }
 
 extension BrandViewController: UITableViewDataSource {
@@ -97,9 +136,8 @@ extension BrandViewController: UITableViewDataSource {
         let cell: UITableViewCell
         
         switch indexPath.section {
+        case allBrandsSection: cell = generateBrandCell(tableView, cellForRowAt: indexPath)
         case 0: cell = generateFollowedBrandsCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateRecommendedBrandsCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateBrandCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -111,8 +149,8 @@ extension BrandViewController: UITableViewDataSource {
         let number: Int
         
         switch section {
-        case 0, 1: number = 1
-        case 2: number = 0
+        case allBrandsSection: number = presenter.brands.count
+        case 0: number = 1
         default: number = 0
         }
         
@@ -120,19 +158,26 @@ extension BrandViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return hasFollowedBrands ? 2 : 1
     }
 }
 
 extension BrandViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedBrand = presenter.brands[indexPath.item]
+        
+        performSegue(withIdentifier: SegueIdentifiers.brandsToBrandDetail, sender: self)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let height: CGFloat
         
         switch indexPath.section {
-        case 0, 1: height = BrandsTableViewCell.cellHeight
-        case 2: height = BrandTableViewCell.cellHeight
+        case allBrandsSection: height = BrandTableViewCell.cellHeight
+        case 0: height = BrandsTableViewCell.cellHeight
         default: height = 0
         }
         
@@ -147,16 +192,13 @@ extension BrandViewController: UITableViewDelegate {
         let header = tableView.dequeueReusableCell(withIdentifier: BrandsHeaderTableViewCell.identifier) as! BrandsHeaderTableViewCell
         
         switch section {
-        case 0:
-            header.topLineLabel.text = "MARCAS"
-            header.bottomLineLabel.text = "QUE SIGO"
-        case 1:
-            header.topLineLabel.text = "RECOMENDADOS"
-            header.bottomLineLabel.text = ""
-        case 2:
+        case allBrandsSection:
             header.topLineLabel.text = "TODAS AS MARCAS"
             header.bottomLineLabel.text = ""
             header.showAllButton.isHidden = true
+        case 0:
+            header.topLineLabel.text = "MARCAS"
+            header.bottomLineLabel.text = "QUE SIGO"
         default: break
         }
         

@@ -25,7 +25,7 @@ class BoxProductCollectionViewCell: UICollectionViewCell {
     typealias Info = (imageFile: PFFile, name: String)
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: AutosizableLabel!
     @IBOutlet weak var checkButton: UIButton!
     
     var info: Info? {

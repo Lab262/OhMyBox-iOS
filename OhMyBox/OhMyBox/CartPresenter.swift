@@ -21,4 +21,17 @@ class CartPresenter: NSObject {
         
         return CartManager.shared.cartBoxes
     }
+    
+    override init() {
+        
+        super.init()
+        NotificationCenter.default.addObserver(self, selector: #selector(boxesLoaded), name: Notifications.boxesLoaded, object: nil)
+    }
+    
+    func boxesLoaded() {
+        
+        view?.reloadData()
+    }
+    
+    
 }

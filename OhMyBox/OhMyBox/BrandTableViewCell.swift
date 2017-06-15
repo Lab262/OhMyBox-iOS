@@ -6,16 +6,18 @@
 //  Copyright © 2017 Lab262. All rights reserved.
 //
 
-import UIKit
+import Parse
 
 class BrandTableViewCell: UITableViewCell {
 
+    typealias Info = (name: String, title: String, imageFile: PFFile?)
+    
     static var identifier: String {
         return "brandTableViewCell"
     }
     
     static var cellHeight: CGFloat {
-        return 375
+        return 375 * UIView.widthScaleProportion
     }
     
     static var nibName: String {
@@ -27,8 +29,14 @@ class BrandTableViewCell: UITableViewCell {
     @IBOutlet weak var brandImageView: UIImageView!
     @IBOutlet weak var followButton: UIButton!
     
-    var followAction: ((UIButton) -> ())?
-    var following = false
+    var info: Info? {
+        didSet {
+            
+            updateInfo()
+        }
+    }
+    
+    var followHandler: UIButton.ButtonHandler?
     
     let followButtonHighlightedTitle = "Seguindo"
     let followButtonHighlightedBackgroundColor = UIColor.colorWithHexString("29143C")
@@ -52,10 +60,8 @@ class BrandTableViewCell: UITableViewCell {
     }
     
     @IBAction func follow(_ sender: UIButton) {
-        followAction?(sender)
         
-        following = !following
-        changeFollowButtonToHighlightedStyle(following)
+        followHandler?(sender)
     }
     
     func changeFollowButtonToHighlightedStyle(_ highlighted: Bool) {
@@ -76,6 +82,16 @@ class BrandTableViewCell: UITableViewCell {
                 self.followButton.setTitleColor(self.followButtonNormalTitleColor, for: .normal)
             }
             followButton.setTitle(followButtonNormalTitle, for: .normal)
+        }
+    }
+    
+    func updateInfo() {
+        
+        brandNameLabel.text = info?.name
+        brandDescriptionLabel.text = info?.title
+        
+        if let file = info?.imageFile {
+            brandImageView.loadPFFile(file)
         }
     }
 }

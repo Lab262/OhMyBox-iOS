@@ -28,6 +28,8 @@ class CartViewController: UIViewController {
         registerNibs()
         setUpEmptyView()
         
+        presenter.view = self
+        
         footerView.backgroundColor = .white
         footerView.frame.size = CGSize(width: view.frame.width, height: cellSpacing)
     }
@@ -108,6 +110,7 @@ extension CartViewController: CartView {
     
     func reloadData() {
         
+        tableView.reloadData()
     }
     
     func purchaseRequestSaved(success: Bool, error: Error?) {

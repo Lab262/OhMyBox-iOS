@@ -38,6 +38,7 @@ class BoxRequester: NSObject {
             self.boxes = boxes
             
             completionHandler?(self.boxes, error)
+            NotificationCenter.default.post(name: Notifications.boxesLoaded, object: nil)
         }
     }
 }
