@@ -204,7 +204,7 @@ extension BrandDetailViewController: UITableViewDataSource {
         
         let headerTitle: String
         switch section {
-        case 0: headerTitle = "Destaques"
+        case 0: headerTitle = "Boxes"
         case 1:
             headerTitle = "Coleções"
             header.showAllButton.isHidden = true
