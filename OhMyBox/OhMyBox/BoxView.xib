@@ -123,7 +123,7 @@ pronta pra te salvar com estilo!</string>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AJN-Zm-Tnx">
                             <rect key="frame" x="0.0" y="0.0" width="322" height="76"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2YP-FQ-7ib">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2YP-FQ-7ib">
                                     <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="2YP-FQ-7ib" secondAttribute="height" multiplier="1:1" id="1mC-eV-DXu"/>
@@ -134,7 +134,7 @@ pronta pra te salvar com estilo!</string>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bh2-wA-J2Z">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bh2-wA-J2Z">
                                     <rect key="frame" x="82" y="0.0" width="76" height="76"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="bh2-wA-J2Z" secondAttribute="height" multiplier="1:1" id="a52-wo-3ig"/>
@@ -145,7 +145,7 @@ pronta pra te salvar com estilo!</string>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nem-ju-Piw">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nem-ju-Piw">
                                     <rect key="frame" x="164" y="0.0" width="76" height="76"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="nem-ju-Piw" secondAttribute="height" multiplier="1:1" id="bNr-aa-hj5"/>
@@ -156,7 +156,7 @@ pronta pra te salvar com estilo!</string>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a4N-Nf-zhs">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a4N-Nf-zhs">
                                     <rect key="frame" x="246" y="0.0" width="76" height="76"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="a4N-Nf-zhs" secondAttribute="height" multiplier="1:1" id="9Dr-Gw-oom"/>
