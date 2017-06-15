@@ -120,8 +120,8 @@ class ProductDetailViewController: UIViewController {
     func generateProductOptionsCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductOptionsTableViewCell.identifier) as! ProductOptionsTableViewCell
         
-        cell.colors = [.black, .red, .cyan, .purple]
-        cell.sizes = ["PP", "M", "G", "GG"]
+//        cell.colors = [.black, .red, .cyan, .purple]
+//        cell.sizes = ["PP", "M", "G", "GG"]
         
         return cell
     }
@@ -176,9 +176,9 @@ extension ProductDetailViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0: cell = generateProductLabelCell(tableView, cellForRowAt: indexPath)
-        case 1: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
-        case 2: cell = generateProductDetailsCell(tableView, cellForRowAt: indexPath)
-        case 3: cell = generateProductBrandCell(tableView, cellForRowAt: indexPath)
+//        case 1: cell = generateProductOptionsCell(tableView, cellForRowAt: indexPath)
+        case 1: cell = generateProductDetailsCell(tableView, cellForRowAt: indexPath)
+        case 2: cell = generateProductBrandCell(tableView, cellForRowAt: indexPath)
         default: cell = UITableViewCell()
         }
         
@@ -186,7 +186,7 @@ extension ProductDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
 }
 
@@ -198,9 +198,9 @@ extension ProductDetailViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0: height = ProductLabelTableViewCell.cellHeight
-        case 1: height = ProductOptionsTableViewCell.cellHeight
-        case 2: height = ProductDetailTableViewCell.cellHeight
-        case 3: height = ProductBrandTableViewCell.cellHeight
+//        case 1: height = ProductOptionsTableViewCell.cellHeight
+        case 1: height = ProductDetailTableViewCell.cellHeight
+        case 2: height = ProductBrandTableViewCell.cellHeight
         default: height = 0
         }
         
