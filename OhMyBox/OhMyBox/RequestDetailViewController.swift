@@ -77,7 +77,7 @@ extension RequestDetailViewController: UITableViewDelegate {
         
         let header = tableView.dequeueReusableCell(withIdentifier: BrandContactHeaderTableViewCell.identifier) as! BrandContactHeaderTableViewCell
         
-        header.info = ("EU VOU DE VERÃO BOX", "")
+        header.info = (presenter.request?.box.name ?? "", "")
         
         return header
     }
