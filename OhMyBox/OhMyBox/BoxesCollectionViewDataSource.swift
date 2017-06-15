@@ -28,7 +28,7 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         registerNibs()
         
         NotificationCenter.default.addObserver(self, selector: #selector(cartUpdated(_:)), name: Notifications.cartUpdated, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(wishlistUpdated(_:)), name: Notifications.wishlistUpdated, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(wishlistUpdated), name: Notifications.wishlistUpdated, object: nil)
     }
     
     func setUpCollectionView() {
@@ -115,18 +115,13 @@ class BoxesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         }
     }
     
-    func wishlistUpdated(_ notification: Notification) {
+    func wishlistUpdated() {
         
-        guard let userInfo = notification.object as? [String: Any] else { return }
-        
-        guard let boxId = userInfo[WishlistManager.UpdateUserInfoKeys.boxId] as? String else { return }
-        guard let isInWishlist = userInfo[WishlistManager.UpdateUserInfoKeys.isInWishlist] as? Bool else { return }
-        
-        let i = boxes.indexOfElement { $0.objectId ?? "" == boxId }
-        
-        if let i = i {
+        for (i, box) in boxes.enumerated() {
             
             guard let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? BoxCollectionViewCell else { return }
+            
+            let isInWishlist = WishlistManager.shared.boxIsInWishlist(box)
             
             cell.boxView.setLikeButtonSelected(isInWishlist)
         }

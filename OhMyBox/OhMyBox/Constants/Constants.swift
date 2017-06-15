@@ -90,6 +90,7 @@ struct Notifications {
     
     static let cartUpdated = NSNotification.Name(rawValue: "cartUpdated")
     static let wishlistUpdated = NSNotification.Name(rawValue: "wishlistUpdated")
+    static let boxesLoaded = NSNotification.Name(rawValue: "boxesLoaded")
 }
 
 

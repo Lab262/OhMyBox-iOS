@@ -12,7 +12,11 @@ class WishlistPresenter: NSObject {
     
     var favoriteBoxes: [Box] {
         
-        return WishlistManager.shared.favoriteBoxes
+        return BoxRequester.shared.boxes.filter {
+            
+            guard let boxId = $0.objectId else { return false }
+            return WishlistManager.shared.favoriteBoxesIds.contains(boxId)
+        }
     }
     
 }
