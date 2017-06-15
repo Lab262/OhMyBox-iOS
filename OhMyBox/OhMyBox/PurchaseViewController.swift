@@ -56,8 +56,8 @@ extension PurchaseViewController: PurchaseView {
     func purchaseRequestSaved(success: Bool, error: Error?) {
         
         if success {
-            performSegue(withIdentifier: SegueIdentifiers.shoppingBoxToSelectCard, sender: self)
-           // performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
+//            performSegue(withIdentifier: SegueIdentifiers.shoppingBoxToSelectCard, sender: self)
+            performSegue(withIdentifier: SegueIdentifiers.purchaseToPurchaseSuccessful, sender: self)
         }
     }
 }

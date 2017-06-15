@@ -44,6 +44,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FollowManager.shared.loadFollows()
         PurchaseRequestFeedbackManager.shared.loadFeedbackOptions()
         
+        
+//        let photoURL = URL(string: "https://storage.googleapis.com/ohmybox-dev/a84747cb38b2c3dd591de277416b3a1e_Kimono.png")!
+//        
+//        let photoData = UIImageJPEGRepresentation(UIImage(data: try! Data.init(contentsOf: photoURL))!, 1)
+//        
+//        let query = PFQuery(className: PhotoObject.parseClassName())
+//        
+//        query.findObjectsInBackground { (objects, error) in
+//            
+//            guard let brands = objects as? [PhotoObject] else { return }
+//            
+//            for brand in brands where brand.objectId == "MdgTvjlCqZ" {
+//                
+//                brand.photo = PFFile(data: photoData!, contentType: "image/jpeg")
+//                
+//                brand.saveInBackground(block: { (s, e) in
+//                    print("saved", s)
+//                })
+//            }
+//        }
+////
         return true
     }
 
