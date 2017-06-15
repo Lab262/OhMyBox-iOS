@@ -58,6 +58,7 @@ extension CreateAccountSecondStepViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: PurchaseFieldTableViewCell.identifier, for: indexPath) as! PurchaseFieldTableViewCell
         
         cell.delegate = self
+        print(indexPath.row, presenter.fieldsData[indexPath.row].titleField, presenter.fieldsData[indexPath.row].text)
         cell.presenter.fieldCellData = presenter.fieldsData[indexPath.row]
         
         return cell

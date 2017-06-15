@@ -52,7 +52,7 @@ class CreateAccountPresenter: NSObject {
     func setupSecondStepFieldsData() {
         let addressDescriptionField = FieldCellData(titleField: "Endereço", keyboardType: .default, dataFields: nil, secondStepTypeField: .addressDescription)
         
-        let addressNumberField = FieldCellData(titleField: "Número", keyboardType: .numberPad, dataFields: nil, secondStepTypeField: .addressDescription)
+        let addressNumberField = FieldCellData(titleField: "Número", keyboardType: .numberPad, dataFields: nil, secondStepTypeField: .addressNumber)
         
         let complementField = FieldCellData(titleField: "Complemento", keyboardType: .default, dataFields: nil, secondStepTypeField: .addressComplement)
         
@@ -104,7 +104,7 @@ class CreateAccountPresenter: NSObject {
         
         let holderCpfField = FieldCellData(titleField: "CPF do dono do cartão", keyboardType: .numberPad, fieldMask: .cpf, thirdStepTypeField: .cardHolderCpf)
         
-        let holderPhoneField = FieldCellData(titleField: "Telefone do dono do cartão", keyboardType: .numberPad, fieldMask: .cpf, thirdStepTypeField: .cardHolderCpf)
+        let holderPhoneField = FieldCellData(titleField: "Telefone do dono do cartão", keyboardType: .numberPad, fieldMask: .phone, thirdStepTypeField: .cardHolderPhone)
     
         
         fieldsData = [cardFlagField, cardNameField, cardNumberField, cvvField, validityField, holderNameField, holderBirthdateField, holderCpfField, holderPhoneField]

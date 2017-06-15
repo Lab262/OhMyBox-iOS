@@ -67,6 +67,14 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     }
     
     fileprivate func setupTextField() {
+        
+        if let textField = textField {
+            textField.removeFromSuperview()
+        }
+        if let maskField = maskField {
+            maskField.removeFromSuperview()
+        }
+        
         textField = UITextField()
         textField?.delegate = self
         textField?.keyboardType = presenter.fieldCellData!.keyboardType!
@@ -76,6 +84,7 @@ class PurchaseFieldTableViewCell: UITableViewCell {
         }
         
         if let _ = presenter.fieldCellData?.secondStepField {
+            print(presenter.fieldCellData?.titleField, presenter.fieldCellData!.secondStepField!.rawValue)
             textField?.tag = presenter.fieldCellData!.secondStepField!.rawValue
         }
         
@@ -91,6 +100,14 @@ class PurchaseFieldTableViewCell: UITableViewCell {
     }
     
     fileprivate func setupMaskField(){
+        
+        if let textField = textField {
+            textField.removeFromSuperview()
+        }
+        if let maskField = maskField {
+            maskField.removeFromSuperview()
+        }
+        
         maskField = AKMaskField()
         
         if let _ = presenter.fieldCellData?.firstStepField {
