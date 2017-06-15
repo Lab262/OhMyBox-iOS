@@ -105,17 +105,17 @@ extension ProfileViewController: UITableViewDataSource {
         if buttonSegmentedViewLeftButtonHighlighted { // Meus dados
             
             switch indexPath.section {
+//            case 1:
+//                switch indexPath.row {
+//                case 0: cell = generateCardInfoCell(tableView, cellForRowAt: indexPath)
+//                case 1: cell = generateDeliveryInfoCell(tableView, cellForRowAt: indexPath)
+//                default: cell = UITableViewCell()
+//                }
+//            case 2: cell = generateMeasureInfoCell(tableView, cellForRowAt: indexPath)
             case 1:
                 switch indexPath.row {
-                case 0: cell = generateCardInfoCell(tableView, cellForRowAt: indexPath)
-                case 1: cell = generateDeliveryInfoCell(tableView, cellForRowAt: indexPath)
-                default: cell = UITableViewCell()
-                }
-            case 2: cell = generateMeasureInfoCell(tableView, cellForRowAt: indexPath)
-            case 3:
-                switch indexPath.row {
                 case 0: cell = generateUsernameCell(tableView, cellForRowAt: indexPath)
-                case 1: cell = generatePasswordCell(tableView, cellForRowAt: indexPath)
+//                case 1: cell = generatePasswordCell(tableView, cellForRowAt: indexPath)
                 default: cell = UITableViewCell()
                 }
             default: cell = UITableViewCell()
@@ -145,11 +145,12 @@ extension ProfileViewController: UITableViewDataSource {
             
             switch section {
             case 0: number = 3
-            case 1: number = 2
-            case 2: number = measures?.count ?? 0
-            case 3: number = 2
+            case 1: number = 1
+//            case 2: number = measures?.count ?? 0
+//            case 3: number = 2
             default: number = 0
             }
+            
         } else {
             
             switch section {
@@ -168,11 +169,11 @@ extension ProfileViewController: UITableViewDataSource {
         let number: Int
         
         if buttonSegmentedViewLeftButtonHighlighted {
-            number = 4
+            number = 2
         } else {
             number = 3
         }
-        
+
         return number
     }
     
@@ -199,9 +200,9 @@ extension ProfileViewController: UITableViewDelegate {
                 case 2: height = ProfileSegmentTableViewCell.cellHeight
                 default: height = 0
                 }
-            case 1: height = UITableViewAutomaticDimension
-            case 2: height = ProfileMeasureTableViewCell.cellHeight
-            case 3: height = ProfileCredentialsTableViewCell.cellHeight
+//            case 1: height = UITableViewAutomaticDimension
+//            case 2: height = ProfileMeasureTableViewCell.cellHeight
+            case 1: height = ProfileCredentialsTableViewCell.cellHeight
             default: height = 0
             }
         } else {
@@ -247,22 +248,22 @@ extension ProfileViewController: UITableViewDelegate {
         if buttonSegmentedViewLeftButtonHighlighted {
             
             switch section {
+//            case 1:
+//                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+//                header.topLineLabel.text = "DADOS"
+//                header.bottomLineLabel.text = "DE COMPRA"
+//                
+//                view = header
+//            case 2:
+//                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
+//                header.topLineLabel.text = "MINHAS"
+//                header.bottomLineLabel.text = "MEDIDAS"
+//                
+//                view = header
             case 1:
                 let header = generateHeaderView(tableView, viewForHeaderInSection: section)
-                header.topLineLabel.text = "DADOS"
-                header.bottomLineLabel.text = "DE COMPRA"
-                
-                view = header
-            case 2:
-                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
-                header.topLineLabel.text = "MINHAS"
-                header.bottomLineLabel.text = "MEDIDAS"
-                
-                view = header
-            case 3:
-                let header = generateHeaderView(tableView, viewForHeaderInSection: section)
                 header.topLineLabel.text = "EMAIL"
-                header.bottomLineLabel.text = "E SENHA"
+                header.bottomLineLabel.text = ""
                 
                 view = header
             default: view = nil
