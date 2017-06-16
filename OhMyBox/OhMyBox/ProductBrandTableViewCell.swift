@@ -25,6 +25,18 @@ class ProductBrandTableViewCell: UITableViewCell {
     @IBOutlet weak var brandNameTopLabel: UILabel!
     @IBOutlet weak var brandNameBottomLabel: UILabel!
     @IBOutlet weak var followButton: UIButton!
+    
+    let followButtonHighlightedTitle = "Seguindo"
+    let followButtonHighlightedBackgroundColor = UIColor.colorWithHexString("29143C")
+    let followButtonHighlightedBorderColor = UIColor.clear
+    let followButtonHighlightedTitleColor = UIColor.white
+    
+    let followButtonNormalTitle = "Seguir"
+    let followButtonNormalBackgroundColor = UIColor.white
+    let followButtonNormalBorderColor = UIColor.colorWithHexString("081F3E")
+    let followButtonNormalTitleColor = UIColor.colorWithHexString("081F3E")
+    
+    var followButtonHandler: UIButton.ButtonHandler?
 
     var brandNameTopLine: String? {
         didSet {
@@ -50,11 +62,31 @@ class ProductBrandTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func changeFollowButtonToHighlightedStyle(_ highlighted: Bool) {
+        
+        let animationDuration = 0.07
+        
+        if highlighted {
+            UIView.animate(withDuration: animationDuration) {
+                self.followButton.backgroundColor = self.followButtonHighlightedBackgroundColor
+                self.followButton.borderColor = self.followButtonHighlightedBorderColor
+                self.followButton.setTitleColor(self.followButtonHighlightedTitleColor, for: .normal)
+            }
+            followButton.setTitle(followButtonHighlightedTitle, for: .normal)
+        } else {
+            UIView.animate(withDuration: animationDuration) {
+                self.followButton.backgroundColor = self.followButtonNormalBackgroundColor
+                self.followButton.borderColor = self.followButtonNormalBorderColor
+                self.followButton.setTitleColor(self.followButtonNormalTitleColor, for: .normal)
+            }
+            followButton.setTitle(followButtonNormalTitle, for: .normal)
+        }
+    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBAction func followButtonAction(_ sender: UIButton) {
+        
+        followButtonHandler?(sender)
     }
     
 }
