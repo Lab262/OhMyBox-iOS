@@ -68,12 +68,7 @@ extension MiniProductsTableViewCell: UICollectionViewDataSource {
     }
 }
 
-extension MiniProductsTableViewCell: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return MiniProductCollectionViewCell.cellSize
-    }
-}
+
 
 extension MiniProductsTableViewCell: UICollectionViewDelegate {
     

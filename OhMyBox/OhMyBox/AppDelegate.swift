@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
         }else {
             
-            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Login", identifier: "")
+            initialViewController = ViewUtil.viewControllerFromStoryboardWithIdentifier("Main", identifier: "")
         }
         
         self.window!.rootViewController = initialViewController

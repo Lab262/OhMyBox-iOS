@@ -67,6 +67,10 @@ extension HighlightsTableViewCell: UICollectionViewDataSource {
         
         return cell
     }
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        self.collectionView.contentOffset.x = scrollView.contentOffset.x
+    }
 }
 
 extension HighlightsTableViewCell: UICollectionViewDelegateFlowLayout {
